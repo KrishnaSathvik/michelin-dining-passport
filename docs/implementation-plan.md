@@ -19,7 +19,7 @@ Feature-first build through Phases 2–7, then one consolidated UI/UX polish pas
 | 2 | Explore + filters + result views | **Complete** (`phase-2-explore`) |
 | 3 | Restaurant + taxonomy pages + SEO | **Complete** (`phase-3-restaurant-pages`) |
 | 4 | Local Passport + personal tracking | **Complete** (`phase-4-local-passport`) |
-| 5 | Geocode + `/map` | In progress (`phase-5-map`) — ADR + MapLibre map + batch geocoder |
+| 5 | Geocode + `/map` | **Complete** (`phase-5-map`) — batch geocode, reconciliation, MapLibre map, search-this-area, mobile sheet |
 | 6 | Supabase auth + personal data | Not started |
 | 7 | Admin + roster import pipeline | Not started |
 | — | Consolidated UI/UX polish | After Phases 2–7 |

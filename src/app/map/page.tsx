@@ -2,7 +2,8 @@ import type { Metadata } from "next";
 import { Container } from "@/components/layout/Container";
 import { RestaurantMap } from "@/components/map/RestaurantMap";
 import { PassportClientShell } from "@/components/passport/PassportClientShell";
-import { getMappableRestaurants } from "@/lib/data/geocodes";
+import { getExploreFacets } from "@/lib/data/explore";
+import { getMapRestaurants } from "@/lib/data/geocodes";
 import { getRestaurants } from "@/lib/data/restaurants";
 import { buildPageMetadata } from "@/lib/seo/metadata";
 
@@ -19,13 +20,13 @@ export const metadata: Metadata = buildPageMetadata({
 
 export default async function MapPage({ searchParams }: MapPageProps) {
   const params = await searchParams;
-  // Include uncertain for client toggle; map hides them by default.
-  const restaurants = getMappableRestaurants({ includeUncertain: true });
+  const restaurants = getMapRestaurants();
   const allRestaurants = getRestaurants();
+  const facets = getExploreFacets(allRestaurants);
 
   return (
     <div className="border-b border-border">
-      <Container className="py-10 sm:py-14">
+      <Container className="py-6 sm:py-10">
         <p className="font-sans text-xs uppercase tracking-[0.18em] text-burgundy">
           Map
         </p>
@@ -33,18 +34,27 @@ export default async function MapPage({ searchParams }: MapPageProps) {
           Restaurant map
         </h1>
         <p className="mt-4 max-w-2xl font-sans text-base leading-relaxed text-ink-muted">
-          Markers use batch-geocoded coordinates stored in first-party data.
-          Uncertain matches stay hidden until reviewed. The map works without
-          location permission.
-        </p>
-        <p className="mt-3 font-sans text-sm text-ink-muted">
-          Provider decision: MapLibre + compatible tiles. See{" "}
-          <code className="text-ink">docs/adr/0001-map-provider.md</code>.
+          Markers use batch-geocoded, approved coordinates stored in first-party
+          data. Restaurants still awaiting location verification remain in the
+          list without a marker. The map works without location permission.
         </p>
 
-        <div className="mt-8">
+        <div className="mt-6">
           <PassportClientShell restaurants={allRestaurants}>
-            <RestaurantMap restaurants={restaurants} initialQuery={params} />
+            <RestaurantMap
+              restaurants={restaurants}
+              initialQuery={params}
+              facetOptions={{
+                states: facets.states.map((state) => ({
+                  value: state.value,
+                  label: state.label,
+                })),
+                cuisines: facets.cuisines.map((cuisine) => ({
+                  value: cuisine.value,
+                  label: cuisine.label,
+                })),
+              }}
+            />
           </PassportClientShell>
         </div>
       </Container>

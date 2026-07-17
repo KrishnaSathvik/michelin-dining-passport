@@ -1,0 +1,3366 @@
+{
+  "version": 1,
+  "queries": {
+    "Fairmont Grand Del Mar, 5200 Grand Del Mar Way, San Diego, CA, 92130, USA": {
+      "status": "empty",
+      "error": null,
+      "hit": null,
+      "queriedAt": "2026-07-17T04:43:32.121383+00:00",
+      "seededFrom": "geocodes.json-centroid-fallback"
+    },
+    "3127 Fillmore St., San Francisco, CA, 94123, USA": {
+      "status": "ok",
+      "error": null,
+      "hit": {
+        "lat": "37.7983224",
+        "lon": "-122.435844",
+        "display_name": "3127, Fillmore Street, Cow Hollow, Marina District, San Francisco, California, 94123, United States",
+        "type": "house",
+        "place_id": "404672727",
+        "importance": null
+      },
+      "queriedAt": "2026-07-17T04:43:32.648630+00:00",
+      "seededFrom": "geocodes.json"
+    },
+    "22 Hawthorne St., San Francisco, CA, 94105, USA": {
+      "status": "ok",
+      "error": null,
+      "hit": {
+        "lat": "37.7854624",
+        "lon": "-122.3990798",
+        "display_name": "Benu, 22, Hawthorne Street, Transbay, Financial District, South of Market, San Francisco, California, 94105, United States",
+        "type": "restaurant",
+        "place_id": "323236259",
+        "importance": null
+      },
+      "queriedAt": "2026-07-17T04:43:34.219837+00:00",
+      "seededFrom": "geocodes.json"
+    },
+    "355 11th St., San Francisco, CA, 94103, USA": {
+      "status": "ok",
+      "error": null,
+      "hit": {
+        "lat": "37.7712823",
+        "lon": "-122.4130526",
+        "display_name": "Bar Agricole, 355, 11th Street, Civic Center, Mission, San Francisco, California, 94103, United States",
+        "type": "bar",
+        "place_id": "323837459",
+        "importance": null
+      },
+      "queriedAt": "2026-07-17T04:43:35.776492+00:00",
+      "seededFrom": "geocodes.json"
+    },
+    "139 E. Napa St., Sonoma, CA, 95476, USA": {
+      "status": "ok",
+      "error": null,
+      "hit": {
+        "lat": "38.291621",
+        "lon": "-122.4558085",
+        "display_name": "139, East Napa Street, Sonoma, Sonoma County, California, 95476, United States",
+        "type": "house",
+        "place_id": "415393354",
+        "importance": null
+      },
+      "queriedAt": "2026-07-17T04:43:37.416407+00:00",
+      "seededFrom": "geocodes.json"
+    },
+    "5955 Melrose Ave., Los Angeles, CA, 90038, USA": {
+      "status": "ok",
+      "error": null,
+      "hit": {
+        "lat": "34.0836255",
+        "lon": "-118.330187",
+        "display_name": "Providence, 5955, Melrose Avenue, Hollywood, Los Angeles, Los Angeles County, California, 90038, United States",
+        "type": "restaurant",
+        "place_id": "320173550",
+        "importance": null
+      },
+      "queriedAt": "2026-07-17T04:43:38.994936+00:00",
+      "seededFrom": "geocodes.json"
+    },
+    "470 Pacific Ave., San Francisco, CA, 94133, USA": {
+      "status": "ok",
+      "error": null,
+      "hit": {
+        "lat": "37.7974316",
+        "lon": "-122.4032686",
+        "display_name": "470, Pacific Avenue, Telegraph Hill, Financial District, South of Market, San Francisco, California, 94133, United States",
+        "type": "house",
+        "place_id": "404139405",
+        "importance": null
+      },
+      "queriedAt": "2026-07-17T04:43:40.397075+00:00",
+      "seededFrom": "geocodes.json"
+    },
+    "131 North St., Healdsburg, CA, 95448, USA": {
+      "status": "ok",
+      "error": null,
+      "hit": {
+        "lat": "38.6123379",
+        "lon": "-122.8696919",
+        "display_name": "SingleThread, 131, North Street, Healdsburg, Sonoma County, California, 95448, United States",
+        "type": "restaurant",
+        "place_id": "317986143",
+        "importance": null
+      },
+      "queriedAt": "2026-07-17T04:43:41.736745+00:00",
+      "seededFrom": "geocodes.json"
+    },
+    "9045 Nemo St., West Hollywood, CA, 90069, USA": {
+      "status": "ok",
+      "error": null,
+      "hit": {
+        "lat": "34.0823639",
+        "lon": "-118.3885146",
+        "display_name": "9045, Nemo Street, West Hollywood, Los Angeles County, California, 90069, United States",
+        "type": "house",
+        "place_id": "413842269",
+        "importance": null
+      },
+      "queriedAt": "2026-07-17T04:43:43.249668+00:00",
+      "seededFrom": "geocodes.json"
+    },
+    "6640 Washington St., Yountville, CA, 94599, USA": {
+      "status": "ok",
+      "error": null,
+      "hit": {
+        "lat": "38.404416",
+        "lon": "-122.365039",
+        "display_name": "6640, Washington Street, Yountville, Napa County, California, 94599, United States",
+        "type": "house",
+        "place_id": "405450074",
+        "importance": null
+      },
+      "queriedAt": "2026-07-17T04:43:44.741744+00:00",
+      "seededFrom": "geocodes.json"
+    },
+    "1722 Sacramento St., San Francisco, CA, 94109, USA": {
+      "status": "ok",
+      "error": null,
+      "hit": {
+        "lat": "37.7916954",
+        "lon": "-122.4215252",
+        "display_name": "1722;1724;1728;1730, Sacramento Street, Chinatown, South of Market, San Francisco, California, 94109, United States",
+        "type": "yes",
+        "place_id": "323850327",
+        "importance": null
+      },
+      "queriedAt": "2026-07-17T04:43:46.174322+00:00",
+      "seededFrom": "geocodes.json"
+    },
+    "L'Auberge Carmel, Monte Verde at 7th Ave., Carmel-by-the-Sea, CA, 93921, USA": {
+      "status": "empty",
+      "error": null,
+      "hit": null,
+      "queriedAt": "2026-07-17T04:43:49.077477+00:00",
+      "seededFrom": "geocodes.json"
+    },
+    "1085 Mission St., San Francisco, CA, 94103, USA": {
+      "status": "ok",
+      "error": null,
+      "hit": {
+        "lat": "37.7793774",
+        "lon": "-122.4103399",
+        "display_name": "1083;1085, Mission Street, West SoMa, Tenderloin, South of Market, San Francisco, California, 94103, United States",
+        "type": "yes",
+        "place_id": "321049240",
+        "importance": null
+      },
+      "queriedAt": "2026-07-17T04:43:50.069702+00:00",
+      "seededFrom": "geocodes.json"
+    },
+    "3859 Piedmont Ave., Oakland, CA, 94611, USA": {
+      "status": "ok",
+      "error": null,
+      "hit": {
+        "lat": "37.8246894",
+        "lon": "-122.2548896",
+        "display_name": "Commis, 3859, Piedmont Avenue, North Oakland, Oakland, Alameda County, California, 94611, United States",
+        "type": "restaurant",
+        "place_id": "325691272",
+        "importance": null
+      },
+      "queriedAt": "2026-07-17T04:43:51.368899+00:00",
+      "seededFrom": "geocodes.json"
+    },
+    "5600 CA-1, Elk, CA, 95432, USA": {
+      "status": "ok",
+      "error": null,
+      "hit": {
+        "lat": "39.1357382",
+        "lon": "-123.7196511",
+        "display_name": "Harbor House Inn, 5600 S, Shoreline Highway, Elk, Mendocino County, California, 95432, United States",
+        "type": "hotel",
+        "place_id": "320928070",
+        "importance": null
+      },
+      "queriedAt": "2026-07-17T04:43:53.218986+00:00",
+      "seededFrom": "geocodes.json"
+    },
+    "1320 E. 7th St., Ste. 126, Los Angeles, CA, 90021, USA": {
+      "status": "empty",
+      "error": null,
+      "hit": null,
+      "queriedAt": "2026-07-17T04:43:56.139934+00:00",
+      "seededFrom": "geocodes.json-centroid-fallback"
+    },
+    "777 Alameda St., #114, Los Angeles, CA, 90021, USA": {
+      "status": "empty",
+      "error": null,
+      "hit": null,
+      "queriedAt": "2026-07-17T04:43:58.479585+00:00",
+      "seededFrom": "geocodes.json-centroid-fallback"
+    },
+    "149 Fell St., San Francisco, CA, 94102, USA": {
+      "status": "ok",
+      "error": null,
+      "hit": {
+        "lat": "37.7760076",
+        "lon": "-122.4203817",
+        "display_name": "149, Fell Street, Civic Center, Tenderloin, Mission, San Francisco, California, 94102, United States",
+        "type": "yes",
+        "place_id": "324446315",
+        "importance": null
+      },
+      "queriedAt": "2026-07-17T04:43:58.977493+00:00",
+      "seededFrom": "geocodes.json"
+    },
+    "3416 19th St., San Francisco, CA, 94110, USA": {
+      "status": "ok",
+      "error": null,
+      "hit": {
+        "lat": "37.7603507",
+        "lon": "-122.4197035",
+        "display_name": "Hi Lo BBQ, 3416, 19th Street, Mission, San Francisco, California, 94110, United States",
+        "type": "restaurant",
+        "place_id": "323933976",
+        "importance": null
+      },
+      "queriedAt": "2026-07-17T04:44:00.717659+00:00",
+      "seededFrom": "geocodes.json"
+    },
+    "1104 Wilshire Blvd., Santa Monica, CA, 90401, USA": {
+      "status": "ok",
+      "error": null,
+      "hit": {
+        "lat": "34.0244231",
+        "lon": "-118.4913266",
+        "display_name": "1104, Wilshire Boulevard, Downtown Santa Monica, Santa Monica, Los Angeles County, California, 90025, United States",
+        "type": "commercial",
+        "place_id": "319781784",
+        "importance": null
+      },
+      "queriedAt": "2026-07-17T04:44:02.151799+00:00",
+      "seededFrom": "geocodes.json"
+    },
+    "178 Townsend St., San Francisco, CA, 94107, USA": {
+      "status": "ok",
+      "error": null,
+      "hit": {
+        "lat": "37.7745056",
+        "lon": "-122.3983072",
+        "display_name": "Townsend Street, Mission Bay, San Francisco, California, 94107, United States",
+        "type": "tertiary",
+        "place_id": "323211675",
+        "importance": null
+      },
+      "queriedAt": "2026-07-17T04:44:03.903857+00:00",
+      "seededFrom": "geocodes.json"
+    },
+    "2875 18th St., San Francisco, CA, 94110, USA": {
+      "status": "ok",
+      "error": null,
+      "hit": {
+        "lat": "37.7616681",
+        "lon": "-122.4107535",
+        "display_name": "Osito, 2875, 18th Street, Potrero Hill, Mission, San Francisco, California, 94110, United States",
+        "type": "restaurant",
+        "place_id": "324697040",
+        "importance": null
+      },
+      "queriedAt": "2026-07-17T04:44:05.693653+00:00",
+      "seededFrom": "geocodes.json"
+    },
+    "3599 Hayden Ave., Culver City, CA, 90232, USA": {
+      "status": "ok",
+      "error": null,
+      "hit": {
+        "lat": "34.0242037",
+        "lon": "-118.3817724",
+        "display_name": "Vespertine, 3599, Hayden Avenue, Hayden Tract, Culver City, Los Angeles County, California, 90232, United States",
+        "type": "restaurant",
+        "place_id": "320187470",
+        "importance": null
+      },
+      "queriedAt": "2026-07-17T04:44:07.270785+00:00",
+      "seededFrom": "geocodes.json"
+    },
+    "1963 Sutter St., San Francisco, CA, 94115, USA": {
+      "status": "ok",
+      "error": null,
+      "hit": {
+        "lat": "37.7860817",
+        "lon": "-122.4326393",
+        "display_name": "1963, Sutter Street, Japantown, Western Addition, San Francisco, California, 94115, United States",
+        "type": "house",
+        "place_id": "404677015",
+        "importance": null
+      },
+      "queriedAt": "2026-07-17T04:44:08.639453+00:00",
+      "seededFrom": "geocodes.json"
+    },
+    "132 The Embarcadero, San Francisco, CA, 94105, USA": {
+      "status": "ok",
+      "error": null,
+      "hit": {
+        "lat": "37.793083",
+        "lon": "-122.392177",
+        "display_name": "Angler, 132, The Embarcadero, Financial District, South of Market, San Francisco, California, 94105, United States",
+        "type": "restaurant",
+        "place_id": "323204320",
+        "importance": null
+      },
+      "queriedAt": "2026-07-17T04:44:10.241134+00:00",
+      "seededFrom": "geocodes.json"
+    },
+    "180 Rutherford Hill Rd., Rutherford, CA, 94573, USA": {
+      "status": "ok",
+      "error": null,
+      "hit": {
+        "lat": "38.4934201",
+        "lon": "-122.4062051",
+        "display_name": "The Bar at Auberge du Soleil, 180, Rutherford Hill Road, Napa County, California, 94573, United States",
+        "type": "pub",
+        "place_id": "318858561",
+        "importance": null
+      },
+      "queriedAt": "2026-07-17T04:44:11.699347+00:00",
+      "seededFrom": "geocodes.json"
+    },
+    "Four Seasons Resort and Residences Napa Valley, 400 Silverado Trl., Calistoga, CA, 94515, USA": {
+      "status": "ok",
+      "error": null,
+      "hit": {
+        "lat": "38.5847929",
+        "lon": "-122.567908",
+        "display_name": "Four Seasons Resort and Residences Napa Valley, 400, Silverado Trail, Calistoga, Napa County, California, 94515, United States",
+        "type": "resort",
+        "place_id": "321195181",
+        "importance": null
+      },
+      "queriedAt": "2026-07-17T04:44:13.052537+00:00",
+      "seededFrom": "geocodes.json"
+    },
+    "406 Bell St., Los Alamos, CA, 93440, USA": {
+      "status": "ok",
+      "error": null,
+      "hit": {
+        "lat": "34.7439012",
+        "lon": "-120.2793656",
+        "display_name": "Bell Street Farm, 406, Bell Street, Los Alamos, Santa Barbara County, California, 93440, United States",
+        "type": "restaurant",
+        "place_id": "317084903",
+        "importance": null
+      },
+      "queriedAt": "2026-07-17T04:44:14.485453+00:00",
+      "seededFrom": "geocodes.json"
+    },
+    "Rosewood Miramar Beach, 1759 S. Jameson Ln., Montecito, CA, 93108, USA": {
+      "status": "empty",
+      "error": null,
+      "hit": null,
+      "queriedAt": "2026-07-17T04:44:17.300697+00:00",
+      "seededFrom": "geocodes.json"
+    },
+    "5th Ave. btw. Dolores and San Carlos Sts., Carmel-by-the-Sea, CA, 93921, USA": {
+      "status": "empty",
+      "error": null,
+      "hit": null,
+      "queriedAt": "2026-07-17T04:44:18.975809+00:00",
+      "seededFrom": "geocodes.json"
+    },
+    "641 North Western Ave., Ste. A, Los Angeles, CA, 90004, USA": {
+      "status": "empty",
+      "error": null,
+      "hit": null,
+      "queriedAt": "2026-07-17T04:44:20.912842+00:00",
+      "seededFrom": "geocodes.json-centroid-fallback"
+    },
+    "275 CA-128, Geyserville, CA, 95441, USA": {
+      "status": "ok",
+      "error": null,
+      "hit": {
+        "lat": "38.7136094",
+        "lon": "-122.9190784",
+        "display_name": "Canyon Road, Omus, Geyserville, Sonoma County, California, 95441, United States",
+        "type": "trunk",
+        "place_id": "322531034",
+        "importance": null
+      },
+      "queriedAt": "2026-07-17T04:44:21.438016+00:00",
+      "seededFrom": "geocodes.json"
+    },
+    "2030 E. 7th St., Long Beach, CA, 90804, USA": {
+      "status": "ok",
+      "error": null,
+      "hit": {
+        "lat": "33.77526",
+        "lon": "-118.167139",
+        "display_name": "2030, East 7th Street, Long Beach, Los Angeles County, California, 90804, United States",
+        "type": "house",
+        "place_id": "414012048",
+        "importance": null
+      },
+      "queriedAt": "2026-07-17T04:44:23.480487+00:00",
+      "seededFrom": "geocodes.json"
+    },
+    "701 Union St., San Francisco, CA, 94133, USA": {
+      "status": "ok",
+      "error": null,
+      "hit": {
+        "lat": "37.8000754",
+        "lon": "-122.4110382",
+        "display_name": "701;705;709, Union Street, Russian Hill, North Beach, San Francisco, California, 94133, United States",
+        "type": "yes",
+        "place_id": "325777180",
+        "importance": null
+      },
+      "queriedAt": "2026-07-17T04:44:25.293498+00:00",
+      "seededFrom": "geocodes.json"
+    },
+    "3655 S. Grand Ave., Los Angeles, CA, 90007, USA": {
+      "status": "ok",
+      "error": null,
+      "hit": {
+        "lat": "34.0173544",
+        "lon": "-118.2783867",
+        "display_name": "Mercado la Paloma, 3655, South Grand Avenue, Jefferson, Historic South-Central, Los Angeles, Los Angeles County, California, 90007, United States",
+        "type": "marketplace",
+        "place_id": "321489376",
+        "importance": null
+      },
+      "queriedAt": "2026-07-17T04:44:27.099467+00:00",
+      "seededFrom": "geocodes.json"
+    },
+    "2659 State St., Carlsbad, CA, 92008, USA": {
+      "status": "ok",
+      "error": null,
+      "hit": {
+        "lat": "33.1629042",
+        "lon": "-117.3517723",
+        "display_name": "BLOC Carlsbad Village, 2659, State Street, Downtown Carlsbad, Carlsbad, San Diego County, California, 92008, United States",
+        "type": "coworking",
+        "place_id": "318169946",
+        "importance": null
+      },
+      "queriedAt": "2026-07-17T04:44:29.447172+00:00",
+      "seededFrom": "geocodes.json"
+    },
+    "5722 Melrose Ave., Los Angeles, CA, 90038, USA": {
+      "status": "ok",
+      "error": null,
+      "hit": {
+        "lat": "34.083411",
+        "lon": "-118.3246054",
+        "display_name": "5722, Melrose Avenue, Hollywood, Los Angeles, Los Angeles County, California, 90038, United States",
+        "type": "house",
+        "place_id": "414266045",
+        "importance": null
+      },
+      "queriedAt": "2026-07-17T04:44:31.130890+00:00",
+      "seededFrom": "geocodes.json"
+    },
+    "Parc 55 San Francisco - a Hilton Hotel, 55 Cyril Magnin St., San Francisco, CA, 94102, USA": {
+      "status": "ok",
+      "error": null,
+      "hit": {
+        "lat": "37.7848779",
+        "lon": "-122.4088565",
+        "display_name": "Parc 55 San Francisco - a Hilton Hotel, 55, Cyril Magnin Street, Union Square, Tenderloin, South of Market, San Francisco, California, 94102, United States",
+        "type": "hotel",
+        "place_id": "324413599",
+        "importance": null
+      },
+      "queriedAt": "2026-07-17T04:44:32.594853+00:00",
+      "seededFrom": "geocodes.json"
+    },
+    "2130 Sawtelle Blvd., Ste. 211, Los Angeles, CA, 90025, USA": {
+      "status": "empty",
+      "error": null,
+      "hit": null,
+      "queriedAt": "2026-07-17T04:44:35.398620+00:00",
+      "seededFrom": "geocodes.json-centroid-fallback"
+    },
+    "9575 W. Pico Blvd., Los Angeles, CA, 90035, USA": {
+      "status": "ok",
+      "error": null,
+      "hit": {
+        "lat": "34.0552637",
+        "lon": "-118.3977107",
+        "display_name": "9575, West Pico Boulevard, Pico-Robertson, Los Angeles, Los Angeles County, California, 90035, United States",
+        "type": "house",
+        "place_id": "416097661",
+        "importance": null
+      },
+      "queriedAt": "2026-07-17T04:44:36.495156+00:00",
+      "seededFrom": "geocodes.json"
+    },
+    "2571 Roosevelt St., Carlsbad, CA, 92008, USA": {
+      "status": "ok",
+      "error": null,
+      "hit": {
+        "lat": "33.164383",
+        "lon": "-117.351481",
+        "display_name": "2571, Roosevelt Street, Downtown Carlsbad, Carlsbad, San Diego County, California, 92008, United States",
+        "type": "house",
+        "place_id": "314655933",
+        "importance": null
+      },
+      "queriedAt": "2026-07-17T04:44:37.993673+00:00",
+      "seededFrom": "geocodes.json"
+    },
+    "2031 S. St., Sacramento, CA, 95811, USA": {
+      "status": "ok",
+      "error": null,
+      "hit": {
+        "lat": "38.5667323",
+        "lon": "-121.4836969",
+        "display_name": "2031, S Street, Newton Booth, Sacramento, Sacramento County, California, 95811, United States",
+        "type": "house",
+        "place_id": "385325237",
+        "importance": null
+      },
+      "queriedAt": "2026-07-17T04:44:39.384844+00:00",
+      "seededFrom": "geocodes.json"
+    },
+    "7863 Girard Ave., Ste. 308, La Jolla, CA, 92037, USA": {
+      "status": "empty",
+      "error": null,
+      "hit": null,
+      "queriedAt": "2026-07-17T04:44:42.797247+00:00",
+      "seededFrom": "geocodes.json"
+    },
+    "198 Sir Francis Drake Blvd., San Anselmo, CA, 94960, USA": {
+      "status": "ok",
+      "error": null,
+      "hit": {
+        "lat": "37.974152",
+        "lon": "-122.561743",
+        "display_name": "198, Sir Francis Drake Boulevard, San Anselmo, Marin County, California, 94960, United States",
+        "type": "house",
+        "place_id": "385197789",
+        "importance": null
+      },
+      "queriedAt": "2026-07-17T04:44:43.418504+00:00",
+      "seededFrom": "geocodes.json"
+    },
+    "6703 Melrose Ave., Los Angeles, CA, 90038, USA": {
+      "status": "ok",
+      "error": null,
+      "hit": {
+        "lat": "34.0835339",
+        "lon": "-118.3398225",
+        "display_name": "6703, Melrose Avenue, Fairfax, Los Angeles, Los Angeles County, California, 90038, United States",
+        "type": "house",
+        "place_id": "414424508",
+        "importance": null
+      },
+      "queriedAt": "2026-07-17T04:44:45.029396+00:00",
+      "seededFrom": "geocodes.json"
+    },
+    "28 Waverly Pl., San Francisco, CA, 94108, USA": {
+      "status": "ok",
+      "error": null,
+      "hit": {
+        "lat": "37.7936719",
+        "lon": "-122.4065757",
+        "display_name": "Moongate Lounge, 28, Waverly Place, Chinatown, South of Market, San Francisco, California, 94108, United States",
+        "type": "bar",
+        "place_id": "321072557",
+        "importance": null
+      },
+      "queriedAt": "2026-07-17T04:44:46.695836+00:00",
+      "seededFrom": "geocodes.json"
+    },
+    "218 N. Rodeo Dr., Beverly Hills, CA, 90210, USA": {
+      "status": "ok",
+      "error": null,
+      "hit": {
+        "lat": "34.0674156",
+        "lon": "-118.4005855",
+        "display_name": "Sushi Yamamoto, 218, North Rodeo Drive, Golden Triange, Beverly Hills, Los Angeles County, California, 90210, United States",
+        "type": "restaurant",
+        "place_id": "319932289",
+        "importance": null
+      },
+      "queriedAt": "2026-07-17T04:44:48.202758+00:00",
+      "seededFrom": "geocodes.json"
+    },
+    "11500 W. Pico Blvd., Los Angeles, CA, 90064, USA": {
+      "status": "ok",
+      "error": null,
+      "hit": {
+        "lat": "34.0336",
+        "lon": "-118.441768",
+        "display_name": "11500, West Pico Boulevard, Sawtelle, Los Angeles, Los Angeles County, California, 90064, United States",
+        "type": "house",
+        "place_id": "384638605",
+        "importance": null
+      },
+      "queriedAt": "2026-07-17T04:44:49.972218+00:00",
+      "seededFrom": "geocodes.json"
+    },
+    "3455 Overland Ave., Los Angeles, CA, 90034, USA": {
+      "status": "ok",
+      "error": null,
+      "hit": {
+        "lat": "34.0251269",
+        "lon": "-118.412212",
+        "display_name": "n/naka, 3455, Overland Avenue, Palms, Los Angeles, Los Angeles County, California, 90034, United States",
+        "type": "restaurant",
+        "place_id": "320464965",
+        "importance": null
+      },
+      "queriedAt": "2026-07-17T04:44:51.392035+00:00",
+      "seededFrom": "geocodes.json"
+    },
+    "Hotel Kabuki - JDV by Hyatt, 1625 Post St., San Francisco, CA, 94115, USA": {
+      "status": "empty",
+      "error": null,
+      "hit": null,
+      "queriedAt": "2026-07-17T04:44:54.390798+00:00",
+      "seededFrom": "geocodes.json-centroid-fallback"
+    },
+    "61 Division St., San Francisco, CA, 94103, USA": {
+      "status": "ok",
+      "error": null,
+      "hit": {
+        "lat": "37.7696071",
+        "lon": "-122.4040991",
+        "display_name": "61, Division Street, South of Market, San Francisco, California, 94103, United States",
+        "type": "house",
+        "place_id": "404150450",
+        "importance": null
+      },
+      "queriedAt": "2026-07-17T04:44:54.939768+00:00",
+      "seededFrom": "geocodes.json"
+    },
+    "2316 Polk St., San Francisco, CA, 94109, USA": {
+      "status": "ok",
+      "error": null,
+      "hit": {
+        "lat": "37.7981608",
+        "lon": "-122.4220036",
+        "display_name": "2316, Polk Street, Russian Hill, Nob Hill, South of Market, San Francisco, California, 94109, United States",
+        "type": "yes",
+        "place_id": "323267588",
+        "importance": null
+      },
+      "queriedAt": "2026-07-17T04:44:56.530004+00:00",
+      "seededFrom": "geocodes.json"
+    },
+    "212 N. Cañon Dr., Beverly Hills, CA, 90210, USA": {
+      "status": "ok",
+      "error": null,
+      "hit": {
+        "lat": "34.0681304",
+        "lon": "-118.3982683",
+        "display_name": "212, North Canon Drive, Beverly Hills, Los Angeles County, California, 90210, United States",
+        "type": "house",
+        "place_id": "384736507",
+        "importance": null
+      },
+      "queriedAt": "2026-07-17T04:44:58.153632+00:00",
+      "seededFrom": "geocodes.json"
+    },
+    "122 W. 4th St., Los Angeles, CA, 90013, USA": {
+      "status": "ok",
+      "error": null,
+      "hit": {
+        "lat": "34.0536909",
+        "lon": "-118.242766",
+        "display_name": "Los Angeles, Los Angeles County, California, United States",
+        "type": "administrative",
+        "place_id": "316388634",
+        "importance": null
+      },
+      "queriedAt": "2026-07-17T04:44:59.909585+00:00",
+      "seededFrom": "geocodes.json"
+    },
+    "6602 Melrose Ave., Los Angeles, CA, 90038, USA": {
+      "status": "ok",
+      "error": null,
+      "hit": {
+        "lat": "34.0833739",
+        "lon": "-118.3387469",
+        "display_name": "6602, Melrose Avenue, Fairfax, Los Angeles, Los Angeles County, California, 90038, United States",
+        "type": "house",
+        "place_id": "414209939",
+        "importance": null
+      },
+      "queriedAt": "2026-07-17T04:45:01.511047+00:00",
+      "seededFrom": "geocodes.json"
+    },
+    "16101 Ventura Blvd., Ste. 250, Encino, CA, 91436, USA": {
+      "status": "empty",
+      "error": null,
+      "hit": null,
+      "queriedAt": "2026-07-17T04:45:03.968225+00:00",
+      "seededFrom": "geocodes.json"
+    },
+    "14555 Big Basin Way, Saratoga, CA, 95070, USA": {
+      "status": "ok",
+      "error": null,
+      "hit": {
+        "lat": "37.2593076",
+        "lon": "-122.0319333",
+        "display_name": "Big Basin Way, Saratoga, Santa Clara County, California, 95070, United States",
+        "type": "primary",
+        "place_id": "419836360",
+        "importance": null
+      },
+      "queriedAt": "2026-07-17T04:45:04.751031+00:00",
+      "seededFrom": "geocodes.json"
+    },
+    "587 St. Helena St., Saint Helena, CA, 94574, USA": {
+      "status": "ok",
+      "error": null,
+      "hit": {
+        "lat": "38.4995703",
+        "lon": "-122.4624819",
+        "display_name": "587, Main Street, St. Helena, Napa County, California, 94574, United States",
+        "type": "house",
+        "place_id": "384892001",
+        "importance": null
+      },
+      "queriedAt": "2026-07-17T04:45:07.114134+00:00",
+      "seededFrom": "geocodes.json"
+    },
+    "250 California Ave., Palo Alto, CA, 94306, USA": {
+      "status": "ok",
+      "error": null,
+      "hit": {
+        "lat": "37.4280122",
+        "lon": "-122.1435645",
+        "display_name": "250, South California Avenue, Evergreen Park, Palo Alto, Santa Clara County, California, 94306, United States",
+        "type": "house",
+        "place_id": "390871557",
+        "importance": null
+      },
+      "queriedAt": "2026-07-17T04:45:09.154030+00:00",
+      "seededFrom": "geocodes.json"
+    },
+    "111 San Pedro St., Los Angeles, CA, 90012, USA": {
+      "status": "ok",
+      "error": null,
+      "hit": {
+        "lat": "34.0500663",
+        "lon": "-118.241391",
+        "display_name": "111, South San Pedro Street, Toy District, Little Tokyo, Downtown, Los Angeles, Los Angeles County, California, 90012, United States",
+        "type": "house",
+        "place_id": "321331431",
+        "importance": null
+      },
+      "queriedAt": "2026-07-17T04:45:11.909300+00:00",
+      "seededFrom": "geocodes.json"
+    },
+    "708 Bush St., San Francisco, CA, 94108, USA": {
+      "status": "ok",
+      "error": null,
+      "hit": {
+        "lat": "37.7902305",
+        "lon": "-122.4091292",
+        "display_name": "Sons & Daughters, 708, Bush Street, Lower Nob Hill, Nob Hill, South of Market, San Francisco, California, 94108, United States",
+        "type": "restaurant",
+        "place_id": "323932470",
+        "importance": null
+      },
+      "queriedAt": "2026-07-17T04:45:13.654152+00:00",
+      "seededFrom": "geocodes.json"
+    },
+    "361 Forest Ave., Ste. 103, Laguna Beach, CA, 92651, USA": {
+      "status": "empty",
+      "error": null,
+      "hit": null,
+      "queriedAt": "2026-07-17T04:45:16.820818+00:00",
+      "seededFrom": "geocodes.json"
+    },
+    "2170 Bryant St., San Francisco, CA, 94110, USA": {
+      "status": "ok",
+      "error": null,
+      "hit": {
+        "lat": "37.7595769",
+        "lon": "-122.4102101",
+        "display_name": "San Ho Won, 2170, Bryant Street, Potrero Hill, Mission, San Francisco, California, 94110, United States",
+        "type": "restaurant",
+        "place_id": "323205300",
+        "importance": null
+      },
+      "queriedAt": "2026-07-17T04:45:17.092513+00:00",
+      "seededFrom": "geocodes.json"
+    },
+    "3001 El Camino Real, Atherton, CA, 94061, USA": {
+      "status": "ok",
+      "error": null,
+      "hit": {
+        "lat": "37.4695937",
+        "lon": "-122.212484",
+        "display_name": "El Camino Real, Atherton, San Mateo County, California, 94061, United States",
+        "type": "primary",
+        "place_id": "323768809",
+        "importance": null
+      },
+      "queriedAt": "2026-07-17T04:45:18.739794+00:00",
+      "seededFrom": "geocodes.json"
+    },
+    "3110 Main St., Ste. 132, Santa Monica, CA, 90405, USA": {
+      "status": "empty",
+      "error": null,
+      "hit": null,
+      "queriedAt": "2026-07-17T04:45:21.943724+00:00",
+      "seededFrom": "geocodes.json"
+    },
+    "16573 Ventura Blvd., Ste. 14, Encino, CA, 91436, USA": {
+      "status": "empty",
+      "error": null,
+      "hit": null,
+      "queriedAt": "2026-07-17T04:45:23.488115+00:00",
+      "seededFrom": "geocodes.json"
+    },
+    "224 Helena Ave., Santa Barbara, CA, 93101, USA": {
+      "status": "ok",
+      "error": null,
+      "hit": {
+        "lat": "34.415204",
+        "lon": "-119.691757",
+        "display_name": "Silvers Omakase, 224, Helena Avenue, Funk Zone, Santa Barbara, Santa Barbara County, California, 93101, United States",
+        "type": "restaurant",
+        "place_id": "321020056",
+        "importance": null
+      },
+      "queriedAt": "2026-07-17T04:45:23.865228+00:00",
+      "seededFrom": "geocodes.json"
+    },
+    "3075 Blue Rock Rd., Paso Robles, CA, 93446, USA": {
+      "status": "empty",
+      "error": null,
+      "hit": null,
+      "queriedAt": "2026-07-17T04:45:27.000048+00:00",
+      "seededFrom": "geocodes.json"
+    },
+    "2121 Adams Ave., San Diego, CA, 92116, USA": {
+      "status": "ok",
+      "error": null,
+      "hit": {
+        "lat": "32.762674",
+        "lon": "-117.141802",
+        "display_name": "2121, Adams Avenue, University Heights, Mission Valley, San Diego, San Diego County, California, 92116, United States",
+        "type": "house",
+        "place_id": "319677428",
+        "importance": null
+      },
+      "queriedAt": "2026-07-17T04:45:27.894365+00:00",
+      "seededFrom": "geocodes.json"
+    },
+    "3228 Sacramento St., San Francisco, CA, 94115, USA": {
+      "status": "ok",
+      "error": null,
+      "hit": {
+        "lat": "37.7885864",
+        "lon": "-122.4462018",
+        "display_name": "3228, Sacramento Street, Laurel Heights, Pacific Heights, San Francisco, California, 94115, United States",
+        "type": "yes",
+        "place_id": "324021672",
+        "importance": null
+      },
+      "queriedAt": "2026-07-17T04:45:29.304814+00:00",
+      "seededFrom": "geocodes.json"
+    },
+    "2226 Polk St., San Francisco, CA, 94109, USA": {
+      "status": "ok",
+      "error": null,
+      "hit": {
+        "lat": "37.797323",
+        "lon": "-122.4219316",
+        "display_name": "SSAL, 2226, Polk Street, Russian Hill, Nob Hill, South of Market, San Francisco, California, 94109, United States",
+        "type": "restaurant",
+        "place_id": "322872543",
+        "importance": null
+      },
+      "queriedAt": "2026-07-17T04:45:31.045555+00:00",
+      "seededFrom": "geocodes.json"
+    },
+    "1529 Fillmore St., San Francisco, CA, 94115, USA": {
+      "status": "ok",
+      "error": null,
+      "hit": {
+        "lat": "37.7837055",
+        "lon": "-122.4329482",
+        "display_name": "State Bird Provisions, 1529, Fillmore Street, Alamo Square, Western Addition, San Francisco, California, 94115, United States",
+        "type": "restaurant",
+        "place_id": "323153943",
+        "importance": null
+      },
+      "queriedAt": "2026-07-17T04:45:32.600461+00:00",
+      "seededFrom": "geocodes.json"
+    },
+    "1940 Union St., Ste. 21, Oakland, CA, 94607, USA": {
+      "status": "empty",
+      "error": null,
+      "hit": null,
+      "queriedAt": "2026-07-17T04:45:36.424910+00:00",
+      "seededFrom": "geocodes.json"
+    },
+    "20918 Hawthorne Blvd., Torrance, CA, 90503, USA": {
+      "status": "ok",
+      "error": null,
+      "hit": {
+        "lat": "33.8401901",
+        "lon": "-118.3535091",
+        "display_name": "20918, Hawthorne Boulevard, Torrance, Los Angeles County, California, 90503, United States",
+        "type": "house",
+        "place_id": "414622544",
+        "importance": null
+      },
+      "queriedAt": "2026-07-17T04:45:37.102026+00:00",
+      "seededFrom": "geocodes.json"
+    },
+    "250 E. 1st St., B1, Los Angeles, CA, 90012, USA": {
+      "status": "ok",
+      "error": null,
+      "hit": {
+        "lat": "34.0536909",
+        "lon": "-118.242766",
+        "display_name": "Los Angeles, Los Angeles County, California, United States",
+        "type": "administrative",
+        "place_id": "314414187",
+        "importance": null
+      },
+      "queriedAt": "2026-07-17T04:45:40.051470+00:00",
+      "seededFrom": "geocodes.json"
+    },
+    "915 Broadway, Ste. 100, Sacramento, CA, 95818, USA": {
+      "status": "empty",
+      "error": null,
+      "hit": null,
+      "queriedAt": "2026-07-17T04:45:43.057646+00:00",
+      "seededFrom": "geocodes.json"
+    },
+    "1525 Fillmore St., San Francisco, CA, 94115, USA": {
+      "status": "ok",
+      "error": null,
+      "hit": {
+        "lat": "37.7836631",
+        "lon": "-122.4330799",
+        "display_name": "1525;1527;1529;1539, Fillmore Street, Alamo Square, Western Addition, San Francisco, California, 95115, United States",
+        "type": "yes",
+        "place_id": "319854546",
+        "importance": null
+      },
+      "queriedAt": "2026-07-17T04:45:43.297227+00:00",
+      "seededFrom": "geocodes.json"
+    },
+    "11680 Chimney Rock Rd., Paso Robles, CA, 93446, USA": {
+      "status": "empty",
+      "error": null,
+      "hit": null,
+      "queriedAt": "2026-07-17T04:45:46.194734+00:00",
+      "seededFrom": "geocodes.json"
+    },
+    "2967 Woodside Rd., Woodside, CA, 94062, USA": {
+      "status": "ok",
+      "error": null,
+      "hit": {
+        "lat": "37.4289517",
+        "lon": "-122.251458",
+        "display_name": "The Village Pub, 2967, Woodside Road, Woodside, San Mateo County, California, 94062, United States",
+        "type": "restaurant",
+        "place_id": "322898310",
+        "importance": null
+      },
+      "queriedAt": "2026-07-17T04:45:46.805579+00:00",
+      "seededFrom": "geocodes.json"
+    },
+    "381 Healdsburg Ave., Healdsburg, CA, 95448, USA": {
+      "status": "ok",
+      "error": null,
+      "hit": {
+        "lat": "38.6116256",
+        "lon": "-122.8710044",
+        "display_name": "381, Healdsburg Avenue, Healdsburg, Sonoma County, California, 95448, United States",
+        "type": "house",
+        "place_id": "415366570",
+        "importance": null
+      },
+      "queriedAt": "2026-07-17T04:45:48.377687+00:00",
+      "seededFrom": "geocodes.json"
+    },
+    "115 De Anza Blvd., San Mateo, CA, 94402, USA": {
+      "status": "ok",
+      "error": null,
+      "hit": {
+        "lat": "37.5213369",
+        "lon": "-122.3368004",
+        "display_name": "Wakuriya Japanese Kitchen, 115, De Anza Boulevard, San Mateo, San Mateo County, California, 94402, United States",
+        "type": "restaurant",
+        "place_id": "323530263",
+        "importance": null
+      },
+      "queriedAt": "2026-07-17T04:45:49.773723+00:00",
+      "seededFrom": "geocodes.json"
+    },
+    "2495 3rd St., San Francisco, CA, 94107, USA": {
+      "status": "ok",
+      "error": null,
+      "hit": {
+        "lat": "37.7580869",
+        "lon": "-122.3885112",
+        "display_name": "2495, 3rd Street, Dogpatch, Potrero Hill, San Francisco, California, 94107, United States",
+        "type": "house",
+        "place_id": "404691865",
+        "importance": null
+      },
+      "queriedAt": "2026-07-17T04:45:51.924859+00:00",
+      "seededFrom": "geocodes.json"
+    },
+    "4058 Tejon St., Denver, CO, 80211, USA": {
+      "status": "ok",
+      "error": null,
+      "hit": {
+        "lat": "39.7727956",
+        "lon": "-105.0109862",
+        "display_name": "4058, Tejon Street, Sunnyside, Denver, Colorado, 80211, United States",
+        "type": "retail",
+        "place_id": "330807221",
+        "importance": null
+      },
+      "queriedAt": "2026-07-17T04:45:53.473366+00:00",
+      "seededFrom": "geocodes.json"
+    },
+    "2556 15th St., Denver, CO, 80211, USA": {
+      "status": "ok",
+      "error": null,
+      "hit": {
+        "lat": "39.758103",
+        "lon": "-105.0116583",
+        "display_name": "Alma Fonda Fina, 2556, 15th Street, Highland, Denver, Colorado, 80211, United States",
+        "type": "restaurant",
+        "place_id": "330534854",
+        "importance": null
+      },
+      "queriedAt": "2026-07-17T04:45:55.375602+00:00",
+      "seededFrom": "geocodes.json"
+    },
+    "2843 Larimer St., Denver, CO, 80205, USA": {
+      "status": "ok",
+      "error": null,
+      "hit": {
+        "lat": "39.7611881",
+        "lon": "-104.9823915",
+        "display_name": "2843, Larimer Street, Five Points, Denver, Colorado, 80205, United States",
+        "type": "retail",
+        "place_id": "329675237",
+        "importance": null
+      },
+      "queriedAt": "2026-07-17T04:45:56.746281+00:00",
+      "seededFrom": "geocodes.json"
+    },
+    "312 S. Mill St., Aspen, CO, 81611, USA": {
+      "status": "ok",
+      "error": null,
+      "hit": {
+        "lat": "39.1885009",
+        "lon": "-106.8197359",
+        "display_name": "Bosq, 312, South Mill Street, Aspen, Pitkin County, Colorado, 81611, United States",
+        "type": "restaurant",
+        "place_id": "328833080",
+        "importance": null
+      },
+      "queriedAt": "2026-07-17T04:45:58.686849+00:00",
+      "seededFrom": "geocodes.json"
+    },
+    "1801 Blake St., Denver, CO, 80202, USA": {
+      "status": "ok",
+      "error": null,
+      "hit": {
+        "lat": "39.7527933",
+        "lon": "-104.9967909",
+        "display_name": "1801, Blake Street, Central Business District, Denver, Colorado, 80202, United States",
+        "type": "commercial",
+        "place_id": "328134113",
+        "importance": null
+      },
+      "queriedAt": "2026-07-17T04:46:00.445135+00:00",
+      "seededFrom": "geocodes.json"
+    },
+    "1738 Pearl St., Boulder, CO, 80302, USA": {
+      "status": "ok",
+      "error": null,
+      "hit": {
+        "lat": "40.0193004",
+        "lon": "-105.2724538",
+        "display_name": "Frasca Food and Wine, 1738, Pearl Street, Goss-Grove, Boulder, Boulder County, Colorado, 80302, United States",
+        "type": "restaurant",
+        "place_id": "326406784",
+        "importance": null
+      },
+      "queriedAt": "2026-07-17T04:46:02.311770+00:00",
+      "seededFrom": "geocodes.json"
+    },
+    "1551 S. Pearl St., Denver, CO, 80210, USA": {
+      "status": "ok",
+      "error": null,
+      "hit": {
+        "lat": "39.6883934",
+        "lon": "-104.9806129",
+        "display_name": "1551, South Pearl Street, Platt Park, Denver, Colorado, 80210, United States",
+        "type": "house",
+        "place_id": "330849795",
+        "importance": null
+      },
+      "queriedAt": "2026-07-17T04:46:03.815515+00:00",
+      "seededFrom": "geocodes.json"
+    },
+    "2550 15th St., Denver, CO, 80211, USA": {
+      "status": "ok",
+      "error": null,
+      "hit": {
+        "lat": "39.7577969",
+        "lon": "-105.0111751",
+        "display_name": "2550, 15th Street, Highland, Denver, Colorado, 80211, United States",
+        "type": "house",
+        "place_id": "402923631",
+        "importance": null
+      },
+      "queriedAt": "2026-07-17T04:46:05.644300+00:00",
+      "seededFrom": "geocodes.json"
+    },
+    "151 N.E. 41st St., Miami, FL, 33137, USA": {
+      "status": "ok",
+      "error": null,
+      "hit": {
+        "lat": "25.8600955",
+        "lon": "-80.2614493",
+        "display_name": "East 41st Street, Hialeah, Miami-Dade County, Florida, 33013, United States",
+        "type": "residential",
+        "place_id": "305056943",
+        "importance": null
+      },
+      "queriedAt": "2026-07-17T04:46:07.498244+00:00",
+      "seededFrom": "geocodes.json"
+    },
+    "4979 New Broad St., Orlando, FL, 32814, USA": {
+      "status": "ok",
+      "error": null,
+      "hit": {
+        "lat": "28.5685437",
+        "lon": "-81.3261791",
+        "display_name": "4979, New Broad Street, Baldwin Park, Orlando, Orange County, Florida, 32814, United States",
+        "type": "house",
+        "place_id": "396904428",
+        "importance": null
+      },
+      "queriedAt": "2026-07-17T04:46:09.233680+00:00",
+      "seededFrom": "geocodes.json"
+    },
+    "3540 Main Hwy., Miami, FL, 33133, USA": {
+      "status": "ok",
+      "error": null,
+      "hit": {
+        "lat": "25.725139",
+        "lon": "-80.2454316",
+        "display_name": "3540, Main Highway, Miami, Miami-Dade County, Florida, 33133, United States",
+        "type": "yes",
+        "place_id": "306091033",
+        "importance": null
+      },
+      "queriedAt": "2026-07-17T04:46:10.587128+00:00",
+      "seededFrom": "geocodes.json"
+    },
+    "5205 N.E. 2nd Ave., Miami, FL, 33137, USA": {
+      "status": "ok",
+      "error": null,
+      "hit": {
+        "lat": "25.8229932",
+        "lon": "-80.2773343",
+        "display_name": "East 2nd Avenue, Hialeah, Miami-Dade County, Florida, 33010, United States",
+        "type": "residential",
+        "place_id": "305917803",
+        "importance": null
+      },
+      "queriedAt": "2026-07-17T04:46:12.425936+00:00",
+      "seededFrom": "geocodes.json"
+    },
+    "4962 New Broad St., Orlando, FL, 32814, USA": {
+      "status": "ok",
+      "error": null,
+      "hit": {
+        "lat": "28.5683758",
+        "lon": "-81.3260953",
+        "display_name": "4962, New Broad Street, Baldwin Park, Orlando, Orange County, Florida, 32814, United States",
+        "type": "house",
+        "place_id": "396904432",
+        "importance": null
+      },
+      "queriedAt": "2026-07-17T04:46:14.162795+00:00",
+      "seededFrom": "geocodes.json"
+    },
+    "Four Seasons Hotel and Residences, 525 N. Fort Lauderdale Beach Blvd., Fort Lauderdale, FL, 33304, USA": {
+      "status": "empty",
+      "error": null,
+      "hit": null,
+      "queriedAt": "2026-07-17T04:46:17.151000+00:00",
+      "seededFrom": "geocodes.json"
+    },
+    "3900 N.E. 2nd Ave., Miami, FL, 33137, USA": {
+      "status": "empty",
+      "error": null,
+      "hit": null,
+      "queriedAt": "2026-07-17T04:46:18.888363+00:00",
+      "seededFrom": "geocodes.json-centroid-fallback"
+    },
+    "1202 N. Franklin St., Tampa, FL, 33602, USA": {
+      "status": "ok",
+      "error": null,
+      "hit": {
+        "lat": "27.9536193",
+        "lon": "-82.4604292",
+        "display_name": "1202, North Franklin Street, Clarkes, Tampa Heights, Tampa, Hillsborough County, Florida, 33602, United States",
+        "type": "yes",
+        "place_id": "305139421",
+        "importance": null
+      },
+      "queriedAt": "2026-07-17T04:46:19.232879+00:00",
+      "seededFrom": "geocodes.json"
+    },
+    "31 S.E. 5th St., Miami, FL, 33131, USA": {
+      "status": "ok",
+      "error": null,
+      "hit": {
+        "lat": "25.7741566",
+        "lon": "-80.1935973",
+        "display_name": "Miami, Miami-Dade County, Florida, United States",
+        "type": "administrative",
+        "place_id": "420850231",
+        "importance": null
+      },
+      "queriedAt": "2026-07-17T04:46:20.902516+00:00",
+      "seededFrom": "geocodes.json"
+    },
+    "424 Park Pl #101, West Palm Beach, FL 33401, West Palm Beach, FL, 33401, USA": {
+      "status": "empty",
+      "error": null,
+      "hit": null,
+      "queriedAt": "2026-07-17T04:46:23.791003+00:00",
+      "seededFrom": "geocodes.json"
+    },
+    "313 N.W. 25th St., Miami, FL, 33127, USA": {
+      "status": "ok",
+      "error": null,
+      "hit": {
+        "lat": "25.8012787",
+        "lon": "-80.1446122",
+        "display_name": "West 25th Street, Miami Beach, Miami-Dade County, Florida, 33140, United States",
+        "type": "residential",
+        "place_id": "307076366",
+        "importance": null
+      },
+      "queriedAt": "2026-07-17T04:46:24.662364+00:00",
+      "seededFrom": "geocodes.json"
+    },
+    "1809 Winter Park Rd., Orlando, FL, 32803, USA": {
+      "status": "ok",
+      "error": null,
+      "hit": {
+        "lat": "28.569036",
+        "lon": "-81.3459996",
+        "display_name": "1809, Winter Park Road, Audubon Park, Orlando, Orange County, Florida, 32803, United States",
+        "type": "house",
+        "place_id": "396404407",
+        "importance": null
+      },
+      "queriedAt": "2026-07-17T04:46:26.329875+00:00",
+      "seededFrom": "geocodes.json"
+    },
+    "807 W. Platt St., Tampa, FL, 33606, USA": {
+      "status": "ok",
+      "error": null,
+      "hit": {
+        "lat": "27.9418016",
+        "lon": "-82.467808",
+        "display_name": "807, West Platt Street, Riverside, Hyde Park, Tampa, Hillsborough County, Florida, 33606, United States",
+        "type": "house",
+        "place_id": "391307955",
+        "importance": null
+      },
+      "queriedAt": "2026-07-17T04:46:27.874939+00:00",
+      "seededFrom": "geocodes.json"
+    },
+    "307 W. Palm Ave., Tampa, FL, 33602, USA": {
+      "status": "ok",
+      "error": null,
+      "hit": {
+        "lat": "27.9623842",
+        "lon": "-82.4644055",
+        "display_name": "307, West Palm Avenue, Mathews Place, Tampa Heights, Tampa, Hillsborough County, Florida, 33602, United States",
+        "type": "house",
+        "place_id": "387933601",
+        "importance": null
+      },
+      "queriedAt": "2026-07-17T04:46:29.299997+00:00",
+      "seededFrom": "geocodes.json"
+    },
+    "151 N.E. 41st St., Ste. 135, Miami, FL, 33137, USA": {
+      "status": "empty",
+      "error": null,
+      "hit": null,
+      "queriedAt": "2026-07-17T04:46:32.897088+00:00",
+      "seededFrom": "geocodes.json-centroid-fallback"
+    },
+    "3413 Main Hwy., Miami, FL, 33133, USA": {
+      "status": "ok",
+      "error": null,
+      "hit": {
+        "lat": "25.7272071",
+        "lon": "-80.2430803",
+        "display_name": "3413, Main Highway, Ocean View Heights, Miami, Miami-Dade County, Florida, 33133, United States",
+        "type": "house",
+        "place_id": "411752683",
+        "importance": null
+      },
+      "queriedAt": "2026-07-17T04:46:33.497765+00:00",
+      "seededFrom": "geocodes.json"
+    },
+    "2188 N.E. 123rd St., North Miami, FL, 33181, USA": {
+      "status": "empty",
+      "error": null,
+      "hit": null,
+      "queriedAt": "2026-07-17T04:46:36.141140+00:00",
+      "seededFrom": "geocodes.json"
+    },
+    "7223 N.W. 2nd Ave., Miami, FL, 33150, USA": {
+      "status": "empty",
+      "error": null,
+      "hit": null,
+      "queriedAt": "2026-07-17T04:46:37.981230+00:00",
+      "seededFrom": "geocodes.json-centroid-fallback"
+    },
+    "323 W. Palm Ave., Tampa, FL, 33602, USA": {
+      "status": "ok",
+      "error": null,
+      "hit": {
+        "lat": "27.9622165",
+        "lon": "-82.4649256",
+        "display_name": "323, West Palm Avenue, Mathews Place, Tampa Heights, Tampa, Hillsborough County, Florida, 33602, United States",
+        "type": "house",
+        "place_id": "391824995",
+        "importance": null
+      },
+      "queriedAt": "2026-07-17T04:46:38.372663+00:00",
+      "seededFrom": "geocodes.json"
+    },
+    "112 Alhambra Cir., Coral Gables, FL, 33134, USA": {
+      "status": "ok",
+      "error": null,
+      "hit": {
+        "lat": "25.7528781",
+        "lon": "-80.2573211",
+        "display_name": "112, Alhambra Circle, Coral Gables, Miami-Dade County, Florida, 33134, United States",
+        "type": "house",
+        "place_id": "411215706",
+        "importance": null
+      },
+      "queriedAt": "2026-07-17T04:46:39.713482+00:00",
+      "seededFrom": "geocodes.json"
+    },
+    "955 W. Fairbanks Ave., Winter Park, FL, 32789, USA": {
+      "status": "ok",
+      "error": null,
+      "hit": {
+        "lat": "28.5932143",
+        "lon": "-81.3617583",
+        "display_name": "955, Fairbanks Avenue, Winter Park, Orange County, Florida, 32789, United States",
+        "type": "house",
+        "place_id": "302369792",
+        "importance": null
+      },
+      "queriedAt": "2026-07-17T04:46:41.115507+00:00",
+      "seededFrom": "geocodes.json"
+    },
+    "101 Washington Ave., Miami Beach, FL, 33139, USA": {
+      "status": "ok",
+      "error": null,
+      "hit": {
+        "lat": "25.7701325",
+        "lon": "-80.1348918",
+        "display_name": "Stubborn Seed, 101, Washington Avenue, South Beach, Miami Beach, Miami-Dade County, Florida, 33139, United States",
+        "type": "restaurant",
+        "place_id": "302334627",
+        "importance": null
+      },
+      "queriedAt": "2026-07-17T04:46:42.650016+00:00",
+      "seededFrom": "geocodes.json"
+    },
+    "Carillon Miami Wellness Resort, 6801 Collins Ave., Miami Beach, FL, 33141, USA": {
+      "status": "empty",
+      "error": null,
+      "hit": null,
+      "queriedAt": "2026-07-17T04:46:45.441159+00:00",
+      "seededFrom": "geocodes.json"
+    },
+    "Four Seasons Hotel at The Surf Club, Surfside, 9011 Collins Ave., Surfside, FL, 33154, USA": {
+      "status": "empty",
+      "error": null,
+      "hit": null,
+      "queriedAt": "2026-07-17T04:46:47.174274+00:00",
+      "seededFrom": "geocodes.json"
+    },
+    "Disney's Grand Floridian Resort & Spa, 4401 Floridian Way, Orlando, FL, 32830, USA": {
+      "status": "empty",
+      "error": null,
+      "hit": null,
+      "queriedAt": "2026-07-17T04:46:48.903520+00:00",
+      "seededFrom": "geocodes.json"
+    },
+    "115 E. Lyman Ave., Winter Park, FL, 32789, USA": {
+      "status": "ok",
+      "error": null,
+      "hit": {
+        "lat": "28.5951042",
+        "lon": "-81.3505481",
+        "display_name": "115, Lyman Avenue, Winter Park, Orange County, Florida, 32789, United States",
+        "type": "house",
+        "place_id": "303240268",
+        "importance": null
+      },
+      "queriedAt": "2026-07-17T04:46:49.402352+00:00",
+      "seededFrom": "geocodes.json"
+    },
+    "The St. Regis Atlanta, 88 W. Paces Ferry Rd. NW, Atlanta, GA, 30305, USA": {
+      "status": "ok",
+      "error": null,
+      "hit": {
+        "lat": "33.8398015",
+        "lon": "-84.3824159",
+        "display_name": "The St. Regis Atlanta, 88, West Paces Ferry Road Northwest, Buckhead, Atlanta, Fulton County, Georgia, 30305, United States",
+        "type": "hotel",
+        "place_id": "342355376",
+        "importance": null
+      },
+      "queriedAt": "2026-07-17T04:46:50.974064+00:00",
+      "seededFrom": "geocodes.json"
+    },
+    "1460 Ellsworth Industrial Blvd., Ste. A, Atlanta, GA, 30318, USA": {
+      "status": "empty",
+      "error": null,
+      "hit": null,
+      "queriedAt": "2026-07-17T04:46:53.962210+00:00",
+      "seededFrom": "geocodes.json-centroid-fallback"
+    },
+    "1055 Howell Mill Rd., Atlanta, GA, 30318, USA": {
+      "status": "ok",
+      "error": null,
+      "hit": {
+        "lat": "33.783342",
+        "lon": "-84.4114228",
+        "display_name": "Hayakawa, 1055, Howell Mill Road Northwest, Atlantic Station, Bankhead, Atlanta, Fulton County, Georgia, 30318, United States",
+        "type": "restaurant",
+        "place_id": "342367688",
+        "importance": null
+      },
+      "queriedAt": "2026-07-17T04:46:54.461316+00:00",
+      "seededFrom": "geocodes.json"
+    },
+    "999 Peachtree St. NE, Atlanta, GA, 30309, USA": {
+      "status": "ok",
+      "error": null,
+      "hit": {
+        "lat": "33.7809002",
+        "lon": "-84.3829982",
+        "display_name": "999 Peachtree Parking Garage, 999, Peachtree Street Northeast, Midtown, Old Fourth Ward, Atlanta, Fulton County, Georgia, 30309, United States",
+        "type": "parking",
+        "place_id": "342261508",
+        "importance": null
+      },
+      "queriedAt": "2026-07-17T04:46:56.089986+00:00",
+      "seededFrom": "geocodes.json"
+    },
+    "691 14th St. NW, Ste. C, Atlanta, GA, 30318, USA": {
+      "status": "empty",
+      "error": null,
+      "hit": null,
+      "queriedAt": "2026-07-17T04:46:59.082146+00:00",
+      "seededFrom": "geocodes.json-centroid-fallback"
+    },
+    "3009 Peachtree Rd. NE, Ste. 140, Atlanta, GA, 30305, USA": {
+      "status": "empty",
+      "error": null,
+      "hit": null,
+      "queriedAt": "2026-07-17T04:47:00.717422+00:00",
+      "seededFrom": "geocodes.json-centroid-fallback"
+    },
+    "3330 Piedmont Rd. NE, #22A, Atlanta, GA, 30305, USA": {
+      "status": "empty",
+      "error": null,
+      "hit": null,
+      "queriedAt": "2026-07-17T04:47:02.460689+00:00",
+      "seededFrom": "geocodes.json-centroid-fallback"
+    },
+    "36 Mill St., Marietta, GA, 30060, USA": {
+      "status": "ok",
+      "error": null,
+      "hit": {
+        "lat": "33.9536045",
+        "lon": "-84.5509359",
+        "display_name": "Spring, 36, Mill Street Northwest, Northwest Marietta Historic District, Marietta, Cobb County, Georgia, 30060, United States",
+        "type": "restaurant",
+        "place_id": "342482269",
+        "importance": null
+      },
+      "queriedAt": "2026-07-17T04:47:02.976833+00:00",
+      "seededFrom": "geocodes.json"
+    },
+    "177 N. Ada St., Chicago, IL, 60607, USA": {
+      "status": "ok",
+      "error": null,
+      "hit": {
+        "lat": "41.8755616",
+        "lon": "-87.6244212",
+        "display_name": "Chicago, South Chicago Township, Cook County, Illinois, United States",
+        "type": "administrative",
+        "place_id": "418248522",
+        "importance": null
+      },
+      "queriedAt": "2026-07-17T04:47:04.581968+00:00",
+      "seededFrom": "geocodes.json"
+    },
+    "1723 N. Halsted St., Chicago, IL, 60614, USA": {
+      "status": "ok",
+      "error": null,
+      "hit": {
+        "lat": "41.9134372",
+        "lon": "-87.648199",
+        "display_name": "Alinea, 1723, North Halsted Street, Ranch Triangle, Lincoln Park, Chicago, North Chicago Township, Cook County, Illinois, 60614, United States",
+        "type": "restaurant",
+        "place_id": "370825695",
+        "importance": null
+      },
+      "queriedAt": "2026-07-17T04:47:06.163461+00:00",
+      "seededFrom": "geocodes.json"
+    },
+    "1340 W. Fulton St., Chicago, IL, 60607, USA": {
+      "status": "ok",
+      "error": null,
+      "hit": {
+        "lat": "41.8868452",
+        "lon": "-87.660486",
+        "display_name": "Ever, 1340, West Fulton Market, Fulton Market District, West Loop, Near West Side, Chicago, West Chicago Township, Cook County, Illinois, 60607, United States",
+        "type": "restaurant",
+        "place_id": "370469587",
+        "importance": null
+      },
+      "queriedAt": "2026-07-17T04:47:07.730104+00:00",
+      "seededFrom": "geocodes.json"
+    },
+    "1001 N. Winchester Ave., Chicago, IL, 60622, USA": {
+      "status": "ok",
+      "error": null,
+      "hit": {
+        "lat": "41.8996921",
+        "lon": "-87.6756548",
+        "display_name": "Kasama, 1001, North Winchester Avenue, Ukrainian Village, Wicker Park, West Town, Chicago, West Chicago Township, Cook County, Illinois, 60622, United States",
+        "type": "restaurant",
+        "place_id": "372348432",
+        "importance": null
+      },
+      "queriedAt": "2026-07-17T04:47:09.967196+00:00",
+      "seededFrom": "geocodes.json"
+    },
+    "661 W. Walnut St., Chicago, IL, 60661, USA": {
+      "status": "ok",
+      "error": null,
+      "hit": {
+        "lat": "41.8861178",
+        "lon": "-87.6451372",
+        "display_name": "Oriole, 661, West Walnut Street, Fulton River District, West Loop, Near West Side, Chicago, West Chicago Township, Cook County, Illinois, 60661, United States",
+        "type": "restaurant",
+        "place_id": "372879613",
+        "importance": null
+      },
+      "queriedAt": "2026-07-17T04:47:11.562803+00:00",
+      "seededFrom": "geocodes.json"
+    },
+    "1729 N. Halsted St., Chicago, IL, 60614, USA": {
+      "status": "ok",
+      "error": null,
+      "hit": {
+        "lat": "41.9136386",
+        "lon": "-87.6482025",
+        "display_name": "Boka, 1729, North Halsted Street, Ranch Triangle, Lincoln Park, Chicago, North Chicago Township, Cook County, Illinois, 60614, United States",
+        "type": "restaurant",
+        "place_id": "370651147",
+        "importance": null
+      },
+      "queriedAt": "2026-07-17T04:47:13.024821+00:00",
+      "seededFrom": "geocodes.json"
+    },
+    "4662 N. Broadway, Chicago, IL, 60640, USA": {
+      "status": "ok",
+      "error": null,
+      "hit": {
+        "lat": "41.9670458",
+        "lon": "-87.6586482",
+        "display_name": "4662, North Broadway, Uptown Square, Uptown, Chicago, Lake View Township, Cook County, Illinois, 60640, United States",
+        "type": "house",
+        "place_id": "390870921",
+        "importance": null
+      },
+      "queriedAt": "2026-07-17T04:47:14.525215+00:00",
+      "seededFrom": "geocodes.json"
+    },
+    "2419 W. 14th St., Chicago, IL, 60608, USA": {
+      "status": "ok",
+      "error": null,
+      "hit": {
+        "lat": "41.8624839",
+        "lon": "-87.686895",
+        "display_name": "K-suerte Cookies & Cards, 2419, West 14th Street, Near West Side, Chicago, West Chicago Township, Cook County, Illinois, 60608, United States",
+        "type": "bakery",
+        "place_id": "370436536",
+        "importance": null
+      },
+      "queriedAt": "2026-07-17T04:47:16.215007+00:00",
+      "seededFrom": "geocodes.json"
+    },
+    "1350 W. Randolph Ave., Chicago, IL, 60607, USA": {
+      "status": "empty",
+      "error": null,
+      "hit": null,
+      "queriedAt": "2026-07-17T04:47:19.109527+00:00",
+      "seededFrom": "geocodes.json-centroid-fallback"
+    },
+    "2200 N. Clark St., Chicago, IL, 60614, USA": {
+      "status": "ok",
+      "error": null,
+      "hit": {
+        "lat": "41.922972",
+        "lon": "-87.639006",
+        "display_name": "2200, North Clark Street, Mid-North District, Lincoln Park, Chicago, North Chicago Township, Cook County, Illinois, 60614, United States",
+        "type": "house",
+        "place_id": "390698519",
+        "importance": null
+      },
+      "queriedAt": "2026-07-17T04:47:19.790800+00:00",
+      "seededFrom": "geocodes.json"
+    },
+    "2018 W. Chicago Ave., Chicago, IL, 60622, USA": {
+      "status": "ok",
+      "error": null,
+      "hit": {
+        "lat": "41.8960817",
+        "lon": "-87.6778458",
+        "display_name": "2018, West Chicago Avenue, Ukrainian Village, West Town, Chicago, West Chicago Township, Cook County, Illinois, 60622, United States",
+        "type": "yes",
+        "place_id": "370372030",
+        "importance": null
+      },
+      "queriedAt": "2026-07-17T04:47:21.251142+00:00",
+      "seededFrom": "geocodes.json"
+    },
+    "2429 N. Lincoln Ave., Chicago, IL, 60614, USA": {
+      "status": "ok",
+      "error": null,
+      "hit": {
+        "lat": "41.9262841",
+        "lon": "-87.6495306",
+        "display_name": "Galit, 2429, North Lincoln Avenue, Wrightwood Neighbors, Lincoln Park, Chicago, Lake View Township, Cook County, Illinois, 60614, United States",
+        "type": "restaurant",
+        "place_id": "370800722",
+        "importance": null
+      },
+      "queriedAt": "2026-07-17T04:47:23.087519+00:00",
+      "seededFrom": "geocodes.json"
+    },
+    "217 W. Huron St., Chicago, IL, 60654, USA": {
+      "status": "ok",
+      "error": null,
+      "hit": {
+        "lat": "41.8945593",
+        "lon": "-87.6351044",
+        "display_name": "Indienne, 217, West Huron Street, River North, Near North Side, Chicago, North Chicago Township, Cook County, Illinois, 60610, United States",
+        "type": "restaurant",
+        "place_id": "370975102",
+        "importance": null
+      },
+      "queriedAt": "2026-07-17T04:47:24.681415+00:00",
+      "seededFrom": "geocodes.json"
+    },
+    "731 W. Lake St., Chicago, IL, 60661, USA": {
+      "status": "ok",
+      "error": null,
+      "hit": {
+        "lat": "41.8854996",
+        "lon": "-87.6468806",
+        "display_name": "Mako, 731, West Lake Street, Fulton River District, West Loop, Near West Side, Chicago, West Chicago Township, Cook County, Illinois, 60661, United States",
+        "type": "restaurant",
+        "place_id": "371300476",
+        "importance": null
+      },
+      "queriedAt": "2026-07-17T04:47:26.818168+00:00",
+      "seededFrom": "geocodes.json"
+    },
+    "2515 S. Wabash Ave., Chicago, IL, 60616, USA": {
+      "status": "ok",
+      "error": null,
+      "hit": {
+        "lat": "41.846932",
+        "lon": "-87.6248793",
+        "display_name": "Moody Tongue Brewing Company, 2515, South Wabash Avenue, Near South Side, Chicago, South Chicago Township, Cook County, Illinois, 60616, United States",
+        "type": "brewery",
+        "place_id": "371767393",
+        "importance": null
+      },
+      "queriedAt": "2026-07-17T04:47:28.756554+00:00",
+      "seededFrom": "geocodes.json"
+    },
+    "953 W. Fulton Market, Chicago, IL, 60607, USA": {
+      "status": "ok",
+      "error": null,
+      "hit": {
+        "lat": "41.8865946",
+        "lon": "-87.6520069",
+        "display_name": "Next, 953, West Fulton Market, Fulton Market District, West Loop, Near West Side, Chicago, West Chicago Township, Cook County, Illinois, 60607, United States",
+        "type": "restaurant",
+        "place_id": "371796917",
+        "importance": null
+      },
+      "queriedAt": "2026-07-17T04:47:30.166530+00:00",
+      "seededFrom": "geocodes.json"
+    },
+    "1466 N. Ashland Ave., Chicago, IL, 60662, USA": {
+      "status": "ok",
+      "error": null,
+      "hit": {
+        "lat": "41.9089411",
+        "lon": "-87.6679496",
+        "display_name": "Schwa, 1466, North Ashland Avenue, Pulaski Park, Wicker Park, West Town, Chicago, West Chicago Township, Cook County, Illinois, 60622, United States",
+        "type": "restaurant",
+        "place_id": "370837314",
+        "importance": null
+      },
+      "queriedAt": "2026-07-17T04:47:31.803120+00:00",
+      "seededFrom": "geocodes.json"
+    },
+    "123 N. Jefferson St., Chicago, IL, 60661, USA": {
+      "status": "ok",
+      "error": null,
+      "hit": {
+        "lat": "41.883943",
+        "lon": "-87.6425174",
+        "display_name": "Sepia, 123, North Jefferson Street, West Loop Gate, West Loop, Near West Side, Chicago, West Chicago Township, Cook County, Illinois, 60661, United States",
+        "type": "restaurant",
+        "place_id": "371241265",
+        "importance": null
+      },
+      "queriedAt": "2026-07-17T04:47:33.331147+00:00",
+      "seededFrom": "geocodes.json"
+    },
+    "445 N. Clark St., Chicago, IL, 60654, USA": {
+      "status": "ok",
+      "error": null,
+      "hit": {
+        "lat": "41.8905369",
+        "lon": "-87.6309213",
+        "display_name": "Frontera Grill, 445, North Clark Street, River North, Near North Side, Chicago, North Chicago Township, Cook County, Illinois, 60654, United States",
+        "type": "restaurant",
+        "place_id": "372239555",
+        "importance": null
+      },
+      "queriedAt": "2026-07-17T04:47:35.477800+00:00",
+      "seededFrom": "geocodes.json"
+    },
+    "800 Tchoupitoulas St., New Orleans, LA, 70130, USA": {
+      "status": "ok",
+      "error": null,
+      "hit": {
+        "lat": "29.9446386",
+        "lon": "-90.0673486",
+        "display_name": "Emeril's, 800, Tchoupitoulas Street, Warehouse District, French Quarter, New Orleans, Orleans Parish, Louisiana, 70130, United States",
+        "type": "restaurant",
+        "place_id": "304184091",
+        "importance": null
+      },
+      "queriedAt": "2026-07-17T04:47:37.033056+00:00",
+      "seededFrom": "geocodes.json"
+    },
+    "3054 Saint Claude Ave., New Orleans, LA, 70117, USA": {
+      "status": "ok",
+      "error": null,
+      "hit": {
+        "lat": "29.9675573",
+        "lon": "-90.0446954",
+        "display_name": "3054, Saint Claude Avenue, Bywater, New Orleans, Orleans Parish, Louisiana, 70117, United States",
+        "type": "house",
+        "place_id": "303898355",
+        "importance": null
+      },
+      "queriedAt": "2026-07-17T04:47:39.042428+00:00",
+      "seededFrom": "geocodes.json"
+    },
+    "127 N. Carrollton Ave., New Orleans, LA, 70119, USA": {
+      "status": "ok",
+      "error": null,
+      "hit": {
+        "lat": "29.9750884",
+        "lon": "-90.0997385",
+        "display_name": "127, North Carrollton Avenue, Mid-City, New Orleans, Orleans Parish, Louisiana, 70119, United States",
+        "type": "house",
+        "place_id": "394961877",
+        "importance": null
+      },
+      "queriedAt": "2026-07-17T04:47:40.427633+00:00",
+      "seededFrom": "geocodes.json"
+    },
+    "605 Tremont St., Boston, MA, 02118, USA": {
+      "status": "ok",
+      "error": null,
+      "hit": {
+        "lat": "42.3431433",
+        "lon": "-71.073644",
+        "display_name": "605, Tremont Street, South End, Boston, Suffolk County, Massachusetts, 02118, United States",
+        "type": "yes",
+        "place_id": "359610419",
+        "importance": null
+      },
+      "queriedAt": "2026-07-17T04:47:42.170610+00:00",
+      "seededFrom": "geocodes.json"
+    },
+    "11 Madison Ave., New York, NY, 10010, USA": {
+      "status": "ok",
+      "error": null,
+      "hit": {
+        "lat": "40.7415982",
+        "lon": "-73.9871904",
+        "display_name": "Eleven Madison Park, 11, Madison Avenue, Flatiron District, Manhattan Community Board 5, Manhattan, New York County, New York, 10010, United States",
+        "type": "restaurant",
+        "place_id": "359228169",
+        "importance": null
+      },
+      "queriedAt": "2026-07-17T04:47:44.001714+00:00",
+      "seededFrom": "geocodes.json"
+    },
+    "2 Harrison St., New York, NY, 10013, USA": {
+      "status": "ok",
+      "error": null,
+      "hit": {
+        "lat": "40.71879",
+        "lon": "-74.009476",
+        "display_name": "2, Harrison Street, Tribeca, Lower Manhattan, Manhattan, New York County, New York, 10013, United States",
+        "type": "house",
+        "place_id": "401318693",
+        "importance": null
+      },
+      "queriedAt": "2026-07-17T04:47:45.749585+00:00",
+      "seededFrom": "geocodes.json"
+    },
+    "155 W. 51st St., New York, NY, 10019, USA": {
+      "status": "ok",
+      "error": null,
+      "hit": {
+        "lat": "40.7613945",
+        "lon": "-73.981691",
+        "display_name": "Le Bernardin, 155, West 51st Street, Theater District, Manhattan Community Board 5, Manhattan, New York County, New York, 10019, United States",
+        "type": "restaurant",
+        "place_id": "360447594",
+        "importance": null
+      },
+      "queriedAt": "2026-07-17T04:47:47.912963+00:00",
+      "seededFrom": "geocodes.json"
+    },
+    "10 Columbus Circle, New York, NY, 10019, USA": {
+      "status": "ok",
+      "error": null,
+      "hit": {
+        "lat": "40.7682549",
+        "lon": "-73.9828519",
+        "display_name": "Per Se, 10, Columbus Circle, Manhattan Community Board 4, Manhattan, New York County, New York, 10019, United States",
+        "type": "restaurant",
+        "place_id": "358516626",
+        "importance": null
+      },
+      "queriedAt": "2026-07-17T04:47:49.344872+00:00",
+      "seededFrom": "geocodes.json"
+    },
+    "3 E. 41st St., New York, NY, 10017, USA": {
+      "status": "ok",
+      "error": null,
+      "hit": {
+        "lat": "40.752273",
+        "lon": "-73.979858",
+        "display_name": "3, East 41st Street, Midtown, Manhattan Community Board 5, Manhattan, New York County, New York, 10017, United States",
+        "type": "house",
+        "place_id": "401323972",
+        "importance": null
+      },
+      "queriedAt": "2026-07-17T04:47:51.223581+00:00",
+      "seededFrom": "geocodes.json"
+    },
+    "65 E. 55th St., New York, NY, 10022, USA": {
+      "status": "ok",
+      "error": null,
+      "hit": {
+        "lat": "40.7607818",
+        "lon": "-73.9721848",
+        "display_name": "Aquavit, 65, East 55th Street, Midtown East, Manhattan Community Board 5, Manhattan, New York County, New York, 10022, United States",
+        "type": "restaurant",
+        "place_id": "358850258",
+        "importance": null
+      },
+      "queriedAt": "2026-07-17T04:47:52.799548+00:00",
+      "seededFrom": "geocodes.json"
+    },
+    "47 S. 5th St., Brooklyn, NY, 11249, USA": {
+      "status": "ok",
+      "error": null,
+      "hit": {
+        "lat": "40.6526006",
+        "lon": "-73.9497211",
+        "display_name": "Brooklyn, Kings County, New York, United States",
+        "type": "administrative",
+        "place_id": "357303770",
+        "importance": null
+      },
+      "queriedAt": "2026-07-17T04:47:54.240816+00:00",
+      "seededFrom": "geocodes.json"
+    },
+    "77 Worth St., New York, NY, 10013, USA": {
+      "status": "ok",
+      "error": null,
+      "hit": {
+        "lat": "40.716937",
+        "lon": "-74.0056985",
+        "display_name": "77, Worth Street, Civic Center, Lower Manhattan, Manhattan, New York County, New York, 10013, United States",
+        "type": "house",
+        "place_id": "357728743",
+        "importance": null
+      },
+      "queriedAt": "2026-07-17T04:47:55.637382+00:00",
+      "seededFrom": "geocodes.json"
+    },
+    "104 E. 30th St., New York, NY, 10016, USA": {
+      "status": "ok",
+      "error": null,
+      "hit": {
+        "lat": "40.7442224",
+        "lon": "-73.9828456",
+        "display_name": "104, East 30th Street, Kips Bay, Manhattan Community Board 5, Manhattan, New York County, New York, 10016, United States",
+        "type": "yes",
+        "place_id": "356896622",
+        "importance": null
+      },
+      "queriedAt": "2026-07-17T04:47:57.689106+00:00",
+      "seededFrom": "geocodes.json"
+    },
+    "630 Bedford Rd., Tarrytown, NY, 10591, USA": {
+      "status": "ok",
+      "error": null,
+      "hit": {
+        "lat": "41.1032128",
+        "lon": "-73.8244628",
+        "display_name": "630, Bedford Road, Village of Tarrytown, Westchester County, New York, 10591, United States",
+        "type": "house",
+        "place_id": "356427277",
+        "importance": null
+      },
+      "queriedAt": "2026-07-17T04:47:59.146288+00:00",
+      "seededFrom": "geocodes.json"
+    },
+    "431 W. 37th St., New York, NY, 10018, USA": {
+      "status": "ok",
+      "error": null,
+      "hit": {
+        "lat": "40.7560775",
+        "lon": "-73.996449",
+        "display_name": "Chef's Table at Brooklyn Fare, 431, West 37th Street, Hudson Yards, Manhattan Community Board 4, Manhattan, New York County, New York, 10199, United States",
+        "type": "restaurant",
+        "place_id": "359042444",
+        "importance": null
+      },
+      "queriedAt": "2026-07-17T04:48:00.580628+00:00",
+      "seededFrom": "geocodes.json"
+    },
+    "333 Hudson St., New York, NY, 10013, USA": {
+      "status": "ok",
+      "error": null,
+      "hit": {
+        "lat": "40.7271205",
+        "lon": "-74.0075356",
+        "display_name": "333, Hudson Street, Hudson Square, Manhattan, New York County, New York, 10013, United States",
+        "type": "house",
+        "place_id": "357070220",
+        "importance": null
+      },
+      "queriedAt": "2026-07-17T04:48:02.321774+00:00",
+      "seededFrom": "geocodes.json"
+    },
+    "41 W. 42nd St., New York, NY, 10036, USA": {
+      "status": "ok",
+      "error": null,
+      "hit": {
+        "lat": "40.7541195",
+        "lon": "-73.98218",
+        "display_name": "41, West 42nd Street, Midtown, Manhattan Community Board 5, Manhattan, New York County, New York, 10036, United States",
+        "type": "house",
+        "place_id": "402249314",
+        "importance": null
+      },
+      "queriedAt": "2026-07-17T04:48:03.903905+00:00",
+      "seededFrom": "geocodes.json"
+    },
+    "Trump International Hotel & Tower, 1 Central Park West, New York, NY, 10023, USA": {
+      "status": "ok",
+      "error": null,
+      "hit": {
+        "lat": "40.7691474",
+        "lon": "-73.9815403",
+        "display_name": "Trump International Hotel and Tower, 1, Central Park West, Lincoln Square, Manhattan Community Board 7, Manhattan, New York County, New York, 10023, United States",
+        "type": "hotel",
+        "place_id": "360550455",
+        "importance": null
+      },
+      "queriedAt": "2026-07-17T04:48:05.522777+00:00",
+      "seededFrom": "geocodes.json"
+    },
+    "22 W. 32nd St., 16th Fl., New York, NY, 10001, USA": {
+      "status": "empty",
+      "error": null,
+      "hit": null,
+      "queriedAt": "2026-07-17T04:48:08.524142+00:00",
+      "seededFrom": "geocodes.json-centroid-fallback"
+    },
+    "10 Columbus Circle, Ste. 401, New York, NY, 10019, USA": {
+      "status": "empty",
+      "error": null,
+      "hit": null,
+      "queriedAt": "2026-07-17T04:48:10.468391+00:00",
+      "seededFrom": "geocodes.json-centroid-fallback"
+    },
+    "17 W. 20th St., New York, NY, 10011, USA": {
+      "status": "ok",
+      "error": null,
+      "hit": {
+        "lat": "40.7403317",
+        "lon": "-73.992193",
+        "display_name": "Premier Shōjin, 17, West 20th Street, Flatiron District, Manhattan Community Board 5, Manhattan, New York County, New York, 10011, United States",
+        "type": "restaurant",
+        "place_id": "419335587",
+        "importance": null
+      },
+      "queriedAt": "2026-07-17T04:48:11.252058+00:00",
+      "seededFrom": "geocodes.json"
+    },
+    "70 Pine St., New York, NY, 10005, USA": {
+      "status": "ok",
+      "error": null,
+      "hit": {
+        "lat": "40.7064733",
+        "lon": "-74.0077415",
+        "display_name": "American International Building, 70, Pine Street, Financial District, Lower Manhattan, Manhattan, New York County, New York, 10005, United States",
+        "type": "yes",
+        "place_id": "356298453",
+        "importance": null
+      },
+      "queriedAt": "2026-07-17T04:48:13.092555+00:00",
+      "seededFrom": "geocodes.json"
+    },
+    "181 E. 78th St., New York, NY, 10075, USA": {
+      "status": "ok",
+      "error": null,
+      "hit": {
+        "lat": "40.7738707",
+        "lon": "-73.9581175",
+        "display_name": "181, East 78th Street, Upper East Side, Manhattan Community Board 8, Manhattan, New York County, New York, 10075, United States",
+        "type": "yes",
+        "place_id": "359237963",
+        "importance": null
+      },
+      "queriedAt": "2026-07-17T04:48:15.243158+00:00",
+      "seededFrom": "geocodes.json"
+    },
+    "9 W. 53rd St., New York, NY, 10019, USA": {
+      "status": "ok",
+      "error": null,
+      "hit": {
+        "lat": "40.7611893",
+        "lon": "-73.9770093",
+        "display_name": "9, West 53rd Street, Midtown East, Manhattan Community Board 5, Manhattan, New York County, New York, 10019, United States",
+        "type": "yes",
+        "place_id": "359224267",
+        "importance": null
+      },
+      "queriedAt": "2026-07-17T04:48:16.975589+00:00",
+      "seededFrom": "geocodes.json"
+    },
+    "63 Clinton St., New York, NY, 10002, USA": {
+      "status": "ok",
+      "error": null,
+      "hit": {
+        "lat": "40.7195041",
+        "lon": "-73.9851317",
+        "display_name": "63, Clinton Street, Lower East Side, Manhattan Community Board 3, Manhattan, New York County, New York, 10002, United States",
+        "type": "yes",
+        "place_id": "359202294",
+        "importance": null
+      },
+      "queriedAt": "2026-07-17T04:48:18.809198+00:00",
+      "seededFrom": "geocodes.json"
+    },
+    "620 E. 6th St., New York, NY, 10009, USA": {
+      "status": "ok",
+      "error": null,
+      "hit": {
+        "lat": "40.7127281",
+        "lon": "-74.0060152",
+        "display_name": "New York, United States",
+        "type": "administrative",
+        "place_id": "359971500",
+        "importance": null
+      },
+      "queriedAt": "2026-07-17T04:48:20.545428+00:00",
+      "seededFrom": "geocodes.json"
+    },
+    "9 Chatham Sq., New York, NY, 10038, USA": {
+      "status": "ok",
+      "error": null,
+      "hit": {
+        "lat": "40.7140477",
+        "lon": "-73.9980861",
+        "display_name": "9, Chatham Square, Five Points, Manhattan Community Board 3, Manhattan, New York County, New York, 10013, United States",
+        "type": "yes",
+        "place_id": "361507537",
+        "importance": null
+      },
+      "queriedAt": "2026-07-17T04:48:21.949128+00:00",
+      "seededFrom": "geocodes.json"
+    },
+    "17 W. 19th St., New York, NY, 10011, USA": {
+      "status": "ok",
+      "error": null,
+      "hit": {
+        "lat": "40.7396655",
+        "lon": "-73.9924935",
+        "display_name": "Oiji Mi, 17, West 19th Street, Chelsea District, Manhattan Community Board 5, Manhattan, New York County, New York, 10011, United States",
+        "type": "restaurant",
+        "place_id": "359156940",
+        "importance": null
+      },
+      "queriedAt": "2026-07-17T04:48:23.689639+00:00",
+      "seededFrom": "geocodes.json"
+    },
+    "100 E. 63rd St., New York, NY, 10065, USA": {
+      "status": "ok",
+      "error": null,
+      "hit": {
+        "lat": "40.765401",
+        "lon": "-73.968169",
+        "display_name": "100, East 63rd Street, Lenox Hill, Manhattan Community Board 8, Manhattan, New York County, New York, 10065, United States",
+        "type": "house",
+        "place_id": "402254128",
+        "importance": null
+      },
+      "queriedAt": "2026-07-17T04:48:25.117937+00:00",
+      "seededFrom": "geocodes.json"
+    },
+    "52 Irving Pl., New York, NY, 10003, USA": {
+      "status": "ok",
+      "error": null,
+      "hit": {
+        "lat": "40.7359257",
+        "lon": "-73.9871655",
+        "display_name": "Casa Mono, 52, Irving Place, Union Square, Manhattan Community Board 6, Manhattan, New York County, New York, 10003, United States",
+        "type": "restaurant",
+        "place_id": "359221460",
+        "importance": null
+      },
+      "queriedAt": "2026-07-17T04:48:26.683647+00:00",
+      "seededFrom": "geocodes.json"
+    },
+    "3 Allen St., New York, NY, 10002, USA": {
+      "status": "ok",
+      "error": null,
+      "hit": {
+        "lat": "40.7146828",
+        "lon": "-73.9931273",
+        "display_name": "Corima, 3, Allen Street, Two Bridges, Manhattan Community Board 3, Manhattan, New York County, New York, 10002, United States",
+        "type": "restaurant",
+        "place_id": "356758506",
+        "importance": null
+      },
+      "queriedAt": "2026-07-17T04:48:28.842121+00:00",
+      "seededFrom": "geocodes.json"
+    },
+    "16 W. 22nd St., New York, NY, 10010, USA": {
+      "status": "ok",
+      "error": null,
+      "hit": {
+        "lat": "40.7410462",
+        "lon": "-73.9914203",
+        "display_name": "16, West 22nd Street, Flatiron District, Manhattan Community Board 5, Manhattan, New York County, New York, 10010, United States",
+        "type": "yes",
+        "place_id": "360760525",
+        "importance": null
+      },
+      "queriedAt": "2026-07-17T04:48:30.777004+00:00",
+      "seededFrom": "geocodes.json"
+    },
+    "60 E. 65th St., New York, NY, 10065, USA": {
+      "status": "ok",
+      "error": null,
+      "hit": {
+        "lat": "40.7667776",
+        "lon": "-73.9675711",
+        "display_name": "Daniel, 60, East 65th Street, Manhattan Community Board 8, Manhattan, New York County, New York, 10065, United States",
+        "type": "restaurant",
+        "place_id": "359208491",
+        "importance": null
+      },
+      "queriedAt": "2026-07-17T04:48:32.521625+00:00",
+      "seededFrom": "geocodes.json"
+    },
+    "86 Allen St., New York, NY, 10002, USA": {
+      "status": "ok",
+      "error": null,
+      "hit": {
+        "lat": "40.7178785",
+        "lon": "-73.9907886",
+        "display_name": "Dirt Candy, 86, Allen Street, Lower East Side, Manhattan Community Board 3, Manhattan, New York County, New York, 10002, United States",
+        "type": "restaurant",
+        "place_id": "355476575",
+        "importance": null
+      },
+      "queriedAt": "2026-07-17T04:48:34.127926+00:00",
+      "seededFrom": "geocodes.json"
+    },
+    "103 W. 77th St., New York, NY, 10024, USA": {
+      "status": "ok",
+      "error": null,
+      "hit": {
+        "lat": "40.7809405",
+        "lon": "-73.9766202",
+        "display_name": "103, West 77th Street, Upper West Side, Manhattan Community Board 7, Manhattan, New York County, New York, 10024, United States",
+        "type": "yes",
+        "place_id": "360440515",
+        "importance": null
+      },
+      "queriedAt": "2026-07-17T04:48:36.672611+00:00",
+      "seededFrom": "geocodes.json"
+    },
+    "47 E. Houston St., New York, NY, 10012, USA": {
+      "status": "ok",
+      "error": null,
+      "hit": {
+        "lat": "40.7246346",
+        "lon": "-73.9947669",
+        "display_name": "47, East Houston Street, NoHo, Manhattan, New York County, New York, 10012, United States",
+        "type": "yes",
+        "place_id": "359128544",
+        "importance": null
+      },
+      "queriedAt": "2026-07-17T04:48:39.009291+00:00",
+      "seededFrom": "geocodes.json"
+    },
+    "75 Washington Pl., New York, NY, 10011, USA": {
+      "status": "ok",
+      "error": null,
+      "hit": {
+        "lat": "40.7320396",
+        "lon": "-73.9995703",
+        "display_name": "Blue Hill, 75, Washington Place, Greenwich Village, Manhattan, New York County, New York, 10011, United States",
+        "type": "restaurant",
+        "place_id": "361773001",
+        "importance": null
+      },
+      "queriedAt": "2026-07-17T04:48:40.416224+00:00",
+      "seededFrom": "geocodes.json"
+    },
+    "136 Broadway, Brooklyn, NY, 11249, USA": {
+      "status": "ok",
+      "error": null,
+      "hit": {
+        "lat": "40.710234",
+        "lon": "-73.964052",
+        "display_name": "136, Broadway, Williamsburg, Brooklyn, Kings County, New York, 11249, United States",
+        "type": "house",
+        "place_id": "413612668",
+        "importance": null
+      },
+      "queriedAt": "2026-07-17T04:48:42.755999+00:00",
+      "seededFrom": "geocodes.json"
+    },
+    "48 W. 8th St., New York, NY, 10011, USA": {
+      "status": "ok",
+      "error": null,
+      "hit": {
+        "lat": "40.7127281",
+        "lon": "-74.0060152",
+        "display_name": "New York, United States",
+        "type": "administrative",
+        "place_id": "361542306",
+        "importance": null
+      },
+      "queriedAt": "2026-07-17T04:48:44.270377+00:00",
+      "seededFrom": "geocodes.json"
+    },
+    "42 E. 20th St., New York, NY, 10003, USA": {
+      "status": "ok",
+      "error": null,
+      "hit": {
+        "lat": "40.7383894",
+        "lon": "-73.988414",
+        "display_name": "Gramercy Tavern, 42, East 20th Street, Flatiron District, Manhattan Community Board 5, Manhattan, New York County, New York, 10003, United States",
+        "type": "restaurant",
+        "place_id": "356908249",
+        "importance": null
+      },
+      "queriedAt": "2026-07-17T04:48:45.854640+00:00",
+      "seededFrom": "geocodes.json"
+    },
+    "323A Greenwich St., New York, NY, 10013, USA": {
+      "status": "ok",
+      "error": null,
+      "hit": {
+        "lat": "40.7173283",
+        "lon": "-74.0105321",
+        "display_name": "323A, Greenwich Street, Tribeca, Lower Manhattan, Manhattan, New York County, New York, 10013, United States",
+        "type": "house",
+        "place_id": "357687467",
+        "importance": null
+      },
+      "queriedAt": "2026-07-17T04:48:47.592671+00:00",
+      "seededFrom": "geocodes.json"
+    },
+    "20 Warren St., New York, NY, 10007, USA": {
+      "status": "ok",
+      "error": null,
+      "hit": {
+        "lat": "40.7143027",
+        "lon": "-74.0076803",
+        "display_name": "20, Warren Street, Tribeca, Lower Manhattan, Manhattan, New York County, New York, 10007, United States",
+        "type": "yes",
+        "place_id": "358874454",
+        "importance": null
+      },
+      "queriedAt": "2026-07-17T04:48:50.543214+00:00",
+      "seededFrom": "geocodes.json"
+    },
+    "679 Greenwich St., New York, NY, 10014, USA": {
+      "status": "ok",
+      "error": null,
+      "hit": {
+        "lat": "40.7330367",
+        "lon": "-74.0073429",
+        "display_name": "679, Greenwich Street, West Village, Manhattan, New York County, New York, 10014, United States",
+        "type": "house",
+        "place_id": "354724900",
+        "importance": null
+      },
+      "queriedAt": "2026-07-17T04:48:52.142025+00:00",
+      "seededFrom": "geocodes.json"
+    },
+    "36 E. 22nd St., New York, NY, 10010, USA": {
+      "status": "ok",
+      "error": null,
+      "hit": {
+        "lat": "40.7396992",
+        "lon": "-73.9878215",
+        "display_name": "36, East 22nd Street, Flatiron District, Manhattan Community Board 5, Manhattan, New York County, New York, 10010, United States",
+        "type": "yes",
+        "place_id": "360168371",
+        "importance": null
+      },
+      "queriedAt": "2026-07-17T04:48:53.989601+00:00",
+      "seededFrom": "geocodes.json"
+    },
+    "1 Vanderbilt Ave., New York, NY, 10017, USA": {
+      "status": "ok",
+      "error": null,
+      "hit": {
+        "lat": "40.7529739",
+        "lon": "-73.9785396",
+        "display_name": "One Vanderbilt, 1, Vanderbilt Avenue, Midtown South, Manhattan Community Board 5, Manhattan, New York County, New York, 10017, United States",
+        "type": "office",
+        "place_id": "360532709",
+        "importance": null
+      },
+      "queriedAt": "2026-07-17T04:48:55.415407+00:00",
+      "seededFrom": "geocodes.json"
+    },
+    "652 Tenth Ave., New York, NY, 10036, USA": {
+      "status": "ok",
+      "error": null,
+      "hit": {
+        "lat": "42.7252526",
+        "lon": "-73.7110577",
+        "display_name": "10th Avenue, Town of Colonie, Albany County, New York, 12189, United States",
+        "type": "residential",
+        "place_id": "354625218",
+        "importance": null
+      },
+      "queriedAt": "2026-07-17T04:48:56.803351+00:00",
+      "seededFrom": "geocodes.json"
+    },
+    "220 W. 13th St., New York, NY, 10011, USA": {
+      "status": "ok",
+      "error": null,
+      "hit": {
+        "lat": "40.738193",
+        "lon": "-74.0014858",
+        "display_name": "220, West 13th Street, Union Square, Manhattan, New York County, New York, 10011, United States",
+        "type": "apartments",
+        "place_id": "357775730",
+        "importance": null
+      },
+      "queriedAt": "2026-07-17T04:48:59.257116+00:00",
+      "seededFrom": "geocodes.json"
+    },
+    "721 Titicus Rd., North Salem, NY, 10560, USA": {
+      "status": "ok",
+      "error": null,
+      "hit": {
+        "lat": "41.3370204",
+        "lon": "-73.5633824",
+        "display_name": "La Bastide, 721, Titicus Road, Town of North Salem, Westchester County, New York, 10560, United States",
+        "type": "restaurant",
+        "place_id": "356085109",
+        "importance": null
+      },
+      "queriedAt": "2026-07-17T04:49:00.765451+00:00",
+      "seededFrom": "geocodes.json"
+    },
+    "11 Howard Hotel, 138 Lafayette St., New York, NY, 10013, USA": {
+      "status": "empty",
+      "error": null,
+      "hit": null,
+      "queriedAt": "2026-07-17T04:49:03.924743+00:00",
+      "seededFrom": "geocodes.json-centroid-fallback"
+    },
+    "412 Greenwich St., New York, NY, 10013, USA": {
+      "status": "ok",
+      "error": null,
+      "hit": {
+        "lat": "40.7218248",
+        "lon": "-74.0099473",
+        "display_name": "412, Greenwich Street, Hudson Square, Lower Manhattan, Manhattan, New York County, New York, 10013, United States",
+        "type": "house",
+        "place_id": "402252201",
+        "importance": null
+      },
+      "queriedAt": "2026-07-17T04:49:04.270455+00:00",
+      "seededFrom": "geocodes.json"
+    },
+    "679 Ninth Ave., New York, NY, 10036, USA": {
+      "status": "ok",
+      "error": null,
+      "hit": {
+        "lat": "40.9157613",
+        "lon": "-73.8036096",
+        "display_name": "9th Avenue, North Pelham, Village of Pelham, Town of Pelham, Westchester County, New York, 10803, United States",
+        "type": "residential",
+        "place_id": "357252966",
+        "importance": null
+      },
+      "queriedAt": "2026-07-17T04:49:05.880584+00:00",
+      "seededFrom": "geocodes.json"
+    },
+    "5-28 49th Ave., Queens, NY, 11101, USA": {
+      "status": "ok",
+      "error": null,
+      "hit": {
+        "lat": "40.7435774",
+        "lon": "-73.9552144",
+        "display_name": "5-28, 49th Avenue, Hunters Point, Long Island City, Queens, Queens County, New York, 11101, United States",
+        "type": "playground",
+        "place_id": "359893484",
+        "importance": null
+      },
+      "queriedAt": "2026-07-17T04:49:07.503257+00:00",
+      "seededFrom": "geocodes.json"
+    },
+    "37 W. 20th St., New York, NY, 10011, USA": {
+      "status": "ok",
+      "error": null,
+      "hit": {
+        "lat": "40.740815",
+        "lon": "-73.9930983",
+        "display_name": "37, West 20th Street, Flatiron District, Manhattan Community Board 5, Manhattan, New York County, New York, 10010, United States",
+        "type": "yes",
+        "place_id": "356902826",
+        "importance": null
+      },
+      "queriedAt": "2026-07-17T04:49:09.501201+00:00",
+      "seededFrom": "geocodes.json"
+    },
+    "458 W. 17th St., New York, NY, 10011, USA": {
+      "status": "ok",
+      "error": null,
+      "hit": {
+        "lat": "40.7438626",
+        "lon": "-74.006577",
+        "display_name": "458, West 17th Street, Chelsea District, Manhattan Community Board 4, Manhattan, New York County, New York, 10011, United States",
+        "type": "house",
+        "place_id": "356838616",
+        "importance": null
+      },
+      "queriedAt": "2026-07-17T04:49:11.239451+00:00",
+      "seededFrom": "geocodes.json"
+    },
+    "Martinique New York on Broadway, Curio Collection by Hilton, 49 W. 32nd St., New York, NY, 10001, USA": {
+      "status": "empty",
+      "error": null,
+      "hit": null,
+      "queriedAt": "2026-07-17T04:49:13.933569+00:00",
+      "seededFrom": "geocodes.json-centroid-fallback"
+    },
+    "128 Greenpoint Ave., Brooklyn, NY, 11222, USA": {
+      "status": "ok",
+      "error": null,
+      "hit": {
+        "lat": "40.72977",
+        "lon": "-73.9554604",
+        "display_name": "Oxomoco, 128, Greenpoint Avenue, Greenpoint, Brooklyn, Kings County, New York, 11222, United States",
+        "type": "restaurant",
+        "place_id": "359727207",
+        "importance": null
+      },
+      "queriedAt": "2026-07-17T04:49:14.139710+00:00",
+      "seededFrom": "geocodes.json"
+    },
+    "55 Nassau Ave., #1A, Brooklyn, NY, 11222, USA": {
+      "status": "empty",
+      "error": null,
+      "hit": null,
+      "queriedAt": "2026-07-17T04:49:17.033192+00:00",
+      "seededFrom": "geocodes.json-centroid-fallback"
+    },
+    "27 E. 20th St., New York, NY, 10003, USA": {
+      "status": "ok",
+      "error": null,
+      "hit": {
+        "lat": "40.7390943",
+        "lon": "-73.9893691",
+        "display_name": "Rezdôra, 27, East 20th Street, Flatiron District, Manhattan Community Board 5, Manhattan, New York County, New York, 10003, United States",
+        "type": "restaurant",
+        "place_id": "360199698",
+        "importance": null
+      },
+      "queriedAt": "2026-07-17T04:49:17.817797+00:00",
+      "seededFrom": "geocodes.json"
+    },
+    "60 Greenwich Ave., New York, NY, 10011, USA": {
+      "status": "ok",
+      "error": null,
+      "hit": {
+        "lat": "40.736072",
+        "lon": "-74.000689",
+        "display_name": "60, Greenwich Avenue, West Village, Manhattan, New York County, New York, 10011, United States",
+        "type": "house",
+        "place_id": "402253410",
+        "importance": null
+      },
+      "queriedAt": "2026-07-17T04:49:19.189799+00:00",
+      "seededFrom": "geocodes.json"
+    },
+    "61 W. 8th St., New York, NY, 10011, USA": {
+      "status": "ok",
+      "error": null,
+      "hit": {
+        "lat": "40.7127281",
+        "lon": "-74.0060152",
+        "display_name": "New York, United States",
+        "type": "administrative",
+        "place_id": "359692631",
+        "importance": null
+      },
+      "queriedAt": "2026-07-17T04:49:20.921352+00:00",
+      "seededFrom": "geocodes.json"
+    },
+    "50 S. 3rd St., Brooklyn, NY, 11249, USA": {
+      "status": "ok",
+      "error": null,
+      "hit": {
+        "lat": "40.6526006",
+        "lon": "-73.9497211",
+        "display_name": "Brooklyn, Kings County, New York, United States",
+        "type": "administrative",
+        "place_id": "372575184",
+        "importance": null
+      },
+      "queriedAt": "2026-07-17T04:49:22.555878+00:00",
+      "seededFrom": "geocodes.json"
+    },
+    "23 Commerce St., New York, NY, 10014, USA": {
+      "status": "ok",
+      "error": null,
+      "hit": {
+        "lat": "40.731742",
+        "lon": "-74.0045343",
+        "display_name": "23, Commerce Street, West Village, Manhattan, New York County, New York, 10014, United States",
+        "type": "house",
+        "place_id": "357087611",
+        "importance": null
+      },
+      "queriedAt": "2026-07-17T04:49:24.040486+00:00",
+      "seededFrom": "geocodes.json"
+    },
+    "222 E. 39th St., New York, NY, 10016, USA": {
+      "status": "ok",
+      "error": null,
+      "hit": {
+        "lat": "40.74815",
+        "lon": "-73.9748257",
+        "display_name": "222, East 39th Street, Tudor City, Manhattan Community Board 6, Manhattan, New York County, New York, 10016, United States",
+        "type": "yes",
+        "place_id": "359201045",
+        "importance": null
+      },
+      "queriedAt": "2026-07-17T04:49:25.681481+00:00",
+      "seededFrom": "geocodes.json"
+    },
+    "295 Grand St., Brooklyn, NY, 11211, USA": {
+      "status": "ok",
+      "error": null,
+      "hit": {
+        "lat": "40.7131594",
+        "lon": "-73.9572441",
+        "display_name": "295, Grand Street, Williamsburg, Brooklyn, Kings County, New York, 11211, United States",
+        "type": "yes",
+        "place_id": "359113723",
+        "importance": null
+      },
+      "queriedAt": "2026-07-17T04:49:27.228779+00:00",
+      "seededFrom": "geocodes.json"
+    },
+    "292 Elizabeth St., New York, NY, 10012, USA": {
+      "status": "ok",
+      "error": null,
+      "hit": {
+        "lat": "40.7247557",
+        "lon": "-73.9931211",
+        "display_name": "292, Elizabeth Street, NoHo, Manhattan, New York County, New York, 10012, United States",
+        "type": "apartments",
+        "place_id": "359197767",
+        "importance": null
+      },
+      "queriedAt": "2026-07-17T04:49:28.967353+00:00",
+      "seededFrom": "geocodes.json"
+    },
+    "275 Mulberry St., New York, NY, 10012, USA": {
+      "status": "ok",
+      "error": null,
+      "hit": {
+        "lat": "40.724217",
+        "lon": "-73.9954001",
+        "display_name": "Torrisi, 275, Mulberry Street, Little Italy, Lower Manhattan, Manhattan, New York County, New York, 10012, United States",
+        "type": "restaurant",
+        "place_id": "364105390",
+        "importance": null
+      },
+      "queriedAt": "2026-07-17T04:49:30.917675+00:00",
+      "seededFrom": "geocodes.json"
+    },
+    "288 E. 10th St., New York, NY, 10003, USA": {
+      "status": "ok",
+      "error": null,
+      "hit": {
+        "lat": "40.7278269",
+        "lon": "-73.9826135",
+        "display_name": "St. Nicholas of Myra Orthodox Church, 288, East 10th Street, East Village, Manhattan Community Board 3, Manhattan, New York County, New York, 10009, United States",
+        "type": "place_of_worship",
+        "place_id": "360392871",
+        "importance": null
+      },
+      "queriedAt": "2026-07-17T04:49:35.509063+00:00",
+      "seededFrom": "geocodes.json"
+    },
+    "536 E. 5th St., New York, NY, 10009, USA": {
+      "status": "ok",
+      "error": null,
+      "hit": {
+        "lat": "40.7127281",
+        "lon": "-74.0060152",
+        "display_name": "New York, United States",
+        "type": "administrative",
+        "place_id": "356795879",
+        "importance": null
+      },
+      "queriedAt": "2026-07-17T04:49:37.338440+00:00",
+      "seededFrom": "geocodes.json"
+    },
+    "16 Elizabeth St., New York, NY, 10013, USA": {
+      "status": "ok",
+      "error": null,
+      "hit": {
+        "lat": "40.7158534",
+        "lon": "-73.9972908",
+        "display_name": "16, Elizabeth Street, Five Points, Manhattan Community Board 3, Manhattan, New York County, New York, 10013, United States",
+        "type": "house",
+        "place_id": "402251211",
+        "importance": null
+      },
+      "queriedAt": "2026-07-17T04:49:39.061805+00:00",
+      "seededFrom": "geocodes.json"
+    },
+    "805 9th Ave., New York, NY, 10019, USA": {
+      "status": "ok",
+      "error": null,
+      "hit": {
+        "lat": "40.7656289",
+        "lon": "-73.9875071",
+        "display_name": "805, 9th Avenue, Hell's Kitchen, Manhattan Community Board 4, Manhattan, New York County, New York, 10019, United States",
+        "type": "house",
+        "place_id": "402251870",
+        "importance": null
+      },
+      "queriedAt": "2026-07-17T04:49:40.612251+00:00",
+      "seededFrom": "geocodes.json"
+    },
+    "342 Bowery, New York, NY, 10012, USA": {
+      "status": "ok",
+      "error": null,
+      "hit": {
+        "lat": "40.7262353",
+        "lon": "-73.992185",
+        "display_name": "342, Bowery, NoHo, Manhattan, New York County, New York, 10012, United States",
+        "type": "apartments",
+        "place_id": "358363090",
+        "importance": null
+      },
+      "queriedAt": "2026-07-17T04:49:41.971310+00:00",
+      "seededFrom": "geocodes.json"
+    },
+    "2001 W. Morehead St., Ste. D, Charlotte, NC, 28208, USA": {
+      "status": "empty",
+      "error": null,
+      "hit": null,
+      "queriedAt": "2026-07-17T04:49:44.756472+00:00",
+      "seededFrom": "geocodes.json"
+    },
+    "261 S. 21st St., Philadelphia, PA, 19103, USA": {
+      "status": "ok",
+      "error": null,
+      "hit": {
+        "lat": "39.9489314",
+        "lon": "-75.1759317",
+        "display_name": "261, South 21st Street, Fitler Square, Center City, Philadelphia, Philadelphia County, Pennsylvania, 19101, United States",
+        "type": "yes",
+        "place_id": "343824777",
+        "importance": null
+      },
+      "queriedAt": "2026-07-17T04:49:45.634967+00:00",
+      "seededFrom": "geocodes.json"
+    },
+    "1740 Sansom St., Philadelphia, PA, 19103, USA": {
+      "status": "ok",
+      "error": null,
+      "hit": {
+        "lat": "39.9507698",
+        "lon": "-75.1701708",
+        "display_name": "1740, Sansom Street, Fitler Square, Center City, Philadelphia, Philadelphia County, Pennsylvania, 19103, United States",
+        "type": "retail",
+        "place_id": "345247474",
+        "importance": null
+      },
+      "queriedAt": "2026-07-17T04:49:47.209635+00:00",
+      "seededFrom": "geocodes.json"
+    },
+    "408 S. 2nd St., Philadelphia, PA, 19147, USA": {
+      "status": "ok",
+      "error": null,
+      "hit": {
+        "lat": "39.9527237",
+        "lon": "-75.1635262",
+        "display_name": "Philadelphia, Philadelphia County, Pennsylvania, United States",
+        "type": "administrative",
+        "place_id": "357819242",
+        "importance": null
+      },
+      "queriedAt": "2026-07-17T04:49:48.786385+00:00",
+      "seededFrom": "geocodes.json"
+    },
+    "33 Spring St., Charleston, SC, 29403, USA": {
+      "status": "ok",
+      "error": null,
+      "hit": {
+        "lat": "32.7927026",
+        "lon": "-79.9416905",
+        "display_name": "33, Spring Street, Midtown, Cannonborough-Elliotborough, Charleston, Charleston County, South Carolina, 29403, United States",
+        "type": "apartments",
+        "place_id": "343381624",
+        "importance": null
+      },
+      "queriedAt": "2026-07-17T04:49:50.412567+00:00",
+      "seededFrom": "geocodes.json"
+    },
+    "18 N. Main St., Greenville, SC, 29601, USA": {
+      "status": "ok",
+      "error": null,
+      "hit": {
+        "lat": "34.8512349",
+        "lon": "-82.3985036",
+        "display_name": "18, North Main Street, Downtown, Greenville, Greenville County, South Carolina, 29601, United States",
+        "type": "house",
+        "place_id": "337673261",
+        "importance": null
+      },
+      "queriedAt": "2026-07-17T04:49:52.546503+00:00",
+      "seededFrom": "geocodes.json"
+    },
+    "41 Bogard St., Charleston, SC, 29403, USA": {
+      "status": "ok",
+      "error": null,
+      "hit": {
+        "lat": "32.792384",
+        "lon": "-79.945662",
+        "display_name": "41, Bogard Street, Midtown, Cannonborough-Elliotborough, Charleston, Charleston County, South Carolina, 29403, United States",
+        "type": "house",
+        "place_id": "407831949",
+        "importance": null
+      },
+      "queriedAt": "2026-07-17T04:49:54.057186+00:00",
+      "seededFrom": "geocodes.json"
+    },
+    "103 Spring St., Charleston, SC, 29403, USA": {
+      "status": "ok",
+      "error": null,
+      "hit": {
+        "lat": "32.7905003",
+        "lon": "-79.9460585",
+        "display_name": "103, Spring Street, Midtown, Cannonborough-Elliotborough, Charleston, Charleston County, South Carolina, 29403, United States",
+        "type": "retail",
+        "place_id": "343379521",
+        "importance": null
+      },
+      "queriedAt": "2026-07-17T04:49:55.794562+00:00",
+      "seededFrom": "geocodes.json"
+    },
+    "434 Houston St., Nashville, TN, 37203, USA": {
+      "status": "ok",
+      "error": null,
+      "hit": {
+        "lat": "36.1432063",
+        "lon": "-86.7670711",
+        "display_name": "Houston Station, 434, Houston Street, Wedgewood-Houston, Nashville, Davidson County, Middle Tennessee, Tennessee, 37203, United States",
+        "type": "warehouse",
+        "place_id": "339027975",
+        "importance": null
+      },
+      "queriedAt": "2026-07-17T04:49:57.408690+00:00",
+      "seededFrom": "geocodes.json"
+    },
+    "2305 12th Ave. S., Nashville, TN, 37204, USA": {
+      "status": "ok",
+      "error": null,
+      "hit": {
+        "lat": "36.1274532",
+        "lon": "-86.78925",
+        "display_name": "2305, 12th Avenue South, Nashville, Davidson County, Middle Tennessee, Tennessee, 37204, United States",
+        "type": "house",
+        "place_id": "398558595",
+        "importance": null
+      },
+      "queriedAt": "2026-07-17T04:49:59.018448+00:00",
+      "seededFrom": "geocodes.json"
+    },
+    "700 8th Ave. S., 5th Fl., Nashville, TN, 37203, USA": {
+      "status": "empty",
+      "error": null,
+      "hit": null,
+      "queriedAt": "2026-07-17T04:50:01.921328+00:00",
+      "seededFrom": "geocodes.json"
+    },
+    "6555 Burnet Rd., Ste. 400, Austin, TX, 78757, USA": {
+      "status": "empty",
+      "error": null,
+      "hit": null,
+      "queriedAt": "2026-07-17T04:50:03.657285+00:00",
+      "seededFrom": "geocodes.json-centroid-fallback"
+    },
+    "4210 Roseland St., Houston, TX, 77006, USA": {
+      "status": "ok",
+      "error": null,
+      "hit": {
+        "lat": "29.7348923",
+        "lon": "-95.3900899",
+        "display_name": "BCN Taste & Traditions, 4210, Roseland Street, Audobon Place, Montrose, Houston, Harris County, Texas, 77006, United States",
+        "type": "restaurant",
+        "place_id": "303924961",
+        "importance": null
+      },
+      "queriedAt": "2026-07-17T04:50:03.966380+00:00",
+      "seededFrom": "geocodes.json"
+    },
+    "26608 Keith St., Spring, TX, 77373, USA": {
+      "status": "ok",
+      "error": null,
+      "hit": {
+        "lat": "30.0806765",
+        "lon": "-95.420013",
+        "display_name": "Corkscrew BBQ, 26608, Keith Street, Spring, Harris County, Texas, 77373, United States",
+        "type": "restaurant",
+        "place_id": "300288297",
+        "importance": null
+      },
+      "queriedAt": "2026-07-17T04:50:05.370274+00:00",
+      "seededFrom": "geocodes.json"
+    },
+    "4400 N. Lamar Blvd., Ste. 102, Austin, TX, 78756, USA": {
+      "status": "empty",
+      "error": null,
+      "hit": null,
+      "queriedAt": "2026-07-17T04:50:08.156639+00:00",
+      "seededFrom": "geocodes.json-centroid-fallback"
+    },
+    "607 W. 3rd St., Austin, TX, 78701, USA": {
+      "status": "ok",
+      "error": null,
+      "hit": {
+        "lat": "30.2711286",
+        "lon": "-97.7436995",
+        "display_name": "Austin, Travis County, Texas, United States",
+        "type": "administrative",
+        "place_id": "313478768",
+        "importance": null
+      },
+      "queriedAt": "2026-07-17T04:50:08.833118+00:00",
+      "seededFrom": "geocodes.json"
+    },
+    "12233 Ranch Rd. 620 N., Ste. 105, Austin, TX, 78750, USA": {
+      "status": "empty",
+      "error": null,
+      "hit": null,
+      "queriedAt": "2026-07-17T04:50:11.479752+00:00",
+      "seededFrom": "geocodes.json-centroid-fallback"
+    },
+    "221 Newell Ave., San Antonio, TX, 78215, USA": {
+      "status": "ok",
+      "error": null,
+      "hit": {
+        "lat": "29.4407228",
+        "lon": "-98.4813501",
+        "display_name": "221, Newell Avenue, Pearl, San Antonio, Bexar County, Texas, 78215, United States",
+        "type": "house",
+        "place_id": "404713639",
+        "importance": null
+      },
+      "queriedAt": "2026-07-17T04:50:11.741620+00:00",
+      "seededFrom": "geocodes.json"
+    },
+    "2401 E. Cesar Chavez St., Austin, TX, 78702, USA": {
+      "status": "ok",
+      "error": null,
+      "hit": {
+        "lat": "30.254498",
+        "lon": "-97.7176151",
+        "display_name": "2401, East Cesar Chavez Street, Holly, Austin, Travis County, Texas, 78702, United States",
+        "type": "yes",
+        "place_id": "315483579",
+        "importance": null
+      },
+      "queriedAt": "2026-07-17T04:50:13.336978+00:00",
+      "seededFrom": "geocodes.json"
+    },
+    "5500 Main St., Houston, TX, 77004, USA": {
+      "status": "ok",
+      "error": null,
+      "hit": {
+        "lat": "29.7265462",
+        "lon": "-95.3897537",
+        "display_name": "Nancy and Rich Kinder Building, 5500, Main Street, Museum District, Houston, Harris County, Texas, 77004, United States",
+        "type": "museum",
+        "place_id": "303903748",
+        "importance": null
+      },
+      "queriedAt": "2026-07-17T04:50:15.167194+00:00",
+      "seededFrom": "geocodes.json"
+    },
+    "5621 Emerald Forest Dr., Austin, TX, 78745, USA": {
+      "status": "ok",
+      "error": null,
+      "hit": {
+        "lat": "30.2103173",
+        "lon": "-97.7872144",
+        "display_name": "5621, Emerald Forest Drive, Austin, Travis County, Texas, 78745, United States",
+        "type": "house",
+        "place_id": "400306918",
+        "importance": null
+      },
+      "queriedAt": "2026-07-17T04:50:16.756482+00:00",
+      "seededFrom": "geocodes.json"
+    },
+    "2681 Howell St., #BU4, Dallas, TX, 75204, USA": {
+      "status": "empty",
+      "error": null,
+      "hit": null,
+      "queriedAt": "2026-07-17T04:50:20.156578+00:00",
+      "seededFrom": "geocodes.json-centroid-fallback"
+    },
+    "1624 Westheimer Rd., Houston, TX, 77006, USA": {
+      "status": "ok",
+      "error": null,
+      "hit": {
+        "lat": "29.742874",
+        "lon": "-95.4001634",
+        "display_name": "1624, Westheimer Road, Cherryhurst, Montrose, Houston, Harris County, Texas, 77006, United States",
+        "type": "house",
+        "place_id": "411351205",
+        "importance": null
+      },
+      "queriedAt": "2026-07-17T04:50:20.868303+00:00",
+      "seededFrom": "geocodes.json"
+    },
+    "812 S. Alamo St., Ste. 103, San Antonio, TX, 78205, USA": {
+      "status": "empty",
+      "error": null,
+      "hit": null,
+      "queriedAt": "2026-07-17T04:50:23.760496+00:00",
+      "seededFrom": "geocodes.json"
+    },
+    "5115 Westheimer Rd., Ste. 3500, Houston, TX, 77056, USA": {
+      "status": "empty",
+      "error": null,
+      "hit": null,
+      "queriedAt": "2026-07-17T04:50:25.504330+00:00",
+      "seededFrom": "geocodes.json-centroid-fallback"
+    },
+    "1610 San Antonio St., Austin, TX, 78701, USA": {
+      "status": "ok",
+      "error": null,
+      "hit": {
+        "lat": "30.2799025",
+        "lon": "-97.7436972",
+        "display_name": "1610, San Antonio Street, Austin, Travis County, Texas, 78701, United States",
+        "type": "yes",
+        "place_id": "316252232",
+        "importance": null
+      },
+      "queriedAt": "2026-07-17T04:50:26.215804+00:00",
+      "seededFrom": "geocodes.json"
+    },
+    "4740 Dacoma St., Unit F., Houston, TX, 77092, USA": {
+      "status": "empty",
+      "error": null,
+      "hit": null,
+      "queriedAt": "2026-07-17T04:50:28.698711+00:00",
+      "seededFrom": "geocodes.json-centroid-fallback"
+    },
+    "3309 Elm St., Ste. 120, Dallas, TX, 75226, USA": {
+      "status": "empty",
+      "error": null,
+      "hit": null,
+      "queriedAt": "2026-07-17T04:50:30.636956+00:00",
+      "seededFrom": "geocodes.json-centroid-fallback"
+    },
+    "1904 14th St. NW, Washington, DC, 20009, USA": {
+      "status": "ok",
+      "error": null,
+      "hit": {
+        "lat": "38.9157973",
+        "lon": "-77.0320573",
+        "display_name": "1904, 14th Street Northwest, Cardozo/Shaw, Ward 2, Washington, District of Columbia, 20009, United States",
+        "type": "house",
+        "place_id": "396824821",
+        "importance": null
+      },
+      "queriedAt": "2026-07-17T04:50:31.426604+00:00",
+      "seededFrom": "geocodes.json"
+    },
+    "855 E St. NW, Washington, DC, 20004, USA": {
+      "status": "ok",
+      "error": null,
+      "hit": {
+        "lat": "38.8950982",
+        "lon": "-77.0363849",
+        "display_name": "Washington, District of Columbia, United States",
+        "type": "city",
+        "place_id": "348045494",
+        "importance": null
+      },
+      "queriedAt": "2026-07-17T04:50:32.740499+00:00",
+      "seededFrom": "geocodes.json"
+    },
+    "309 Middle St., Washington, DC, 22747, USA": {
+      "status": "empty",
+      "error": null,
+      "hit": null,
+      "queriedAt": "2026-07-17T04:50:35.822599+00:00",
+      "seededFrom": "geocodes.json-centroid-fallback"
+    },
+    "1346 4th St. SE, Washington, DC, 20003, USA": {
+      "status": "ok",
+      "error": null,
+      "hit": {
+        "lat": "38.8743018",
+        "lon": "-76.9997982",
+        "display_name": "Guild, 1346, 4th Street Southeast, Capitol Waterfront Neighborhood, Ward 8, Washington, District of Columbia, 20003, United States",
+        "type": "apartments",
+        "place_id": "346539121",
+        "importance": null
+      },
+      "queriedAt": "2026-07-17T04:50:36.093240+00:00",
+      "seededFrom": "geocodes.json"
+    },
+    "1906 14th St. NW, Washington, DC, 20009, USA": {
+      "status": "ok",
+      "error": null,
+      "hit": {
+        "lat": "38.9157574",
+        "lon": "-77.0321871",
+        "display_name": "Bresca, 1906, 14th Street Northwest, Cardozo/Shaw, Ward 2, Washington, District of Columbia, 20009, United States",
+        "type": "restaurant",
+        "place_id": "348289290",
+        "importance": null
+      },
+      "queriedAt": "2026-07-17T04:50:37.830207+00:00",
+      "seededFrom": "geocodes.json"
+    },
+    "920 Blagden Alley NW, Washington, DC, 20001, USA": {
+      "status": "ok",
+      "error": null,
+      "hit": {
+        "lat": "38.9065532",
+        "lon": "-77.0247508",
+        "display_name": "Causa, 920, Blagden Alley Northwest, Logan Circle/Shaw, Ward 2, Washington, District of Columbia, 20001, United States",
+        "type": "restaurant",
+        "place_id": "347597727",
+        "importance": null
+      },
+      "queriedAt": "2026-07-17T04:50:39.346665+00:00",
+      "seededFrom": "geocodes.json"
+    },
+    "1280 4th St. NE, Washington, DC, 20002, USA": {
+      "status": "ok",
+      "error": null,
+      "hit": {
+        "lat": "38.908866",
+        "lon": "-76.999742",
+        "display_name": "Peruvian Brothers, 1280, 4th Street Northeast, Ward 5, Washington, District of Columbia, 20002, United States",
+        "type": "restaurant",
+        "place_id": "344652796",
+        "importance": null
+      },
+      "queriedAt": "2026-07-17T04:50:40.788011+00:00",
+      "seededFrom": "geocodes.json"
+    },
+    "601 Pennsylvania Ave. NW, Washington, DC, 20004, USA": {
+      "status": "ok",
+      "error": null,
+      "hit": {
+        "lat": "38.8932991",
+        "lon": "-77.0205014",
+        "display_name": "The Capital Grille - Washington DC, 601, Pennsylvania Avenue Northwest, Penn Quarter, Ward 2, Washington, District of Columbia, 20004, United States",
+        "type": "restaurant",
+        "place_id": "349083159",
+        "importance": null
+      },
+      "queriedAt": "2026-07-17T04:50:42.423377+00:00",
+      "seededFrom": "geocodes.json"
+    },
+    "1401 Okie St. NE, Washington, DC, 20002, USA": {
+      "status": "ok",
+      "error": null,
+      "hit": {
+        "lat": "38.9145026",
+        "lon": "-76.984317",
+        "display_name": "1401, Okie Street Northeast, Ivy City, Northeast, Ward 5, Washington, District of Columbia, 20002, United States",
+        "type": "yes",
+        "place_id": "347262291",
+        "importance": null
+      },
+      "queriedAt": "2026-07-17T04:50:44.013329+00:00",
+      "seededFrom": "geocodes.json"
+    },
+    "1124 23rd St. NW, Washington, DC, 20037, USA": {
+      "status": "ok",
+      "error": null,
+      "hit": {
+        "lat": "38.9043392",
+        "lon": "-77.050322",
+        "display_name": "Imperfecto, 1124, 23rd Street Northwest, West End, Ward 2, Washington, District of Columbia, 20037, United States",
+        "type": "restaurant",
+        "place_id": "347502602",
+        "importance": null
+      },
+      "queriedAt": "2026-07-17T04:50:45.655350+00:00",
+      "seededFrom": "geocodes.json"
+    },
+    "921 Pennsylvania Ave. SE, Washington, DC, 20003, USA": {
+      "status": "ok",
+      "error": null,
+      "hit": {
+        "lat": "38.8830167",
+        "lon": "-76.9931347",
+        "display_name": "921, Pennsylvania Avenue Southeast, Barracks Row, Southeast, Capitol Hill, Ward 6, Washington, District of Columbia, 20003, United States",
+        "type": "yes",
+        "place_id": "353451798",
+        "importance": null
+      },
+      "queriedAt": "2026-07-17T04:50:47.250583+00:00",
+      "seededFrom": "geocodes.json"
+    },
+    "1340 4th St. NE, Washington, DC, 20002, USA": {
+      "status": "ok",
+      "error": null,
+      "hit": {
+        "lat": "38.9097171",
+        "lon": "-76.9992339",
+        "display_name": "1340, 4th Street Northeast, Ward 5, Washington, District of Columbia, 20002, United States",
+        "type": "yes",
+        "place_id": "350199443",
+        "importance": null
+      },
+      "queriedAt": "2026-07-17T04:50:48.614783+00:00",
+      "seededFrom": "geocodes.json"
+    },
+    "804 V St. NW, Washington, DC, 20001, USA": {
+      "status": "ok",
+      "error": null,
+      "hit": {
+        "lat": "38.8950982",
+        "lon": "-77.0363849",
+        "display_name": "Washington, District of Columbia, United States",
+        "type": "city",
+        "place_id": "349523488",
+        "importance": null
+      },
+      "queriedAt": "2026-07-17T04:50:50.188381+00:00",
+      "seededFrom": "geocodes.json"
+    },
+    "522 8th St. SE, Washington, DC, 20003, USA": {
+      "status": "ok",
+      "error": null,
+      "hit": {
+        "lat": "38.8950982",
+        "lon": "-77.0363849",
+        "display_name": "Washington, District of Columbia, United States",
+        "type": "city",
+        "place_id": "347552420",
+        "importance": null
+      },
+      "queriedAt": "2026-07-17T04:50:51.710694+00:00",
+      "seededFrom": "geocodes.json"
+    },
+    "1440 8th St. NW, Washington, DC, 20001, USA": {
+      "status": "ok",
+      "error": null,
+      "hit": {
+        "lat": "38.9093521",
+        "lon": "-77.0230929",
+        "display_name": "Oyster Oyster, 1440, 8th Street Northwest, Logan Circle/Shaw, Ward 2, Washington, District of Columbia, 20001, United States",
+        "type": "restaurant",
+        "place_id": "344657165",
+        "importance": null
+      },
+      "queriedAt": "2026-07-17T04:50:53.157128+00:00",
+      "seededFrom": "geocodes.json"
+    },
+    "715 8th St. SE, Washington, DC, 20003, USA": {
+      "status": "ok",
+      "error": null,
+      "hit": {
+        "lat": "38.8950982",
+        "lon": "-77.0363849",
+        "display_name": "Washington, District of Columbia, United States",
+        "type": "city",
+        "place_id": "347552420",
+        "importance": null
+      },
+      "queriedAt": "2026-07-17T04:50:54.560746+00:00",
+      "seededFrom": "geocodes.json"
+    },
+    "427 11th St. NW, Washington, DC, 20004, USA": {
+      "status": "ok",
+      "error": null,
+      "hit": {
+        "lat": "38.895164",
+        "lon": "-77.0269413",
+        "display_name": "427, 11th Street Northwest, Downtown, Ward 2, Washington, District of Columbia, 20004, United States",
+        "type": "house",
+        "place_id": "396828426",
+        "importance": null
+      },
+      "queriedAt": "2026-07-17T04:50:55.980484+00:00",
+      "seededFrom": "geocodes.json"
+    },
+    "2436 14th St. NW, Washington, DC, 20009, USA": {
+      "status": "ok",
+      "error": null,
+      "hit": {
+        "lat": "38.92149",
+        "lon": "-77.032167",
+        "display_name": "Rooster & Owl, 2436, 14th Street Northwest, Columbia Heights, Ward 1, Washington, District of Columbia, 20009, United States",
+        "type": "restaurant",
+        "place_id": "344106293",
+        "importance": null
+      },
+      "queriedAt": "2026-07-17T04:50:57.499002+00:00",
+      "seededFrom": "geocodes.json"
+    },
+    "717 8th St. SE, Washington, DC, 20003, USA": {
+      "status": "ok",
+      "error": null,
+      "hit": {
+        "lat": "38.8950982",
+        "lon": "-77.0363849",
+        "display_name": "Washington, District of Columbia, United States",
+        "type": "city",
+        "place_id": "347552420",
+        "importance": null
+      },
+      "queriedAt": "2026-07-17T04:50:59.065847+00:00",
+      "seededFrom": "geocodes.json"
+    },
+    "Waldorf Astoria,1100 Pennsylvania Ave. NW, Washington, DC, 20004, USA": {
+      "status": "ok",
+      "error": null,
+      "hit": {
+        "lat": "38.8941177",
+        "lon": "-77.0275626",
+        "display_name": "Waldorf Astoria Washington DC, 1100, Pennsylvania Avenue Northwest, Ward 2, Washington, District of Columbia, 20004, United States",
+        "type": "hotel",
+        "place_id": "347512506",
+        "importance": null
+      },
+      "queriedAt": "2026-07-17T04:51:00.562043+00:00",
+      "seededFrom": "geocodes.json"
+    },
+    "122 Blagden Alley NW, Washington, DC, 20001, USA": {
+      "status": "ok",
+      "error": null,
+      "hit": {
+        "lat": "38.9063777",
+        "lon": "-77.0245704",
+        "display_name": "The Dabney, 122, Blagden Alley Northwest, Logan Circle/Shaw, Ward 2, Washington, District of Columbia, 20001, United States",
+        "type": "restaurant",
+        "place_id": "347546948",
+        "importance": null
+      },
+      "queriedAt": "2026-07-17T04:51:01.854717+00:00",
+      "seededFrom": "geocodes.json"
+    },
+    "2404 Wisconsin Ave. NW, Washington, DC, 20007, USA": {
+      "status": "ok",
+      "error": null,
+      "hit": {
+        "lat": "38.9212775",
+        "lon": "-77.0724181",
+        "display_name": "2404, Wisconsin Avenue Northwest, Glover Park, Ward 3, Washington, District of Columbia, 20007, United States",
+        "type": "yes",
+        "place_id": "348591403",
+        "importance": null
+      },
+      "queriedAt": "2026-07-17T04:51:03.443000+00:00",
+      "seededFrom": "geocodes.json"
+    }
+  },
+  "note": "Seeded from completed one-time batch; do not treat as live geocoder."
+}
