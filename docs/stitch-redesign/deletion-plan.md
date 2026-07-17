@@ -55,12 +55,16 @@ Replacement: `src/components/stitch/home/*` (`HomepageView`). Config retained in
 
 Replacement: `src/components/stitch/explore/*` (`ExplorePageView`). Keep `src/lib/data/explore.ts` forever (logic).
 
-### Map (after Phase 6)
+### Map (Phase 6 — complete)
 
-| Path | When safe |
+| Path | Status |
 |---|---|
-| Old panel/list chrome inside `RestaurantMap.tsx` | After workspace split; prefer replacing file body then deleting dead helpers |
-| `MapCanvas.tsx` | **Do not delete** — preserve |
+| Old panel/list/detail/sheet chrome inside `RestaurantMap.tsx` | **Replaced** — controller retained; presentation is `stitch/map/*` |
+| Legacy `ReservationButton` / `SaveRestaurantButton` on map | **Removed from map** — uses Phase 3 actions |
+| `MapCanvas.tsx` | **Preserved** |
+| `src/lib/map/query.ts` | **Preserved** |
+
+Replacement: `src/components/stitch/map/*` (`MapWorkspaceView`) + preserved `RestaurantMap` domain controller.
 
 ### Restaurant cards / detail (after Phases 3 & 7)
 

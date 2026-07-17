@@ -1,6 +1,18 @@
 # Temporary compatibility aliases
 
-Phase 1–5 introduce Stitch tokens, primitives, shell chrome, restaurant presentation, explore_feed homepage, and Explore directory.
+Phase 1–6 introduce Stitch tokens, primitives, shell chrome, restaurant presentation, homepage, Explore directory, and Map workspace.
+
+## Map (Phase 6 — complete)
+
+| Item | Status | Notes |
+|---|---|---|
+| `RestaurantMap` presentation chrome | **Replaced** | Domain controller kept; UI is `stitch/map/*` |
+| `MapCanvas.tsx` | Retained | MapLibre engine, clusters, fit/fly |
+| `src/lib/map/query.ts` | Retained | Full map URL contract |
+| `MapSelectedGooglePlace` | Retained | Compact kit; Stitch frame via `MapSelectedGoogleSection` |
+| `MapWorkspaceShell` | Retained | Phase 2 no-footer viewport shell |
+
+New map presentation: `src/components/stitch/map/*` → `MapWorkspaceView`.
 
 ## Explore (Phase 5 — complete)
 
@@ -73,6 +85,7 @@ Phase 1 stitch atoms (`MichelinDistinction`, `RestaurantMedia`, `RestaurantFallb
 - Restaurant presentation: `src/components/stitch/restaurant/`
 - Homepage: `src/components/stitch/home/`
 - Explore: `src/components/stitch/explore/`
+- Map: `src/components/stitch/map/`
 - Shell: `src/components/shell/`
 - Nav config: `src/config/navigation.ts`
 
@@ -81,5 +94,6 @@ Rules:
 1. New shell and stitch primitives must not import deleted SiteHeader/SiteFooter.
 2. Do not render old and new headers together.
 3. Do not apply legacy visual classes to AppHeader.
-4. Homepage and Explore compositions are complete; other route bodies remain unrebuilt until their phase.
+4. Homepage, Explore, and Map compositions are complete; other route bodies remain unrebuilt until their phase.
 5. Do not globally replace legacy cards on unrebuilt routes.
+6. Do not delete `MapCanvas` or weaken Google mount gates while restyling map chrome.

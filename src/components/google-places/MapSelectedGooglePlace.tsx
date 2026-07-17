@@ -52,8 +52,8 @@ export function MapSelectedGooglePlace({
   }
 
   return (
-    <div className="mt-3 min-w-0" data-google-places-section="map-selected">
-      <p className="mb-2 font-sans text-xs text-ink-muted">
+    <div className="min-w-0" data-google-places-section="map-selected">
+      <p className="mb-3 font-sans text-[10px] font-semibold uppercase tracking-wider text-dp-ink-muted">
         Live place information from Google
       </p>
       <GooglePlaceDetailsCompact

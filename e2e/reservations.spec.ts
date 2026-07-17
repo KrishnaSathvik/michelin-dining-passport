@@ -38,8 +38,8 @@ test.describe("Phase 5.5 reservation actions", () => {
     await reserve.click();
     await expect(page).toHaveURL(before);
 
-    // Card title still navigates to detail when clicked.
-    await card.getByRole("link", { name: "Addison", exact: true }).click();
+    // Card title / media still navigates to detail when clicked.
+    await card.getByRole("link", { name: "View Addison" }).click();
     await expect(page).toHaveURL(/\/restaurants\/addison-san-diego-ca/);
   });
 
@@ -81,8 +81,8 @@ test.describe("Phase 5.5 reservation actions", () => {
     await page.setViewportSize({ width: 390, height: 844 });
     await page.goto("/map?state=california&panel=list");
     const mobileResult = page
-      .getByRole("list", { name: "Map restaurant results" })
-      .getByRole("button")
+      .getByRole("listbox", { name: "Map restaurant results" })
+      .getByRole("option")
       .first();
     await expect(mobileResult).toBeVisible();
     await mobileResult.click();

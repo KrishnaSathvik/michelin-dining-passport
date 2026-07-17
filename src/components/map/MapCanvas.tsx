@@ -203,9 +203,9 @@ export function MapCanvas({
         style={{ width: "100%", height: "100%" }}
         reuseMaps
       >
-        <NavigationControl position="top-left" showCompass={false} />
+        <NavigationControl position="bottom-right" showCompass={false} />
         <GeolocateControl
-          position="top-left"
+          position="bottom-right"
           positionOptions={{ enableHighAccuracy: false }}
           trackUserLocation={false}
           onError={() =>
@@ -255,15 +255,20 @@ export function MapCanvas({
             type="circle"
             filter={["!", ["has", "point_count"]]}
             paint={{
-              "circle-color": [
+              "circle-color": "#123B2F",
+              "circle-radius": ["case", ["get", "selected"], 8, 6],
+              "circle-stroke-width": [
+                "case",
+                ["get", "selected"],
+                3,
+                2,
+              ],
+              "circle-stroke-color": [
                 "case",
                 ["get", "selected"],
                 "#B88A2A",
-                "#123B2F",
+                "#FFFFFF",
               ],
-              "circle-radius": ["case", ["get", "selected"], 9, 6],
-              "circle-stroke-width": 2,
-              "circle-stroke-color": "#FFFFFF",
             }}
           />
         </Source>
@@ -276,8 +281,21 @@ export function MapCanvas({
             <span className="sr-only">Selected restaurant marker</span>
             <span
               aria-hidden
-              className="block h-4 w-4 rounded-full border-2 border-white bg-[#B88A2A] shadow-md"
-            />
+              className="relative flex h-10 w-10 items-center justify-center"
+              data-map-selected-marker
+            >
+              <span className="absolute -inset-2 rounded-full border border-[#B88A2A]/50" />
+              <span className="flex h-10 w-10 items-center justify-center rounded-full border-2 border-[#B88A2A] bg-[#123B2F] text-white shadow-lg">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                  <path
+                    d="M8 3v8M12 3v8M16 3v8M8 11c0 3 2 5 4 8v2M16 11c0 3-2 5-4 8"
+                    stroke="currentColor"
+                    strokeWidth="1.75"
+                    strokeLinecap="round"
+                  />
+                </svg>
+              </span>
+            </span>
           </Marker>
         ) : null}
       </MapGL>
