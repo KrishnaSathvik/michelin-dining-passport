@@ -1,14 +1,21 @@
-import Link from "next/link";
 import {
   magicLinkAction,
   signInAction,
   signInWithGoogleAction,
 } from "@/app/auth/actions";
-import { LoginAuthPanel } from "@/components/auth/AuthForm";
+import { SignInForm } from "@/components/stitch/auth/SignInForm";
+import { buildPageMetadata } from "@/lib/seo/metadata";
 import { safeInternalPath } from "@/lib/auth/redirect";
 import { isGoogleAuthEnabled, isSupabaseConfigured } from "@/lib/supabase/env";
 
 type SearchParams = Promise<Record<string, string | string[] | undefined>>;
+
+export const metadata = buildPageMetadata({
+  title: "Sign in",
+  description: "Welcome back to Dining Passport.",
+  path: "/login",
+  noIndex: true,
+});
 
 export default async function LoginPage({
   searchParams,
@@ -35,44 +42,29 @@ export default async function LoginPage({
             ? "Google sign-in is disabled."
             : null;
 
+  const banner = !configured
+    ? {
+        kind: "info" as const,
+        message:
+          "Supabase environment variables are missing. Browsing still works; account sign-in is unavailable until they are configured.",
+      }
+    : verify
+      ? {
+          kind: "success" as const,
+          message: "Check your email to confirm your account, then sign in.",
+        }
+      : errorMessage
+        ? { kind: "error" as const, message: errorMessage }
+        : null;
+
   return (
-    <div className="flex flex-col gap-6">
-      {!configured ? (
-        <p className="mx-auto w-full max-w-[28rem] rounded-[var(--radius-md)] border border-border px-4 py-3 font-sans text-sm text-ink-muted">
-          Supabase environment variables are missing. Browsing still works;
-          account sign-in is unavailable until they are configured.
-        </p>
-      ) : null}
-
-      {verify ? (
-        <p className="mx-auto w-full max-w-[28rem] rounded-[var(--radius-md)] border border-border px-4 py-3 font-sans text-sm text-forest">
-          Check your email to confirm your account, then sign in.
-        </p>
-      ) : null}
-
-      {errorMessage ? (
-        <p className="mx-auto w-full max-w-[28rem] rounded-[var(--radius-md)] border border-border px-4 py-3 font-sans text-sm text-burgundy">
-          {errorMessage}
-        </p>
-      ) : null}
-
-      <LoginAuthPanel
-        next={next}
-        passwordAction={signInAction}
-        magicAction={magicLinkAction}
-        googleAction={googleEnabled ? signInWithGoogleAction : null}
-        googleEnabled={googleEnabled}
-      />
-
-      <p className="mx-auto max-w-[28rem] text-center font-sans text-sm text-ink-muted">
-        New here?{" "}
-        <Link
-          href={`/signup?next=${encodeURIComponent(next)}`}
-          className="text-forest underline-offset-4 hover:underline"
-        >
-          Create an account
-        </Link>
-      </p>
-    </div>
+    <SignInForm
+      next={next}
+      passwordAction={signInAction}
+      magicAction={magicLinkAction}
+      googleAction={googleEnabled ? signInWithGoogleAction : null}
+      googleEnabled={googleEnabled}
+      banner={banner}
+    />
   );
 }

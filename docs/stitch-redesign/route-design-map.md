@@ -153,12 +153,12 @@ Canonical visual conventions (**approved 2026-07-17**):
 
 | Route | Stitch reference | Notes |
 |---|---|---|
-| `/login` | `sign_in_dining_passport` | Split AuthShell; preserve magic link + device passport |
-| `/signup` | `create_account_dining_passport` | Split shell |
-| `/forgot-password` | `forgot_password_dining_passport` | Include success state |
-| `/reset-password` | `reset_password_dining_passport` | Include success state |
-| `/account` | `account_settings_profile` | Implement sections that map to real AccountPanel capabilities first; park unsupported (notifications etc.) |
-| `/auth/callback` | (no design) | Keep route handler; no visual |
+| `/login` | `sign_in_dining_passport` | **Phase 10 done** — `stitch/auth/SignInForm` in AuthShell; magic link + device Passport; Google only when enabled |
+| `/signup` | `create_account_dining_passport` | **Phase 10 done** — `SignUpForm`; real fields only (no confirm-password) |
+| `/forgot-password` | `forgot_password_dining_passport` | **Phase 10 done** — success “Check your email” state |
+| `/reset-password` | `reset_password_dining_passport` | **Phase 10 done** — invalid-link + update + success; no tiled image artifact |
+| `/account` | `account_settings_profile` | **Phase 10 done** — real sections only (Profile, Security, Sync, Data export, Delete); no Notifications/sessions |
+| `/auth/callback` | (no design) | Unchanged route handler; no visual |
 
 **Header states:** signed-out (Sign In / icons), signed-in (account icon) — from component library + auth screens.
 

@@ -62,7 +62,8 @@ New homepage location: `src/components/stitch/home/*` → `HomepageView`.
 | `src/components/layout/SiteFooterGate.tsx` | **Removed** | Footer gating lives in `shell/AppChrome` | Done |
 | `siteConfig.nav` | Retained | Still used for product config; shell primary IA uses `config/navigation.ts` `primaryNav` | Phase 12 if unused |
 | Legacy `Container` / `Section` | Retained | Old route bodies | Per-route phases |
-| Auth form presentation | Retained | AuthShell scaffold only; forms Phase 10 | Phase 10 |
+| Auth form presentation | **Removed** | `stitch/auth/*` + completed AuthShell | Phase 10 done |
+| `src/components/account/AccountPanel.tsx` | **Deleted** | `stitch/account/AccountPageView` | Phase 10 done |
 | Map workspace inner UI | Retained | `MapWorkspaceShell` wraps existing `RestaurantMap` | Phase 6 |
 
 ## Restaurant presentation (Phase 3)

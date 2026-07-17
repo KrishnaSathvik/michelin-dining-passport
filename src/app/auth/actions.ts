@@ -217,7 +217,12 @@ export async function updatePasswordAction(
     };
   }
 
-  redirect("/account?password=updated");
+  // Return success so the reset form can show the Stitch completion state.
+  // Account password updates still redirect via updatePasswordFormAction.
+  return {
+    ok: true,
+    message: "Your password has been successfully updated.",
+  };
 }
 
 export async function signOutAction(): Promise<void> {

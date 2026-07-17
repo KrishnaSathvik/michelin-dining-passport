@@ -1,30 +1,32 @@
 import { updatePasswordAction } from "@/app/auth/actions";
-import { AuthForm } from "@/components/auth/AuthForm";
+import { ResetPasswordForm } from "@/components/stitch/auth/ResetPasswordForm";
+import { buildPageMetadata } from "@/lib/seo/metadata";
 import { getVerifiedUser } from "@/lib/auth/session";
-import { redirect } from "next/navigation";
 
-export default async function ResetPasswordPage() {
+export const metadata = buildPageMetadata({
+  title: "Reset password",
+  description: "Choose a new password for your Dining Passport account.",
+  path: "/reset-password",
+  noIndex: true,
+});
+
+type SearchParams = Promise<Record<string, string | string[] | undefined>>;
+
+export default async function ResetPasswordPage({
+  searchParams,
+}: {
+  searchParams: SearchParams;
+}) {
+  const params = await searchParams;
+  const forceSuccess =
+    process.env.NODE_ENV !== "production" && params.preview === "success";
   const user = await getVerifiedUser();
-  if (!user) {
-    redirect("/login?next=/reset-password");
-  }
 
   return (
-    <AuthForm
-      title="Choose a new password"
-      description="You are signed in via a recovery link. Set a new password to continue."
+    <ResetPasswordForm
       action={updatePasswordAction}
-      next="/account"
-      submitLabel="Update password"
-      fields={[
-        {
-          name: "password",
-          label: "New password",
-          type: "password",
-          required: true,
-          autoComplete: "new-password",
-        },
-      ]}
+      hasRecoverySession={Boolean(user) || forceSuccess}
+      forceSuccess={forceSuccess}
     />
   );
 }

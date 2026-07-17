@@ -100,13 +100,13 @@ Replacement: `src/components/stitch/map/*` (`MapWorkspaceView`) + preserved `Res
 
 Preserve `PassportProvider` and store modules.
 
-### Auth / account (after Phase 10)
+### Auth / account (Phase 10)
 
-| Path | When safe |
+| Path | Status |
 |---|---|
-| Old `(auth)/layout.tsx` aside styling | After AuthShell |
-| Old `AuthForm` presentation | After rebuild (keep action wiring) |
-| Old `AccountPanel` sections not in Stitch and unused | After account IA ships |
+| Old `(auth)/layout.tsx` aside styling | **Removed** — Stitch `AuthShell` owns split composition |
+| `src/components/auth/AuthForm.tsx` | **Deleted** — replaced by `stitch/auth/*` (actions preserved) |
+| `src/components/account/AccountPanel.tsx` | **Deleted** — replaced by `stitch/account/*` (actions preserved) |
 
 ### Taxonomy (after Phase 11)
 

@@ -84,7 +84,9 @@ test.describe("Stitch application shell", () => {
     await page.goto("/login");
     await expect(page.getByRole("banner")).toHaveCount(0);
     await expect(page.getByRole("contentinfo")).toHaveCount(0);
-    await expect(page.getByRole("heading", { name: "Sign in" })).toBeVisible();
+    await expect(
+      page.getByRole("heading", { name: "Welcome back" }),
+    ).toBeVisible();
   });
 
   test("skip link targets main content", async ({ page }) => {
@@ -108,6 +110,14 @@ test.describe("Stitch application shell", () => {
     page,
   }) => {
     const response = await page.goto("/dev/stitch-restaurant-components");
+    if (!process.env.CI && response?.status() === 200) {
+      test.skip(true, "Running against next dev — production gate checked in CI");
+    }
+    expect(response?.status()).toBe(404);
+  });
+
+  test("account preview is excluded from production", async ({ page }) => {
+    const response = await page.goto("/dev/stitch-account-preview");
     if (!process.env.CI && response?.status() === 200) {
       test.skip(true, "Running against next dev — production gate checked in CI");
     }

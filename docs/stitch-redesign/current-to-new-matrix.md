@@ -26,9 +26,9 @@ Complexity: **L** low · **M** medium · **H** high · **VH** very high
 | `PassportRestaurantList` | Saved/visited/planned lists | Mode filtering | List chrome | **Done** — `PassportListPage` + mode cards (`PassportRestaurantList` deleted) | saved/visited/planned | M | e2e passport + reservations | **Phase 8 complete** |
 | `saved/page` / `visited/page` / **`planned/page`** | Personal lists | Data filters | Presentation | **Done** — Stitch list pages; `/planned` added (OD-07) | saved/visited/planned | M | e2e | **Phase 8 complete** |
 | `CollectionsManager` / `CollectionDetail` | Collections CRUD UI | Collection store ops | Presentation | **Done** — `stitch/collections/*` (old presentation deleted) | collections overview/detail | H | `test_collections_phase9.mjs`, `e2e/collections.spec.ts` | **Phase 9 complete** |
-| `(auth)/*` + `AuthForm` | Auth flows | Server actions, redirects | Split shell / forms | `AuthShell` + forms | auth quartet | M | `e2e/auth.spec.ts`, `test_auth_redirect.mjs` | Phase 10 |
-| `(auth)/layout.tsx` | Auth aside | — | Current forest aside | Match Stitch atmospheric split | sign_in etc. | M | — | Phase 10 |
-| `AccountPanel` | Account mgmt | Session, deletion, sync actions | Settings IA chrome | Account aside + sections | `account_settings_profile` | H | auth e2e | Phase 10 |
+| `(auth)/*` + `AuthForm` | Auth flows | Server actions, redirects | Split shell / forms | **Done** — `stitch/auth/*` (`AuthForm` deleted) | auth quartet | M | `e2e/auth.spec.ts`, `test_auth_redirect.mjs`, `test_auth_phase10.mjs` | **Phase 10 complete** |
+| `(auth)/layout.tsx` | Auth aside | — | Current forest aside | **Done** — atmospheric AuthShell | sign_in etc. | M | e2e shell/auth | **Phase 10 complete** |
+| `AccountPanel` | Account mgmt | Session, deletion, sync actions | Settings IA chrome | **Done** — `stitch/account/*` (`AccountPanel` deleted) | `account_settings_profile` | H | auth e2e | **Phase 10 complete** |
 | `TaxonomyPageShell` + taxonomy pages | Hubs | Aggregations, listings | Shared shell layout | Taxonomy heroes/bentos | state/city/cuisine/stars | H | — | Phase 11 |
 | `about-michelin-stars` | Education | Copy/content | Layout + bad nav if any | Education composition | `how_michelin_stars_work` | M | — | Phase 11 |
 | `SiteHeader` / `SiteFooter` | Chrome | Nav hrefs, disclaimer text | Layout/type | `AppHeader` / `SiteFooter` | library | M | many e2e | Phase 2 |

@@ -1,13 +1,9 @@
-import { Container } from "@/components/layout/Container";
+import type { ReactNode } from "react";
 
-export default function AccountLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
-  return (
-    <div className="border-b border-border bg-bg py-10 sm:py-14">
-      <Container>{children}</Container>
-    </div>
-  );
+/**
+ * Account stays inside the signed-in AppChrome (header + footer).
+ * Page composition owns PageContainer margins.
+ */
+export default function AccountLayout({ children }: { children: ReactNode }) {
+  return <div className="dp-canvas border-b border-dp-border">{children}</div>;
 }

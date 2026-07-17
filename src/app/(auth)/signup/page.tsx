@@ -1,9 +1,17 @@
 import { signUpAction } from "@/app/auth/actions";
-import { AuthForm, AuthLinks } from "@/components/auth/AuthForm";
+import { SignUpForm } from "@/components/stitch/auth/SignUpForm";
+import { buildPageMetadata } from "@/lib/seo/metadata";
 import { safeInternalPath } from "@/lib/auth/redirect";
 import { isSupabaseConfigured } from "@/lib/supabase/env";
 
 type SearchParams = Promise<Record<string, string | string[] | undefined>>;
+
+export const metadata = buildPageMetadata({
+  title: "Create account",
+  description: "Create a Dining Passport account to sync saves across devices.",
+  path: "/signup",
+  noIndex: true,
+});
 
 export default async function SignupPage({
   searchParams,
@@ -16,41 +24,10 @@ export default async function SignupPage({
   );
 
   return (
-    <div className="flex flex-col gap-6">
-      {!isSupabaseConfigured() ? (
-        <p className="border border-border px-4 py-3 font-sans text-sm text-ink-muted">
-          Supabase is not configured, so account creation is unavailable.
-        </p>
-      ) : null}
-      <AuthForm
-        title="Create account"
-        description="Save visits, notes, and collections to your cloud Passport."
-        action={signUpAction}
-        next={next}
-        submitLabel="Create account"
-        fields={[
-          {
-            name: "displayName",
-            label: "Display name",
-            autoComplete: "name",
-          },
-          {
-            name: "email",
-            label: "Email",
-            type: "email",
-            required: true,
-            autoComplete: "email",
-          },
-          {
-            name: "password",
-            label: "Password",
-            type: "password",
-            required: true,
-            autoComplete: "new-password",
-          },
-        ]}
-        footer={<AuthLinks next={next} />}
-      />
-    </div>
+    <SignUpForm
+      next={next}
+      action={signUpAction}
+      configured={isSupabaseConfigured()}
+    />
   );
 }
