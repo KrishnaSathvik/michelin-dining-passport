@@ -38,13 +38,22 @@ Remaining for later phases: legacy `Container`/`Section`, route bodies, old card
 
 Replacement: `src/components/stitch/home/*` (`HomepageView`). Config retained in `src/config/homepage.ts`.
 
-### Explore (after Phase 5)
+### Explore (Phase 5 — complete)
 
-| Path | When safe |
+| Path | Status |
 |---|---|
-| Old `Explore*` presentational files superseded by Stitch versions | No remaining imports |
+| `src/components/explore/ExploreSearchBar.tsx` | **Deleted** |
+| `src/components/explore/ExploreQuickFilters.tsx` | **Deleted** |
+| `src/components/explore/ExploreFilterDrawer.tsx` | **Deleted** |
+| `src/components/explore/ExploreFilterFields.tsx` | **Deleted** |
+| `src/components/explore/ExploreActiveFilters.tsx` | **Deleted** |
+| `src/components/explore/ExploreToolbar.tsx` | **Deleted** |
+| `src/components/explore/ExploreSortSelect.tsx` | **Deleted** |
+| `src/components/explore/ExploreResults.tsx` | **Deleted** |
+| `src/components/explore/ExplorePagination.tsx` | **Deleted** |
+| `src/components/explore/ExploreEmptyState.tsx` | **Deleted** |
 
-Keep `src/lib/data/explore.ts` forever (logic).
+Replacement: `src/components/stitch/explore/*` (`ExplorePageView`). Keep `src/lib/data/explore.ts` forever (logic).
 
 ### Map (after Phase 6)
 

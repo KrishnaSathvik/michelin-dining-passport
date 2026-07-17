@@ -1,6 +1,16 @@
 # Temporary compatibility aliases
 
-Phase 1–4 introduce Stitch tokens, primitives, shell chrome, restaurant presentation, and the explore_feed homepage.
+Phase 1–5 introduce Stitch tokens, primitives, shell chrome, restaurant presentation, explore_feed homepage, and Explore directory.
+
+## Explore (Phase 5 — complete)
+
+| Item | Status | Notes |
+|---|---|---|
+| `src/components/explore/*` | **Deleted** | Replaced by `stitch/explore/*` |
+| `src/lib/data/explore.ts` | Retained | Full URL/filter/sort/paginate contract |
+| Explore loading | Replaced | `stitch/explore/ExploreLoadingState` via `explore/loading.tsx` |
+
+New Explore location: `src/components/stitch/explore/*` → `ExplorePageView`.
 
 ## Homepage (Phase 4 — complete)
 
@@ -33,8 +43,8 @@ New homepage location: `src/components/stitch/home/*` → `HomepageView`.
 
 | Legacy path | New replacement | Remaining importers | Delete by |
 |---|---|---|---|
-| `src/components/restaurant/RestaurantDiscoveryCard.tsx` | `stitch/restaurant/RestaurantDiscoveryCard` | Explore, taxonomy, related lists, Passport grids (homepage migrated) | Phase 5–8 |
-| `src/components/restaurant/RestaurantCompactCard.tsx` | `stitch/restaurant/RestaurantListRow` | Explore list, Passport lists | Phase 5 / 8 |
+| `src/components/restaurant/RestaurantDiscoveryCard.tsx` | `stitch/restaurant/RestaurantDiscoveryCard` | Related lists, Passport grids (homepage + explore + taxonomy migrated) | Phase 6–8 |
+| `src/components/restaurant/RestaurantCompactCard.tsx` | `stitch/restaurant/RestaurantListRow` | Passport lists (explore list migrated) | Phase 8 |
 | `src/components/restaurant/RestaurantEditorialCard.tsx` | `stitch/restaurant/RestaurantEditorialCard` | Unused after Phase 4 homepage | Phase 7 cleanup if still unused |
 | `src/components/restaurant/RestaurantMedia.tsx` | `stitch/restaurant/RestaurantMedia` | Legacy cards + detail | Phase 5–7 |
 | `src/components/restaurant/RestaurantImageFallback.tsx` | `stitch/restaurant/RestaurantFallback` | Legacy media | Phase 5–7 |
@@ -62,6 +72,7 @@ Phase 1 stitch atoms (`MichelinDistinction`, `RestaurantMedia`, `RestaurantFallb
 - Primitives: `src/components/stitch/`
 - Restaurant presentation: `src/components/stitch/restaurant/`
 - Homepage: `src/components/stitch/home/`
+- Explore: `src/components/stitch/explore/`
 - Shell: `src/components/shell/`
 - Nav config: `src/config/navigation.ts`
 
@@ -70,5 +81,5 @@ Rules:
 1. New shell and stitch primitives must not import deleted SiteHeader/SiteFooter.
 2. Do not render old and new headers together.
 3. Do not apply legacy visual classes to AppHeader.
-4. Homepage composition is complete; other route bodies remain unrebuilt until their phase.
+4. Homepage and Explore compositions are complete; other route bodies remain unrebuilt until their phase.
 5. Do not globally replace legacy cards on unrebuilt routes.

@@ -1,7 +1,8 @@
 import Link from "next/link";
 import { Breadcrumbs } from "@/components/navigation/Breadcrumbs";
 import { Container } from "@/components/layout/Container";
-import { ExploreResults } from "@/components/explore/ExploreResults";
+import { RestaurantDiscoveryCard } from "@/components/stitch/restaurant";
+import { toExploreGridCards } from "@/components/stitch/explore";
 import { JsonLd } from "@/components/seo/JsonLd";
 import type { Restaurant } from "@/lib/data/types";
 import { breadcrumbJsonLd, type BreadcrumbItem } from "@/lib/seo/jsonld";
@@ -77,11 +78,13 @@ export function TaxonomyPageShell({
         </header>
 
         <div className="mt-10">
-          <ExploreResults
-            restaurants={restaurants}
-            view="grid"
-            surface="taxonomy"
-          />
+          <ul className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+            {toExploreGridCards(restaurants, "taxonomy").map((card) => (
+              <li key={card.slug}>
+                <RestaurantDiscoveryCard model={card} />
+              </li>
+            ))}
+          </ul>
         </div>
 
         {relatedLinks.length > 0 ? (
