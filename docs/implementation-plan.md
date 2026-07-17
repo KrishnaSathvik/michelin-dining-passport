@@ -1,17 +1,28 @@
 # Implementation plan
 
+## Strategy
+
+Feature-first build through Phases 2–7, then one consolidated UI/UX polish pass on `ui-ux-polish`.
+
+- Use the documented design system as the visual foundation.
+- Do not pause for detailed visual review between feature phases.
+- Fix immediately only broken layouts, inaccessible interactions, or flows that block testing.
+- Record nonblocking visual issues in [`docs/ui-ux-backlog.md`](./ui-ux-backlog.md).
+- One branch and one primary commit per phase; merge to `main` after functional verification.
+
 ## Phase status
 
 | Phase | Name | Status |
 | --- | --- | --- |
-| **0** | Foundation: audit, docs, design direction | **In progress → complete with this doc set** |
-| 1 | Static homepage (approved direction) | Not started |
-| 2 | Explore + filters + taxonomy pages | Not started |
-| 3 | Restaurant detail pages | Not started |
-| 4 | Passport preview (local) | Not started |
+| **0** | Foundation: audit, docs, design direction | **Complete** (on `main`) |
+| 1 | Static homepage (approved direction) | **Complete** (`phase-1-homepage`) |
+| 2 | Explore + filters + result views | Not started |
+| 3 | Restaurant + taxonomy pages + SEO | Not started |
+| 4 | Local Passport + personal tracking | Not started |
 | 5 | Geocode + `/map` | Not started |
 | 6 | Supabase auth + personal data | Not started |
 | 7 | Admin + roster import pipeline | Not started |
+| — | Consolidated UI/UX polish | After Phases 2–7 |
 
 ---
 
@@ -69,12 +80,16 @@ Deliverables:
 
 ---
 
-## Phase 2 — Explore + filters
+## Phase 2 — Complete Explore experience
 
-- `/explore` with query params: `q`, `stars`, `state`, `cuisine`, `price`, `sort`
-- FilterBar + Discovery cards / list toggle
-- Empty states
-- Shareable URLs
+Branch: `phase-2-explore`
+
+- `/explore` with query params: `q`, `stars`, `state`, `city`, `cuisine`, `price`, `sort`, `view`, `page`
+- Dataset-driven filters, multi-filter, clear individual / clear all
+- Sort: featured, stars, name, state, city
+- Discovery-card grid + dense list, pagination, empty/loading states
+- Mobile filter drawer, active-filter summary, shareable URLs
+- Out of scope: maps, restaurant details, auth, saving
 
 ---
 

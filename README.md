@@ -6,7 +6,9 @@ Editorial dining atlas + personal restaurant passport. Not affiliated with Miche
 
 ## Status
 
-**Phase 0 complete** — dataset audited, product/docs/design foundation locked. Homepage not built yet.
+**Phase 1 complete** — editorial discovery homepage over committed JSON data.
+
+Building feature-first through Phases 2–7, then one consolidated UI/UX polish pass. Nonblocking visual issues live in [`docs/ui-ux-backlog.md`](./docs/ui-ux-backlog.md).
 
 | Metric | Value |
 | --- | ---: |
@@ -16,7 +18,8 @@ Editorial dining atlas + personal restaurant passport. Not affiliated with Miche
 | 3-star | 16 |
 | States / districts | 14 |
 
-Dataset: [`data/usa_michelin_starred_restaurants_by_state_2026.xlsx`](./data/usa_michelin_starred_restaurants_by_state_2026.xlsx)
+Dataset workbook: [`data/usa_michelin_starred_restaurants_by_state_2026.xlsx`](./data/usa_michelin_starred_restaurants_by_state_2026.xlsx)  
+Committed JSON: [`data/restaurants.json`](./data/restaurants.json)
 
 ## Docs
 
@@ -25,6 +28,7 @@ Dataset: [`data/usa_michelin_starred_restaurants_by_state_2026.xlsx`](./data/usa
 - [Architecture](./docs/architecture.md)
 - [Design system & homepage directions](./docs/design-system.md)
 - [Implementation plan](./docs/implementation-plan.md)
+- [UI/UX backlog](./docs/ui-ux-backlog.md)
 
 ## Stack
 
@@ -36,15 +40,27 @@ Dataset: [`data/usa_michelin_starred_restaurants_by_state_2026.xlsx`](./data/usa
 
 ```bash
 npm install
+npm run data:import
+npm run data:validate
 npm run dev
 ```
 
-## Recommended design direction
+### Data scripts
 
-**Modern Dining Guide structure + Editorial Atlas visual identity + Immersive map page (later).**
+| Script | Purpose |
+| --- | --- |
+| `npm run data:import` | Read the workbook → write `data/restaurants.json` |
+| `npm run data:validate` | Verify counts, star split, unique slugs, shared-address pairs |
+| `npm run typecheck` | TypeScript check |
+| `npm run lint` | ESLint |
+| `npm run build` | Production build |
 
-See `docs/design-system.md`.
+Import/validation use Python’s standard library only (no XLSX package in the browser or Node runtime).
+
+## Design direction
+
+**Modern Dining Guide structure + Editorial Atlas visual identity + Immersive `/map` later.**
 
 ## Next phase
 
-Build the static homepage only (real restaurant records, placeholder imagery, no auth/Supabase/Maps).
+Phase 2 — complete Explore experience (`phase-2-explore`): filters, sort, grid/list, URL state, mobile filter drawer.
