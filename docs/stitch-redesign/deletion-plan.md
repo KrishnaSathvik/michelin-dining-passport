@@ -108,11 +108,14 @@ Preserve `PassportProvider` and store modules.
 | `src/components/auth/AuthForm.tsx` | **Deleted** — replaced by `stitch/auth/*` (actions preserved) |
 | `src/components/account/AccountPanel.tsx` | **Deleted** — replaced by `stitch/account/*` (actions preserved) |
 
-### Taxonomy (after Phase 11)
+### Taxonomy / education (Phase 11 — complete)
 
-| Path | When safe |
+| Path | Status |
 |---|---|
-| `TaxonomyPageShell` old composition | After new taxonomy components |
+| `src/components/taxonomy/TaxonomyPageShell.tsx` | **Deleted** — replaced by `stitch/taxonomy/*` page views |
+| Inline `/about-michelin-stars` composition | **Replaced** by `stitch/education/MichelinEducationPage` |
+
+Preserve taxonomy data loaders in `src/lib/data/restaurants.ts`, slug validation, metadata helpers, reservation resolver, and Save behavior.
 
 ### Dev / deprecated
 

@@ -164,15 +164,17 @@ Canonical visual conventions (**approved 2026-07-17**):
 
 ---
 
-## Taxonomy & education
+## Taxonomy & education — Phase 11 complete
 
-| Route | Stitch reference | Preserve | Adapt |
-|---|---|---|---|
-| `/usa/[stateSlug]` | `state_california_michelin_guide_discovery` | State data, restaurant counts | Hero + glance stats; real map optional/placeholder |
-| `/cities/[citySlug]` | `city_new_york_city_michelin_guide_discovery` | City data | Bento stats from real aggregates |
-| `/cuisines/[cuisineSlug]` | `cuisine_japanese_michelin_guide_discovery` | Cuisine listings | US-only restaurants; drop global hubs or replace with US city hubs |
-| `/stars/[starCount]` | `distinction_three_michelin_stars_discovery` | Star filter data | Adapt for 1 and 2 |
-| `/about-michelin-stars` | `how_michelin_stars_work` | Education content | Canonical nav only |
+| Route | Stitch reference | Status |
+|---|---|---|
+| `/usa/[stateSlug]` | `state_california_michelin_guide_discovery` | **Done** — `StatePageView`; city list geography (no fake map); real glance/star metrics |
+| `/cities/[citySlug]` | `city_new_york_city_michelin_guide_discovery` | **Done** — `CityPageView`; distinction + cuisine % bentos from live aggregates |
+| `/cuisines/[cuisineSlug]` | `cuisine_japanese_michelin_guide_discovery` | **Done** — `CuisinePageView`; OD-14 U.S. hubs (≥2 cities) or omit |
+| `/stars/[starCount]` | `distinction_three_michelin_stars_discovery` | **Done** — `StarPageView`; 3★ editorial bento; 1★ capped + Explore |
+| `/about-michelin-stars` | `how_michelin_stars_work` | **Done** — `MichelinEducationPage`; canonical AppHeader/Footer only |
+
+Presentation: `src/components/stitch/taxonomy/*`, `src/components/stitch/education/*`. Data loaders preserved in `src/lib/data/restaurants.ts`.
 
 ---
 

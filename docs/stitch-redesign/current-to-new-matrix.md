@@ -29,8 +29,8 @@ Complexity: **L** low · **M** medium · **H** high · **VH** very high
 | `(auth)/*` + `AuthForm` | Auth flows | Server actions, redirects | Split shell / forms | **Done** — `stitch/auth/*` (`AuthForm` deleted) | auth quartet | M | `e2e/auth.spec.ts`, `test_auth_redirect.mjs`, `test_auth_phase10.mjs` | **Phase 10 complete** |
 | `(auth)/layout.tsx` | Auth aside | — | Current forest aside | **Done** — atmospheric AuthShell | sign_in etc. | M | e2e shell/auth | **Phase 10 complete** |
 | `AccountPanel` | Account mgmt | Session, deletion, sync actions | Settings IA chrome | **Done** — `stitch/account/*` (`AccountPanel` deleted) | `account_settings_profile` | H | auth e2e | **Phase 10 complete** |
-| `TaxonomyPageShell` + taxonomy pages | Hubs | Aggregations, listings | Shared shell layout | Taxonomy heroes/bentos | state/city/cuisine/stars | H | — | Phase 11 |
-| `about-michelin-stars` | Education | Copy/content | Layout + bad nav if any | Education composition | `how_michelin_stars_work` | M | — | Phase 11 |
+| `TaxonomyPageShell` + taxonomy pages | Hubs | Aggregations, listings | Shared shell layout | **Done** — `stitch/taxonomy/*` (`TaxonomyPageShell` deleted) | state/city/cuisine/stars | H | `test_taxonomy_phase11.mjs`, `e2e/taxonomy.spec.ts` | **Phase 11 complete** |
+| `about-michelin-stars` | Education | Copy/content | Layout + bad nav if any | **Done** — `stitch/education/*` | `how_michelin_stars_work` | M | `e2e/education.spec.ts` | **Phase 11 complete** |
 | `SiteHeader` / `SiteFooter` | Chrome | Nav hrefs, disclaimer text | Layout/type | `AppHeader` / `SiteFooter` | library | M | many e2e | Phase 2 |
 | `Container` / `Section` | Layout primitives | — | Old spacing | `PageContainer` + section tokens | DESIGN.md | L | — | Phase 1–2 |
 | `Button` / `FilterChip` | Primitives | Variants API if useful | Visual | Stitch Button/Chip | library | M | — | Phase 1 |

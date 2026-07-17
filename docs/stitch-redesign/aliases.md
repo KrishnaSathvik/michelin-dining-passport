@@ -107,6 +107,8 @@ Phase 1 stitch atoms (`MichelinDistinction`, `RestaurantMedia`, `RestaurantFallb
 - Map: `src/components/stitch/map/`
 - Restaurant detail: `src/components/stitch/restaurant-detail/`
 - Shell: `src/components/shell/`
+- Taxonomy: `src/components/stitch/taxonomy/`
+- Education: `src/components/stitch/education/`
 - Nav config: `src/config/navigation.ts`
 
 Rules:
@@ -114,7 +116,8 @@ Rules:
 1. New shell and stitch primitives must not import deleted SiteHeader/SiteFooter.
 2. Do not render old and new headers together.
 3. Do not apply legacy visual classes to AppHeader.
-4. Homepage, Explore, Map, and restaurant detail compositions are complete; other route bodies remain unrebuilt until their phase.
+4. Homepage, Explore, Map, restaurant detail, passport, collections, auth/account, taxonomy, and education compositions are complete; Phase 12 owns system states / legacy-token cleanup.
 5. Do not globally replace legacy cards on unrebuilt routes.
 6. Do not delete `MapCanvas` or weaken Google mount gates while restyling map chrome.
 7. Restaurant identity is first-party; Google photos/ratings/hours/reviews stay inside the single UI Kit component.
+8. Cuisine hubs are U.S. cities only (OD-14); never restore global illustrative hubs.
