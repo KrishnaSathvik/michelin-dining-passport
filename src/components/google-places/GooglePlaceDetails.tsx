@@ -9,6 +9,7 @@ import {
   type ReactNode,
   type RefObject,
 } from "react";
+import { GooglePlaceErrorBoundary } from "@/components/google-places/GooglePlaceErrorBoundary";
 import { GooglePlaceSkeleton } from "@/components/google-places/GooglePlaceSkeleton";
 import { GooglePlaceUnavailable } from "@/components/google-places/GooglePlaceUnavailable";
 import {
@@ -66,10 +67,49 @@ function useNearViewport(
   return [ref, visible];
 }
 
+function PlaceRequest({ placeId }: { placeId: string }) {
+  // Ref callback sets the HTML attribute before the upgraded element requests data.
+  // Do not pass `place` as a React prop — property setters are enum/object-sensitive.
+  return (
+    <gmp-place-details-place-request
+      ref={(el) => {
+        if (!el) return;
+        if (el.getAttribute("place") !== placeId) {
+          el.setAttribute("place", placeId);
+        }
+      }}
+    />
+  );
+}
+
+function PlaceMedia({ lightbox = false }: { lightbox?: boolean }) {
+  return (
+    <gmp-place-media
+      ref={(el) => {
+        if (!el) return;
+        if (lightbox) el.setAttribute("lightbox-preferred", "");
+        else el.removeAttribute("lightbox-preferred");
+      }}
+    />
+  );
+}
+
+function PlaceAttribution() {
+  return (
+    <gmp-place-attribution
+      ref={(el) => {
+        if (!el) return;
+        el.setAttribute("light-scheme-color", "gray");
+        el.setAttribute("dark-scheme-color", "white");
+      }}
+    />
+  );
+}
+
 function FullContentConfig() {
   return (
     <gmp-place-content-config>
-      <gmp-place-media lightbox-preferred />
+      <PlaceMedia lightbox />
       <gmp-place-rating />
       <gmp-place-opening-hours />
       <gmp-place-phone-number />
@@ -77,10 +117,7 @@ function FullContentConfig() {
       <gmp-place-summary />
       <gmp-place-review-summary />
       <gmp-place-reviews />
-      <gmp-place-attribution
-        light-scheme-color="gray"
-        dark-scheme-color="white"
-      />
+      <PlaceAttribution />
     </gmp-place-content-config>
   );
 }
@@ -88,15 +125,12 @@ function FullContentConfig() {
 function CompactContentConfig() {
   return (
     <gmp-place-content-config>
-      <gmp-place-media />
+      <PlaceMedia />
       <gmp-place-rating />
       <gmp-place-type />
       <gmp-place-price />
       <gmp-place-open-now-status />
-      <gmp-place-attribution
-        light-scheme-color="gray"
-        dark-scheme-color="white"
-      />
+      <PlaceAttribution />
     </gmp-place-content-config>
   );
 }
@@ -188,6 +222,33 @@ function PlaceDetailsHost({
   );
 }
 
+function CompactElement({
+  placeId,
+  orientation,
+}: {
+  placeId: string;
+  orientation: "horizontal" | "vertical";
+}) {
+  return (
+    <gmp-place-details-compact
+      ref={(el) => {
+        if (!el) return;
+        // React property assignment rejects string enums; attributes work.
+        if (el.getAttribute("orientation") !== orientation) {
+          el.setAttribute("orientation", orientation);
+        }
+        if (!el.hasAttribute("truncation-preferred")) {
+          el.setAttribute("truncation-preferred", "");
+        }
+      }}
+      className="mdp-gmp-place-details-compact"
+    >
+      <PlaceRequest placeId={placeId} />
+      <CompactContentConfig />
+    </gmp-place-details-compact>
+  );
+}
+
 export function GooglePlaceDetails({
   placeId,
   restaurantSlug,
@@ -262,25 +323,27 @@ export function GooglePlaceDetails({
 
   return (
     <div ref={shellRef}>
-      <PlaceDetailsHost
-        placeId={placeId}
-        restaurantSlug={restaurantSlug}
-        page={page}
-        componentType="full"
-        className={className}
-        style={{
-          width: "100%",
-          maxWidth: "400px",
-          colorScheme: "light",
-          ...style,
-        }}
-        onRequestError={() => setRequestFailed(true)}
-      >
-        <gmp-place-details className="mdp-gmp-place-details">
-          <gmp-place-details-place-request place={placeId} />
-          <FullContentConfig />
-        </gmp-place-details>
-      </PlaceDetailsHost>
+      <GooglePlaceErrorBoundary>
+        <PlaceDetailsHost
+          placeId={placeId}
+          restaurantSlug={restaurantSlug}
+          page={page}
+          componentType="full"
+          className={className}
+          style={{
+            width: "100%",
+            maxWidth: "400px",
+            colorScheme: "light",
+            ...style,
+          }}
+          onRequestError={() => setRequestFailed(true)}
+        >
+          <gmp-place-details className="mdp-gmp-place-details">
+            <PlaceRequest placeId={placeId} />
+            <FullContentConfig />
+          </gmp-place-details>
+        </PlaceDetailsHost>
+      </GooglePlaceErrorBoundary>
       <p className="sr-only">{GOOGLE_PLACES_UNAVAILABLE_MESSAGE}</p>
     </div>
   );
@@ -351,29 +414,24 @@ export function GooglePlaceDetailsCompact({
 
   return (
     <div ref={shellRef}>
-      <PlaceDetailsHost
-        placeId={placeId}
-        restaurantSlug={restaurantSlug}
-        page={page}
-        componentType="compact"
-        className={className}
-        style={{
-          width: "100%",
-          maxWidth: "500px",
-          colorScheme: "light",
-          ...style,
-        }}
-        onRequestError={() => setRequestFailed(true)}
-      >
-        <gmp-place-details-compact
-          className="mdp-gmp-place-details-compact"
-          orientation={orientation}
-          truncation-preferred
+      <GooglePlaceErrorBoundary>
+        <PlaceDetailsHost
+          placeId={placeId}
+          restaurantSlug={restaurantSlug}
+          page={page}
+          componentType="compact"
+          className={className}
+          style={{
+            width: "100%",
+            maxWidth: "500px",
+            colorScheme: "light",
+            ...style,
+          }}
+          onRequestError={() => setRequestFailed(true)}
         >
-          <gmp-place-details-place-request place={placeId} />
-          <CompactContentConfig />
-        </gmp-place-details-compact>
-      </PlaceDetailsHost>
+          <CompactElement placeId={placeId} orientation={orientation} />
+        </PlaceDetailsHost>
+      </GooglePlaceErrorBoundary>
     </div>
   );
 }
