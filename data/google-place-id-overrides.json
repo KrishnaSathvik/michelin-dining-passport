@@ -1,51 +1,519 @@
 {
   "version": 1,
-  "updatedAt": "2026-07-17T16:22:34.540893+00:00",
+  "updatedAt": "2026-07-17T18:44:29.111935+00:00",
   "overrides": [
     {
-      "restaurantSlug": "alinea-chicago-il",
-      "placeId": "ChIJuyI60yLTD4gROwTWENq1He0",
+      "restaurantSlug": "63-clinton-new-york-ny",
+      "placeId": "ChIJ385rlW9ZwokRHTamoLqoosI",
       "status": "manually_approved",
       "confidence": "high",
-      "method": "spike_fixture",
+      "method": "manual_address_review",
       "reviewedAt": "2026-07-17",
-      "notes": "GP1 spike — strong coverage provisional Place ID."
+      "notes": "Manual tip review: name/address/city agreement confirmed."
     },
     {
-      "restaurantSlug": "lazy-betty-atlanta-ga",
-      "placeId": "ChIJ8c6xXQ0E9YgR5-373N6fF4s",
+      "restaurantSlug": "auberge-du-soleil-rutherford-ca",
+      "placeId": "ChIJH5O5lv5WhIARCuyN4aS9lYg",
       "status": "manually_approved",
-      "confidence": "medium",
-      "method": "spike_fixture",
+      "confidence": "high",
+      "method": "manual_tip_approve",
       "reviewedAt": "2026-07-17",
-      "notes": "GP1 spike — limited photos provisional Place ID."
+      "notes": "Tip-approved reasons=city_state,coords_close,street,strong_name"
     },
     {
-      "restaurantSlug": "sushi-nakazawa-new-york-new-york-ny",
-      "placeId": "ChIJ6z1l1y5YwokR6W_l8aK_g2I",
+      "restaurantSlug": "aubergine-carmel-by-the-sea-ca",
+      "placeId": "ChIJZ7svYhXmjYARp68gV6eBnX4",
+      "status": "manually_approved",
+      "confidence": "high",
+      "method": "manual_tip_approve",
+      "reviewedAt": "2026-07-17",
+      "notes": "Tip-approved reasons=city_state,restaurant_type,strong_name,website_domain"
+    },
+    {
+      "restaurantSlug": "bar-miller-new-york-ny",
+      "placeId": "ChIJoXWHAlJZwokRVBsijjIYQoQ",
+      "status": "manually_approved",
+      "confidence": "high",
+      "method": "manual_tip_approve",
+      "reviewedAt": "2026-07-17",
+      "notes": "Tip-approved reasons=city_state,restaurant_type,strong_name,website_domain"
+    },
+    {
+      "restaurantSlug": "boia-de-miami-fl",
+      "placeId": "ChIJte0b2xux2YgRr8f-xaLb0jw",
+      "status": "manually_approved",
+      "confidence": "high",
+      "method": "manual_tip_approve",
+      "reviewedAt": "2026-07-17",
+      "notes": "Tip-approved reasons=city_state,restaurant_type,strong_name,website_domain"
+    },
+    {
+      "restaurantSlug": "bom-new-york-ny",
+      "placeId": "ChIJRY8CqGJZwokR285BA7eLv5g",
       "status": "manually_approved",
       "confidence": "medium",
-      "method": "spike_fixture",
+      "method": "manual_tip_approve",
       "reviewedAt": "2026-07-17",
-      "notes": "GP1 spike — similar-name NY location provisional Place ID."
+      "notes": "Tip-approved reasons=city_state,coords_close,restaurant_type,shared_address_sibling,street,strong_name,website_domain"
+    },
+    {
+      "restaurantSlug": "caruso-s-montecito-ca",
+      "placeId": "ChIJc3vlaSUT6YARjVj5-kbcxrI",
+      "status": "manually_approved",
+      "confidence": "high",
+      "method": "manual_tip_approve",
+      "reviewedAt": "2026-07-17",
+      "notes": "Tip-approved reasons=restaurant_type,street,strong_name,website_domain"
+    },
+    {
+      "restaurantSlug": "causa-washington-dc",
+      "placeId": "ChIJP1ej4ae3t4kRZmPbTsaTz_w",
+      "status": "manually_approved",
+      "confidence": "high",
+      "method": "manual_tip_approve",
+      "reviewedAt": "2026-07-17",
+      "notes": "Tip-approved reasons=city_state,coords_close,restaurant_type,street,strong_name,website_domain"
+    },
+    {
+      "restaurantSlug": "chef-s-counter-at-maass-fort-lauderdale-fl",
+      "placeId": "ChIJF6pqghMB2YgRl7OIepJ4H0s",
+      "status": "manually_approved",
+      "confidence": "high",
+      "method": "manual_address_review",
+      "reviewedAt": "2026-07-17",
+      "notes": "Manual tip review: name/address/city agreement confirmed."
+    },
+    {
+      "restaurantSlug": "chez-noir-carmel-by-the-sea-ca",
+      "placeId": "ChIJSZwHIcTnjYAR40RvFRpNQLM",
+      "status": "manually_approved",
+      "confidence": "high",
+      "method": "manual_tip_approve",
+      "reviewedAt": "2026-07-17",
+      "notes": "Tip-approved reasons=city_state,restaurant_type,strong_name,website_domain"
+    },
+    {
+      "restaurantSlug": "citrin-santa-monica-ca",
+      "placeId": "ChIJB1gJrcelwoARTqn5Yh3E57s",
+      "status": "manually_approved",
+      "confidence": "medium",
+      "method": "manual_tip_approve",
+      "reviewedAt": "2026-07-17",
+      "notes": "Tip-approved reasons=city_state,coords_close,restaurant_type,shared_address_sibling,street,strong_name,website_domain"
+    },
+    {
+      "restaurantSlug": "corridor-109-los-angeles-ca",
+      "placeId": "ChIJo_avB77HwoAR6KembIfXRCk",
+      "status": "manually_approved",
+      "confidence": "high",
+      "method": "manual_tip_approve",
+      "reviewedAt": "2026-07-17",
+      "notes": "Tip-approved reasons=city_state,restaurant_type,strong_name,website_domain"
+    },
+    {
+      "restaurantSlug": "cote-miami-miami-fl",
+      "placeId": "ChIJT8zbHlex2YgRbmlvb54NTIY",
+      "status": "manually_approved",
+      "confidence": "high",
+      "method": "manual_address_review",
+      "reviewedAt": "2026-07-17",
+      "notes": "Manual tip review: name/address/city agreement confirmed."
     },
     {
       "restaurantSlug": "crown-shy-new-york-ny",
-      "placeId": "ChIJyUuE1otYwokR-j9xV7lB03A",
+      "placeId": "ChIJ__9LNBZawokREnkOiVx7ydc",
+      "status": "manually_approved",
+      "confidence": "high",
+      "method": "manual_approve",
+      "reviewedAt": "2026-07-17",
+      "notes": "Approved via CLI."
+    },
+    {
+      "restaurantSlug": "elcielo-miami-miami-fl",
+      "placeId": "ChIJ6VVxuZy22YgRlpY7iByTz_Q",
+      "status": "manually_approved",
+      "confidence": "high",
+      "method": "manual_address_review",
+      "reviewedAt": "2026-07-17",
+      "notes": "Manual tip review: name/address/city agreement confirmed."
+    },
+    {
+      "restaurantSlug": "elcielo-washington-dc-washington-dc",
+      "placeId": "ChIJw43KgEy5t4kRarwZlIG4yg0",
+      "status": "manually_approved",
+      "confidence": "high",
+      "method": "manual_address_review",
+      "reviewedAt": "2026-07-17",
+      "notes": "Manual tip review: name/address/city agreement confirmed."
+    },
+    {
+      "restaurantSlug": "gravitas-washington-dc",
+      "placeId": "ChIJlQvkj3O4t4kRbcYbGokqgX8",
       "status": "manually_approved",
       "confidence": "medium",
-      "method": "spike_fixture",
+      "method": "manual_tip_approve",
       "reviewedAt": "2026-07-17",
-      "notes": "GP1 spike — shared-address sibling provisional Place ID."
+      "notes": "Tip-approved reasons=city_state,coords_close,not_operational,restaurant_type,street,strong_name,website_domain"
+    },
+    {
+      "restaurantSlug": "hayato-los-angeles-ca",
+      "placeId": "ChIJt1RlQi_GwoARja7mYeFk2YI",
+      "status": "manually_approved",
+      "confidence": "high",
+      "method": "manual_address_review",
+      "reviewedAt": "2026-07-17",
+      "notes": "Manual tip review: name/address/city agreement confirmed."
+    },
+    {
+      "restaurantSlug": "hestia-austin-tx",
+      "placeId": "ChIJlWBjs7-1RIYRsJt0C41E558",
+      "status": "manually_approved",
+      "confidence": "high",
+      "method": "manual_tip_approve",
+      "reviewedAt": "2026-07-17",
+      "notes": "Tip-approved reasons=city_state,restaurant_type,strong_name,website_domain"
+    },
+    {
+      "restaurantSlug": "hiden-miami-fl",
+      "placeId": "ChIJEaa-UrK22YgR6rXu_t7u2hg",
+      "status": "manually_approved",
+      "confidence": "high",
+      "method": "manual_tip_approve",
+      "reviewedAt": "2026-07-17",
+      "notes": "Tip-approved reasons=city_state,restaurant_type,strong_name,website_domain"
+    },
+    {
+      "restaurantSlug": "isidore-san-antonio-tx",
+      "placeId": "ChIJ-9eV5Gb1XIYRg-VP6Jm2Rt4",
+      "status": "manually_approved",
+      "confidence": "medium",
+      "method": "manual_tip_approve",
+      "reviewedAt": "2026-07-17",
+      "notes": "Tip-approved reasons=city_state,coords_close,restaurant_type,shared_address_sibling,street,strong_name,website_domain"
+    },
+    {
+      "restaurantSlug": "joji-new-york-ny",
+      "placeId": "ChIJBchQ93pZwokR5AtYEzo6p1o",
+      "status": "manually_approved",
+      "confidence": "medium",
+      "method": "manual_tip_approve",
+      "reviewedAt": "2026-07-17",
+      "notes": "Tip-approved reasons=city_state,coords_close,restaurant_type,shared_address_sibling,street,strong_name,website_domain"
+    },
+    {
+      "restaurantSlug": "kato-los-angeles-ca",
+      "placeId": "ChIJnd0gSmi7woARCdXsW5usqKU",
+      "status": "manually_approved",
+      "confidence": "high",
+      "method": "manual_tip_approve",
+      "reviewedAt": "2026-07-17",
+      "notes": "Tip-approved reasons=city_state,restaurant_type,strong_name,website_domain"
+    },
+    {
+      "restaurantSlug": "kizaki-denver-co",
+      "placeId": "ChIJT6LLNQB_bIcRFlId0L9BFOM",
+      "status": "manually_approved",
+      "confidence": "medium",
+      "method": "manual_tip_approve",
+      "reviewedAt": "2026-07-17",
+      "notes": "Tip-approved reasons=city_state,coords_close,restaurant_type,shared_address_sibling,street,strong_name"
+    },
+    {
+      "restaurantSlug": "kochi-new-york-ny",
+      "placeId": "ChIJN8SzjFRZwokR-b5lqNXcg44",
+      "status": "manually_approved",
+      "confidence": "high",
+      "method": "manual_tip_approve",
+      "reviewedAt": "2026-07-17",
+      "notes": "Tip-approved reasons=city_state,restaurant_type,strong_name,website_domain"
+    },
+    {
+      "restaurantSlug": "kojima-los-angeles-ca",
+      "placeId": "ChIJ0ybze4W7woARnWibOHEoHPU",
+      "status": "manually_approved",
+      "confidence": "high",
+      "method": "manual_address_review",
+      "reviewedAt": "2026-07-17",
+      "notes": "Manual tip review: name/address/city agreement confirmed."
+    },
+    {
+      "restaurantSlug": "l-abeille-new-york-ny",
+      "placeId": "ChIJq75Ur-tZwokRo7I_F_PhlcU",
+      "status": "manually_approved",
+      "confidence": "medium",
+      "method": "manual_tip_approve",
+      "reviewedAt": "2026-07-17",
+      "notes": "Tip-approved reasons=city_state,coords_close,restaurant_type,shared_address_sibling,street,strong_name,website_domain"
+    },
+    {
+      "restaurantSlug": "l-atelier-de-joel-robuchon-miami-miami-fl",
+      "placeId": "ChIJJ3pnTr6x2YgRUcKI0-aDyJs",
+      "status": "manually_approved",
+      "confidence": "high",
+      "method": "manual_tip_approve",
+      "reviewedAt": "2026-07-17",
+      "notes": "Tip-approved reasons=city_state,restaurant_type,strong_name,website_domain"
+    },
+    {
+      "restaurantSlug": "le-jardinier-miami-miami-fl",
+      "placeId": "ChIJq6q6Rlex2YgRLVY5meAunEM",
+      "status": "manually_approved",
+      "confidence": "high",
+      "method": "manual_tip_approve",
+      "reviewedAt": "2026-07-17",
+      "notes": "Tip-approved reasons=city_state,restaurant_type,strong_name,website_domain"
+    },
+    {
+      "restaurantSlug": "le-pavillon-new-york-ny",
+      "placeId": "ChIJjcAJd-tZwokRJ0GkkJ2Urp0",
+      "status": "manually_approved",
+      "confidence": "medium",
+      "method": "manual_tip_approve",
+      "reviewedAt": "2026-07-17",
+      "notes": "Tip-approved reasons=city_state,coords_close,restaurant_type,shared_address_sibling,strong_name,website_domain"
+    },
+    {
+      "restaurantSlug": "margot-denver-co",
+      "placeId": "ChIJreGQhDd5bIcRP3OYKrquLHk",
+      "status": "manually_approved",
+      "confidence": "medium",
+      "method": "manual_tip_approve",
+      "reviewedAt": "2026-07-17",
+      "notes": "Tip-approved reasons=city_state,coords_close,restaurant_type,shared_address_sibling,street,strong_name,website_domain"
+    },
+    {
+      "restaurantSlug": "mari-new-york-ny",
+      "placeId": "ChIJk_HUw2dZwokR_zqBwmFDHgo",
+      "status": "manually_approved",
+      "confidence": "high",
+      "method": "manual_tip_approve",
+      "reviewedAt": "2026-07-17",
+      "notes": "Tip-approved reasons=city_state,restaurant_type,strong_name,website_domain"
+    },
+    {
+      "restaurantSlug": "masa-new-york-ny",
+      "placeId": "ChIJM26HnlhYwokR4IfXFz-AuCA",
+      "status": "manually_approved",
+      "confidence": "high",
+      "method": "manual_tip_approve",
+      "reviewedAt": "2026-07-17",
+      "notes": "Tip-approved reasons=city_state,restaurant_type,street,strong_name"
+    },
+    {
+      "restaurantSlug": "meju-queens-ny",
+      "placeId": "ChIJ6alY3R1ZwokRQXUSqpo8OIM",
+      "status": "manually_approved",
+      "confidence": "high",
+      "method": "manual_address_review",
+      "reviewedAt": "2026-07-17",
+      "notes": "Manual tip review: name/address/city agreement confirmed."
+    },
+    {
+      "restaurantSlug": "melisse-santa-monica-ca",
+      "placeId": "ChIJ7fOMUsSkwoARIOVuE_23I1Q",
+      "status": "manually_approved",
+      "confidence": "medium",
+      "method": "manual_tip_approve",
+      "reviewedAt": "2026-07-17",
+      "notes": "Tip-approved reasons=city_state,coords_close,restaurant_type,shared_address_sibling,street,strong_name,website_domain"
+    },
+    {
+      "restaurantSlug": "muku-new-york-ny",
+      "placeId": "ChIJYTKtj2dZwokR3IYU3st5VuA",
+      "status": "manually_approved",
+      "confidence": "medium",
+      "method": "manual_tip_approve",
+      "reviewedAt": "2026-07-17",
+      "notes": "Tip-approved reasons=city_state,coords_close,restaurant_type,shared_address_sibling,street,strong_name,website_domain"
+    },
+    {
+      "restaurantSlug": "mutra-north-miami-fl",
+      "placeId": "ChIJVxmvsZCz2YgRamqn_tHB5Tw",
+      "status": "manually_approved",
+      "confidence": "high",
+      "method": "manual_tip_approve",
+      "reviewedAt": "2026-07-17",
+      "notes": "Tip-approved reasons=city_state,restaurant_type,strong_name,website_domain"
+    },
+    {
+      "restaurantSlug": "nicosi-san-antonio-tx",
+      "placeId": "ChIJAQBA7vb1XIYRt1Aal0okoeA",
+      "status": "manually_approved",
+      "confidence": "high",
+      "method": "manual_address_review",
+      "reviewedAt": "2026-07-17",
+      "notes": "Manual tip review: name/address/city agreement confirmed."
+    },
+    {
+      "restaurantSlug": "o-by-brush-atlanta-ga",
+      "placeId": "ChIJAQAkDY4F9YgRHFdUJW4jKo8",
+      "status": "manually_approved",
+      "confidence": "high",
+      "method": "manual_tip_approve",
+      "reviewedAt": "2026-07-17",
+      "notes": "Tip-approved reasons=city_state,street,strong_name,website_domain"
+    },
+    {
+      "restaurantSlug": "ogawa-miami-fl",
+      "placeId": "ChIJ0-tCRMux2YgRJIUcLt_1B7s",
+      "status": "manually_approved",
+      "confidence": "high",
+      "method": "manual_tip_approve",
+      "reviewedAt": "2026-07-17",
+      "notes": "Tip-approved reasons=city_state,restaurant_type,strong_name,website_domain"
+    },
+    {
+      "restaurantSlug": "oiji-mi-new-york-ny",
+      "placeId": "ChIJee0VTWZZwokRDYFpAoConlw",
+      "status": "manually_approved",
+      "confidence": "medium",
+      "method": "manual_tip_approve",
+      "reviewedAt": "2026-07-17",
+      "notes": "Tip-approved reasons=city_state,coords_close,restaurant_type,shared_address_sibling,street,strong_name,website_domain"
+    },
+    {
+      "restaurantSlug": "olamaie-austin-tx",
+      "placeId": "ChIJbw26uXW1RIYRJe7jQ8iC5Es",
+      "status": "manually_approved",
+      "confidence": "medium",
+      "method": "manual_tip_approve",
+      "reviewedAt": "2026-07-17",
+      "notes": "Tip-approved reasons=city_state,coords_close,not_operational,restaurant_type,street,strong_name,website_domain"
+    },
+    {
+      "restaurantSlug": "orsa-and-winston-los-angeles-ca",
+      "placeId": "ChIJh9W-NkrGwoARmn2KQbXkdhg",
+      "status": "manually_approved",
+      "confidence": "high",
+      "method": "manual_tip_approve",
+      "reviewedAt": "2026-07-17",
+      "notes": "Tip-approved reasons=city_state,restaurant_type,strong_name,website_domain"
+    },
+    {
+      "restaurantSlug": "press-saint-helena-ca",
+      "placeId": "ChIJq4L3m9NQhIAR8MaZwYPwSjY",
+      "status": "manually_approved",
+      "confidence": "high",
+      "method": "manual_address_review",
+      "reviewedAt": "2026-07-17",
+      "notes": "Manual tip review: name/address/city agreement confirmed."
+    },
+    {
+      "restaurantSlug": "r-o-rebel-omakase-laguna-beach-ca",
+      "placeId": "ChIJbS4e2ELl3IARpUd8ZG8K_Z4",
+      "status": "manually_approved",
+      "confidence": "high",
+      "method": "manual_tip_approve",
+      "reviewedAt": "2026-07-17",
+      "notes": "Tip-approved reasons=city_state,restaurant_type,strong_name,website_domain"
     },
     {
       "restaurantSlug": "saga-new-york-ny",
-      "placeId": null,
-      "status": "no_match",
-      "confidence": "low",
-      "method": "spike_fixture",
+      "placeId": "ChIJZZlClEZbwokRZj-0-fE25tk",
+      "status": "manually_approved",
+      "confidence": "high",
+      "method": "manual_approve",
       "reviewedAt": "2026-07-17",
-      "notes": "GP1 spike — stand-in for missing confident match."
+      "notes": "Approved via CLI."
+    },
+    {
+      "restaurantSlug": "selby-s-atherton-ca",
+      "placeId": "ChIJN6lxI3Kjj4ARtyvHC8OJ__k",
+      "status": "manually_approved",
+      "confidence": "high",
+      "method": "manual_tip_approve",
+      "reviewedAt": "2026-07-17",
+      "notes": "Tip-approved reasons=restaurant_type,street,strong_name,website_domain"
+    },
+    {
+      "restaurantSlug": "shin-sushi-encino-ca",
+      "placeId": "ChIJdUHh7MCZwoAR71vwlsZ5V_o",
+      "status": "manually_approved",
+      "confidence": "high",
+      "method": "manual_tip_approve",
+      "reviewedAt": "2026-07-17",
+      "notes": "Tip-approved reasons=city_state,restaurant_type,street,strong_name"
+    },
+    {
+      "restaurantSlug": "smyth-chicago-il",
+      "placeId": "ChIJxRcpzSctDogRBKHyFUKauHc",
+      "status": "manually_approved",
+      "confidence": "high",
+      "method": "manual_address_review",
+      "reviewedAt": "2026-07-17",
+      "notes": "Manual tip review: name/address/city agreement confirmed."
+    },
+    {
+      "restaurantSlug": "sushi-inaba-torrance-ca",
+      "placeId": "ChIJx7NewtO0woARCEk05DbH2tA",
+      "status": "manually_approved",
+      "confidence": "high",
+      "method": "manual_address_review",
+      "reviewedAt": "2026-07-17",
+      "notes": "Manual tip review: name/address/city agreement confirmed."
+    },
+    {
+      "restaurantSlug": "sushi-kaneyoshi-los-angeles-ca",
+      "placeId": "ChIJIXKeGv_HwoARtFSSk2sS2AI",
+      "status": "manually_approved",
+      "confidence": "high",
+      "method": "manual_tip_approve",
+      "reviewedAt": "2026-07-17",
+      "notes": "Tip-approved reasons=city_state,restaurant_type,strong_name,website_domain"
+    },
+    {
+      "restaurantSlug": "sushi-sho-new-york-ny",
+      "placeId": "ChIJT_JHTgFZwokRXleXHadsVaE",
+      "status": "manually_approved",
+      "confidence": "high",
+      "method": "manual_tip_approve",
+      "reviewedAt": "2026-07-17",
+      "notes": "Tip-approved reasons=city_state,coords_near,restaurant_type,street,strong_name"
+    },
+    {
+      "restaurantSlug": "tambourine-room-by-tristan-brandt-miami-beach-fl",
+      "placeId": "ChIJdQEhRsmz2YgRKkCcRapLA2c",
+      "status": "manually_approved",
+      "confidence": "high",
+      "method": "manual_tip_approve",
+      "reviewedAt": "2026-07-17",
+      "notes": "Tip-approved reasons=city_state,restaurant_type,street,strong_name"
+    },
+    {
+      "restaurantSlug": "the-catbird-seat-nashville-tn",
+      "placeId": "ChIJq3tfSZJmZIgRLkkEXv4QxkQ",
+      "status": "manually_approved",
+      "confidence": "high",
+      "method": "manual_tip_approve",
+      "reviewedAt": "2026-07-17",
+      "notes": "Tip-approved reasons=city_state,restaurant_type,strong_name,website_domain"
+    },
+    {
+      "restaurantSlug": "the-inn-at-little-washington-washington-dc",
+      "placeId": "ChIJ9ydRxCsztIkROPnyuZc6Dbw",
+      "status": "manually_approved",
+      "confidence": "high",
+      "method": "manual_tip_approve",
+      "reviewedAt": "2026-07-17",
+      "notes": "Tip-approved reasons=street,strong_name,website_domain"
+    },
+    {
+      "restaurantSlug": "tsukimi-new-york-ny",
+      "placeId": "ChIJRQgS7etZwokR8IMUTfuDXOM",
+      "status": "manually_approved",
+      "confidence": "high",
+      "method": "manual_tip_approve",
+      "reviewedAt": "2026-07-17",
+      "notes": "Tip-approved reasons=city_state,coords_far,restaurant_type,strong_name,website_domain"
+    },
+    {
+      "restaurantSlug": "victoria-and-albert-s-orlando-fl",
+      "placeId": "ChIJfae0pxd-3YgR1ZtP2RQreIY",
+      "status": "manually_approved",
+      "confidence": "high",
+      "method": "manual_tip_approve",
+      "reviewedAt": "2026-07-17",
+      "notes": "Tip-approved reasons=restaurant_type,street,strong_name,website_domain"
     }
   ]
 }

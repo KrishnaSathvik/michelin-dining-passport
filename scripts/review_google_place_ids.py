@@ -85,14 +85,72 @@ def show_record(slug: str, restaurant: dict, row: dict) -> None:
     )
 
 
+def approve_from_tips(matches_payload: dict, overrides: dict) -> int:
+    """Non-interactive: approve needs_review rows that have a tip Place ID."""
+    count = 0
+    by_slug = matches_by_slug(matches_payload)
+    for slug, row in list(by_slug.items()):
+        if row.get("status") != "needs_review":
+            continue
+        tip = TMP_DIR / f"{slug}.txt"
+        if not tip.exists():
+            continue
+        place_id = ""
+        for line in tip.read_text(encoding="utf-8").splitlines():
+            if line.startswith("Candidate placeId:"):
+                place_id = line.split(":", 1)[1].strip()
+                break
+        if not place_id:
+            continue
+        decision = sanitize_match_record(
+            {
+                "restaurantSlug": slug,
+                "placeId": place_id,
+                "status": "manually_approved",
+                "confidence": "medium",
+                "method": "manual_tip_approve",
+                "reviewedAt": today(),
+                "notes": "Approved from local tip after human/agent review.",
+            }
+        )
+        upsert_match(matches_payload, decision)
+        upsert_override(overrides, decision)
+        clear_tip(slug)
+        count += 1
+        print(f"approved {slug} suffix=…{place_id[-6:]}")
+    return count
+
+
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--slug", default="")
+    parser.add_argument(
+        "--approve-from-tips",
+        action="store_true",
+        help="Non-interactive: approve needs_review rows using gitignored tip Place IDs",
+    )
+    parser.add_argument(
+        "--approve",
+        nargs=2,
+        metavar=("SLUG", "PLACE_ID"),
+        help="Non-interactive approve one Place ID",
+    )
+    parser.add_argument(
+        "--reject",
+        metavar="SLUG",
+        help="Non-interactive reject",
+    )
+    parser.add_argument(
+        "--no-match",
+        metavar="SLUG",
+        help="Non-interactive no_match",
+    )
+    parser.add_argument(
+        "--clear-overrides",
+        action="store_true",
+        help="Clear all overrides (e.g. provisional spike fixtures)",
+    )
     args = parser.parse_args()
-
-    if not sys.stdin.isatty():
-        print("Interactive review requires a TTY.", file=sys.stderr)
-        return 1
 
     restaurants = {
         row["slug"]: row for row in load_json(RESTAURANTS_PATH)["restaurants"]
@@ -100,6 +158,89 @@ def main() -> int:
     matches_payload = load_matches()
     overrides = load_overrides()
     by_slug = matches_by_slug(matches_payload)
+
+    if args.clear_overrides:
+        overrides = {"version": 1, "updatedAt": now_iso(), "overrides": []}
+        save_json(OVERRIDES_PATH, overrides)
+        print("Cleared overrides")
+        if not (
+            args.approve_from_tips
+            or args.approve
+            or args.reject
+            or args.no_match
+            or args.slug
+        ):
+            return 0
+
+    if args.approve_from_tips:
+        n = approve_from_tips(matches_payload, overrides)
+        save_json(MATCHES_PATH, matches_payload)
+        save_json(OVERRIDES_PATH, overrides)
+        print(f"Approved {n} from tips")
+        return 0
+
+    if args.approve:
+        slug, place_id = args.approve
+        decision = sanitize_match_record(
+            {
+                "restaurantSlug": slug,
+                "placeId": place_id,
+                "status": "manually_approved",
+                "confidence": "high",
+                "method": "manual_approve",
+                "reviewedAt": today(),
+                "notes": "Approved via CLI.",
+            }
+        )
+        upsert_match(matches_payload, decision)
+        upsert_override(overrides, decision)
+        clear_tip(slug)
+        save_json(MATCHES_PATH, matches_payload)
+        save_json(OVERRIDES_PATH, overrides)
+        print(f"approved {slug}")
+        return 0
+
+    if args.reject:
+        decision = empty_match(
+            args.reject,
+            status="rejected",
+            confidence="low",
+            method="manual_reject",
+            notes="Rejected via CLI.",
+            reviewedAt=today(),
+        )
+        upsert_match(matches_payload, decision)
+        upsert_override(overrides, sanitize_match_record(decision))
+        clear_tip(args.reject)
+        save_json(MATCHES_PATH, matches_payload)
+        save_json(OVERRIDES_PATH, overrides)
+        print(f"rejected {args.reject}")
+        return 0
+
+    if args.no_match:
+        decision = empty_match(
+            args.no_match,
+            status="no_match",
+            confidence="low",
+            method="manual_no_match",
+            notes="No confident match via CLI.",
+            reviewedAt=today(),
+        )
+        upsert_match(matches_payload, decision)
+        upsert_override(overrides, sanitize_match_record(decision))
+        clear_tip(args.no_match)
+        save_json(MATCHES_PATH, matches_payload)
+        save_json(OVERRIDES_PATH, overrides)
+        print(f"no_match {args.no_match}")
+        return 0
+
+    if not sys.stdin.isatty():
+        print(
+            "Interactive review requires a TTY. "
+            "Use --approve-from-tips / --approve / --reject / --no-match.",
+            file=sys.stderr,
+        )
+        return 1
 
     queue = [args.slug] if args.slug else unresolved(by_slug)
     if not queue:
