@@ -30,7 +30,7 @@ export function BrowseByState({ states }: BrowseByStateProps) {
             className="mb-4 break-inside-avoid border-b border-border/80 pb-3"
           >
             <Link
-              href={`/explore?state=${encodeURIComponent(state.stateSlug)}`}
+              href={`/usa/${encodeURIComponent(state.stateSlug)}`}
               className="group flex items-baseline justify-between gap-4"
             >
               <span className="font-display text-xl text-ink group-hover:text-forest">

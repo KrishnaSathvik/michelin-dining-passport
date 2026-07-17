@@ -1,3 +1,4 @@
+import Link from "next/link";
 import type { Restaurant } from "@/lib/data/types";
 import { CuisineLabel } from "./CuisineLabel";
 import { ExternalTextLink } from "./ExternalTextLink";
@@ -15,14 +16,24 @@ export function RestaurantEditorialCard({
 }: RestaurantEditorialCardProps) {
   return (
     <article className="grid gap-6 lg:grid-cols-[minmax(0,1.35fr)_minmax(0,1fr)] lg:gap-10">
-      <RestaurantImagePlaceholder restaurant={restaurant} priorityVisual />
+      <Link
+        href={`/restaurants/${restaurant.slug}`}
+        className="block focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-forest"
+      >
+        <RestaurantImagePlaceholder restaurant={restaurant} priorityVisual />
+      </Link>
 
       <div className="flex flex-col justify-center border-t border-border pt-6 lg:border-t-0 lg:border-l lg:pl-10 lg:pt-0">
         <p className="font-sans text-xs uppercase tracking-[0.18em] text-burgundy">
           Featured
         </p>
         <h3 className="mt-3 font-display text-3xl leading-tight text-ink sm:text-4xl">
-          {restaurant.name}
+          <Link
+            href={`/restaurants/${restaurant.slug}`}
+            className="hover:text-forest"
+          >
+            {restaurant.name}
+          </Link>
         </h3>
 
         <div className="mt-4 flex flex-wrap items-center gap-x-4 gap-y-2">
