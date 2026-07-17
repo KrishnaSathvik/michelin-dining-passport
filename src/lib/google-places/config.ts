@@ -1,6 +1,6 @@
 /**
  * Browser-safe Google Places UI Kit configuration.
- * Never read GOOGLE_PLACES_MATCHING_API_KEY here — that key is server/CLI only.
+ * Never read the server-only matching API key here — that key is CLI/server only.
  */
 
 export type GooglePlacesUiKitAvailability =
