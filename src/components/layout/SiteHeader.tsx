@@ -1,8 +1,19 @@
 import Link from "next/link";
 import { siteConfig } from "@/config/site";
+import { getVerifiedUser } from "@/lib/auth/session";
 import { Container } from "./Container";
 
-export function SiteHeader() {
+export async function SiteHeader() {
+  const user = await getVerifiedUser().catch(() => null);
+  const accountHref = user ? "/account" : "/login?next=/account";
+  const accountLabel = user ? "Account" : "Sign in";
+
+  const nav = siteConfig.nav.map((item) =>
+    item.href === "/account"
+      ? { ...item, href: accountHref, label: accountLabel }
+      : item,
+  );
+
   return (
     <header className="sticky top-0 z-40 border-b border-border bg-bg">
       <Container className="flex min-h-16 items-center justify-between gap-4 py-3 sm:min-h-[4.5rem] sm:py-4">
@@ -14,9 +25,9 @@ export function SiteHeader() {
         </Link>
 
         <nav aria-label="Primary" className="hidden items-center gap-7 lg:flex">
-          {siteConfig.nav.map((item) => (
+          {nav.map((item) => (
             <Link
-              key={item.href}
+              key={`${item.href}-${item.label}`}
               href={item.href}
               className="font-sans text-[15px] text-ink-secondary no-underline transition-colors hover:text-ink"
             >
@@ -40,8 +51,8 @@ export function SiteHeader() {
             className="absolute right-0 z-20 mt-2 min-w-[16rem] rounded-[var(--radius-md)] border border-border bg-bg p-3 shadow-[var(--shadow-float)]"
           >
             <ul className="flex flex-col gap-1">
-              {siteConfig.nav.map((item) => (
-                <li key={item.href}>
+              {nav.map((item) => (
+                <li key={`${item.href}-${item.label}`}>
                   <Link
                     href={item.href}
                     className="block rounded-[var(--radius-sm)] px-3 py-3 font-sans text-base text-ink no-underline hover:bg-surface-soft"

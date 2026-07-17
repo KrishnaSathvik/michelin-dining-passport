@@ -6,7 +6,7 @@ export default function AccountLayout({
   children: React.ReactNode;
 }) {
   return (
-    <div className="py-12 sm:py-16">
+    <div className="border-b border-border bg-bg py-10 sm:py-14">
       <Container>{children}</Container>
     </div>
   );

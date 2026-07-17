@@ -1,12 +1,13 @@
 "use client";
 
-import { useState, useTransition } from "react";
+import { useId, useRef, useState, useTransition } from "react";
 import {
   exportCloudAccountData,
   requestAccountDeletionAction,
   updateProfileAction,
 } from "@/app/personal-data/actions";
 import { signOutAction, updatePasswordFormAction } from "@/app/auth/actions";
+import { Button } from "@/components/ui/Button";
 import {
   readMigrationState,
   type LocalMigrationState,
@@ -37,30 +38,34 @@ export function AccountPanel({
     readMigrationState(),
   );
   const [pending, startTransition] = useTransition();
+  const deleteDialogRef = useRef<HTMLDialogElement>(null);
+  const deleteTitleId = useId();
 
   return (
     <div className="mx-auto flex w-full max-w-2xl flex-col gap-8">
       <header>
         <h1 className="font-display text-4xl text-ink">Account</h1>
         <p className="mt-2 font-sans text-sm text-ink-muted">
-          Manage profile, export personal data, or delete your account.
+          Profile, security, Passport sync, and data controls.
         </p>
       </header>
 
-      <section className="space-y-3 border border-border p-5">
+      <section className="space-y-4 rounded-[var(--radius-lg)] border border-border p-5 sm:p-6">
         <h2 className="font-display text-2xl text-ink">Profile</h2>
-        <dl className="grid gap-2 font-sans text-sm text-ink-muted">
+        <dl className="grid gap-3 font-sans text-sm text-ink-muted sm:grid-cols-2">
           <div>
             <dt className="text-ink">Email</dt>
-            <dd>{email ?? "—"}</dd>
+            <dd className="mt-1">{email ?? "—"}</dd>
           </div>
           <div>
             <dt className="text-ink">Providers</dt>
-            <dd>{providers.length ? providers.join(", ") : "email"}</dd>
+            <dd className="mt-1">
+              {providers.length ? providers.join(", ") : "email"}
+            </dd>
           </div>
           <div>
             <dt className="text-ink">Created</dt>
-            <dd>
+            <dd className="mt-1">
               {createdAt
                 ? new Date(createdAt).toLocaleDateString("en-US", {
                     year: "numeric",
@@ -70,24 +75,14 @@ export function AccountPanel({
                 : "—"}
             </dd>
           </div>
-          <div>
-            <dt className="text-ink">Local migration</dt>
-            <dd>
-              {migrationStatus.completed
-                ? `Complete${migrationStatus.completedAt ? ` (${migrationStatus.completedAt})` : ""}`
-                : migrationStatus.lastError
-                  ? `Needs attention: ${migrationStatus.lastError}`
-                  : "Not completed on this device"}
-            </dd>
-          </div>
         </dl>
 
-        <label className="mt-4 flex flex-col gap-1.5">
+        <label className="mt-2 flex flex-col gap-1.5">
           <span className="font-sans text-sm text-ink">Display name</span>
           <input
             value={displayName}
             onChange={(event) => setDisplayName(event.target.value)}
-            className="border border-border bg-bg px-3 py-2 font-sans text-sm"
+            className="min-h-11 rounded-[var(--radius-md)] border border-border bg-bg px-3 font-sans text-sm"
           />
         </label>
         <label className="flex flex-col gap-1.5">
@@ -95,13 +90,13 @@ export function AccountPanel({
           <input
             value={homeCity}
             onChange={(event) => setHomeCity(event.target.value)}
-            className="border border-border bg-bg px-3 py-2 font-sans text-sm"
+            className="min-h-11 rounded-[var(--radius-md)] border border-border bg-bg px-3 font-sans text-sm"
           />
         </label>
-        <button
+        <Button
           type="button"
+          variant="primary"
           disabled={pending}
-          className="bg-ink px-4 py-2 font-sans text-sm text-bg disabled:opacity-60"
           onClick={() => {
             startTransition(async () => {
               const result = await updateProfileAction({
@@ -109,22 +104,23 @@ export function AccountPanel({
                 homeCity,
               });
               setMessage(
-                result.ok ? "Profile updated." : (result.message ?? "Update failed."),
+                result.ok
+                  ? "Profile updated."
+                  : (result.message ?? "Update failed."),
               );
             });
           }}
         >
           Save profile
-        </button>
+        </Button>
       </section>
 
-      {hasPasswordProvider ? (
-        <section className="space-y-3 border border-border p-5">
-          <h2 className="font-display text-2xl text-ink">Password</h2>
-          <form
-            action={updatePasswordFormAction}
-            className="flex flex-col gap-3"
-          >
+      <section className="space-y-4 rounded-[var(--radius-lg)] border border-border p-5 sm:p-6">
+        <h2 className="font-display text-2xl text-ink">
+          Authentication and security
+        </h2>
+        {hasPasswordProvider ? (
+          <form action={updatePasswordFormAction} className="flex flex-col gap-3">
             <label className="flex flex-col gap-1.5">
               <span className="font-sans text-sm text-ink">New password</span>
               <input
@@ -133,27 +129,49 @@ export function AccountPanel({
                 required
                 minLength={8}
                 autoComplete="new-password"
-                className="border border-border bg-bg px-3 py-2 font-sans text-sm"
+                className="min-h-11 rounded-[var(--radius-md)] border border-border bg-bg px-3 font-sans text-sm"
               />
             </label>
-            <button
-              type="submit"
-              className="w-fit border border-border px-4 py-2 font-sans text-sm"
-            >
+            <Button type="submit" variant="secondary" className="w-fit">
               Update password
-            </button>
+            </Button>
           </form>
-        </section>
-      ) : null}
+        ) : (
+          <p className="font-sans text-sm text-ink-muted">
+            This account uses an external provider. Password updates are managed
+            there.
+          </p>
+        )}
+        <form action={signOutAction} className="pt-2">
+          <Button type="submit" variant="secondary">
+            Sign out
+          </Button>
+        </form>
+      </section>
 
-      <section className="space-y-3 border border-border p-5">
-        <h2 className="font-display text-2xl text-ink">Export</h2>
+      <section className="space-y-3 rounded-[var(--radius-lg)] border border-border p-5 sm:p-6">
+        <h2 className="font-display text-2xl text-ink">Passport sync status</h2>
+        <p className="font-sans text-sm text-ink-muted">
+          Signed in — Passport changes sync to your account when online.
+        </p>
+        <p className="font-sans text-sm text-ink-secondary">
+          Local migration:{" "}
+          {migrationStatus.completed
+            ? `Complete${migrationStatus.completedAt ? ` (${migrationStatus.completedAt})` : ""}`
+            : migrationStatus.lastError
+              ? `Needs attention: ${migrationStatus.lastError}`
+              : "Not completed on this device"}
+        </p>
+      </section>
+
+      <section className="space-y-3 rounded-[var(--radius-lg)] border border-border p-5 sm:p-6">
+        <h2 className="font-display text-2xl text-ink">Data export</h2>
         <p className="font-sans text-sm text-ink-muted">
           Download your profile, personal restaurant records, and collections.
         </p>
-        <button
+        <Button
           type="button"
-          className="border border-border px-4 py-2 font-sans text-sm"
+          variant="secondary"
           onClick={() => {
             startTransition(async () => {
               const result = await exportCloudAccountData();
@@ -175,51 +193,74 @@ export function AccountPanel({
           }}
         >
           Download JSON export
-        </button>
+        </Button>
       </section>
 
-      <section className="space-y-3 border border-border p-5">
-        <h2 className="font-display text-2xl text-ink">Sign out</h2>
-        <form action={signOutAction}>
-          <button
-            type="submit"
-            className="border border-border px-4 py-2 font-sans text-sm"
-          >
-            Sign out
-          </button>
-        </form>
-      </section>
-
-      <section className="space-y-3 border border-burgundy/40 p-5">
-        <h2 className="font-display text-2xl text-ink">Delete account</h2>
+      <section className="space-y-3 rounded-[var(--radius-lg)] border border-border p-5 sm:p-6">
+        <h2 className="font-display text-2xl text-ink">Account deletion</h2>
         <p className="font-sans text-sm text-ink-muted">
-          Permanently delete your account and personal dining records. Type{" "}
-          <span className="text-ink">DELETE</span> to confirm.
+          Permanently delete your account and personal dining records. This
+          cannot be undone.
         </p>
-        <input
-          value={deletePhrase}
-          onChange={(event) => setDeletePhrase(event.target.value)}
-          className="border border-border bg-bg px-3 py-2 font-sans text-sm"
-          placeholder="DELETE"
-        />
-        <button
+        <Button
           type="button"
-          disabled={pending}
-          className="bg-burgundy px-4 py-2 font-sans text-sm text-bg disabled:opacity-60"
-          onClick={() => {
-            startTransition(async () => {
-              const result = await requestAccountDeletionAction(deletePhrase);
-              if (result.ok) {
-                window.location.href = "/";
-                return;
-              }
-              setMessage(result.message ?? "Deletion failed.");
-            });
-          }}
+          variant="ghost"
+          className="text-burgundy"
+          onClick={() => deleteDialogRef.current?.showModal()}
         >
-          Delete my account
-        </button>
+          Delete my account…
+        </Button>
       </section>
+
+      <dialog
+        ref={deleteDialogRef}
+        aria-labelledby={deleteTitleId}
+        className="m-auto w-[min(100%,28rem)] rounded-[var(--radius-lg)] border border-border bg-bg p-0 shadow-[var(--shadow-float)] backdrop:bg-ink/40"
+      >
+        <div className="space-y-4 p-5 sm:p-6">
+          <h3 id={deleteTitleId} className="font-display text-2xl text-ink">
+            Confirm account deletion
+          </h3>
+          <p className="font-sans text-sm text-ink-muted">
+            Type <span className="text-ink">DELETE</span> to permanently remove
+            your account and cloud Passport data.
+          </p>
+          <input
+            value={deletePhrase}
+            onChange={(event) => setDeletePhrase(event.target.value)}
+            className="min-h-11 w-full rounded-[var(--radius-md)] border border-border bg-bg px-3 font-sans text-sm"
+            placeholder="DELETE"
+          />
+          <div className="flex flex-wrap justify-end gap-2">
+            <Button
+              type="button"
+              variant="ghost"
+              onClick={() => deleteDialogRef.current?.close()}
+            >
+              Cancel
+            </Button>
+            <Button
+              type="button"
+              variant="primary"
+              className="!bg-burgundy hover:!bg-burgundy/90"
+              disabled={pending}
+              onClick={() => {
+                startTransition(async () => {
+                  const result = await requestAccountDeletionAction(deletePhrase);
+                  if (result.ok) {
+                    window.location.href = "/";
+                    return;
+                  }
+                  setMessage(result.message ?? "Deletion failed.");
+                  deleteDialogRef.current?.close();
+                });
+              }}
+            >
+              Delete permanently
+            </Button>
+          </div>
+        </div>
+      </dialog>
 
       {message ? (
         <p role="status" className="font-sans text-sm text-forest">
