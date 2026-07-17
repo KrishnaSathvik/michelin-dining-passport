@@ -1,6 +1,20 @@
 # Temporary compatibility aliases
 
-Phase 1–6 introduce Stitch tokens, primitives, shell chrome, restaurant presentation, homepage, Explore directory, and Map workspace.
+Phase 1–7 introduce Stitch tokens, primitives, shell chrome, restaurant presentation, homepage, Explore directory, Map workspace, and restaurant detail.
+
+## Restaurant detail (Phase 7 — complete)
+
+| Item | Status | Notes |
+|---|---|---|
+| `restaurants/[slug]/page.tsx` composition | **Replaced** | `stitch/restaurant-detail/RestaurantDetailView` |
+| `RestaurantPassportControls` | **Deleted** | `JourneyControls` + planning/visit dialogs |
+| Legacy `RestaurantDetailStickyBar` | **Deleted** | Stitch sticky bar |
+| Legacy `RestaurantRelatedList` / `RestaurantLocationPreview` | **Deleted** | Stitch related/nearby + location preview |
+| `RestaurantGooglePlacesSection` | **Deleted** | Outer frame is `RestaurantGoogleSection`; `GooglePlaceDetails` preserved |
+| Google UI Kit / lazy mount | Retained | Provider wrappers untouched |
+| Reservation resolver / Passport store | Retained | Mutations via `usePassport` |
+
+New detail location: `src/components/stitch/restaurant-detail/*`.
 
 ## Map (Phase 6 — complete)
 
@@ -86,6 +100,7 @@ Phase 1 stitch atoms (`MichelinDistinction`, `RestaurantMedia`, `RestaurantFallb
 - Homepage: `src/components/stitch/home/`
 - Explore: `src/components/stitch/explore/`
 - Map: `src/components/stitch/map/`
+- Restaurant detail: `src/components/stitch/restaurant-detail/`
 - Shell: `src/components/shell/`
 - Nav config: `src/config/navigation.ts`
 
@@ -94,6 +109,7 @@ Rules:
 1. New shell and stitch primitives must not import deleted SiteHeader/SiteFooter.
 2. Do not render old and new headers together.
 3. Do not apply legacy visual classes to AppHeader.
-4. Homepage, Explore, and Map compositions are complete; other route bodies remain unrebuilt until their phase.
+4. Homepage, Explore, Map, and restaurant detail compositions are complete; other route bodies remain unrebuilt until their phase.
 5. Do not globally replace legacy cards on unrebuilt routes.
 6. Do not delete `MapCanvas` or weaken Google mount gates while restyling map chrome.
+7. Restaurant identity is first-party; Google photos/ratings/hours/reviews stay inside the single UI Kit component.

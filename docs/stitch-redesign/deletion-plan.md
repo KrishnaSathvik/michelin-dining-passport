@@ -70,15 +70,19 @@ Replacement: `src/components/stitch/map/*` (`MapWorkspaceView`) + preserved `Res
 
 | Path | Status | When safe |
 |---|---|---|
-| Legacy `RestaurantDiscoveryCard` | **Still imported** by homepage/explore/taxonomy/related | Zero imports after Phases 4–8 adopt `stitch/restaurant/RestaurantDiscoveryCard` |
-| Legacy `RestaurantCompactCard` | **Still imported** by explore list + Passport lists | Phase 5 / 8 → `RestaurantListRow` |
-| Legacy `RestaurantEditorialCard` | **Still imported** by homepage | Phase 4 → `stitch/restaurant/RestaurantEditorialCard` |
-| Legacy `RestaurantMedia` / `RestaurantImageFallback` / `StarMark` | **Still imported** by legacy cards/detail | After card migrations |
-| Legacy `ReservationButton` / `SaveRestaurantButton` | **Still imported** by legacy cards + sticky bar | After cards/detail migrate to `ReservationAction` / `SaveAction` |
-| `RestaurantDetailStickyBar` old styles | Retained | After Phase 7 restyle (replace in place OK) |
-| New map/related/nearby presentation | Shipped in Phase 3 under `stitch/restaurant/` | Adopted in Phases 6–7 |
+| Legacy `RestaurantDiscoveryCard` | **Still imported** by Passport/taxonomy | Phase 8+ |
+| Legacy `RestaurantCompactCard` | **Still imported** by Passport lists | Phase 8 → `RestaurantListRow` |
+| Legacy `RestaurantEditorialCard` | Check importers | Delete when unused |
+| Legacy `RestaurantMedia` / `RestaurantImageFallback` / `StarMark` | **Still imported** by legacy cards | After Passport card migrations |
+| Legacy `ReservationButton` / `SaveRestaurantButton` | **Still imported** by legacy Passport cards | After Passport migrate |
+| `RestaurantDetailStickyBar` (legacy) | **Deleted** | Phase 7 |
+| `RestaurantRelatedList` / `RestaurantLocationPreview` | **Deleted** | Phase 7 |
+| `RestaurantPassportControls` | **Deleted** | Phase 7 — logic in `JourneyControls` |
+| `RestaurantGooglePlacesSection` | **Deleted** | Phase 7 — frame is `RestaurantGoogleSection`; kit preserved |
+| Detail route composition | **Replaced** | `stitch/restaurant-detail/*` |
+| New map/related/nearby presentation | Shipped in Phase 3 under `stitch/restaurant/` | **Adopted in Phase 7** |
 
-**Phase 3 did not delete legacy cards.** Gallery: `/dev/stitch-restaurant-components` (production `notFound`).
+**Phase 7 restaurant-detail visual migration is complete.** Gallery: `/dev/stitch-restaurant-components` (production `notFound`).
 
 ### Passport / collections (after Phases 8–9)
 

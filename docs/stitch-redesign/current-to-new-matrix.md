@@ -14,9 +14,9 @@ Complexity: **L** low · **M** medium · **H** high · **VH** very high
 | `ExploreResults` / cards wiring | Results render | Pagination, view param | Grid/list presentation | **Deleted** — `ExploreGrid` / `ExploreList` + Phase 3 cards | explore + system_states | M | e2e | **Phase 5 complete** |
 | `map/page.tsx` + `RestaurantMap` | Map workspace UI | Query, filters, selection | Panel layout/list/detail | **Done** — `stitch/map/MapWorkspaceView` (+ controller) | `dining_passport_map_workspace` | VH | `e2e/map.spec.ts`, google-places map | **Phase 6 complete** |
 | `MapCanvas` | MapLibre render | Clustering, sync, controls hooks | Marker chrome if mismatched | **Kept**; selected marker gold-ring restyle | map workspace | M | map e2e | **Phase 6 complete** |
-| `restaurants/[slug]/page.tsx` | Detail page | Data, related/nearby, notFound | Full page composition | Identity hero + details + Google frame | `restaurant_profile_benu` | VH | reservations + google-places e2e | Phase 7 |
-| `RestaurantDetailStickyBar` | Mobile CTA bar | Actions | Visual | Restyled sticky bar | benu mobile transform | M | — | Phase 7 |
-| `RestaurantPassportControls` | Journey toggles + dialogs | Passport mutations | Control chrome | `JourneyControls` + dialogs | benu + plan/record dialogs | H | passport unit tests | Phase 7–8 |
+| `restaurants/[slug]/page.tsx` | Detail page | Data, related/nearby, notFound | Full page composition | **Done** — `stitch/restaurant-detail/RestaurantDetailView` | `restaurant_profile_benu` | VH | reservations + google-places + restaurant-detail e2e | **Phase 7 complete** |
+| `RestaurantDetailStickyBar` | Mobile CTA bar | Actions | Visual | **Deleted** — stitch sticky bar | benu mobile transform | M | — | **Phase 7 complete** |
+| `RestaurantPassportControls` | Journey toggles + dialogs | Passport mutations | Control chrome | **Deleted** — `JourneyControls` + dialogs | benu + plan/record dialogs | H | passport unit tests | **Phase 7 complete** |
 | `ReservationButton` | Outbound reserve | Resolver + labels + analytics | Button styling | `ReservationAction` | all CTAs | M | `e2e/reservations.spec.ts`, `test_reservations.mjs` | Phase 3 |
 | `SaveRestaurantButton` | Save toggle | Passport save | Button styling | `SaveAction` | cards/detail | L | — | Phase 3 |
 | `RestaurantDiscoveryCard` / `Compact` / `Editorial` | Cards | Linking, badges data | Card layout | New card variants | library + explore + home | H | reservations e2e selectors | Phase 3 |
