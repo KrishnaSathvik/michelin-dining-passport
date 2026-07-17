@@ -26,6 +26,8 @@ import {
   parseMapSearchParams,
   type MapQuery,
 } from "@/lib/map/query";
+import { ReservationButton } from "@/components/restaurant/ReservationButton";
+import { getRestaurantReservation } from "@/lib/reservations/data";
 import { usePassport } from "@/lib/passport/PassportProvider";
 
 const MapCanvas = dynamic(
@@ -407,18 +409,20 @@ export function RestaurantMap({
           >
             {filtered.map((restaurant) => {
               const isSelected = restaurant.slug === selectedSlug;
+              const reservation = getRestaurantReservation(restaurant.slug);
               return (
                 <li
                   key={restaurant.slug}
                   ref={(node) => {
                     itemRefs.current[restaurant.slug] = node;
                   }}
+                  className={`flex items-stretch gap-2 px-3 py-2 ${
+                    isSelected ? "bg-bg" : "hover:bg-bg"
+                  }`}
                 >
                   <button
                     type="button"
-                    className={`w-full px-4 py-3 text-left focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-[-2px] focus-visible:outline-forest ${
-                      isSelected ? "bg-bg" : "hover:bg-bg"
-                    }`}
+                    className="min-w-0 flex-1 px-1 py-2 text-left focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-[-2px] focus-visible:outline-forest"
                     aria-current={isSelected ? "true" : undefined}
                     onClick={() => {
                       selectRestaurant(restaurant.slug);
@@ -438,6 +442,15 @@ export function RestaurantMap({
                       </span>
                     ) : null}
                   </button>
+                  <div className="flex shrink-0 items-center py-1">
+                    <ReservationButton
+                      restaurant={restaurant}
+                      reservation={reservation}
+                      surface="map_list"
+                      variant="compact"
+                      showProvider={false}
+                    />
+                  </div>
                 </li>
               );
             })}
@@ -528,12 +541,20 @@ export function RestaurantMap({
                 {selected.address}
               </p>
             ) : null}
-            <Link
-              href={`/restaurants/${selected.slug}`}
-              className="mt-3 inline-flex min-h-11 items-center border border-forest bg-forest px-4 font-sans text-sm text-bg-elevated"
-            >
-              Open restaurant page
-            </Link>
+            <div className="mt-3 flex flex-wrap items-end gap-2">
+              <ReservationButton
+                restaurant={selected}
+                reservation={getRestaurantReservation(selected.slug)}
+                surface="map_mobile_sheet"
+                variant="full"
+              />
+              <Link
+                href={`/restaurants/${selected.slug}`}
+                className="inline-flex min-h-11 items-center border border-border px-4 font-sans text-sm text-ink"
+              >
+                Open restaurant page
+              </Link>
+            </div>
           </div>
         </div>
       ) : null}
@@ -555,12 +576,20 @@ export function RestaurantMap({
               {selected.address}
             </p>
           )}
-          <Link
-            href={`/restaurants/${selected.slug}`}
-            className="mt-3 inline-flex min-h-11 items-center text-forest underline"
-          >
-            Open restaurant page
-          </Link>
+          <div className="mt-3 flex flex-wrap items-end gap-3">
+            <ReservationButton
+              restaurant={selected}
+              reservation={getRestaurantReservation(selected.slug)}
+              surface="map_marker"
+              variant="full"
+            />
+            <Link
+              href={`/restaurants/${selected.slug}`}
+              className="inline-flex min-h-11 items-center text-forest underline"
+            >
+              Open restaurant page
+            </Link>
+          </div>
         </div>
       ) : null}
 

@@ -1,5 +1,5 @@
 export const PASSPORT_STORAGE_KEY = "mdp-passport";
-export const PASSPORT_SCHEMA_VERSION = 1 as const;
+export const PASSPORT_SCHEMA_VERSION = 2 as const;
 
 export type UserRestaurantRecord = {
   restaurantSlug: string;
@@ -14,6 +14,12 @@ export type UserRestaurantRecord = {
   personalRating: number | null;
   notes: string;
   favoriteDishes: string[];
+  /** Optional planned reservation date `YYYY-MM-DD` */
+  reservationPlannedFor: string | null;
+  /** Optional booking provider label recorded by the user */
+  reservationProvider: string | null;
+  /** Short private confirmation note — never logged to analytics */
+  reservationConfirmationNote: string | null;
   createdAt: string;
   updatedAt: string;
 };
@@ -36,7 +42,13 @@ export type PassportStoreV1 = {
   collections: Record<string, LocalCollection>;
 };
 
-export type PassportStore = PassportStoreV1;
+export type PassportStoreV2 = {
+  version: 2;
+  userRestaurants: Record<string, UserRestaurantRecord>;
+  collections: Record<string, LocalCollection>;
+};
+
+export type PassportStore = PassportStoreV2;
 
 export type PassportMetrics = {
   restaurantsVisited: number;

@@ -46,3 +46,7 @@ next-env.d.ts
 
 __pycache__/
 *.py[cod]
+
+# Local reservation enrichment caches (regenerable)
+/data/reservation-page-cache.json
+/data/reservation-link-check-log.json

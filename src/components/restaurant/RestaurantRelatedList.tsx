@@ -36,7 +36,10 @@ export function RestaurantRelatedList({
       <ul className="mt-4 divide-y divide-border border border-border bg-bg-elevated/40 px-4 sm:px-5">
         {restaurants.map((restaurant) => (
           <li key={restaurant.slug}>
-            <RestaurantCompactCard restaurant={restaurant} />
+            <RestaurantCompactCard
+              restaurant={restaurant}
+              surface="related_restaurant"
+            />
           </li>
         ))}
       </ul>

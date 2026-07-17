@@ -20,6 +20,7 @@ Feature-first build through Phases 2–7, then one consolidated UI/UX polish pas
 | 3 | Restaurant + taxonomy pages + SEO | **Complete** (`phase-3-restaurant-pages`) |
 | 4 | Local Passport + personal tracking | **Complete** (`phase-4-local-passport`) |
 | 5 | Geocode + `/map` | **Complete** (`phase-5-map`) — batch geocode, reconciliation, MapLibre map, search-this-area, mobile sheet |
+| 5.5 | Verified reservation links | **Complete** (`phase-5-5-reservations`) — outbound CTAs, discovery/review workflow, no booking APIs |
 | 6 | Supabase auth + personal data | Not started |
 | 7 | Admin + roster import pipeline | Not started |
 | — | Consolidated UI/UX polish | After Phases 2–7 |
@@ -116,6 +117,24 @@ Branch: `phase-2-explore`
 - `/map` with list + markers (MapLibre/Mapbox preferred initially)
 - Compact cards + marker preview
 - Do **not** make homepage map-first until this phase is solid
+
+---
+
+## Phase 5.5 — Reservation links (before Supabase)
+
+- Verified outbound booking URLs only (no availability API / checkout)
+- `data/reservations.json` + candidates + overrides
+- Discovery / validate / report / review scripts
+- Shared resolver + `ReservationButton` on all restaurant surfaces
+- Truthful CTAs: Reserve now / Check availability / View booking options / Visit restaurant website
+- Optional local Passport reservation planning fields (schema v2)
+- Docs: [`docs/reservations.md`](./reservations.md), enrichment report
+
+### Explicitly out of scope
+
+- OpenTable / Resy / Tock partner APIs
+- Supabase, auth, accounts
+- Admin Phase 7
 
 ---
 

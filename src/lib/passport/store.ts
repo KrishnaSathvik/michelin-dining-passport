@@ -3,7 +3,7 @@ import type {
   LocalCollection,
   PassportMetrics,
   PassportStore,
-  PassportStoreV1,
+  PassportStoreV2,
   UserRestaurantRecord,
 } from "./types";
 import { PASSPORT_SCHEMA_VERSION, PASSPORT_STORAGE_KEY } from "./types";
@@ -12,7 +12,7 @@ function nowIso(): string {
   return new Date().toISOString();
 }
 
-function createEmptyStore(): PassportStoreV1 {
+function createEmptyStore(): PassportStoreV2 {
   return {
     version: PASSPORT_SCHEMA_VERSION,
     userRestaurants: {},
@@ -55,6 +55,19 @@ function sanitizeUserRestaurant(
     personalRating: rating,
     notes: typeof value.notes === "string" ? value.notes : "",
     favoriteDishes: sanitizeStringArray(value.favoriteDishes),
+    reservationPlannedFor:
+      typeof value.reservationPlannedFor === "string" &&
+      value.reservationPlannedFor
+        ? value.reservationPlannedFor
+        : null,
+    reservationProvider:
+      typeof value.reservationProvider === "string"
+        ? value.reservationProvider
+        : null,
+    reservationConfirmationNote:
+      typeof value.reservationConfirmationNote === "string"
+        ? value.reservationConfirmationNote.slice(0, 280)
+        : null,
     createdAt:
       typeof value.createdAt === "string" ? value.createdAt : nowIso(),
     updatedAt:
@@ -106,9 +119,14 @@ export function slugify(value: string, fallback = "collection"): string {
 export function migratePassportStore(raw: unknown): PassportStore {
   if (!isRecord(raw)) return createEmptyStore();
 
-  // Future versions migrate here. Unknown/corrupt data recovers to empty.
-  if (raw.version !== 1 && raw.version !== undefined) {
-    // Attempt best-effort salvage of v1-shaped fields.
+  // v1 → v2 adds optional reservation planning fields (nullable defaults).
+  // Unknown/corrupt data recovers to empty.
+  if (
+    raw.version !== 1 &&
+    raw.version !== 2 &&
+    raw.version !== undefined
+  ) {
+    // Attempt best-effort salvage of known-shaped fields below.
   }
 
   const userRestaurants: Record<string, UserRestaurantRecord> = {};
@@ -178,6 +196,9 @@ function emptyUserRestaurant(slug: string): UserRestaurantRecord {
     personalRating: null,
     notes: "",
     favoriteDishes: [],
+    reservationPlannedFor: null,
+    reservationProvider: null,
+    reservationConfirmationNote: null,
     createdAt: stamp,
     updatedAt: stamp,
   };
@@ -193,7 +214,10 @@ function isMeaningful(record: UserRestaurantRecord): boolean {
     Boolean(record.visitDate) ||
     record.personalRating !== null ||
     Boolean(record.notes.trim()) ||
-    record.favoriteDishes.length > 0
+    record.favoriteDishes.length > 0 ||
+    Boolean(record.reservationPlannedFor) ||
+    Boolean(record.reservationProvider?.trim()) ||
+    Boolean(record.reservationConfirmationNote?.trim())
   );
 }
 

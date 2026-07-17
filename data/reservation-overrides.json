@@ -1,0 +1,43 @@
+{
+  "version": 1,
+  "updatedAt": "2026-07-17T05:04:11.858436+00:00",
+  "overrides": [
+    {
+      "restaurantSlug": "atelier-crenn-san-francisco-ca",
+      "reason": "Official site OpenTable venue page",
+      "decidedAt": "2026-07-17T05:04:11.759781+00:00",
+      "reservationUrl": "https://www.opentable.com/r/atelier-crenn",
+      "provider": "opentable",
+      "status": "verified",
+      "sourceType": "manual_verification",
+      "confidence": "high",
+      "verifiedAt": "2026-07-17T05:04:11.759647+00:00",
+      "sourceUrl": "https://www.ateliercrenn.com/",
+      "notes": "Official site OpenTable venue page"
+    },
+    {
+      "restaurantSlug": "harbor-house-inn-elk-ca",
+      "reason": "Link targets book-your-events hotel page, not clear restaurant booking",
+      "decidedAt": "2026-07-17T05:04:11.810549+00:00",
+      "reservationUrl": null,
+      "provider": "none",
+      "status": "unknown",
+      "confidence": "low",
+      "verifiedAt": null,
+      "notes": "Rejected: Link targets book-your-events hotel page, not clear restaurant booking"
+    },
+    {
+      "restaurantSlug": "quince-san-francisco-ca",
+      "reservationUrl": "https://www.sevenrooms.com/explore/quince/reservations/create/search/",
+      "provider": "sevenrooms",
+      "status": "verified",
+      "sourceType": "manual_verification",
+      "confidence": "high",
+      "verifiedAt": "2026-07-17T05:04:11.858305+00:00",
+      "sourceUrl": "https://www.quincerestaurant.com/",
+      "notes": "Trimmed SevenRooms query flags; kept restaurant-specific path",
+      "reason": "Clean verified SevenRooms URL",
+      "decidedAt": "2026-07-17T05:04:11.858430+00:00"
+    }
+  ]
+}

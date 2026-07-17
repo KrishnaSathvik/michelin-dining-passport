@@ -31,6 +31,7 @@ export function FeaturedRestaurants({ restaurants }: FeaturedRestaurantsProps) {
               <RestaurantDiscoveryCard
                 key={restaurant.slug}
                 restaurant={restaurant}
+                surface="homepage"
               />
             ))}
           </div>
@@ -45,6 +46,7 @@ export function FeaturedRestaurants({ restaurants }: FeaturedRestaurantsProps) {
               <RestaurantCompactCard
                 key={restaurant.slug}
                 restaurant={restaurant}
+                surface="homepage"
               />
             ))}
           </div>

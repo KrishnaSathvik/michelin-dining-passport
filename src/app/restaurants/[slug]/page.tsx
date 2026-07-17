@@ -7,6 +7,7 @@ import { CuisineLabel } from "@/components/restaurant/CuisineLabel";
 import { ExternalTextLink } from "@/components/restaurant/ExternalTextLink";
 import { LocationLine } from "@/components/restaurant/LocationLine";
 import { PriceMark } from "@/components/restaurant/PriceMark";
+import { ReservationButton } from "@/components/restaurant/ReservationButton";
 import { RestaurantImagePlaceholder } from "@/components/restaurant/RestaurantImagePlaceholder";
 import { RestaurantRelatedList } from "@/components/restaurant/RestaurantRelatedList";
 import { StarMark } from "@/components/restaurant/StarMark";
@@ -21,6 +22,12 @@ import {
   getRestaurants,
   getSourceMeta,
 } from "@/lib/data/restaurants";
+import { getRestaurantReservation } from "@/lib/reservations/data";
+import {
+  getRestaurantReservationAction,
+  reservationDuplicatesMichelin,
+  reservationDuplicatesWebsite,
+} from "@/lib/reservations/resolve";
 import { buildPageMetadata } from "@/lib/seo/metadata";
 import { breadcrumbJsonLd, restaurantJsonLd } from "@/lib/seo/jsonld";
 
@@ -62,6 +69,19 @@ export default async function RestaurantPage({ params }: RestaurantPageProps) {
   const related = getRelatedByCuisine(restaurant);
   const source = getSourceMeta();
   const allRestaurants = getRestaurants();
+  const reservation = getRestaurantReservation(restaurant.slug);
+  const reservationAction = getRestaurantReservationAction(
+    restaurant,
+    reservation,
+  );
+  const hideWebsiteBecauseReservation = reservationDuplicatesWebsite(
+    restaurant,
+    reservationAction,
+  );
+  const hideMichelinBecauseReservation = reservationDuplicatesMichelin(
+    restaurant,
+    reservationAction,
+  );
   const breadcrumbs = [
     { name: "Home", path: "/" },
     { name: "Explore", path: "/explore" },
@@ -101,13 +121,27 @@ export default async function RestaurantPage({ params }: RestaurantPageProps) {
               {restaurant.address}
             </p>
 
-            <div className="mt-6 flex flex-wrap gap-x-5 gap-y-2 font-sans text-sm">
-              <ExternalTextLink href={restaurant.michelinGuideUrl}>
-                Michelin Guide listing
-              </ExternalTextLink>
-              {restaurant.website ? (
-                <ExternalTextLink href={restaurant.website}>
-                  Official restaurant website
+            <div className="mt-6 flex flex-wrap items-end gap-3 font-sans text-sm">
+              <ReservationButton
+                restaurant={restaurant}
+                reservation={reservation}
+                surface="restaurant_detail"
+                variant="full"
+              />
+              {restaurant.website && !hideWebsiteBecauseReservation ? (
+                <ExternalTextLink
+                  href={restaurant.website}
+                  className="inline-flex min-h-11 items-center border border-border px-4"
+                >
+                  Official website
+                </ExternalTextLink>
+              ) : null}
+              {!hideMichelinBecauseReservation ? (
+                <ExternalTextLink
+                  href={restaurant.michelinGuideUrl}
+                  className="inline-flex min-h-11 items-center border border-border px-4"
+                >
+                  Michelin Guide
                 </ExternalTextLink>
               ) : null}
             </div>

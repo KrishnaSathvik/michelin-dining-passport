@@ -121,7 +121,10 @@ export function CollectionDetail({
             <li key={restaurant.slug} className="py-2">
               <div className="flex flex-col gap-2 sm:flex-row sm:items-start sm:justify-between">
                 <div className="flex-1">
-                  <RestaurantCompactCard restaurant={restaurant} />
+                  <RestaurantCompactCard
+                    restaurant={restaurant}
+                    surface="collection"
+                  />
                 </div>
                 <button
                   type="button"

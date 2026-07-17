@@ -131,6 +131,59 @@ export function RestaurantPassportControls({
         />
       </label>
 
+      <div className="border-t border-border pt-4">
+        <h3 className="font-display text-xl text-ink">Reservation notes</h3>
+        <p className="mt-1 font-sans text-xs text-ink-muted">
+          Optional private planning fields. Clicking an external reserve link
+          does not confirm a booking.
+        </p>
+        <div className="mt-3 grid gap-4 sm:grid-cols-2">
+          <label className="block font-sans text-sm text-ink">
+            Planned for
+            <input
+              type="date"
+              className="mt-2 min-h-11 w-full border border-border bg-bg-elevated px-3"
+              value={record?.reservationPlannedFor ?? ""}
+              onChange={(event) =>
+                updateRestaurant(restaurantSlug, {
+                  reservationPlannedFor: event.target.value || null,
+                  planned: event.target.value ? true : record?.planned,
+                })
+              }
+            />
+          </label>
+          <label className="block font-sans text-sm text-ink">
+            Provider
+            <input
+              type="text"
+              className="mt-2 min-h-11 w-full border border-border bg-bg-elevated px-3"
+              placeholder="Resy, Tock, phone…"
+              value={record?.reservationProvider ?? ""}
+              onChange={(event) =>
+                updateRestaurant(restaurantSlug, {
+                  reservationProvider: event.target.value || null,
+                })
+              }
+            />
+          </label>
+        </div>
+        <label className="mt-4 block font-sans text-sm text-ink">
+          Confirmation note
+          <input
+            type="text"
+            maxLength={280}
+            className="mt-2 min-h-11 w-full border border-border bg-bg-elevated px-3"
+            placeholder="Short private note only"
+            value={record?.reservationConfirmationNote ?? ""}
+            onChange={(event) =>
+              updateRestaurant(restaurantSlug, {
+                reservationConfirmationNote: event.target.value || null,
+              })
+            }
+          />
+        </label>
+      </div>
+
       {record ? (
         <button
           type="button"

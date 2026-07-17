@@ -13,6 +13,8 @@ Record issues that do not break functionality, accessibility, or testability.
 | `/map` | Search this area control | Desktop / mobile | Control is functional but visually plain | Elevate control hierarchy and motion without clutter | Low |
 | `/map` | Result list | Mobile | List/map toggle works; spacing and sticky header polish deferred | Align with Explore mobile patterns | Medium |
 | `/restaurants/[slug]` | Detail layout | Desktop / mobile | Neutral placeholder imagery; spacing temporary | Polish imagery and detail hierarchy later | Medium |
+| Shared | `ReservationButton` | Desktop / mobile | Compact vs full density and provider secondary line not finalized | Refine CTA hierarchy in polish pass without weakening truthful labels | Medium |
+| `/map` | Result row + sheet reserve actions | Desktop / mobile | Functional; spacing beside select control temporary | Align touch targets and density with Explore cards | Low |
 | Taxonomy hubs | Collection grids | Desktop / mobile | Shared shell density not finalized | Align with Explore polish | Low |
 
 ## Priority guide

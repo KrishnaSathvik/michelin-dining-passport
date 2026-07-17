@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Container } from "@/components/layout/Container";
 import { PassportHome } from "@/components/passport/PassportHome";
+import { getRestaurants } from "@/lib/data/restaurants";
 import { buildPageMetadata } from "@/lib/seo/metadata";
 
 export const metadata: Metadata = buildPageMetadata({
@@ -11,6 +12,7 @@ export const metadata: Metadata = buildPageMetadata({
 });
 
 export default function PassportPage() {
+  const restaurants = getRestaurants();
   return (
     <div className="border-b border-border">
       <Container className="py-10 sm:py-14">
@@ -25,7 +27,7 @@ export default function PassportPage() {
           accounts later.
         </p>
         <div className="mt-8">
-          <PassportHome />
+          <PassportHome restaurants={restaurants} />
         </div>
       </Container>
     </div>
