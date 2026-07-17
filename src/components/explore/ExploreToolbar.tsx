@@ -23,8 +23,8 @@ export function ExploreToolbar({
         : `${total} restaurant${total === 1 ? "" : "s"}`;
 
   return (
-    <div className="flex flex-col gap-4 border border-border bg-bg-elevated/50 p-4 sm:flex-row sm:items-end sm:justify-between">
-      <p className="font-sans text-sm text-ink-muted" aria-live="polite">
+    <div className="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
+      <p className="font-sans text-base text-ink-secondary" aria-live="polite">
         {rangeLabel}
       </p>
 
@@ -32,16 +32,16 @@ export function ExploreToolbar({
         <ExploreSortSelect query={query} />
 
         <div
-          className="inline-flex border border-border"
+          className="inline-flex overflow-hidden rounded-[var(--radius-md)] border border-border"
           role="group"
           aria-label="Result view"
         >
           <Link
             href={buildExploreHref({ ...query, view: "grid", page: 1 })}
-            className={`inline-flex min-h-11 items-center px-4 font-sans text-sm ${
+            className={`inline-flex min-h-11 items-center px-4 font-sans text-sm no-underline ${
               query.view === "grid"
-                ? "bg-forest text-bg-elevated"
-                : "bg-bg-elevated text-ink hover:bg-bg"
+                ? "bg-forest text-white"
+                : "bg-bg text-ink hover:bg-surface-soft"
             }`}
             aria-current={query.view === "grid" ? "page" : undefined}
           >
@@ -49,10 +49,10 @@ export function ExploreToolbar({
           </Link>
           <Link
             href={buildExploreHref({ ...query, view: "list", page: 1 })}
-            className={`inline-flex min-h-11 items-center px-4 font-sans text-sm ${
+            className={`inline-flex min-h-11 items-center px-4 font-sans text-sm no-underline ${
               query.view === "list"
-                ? "bg-forest text-bg-elevated"
-                : "bg-bg-elevated text-ink hover:bg-bg"
+                ? "bg-forest text-white"
+                : "bg-bg text-ink hover:bg-surface-soft"
             }`}
             aria-current={query.view === "list" ? "page" : undefined}
           >

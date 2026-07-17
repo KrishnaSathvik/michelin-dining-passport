@@ -340,7 +340,12 @@ export function getExploreFacets(
   return {
     stars: ([3, 2, 1] as const).map((value) => ({
       value,
-      label: value === 1 ? "1 star" : `${value} stars`,
+      label:
+        value === 1
+          ? "1 Michelin Star"
+          : value === 2
+            ? "2 Michelin Stars"
+            : "3 Michelin Stars",
       count: starCounts[value],
     })),
     states: [...stateMap.values()].sort((a, b) => a.label.localeCompare(b.label)),
@@ -380,7 +385,12 @@ export function getActiveFilterChips(
   if (query.stars !== null) {
     chips.push({
       key: "stars",
-      label: query.stars === 1 ? "1 star" : `${query.stars} stars`,
+      label:
+        query.stars === 1
+          ? "1 Michelin Star"
+          : query.stars === 2
+            ? "2 Michelin Stars"
+            : "3 Michelin Stars",
       href: buildExploreHref({ ...query, stars: null, page: 1 }),
     });
   }

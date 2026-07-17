@@ -18,13 +18,13 @@ export function ExploreActiveFilters({
   if (!exploreQueryHasFilters(query)) return null;
 
   return (
-    <div className="flex flex-col gap-3 border border-border bg-bg-elevated/70 p-4 sm:flex-row sm:items-center sm:justify-between">
+    <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
       <div className="flex flex-wrap gap-2" aria-label="Active filters">
         {chips.map((chip) => (
           <Link
             key={chip.key}
             href={chip.href}
-            className="inline-flex min-h-9 items-center gap-2 border border-border bg-bg px-3 font-sans text-sm text-ink transition-colors hover:border-burgundy hover:text-burgundy"
+            className="inline-flex min-h-9 items-center gap-2 rounded-full bg-forest px-3 font-sans text-sm text-white no-underline transition-opacity hover:opacity-90"
           >
             <span>{chip.label}</span>
             <span aria-hidden="true">×</span>
@@ -37,9 +37,9 @@ export function ExploreActiveFilters({
           sort: query.sort,
           view: query.view,
         })}
-        className="font-sans text-sm text-forest underline underline-offset-4"
+        className="font-sans text-sm text-ink-muted no-underline hover:text-ink"
       >
-        Clear all filters
+        Clear all
       </Link>
     </div>
   );

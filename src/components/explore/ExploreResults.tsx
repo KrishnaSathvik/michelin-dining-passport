@@ -20,7 +20,7 @@ export function ExploreResults({
 
   if (view === "list") {
     return (
-      <ul className="divide-y divide-border border border-border bg-bg-elevated/40 px-4 sm:px-5">
+      <ul className="divide-y divide-border rounded-[var(--radius-lg)] border border-border bg-bg px-4 sm:px-5">
         {restaurants.map((restaurant) => (
           <li key={restaurant.slug}>
             <RestaurantCompactCard
@@ -34,7 +34,7 @@ export function ExploreResults({
   }
 
   return (
-    <ul className="grid gap-5 sm:grid-cols-2 xl:grid-cols-3">
+    <ul className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
       {restaurants.map((restaurant) => (
         <li key={restaurant.slug}>
           <RestaurantDiscoveryCard
