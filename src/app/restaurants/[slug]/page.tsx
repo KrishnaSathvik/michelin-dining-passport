@@ -14,6 +14,7 @@ import { RestaurantMedia } from "@/components/restaurant/RestaurantMedia";
 import { RestaurantRelatedList } from "@/components/restaurant/RestaurantRelatedList";
 import { SaveRestaurantButton } from "@/components/restaurant/SaveRestaurantButton";
 import { StarMark } from "@/components/restaurant/StarMark";
+import { RestaurantGooglePlacesSection } from "@/components/google-places/RestaurantGooglePlacesSection";
 import { RestaurantPassportControls } from "@/components/passport/RestaurantPassportControls";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { siteConfig } from "@/config/site";
@@ -25,6 +26,7 @@ import {
   getRestaurants,
   getSourceMeta,
 } from "@/lib/data/restaurants";
+import { getApprovedGooglePlaceId } from "@/lib/google-places/place-ids";
 import { getRestaurantReservation } from "@/lib/reservations/data";
 import {
   getRestaurantReservationAction,
@@ -95,6 +97,7 @@ export default async function RestaurantPage({ params }: RestaurantPageProps) {
   const hasApprovedImage = Boolean(
     (restaurant as { heroImageUrl?: string | null }).heroImageUrl?.trim(),
   );
+  const googlePlaceId = getApprovedGooglePlaceId(restaurant.slug);
 
   const breadcrumbs = [
     { name: "Home", path: "/" },
@@ -248,6 +251,11 @@ export default async function RestaurantPage({ params }: RestaurantPageProps) {
         {mapRestaurant ? (
           <RestaurantLocationPreview restaurant={mapRestaurant} />
         ) : null}
+
+        <RestaurantGooglePlacesSection
+          restaurantSlug={restaurant.slug}
+          placeId={googlePlaceId}
+        />
 
         <RestaurantRelatedList
           title={`Also in ${restaurant.city}`}
