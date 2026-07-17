@@ -37,11 +37,16 @@ Committed JSON: [`data/restaurants.json`](./data/restaurants.json)
 - [UI/UX backlog](./docs/ui-ux-backlog.md)
 - [Passport metrics](./docs/passport-metrics.md)
 - [Map provider ADR](./docs/adr/0001-map-provider.md)
+- [Google Places architecture](./docs/google-places/architecture.md)
+- [Google Cloud setup](./docs/google-places/google-cloud-setup.md)
+- [Places cost model](./docs/google-places/cost-model.md)
+- [Places data policy](./docs/google-places/data-policy.md)
 
 ## Stack
 
 - Next.js (App Router) + TypeScript + Tailwind CSS
 - MapLibre GL for `/map`
+- Optional Google Places UI Kit enrichment on restaurant detail + selected map place (feature-flagged)
 - Supabase Auth + Postgres (personal data, RLS)
 - `src/` directory, import alias `@/*`
 
@@ -58,6 +63,8 @@ npm run supabase:seed:generate
 npm run supabase:start       # Docker required
 npm run dev
 ```
+
+Optional Google Places UI Kit: see [`docs/google-places/google-cloud-setup.md`](./docs/google-places/google-cloud-setup.md). With the flag disabled (default), discovery and MapLibre work without Google. Dev-only spike route: `/dev/google-places-spike`.
 
 ### Data scripts
 

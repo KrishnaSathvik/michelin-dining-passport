@@ -1,0 +1,41 @@
+/**
+ * Supported Places UI Kit CSS custom properties only.
+ * Brand bridge toward product tokens — do not hide Google attribution.
+ */
+
+.mdp-google-places {
+  --gmp-mat-color-surface: #ffffff;
+  --gmp-mat-color-on-surface: #121212;
+  --gmp-mat-color-on-surface-variant: #4a4a4a;
+  --gmp-mat-color-primary: #123b2f;
+  --gmp-mat-color-secondary-container: #f5f6f4;
+  --gmp-mat-color-on-secondary-container: #123b2f;
+  --gmp-mat-color-neutral-container: #f5f6f4;
+  --gmp-mat-color-on-neutral-container: #737373;
+  --gmp-mat-color-outline-decorative: #e5e7e4;
+  --gmp-mat-color-positive: #123b2f;
+  --gmp-mat-color-negative: #7a1f2b;
+  --gmp-mat-color-info: #123b2f;
+  --gmp-mat-font-family: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  color-scheme: light;
+}
+
+.mdp-gmp-place-details {
+  display: block;
+  width: 100%;
+  max-width: 400px;
+  border: 1px solid #e5e7e4;
+  border-radius: var(--radius-md, 0.5rem);
+  background: #ffffff;
+  overflow: hidden;
+}
+
+.mdp-gmp-place-details-compact {
+  display: block;
+  width: 100%;
+  max-width: 500px;
+  border: 1px solid #e5e7e4;
+  border-radius: var(--radius-md, 0.5rem);
+  background: #ffffff;
+  overflow: hidden;
+}
