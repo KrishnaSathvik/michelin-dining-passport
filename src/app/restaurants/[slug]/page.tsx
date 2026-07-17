@@ -10,6 +10,8 @@ import { PriceMark } from "@/components/restaurant/PriceMark";
 import { RestaurantImagePlaceholder } from "@/components/restaurant/RestaurantImagePlaceholder";
 import { RestaurantRelatedList } from "@/components/restaurant/RestaurantRelatedList";
 import { StarMark } from "@/components/restaurant/StarMark";
+import { PassportClientShell } from "@/components/passport/PassportClientShell";
+import { RestaurantPassportControls } from "@/components/passport/RestaurantPassportControls";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { siteConfig } from "@/config/site";
 import {
@@ -59,6 +61,7 @@ export default async function RestaurantPage({ params }: RestaurantPageProps) {
   const nearby = getNearbyRestaurants(restaurant);
   const related = getRelatedByCuisine(restaurant);
   const source = getSourceMeta();
+  const allRestaurants = getRestaurants();
   const breadcrumbs = [
     { name: "Home", path: "/" },
     { name: "Explore", path: "/explore" },
@@ -107,6 +110,14 @@ export default async function RestaurantPage({ params }: RestaurantPageProps) {
                   Official restaurant website
                 </ExternalTextLink>
               ) : null}
+            </div>
+
+            <div className="mt-8">
+              <PassportClientShell restaurants={allRestaurants}>
+                <RestaurantPassportControls
+                  restaurantSlug={restaurant.slug}
+                />
+              </PassportClientShell>
             </div>
 
             <dl className="mt-8 grid gap-4 border border-border bg-bg-elevated/50 p-5 sm:grid-cols-2">

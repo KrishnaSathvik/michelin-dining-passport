@@ -18,7 +18,7 @@ Feature-first build through Phases 2–7, then one consolidated UI/UX polish pas
 | 1 | Static homepage (approved direction) | **Complete** (`phase-1-homepage`) |
 | 2 | Explore + filters + result views | **Complete** (`phase-2-explore`) |
 | 3 | Restaurant + taxonomy pages + SEO | **Complete** (`phase-3-restaurant-pages`) |
-| 4 | Local Passport + personal tracking | Not started |
+| 4 | Local Passport + personal tracking | **Complete** (`phase-4-local-passport`) |
 | 5 | Geocode + `/map` | Not started |
 | 6 | Supabase auth + personal data | Not started |
 | 7 | Admin + roster import pipeline | Not started |

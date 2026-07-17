@@ -10,7 +10,7 @@
     "data:import": "python3 scripts/import_restaurants.py",
     "data:validate": "python3 scripts/validate_restaurants.py",
     "typecheck": "tsc --noEmit",
-    "test": "node --test scripts/test_explore.mjs"
+    "test": "node --test scripts/test_explore.mjs scripts/test_passport_metrics.mjs"
   },
   "dependencies": {
     "next": "16.2.10",
