@@ -10,17 +10,17 @@ type SearchHeroProps = {
 };
 
 const starQuickLinks = [
-  { label: "1 star", href: "/explore?q=1" },
-  { label: "2 stars", href: "/explore?q=2" },
-  { label: "3 stars", href: "/explore?q=3" },
+  { label: "1 star", href: "/explore?stars=1" },
+  { label: "2 stars", href: "/explore?stars=2" },
+  { label: "3 stars", href: "/explore?stars=3" },
 ] as const;
 
 const stateQuickLinks = [
-  { label: "California", href: "/explore?q=California" },
-  { label: "New York", href: "/explore?q=New%20York" },
-  { label: "Illinois", href: "/explore?q=Illinois" },
-  { label: "Florida", href: "/explore?q=Florida" },
-  { label: "Texas", href: "/explore?q=Texas" },
+  { label: "California", href: "/explore?state=california" },
+  { label: "New York", href: "/explore?state=new-york" },
+  { label: "Illinois", href: "/explore?state=illinois" },
+  { label: "Florida", href: "/explore?state=florida" },
+  { label: "Texas", href: "/explore?state=texas" },
 ] as const;
 
 export function SearchHero({ totals, regionCount }: SearchHeroProps) {

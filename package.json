@@ -9,7 +9,8 @@
     "lint": "eslint",
     "data:import": "python3 scripts/import_restaurants.py",
     "data:validate": "python3 scripts/validate_restaurants.py",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "test": "node --test scripts/test_explore.mjs"
   },
   "dependencies": {
     "next": "16.2.10",

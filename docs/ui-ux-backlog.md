@@ -7,7 +7,8 @@ Record issues that do not break functionality, accessibility, or testability.
 | Route | Component | Viewport | Problem | Suggested improvement | Priority |
 | --- | --- | --- | --- | --- | --- |
 | `/` | Homepage sections | Desktop / mobile | Spacing, imagery, and motion not finalized | Full visual audit in polish phase | Low |
-| `/explore` | Minimal explore stub | Desktop / mobile | Phase 1 stub only; full Explore is Phase 2 | Replace with complete directory UI | Medium |
+| `/explore` | Filter sidebar / drawer | Desktop / mobile | Functional filters; spacing and density not finalized | Polish filter ergonomics in UI pass | Medium |
+| `/explore` | Result grid / list | Desktop / mobile | Neutral placeholders and card density temporary | Refine card proportions and imagery later | Low |
 | `/map` | Map placeholder | Desktop / mobile | Placeholder until Phase 5 | Replace with real map experience | Medium |
 
 ## Priority guide
