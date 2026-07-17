@@ -25,7 +25,7 @@ Complexity: **L** low · **M** medium · **H** high · **VH** very high
 | `passport/page` + `PassportHome` | Passport hub | Metrics, sections, empty | Dashboard layout | **Done** — `stitch/passport/PassportPageView` (`PassportHome` deleted) | `personal_passport` + empty | H | `test_passport_*.mjs`, `e2e/passport.spec.ts` | **Phase 8 complete** |
 | `PassportRestaurantList` | Saved/visited/planned lists | Mode filtering | List chrome | **Done** — `PassportListPage` + mode cards (`PassportRestaurantList` deleted) | saved/visited/planned | M | e2e passport + reservations | **Phase 8 complete** |
 | `saved/page` / `visited/page` / **`planned/page`** | Personal lists | Data filters | Presentation | **Done** — Stitch list pages; `/planned` added (OD-07) | saved/visited/planned | M | e2e | **Phase 8 complete** |
-| `CollectionsManager` / `CollectionDetail` | Collections CRUD UI | Collection store ops | Presentation | New collection components | collections overview/detail | H | — | Phase 9 |
+| `CollectionsManager` / `CollectionDetail` | Collections CRUD UI | Collection store ops | Presentation | **Done** — `stitch/collections/*` (old presentation deleted) | collections overview/detail | H | `test_collections_phase9.mjs`, `e2e/collections.spec.ts` | **Phase 9 complete** |
 | `(auth)/*` + `AuthForm` | Auth flows | Server actions, redirects | Split shell / forms | `AuthShell` + forms | auth quartet | M | `e2e/auth.spec.ts`, `test_auth_redirect.mjs` | Phase 10 |
 | `(auth)/layout.tsx` | Auth aside | — | Current forest aside | Match Stitch atmospheric split | sign_in etc. | M | — | Phase 10 |
 | `AccountPanel` | Account mgmt | Session, deletion, sync actions | Settings IA chrome | Account aside + sections | `account_settings_profile` | H | auth e2e | Phase 10 |

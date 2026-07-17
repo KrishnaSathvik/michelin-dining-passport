@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
-import { Container } from "@/components/layout/Container";
-import { CollectionDetail } from "@/components/passport/CollectionDetail";
+import { CollectionDetailView } from "@/components/stitch/collections";
 import { getRestaurants } from "@/lib/data/restaurants";
 import { buildPageMetadata } from "@/lib/seo/metadata";
 
 type CollectionPageProps = {
   params: Promise<{ slug: string }>;
+  searchParams: Promise<Record<string, string | string[] | undefined>>;
 };
 
 export async function generateMetadata({
@@ -20,15 +20,29 @@ export async function generateMetadata({
   });
 }
 
-export default async function CollectionPage({ params }: CollectionPageProps) {
+/**
+ * Collection detail — full Stitch composition (Phase 9).
+ * Lookup remains by slug; Passport store is unchanged.
+ */
+export default async function CollectionPage({
+  params,
+  searchParams,
+}: CollectionPageProps) {
   const { slug } = await params;
+  const query = await searchParams;
   const restaurants = getRestaurants();
+  const proof =
+    process.env.NODE_ENV !== "production"
+      ? typeof query.proof === "string"
+        ? (query.proof as "loading" | "empty" | "missing")
+        : undefined
+      : undefined;
 
   return (
-    <div className="border-b border-border">
-      <Container className="py-10 sm:py-14">
-        <CollectionDetail slug={slug} restaurants={restaurants} />
-      </Container>
-    </div>
+    <CollectionDetailView
+      slug={slug}
+      restaurants={restaurants}
+      proof={proof}
+    />
   );
 }

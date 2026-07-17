@@ -71,7 +71,7 @@ Replacement: `src/components/stitch/map/*` (`MapWorkspaceView`) + preserved `Res
 | Path | Status | When safe |
 |---|---|---|
 | Legacy `RestaurantDiscoveryCard` | **Still imported** by taxonomy / dead home modules | Phase 9–11 |
-| Legacy `RestaurantCompactCard` | **Still imported** by Collections detail only | Phase 9 |
+| Legacy `RestaurantCompactCard` | **Still imported** by explore remnants only | Phase 12 |
 | Legacy `RestaurantEditorialCard` | Check importers | Delete when unused |
 | Legacy `RestaurantMedia` / `RestaurantImageFallback` / `StarMark` | **Still imported** by legacy cards | After Passport card migrations |
 | Legacy `ReservationButton` / `SaveRestaurantButton` | **Still imported** by legacy Passport cards | After Passport migrate |
@@ -92,9 +92,11 @@ Replacement: `src/components/stitch/map/*` (`MapWorkspaceView`) + preserved `Res
 | Old `PassportRestaurantList` | **Deleted** — replaced by `PassportListPage` + mode cards |
 | Old saved/visited page chrome | **Replaced** — Stitch list routes |
 | `/planned` | **Added** — view over existing `planned` flag (no schema change) |
-| Old `CollectionsManager` / `CollectionDetail` presentation | After Phase 9 |
+| Old `CollectionsManager` / `CollectionDetail` presentation | **Deleted** — replaced by `stitch/collections/*` |
 
 **Phase 8 Passport and personal-list visual migration is complete.**
+
+**Phase 9 Collections visual migration is complete.**
 
 Preserve `PassportProvider` and store modules.
 

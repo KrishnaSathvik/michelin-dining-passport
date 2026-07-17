@@ -135,15 +135,17 @@ Canonical visual conventions (**approved 2026-07-17**):
 | Field | Spec |
 |---|---|
 | **Stitch reference** | `collections_overview_create_dialog` |
+| **Composition** | **Done** — `stitch/collections/CollectionsPageView` → intro + Create → featured → search/sort → grid / empty |
 | **Preserve** | Collections CRUD in passport store / cloud sync |
-| **Unsupported** | Public collections toggle unless product supports it |
+| **Unsupported** | Public collections toggle, sharing (OD-11) |
 
 ### `/collections/[slug]`
 
 | Field | Spec |
 |---|---|
 | **Stitch reference** | `collection_detail_california_celebration_trip` |
-| **Unsupported** | Share unless implemented; invented progress “stars” beyond computed |
+| **Composition** | **Done** — `stitch/collections/CollectionDetailView` → breadcrumbs → title/actions → hero + progress → members |
+| **Unsupported** | Share; public/private labels; invented progress beyond computed member metrics |
 
 ---
 

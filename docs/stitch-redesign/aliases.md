@@ -70,7 +70,9 @@ New homepage location: `src/components/stitch/home/*` → `HomepageView`.
 | Legacy path | New replacement | Remaining importers | Delete by |
 |---|---|---|---|
 | `src/components/restaurant/RestaurantDiscoveryCard.tsx` | `stitch/restaurant/RestaurantDiscoveryCard` | Dead home modules / legacy explore remnants | Phase 12 |
-| `src/components/restaurant/RestaurantCompactCard.tsx` | `stitch/restaurant/RestaurantListRow` / passport cards | Collections detail only (Phase 9) | Phase 9 |
+| `src/components/restaurant/RestaurantCompactCard.tsx` | `stitch/restaurant/RestaurantListRow` / passport cards | Explore remnants only | Phase 12 |
+| `src/components/passport/CollectionsManager.tsx` | **Deleted** | `stitch/collections/CollectionsPageView` | Phase 9 done |
+| `src/components/passport/CollectionDetail.tsx` | **Deleted** | `stitch/collections/CollectionDetailView` | Phase 9 done |
 | `src/components/passport/PassportHome.tsx` | **Deleted** | `stitch/passport/PassportPageView` | Phase 8 done |
 | `src/components/passport/PassportRestaurantList.tsx` | **Deleted** | `stitch/passport/PassportListPage` | Phase 8 done |
 | `src/components/restaurant/RestaurantEditorialCard.tsx` | `stitch/restaurant/RestaurantEditorialCard` | Unused after Phase 4 homepage | Phase 7 cleanup if still unused |
