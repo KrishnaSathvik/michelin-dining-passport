@@ -99,7 +99,7 @@ test.describe("Phase 5.5 reservation actions", () => {
     await page.goto("/restaurants/benu-san-francisco-ca");
     await page.getByRole("button", { name: "Planned" }).click();
     await page.goto("/passport");
-    await expect(page.getByRole("heading", { name: "Planned reservations" })).toBeVisible();
+    await expect(page.getByRole("heading", { name: "Planned restaurants" })).toBeVisible();
     const planned = page.locator("article").filter({ hasText: "Benu" }).first();
     await expect(planned).toBeVisible();
     await expect(

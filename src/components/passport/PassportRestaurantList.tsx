@@ -38,7 +38,7 @@ export function PassportRestaurantList({
   emptyTitle,
   emptyBody,
 }: PassportRestaurantListProps) {
-  const { ready, store } = usePassport();
+  const { ready, store, getRecord } = usePassport();
 
   if (!ready) {
     return <p className="font-sans text-sm text-ink-muted">Loading…</p>;
@@ -70,32 +70,58 @@ export function PassportRestaurantList({
 
   if (items.length === 0) {
     return (
-      <div className="border border-border px-5 py-10 text-center">
-        <h2 className="font-display text-2xl text-ink">{emptyTitle}</h2>
-        <p className="mx-auto mt-3 max-w-lg font-sans text-sm text-ink-muted">
+      <div className="rounded-[var(--radius-lg)] border border-border px-6 py-12 text-center">
+        <h2 className="font-display text-3xl text-ink">{emptyTitle}</h2>
+        <p className="mx-auto mt-3 max-w-lg font-sans text-sm leading-relaxed text-ink-muted">
           {emptyBody}
         </p>
-        <Link
-          href="/explore"
-          className="mt-6 inline-flex min-h-11 items-center bg-forest px-5 font-sans text-sm font-medium text-bg-elevated"
-        >
-          Explore restaurants
-        </Link>
+        <div className="mt-8 flex flex-wrap justify-center gap-3">
+          <Link
+            href="/explore"
+            className="inline-flex min-h-11 items-center rounded-[var(--radius-md)] bg-forest px-5 font-sans text-sm font-medium text-white no-underline hover:bg-forest-deep"
+          >
+            Explore restaurants
+          </Link>
+          <Link
+            href="/map"
+            className="inline-flex min-h-11 items-center rounded-[var(--radius-md)] border border-border px-5 font-sans text-sm text-ink no-underline"
+          >
+            View map
+          </Link>
+        </div>
       </div>
     );
   }
 
   return (
-    <ul className="divide-y divide-border border border-border bg-bg-elevated/40 px-4 sm:px-5">
-      {items.map((restaurant) => (
-        <li key={restaurant.slug}>
-          <RestaurantCompactCard
-            restaurant={restaurant}
-            surface={surface}
-            emphasizeReservation={mode === "planned"}
-          />
-        </li>
-      ))}
+    <ul className="divide-y divide-border rounded-[var(--radius-lg)] border border-border bg-bg px-4 sm:px-5">
+      {items.map((restaurant) => {
+        const record = getRecord(restaurant.slug);
+        const statusBits = [
+          mode === "visited" && record?.visitDate
+            ? `Visited ${record.visitDate}`
+            : null,
+          mode === "planned" && record?.reservationPlannedFor
+            ? `Planned for ${record.reservationPlannedFor}`
+            : null,
+          record?.favorite ? "Favorite" : null,
+        ].filter(Boolean);
+
+        return (
+          <li key={restaurant.slug} className="py-1">
+            {statusBits.length > 0 ? (
+              <p className="pt-4 font-sans text-xs uppercase tracking-[0.14em] text-ink-muted">
+                {statusBits.join(" · ")}
+              </p>
+            ) : null}
+            <RestaurantCompactCard
+              restaurant={restaurant}
+              surface={surface}
+              emphasizeReservation={mode === "planned"}
+            />
+          </li>
+        );
+      })}
     </ul>
   );
 }

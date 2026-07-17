@@ -7,7 +7,7 @@ import { buildPageMetadata } from "@/lib/seo/metadata";
 
 export const metadata: Metadata = buildPageMetadata({
   title: "Saved restaurants",
-  description: "Restaurants saved on this device.",
+  description: "Restaurants saved in your dining passport.",
   path: "/saved",
 });
 
@@ -17,14 +17,15 @@ export default function SavedPage() {
   return (
     <div className="border-b border-border">
       <Container className="py-10 sm:py-14">
-        <p className="font-sans text-xs uppercase tracking-[0.18em] text-burgundy">
+        <p className="font-sans text-xs uppercase tracking-[0.18em] text-ink-muted">
           Personal
         </p>
         <h1 className="mt-3 font-display text-4xl text-ink sm:text-5xl">
           Saved
         </h1>
         <p className="mt-4 max-w-2xl font-sans text-base text-ink-muted">
-          Restaurants marked saved on this device.
+          Restaurants you want to return to — with reserve and passport actions
+          ready.
         </p>
         <div className="mt-6">
           <DeviceSaveNotice />
@@ -34,7 +35,7 @@ export default function SavedPage() {
             restaurants={restaurants}
             mode="saved"
             emptyTitle="No saved restaurants yet"
-            emptyBody="Open a restaurant page and tap Saved to keep it here."
+            emptyBody="Open Explore or Map and save a restaurant to start your shortlist."
           />
         </div>
       </Container>
