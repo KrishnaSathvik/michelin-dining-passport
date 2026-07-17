@@ -8,16 +8,16 @@ export function SiteFooter() {
   const source = getSourceMeta();
 
   return (
-    <footer className="border-t border-border bg-bg-deep">
+    <footer className="border-t border-border bg-surface-soft">
       <Container className="section-space grid gap-10 md:grid-cols-[1.4fr_1fr]">
         <div>
-          <p className="font-display text-2xl text-ink">
+          <p className="font-display text-2xl text-ink sm:text-3xl">
             {siteConfig.productName}
           </p>
-          <p className="mt-4 max-w-lg font-sans text-sm leading-relaxed text-ink-muted">
+          <p className="mt-4 max-w-lg font-sans text-base leading-relaxed text-ink-secondary">
             {siteConfig.independenceDisclaimer}
           </p>
-          <p className="mt-3 max-w-lg font-sans text-sm leading-relaxed text-ink-muted">
+          <p className="mt-3 max-w-lg font-sans text-base leading-relaxed text-ink-muted">
             {siteConfig.coverageNote}
           </p>
           <p className="mt-3 font-sans text-sm text-ink-muted">
@@ -26,42 +26,51 @@ export function SiteFooter() {
           </p>
         </div>
 
-        <div className="grid grid-cols-2 gap-6 font-sans text-sm">
+        <div className="grid grid-cols-2 gap-6 font-sans text-base">
           <div>
-            <p className="text-xs uppercase tracking-[0.16em] text-burgundy">
+            <p className="text-xs uppercase tracking-[0.16em] text-ink-muted">
               Browse
             </p>
-            <ul className="mt-3 space-y-2 text-ink-muted">
+            <ul className="mt-3 space-y-2.5 text-ink-secondary">
               <li>
-                <Link href="/explore" className="hover:text-ink">
+                <Link href="/explore" className="no-underline hover:text-ink">
                   Explore
                 </Link>
               </li>
               <li>
-                <Link href="/about-michelin-stars" className="hover:text-ink">
+                <Link
+                  href="/about-michelin-stars"
+                  className="no-underline hover:text-ink"
+                >
                   Michelin Stars Explained
                 </Link>
               </li>
               <li>
-                <Link href="/map" className="hover:text-ink">
+                <Link href="/map" className="no-underline hover:text-ink">
                   Map
                 </Link>
               </li>
             </ul>
           </div>
           <div>
-            <p className="text-xs uppercase tracking-[0.16em] text-burgundy">
-              Policies
+            <p className="text-xs uppercase tracking-[0.16em] text-ink-muted">
+              Account
             </p>
-            <ul className="mt-3 space-y-2 text-ink-muted">
+            <ul className="mt-3 space-y-2.5 text-ink-secondary">
               <li>
-                <span>Privacy (placeholder)</span>
+                <Link href="/passport" className="no-underline hover:text-ink">
+                  Passport
+                </Link>
               </li>
               <li>
-                <span>Terms (placeholder)</span>
+                <Link href="/account" className="no-underline hover:text-ink">
+                  Account
+                </Link>
               </li>
               <li>
-                <span>Correction policy (placeholder)</span>
+                <Link href="/login" className="no-underline hover:text-ink">
+                  Sign in
+                </Link>
               </li>
             </ul>
           </div>

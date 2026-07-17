@@ -25,15 +25,15 @@ export function Section({
       <Container>
         <header className="mb-10 max-w-2xl">
           {eyebrow ? (
-            <p className="font-sans text-xs uppercase tracking-[0.18em] text-burgundy">
+            <p className="font-sans text-xs uppercase tracking-[0.18em] text-ink-muted">
               {eyebrow}
             </p>
           ) : null}
-          <TitleTag className="mt-3 font-display text-3xl leading-tight text-ink sm:text-4xl">
+          <TitleTag className="mt-3 font-display text-3xl leading-tight text-ink sm:text-[2.5rem]">
             {title}
           </TitleTag>
           {dek ? (
-            <p className="mt-4 font-sans text-base leading-relaxed text-ink-muted">
+            <p className="mt-4 font-sans text-base leading-relaxed text-ink-secondary sm:text-lg">
               {dek}
             </p>
           ) : null}

@@ -4,47 +4,47 @@ import { Container } from "./Container";
 
 export function SiteHeader() {
   return (
-    <header className="border-b border-border/80 bg-bg/80 backdrop-blur-[2px]">
-      <Container className="flex items-center justify-between gap-4 py-4 sm:py-5">
+    <header className="sticky top-0 z-40 border-b border-border bg-bg">
+      <Container className="flex min-h-16 items-center justify-between gap-4 py-3 sm:min-h-[4.5rem] sm:py-4">
         <Link
           href="/"
-          className="font-display text-xl tracking-tight text-ink sm:text-2xl"
+          className="font-display text-[1.35rem] tracking-tight text-ink no-underline sm:text-2xl"
         >
           {siteConfig.productName}
         </Link>
 
-        <nav aria-label="Primary" className="hidden items-center gap-6 lg:flex">
+        <nav aria-label="Primary" className="hidden items-center gap-7 lg:flex">
           {siteConfig.nav.map((item) => (
             <Link
               key={item.href}
               href={item.href}
-              className="font-sans text-sm text-ink-muted transition-colors hover:text-ink"
+              className="font-sans text-[15px] text-ink-secondary no-underline transition-colors hover:text-ink"
             >
               {item.label}
             </Link>
           ))}
           <Link
             href="/explore"
-            className="font-sans text-sm text-forest underline decoration-border underline-offset-4 hover:decoration-forest"
+            className="rounded-[var(--radius-md)] bg-forest px-4 py-2.5 font-sans text-[15px] font-medium text-white no-underline transition-colors hover:bg-forest-deep"
           >
             Search
           </Link>
         </nav>
 
         <details className="relative lg:hidden">
-          <summary className="cursor-pointer list-none border border-border px-3 py-2 font-sans text-sm text-ink [&::-webkit-details-marker]:hidden">
+          <summary className="flex min-h-11 min-w-11 cursor-pointer list-none items-center justify-center rounded-[var(--radius-md)] border border-border px-3 font-sans text-[15px] text-ink [&::-webkit-details-marker]:hidden">
             Menu
           </summary>
           <nav
             aria-label="Mobile primary"
-            className="absolute right-0 z-20 mt-2 min-w-[14rem] border border-border bg-bg-elevated p-3 shadow-sm"
+            className="absolute right-0 z-20 mt-2 min-w-[16rem] rounded-[var(--radius-md)] border border-border bg-bg p-3 shadow-[var(--shadow-float)]"
           >
-            <ul className="flex flex-col gap-2">
+            <ul className="flex flex-col gap-1">
               {siteConfig.nav.map((item) => (
                 <li key={item.href}>
                   <Link
                     href={item.href}
-                    className="block px-2 py-2 font-sans text-sm text-ink"
+                    className="block rounded-[var(--radius-sm)] px-3 py-3 font-sans text-base text-ink no-underline hover:bg-surface-soft"
                   >
                     {item.label}
                   </Link>
@@ -53,7 +53,7 @@ export function SiteHeader() {
               <li>
                 <Link
                   href="/explore"
-                  className="block px-2 py-2 font-sans text-sm text-forest"
+                  className="mt-1 block rounded-[var(--radius-md)] bg-forest px-3 py-3 text-center font-sans text-base font-medium text-white no-underline hover:bg-forest-deep"
                 >
                   Search
                 </Link>

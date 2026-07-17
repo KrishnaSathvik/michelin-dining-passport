@@ -1,4 +1,8 @@
 export const siteConfig = {
+  /**
+   * Temporary independent product name (plain text only).
+   * Do not add Michelin logo, flower mark, or official wordmark styling.
+   */
   productName: "Michelin Dining Passport",
   tagline: "An independent atlas of Michelin-starred dining in the United States.",
   description:
