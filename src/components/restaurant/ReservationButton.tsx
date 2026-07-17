@@ -32,15 +32,15 @@ export function ReservationButton({
 
   const base =
     variant === "full"
-      ? "inline-flex min-h-11 flex-col justify-center border border-forest bg-forest px-4 py-2 text-bg-elevated transition-colors hover:bg-forest-deep focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-forest"
-      : "inline-flex min-h-11 min-w-11 flex-col justify-center border border-border px-3 py-1.5 text-ink transition-colors hover:border-forest hover:text-forest focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-forest";
+      ? "inline-flex min-h-11 flex-col items-center justify-center border border-forest bg-forest px-5 py-2.5 text-white transition-colors hover:bg-forest-deep focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-forest"
+      : "inline-flex min-h-11 min-w-11 flex-col items-center justify-center border border-border bg-bg px-4 py-2 text-ink transition-colors hover:border-forest hover:text-forest focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-forest";
 
   return (
     <a
       href={action.href}
       target="_blank"
       rel="noopener noreferrer"
-      className={`${base} ${className}`}
+      className={`${base} no-underline ${className}`}
       title={`${action.label}${action.providerLabel ? ` — ${action.providerLabel}` : ""}`}
       onClick={(event) => {
         event.stopPropagation();
@@ -55,7 +55,7 @@ export function ReservationButton({
         });
       }}
     >
-      <span className="font-sans text-sm font-medium leading-tight">
+      <span className="font-sans text-[15px] font-medium leading-tight">
         {action.label}
         <span aria-hidden="true"> ↗</span>
         <span className="sr-only"> (opens in a new tab)</span>
@@ -63,7 +63,7 @@ export function ReservationButton({
       {showProvider && action.providerLabel ? (
         <span
           className={`font-sans text-xs leading-tight ${
-            variant === "full" ? "text-bg-elevated/85" : "text-ink-muted"
+            variant === "full" ? "text-white/85" : "text-ink-muted"
           }`}
         >
           {action.providerLabel}

@@ -2,11 +2,11 @@ import Link from "next/link";
 import type { Restaurant } from "@/lib/data/types";
 import { getRestaurantReservation } from "@/lib/reservations/data";
 import { CuisineLabel } from "./CuisineLabel";
-import { ExternalTextLink } from "./ExternalTextLink";
 import { LocationLine } from "./LocationLine";
 import { PriceMark } from "./PriceMark";
 import { ReservationButton } from "./ReservationButton";
-import { RestaurantImagePlaceholder } from "./RestaurantImagePlaceholder";
+import { RestaurantMedia } from "./RestaurantMedia";
+import { SaveRestaurantButton } from "./SaveRestaurantButton";
 import { StarMark } from "./StarMark";
 
 type RestaurantEditorialCardProps = {
@@ -19,60 +19,62 @@ export function RestaurantEditorialCard({
   const reservation = getRestaurantReservation(restaurant.slug);
 
   return (
-    <article className="grid gap-6 lg:grid-cols-[minmax(0,1.35fr)_minmax(0,1fr)] lg:gap-10">
-      <Link
-        href={`/restaurants/${restaurant.slug}`}
-        className="block focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-forest"
-      >
-        <RestaurantImagePlaceholder restaurant={restaurant} priorityVisual />
-      </Link>
+    <article className="grid gap-6 lg:grid-cols-[minmax(0,1.35fr)_minmax(0,1fr)] lg:items-center lg:gap-12">
+      <div className="relative">
+        <Link
+          href={`/restaurants/${restaurant.slug}`}
+          className="block focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-forest"
+        >
+          <RestaurantMedia
+            restaurant={restaurant}
+            priorityVisual
+            className="min-h-[20rem] sm:min-h-[22rem] lg:min-h-[24rem] [&_>div]:aspect-auto [&_>div]:h-full [&_>div]:min-h-[20rem] lg:[&_>div]:min-h-[24rem]"
+          />
+        </Link>
+        <div className="absolute right-3 top-3 z-10">
+          <SaveRestaurantButton restaurantSlug={restaurant.slug} overlay />
+        </div>
+      </div>
 
-      <div className="flex flex-col justify-center border-t border-border pt-6 lg:border-t-0 lg:border-l lg:pl-10 lg:pt-0">
-        <p className="font-sans text-xs uppercase tracking-[0.18em] text-burgundy">
+      <div className="flex flex-col justify-center">
+        <p className="font-sans text-xs uppercase tracking-[0.18em] text-ink-muted">
           Featured
         </p>
-        <h3 className="mt-3 font-display text-3xl leading-tight text-ink sm:text-4xl">
+        <h3 className="mt-3 font-display text-3xl leading-tight text-ink sm:text-4xl lg:text-5xl">
           <Link
             href={`/restaurants/${restaurant.slug}`}
-            className="hover:text-forest"
+            className="no-underline hover:text-forest"
           >
             {restaurant.name}
           </Link>
         </h3>
 
-        <div className="mt-4 flex flex-wrap items-center gap-x-4 gap-y-2">
+        <div className="mt-5 flex flex-wrap items-center gap-x-4 gap-y-2">
           <StarMark stars={restaurant.stars} size="lg" />
           <CuisineLabel cuisine={restaurant.cuisine} />
+        </div>
+        <div className="mt-3 flex flex-wrap items-center gap-x-3 gap-y-1 text-ink-secondary">
           <LocationLine
             city={restaurant.city}
             state={restaurant.state}
             stateCode={restaurant.stateCode}
           />
+          <span className="text-border" aria-hidden="true">
+            ·
+          </span>
           <PriceMark price={restaurant.price} />
         </div>
 
-        <p className="mt-5 max-w-md font-sans text-sm leading-relaxed text-ink-muted">
-          Factual listing from the independent 2026 roster — cuisine, distinction,
-          location, and source links only.
-        </p>
-
-        <div className="mt-6 flex flex-wrap items-end gap-x-5 gap-y-2 font-sans text-sm">
+        <div className="mt-8 flex flex-wrap items-center gap-3">
           <ReservationButton
             restaurant={restaurant}
             reservation={reservation}
             surface="homepage"
             variant="full"
+            showProvider={false}
+            className="rounded-[var(--radius-md)]"
           />
-          <ExternalTextLink href={restaurant.michelinGuideUrl}>
-            Michelin Guide listing
-          </ExternalTextLink>
-          {restaurant.website ? (
-            <ExternalTextLink href={restaurant.website}>
-              Restaurant website
-            </ExternalTextLink>
-          ) : (
-            <span className="text-ink-muted">Website unavailable</span>
-          )}
+          <SaveRestaurantButton restaurantSlug={restaurant.slug} />
         </div>
       </div>
     </article>

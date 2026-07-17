@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { Container } from "@/components/layout/Container";
 import { RestaurantMap } from "@/components/map/RestaurantMap";
-import { PassportClientShell } from "@/components/passport/PassportClientShell";
 import { getExploreFacets } from "@/lib/data/explore";
 import { getMapRestaurants } from "@/lib/data/geocodes";
 import { getRestaurants } from "@/lib/data/restaurants";
@@ -40,22 +39,20 @@ export default async function MapPage({ searchParams }: MapPageProps) {
         </p>
 
         <div className="mt-6">
-          <PassportClientShell restaurants={allRestaurants}>
-            <RestaurantMap
-              restaurants={restaurants}
-              initialQuery={params}
-              facetOptions={{
-                states: facets.states.map((state) => ({
-                  value: state.value,
-                  label: state.label,
-                })),
-                cuisines: facets.cuisines.map((cuisine) => ({
-                  value: cuisine.value,
-                  label: cuisine.label,
-                })),
-              }}
-            />
-          </PassportClientShell>
+          <RestaurantMap
+            restaurants={restaurants}
+            initialQuery={params}
+            facetOptions={{
+              states: facets.states.map((state) => ({
+                value: state.value,
+                label: state.label,
+              })),
+              cuisines: facets.cuisines.map((cuisine) => ({
+                value: cuisine.value,
+                label: cuisine.label,
+              })),
+            }}
+          />
         </div>
       </Container>
     </div>

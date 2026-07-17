@@ -8,10 +8,9 @@ import { ExternalTextLink } from "@/components/restaurant/ExternalTextLink";
 import { LocationLine } from "@/components/restaurant/LocationLine";
 import { PriceMark } from "@/components/restaurant/PriceMark";
 import { ReservationButton } from "@/components/restaurant/ReservationButton";
-import { RestaurantImagePlaceholder } from "@/components/restaurant/RestaurantImagePlaceholder";
+import { RestaurantMedia } from "@/components/restaurant/RestaurantMedia";
 import { RestaurantRelatedList } from "@/components/restaurant/RestaurantRelatedList";
 import { StarMark } from "@/components/restaurant/StarMark";
-import { PassportClientShell } from "@/components/passport/PassportClientShell";
 import { RestaurantPassportControls } from "@/components/passport/RestaurantPassportControls";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { siteConfig } from "@/config/site";
@@ -68,7 +67,6 @@ export default async function RestaurantPage({ params }: RestaurantPageProps) {
   const nearby = getNearbyRestaurants(restaurant);
   const related = getRelatedByCuisine(restaurant);
   const source = getSourceMeta();
-  const allRestaurants = getRestaurants();
   const reservation = getRestaurantReservation(restaurant.slug);
   const reservationAction = getRestaurantReservationAction(
     restaurant,
@@ -147,11 +145,7 @@ export default async function RestaurantPage({ params }: RestaurantPageProps) {
             </div>
 
             <div className="mt-8">
-              <PassportClientShell restaurants={allRestaurants}>
-                <RestaurantPassportControls
-                  restaurantSlug={restaurant.slug}
-                />
-              </PassportClientShell>
+              <RestaurantPassportControls restaurantSlug={restaurant.slug} />
             </div>
 
             <dl className="mt-8 grid gap-4 border border-border bg-bg-elevated/50 p-5 sm:grid-cols-2">
@@ -213,14 +207,14 @@ export default async function RestaurantPage({ params }: RestaurantPageProps) {
           </div>
 
           <div>
-            <RestaurantImagePlaceholder
+            <RestaurantMedia
               restaurant={restaurant}
+              priorityVisual
               className="aspect-[4/3] w-full"
             />
             <p className="mt-3 font-sans text-xs leading-relaxed text-ink-muted">
-              Neutral image placeholder. Licensed photography will be added only
-              when usage rights are confirmed. This platform does not ingest
-              Michelin Guide photography.
+              Designed fallback until an approved restaurant photograph is
+              available. This platform does not ingest Michelin Guide photography.
             </p>
           </div>
         </div>

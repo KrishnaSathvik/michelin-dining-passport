@@ -3,11 +3,11 @@ import type { Restaurant } from "@/lib/data/types";
 import { getRestaurantReservation } from "@/lib/reservations/data";
 import type { ReservationSurface } from "@/lib/reservations/types";
 import { CuisineLabel } from "./CuisineLabel";
-import { ExternalTextLink } from "./ExternalTextLink";
 import { LocationLine } from "./LocationLine";
 import { PriceMark } from "./PriceMark";
 import { ReservationButton } from "./ReservationButton";
-import { RestaurantImagePlaceholder } from "./RestaurantImagePlaceholder";
+import { RestaurantMedia } from "./RestaurantMedia";
+import { SaveRestaurantButton } from "./SaveRestaurantButton";
 import { StarMark } from "./StarMark";
 
 type RestaurantDiscoveryCardProps = {
@@ -22,49 +22,50 @@ export function RestaurantDiscoveryCard({
   const reservation = getRestaurantReservation(restaurant.slug);
 
   return (
-    <article className="flex h-full flex-col border border-border bg-bg-elevated/60">
-      <Link
-        href={`/restaurants/${restaurant.slug}`}
-        className="block focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-forest"
-      >
-        <RestaurantImagePlaceholder restaurant={restaurant} />
-      </Link>
-      <div className="flex flex-1 flex-col gap-3 p-4 sm:p-5">
-        <h3 className="font-display text-2xl leading-tight text-ink">
+    <article className="group flex h-full flex-col overflow-hidden rounded-[var(--radius-lg)] bg-bg">
+      <div className="relative">
+        <Link
+          href={`/restaurants/${restaurant.slug}`}
+          className="block focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-forest"
+        >
+          <RestaurantMedia restaurant={restaurant} />
+        </Link>
+        <div className="absolute right-3 top-3 z-10">
+          <SaveRestaurantButton restaurantSlug={restaurant.slug} overlay />
+        </div>
+      </div>
+
+      <div className="flex flex-1 flex-col gap-2.5 px-1 pb-1 pt-4 sm:px-0">
+        <StarMark stars={restaurant.stars} size="sm" />
+        <h3 className="font-display text-xl leading-tight text-ink sm:text-[1.35rem]">
           <Link
             href={`/restaurants/${restaurant.slug}`}
-            className="hover:text-forest"
+            className="no-underline hover:text-forest"
           >
             {restaurant.name}
           </Link>
         </h3>
-        <div className="flex flex-wrap items-center gap-x-3 gap-y-1">
-          <StarMark stars={restaurant.stars} size="sm" />
-          <CuisineLabel cuisine={restaurant.cuisine} />
-        </div>
-        <div className="flex flex-wrap items-center gap-x-3 gap-y-1">
+        <CuisineLabel cuisine={restaurant.cuisine} />
+        <div className="flex flex-wrap items-center gap-x-2 gap-y-1 text-ink-secondary">
           <LocationLine
             city={restaurant.city}
             state={restaurant.state}
             stateCode={restaurant.stateCode}
           />
+          <span className="text-border" aria-hidden="true">
+            ·
+          </span>
           <PriceMark price={restaurant.price} />
         </div>
-        <div className="mt-auto flex flex-wrap items-end gap-x-4 gap-y-2 pt-2 font-sans text-sm">
+        <div className="mt-auto pt-3">
           <ReservationButton
             restaurant={restaurant}
             reservation={reservation}
             surface={surface}
-            variant="compact"
+            variant="full"
+            showProvider={false}
+            className="w-full rounded-[var(--radius-md)] text-center"
           />
-          <ExternalTextLink href={restaurant.michelinGuideUrl}>
-            Guide listing
-          </ExternalTextLink>
-          {restaurant.website ? (
-            <ExternalTextLink href={restaurant.website}>
-              Website
-            </ExternalTextLink>
-          ) : null}
         </div>
       </div>
     </article>
