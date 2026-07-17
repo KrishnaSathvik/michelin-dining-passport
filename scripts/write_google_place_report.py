@@ -26,11 +26,31 @@ def main() -> int:
         matches = json.loads(MATCHES_PATH.read_text(encoding="utf-8")).get("matches") or []
     by_slug = {row["restaurantSlug"]: row for row in matches}
     counts = Counter(row.get("status") for row in matches)
+    approved = [
+        row
+        for row in matches
+        if row.get("status") in {"matched", "manually_approved"} and row.get("placeId")
+    ]
+    enrichment_pct = (100.0 * len(approved) / len(restaurants)) if restaurants else 0.0
+
+    place_id_owners: dict[str, list[str]] = {}
+    for row in approved:
+        place_id_owners.setdefault(str(row["placeId"]), []).append(row["restaurantSlug"])
+    duplicate_place_ids = {
+        place_id: slugs for place_id, slugs in place_id_owners.items() if len(slugs) > 1
+    }
 
     by_addr: dict[str, list[str]] = {}
     for row in restaurants:
         by_addr.setdefault(normalize(row["address"]), []).append(row["slug"])
     shared = [slugs for slugs in by_addr.values() if len(slugs) > 1]
+
+    three_star = [row for row in restaurants if row.get("stars") == 3]
+    three_star_ok = all(
+        (by_slug.get(row["slug"]) or {}).get("status")
+        in {"matched", "manually_approved"}
+        for row in three_star
+    )
 
     lines = [
         "# Google Place ID matching report",
@@ -46,6 +66,9 @@ def main() -> int:
         f"- needs_review: **{counts.get('needs_review', 0)}**",
         f"- rejected: **{counts.get('rejected', 0)}**",
         f"- no_match: **{counts.get('no_match', 0)}**",
+        f"- Enrichment coverage (approved Place ID): **{enrichment_pct:.1f}%** ({len(approved)}/{len(restaurants)})",
+        f"- Duplicate approved Place IDs: **{len(duplicate_place_ids)}**",
+        f"- All 3-star restaurants approved: **{'yes' if three_star_ok else 'no'}** ({len(three_star)})",
         "",
         "## Shared-address sibling groups",
         "",
@@ -59,8 +82,18 @@ def main() -> int:
         )
         lines.append(f"- `{statuses}`")
 
+    if duplicate_place_ids:
+        lines.extend(["", "## Duplicate Place ID conflicts", ""])
+        for place_id, slugs in sorted(duplicate_place_ids.items()):
+            lines.append(f"- `{place_id}` → {', '.join(slugs)}")
+
     lines.extend(
         [
+            "",
+            "## Unresolved limitations",
+            "",
+            "- Server-side matching requires an IP-allowlisted matching API key.",
+            "- Prefer verified `no_match` over forcing weak Place IDs when confidence is insufficient.",
             "",
             "## Policy",
             "",

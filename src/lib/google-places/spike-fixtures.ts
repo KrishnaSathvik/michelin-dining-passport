@@ -1,6 +1,6 @@
 /**
  * Five-restaurant Places UI Kit technical spike fixtures.
- * Provisional Place IDs for local verification only — GP2 matching replaces these.
+ * Place IDs synced from reviewed `data/google-place-ids.json` where applicable.
  */
 
 export type SpikeScenario =
@@ -15,7 +15,7 @@ export type SpikeFixture = {
   label: string;
   scenario: SpikeScenario;
   scenarioNote: string;
-  /** Null simulates rejected / no_match. */
+  /** Null simulates rejected / no_match fallback UI. */
   placeId: string | null;
 };
 
@@ -33,7 +33,7 @@ export const GOOGLE_PLACES_SPIKE_FIXTURES: SpikeFixture[] = [
     scenario: "limited_photos",
     scenarioNote:
       "Smaller-market restaurant relative to Alinea — useful for thinner media coverage checks.",
-    placeId: "ChIJ8c6xXQ0E9YgR5-373N6fF4s",
+    placeId: "ChIJ00zCHiAH9YgR3l-kmURAKrM",
   },
   {
     restaurantSlug: "sushi-nakazawa-new-york-new-york-ny",
@@ -41,7 +41,7 @@ export const GOOGLE_PLACES_SPIKE_FIXTURES: SpikeFixture[] = [
     scenario: "similar_name_ambiguity",
     scenarioNote:
       "Shares a brand name with Sushi Nakazawa Washington DC — name-alone matching is unsafe.",
-    placeId: "ChIJ6z1l1y5YwokR6W_l8aK_g2I",
+    placeId: "ChIJsw80F5NZwokRcDtxajLLOeA",
   },
   {
     restaurantSlug: "crown-shy-new-york-ny",
@@ -49,13 +49,14 @@ export const GOOGLE_PLACES_SPIKE_FIXTURES: SpikeFixture[] = [
     scenario: "shared_address_sibling",
     scenarioNote:
       "Shares 70 Pine St with Saga — must remain distinct from the sibling Place ID.",
-    placeId: "ChIJyUuE1otYwokR-j9xV7lB03A",
+    placeId: "ChIJ__9LNBZawokREnkOiVx7ydc",
   },
   {
     restaurantSlug: "saga-new-york-ny",
-    label: "Saga (no Place ID)",
+    label: "Fallback demo (no Place ID mounted)",
     scenario: "no_confident_match",
-    scenarioNote: "Spike stand-in for missing / rejected Google match.",
+    scenarioNote:
+      "Spike-only unavailable fallback demo. Roster Place ID for Saga is reviewed separately; this fixture forces null to exercise the quiet fallback UI.",
     placeId: null,
   },
 ];
