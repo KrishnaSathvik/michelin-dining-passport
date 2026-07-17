@@ -6,10 +6,10 @@ Complexity: **L** low · **M** medium · **H** high · **VH** very high
 
 | Current component or page | Current responsibility | Logic to preserve | Visual structure to discard | New component or page | Stitch design reference | Migration complexity | Test coverage affected | Deletion point |
 |---|---|---|---|---|---|---|---|---|
-| `src/app/page.tsx` + `home/*` | Homepage sections | Totals, featured selection | Multi-section utility homepage | New home composition | `explore_feed` | H | Visual/e2e if any | After Phase 4 ships |
-| `SearchHero` | Hero + search | Search GET→explore | Old hero layout | `MarketingHero` + optional search entry | `explore_feed` | M | — | Phase 4 |
-| `FeaturedRestaurants` | Featured grid | Restaurant list data | Old cards/spacing | Section + `RestaurantDiscoveryCard` | `explore_feed` | M | — | Phase 4 |
-| `BrowseByState` / `BrowseByCuisine` / `MapTeaser` / `MichelinStarsExplained` / `PassportPreview` | Extra home modules | Underlying links/data | Entire modules on home | Omit from home unless approved | none on Stitch home | L | — | Phase 4 (remove from home) |
+| `src/app/page.tsx` + `home/*` | Homepage sections | Totals, featured selection | Multi-section utility homepage | **Done** — `stitch/home/HomepageView` | `explore_feed` | H | `e2e/homepage.spec.ts`, `test_homepage.mjs` | **Phase 4 complete** |
+| `SearchHero` | Hero + search | Search GET→explore | Old hero layout | **Deleted** — `MarketingHero` (no in-hero search; header search retained) | `explore_feed` | M | — | **Phase 4 complete** |
+| `FeaturedRestaurants` | Featured grid | Restaurant list data | Old cards/spacing | **Deleted** — `HomepageFeaturedSection` + Phase 3 discovery cards | `explore_feed` | M | — | **Phase 4 complete** |
+| `BrowseByState` / `BrowseByCuisine` / `MapTeaser` / `MichelinStarsExplained` / `PassportPreview` | Extra home modules | Underlying links/data | Entire modules on home | **Deleted from `/`** — capabilities on dedicated routes | none on Stitch home | L | — | **Phase 4 complete** |
 | `explore/page.tsx` + `explore/*` | Directory UX | `lib/data/explore` URL model | Toolbar/drawer/results chrome | New Explore suite | explore grid + list/drawer | H | `test_explore.mjs`; e2e reserve paths | Phase 5 |
 | `ExploreResults` / cards wiring | Results render | Pagination, view param | Grid/list presentation | New results + skeletons | explore + system_states | M | e2e | Phase 5 |
 | `map/page.tsx` + `RestaurantMap` | Map workspace UI | Query, filters, selection | Panel layout/list/detail | `MapWorkspaceLayout` + rows/panel | `dining_passport_map_workspace` | VH | `e2e/map.spec.ts` | Phase 6 |

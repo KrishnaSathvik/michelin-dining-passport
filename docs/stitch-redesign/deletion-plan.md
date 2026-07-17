@@ -24,17 +24,19 @@ Goal: prevent the old design system from continuing to influence the new one. De
 
 Remaining for later phases: legacy `Container`/`Section`, route bodies, old cards.
 
-### Homepage (delete after Phase 4)
+### Homepage (Phase 4 — complete)
 
-| Path | When safe |
+| Path | Status |
 |---|---|
-| `src/components/home/SearchHero.tsx` | Home no longer imports |
-| `src/components/home/FeaturedRestaurants.tsx` | Replaced |
-| `src/components/home/BrowseByState.tsx` | Removed from home (and unused elsewhere) |
-| `src/components/home/BrowseByCuisine.tsx` | Same |
-| `src/components/home/MapTeaser.tsx` | Same |
-| `src/components/home/MichelinStarsExplained.tsx` | Same (education page has its own) |
-| `src/components/home/PassportPreview.tsx` | Same |
+| `src/components/home/SearchHero.tsx` | **Deleted** |
+| `src/components/home/FeaturedRestaurants.tsx` | **Deleted** |
+| `src/components/home/BrowseByState.tsx` | **Deleted** |
+| `src/components/home/BrowseByCuisine.tsx` | **Deleted** |
+| `src/components/home/MapTeaser.tsx` | **Deleted** |
+| `src/components/home/MichelinStarsExplained.tsx` | **Deleted** |
+| `src/components/home/PassportPreview.tsx` | **Deleted** |
+
+Replacement: `src/components/stitch/home/*` (`HomepageView`). Config retained in `src/config/homepage.ts`.
 
 ### Explore (after Phase 5)
 

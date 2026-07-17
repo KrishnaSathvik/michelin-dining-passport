@@ -9,13 +9,12 @@
  * - No popularity or rating claims (we lack that data)
  */
 export const homepageConfig = {
-  featuredSectionTitle: "Featured restaurants",
+  featuredSectionTitle: "Featured Restaurants",
   featuredSectionDek:
-    "A starting set of starred restaurants across regions and cooking styles — factual listings from the live roster, not a ranking.",
+    "Starred restaurants across regions and styles — curated from the live roster for your next journey.",
   /**
-   * Order matters: first slug is the large editorial feature;
-   * the next three are supporting discovery items;
-   * remaining slugs appear in the compact list.
+   * Stitch explore_feed shows three discovery cards.
+   * The first three slugs are used on `/`; remaining slugs are reserved for future modules.
    */
   featuredRestaurantSlugs: [
     "singlethread-healdsburg-ca",

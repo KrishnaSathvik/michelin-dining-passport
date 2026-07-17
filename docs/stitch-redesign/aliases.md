@@ -1,6 +1,21 @@
 # Temporary compatibility aliases
 
-Phase 1–3 introduce Stitch `--dp-*` tokens, `src/components/stitch/*` primitives, `src/components/shell/*` chrome, and `src/components/stitch/restaurant/*` presentation.
+Phase 1–4 introduce Stitch tokens, primitives, shell chrome, restaurant presentation, and the explore_feed homepage.
+
+## Homepage (Phase 4 — complete)
+
+| Item | Status | Notes |
+|---|---|---|
+| `src/components/home/SearchHero.tsx` | **Deleted** | Replaced by `stitch/home/MarketingHero` |
+| `src/components/home/FeaturedRestaurants.tsx` | **Deleted** | Replaced by `stitch/home/HomepageFeaturedSection` + Phase 3 cards |
+| `src/components/home/BrowseByState.tsx` | **Deleted** | Removed from `/` (OD-08); taxonomy routes remain |
+| `src/components/home/BrowseByCuisine.tsx` | **Deleted** | Same |
+| `src/components/home/MapTeaser.tsx` | **Deleted** | Map remains at `/map` |
+| `src/components/home/MichelinStarsExplained.tsx` | **Deleted** | Education remains at `/about-michelin-stars` |
+| `src/components/home/PassportPreview.tsx` | **Deleted** | Passport remains at `/passport` |
+| `src/config/homepage.ts` | Retained | Featured slugs + section copy for `/` |
+
+New homepage location: `src/components/stitch/home/*` → `HomepageView`.
 
 ## Shell (Phase 2)
 
@@ -18,20 +33,20 @@ Phase 1–3 introduce Stitch `--dp-*` tokens, `src/components/stitch/*` primitiv
 
 | Legacy path | New replacement | Remaining importers | Delete by |
 |---|---|---|---|
-| `src/components/restaurant/RestaurantDiscoveryCard.tsx` | `stitch/restaurant/RestaurantDiscoveryCard` | Homepage, Explore, taxonomy, related lists, Passport grids | Phase 4–8 route rebuilds (zero imports) |
-| `src/components/restaurant/RestaurantCompactCard.tsx` | `stitch/restaurant/RestaurantListRow` (+ Passport list variants later) | Explore list, Passport lists | Phase 5 / 8 |
-| `src/components/restaurant/RestaurantEditorialCard.tsx` | `stitch/restaurant/RestaurantEditorialCard` | Homepage featured | Phase 4 |
-| `src/components/restaurant/RestaurantMedia.tsx` | `stitch/restaurant/RestaurantMedia` | Legacy cards + detail | Phase 4–7 |
-| `src/components/restaurant/RestaurantImageFallback.tsx` | `stitch/restaurant/RestaurantFallback` | Legacy media | Phase 4–7 |
-| `src/components/restaurant/StarMark.tsx` | `stitch/restaurant/MichelinDistinction` | Legacy cards/detail | Phase 4–7 |
+| `src/components/restaurant/RestaurantDiscoveryCard.tsx` | `stitch/restaurant/RestaurantDiscoveryCard` | Explore, taxonomy, related lists, Passport grids (homepage migrated) | Phase 5–8 |
+| `src/components/restaurant/RestaurantCompactCard.tsx` | `stitch/restaurant/RestaurantListRow` | Explore list, Passport lists | Phase 5 / 8 |
+| `src/components/restaurant/RestaurantEditorialCard.tsx` | `stitch/restaurant/RestaurantEditorialCard` | Unused after Phase 4 homepage | Phase 7 cleanup if still unused |
+| `src/components/restaurant/RestaurantMedia.tsx` | `stitch/restaurant/RestaurantMedia` | Legacy cards + detail | Phase 5–7 |
+| `src/components/restaurant/RestaurantImageFallback.tsx` | `stitch/restaurant/RestaurantFallback` | Legacy media | Phase 5–7 |
+| `src/components/restaurant/StarMark.tsx` | `stitch/restaurant/MichelinDistinction` | Legacy cards/detail | Phase 5–7 |
 | `src/components/restaurant/ReservationButton.tsx` | `stitch/restaurant/ReservationAction` | Legacy cards + sticky bar | After cards/detail migrate |
 | `src/components/restaurant/SaveRestaurantButton.tsx` | `stitch/restaurant/SaveAction` | Legacy cards + sticky bar | After cards/detail migrate |
-| `src/components/restaurant/CuisineLabel.tsx` / `LocationLine.tsx` / `PriceMark.tsx` | `stitch/restaurant/RestaurantMeta` | Legacy cards | Phase 4–7 |
-| `src/components/restaurant/RestaurantCardSkeleton.tsx` | `stitch/restaurant/RestaurantCardSkeleton` (+ row/editorial/map skeletons) | Explore loading | Phase 5 |
+| `src/components/restaurant/CuisineLabel.tsx` / `LocationLine.tsx` / `PriceMark.tsx` | `stitch/restaurant/RestaurantMeta` | Legacy cards | Phase 5–7 |
+| `src/components/restaurant/RestaurantCardSkeleton.tsx` | `stitch/restaurant/RestaurantCardSkeleton` | Explore loading | Phase 5 |
 
-**Policy:** Do not create circular re-export aliases between old and new cards. Old routes keep importing legacy components until their dedicated phase. New components are validated at `/dev/stitch-restaurant-components` (dev-only).
+**Policy:** Do not create circular re-export aliases between old and new cards.
 
-Phase 1 stitch atoms (`MichelinDistinction`, `RestaurantMedia`, `RestaurantFallback`) now re-export from `stitch/restaurant/*`.
+Phase 1 stitch atoms (`MichelinDistinction`, `RestaurantMedia`, `RestaurantFallback`) re-export from `stitch/restaurant/*`.
 
 ## Tokens / fonts (Phase 1)
 
@@ -46,6 +61,7 @@ Phase 1 stitch atoms (`MichelinDistinction`, `RestaurantMedia`, `RestaurantFallb
 
 - Primitives: `src/components/stitch/`
 - Restaurant presentation: `src/components/stitch/restaurant/`
+- Homepage: `src/components/stitch/home/`
 - Shell: `src/components/shell/`
 - Nav config: `src/config/navigation.ts`
 
@@ -54,5 +70,5 @@ Rules:
 1. New shell and stitch primitives must not import deleted SiteHeader/SiteFooter.
 2. Do not render old and new headers together.
 3. Do not apply legacy visual classes to AppHeader.
-4. Route bodies remain unrebuilt until their phase.
-5. Do not globally replace legacy cards on old routes during Phase 3.
+4. Homepage composition is complete; other route bodies remain unrebuilt until their phase.
+5. Do not globally replace legacy cards on unrebuilt routes.
