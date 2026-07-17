@@ -19,6 +19,7 @@ import {
   Select,
   SkeletonGrid,
 } from "@/components/stitch";
+import { AppHeaderClient } from "@/components/shell/AppHeaderClient";
 
 const SWATCHES: { token: string; value: string; varName: string }[] = [
   { token: "bg", value: "#fcf9f8", varName: "--dp-bg" },
@@ -40,26 +41,30 @@ export function StitchFoundationClient() {
   const [chipOn, setChipOn] = useState(true);
 
   return (
-    <div className="dp-canvas min-h-screen pb-24">
-      <header className="sticky top-0 z-[var(--z-header)] flex h-[var(--dp-header-height)] items-center border-b border-dp-border bg-dp-surface">
-        <PageContainer className="flex w-full items-center justify-between">
-          <p className="dp-headline-sm text-dp-primary">Dining Passport</p>
-          <p className="dp-label-caps text-dp-ink-muted">Foundation · Dev only</p>
-        </PageContainer>
-      </header>
-
+    <div className="dp-canvas pb-24">
       <PageContainer className="py-16">
         <p className="dp-label-caps text-dp-ink-muted">Development reference</p>
         <h1 className="dp-display-lg mt-4 text-dp-primary max-md:dp-display-lg-mobile">
           Dining Passport Component Library
         </h1>
         <p className="dp-body-lg mt-4 max-w-2xl text-dp-ink-secondary">
-          Phase 1 Stitch primitives. Matches{" "}
+          Phase 1–2 Stitch primitives and application shell. Live AppHeader and
+          SiteFooter wrap this route via the root layout. Matches{" "}
           <code className="break-all text-dp-ink">
             docs/designs/dining_passport_component_library
           </code>
           . Not linked from production navigation.
         </p>
+
+        <section className="mt-20" data-shell-demo="signed-in">
+          <SectionHeader
+            title="Shell — signed-in preview"
+            description="Isolated header demo for visual QA (preview user only)"
+          />
+          <div className="overflow-hidden rounded-[var(--dp-radius-lg)] border border-dp-border">
+            <AppHeaderClient user={null} forceSignedInPreview />
+          </div>
+        </section>
 
         <section className="mt-20">
           <SectionHeader title="Colors" description="Approved --dp-* core palette" />
@@ -168,7 +173,10 @@ export function StitchFoundationClient() {
         </section>
 
         <section className="mt-20">
-          <SectionHeader title="Michelin distinctions" description="Star gold only — never Google ratings" />
+          <SectionHeader
+            title="Michelin distinctions"
+            description="Star gold only — never Google ratings"
+          />
           <div className="flex flex-wrap items-center gap-6">
             <MichelinDistinction stars={1} />
             <MichelinDistinction stars={2} />
@@ -199,10 +207,18 @@ export function StitchFoundationClient() {
         <section className="mt-20">
           <SectionHeader title="Overlays" />
           <div className="flex flex-wrap gap-4">
-            <Button type="button" variant="secondary" onClick={() => setDrawerOpen(true)}>
+            <Button
+              type="button"
+              variant="secondary"
+              onClick={() => setDrawerOpen(true)}
+            >
               Open drawer
             </Button>
-            <Button type="button" variant="secondary" onClick={() => setDialogOpen(true)}>
+            <Button
+              type="button"
+              variant="secondary"
+              onClick={() => setDialogOpen(true)}
+            >
               Open dialog
             </Button>
           </div>
@@ -232,7 +248,11 @@ export function StitchFoundationClient() {
         title="All filters"
         footer={
           <div className="flex gap-3">
-            <Button variant="secondary" fullWidth onClick={() => setDrawerOpen(false)}>
+            <Button
+              variant="secondary"
+              fullWidth
+              onClick={() => setDrawerOpen(false)}
+            >
               Clear
             </Button>
             <Button fullWidth onClick={() => setDrawerOpen(false)}>

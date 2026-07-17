@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { RestaurantMap } from "@/components/map/RestaurantMap";
+import { MapWorkspaceShell } from "@/components/shell/MapWorkspaceShell";
 import { getExploreFacets } from "@/lib/data/explore";
 import { getMapRestaurants } from "@/lib/data/geocodes";
 import { getRestaurants } from "@/lib/data/restaurants";
@@ -23,7 +24,7 @@ export default async function MapPage({ searchParams }: MapPageProps) {
   const facets = getExploreFacets(allRestaurants);
 
   return (
-    <div className="h-[calc(100dvh-4rem)] sm:h-[calc(100dvh-4.5rem)]">
+    <MapWorkspaceShell>
       <RestaurantMap
         restaurants={restaurants}
         initialQuery={params}
@@ -38,6 +39,6 @@ export default async function MapPage({ searchParams }: MapPageProps) {
           })),
         }}
       />
-    </div>
+    </MapWorkspaceShell>
   );
 }

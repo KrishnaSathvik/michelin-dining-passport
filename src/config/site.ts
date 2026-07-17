@@ -24,7 +24,7 @@ export const siteConfig = {
   nav: [
     { href: "/explore", label: "Explore" },
     { href: "/map", label: "Map" },
-    { href: "/about-michelin-stars", label: "Michelin Stars Explained" },
+    { href: "/about-michelin-stars", label: "Michelin Stars" },
     { href: "/passport", label: "Passport" },
     { href: "/account", label: "Account" },
   ],

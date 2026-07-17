@@ -1,28 +1,38 @@
 # Temporary compatibility aliases
 
-Phase 1 introduces an independent Stitch `--dp-*` token system and `src/components/stitch/*` primitives.
+Phase 1–2 introduce Stitch `--dp-*` tokens, `src/components/stitch/*` primitives, and `src/components/shell/*` application chrome.
 
-Existing production routes continue to use legacy presentation components and legacy CSS tokens until each route is rebuilt.
+## Shell (Phase 2)
 
-## Active aliases (Phase 1)
+| Item | Status | Notes | Delete by |
+|---|---|---|---|
+| `src/components/layout/SiteHeader.tsx` | **Removed** | Replaced by `shell/AppHeader` + `AppHeaderClient` | Done |
+| `src/components/layout/SiteFooter.tsx` | **Removed** | Replaced by `shell/SiteFooter` | Done |
+| `src/components/layout/SiteFooterGate.tsx` | **Removed** | Footer gating lives in `shell/AppChrome` | Done |
+| `siteConfig.nav` | Retained | Still used for product config; shell primary IA uses `config/navigation.ts` `primaryNav` | Phase 12 if unused |
+| Legacy `Container` / `Section` | Retained | Old route bodies | Per-route phases |
+| Auth form presentation | Retained | AuthShell scaffold only; forms Phase 10 | Phase 10 |
+| Map workspace inner UI | Retained | `MapWorkspaceShell` wraps existing `RestaurantMap` | Phase 6 |
+
+## Tokens / fonts (Phase 1)
 
 | Alias | Maps to | Why | Delete by |
 |---|---|---|---|
-| `--font-display` → Literata (`--font-literata`) | Display font for existing `font-display` classes | Avoid loading Instrument Serif while old pages still use `font-display` | Phase 12 (or when no callers remain) |
-| `--font-instrument-serif` | Removed from layout | OD-03 | **Done in Phase 1** |
-| Legacy `--color-*` / `--radius-*` / `.container-editorial` | Kept for old components only | Keep existing routes compiling and visually stable until replaced | End of each route phase → Phase 12 cleanup |
-| Legacy `src/components/ui/Button.tsx` | Untouched | Old routes import it | Delete when no imports (after shell/routes migrate) |
-| Legacy `Container` / `Section` | Untouched | Old routes | Phase 2–12 per deletion-plan |
+| `--font-display` → Literata (`--font-literata`) | Display font for existing `font-display` classes | Avoid Instrument Serif while old pages still use `font-display` | Phase 12 |
+| Legacy `--color-*` / `--radius-*` / `.container-editorial` | Kept for old components only | Keep unrebuilt routes compiling | Phase 12 cleanup |
+| Legacy `src/components/ui/Button.tsx` | Untouched | Old routes | After shell/routes migrate |
 | Legacy `RestaurantMedia` / `StarMark` / fallbacks | Untouched | Old cards/detail | Phase 3–7 |
 | `siteConfig.productName` | `Dining Passport` | OD-02 | Permanent |
 
-## Stitch component location
+## Stitch locations
 
-New primitives live under `src/components/stitch/` and must not import legacy presentation components.
+- Primitives: `src/components/stitch/`
+- Shell: `src/components/shell/`
+- Nav config: `src/config/navigation.ts`
 
-## Rules
+Rules:
 
-1. New Stitch primitives must import **only** `--dp-*` tokens and `src/components/stitch/*`.
-2. Do not restyle legacy components “in place” to approximate Stitch.
-3. Do not import legacy presentation into Stitch primitives.
-4. When a route migrates, switch it to Stitch primitives and remove its legacy imports in the same PR when practical.
+1. New shell and stitch primitives must not import deleted SiteHeader/SiteFooter.
+2. Do not render old and new headers together.
+3. Do not apply legacy visual classes to AppHeader.
+4. Route bodies remain unrebuilt until their phase.

@@ -13,6 +13,17 @@ Goal: prevent the old design system from continuing to influence the new one. De
 
 ## Obsolete components (by family)
 
+### Application shell (Phase 2 — done)
+
+| Path | Status |
+|---|---|
+| `src/components/layout/SiteHeader.tsx` | **Deleted** — replaced by `src/components/shell/AppHeader*` |
+| `src/components/layout/SiteFooter.tsx` | **Deleted** — replaced by `src/components/shell/SiteFooter` |
+| `src/components/layout/SiteFooterGate.tsx` | **Deleted** — gating in `AppChrome` |
+| Auth layout forest aside | **Replaced** by `AuthShell` scaffold (forms still Phase 10) |
+
+Remaining for later phases: legacy `Container`/`Section`, route bodies, old cards.
+
 ### Homepage (delete after Phase 4)
 
 | Path | When safe |
@@ -85,7 +96,8 @@ Preserve `PassportProvider` and store modules.
 
 | Item | Deletion point |
 |---|---|
-| Instrument Serif `next/font` wiring | Phase 1–2 after Literata live |
+| Instrument Serif `next/font` wiring | **Removed in Phase 1** |
+| Old SiteHeader/SiteFooter CSS coupling | **Removed in Phase 2** with component deletion |
 | `--color-*` old palette | Phase 12 after no references |
 | `--radius-sm/md/lg` 6/10/12 | Phase 12 |
 | `--shadow-float` | Phase 1 for new UI; delete globally Phase 12 |

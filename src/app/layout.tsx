@@ -1,10 +1,11 @@
 import type { ReactNode } from "react";
 import type { Metadata } from "next";
 import { Inter, Literata } from "next/font/google";
-import { SiteFooterGate } from "@/components/layout/SiteFooterGate";
-import { SiteHeader } from "@/components/layout/SiteHeader";
+import { AppChrome } from "@/components/shell/AppChrome";
+import { SiteFooter } from "@/components/shell/SiteFooter";
 import { PassportClientShell } from "@/components/passport/PassportClientShell";
 import { absoluteUrl, siteConfig } from "@/config/site";
+import { getVerifiedUser } from "@/lib/auth/session";
 import { getRestaurants } from "@/lib/data/restaurants";
 import "./globals.css";
 
@@ -35,12 +36,13 @@ export const metadata: Metadata = {
   },
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: ReactNode;
 }>) {
   const restaurants = getRestaurants();
+  const user = await getVerifiedUser().catch(() => null);
 
   return (
     <html
@@ -49,9 +51,9 @@ export default function RootLayout({
     >
       <body className="flex min-h-full flex-col font-sans">
         <PassportClientShell restaurants={restaurants}>
-          <SiteHeader />
-          <main className="flex-1">{children}</main>
-          <SiteFooterGate />
+          <AppChrome user={user} footer={<SiteFooter />}>
+            {children}
+          </AppChrome>
         </PassportClientShell>
       </body>
     </html>
