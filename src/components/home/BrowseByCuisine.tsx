@@ -19,19 +19,22 @@ export function BrowseByCuisine({ cuisines }: BrowseByCuisineProps) {
   return (
     <Section
       id="browse-cuisines"
-      eyebrow="By cooking style"
+      eyebrow="Cuisines"
       title="Browse by cuisine"
-      dek="Cuisine labels are preserved from the source roster. Counts reflect the current imported dataset."
+      dek="Cuisine labels from the source roster. Counts reflect the current imported dataset."
+      className="bg-surface-soft"
     >
-      <ul className="flex flex-wrap gap-x-5 gap-y-3">
+      <ul className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
         {visible.map((cuisine) => (
           <li key={cuisine.cuisineSlug}>
             <Link
               href={`/cuisines/${encodeURIComponent(cuisine.cuisineSlug)}`}
-              className="group inline-flex items-baseline gap-2 border-b border-transparent font-sans text-base text-ink transition-colors hover:border-forest hover:text-forest"
+              className="flex min-h-[4.5rem] items-center justify-between gap-3 rounded-[var(--radius-md)] border border-border bg-bg px-4 py-3 no-underline transition-colors hover:border-forest"
             >
-              <span>{cuisine.cuisine}</span>
-              <span className="text-sm tabular-nums text-ink-muted group-hover:text-forest">
+              <span className="font-display text-xl text-ink">
+                {cuisine.cuisine}
+              </span>
+              <span className="font-sans text-sm tabular-nums text-ink-muted">
                 {cuisine.count}
               </span>
             </Link>
@@ -44,7 +47,7 @@ export function BrowseByCuisine({ cuisines }: BrowseByCuisineProps) {
           <button
             type="button"
             onClick={() => setShowAll((value) => !value)}
-            className="border border-border px-4 py-2 font-sans text-sm text-ink transition-colors hover:border-forest hover:text-forest"
+            className="min-h-11 rounded-[var(--radius-md)] border border-border bg-bg px-5 font-sans text-[15px] text-ink transition-colors hover:border-forest"
             aria-expanded={showAll}
           >
             {showAll

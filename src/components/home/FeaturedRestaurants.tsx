@@ -1,5 +1,5 @@
+import Link from "next/link";
 import { Section } from "@/components/layout/Section";
-import { RestaurantCompactCard } from "@/components/restaurant/RestaurantCompactCard";
 import { RestaurantDiscoveryCard } from "@/components/restaurant/RestaurantDiscoveryCard";
 import { RestaurantEditorialCard } from "@/components/restaurant/RestaurantEditorialCard";
 import { homepageConfig } from "@/config/homepage";
@@ -14,19 +14,19 @@ export function FeaturedRestaurants({ restaurants }: FeaturedRestaurantsProps) {
 
   const [featured, ...rest] = restaurants;
   const discovery = rest.slice(0, 3);
-  const compact = rest.slice(3);
 
   return (
     <Section
-      eyebrow="Across the atlas"
+      eyebrow="Featured"
       title={homepageConfig.featuredSectionTitle}
       dek={homepageConfig.featuredSectionDek}
+      className="bg-surface-soft"
     >
       <div className="space-y-10">
         <RestaurantEditorialCard restaurant={featured} />
 
         {discovery.length > 0 ? (
-          <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-3">
+          <div className="grid gap-8 sm:grid-cols-2 xl:grid-cols-3">
             {discovery.map((restaurant) => (
               <RestaurantDiscoveryCard
                 key={restaurant.slug}
@@ -37,20 +37,14 @@ export function FeaturedRestaurants({ restaurants }: FeaturedRestaurantsProps) {
           </div>
         ) : null}
 
-        {compact.length > 0 ? (
-          <div className="border border-border bg-bg-elevated/50 px-4 py-2 sm:px-6">
-            <p className="border-b border-border py-3 font-sans text-xs uppercase tracking-[0.16em] text-ink-muted">
-              More from this selection
-            </p>
-            {compact.map((restaurant) => (
-              <RestaurantCompactCard
-                key={restaurant.slug}
-                restaurant={restaurant}
-                surface="homepage"
-              />
-            ))}
-          </div>
-        ) : null}
+        <div>
+          <Link
+            href="/explore"
+            className="font-sans text-[15px] font-medium text-forest no-underline hover:text-forest-deep"
+          >
+            View all restaurants →
+          </Link>
+        </div>
       </div>
     </Section>
   );

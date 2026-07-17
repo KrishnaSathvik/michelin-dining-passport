@@ -4,24 +4,21 @@ import { Section } from "@/components/layout/Section";
 const tiers = [
   {
     stars: "★",
-    title: "One star",
+    title: "One Michelin Star",
     meaning: "High-quality cooking worth a stop",
-    detail:
-      "A restaurant where the cooking is considered excellent for its category — refined technique and consistent quality that make a visit worthwhile.",
+    href: "/explore?stars=1",
   },
   {
     stars: "★★",
-    title: "Two stars",
+    title: "Two Michelin Stars",
     meaning: "Excellent cooking worth a detour",
-    detail:
-      "A restaurant whose cooking stands out more distinctly — often more ambition, personality, or precision — enough to justify going out of your way.",
+    href: "/explore?stars=2",
   },
   {
     stars: "★★★",
-    title: "Three stars",
+    title: "Three Michelin Stars",
     meaning: "Exceptional cuisine worth a special journey",
-    detail:
-      "The highest distinction in the Guide’s star system: cooking regarded as exceptional, typically prompting travel specifically for the experience.",
+    href: "/explore?stars=3",
   },
 ] as const;
 
@@ -31,44 +28,36 @@ export function MichelinStarsExplained() {
       id="michelin-stars"
       eyebrow="Distinctions"
       title="Michelin stars, explained"
-      dek="A plain-language reading of the three star levels used in the Michelin Guide. This is an independent summary for travelers — not an official Michelin publication."
-      className="border-t border-border"
+      dek="A plain-language reading of the three star levels. Independent summary — not an official Michelin publication."
     >
-      <div className="border-y border-burgundy/30">
-        {tiers.map((tier, index) => (
+      <div className="grid gap-4 md:grid-cols-3">
+        {tiers.map((tier) => (
           <article
             key={tier.title}
-            className={`grid gap-4 py-8 md:grid-cols-[8rem_minmax(0,1fr)] md:gap-10 ${
-              index < tiers.length - 1 ? "border-b border-border" : ""
-            }`}
+            className="rounded-[var(--radius-lg)] border border-border bg-bg p-6"
           >
-            <div>
-              <p
-                className="font-display text-2xl tracking-[0.2em] text-gold"
-                aria-hidden="true"
-              >
-                {tier.stars}
-              </p>
-              <h3 className="mt-2 font-display text-2xl text-ink">
-                {tier.title}
-              </h3>
-            </div>
-            <div>
-              <p className="font-sans text-base font-medium text-ink">
-                {tier.meaning}
-              </p>
-              <p className="mt-3 max-w-2xl font-sans text-sm leading-relaxed text-ink-muted">
-                {tier.detail}
-              </p>
-            </div>
+            <p
+              className="font-display text-3xl tracking-[0.2em] text-gold"
+              aria-hidden="true"
+            >
+              {tier.stars}
+            </p>
+            <h3 className="mt-4 font-display text-2xl text-ink">{tier.title}</h3>
+            <p className="mt-3 font-sans text-base text-ink-secondary">
+              {tier.meaning}
+            </p>
+            <Link
+              href={tier.href}
+              className="mt-5 inline-flex font-sans text-[15px] font-medium text-forest no-underline hover:text-forest-deep"
+            >
+              Browse →
+            </Link>
           </article>
         ))}
       </div>
 
-      <p className="mt-8 max-w-3xl font-sans text-sm leading-relaxed text-ink-muted">
-        Star awards and definitions originate with the Michelin Guide. This site
-        summarizes publicly understood distinctions for orientation only and does
-        not reproduce Michelin’s proprietary visual marks, logos, or Guide prose.{" "}
+      <p className="mt-8 max-w-3xl font-sans text-base leading-relaxed text-ink-secondary">
+        Star awards originate with the Michelin Guide.{" "}
         <Link
           href="/about-michelin-stars"
           className="text-forest underline underline-offset-4"

@@ -9,9 +9,9 @@
  * - No popularity or rating claims (we lack that data)
  */
 export const homepageConfig = {
-  featuredSectionTitle: "Michelin experiences to know",
+  featuredSectionTitle: "Featured restaurants",
   featuredSectionDek:
-    "A starting set of starred restaurants across regions and cooking styles — factual listings only, not a ranking.",
+    "A starting set of starred restaurants across regions and cooking styles — factual listings from the live roster, not a ranking.",
   /**
    * Order matters: first slug is the large editorial feature;
    * the next three are supporting discovery items;
