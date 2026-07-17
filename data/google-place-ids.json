@@ -1,0 +1,2445 @@
+{
+  "version": 1,
+  "updatedAt": "2026-07-17T16:22:34.540893+00:00",
+  "matches": [
+    {
+      "restaurantSlug": "311-omakase-boston-ma",
+      "placeId": null,
+      "status": "needs_review",
+      "confidence": "low",
+      "method": "seeded",
+      "reviewedAt": "2026-07-17",
+      "notes": "Awaiting Places API matching or manual review."
+    },
+    {
+      "restaurantSlug": "63-clinton-new-york-ny",
+      "placeId": null,
+      "status": "needs_review",
+      "confidence": "low",
+      "method": "seeded",
+      "reviewedAt": "2026-07-17",
+      "notes": "Awaiting Places API matching or manual review."
+    },
+    {
+      "restaurantSlug": "7-adams-san-francisco-ca",
+      "placeId": null,
+      "status": "needs_review",
+      "confidence": "low",
+      "method": "seeded",
+      "reviewedAt": "2026-07-17",
+      "notes": "Awaiting Places API matching or manual review."
+    },
+    {
+      "restaurantSlug": "acquerello-san-francisco-ca",
+      "placeId": null,
+      "status": "needs_review",
+      "confidence": "low",
+      "method": "seeded",
+      "reviewedAt": "2026-07-17",
+      "notes": "Awaiting Places API matching or manual review."
+    },
+    {
+      "restaurantSlug": "addison-san-diego-ca",
+      "placeId": null,
+      "status": "needs_review",
+      "confidence": "low",
+      "method": "seeded",
+      "reviewedAt": "2026-07-17",
+      "notes": "Awaiting Places API matching or manual review."
+    },
+    {
+      "restaurantSlug": "albi-washington-dc",
+      "placeId": null,
+      "status": "needs_review",
+      "confidence": "low",
+      "method": "seeded",
+      "reviewedAt": "2026-07-17",
+      "notes": "Awaiting Places API matching or manual review."
+    },
+    {
+      "restaurantSlug": "alinea-chicago-il",
+      "placeId": "ChIJuyI60yLTD4gROwTWENq1He0",
+      "status": "manually_approved",
+      "confidence": "high",
+      "method": "spike_fixture",
+      "reviewedAt": "2026-07-17",
+      "notes": "GP1 spike — strong coverage provisional Place ID."
+    },
+    {
+      "restaurantSlug": "alma-fonda-fina-denver-co",
+      "placeId": null,
+      "status": "needs_review",
+      "confidence": "low",
+      "method": "seeded",
+      "reviewedAt": "2026-07-17",
+      "notes": "Awaiting Places API matching or manual review."
+    },
+    {
+      "restaurantSlug": "angler-sf-san-francisco-ca",
+      "placeId": null,
+      "status": "needs_review",
+      "confidence": "low",
+      "method": "seeded",
+      "reviewedAt": "2026-07-17",
+      "notes": "Awaiting Places API matching or manual review."
+    },
+    {
+      "restaurantSlug": "aquavit-new-york-ny",
+      "placeId": null,
+      "status": "needs_review",
+      "confidence": "low",
+      "method": "seeded",
+      "reviewedAt": "2026-07-17",
+      "notes": "Awaiting Places API matching or manual review."
+    },
+    {
+      "restaurantSlug": "ariete-miami-fl",
+      "placeId": null,
+      "status": "needs_review",
+      "confidence": "low",
+      "method": "seeded",
+      "reviewedAt": "2026-07-17",
+      "notes": "Awaiting Places API matching or manual review."
+    },
+    {
+      "restaurantSlug": "aska-brooklyn-ny",
+      "placeId": null,
+      "status": "needs_review",
+      "confidence": "low",
+      "method": "seeded",
+      "reviewedAt": "2026-07-17",
+      "notes": "Awaiting Places API matching or manual review."
+    },
+    {
+      "restaurantSlug": "atelier-crenn-san-francisco-ca",
+      "placeId": null,
+      "status": "needs_review",
+      "confidence": "low",
+      "method": "seeded",
+      "reviewedAt": "2026-07-17",
+      "notes": "Awaiting Places API matching or manual review."
+    },
+    {
+      "restaurantSlug": "atera-new-york-ny",
+      "placeId": null,
+      "status": "needs_review",
+      "confidence": "low",
+      "method": "seeded",
+      "reviewedAt": "2026-07-17",
+      "notes": "Awaiting Places API matching or manual review."
+    },
+    {
+      "restaurantSlug": "atlas-atlanta-ga",
+      "placeId": null,
+      "status": "needs_review",
+      "confidence": "low",
+      "method": "seeded",
+      "reviewedAt": "2026-07-17",
+      "notes": "Awaiting Places API matching or manual review."
+    },
+    {
+      "restaurantSlug": "atomix-new-york-ny",
+      "placeId": null,
+      "status": "needs_review",
+      "confidence": "low",
+      "method": "seeded",
+      "reviewedAt": "2026-07-17",
+      "notes": "Awaiting Places API matching or manual review."
+    },
+    {
+      "restaurantSlug": "auberge-du-soleil-rutherford-ca",
+      "placeId": null,
+      "status": "needs_review",
+      "confidence": "low",
+      "method": "seeded",
+      "reviewedAt": "2026-07-17",
+      "notes": "Awaiting Places API matching or manual review."
+    },
+    {
+      "restaurantSlug": "aubergine-carmel-by-the-sea-ca",
+      "placeId": null,
+      "status": "needs_review",
+      "confidence": "low",
+      "method": "seeded",
+      "reviewedAt": "2026-07-17",
+      "notes": "Awaiting Places API matching or manual review."
+    },
+    {
+      "restaurantSlug": "auro-calistoga-ca",
+      "placeId": null,
+      "status": "needs_review",
+      "confidence": "low",
+      "method": "seeded",
+      "reviewedAt": "2026-07-17",
+      "notes": "Awaiting Places API matching or manual review."
+    },
+    {
+      "restaurantSlug": "bacchanalia-atlanta-ga",
+      "placeId": null,
+      "status": "needs_review",
+      "confidence": "low",
+      "method": "seeded",
+      "reviewedAt": "2026-07-17",
+      "notes": "Awaiting Places API matching or manual review."
+    },
+    {
+      "restaurantSlug": "bar-miller-new-york-ny",
+      "placeId": null,
+      "status": "needs_review",
+      "confidence": "low",
+      "method": "seeded",
+      "reviewedAt": "2026-07-17",
+      "notes": "Awaiting Places API matching or manual review."
+    },
+    {
+      "restaurantSlug": "barley-swine-austin-tx",
+      "placeId": null,
+      "status": "needs_review",
+      "confidence": "low",
+      "method": "seeded",
+      "reviewedAt": "2026-07-17",
+      "notes": "Awaiting Places API matching or manual review."
+    },
+    {
+      "restaurantSlug": "bastion-nashville-tn",
+      "placeId": null,
+      "status": "needs_review",
+      "confidence": "low",
+      "method": "seeded",
+      "reviewedAt": "2026-07-17",
+      "notes": "Awaiting Places API matching or manual review."
+    },
+    {
+      "restaurantSlug": "bcn-taste-and-tradition-houston-tx",
+      "placeId": null,
+      "status": "needs_review",
+      "confidence": "low",
+      "method": "seeded",
+      "reviewedAt": "2026-07-17",
+      "notes": "Awaiting Places API matching or manual review."
+    },
+    {
+      "restaurantSlug": "beckon-denver-co",
+      "placeId": null,
+      "status": "needs_review",
+      "confidence": "low",
+      "method": "seeded",
+      "reviewedAt": "2026-07-17",
+      "notes": "Awaiting Places API matching or manual review."
+    },
+    {
+      "restaurantSlug": "bell-s-los-alamos-ca",
+      "placeId": null,
+      "status": "needs_review",
+      "confidence": "low",
+      "method": "seeded",
+      "reviewedAt": "2026-07-17",
+      "notes": "Awaiting Places API matching or manual review."
+    },
+    {
+      "restaurantSlug": "benu-san-francisco-ca",
+      "placeId": null,
+      "status": "needs_review",
+      "confidence": "low",
+      "method": "seeded",
+      "reviewedAt": "2026-07-17",
+      "notes": "Awaiting Places API matching or manual review."
+    },
+    {
+      "restaurantSlug": "birdsong-san-francisco-ca",
+      "placeId": null,
+      "status": "needs_review",
+      "confidence": "low",
+      "method": "seeded",
+      "reviewedAt": "2026-07-17",
+      "notes": "Awaiting Places API matching or manual review."
+    },
+    {
+      "restaurantSlug": "blue-hill-at-stone-barns-tarrytown-ny",
+      "placeId": null,
+      "status": "needs_review",
+      "confidence": "low",
+      "method": "seeded",
+      "reviewedAt": "2026-07-17",
+      "notes": "Awaiting Places API matching or manual review."
+    },
+    {
+      "restaurantSlug": "boia-de-miami-fl",
+      "placeId": null,
+      "status": "needs_review",
+      "confidence": "low",
+      "method": "seeded",
+      "reviewedAt": "2026-07-17",
+      "notes": "Awaiting Places API matching or manual review."
+    },
+    {
+      "restaurantSlug": "boka-chicago-il",
+      "placeId": null,
+      "status": "needs_review",
+      "confidence": "low",
+      "method": "seeded",
+      "reviewedAt": "2026-07-17",
+      "notes": "Awaiting Places API matching or manual review."
+    },
+    {
+      "restaurantSlug": "bom-new-york-ny",
+      "placeId": null,
+      "status": "needs_review",
+      "confidence": "low",
+      "method": "seeded",
+      "reviewedAt": "2026-07-17",
+      "notes": "Awaiting Places API matching or manual review."
+    },
+    {
+      "restaurantSlug": "bosq-aspen-co",
+      "placeId": null,
+      "status": "needs_review",
+      "confidence": "low",
+      "method": "seeded",
+      "reviewedAt": "2026-07-17",
+      "notes": "Awaiting Places API matching or manual review."
+    },
+    {
+      "restaurantSlug": "bresca-washington-dc",
+      "placeId": null,
+      "status": "needs_review",
+      "confidence": "low",
+      "method": "seeded",
+      "reviewedAt": "2026-07-17",
+      "notes": "Awaiting Places API matching or manual review."
+    },
+    {
+      "restaurantSlug": "bridges-new-york-ny",
+      "placeId": null,
+      "status": "needs_review",
+      "confidence": "low",
+      "method": "seeded",
+      "reviewedAt": "2026-07-17",
+      "notes": "Awaiting Places API matching or manual review."
+    },
+    {
+      "restaurantSlug": "brut-denver-co",
+      "placeId": null,
+      "status": "needs_review",
+      "confidence": "low",
+      "method": "seeded",
+      "reviewedAt": "2026-07-17",
+      "notes": "Awaiting Places API matching or manual review."
+    },
+    {
+      "restaurantSlug": "cafe-boulud-new-york-ny",
+      "placeId": null,
+      "status": "needs_review",
+      "confidence": "low",
+      "method": "seeded",
+      "reviewedAt": "2026-07-17",
+      "notes": "Awaiting Places API matching or manual review."
+    },
+    {
+      "restaurantSlug": "californios-san-francisco-ca",
+      "placeId": null,
+      "status": "needs_review",
+      "confidence": "low",
+      "method": "seeded",
+      "reviewedAt": "2026-07-17",
+      "notes": "Awaiting Places API matching or manual review."
+    },
+    {
+      "restaurantSlug": "camille-orlando-fl",
+      "placeId": null,
+      "status": "needs_review",
+      "confidence": "low",
+      "method": "seeded",
+      "reviewedAt": "2026-07-17",
+      "notes": "Awaiting Places API matching or manual review."
+    },
+    {
+      "restaurantSlug": "carino-chicago-il",
+      "placeId": null,
+      "status": "needs_review",
+      "confidence": "low",
+      "method": "seeded",
+      "reviewedAt": "2026-07-17",
+      "notes": "Awaiting Places API matching or manual review."
+    },
+    {
+      "restaurantSlug": "caruso-s-montecito-ca",
+      "placeId": null,
+      "status": "needs_review",
+      "confidence": "low",
+      "method": "seeded",
+      "reviewedAt": "2026-07-17",
+      "notes": "Awaiting Places API matching or manual review."
+    },
+    {
+      "restaurantSlug": "casa-mono-new-york-ny",
+      "placeId": null,
+      "status": "needs_review",
+      "confidence": "low",
+      "method": "seeded",
+      "reviewedAt": "2026-07-17",
+      "notes": "Awaiting Places API matching or manual review."
+    },
+    {
+      "restaurantSlug": "causa-washington-dc",
+      "placeId": null,
+      "status": "needs_review",
+      "confidence": "low",
+      "method": "seeded",
+      "reviewedAt": "2026-07-17",
+      "notes": "Awaiting Places API matching or manual review."
+    },
+    {
+      "restaurantSlug": "cesar-new-york-ny",
+      "placeId": null,
+      "status": "needs_review",
+      "confidence": "low",
+      "method": "seeded",
+      "reviewedAt": "2026-07-17",
+      "notes": "Awaiting Places API matching or manual review."
+    },
+    {
+      "restaurantSlug": "chef-s-counter-at-maass-fort-lauderdale-fl",
+      "placeId": null,
+      "status": "needs_review",
+      "confidence": "low",
+      "method": "seeded",
+      "reviewedAt": "2026-07-17",
+      "notes": "Awaiting Places API matching or manual review."
+    },
+    {
+      "restaurantSlug": "chef-s-table-at-brooklyn-fare-new-york-ny",
+      "placeId": null,
+      "status": "needs_review",
+      "confidence": "low",
+      "method": "seeded",
+      "reviewedAt": "2026-07-17",
+      "notes": "Awaiting Places API matching or manual review."
+    },
+    {
+      "restaurantSlug": "chez-noir-carmel-by-the-sea-ca",
+      "placeId": null,
+      "status": "needs_review",
+      "confidence": "low",
+      "method": "seeded",
+      "reviewedAt": "2026-07-17",
+      "notes": "Awaiting Places API matching or manual review."
+    },
+    {
+      "restaurantSlug": "citrin-santa-monica-ca",
+      "placeId": null,
+      "status": "needs_review",
+      "confidence": "low",
+      "method": "seeded",
+      "reviewedAt": "2026-07-17",
+      "notes": "Awaiting Places API matching or manual review."
+    },
+    {
+      "restaurantSlug": "commis-oakland-ca",
+      "placeId": null,
+      "status": "needs_review",
+      "confidence": "low",
+      "method": "seeded",
+      "reviewedAt": "2026-07-17",
+      "notes": "Awaiting Places API matching or manual review."
+    },
+    {
+      "restaurantSlug": "corima-new-york-ny",
+      "placeId": null,
+      "status": "needs_review",
+      "confidence": "low",
+      "method": "seeded",
+      "reviewedAt": "2026-07-17",
+      "notes": "Awaiting Places API matching or manual review."
+    },
+    {
+      "restaurantSlug": "corkscrew-bbq-spring-tx",
+      "placeId": null,
+      "status": "needs_review",
+      "confidence": "low",
+      "method": "seeded",
+      "reviewedAt": "2026-07-17",
+      "notes": "Awaiting Places API matching or manual review."
+    },
+    {
+      "restaurantSlug": "corridor-109-los-angeles-ca",
+      "placeId": null,
+      "status": "needs_review",
+      "confidence": "low",
+      "method": "seeded",
+      "reviewedAt": "2026-07-17",
+      "notes": "Awaiting Places API matching or manual review."
+    },
+    {
+      "restaurantSlug": "cote-miami-miami-fl",
+      "placeId": null,
+      "status": "needs_review",
+      "confidence": "low",
+      "method": "seeded",
+      "reviewedAt": "2026-07-17",
+      "notes": "Awaiting Places API matching or manual review."
+    },
+    {
+      "restaurantSlug": "cote-new-york-ny",
+      "placeId": null,
+      "status": "needs_review",
+      "confidence": "low",
+      "method": "seeded",
+      "reviewedAt": "2026-07-17",
+      "notes": "Awaiting Places API matching or manual review."
+    },
+    {
+      "restaurantSlug": "counter-charlotte-nc",
+      "placeId": null,
+      "status": "needs_review",
+      "confidence": "low",
+      "method": "seeded",
+      "reviewedAt": "2026-07-17",
+      "notes": "Awaiting Places API matching or manual review."
+    },
+    {
+      "restaurantSlug": "craft-omakase-austin-tx",
+      "placeId": null,
+      "status": "needs_review",
+      "confidence": "low",
+      "method": "seeded",
+      "reviewedAt": "2026-07-17",
+      "notes": "Awaiting Places API matching or manual review."
+    },
+    {
+      "restaurantSlug": "crown-shy-new-york-ny",
+      "placeId": "ChIJyUuE1otYwokR-j9xV7lB03A",
+      "status": "manually_approved",
+      "confidence": "medium",
+      "method": "spike_fixture",
+      "reviewedAt": "2026-07-17",
+      "notes": "GP1 spike — shared-address sibling provisional Place ID."
+    },
+    {
+      "restaurantSlug": "cyrus-geyserville-ca",
+      "placeId": null,
+      "status": "needs_review",
+      "confidence": "low",
+      "method": "seeded",
+      "reviewedAt": "2026-07-17",
+      "notes": "Awaiting Places API matching or manual review."
+    },
+    {
+      "restaurantSlug": "daniel-new-york-ny",
+      "placeId": null,
+      "status": "needs_review",
+      "confidence": "low",
+      "method": "seeded",
+      "reviewedAt": "2026-07-17",
+      "notes": "Awaiting Places API matching or manual review."
+    },
+    {
+      "restaurantSlug": "dirt-candy-new-york-ny",
+      "placeId": null,
+      "status": "needs_review",
+      "confidence": "low",
+      "method": "seeded",
+      "reviewedAt": "2026-07-17",
+      "notes": "Awaiting Places API matching or manual review."
+    },
+    {
+      "restaurantSlug": "ebbe-tampa-fl",
+      "placeId": null,
+      "status": "needs_review",
+      "confidence": "low",
+      "method": "seeded",
+      "reviewedAt": "2026-07-17",
+      "notes": "Awaiting Places API matching or manual review."
+    },
+    {
+      "restaurantSlug": "el-ideas-chicago-il",
+      "placeId": null,
+      "status": "needs_review",
+      "confidence": "low",
+      "method": "seeded",
+      "reviewedAt": "2026-07-17",
+      "notes": "Awaiting Places API matching or manual review."
+    },
+    {
+      "restaurantSlug": "elcielo-miami-miami-fl",
+      "placeId": null,
+      "status": "needs_review",
+      "confidence": "low",
+      "method": "seeded",
+      "reviewedAt": "2026-07-17",
+      "notes": "Awaiting Places API matching or manual review."
+    },
+    {
+      "restaurantSlug": "elcielo-washington-dc-washington-dc",
+      "placeId": null,
+      "status": "needs_review",
+      "confidence": "low",
+      "method": "seeded",
+      "reviewedAt": "2026-07-17",
+      "notes": "Awaiting Places API matching or manual review."
+    },
+    {
+      "restaurantSlug": "eleven-madison-park-new-york-ny",
+      "placeId": null,
+      "status": "needs_review",
+      "confidence": "low",
+      "method": "seeded",
+      "reviewedAt": "2026-07-17",
+      "notes": "Awaiting Places API matching or manual review."
+    },
+    {
+      "restaurantSlug": "elske-chicago-il",
+      "placeId": null,
+      "status": "needs_review",
+      "confidence": "low",
+      "method": "seeded",
+      "reviewedAt": "2026-07-17",
+      "notes": "Awaiting Places API matching or manual review."
+    },
+    {
+      "restaurantSlug": "emelina-west-palm-beach-fl",
+      "placeId": null,
+      "status": "needs_review",
+      "confidence": "low",
+      "method": "seeded",
+      "reviewedAt": "2026-07-17",
+      "notes": "Awaiting Places API matching or manual review."
+    },
+    {
+      "restaurantSlug": "emeril-s-new-orleans-la",
+      "placeId": null,
+      "status": "needs_review",
+      "confidence": "low",
+      "method": "seeded",
+      "reviewedAt": "2026-07-17",
+      "notes": "Awaiting Places API matching or manual review."
+    },
+    {
+      "restaurantSlug": "enclos-sonoma-ca",
+      "placeId": null,
+      "status": "needs_review",
+      "confidence": "low",
+      "method": "seeded",
+      "reviewedAt": "2026-07-17",
+      "notes": "Awaiting Places API matching or manual review."
+    },
+    {
+      "restaurantSlug": "esme-chicago-il",
+      "placeId": null,
+      "status": "needs_review",
+      "confidence": "low",
+      "method": "seeded",
+      "reviewedAt": "2026-07-17",
+      "notes": "Awaiting Places API matching or manual review."
+    },
+    {
+      "restaurantSlug": "essential-by-christophe-new-york-ny",
+      "placeId": null,
+      "status": "needs_review",
+      "confidence": "low",
+      "method": "seeded",
+      "reviewedAt": "2026-07-17",
+      "notes": "Awaiting Places API matching or manual review."
+    },
+    {
+      "restaurantSlug": "estela-new-york-ny",
+      "placeId": null,
+      "status": "needs_review",
+      "confidence": "low",
+      "method": "seeded",
+      "reviewedAt": "2026-07-17",
+      "notes": "Awaiting Places API matching or manual review."
+    },
+    {
+      "restaurantSlug": "ever-chicago-il",
+      "placeId": null,
+      "status": "needs_review",
+      "confidence": "low",
+      "method": "seeded",
+      "reviewedAt": "2026-07-17",
+      "notes": "Awaiting Places API matching or manual review."
+    },
+    {
+      "restaurantSlug": "family-meal-at-blue-hill-new-york-ny",
+      "placeId": null,
+      "status": "needs_review",
+      "confidence": "low",
+      "method": "seeded",
+      "reviewedAt": "2026-07-17",
+      "notes": "Awaiting Places API matching or manual review."
+    },
+    {
+      "restaurantSlug": "feld-chicago-il",
+      "placeId": null,
+      "status": "needs_review",
+      "confidence": "low",
+      "method": "seeded",
+      "reviewedAt": "2026-07-17",
+      "notes": "Awaiting Places API matching or manual review."
+    },
+    {
+      "restaurantSlug": "fiola-washington-dc",
+      "placeId": null,
+      "status": "needs_review",
+      "confidence": "low",
+      "method": "seeded",
+      "reviewedAt": "2026-07-17",
+      "notes": "Awaiting Places API matching or manual review."
+    },
+    {
+      "restaurantSlug": "francie-brooklyn-ny",
+      "placeId": null,
+      "status": "needs_review",
+      "confidence": "low",
+      "method": "seeded",
+      "reviewedAt": "2026-07-17",
+      "notes": "Awaiting Places API matching or manual review."
+    },
+    {
+      "restaurantSlug": "frasca-food-and-wine-boulder-co",
+      "placeId": null,
+      "status": "needs_review",
+      "confidence": "low",
+      "method": "seeded",
+      "reviewedAt": "2026-07-17",
+      "notes": "Awaiting Places API matching or manual review."
+    },
+    {
+      "restaurantSlug": "frevo-new-york-ny",
+      "placeId": null,
+      "status": "needs_review",
+      "confidence": "low",
+      "method": "seeded",
+      "reviewedAt": "2026-07-17",
+      "notes": "Awaiting Places API matching or manual review."
+    },
+    {
+      "restaurantSlug": "friday-saturday-sunday-philadelphia-pa",
+      "placeId": null,
+      "status": "needs_review",
+      "confidence": "low",
+      "method": "seeded",
+      "reviewedAt": "2026-07-17",
+      "notes": "Awaiting Places API matching or manual review."
+    },
+    {
+      "restaurantSlug": "gabriel-kreuther-new-york-ny",
+      "placeId": null,
+      "status": "needs_review",
+      "confidence": "low",
+      "method": "seeded",
+      "reviewedAt": "2026-07-17",
+      "notes": "Awaiting Places API matching or manual review."
+    },
+    {
+      "restaurantSlug": "galit-chicago-il",
+      "placeId": null,
+      "status": "needs_review",
+      "confidence": "low",
+      "method": "seeded",
+      "reviewedAt": "2026-07-17",
+      "notes": "Awaiting Places API matching or manual review."
+    },
+    {
+      "restaurantSlug": "gramercy-tavern-new-york-ny",
+      "placeId": null,
+      "status": "needs_review",
+      "confidence": "low",
+      "method": "seeded",
+      "reviewedAt": "2026-07-17",
+      "notes": "Awaiting Places API matching or manual review."
+    },
+    {
+      "restaurantSlug": "gravitas-washington-dc",
+      "placeId": null,
+      "status": "needs_review",
+      "confidence": "low",
+      "method": "seeded",
+      "reviewedAt": "2026-07-17",
+      "notes": "Awaiting Places API matching or manual review."
+    },
+    {
+      "restaurantSlug": "harbor-house-inn-elk-ca",
+      "placeId": null,
+      "status": "needs_review",
+      "confidence": "low",
+      "method": "seeded",
+      "reviewedAt": "2026-07-17",
+      "notes": "Awaiting Places API matching or manual review."
+    },
+    {
+      "restaurantSlug": "hayakawa-atlanta-ga",
+      "placeId": null,
+      "status": "needs_review",
+      "confidence": "low",
+      "method": "seeded",
+      "reviewedAt": "2026-07-17",
+      "notes": "Awaiting Places API matching or manual review."
+    },
+    {
+      "restaurantSlug": "hayato-los-angeles-ca",
+      "placeId": null,
+      "status": "needs_review",
+      "confidence": "low",
+      "method": "seeded",
+      "reviewedAt": "2026-07-17",
+      "notes": "Awaiting Places API matching or manual review."
+    },
+    {
+      "restaurantSlug": "her-place-supper-club-philadelphia-pa",
+      "placeId": null,
+      "status": "needs_review",
+      "confidence": "low",
+      "method": "seeded",
+      "reviewedAt": "2026-07-17",
+      "notes": "Awaiting Places API matching or manual review."
+    },
+    {
+      "restaurantSlug": "heritage-long-beach-ca",
+      "placeId": null,
+      "status": "needs_review",
+      "confidence": "low",
+      "method": "seeded",
+      "reviewedAt": "2026-07-17",
+      "notes": "Awaiting Places API matching or manual review."
+    },
+    {
+      "restaurantSlug": "hestia-austin-tx",
+      "placeId": null,
+      "status": "needs_review",
+      "confidence": "low",
+      "method": "seeded",
+      "reviewedAt": "2026-07-17",
+      "notes": "Awaiting Places API matching or manual review."
+    },
+    {
+      "restaurantSlug": "hiden-miami-fl",
+      "placeId": null,
+      "status": "needs_review",
+      "confidence": "low",
+      "method": "seeded",
+      "reviewedAt": "2026-07-17",
+      "notes": "Awaiting Places API matching or manual review."
+    },
+    {
+      "restaurantSlug": "hilda-and-jesse-san-francisco-ca",
+      "placeId": null,
+      "status": "needs_review",
+      "confidence": "low",
+      "method": "seeded",
+      "reviewedAt": "2026-07-17",
+      "notes": "Awaiting Places API matching or manual review."
+    },
+    {
+      "restaurantSlug": "holbox-los-angeles-ca",
+      "placeId": null,
+      "status": "needs_review",
+      "confidence": "low",
+      "method": "seeded",
+      "reviewedAt": "2026-07-17",
+      "notes": "Awaiting Places API matching or manual review."
+    },
+    {
+      "restaurantSlug": "huso-new-york-ny",
+      "placeId": null,
+      "status": "needs_review",
+      "confidence": "low",
+      "method": "seeded",
+      "reviewedAt": "2026-07-17",
+      "notes": "Awaiting Places API matching or manual review."
+    },
+    {
+      "restaurantSlug": "icca-new-york-ny",
+      "placeId": null,
+      "status": "needs_review",
+      "confidence": "low",
+      "method": "seeded",
+      "reviewedAt": "2026-07-17",
+      "notes": "Awaiting Places API matching or manual review."
+    },
+    {
+      "restaurantSlug": "imperfecto-the-chef-s-table-washington-dc",
+      "placeId": null,
+      "status": "needs_review",
+      "confidence": "low",
+      "method": "seeded",
+      "reviewedAt": "2026-07-17",
+      "notes": "Awaiting Places API matching or manual review."
+    },
+    {
+      "restaurantSlug": "indienne-chicago-il",
+      "placeId": null,
+      "status": "needs_review",
+      "confidence": "low",
+      "method": "seeded",
+      "reviewedAt": "2026-07-17",
+      "notes": "Awaiting Places API matching or manual review."
+    },
+    {
+      "restaurantSlug": "interstellar-bbq-austin-tx",
+      "placeId": null,
+      "status": "needs_review",
+      "confidence": "low",
+      "method": "seeded",
+      "reviewedAt": "2026-07-17",
+      "notes": "Awaiting Places API matching or manual review."
+    },
+    {
+      "restaurantSlug": "isidore-san-antonio-tx",
+      "placeId": null,
+      "status": "needs_review",
+      "confidence": "low",
+      "method": "seeded",
+      "reviewedAt": "2026-07-17",
+      "notes": "Awaiting Places API matching or manual review."
+    },
+    {
+      "restaurantSlug": "jean-georges-new-york-ny",
+      "placeId": null,
+      "status": "needs_review",
+      "confidence": "low",
+      "method": "seeded",
+      "reviewedAt": "2026-07-17",
+      "notes": "Awaiting Places API matching or manual review."
+    },
+    {
+      "restaurantSlug": "jeju-noodle-bar-new-york-ny",
+      "placeId": null,
+      "status": "needs_review",
+      "confidence": "low",
+      "method": "seeded",
+      "reviewedAt": "2026-07-17",
+      "notes": "Awaiting Places API matching or manual review."
+    },
+    {
+      "restaurantSlug": "jeune-et-jolie-carlsbad-ca",
+      "placeId": null,
+      "status": "needs_review",
+      "confidence": "low",
+      "method": "seeded",
+      "reviewedAt": "2026-07-17",
+      "notes": "Awaiting Places API matching or manual review."
+    },
+    {
+      "restaurantSlug": "joji-new-york-ny",
+      "placeId": null,
+      "status": "needs_review",
+      "confidence": "low",
+      "method": "seeded",
+      "reviewedAt": "2026-07-17",
+      "notes": "Awaiting Places API matching or manual review."
+    },
+    {
+      "restaurantSlug": "jont-washington-dc",
+      "placeId": null,
+      "status": "needs_review",
+      "confidence": "low",
+      "method": "seeded",
+      "reviewedAt": "2026-07-17",
+      "notes": "Awaiting Places API matching or manual review."
+    },
+    {
+      "restaurantSlug": "joo-ok-new-york-ny",
+      "placeId": null,
+      "status": "needs_review",
+      "confidence": "low",
+      "method": "seeded",
+      "reviewedAt": "2026-07-17",
+      "notes": "Awaiting Places API matching or manual review."
+    },
+    {
+      "restaurantSlug": "jua-new-york-ny",
+      "placeId": null,
+      "status": "needs_review",
+      "confidence": "low",
+      "method": "seeded",
+      "reviewedAt": "2026-07-17",
+      "notes": "Awaiting Places API matching or manual review."
+    },
+    {
+      "restaurantSlug": "jungsik-new-york-new-york-ny",
+      "placeId": null,
+      "status": "needs_review",
+      "confidence": "low",
+      "method": "seeded",
+      "reviewedAt": "2026-07-17",
+      "notes": "Awaiting Places API matching or manual review."
+    },
+    {
+      "restaurantSlug": "kadence-orlando-fl",
+      "placeId": null,
+      "status": "needs_review",
+      "confidence": "low",
+      "method": "seeded",
+      "reviewedAt": "2026-07-17",
+      "notes": "Awaiting Places API matching or manual review."
+    },
+    {
+      "restaurantSlug": "kali-los-angeles-ca",
+      "placeId": null,
+      "status": "needs_review",
+      "confidence": "low",
+      "method": "seeded",
+      "reviewedAt": "2026-07-17",
+      "notes": "Awaiting Places API matching or manual review."
+    },
+    {
+      "restaurantSlug": "kasama-chicago-il",
+      "placeId": null,
+      "status": "needs_review",
+      "confidence": "low",
+      "method": "seeded",
+      "reviewedAt": "2026-07-17",
+      "notes": "Awaiting Places API matching or manual review."
+    },
+    {
+      "restaurantSlug": "kato-los-angeles-ca",
+      "placeId": null,
+      "status": "needs_review",
+      "confidence": "low",
+      "method": "seeded",
+      "reviewedAt": "2026-07-17",
+      "notes": "Awaiting Places API matching or manual review."
+    },
+    {
+      "restaurantSlug": "kiln-san-francisco-ca",
+      "placeId": null,
+      "status": "needs_review",
+      "confidence": "low",
+      "method": "seeded",
+      "reviewedAt": "2026-07-17",
+      "notes": "Awaiting Places API matching or manual review."
+    },
+    {
+      "restaurantSlug": "kin-khao-san-francisco-ca",
+      "placeId": null,
+      "status": "needs_review",
+      "confidence": "low",
+      "method": "seeded",
+      "reviewedAt": "2026-07-17",
+      "notes": "Awaiting Places API matching or manual review."
+    },
+    {
+      "restaurantSlug": "kizaki-denver-co",
+      "placeId": null,
+      "status": "needs_review",
+      "confidence": "low",
+      "method": "seeded",
+      "reviewedAt": "2026-07-17",
+      "notes": "Awaiting Places API matching or manual review."
+    },
+    {
+      "restaurantSlug": "kochi-new-york-ny",
+      "placeId": null,
+      "status": "needs_review",
+      "confidence": "low",
+      "method": "seeded",
+      "reviewedAt": "2026-07-17",
+      "notes": "Awaiting Places API matching or manual review."
+    },
+    {
+      "restaurantSlug": "kojima-los-angeles-ca",
+      "placeId": null,
+      "status": "needs_review",
+      "confidence": "low",
+      "method": "seeded",
+      "reviewedAt": "2026-07-17",
+      "notes": "Awaiting Places API matching or manual review."
+    },
+    {
+      "restaurantSlug": "kosaka-new-york-ny",
+      "placeId": null,
+      "status": "needs_review",
+      "confidence": "low",
+      "method": "seeded",
+      "reviewedAt": "2026-07-17",
+      "notes": "Awaiting Places API matching or manual review."
+    },
+    {
+      "restaurantSlug": "kosen-tampa-fl",
+      "placeId": null,
+      "status": "needs_review",
+      "confidence": "low",
+      "method": "seeded",
+      "reviewedAt": "2026-07-17",
+      "notes": "Awaiting Places API matching or manual review."
+    },
+    {
+      "restaurantSlug": "koya-tampa-fl",
+      "placeId": null,
+      "status": "needs_review",
+      "confidence": "low",
+      "method": "seeded",
+      "reviewedAt": "2026-07-17",
+      "notes": "Awaiting Places API matching or manual review."
+    },
+    {
+      "restaurantSlug": "l-abeille-new-york-ny",
+      "placeId": null,
+      "status": "needs_review",
+      "confidence": "low",
+      "method": "seeded",
+      "reviewedAt": "2026-07-17",
+      "notes": "Awaiting Places API matching or manual review."
+    },
+    {
+      "restaurantSlug": "l-atelier-de-joel-robuchon-miami-miami-fl",
+      "placeId": null,
+      "status": "needs_review",
+      "confidence": "low",
+      "method": "seeded",
+      "reviewedAt": "2026-07-17",
+      "notes": "Awaiting Places API matching or manual review."
+    },
+    {
+      "restaurantSlug": "la-barbecue-austin-tx",
+      "placeId": null,
+      "status": "needs_review",
+      "confidence": "low",
+      "method": "seeded",
+      "reviewedAt": "2026-07-17",
+      "notes": "Awaiting Places API matching or manual review."
+    },
+    {
+      "restaurantSlug": "la-bastide-by-andrea-calstier-north-salem-ny",
+      "placeId": null,
+      "status": "needs_review",
+      "confidence": "low",
+      "method": "seeded",
+      "reviewedAt": "2026-07-17",
+      "notes": "Awaiting Places API matching or manual review."
+    },
+    {
+      "restaurantSlug": "lazy-bear-san-francisco-ca",
+      "placeId": null,
+      "status": "needs_review",
+      "confidence": "low",
+      "method": "seeded",
+      "reviewedAt": "2026-07-17",
+      "notes": "Awaiting Places API matching or manual review."
+    },
+    {
+      "restaurantSlug": "lazy-betty-atlanta-ga",
+      "placeId": "ChIJ8c6xXQ0E9YgR5-373N6fF4s",
+      "status": "manually_approved",
+      "confidence": "medium",
+      "method": "spike_fixture",
+      "reviewedAt": "2026-07-17",
+      "notes": "GP1 spike — limited photos provisional Place ID."
+    },
+    {
+      "restaurantSlug": "le-bernardin-new-york-ny",
+      "placeId": null,
+      "status": "needs_review",
+      "confidence": "low",
+      "method": "seeded",
+      "reviewedAt": "2026-07-17",
+      "notes": "Awaiting Places API matching or manual review."
+    },
+    {
+      "restaurantSlug": "le-coucou-new-york-ny",
+      "placeId": null,
+      "status": "needs_review",
+      "confidence": "low",
+      "method": "seeded",
+      "reviewedAt": "2026-07-17",
+      "notes": "Awaiting Places API matching or manual review."
+    },
+    {
+      "restaurantSlug": "le-jardinier-houston-houston-tx",
+      "placeId": null,
+      "status": "needs_review",
+      "confidence": "low",
+      "method": "seeded",
+      "reviewedAt": "2026-07-17",
+      "notes": "Awaiting Places API matching or manual review."
+    },
+    {
+      "restaurantSlug": "le-jardinier-miami-miami-fl",
+      "placeId": null,
+      "status": "needs_review",
+      "confidence": "low",
+      "method": "seeded",
+      "reviewedAt": "2026-07-17",
+      "notes": "Awaiting Places API matching or manual review."
+    },
+    {
+      "restaurantSlug": "le-pavillon-new-york-ny",
+      "placeId": null,
+      "status": "needs_review",
+      "confidence": "low",
+      "method": "seeded",
+      "reviewedAt": "2026-07-17",
+      "notes": "Awaiting Places API matching or manual review."
+    },
+    {
+      "restaurantSlug": "leroy-and-lewis-barbecue-austin-tx",
+      "placeId": null,
+      "status": "needs_review",
+      "confidence": "low",
+      "method": "seeded",
+      "reviewedAt": "2026-07-17",
+      "notes": "Awaiting Places API matching or manual review."
+    },
+    {
+      "restaurantSlug": "lielle-los-angeles-ca",
+      "placeId": null,
+      "status": "needs_review",
+      "confidence": "low",
+      "method": "seeded",
+      "reviewedAt": "2026-07-17",
+      "notes": "Awaiting Places API matching or manual review."
+    },
+    {
+      "restaurantSlug": "lilo-carlsbad-ca",
+      "placeId": null,
+      "status": "needs_review",
+      "confidence": "low",
+      "method": "seeded",
+      "reviewedAt": "2026-07-17",
+      "notes": "Awaiting Places API matching or manual review."
+    },
+    {
+      "restaurantSlug": "little-pearl-washington-dc",
+      "placeId": null,
+      "status": "needs_review",
+      "confidence": "low",
+      "method": "seeded",
+      "reviewedAt": "2026-07-17",
+      "notes": "Awaiting Places API matching or manual review."
+    },
+    {
+      "restaurantSlug": "localis-sacramento-ca",
+      "placeId": null,
+      "status": "needs_review",
+      "confidence": "low",
+      "method": "seeded",
+      "reviewedAt": "2026-07-17",
+      "notes": "Awaiting Places API matching or manual review."
+    },
+    {
+      "restaurantSlug": "locust-nashville-tn",
+      "placeId": null,
+      "status": "needs_review",
+      "confidence": "low",
+      "method": "seeded",
+      "reviewedAt": "2026-07-17",
+      "notes": "Awaiting Places API matching or manual review."
+    },
+    {
+      "restaurantSlug": "los-felix-miami-fl",
+      "placeId": null,
+      "status": "needs_review",
+      "confidence": "low",
+      "method": "seeded",
+      "reviewedAt": "2026-07-17",
+      "notes": "Awaiting Places API matching or manual review."
+    },
+    {
+      "restaurantSlug": "lucien-la-jolla-ca",
+      "placeId": null,
+      "status": "needs_review",
+      "confidence": "low",
+      "method": "seeded",
+      "reviewedAt": "2026-07-17",
+      "notes": "Awaiting Places API matching or manual review."
+    },
+    {
+      "restaurantSlug": "madcap-san-anselmo-ca",
+      "placeId": null,
+      "status": "needs_review",
+      "confidence": "low",
+      "method": "seeded",
+      "reviewedAt": "2026-07-17",
+      "notes": "Awaiting Places API matching or manual review."
+    },
+    {
+      "restaurantSlug": "mako-chicago-il",
+      "placeId": null,
+      "status": "needs_review",
+      "confidence": "low",
+      "method": "seeded",
+      "reviewedAt": "2026-07-17",
+      "notes": "Awaiting Places API matching or manual review."
+    },
+    {
+      "restaurantSlug": "malagon-mercado-y-taperia-charleston-sc",
+      "placeId": null,
+      "status": "needs_review",
+      "confidence": "low",
+      "method": "seeded",
+      "reviewedAt": "2026-07-17",
+      "notes": "Awaiting Places API matching or manual review."
+    },
+    {
+      "restaurantSlug": "mamani-dallas-tx",
+      "placeId": null,
+      "status": "needs_review",
+      "confidence": "low",
+      "method": "seeded",
+      "reviewedAt": "2026-07-17",
+      "notes": "Awaiting Places API matching or manual review."
+    },
+    {
+      "restaurantSlug": "march-houston-tx",
+      "placeId": null,
+      "status": "needs_review",
+      "confidence": "low",
+      "method": "seeded",
+      "reviewedAt": "2026-07-17",
+      "notes": "Awaiting Places API matching or manual review."
+    },
+    {
+      "restaurantSlug": "margot-denver-co",
+      "placeId": null,
+      "status": "needs_review",
+      "confidence": "low",
+      "method": "seeded",
+      "reviewedAt": "2026-07-17",
+      "notes": "Awaiting Places API matching or manual review."
+    },
+    {
+      "restaurantSlug": "mari-new-york-ny",
+      "placeId": null,
+      "status": "needs_review",
+      "confidence": "low",
+      "method": "seeded",
+      "reviewedAt": "2026-07-17",
+      "notes": "Awaiting Places API matching or manual review."
+    },
+    {
+      "restaurantSlug": "masa-new-york-ny",
+      "placeId": null,
+      "status": "needs_review",
+      "confidence": "low",
+      "method": "seeded",
+      "reviewedAt": "2026-07-17",
+      "notes": "Awaiting Places API matching or manual review."
+    },
+    {
+      "restaurantSlug": "masseria-washington-dc",
+      "placeId": null,
+      "status": "needs_review",
+      "confidence": "low",
+      "method": "seeded",
+      "reviewedAt": "2026-07-17",
+      "notes": "Awaiting Places API matching or manual review."
+    },
+    {
+      "restaurantSlug": "meju-queens-ny",
+      "placeId": null,
+      "status": "needs_review",
+      "confidence": "low",
+      "method": "seeded",
+      "reviewedAt": "2026-07-17",
+      "notes": "Awaiting Places API matching or manual review."
+    },
+    {
+      "restaurantSlug": "melisse-santa-monica-ca",
+      "placeId": null,
+      "status": "needs_review",
+      "confidence": "low",
+      "method": "seeded",
+      "reviewedAt": "2026-07-17",
+      "notes": "Awaiting Places API matching or manual review."
+    },
+    {
+      "restaurantSlug": "meteora-los-angeles-ca",
+      "placeId": null,
+      "status": "needs_review",
+      "confidence": "low",
+      "method": "seeded",
+      "reviewedAt": "2026-07-17",
+      "notes": "Awaiting Places API matching or manual review."
+    },
+    {
+      "restaurantSlug": "mezcaleria-alma-denver-co",
+      "placeId": null,
+      "status": "needs_review",
+      "confidence": "low",
+      "method": "seeded",
+      "reviewedAt": "2026-07-17",
+      "notes": "Awaiting Places API matching or manual review."
+    },
+    {
+      "restaurantSlug": "minibar-by-jose-andres-washington-dc",
+      "placeId": null,
+      "status": "needs_review",
+      "confidence": "low",
+      "method": "seeded",
+      "reviewedAt": "2026-07-17",
+      "notes": "Awaiting Places API matching or manual review."
+    },
+    {
+      "restaurantSlug": "mister-jiu-s-san-francisco-ca",
+      "placeId": null,
+      "status": "needs_review",
+      "confidence": "low",
+      "method": "seeded",
+      "reviewedAt": "2026-07-17",
+      "notes": "Awaiting Places API matching or manual review."
+    },
+    {
+      "restaurantSlug": "mita-washington-dc",
+      "placeId": null,
+      "status": "needs_review",
+      "confidence": "low",
+      "method": "seeded",
+      "reviewedAt": "2026-07-17",
+      "notes": "Awaiting Places API matching or manual review."
+    },
+    {
+      "restaurantSlug": "miura-beverly-hills-ca",
+      "placeId": null,
+      "status": "needs_review",
+      "confidence": "low",
+      "method": "seeded",
+      "reviewedAt": "2026-07-17",
+      "notes": "Awaiting Places API matching or manual review."
+    },
+    {
+      "restaurantSlug": "mixtli-san-antonio-tx",
+      "placeId": null,
+      "status": "needs_review",
+      "confidence": "low",
+      "method": "seeded",
+      "reviewedAt": "2026-07-17",
+      "notes": "Awaiting Places API matching or manual review."
+    },
+    {
+      "restaurantSlug": "moody-tongue-chicago-il",
+      "placeId": null,
+      "status": "needs_review",
+      "confidence": "low",
+      "method": "seeded",
+      "reviewedAt": "2026-07-17",
+      "notes": "Awaiting Places API matching or manual review."
+    },
+    {
+      "restaurantSlug": "mori-nozomi-los-angeles-ca",
+      "placeId": null,
+      "status": "needs_review",
+      "confidence": "low",
+      "method": "seeded",
+      "reviewedAt": "2026-07-17",
+      "notes": "Awaiting Places API matching or manual review."
+    },
+    {
+      "restaurantSlug": "mujo-atlanta-ga",
+      "placeId": null,
+      "status": "needs_review",
+      "confidence": "low",
+      "method": "seeded",
+      "reviewedAt": "2026-07-17",
+      "notes": "Awaiting Places API matching or manual review."
+    },
+    {
+      "restaurantSlug": "muku-new-york-ny",
+      "placeId": null,
+      "status": "needs_review",
+      "confidence": "low",
+      "method": "seeded",
+      "reviewedAt": "2026-07-17",
+      "notes": "Awaiting Places API matching or manual review."
+    },
+    {
+      "restaurantSlug": "musaafer-houston-tx",
+      "placeId": null,
+      "status": "needs_review",
+      "confidence": "low",
+      "method": "seeded",
+      "reviewedAt": "2026-07-17",
+      "notes": "Awaiting Places API matching or manual review."
+    },
+    {
+      "restaurantSlug": "mutra-north-miami-fl",
+      "placeId": null,
+      "status": "needs_review",
+      "confidence": "low",
+      "method": "seeded",
+      "reviewedAt": "2026-07-17",
+      "notes": "Awaiting Places API matching or manual review."
+    },
+    {
+      "restaurantSlug": "n-naka-los-angeles-ca",
+      "placeId": null,
+      "status": "needs_review",
+      "confidence": "low",
+      "method": "seeded",
+      "reviewedAt": "2026-07-17",
+      "notes": "Awaiting Places API matching or manual review."
+    },
+    {
+      "restaurantSlug": "nari-san-francisco-ca",
+      "placeId": null,
+      "status": "needs_review",
+      "confidence": "low",
+      "method": "seeded",
+      "reviewedAt": "2026-07-17",
+      "notes": "Awaiting Places API matching or manual review."
+    },
+    {
+      "restaurantSlug": "next-chicago-il",
+      "placeId": null,
+      "status": "needs_review",
+      "confidence": "low",
+      "method": "seeded",
+      "reviewedAt": "2026-07-17",
+      "notes": "Awaiting Places API matching or manual review."
+    },
+    {
+      "restaurantSlug": "nicosi-san-antonio-tx",
+      "placeId": null,
+      "status": "needs_review",
+      "confidence": "low",
+      "method": "seeded",
+      "reviewedAt": "2026-07-17",
+      "notes": "Awaiting Places API matching or manual review."
+    },
+    {
+      "restaurantSlug": "niku-steakhouse-san-francisco-ca",
+      "placeId": null,
+      "status": "needs_review",
+      "confidence": "low",
+      "method": "seeded",
+      "reviewedAt": "2026-07-17",
+      "notes": "Awaiting Places API matching or manual review."
+    },
+    {
+      "restaurantSlug": "nisei-san-francisco-ca",
+      "placeId": null,
+      "status": "needs_review",
+      "confidence": "low",
+      "method": "seeded",
+      "reviewedAt": "2026-07-17",
+      "notes": "Awaiting Places API matching or manual review."
+    },
+    {
+      "restaurantSlug": "noda-new-york-ny",
+      "placeId": null,
+      "status": "needs_review",
+      "confidence": "low",
+      "method": "seeded",
+      "reviewedAt": "2026-07-17",
+      "notes": "Awaiting Places API matching or manual review."
+    },
+    {
+      "restaurantSlug": "noksu-new-york-ny",
+      "placeId": null,
+      "status": "needs_review",
+      "confidence": "low",
+      "method": "seeded",
+      "reviewedAt": "2026-07-17",
+      "notes": "Awaiting Places API matching or manual review."
+    },
+    {
+      "restaurantSlug": "noz-17-new-york-ny",
+      "placeId": null,
+      "status": "needs_review",
+      "confidence": "low",
+      "method": "seeded",
+      "reviewedAt": "2026-07-17",
+      "notes": "Awaiting Places API matching or manual review."
+    },
+    {
+      "restaurantSlug": "nozawa-bar-beverly-hills-ca",
+      "placeId": null,
+      "status": "needs_review",
+      "confidence": "low",
+      "method": "seeded",
+      "reviewedAt": "2026-07-17",
+      "notes": "Awaiting Places API matching or manual review."
+    },
+    {
+      "restaurantSlug": "o-by-brush-atlanta-ga",
+      "placeId": null,
+      "status": "needs_review",
+      "confidence": "low",
+      "method": "seeded",
+      "reviewedAt": "2026-07-17",
+      "notes": "Awaiting Places API matching or manual review."
+    },
+    {
+      "restaurantSlug": "odo-new-york-ny",
+      "placeId": null,
+      "status": "needs_review",
+      "confidence": "low",
+      "method": "seeded",
+      "reviewedAt": "2026-07-17",
+      "notes": "Awaiting Places API matching or manual review."
+    },
+    {
+      "restaurantSlug": "ogawa-miami-fl",
+      "placeId": null,
+      "status": "needs_review",
+      "confidence": "low",
+      "method": "seeded",
+      "reviewedAt": "2026-07-17",
+      "notes": "Awaiting Places API matching or manual review."
+    },
+    {
+      "restaurantSlug": "oiji-mi-new-york-ny",
+      "placeId": null,
+      "status": "needs_review",
+      "confidence": "low",
+      "method": "seeded",
+      "reviewedAt": "2026-07-17",
+      "notes": "Awaiting Places API matching or manual review."
+    },
+    {
+      "restaurantSlug": "olamaie-austin-tx",
+      "placeId": null,
+      "status": "needs_review",
+      "confidence": "low",
+      "method": "seeded",
+      "reviewedAt": "2026-07-17",
+      "notes": "Awaiting Places API matching or manual review."
+    },
+    {
+      "restaurantSlug": "omakase-at-barracks-row-washington-dc",
+      "placeId": null,
+      "status": "needs_review",
+      "confidence": "low",
+      "method": "seeded",
+      "reviewedAt": "2026-07-17",
+      "notes": "Awaiting Places API matching or manual review."
+    },
+    {
+      "restaurantSlug": "omakase-table-atlanta-ga",
+      "placeId": null,
+      "status": "needs_review",
+      "confidence": "low",
+      "method": "seeded",
+      "reviewedAt": "2026-07-17",
+      "notes": "Awaiting Places API matching or manual review."
+    },
+    {
+      "restaurantSlug": "omo-by-jont-winter-park-fl",
+      "placeId": null,
+      "status": "needs_review",
+      "confidence": "low",
+      "method": "seeded",
+      "reviewedAt": "2026-07-17",
+      "notes": "Awaiting Places API matching or manual review."
+    },
+    {
+      "restaurantSlug": "oriole-chicago-il",
+      "placeId": null,
+      "status": "needs_review",
+      "confidence": "low",
+      "method": "seeded",
+      "reviewedAt": "2026-07-17",
+      "notes": "Awaiting Places API matching or manual review."
+    },
+    {
+      "restaurantSlug": "orsa-and-winston-los-angeles-ca",
+      "placeId": null,
+      "status": "needs_review",
+      "confidence": "low",
+      "method": "seeded",
+      "reviewedAt": "2026-07-17",
+      "notes": "Awaiting Places API matching or manual review."
+    },
+    {
+      "restaurantSlug": "osteria-mozza-los-angeles-ca",
+      "placeId": null,
+      "status": "needs_review",
+      "confidence": "low",
+      "method": "seeded",
+      "reviewedAt": "2026-07-17",
+      "notes": "Awaiting Places API matching or manual review."
+    },
+    {
+      "restaurantSlug": "oxomoco-brooklyn-ny",
+      "placeId": null,
+      "status": "needs_review",
+      "confidence": "low",
+      "method": "seeded",
+      "reviewedAt": "2026-07-17",
+      "notes": "Awaiting Places API matching or manual review."
+    },
+    {
+      "restaurantSlug": "oyster-oyster-washington-dc",
+      "placeId": null,
+      "status": "needs_review",
+      "confidence": "low",
+      "method": "seeded",
+      "reviewedAt": "2026-07-17",
+      "notes": "Awaiting Places API matching or manual review."
+    },
+    {
+      "restaurantSlug": "pasta-bar-encino-ca",
+      "placeId": null,
+      "status": "needs_review",
+      "confidence": "low",
+      "method": "seeded",
+      "reviewedAt": "2026-07-17",
+      "notes": "Awaiting Places API matching or manual review."
+    },
+    {
+      "restaurantSlug": "per-se-new-york-ny",
+      "placeId": null,
+      "status": "needs_review",
+      "confidence": "low",
+      "method": "seeded",
+      "reviewedAt": "2026-07-17",
+      "notes": "Awaiting Places API matching or manual review."
+    },
+    {
+      "restaurantSlug": "pineapple-and-pearls-washington-dc",
+      "placeId": null,
+      "status": "needs_review",
+      "confidence": "low",
+      "method": "seeded",
+      "reviewedAt": "2026-07-17",
+      "notes": "Awaiting Places API matching or manual review."
+    },
+    {
+      "restaurantSlug": "plumed-horse-saratoga-ca",
+      "placeId": null,
+      "status": "needs_review",
+      "confidence": "low",
+      "method": "seeded",
+      "reviewedAt": "2026-07-17",
+      "notes": "Awaiting Places API matching or manual review."
+    },
+    {
+      "restaurantSlug": "press-saint-helena-ca",
+      "placeId": null,
+      "status": "needs_review",
+      "confidence": "low",
+      "method": "seeded",
+      "reviewedAt": "2026-07-17",
+      "notes": "Awaiting Places API matching or manual review."
+    },
+    {
+      "restaurantSlug": "protege-palo-alto-ca",
+      "placeId": null,
+      "status": "needs_review",
+      "confidence": "low",
+      "method": "seeded",
+      "reviewedAt": "2026-07-17",
+      "notes": "Awaiting Places API matching or manual review."
+    },
+    {
+      "restaurantSlug": "provenance-philadelphia-pa",
+      "placeId": null,
+      "status": "needs_review",
+      "confidence": "low",
+      "method": "seeded",
+      "reviewedAt": "2026-07-17",
+      "notes": "Awaiting Places API matching or manual review."
+    },
+    {
+      "restaurantSlug": "providence-los-angeles-ca",
+      "placeId": null,
+      "status": "needs_review",
+      "confidence": "low",
+      "method": "seeded",
+      "reviewedAt": "2026-07-17",
+      "notes": "Awaiting Places API matching or manual review."
+    },
+    {
+      "restaurantSlug": "quince-san-francisco-ca",
+      "placeId": null,
+      "status": "needs_review",
+      "confidence": "low",
+      "method": "seeded",
+      "reviewedAt": "2026-07-17",
+      "notes": "Awaiting Places API matching or manual review."
+    },
+    {
+      "restaurantSlug": "r-o-rebel-omakase-laguna-beach-ca",
+      "placeId": null,
+      "status": "needs_review",
+      "confidence": "low",
+      "method": "seeded",
+      "reviewedAt": "2026-07-17",
+      "notes": "Awaiting Places API matching or manual review."
+    },
+    {
+      "restaurantSlug": "rania-washington-dc",
+      "placeId": null,
+      "status": "needs_review",
+      "confidence": "low",
+      "method": "seeded",
+      "reviewedAt": "2026-07-17",
+      "notes": "Awaiting Places API matching or manual review."
+    },
+    {
+      "restaurantSlug": "restaurant-ki-los-angeles-ca",
+      "placeId": null,
+      "status": "needs_review",
+      "confidence": "low",
+      "method": "seeded",
+      "reviewedAt": "2026-07-17",
+      "notes": "Awaiting Places API matching or manual review."
+    },
+    {
+      "restaurantSlug": "restaurant-naides-san-francisco-ca",
+      "placeId": null,
+      "status": "needs_review",
+      "confidence": "low",
+      "method": "seeded",
+      "reviewedAt": "2026-07-17",
+      "notes": "Awaiting Places API matching or manual review."
+    },
+    {
+      "restaurantSlug": "restaurant-yuu-brooklyn-ny",
+      "placeId": null,
+      "status": "needs_review",
+      "confidence": "low",
+      "method": "seeded",
+      "reviewedAt": "2026-07-17",
+      "notes": "Awaiting Places API matching or manual review."
+    },
+    {
+      "restaurantSlug": "rezdora-new-york-ny",
+      "placeId": null,
+      "status": "needs_review",
+      "confidence": "low",
+      "method": "seeded",
+      "reviewedAt": "2026-07-17",
+      "notes": "Awaiting Places API matching or manual review."
+    },
+    {
+      "restaurantSlug": "rocca-tampa-fl",
+      "placeId": null,
+      "status": "needs_review",
+      "confidence": "low",
+      "method": "seeded",
+      "reviewedAt": "2026-07-17",
+      "notes": "Awaiting Places API matching or manual review."
+    },
+    {
+      "restaurantSlug": "rooster-and-owl-washington-dc",
+      "placeId": null,
+      "status": "needs_review",
+      "confidence": "low",
+      "method": "seeded",
+      "reviewedAt": "2026-07-17",
+      "notes": "Awaiting Places API matching or manual review."
+    },
+    {
+      "restaurantSlug": "rose-s-luxury-washington-dc",
+      "placeId": null,
+      "status": "needs_review",
+      "confidence": "low",
+      "method": "seeded",
+      "reviewedAt": "2026-07-17",
+      "notes": "Awaiting Places API matching or manual review."
+    },
+    {
+      "restaurantSlug": "saga-new-york-ny",
+      "placeId": null,
+      "status": "no_match",
+      "confidence": "low",
+      "method": "spike_fixture",
+      "reviewedAt": "2026-07-17",
+      "notes": "GP1 spike — stand-in for missing confident match."
+    },
+    {
+      "restaurantSlug": "saint-germain-new-orleans-la",
+      "placeId": null,
+      "status": "needs_review",
+      "confidence": "low",
+      "method": "seeded",
+      "reviewedAt": "2026-07-17",
+      "notes": "Awaiting Places API matching or manual review."
+    },
+    {
+      "restaurantSlug": "saison-san-francisco-ca",
+      "placeId": null,
+      "status": "needs_review",
+      "confidence": "low",
+      "method": "seeded",
+      "reviewedAt": "2026-07-17",
+      "notes": "Awaiting Places API matching or manual review."
+    },
+    {
+      "restaurantSlug": "san-ho-won-san-francisco-ca",
+      "placeId": null,
+      "status": "needs_review",
+      "confidence": "low",
+      "method": "seeded",
+      "reviewedAt": "2026-07-17",
+      "notes": "Awaiting Places API matching or manual review."
+    },
+    {
+      "restaurantSlug": "schwa-chicago-il",
+      "placeId": null,
+      "status": "needs_review",
+      "confidence": "low",
+      "method": "seeded",
+      "reviewedAt": "2026-07-17",
+      "notes": "Awaiting Places API matching or manual review."
+    },
+    {
+      "restaurantSlug": "scoundrel-greenville-sc",
+      "placeId": null,
+      "status": "needs_review",
+      "confidence": "low",
+      "method": "seeded",
+      "reviewedAt": "2026-07-17",
+      "notes": "Awaiting Places API matching or manual review."
+    },
+    {
+      "restaurantSlug": "selby-s-atherton-ca",
+      "placeId": null,
+      "status": "needs_review",
+      "confidence": "low",
+      "method": "seeded",
+      "reviewedAt": "2026-07-17",
+      "notes": "Awaiting Places API matching or manual review."
+    },
+    {
+      "restaurantSlug": "seline-santa-monica-ca",
+      "placeId": null,
+      "status": "needs_review",
+      "confidence": "low",
+      "method": "seeded",
+      "reviewedAt": "2026-07-17",
+      "notes": "Awaiting Places API matching or manual review."
+    },
+    {
+      "restaurantSlug": "semma-new-york-ny",
+      "placeId": null,
+      "status": "needs_review",
+      "confidence": "low",
+      "method": "seeded",
+      "reviewedAt": "2026-07-17",
+      "notes": "Awaiting Places API matching or manual review."
+    },
+    {
+      "restaurantSlug": "sepia-chicago-il",
+      "placeId": null,
+      "status": "needs_review",
+      "confidence": "low",
+      "method": "seeded",
+      "reviewedAt": "2026-07-17",
+      "notes": "Awaiting Places API matching or manual review."
+    },
+    {
+      "restaurantSlug": "shin-sushi-encino-ca",
+      "placeId": null,
+      "status": "needs_review",
+      "confidence": "low",
+      "method": "seeded",
+      "reviewedAt": "2026-07-17",
+      "notes": "Awaiting Places API matching or manual review."
+    },
+    {
+      "restaurantSlug": "shingo-coral-gables-fl",
+      "placeId": null,
+      "status": "needs_review",
+      "confidence": "low",
+      "method": "seeded",
+      "reviewedAt": "2026-07-17",
+      "notes": "Awaiting Places API matching or manual review."
+    },
+    {
+      "restaurantSlug": "shmone-new-york-ny",
+      "placeId": null,
+      "status": "needs_review",
+      "confidence": "low",
+      "method": "seeded",
+      "reviewedAt": "2026-07-17",
+      "notes": "Awaiting Places API matching or manual review."
+    },
+    {
+      "restaurantSlug": "shota-omakase-brooklyn-ny",
+      "placeId": null,
+      "status": "needs_review",
+      "confidence": "low",
+      "method": "seeded",
+      "reviewedAt": "2026-07-17",
+      "notes": "Awaiting Places API matching or manual review."
+    },
+    {
+      "restaurantSlug": "silvers-omakase-santa-barbara-ca",
+      "placeId": null,
+      "status": "needs_review",
+      "confidence": "low",
+      "method": "seeded",
+      "reviewedAt": "2026-07-17",
+      "notes": "Awaiting Places API matching or manual review."
+    },
+    {
+      "restaurantSlug": "singlethread-healdsburg-ca",
+      "placeId": null,
+      "status": "needs_review",
+      "confidence": "low",
+      "method": "seeded",
+      "reviewedAt": "2026-07-17",
+      "notes": "Awaiting Places API matching or manual review."
+    },
+    {
+      "restaurantSlug": "six-test-kitchen-paso-robles-ca",
+      "placeId": null,
+      "status": "needs_review",
+      "confidence": "low",
+      "method": "seeded",
+      "reviewedAt": "2026-07-17",
+      "notes": "Awaiting Places API matching or manual review."
+    },
+    {
+      "restaurantSlug": "smyth-chicago-il",
+      "placeId": null,
+      "status": "needs_review",
+      "confidence": "low",
+      "method": "seeded",
+      "reviewedAt": "2026-07-17",
+      "notes": "Awaiting Places API matching or manual review."
+    },
+    {
+      "restaurantSlug": "soichi-san-diego-ca",
+      "placeId": null,
+      "status": "needs_review",
+      "confidence": "low",
+      "method": "seeded",
+      "reviewedAt": "2026-07-17",
+      "notes": "Awaiting Places API matching or manual review."
+    },
+    {
+      "restaurantSlug": "somni-west-hollywood-ca",
+      "placeId": null,
+      "status": "needs_review",
+      "confidence": "low",
+      "method": "seeded",
+      "reviewedAt": "2026-07-17",
+      "notes": "Awaiting Places API matching or manual review."
+    },
+    {
+      "restaurantSlug": "sons-and-daughters-san-francisco-ca",
+      "placeId": null,
+      "status": "needs_review",
+      "confidence": "low",
+      "method": "seeded",
+      "reviewedAt": "2026-07-17",
+      "notes": "Awaiting Places API matching or manual review."
+    },
+    {
+      "restaurantSlug": "sorekara-orlando-fl",
+      "placeId": null,
+      "status": "needs_review",
+      "confidence": "low",
+      "method": "seeded",
+      "reviewedAt": "2026-07-17",
+      "notes": "Awaiting Places API matching or manual review."
+    },
+    {
+      "restaurantSlug": "sorrel-san-francisco-ca",
+      "placeId": null,
+      "status": "needs_review",
+      "confidence": "low",
+      "method": "seeded",
+      "reviewedAt": "2026-07-17",
+      "notes": "Awaiting Places API matching or manual review."
+    },
+    {
+      "restaurantSlug": "soseki-winter-park-fl",
+      "placeId": null,
+      "status": "needs_review",
+      "confidence": "low",
+      "method": "seeded",
+      "reviewedAt": "2026-07-17",
+      "notes": "Awaiting Places API matching or manual review."
+    },
+    {
+      "restaurantSlug": "spring-marietta-ga",
+      "placeId": null,
+      "status": "needs_review",
+      "confidence": "low",
+      "method": "seeded",
+      "reviewedAt": "2026-07-17",
+      "notes": "Awaiting Places API matching or manual review."
+    },
+    {
+      "restaurantSlug": "ssal-san-francisco-ca",
+      "placeId": null,
+      "status": "needs_review",
+      "confidence": "low",
+      "method": "seeded",
+      "reviewedAt": "2026-07-17",
+      "notes": "Awaiting Places API matching or manual review."
+    },
+    {
+      "restaurantSlug": "state-bird-provisions-san-francisco-ca",
+      "placeId": null,
+      "status": "needs_review",
+      "confidence": "low",
+      "method": "seeded",
+      "reviewedAt": "2026-07-17",
+      "notes": "Awaiting Places API matching or manual review."
+    },
+    {
+      "restaurantSlug": "stubborn-seed-miami-beach-fl",
+      "placeId": null,
+      "status": "needs_review",
+      "confidence": "low",
+      "method": "seeded",
+      "reviewedAt": "2026-07-17",
+      "notes": "Awaiting Places API matching or manual review."
+    },
+    {
+      "restaurantSlug": "sun-moon-studio-oakland-ca",
+      "placeId": null,
+      "status": "needs_review",
+      "confidence": "low",
+      "method": "seeded",
+      "reviewedAt": "2026-07-17",
+      "notes": "Awaiting Places API matching or manual review."
+    },
+    {
+      "restaurantSlug": "sushi-inaba-torrance-ca",
+      "placeId": null,
+      "status": "needs_review",
+      "confidence": "low",
+      "method": "seeded",
+      "reviewedAt": "2026-07-17",
+      "notes": "Awaiting Places API matching or manual review."
+    },
+    {
+      "restaurantSlug": "sushi-kaneyoshi-los-angeles-ca",
+      "placeId": null,
+      "status": "needs_review",
+      "confidence": "low",
+      "method": "seeded",
+      "reviewedAt": "2026-07-17",
+      "notes": "Awaiting Places API matching or manual review."
+    },
+    {
+      "restaurantSlug": "sushi-nakazawa-new-york-new-york-ny",
+      "placeId": "ChIJ6z1l1y5YwokR6W_l8aK_g2I",
+      "status": "manually_approved",
+      "confidence": "medium",
+      "method": "spike_fixture",
+      "reviewedAt": "2026-07-17",
+      "notes": "GP1 spike — similar-name NY location provisional Place ID."
+    },
+    {
+      "restaurantSlug": "sushi-nakazawa-washington-dc-washington-dc",
+      "placeId": null,
+      "status": "needs_review",
+      "confidence": "low",
+      "method": "seeded",
+      "reviewedAt": "2026-07-17",
+      "notes": "Awaiting Places API matching or manual review."
+    },
+    {
+      "restaurantSlug": "sushi-noz-new-york-ny",
+      "placeId": null,
+      "status": "needs_review",
+      "confidence": "low",
+      "method": "seeded",
+      "reviewedAt": "2026-07-17",
+      "notes": "Awaiting Places API matching or manual review."
+    },
+    {
+      "restaurantSlug": "sushi-sho-new-york-ny",
+      "placeId": null,
+      "status": "needs_review",
+      "confidence": "low",
+      "method": "seeded",
+      "reviewedAt": "2026-07-17",
+      "notes": "Awaiting Places API matching or manual review."
+    },
+    {
+      "restaurantSlug": "tambourine-room-by-tristan-brandt-miami-beach-fl",
+      "placeId": null,
+      "status": "needs_review",
+      "confidence": "low",
+      "method": "seeded",
+      "reviewedAt": "2026-07-17",
+      "notes": "Awaiting Places API matching or manual review."
+    },
+    {
+      "restaurantSlug": "tatemo-houston-tx",
+      "placeId": null,
+      "status": "needs_review",
+      "confidence": "low",
+      "method": "seeded",
+      "reviewedAt": "2026-07-17",
+      "notes": "Awaiting Places API matching or manual review."
+    },
+    {
+      "restaurantSlug": "tatsu-dallas-dallas-tx",
+      "placeId": null,
+      "status": "needs_review",
+      "confidence": "low",
+      "method": "seeded",
+      "reviewedAt": "2026-07-17",
+      "notes": "Awaiting Places API matching or manual review."
+    },
+    {
+      "restaurantSlug": "tempura-matsui-new-york-ny",
+      "placeId": null,
+      "status": "needs_review",
+      "confidence": "low",
+      "method": "seeded",
+      "reviewedAt": "2026-07-17",
+      "notes": "Awaiting Places API matching or manual review."
+    },
+    {
+      "restaurantSlug": "the-catbird-seat-nashville-tn",
+      "placeId": null,
+      "status": "needs_review",
+      "confidence": "low",
+      "method": "seeded",
+      "reviewedAt": "2026-07-17",
+      "notes": "Awaiting Places API matching or manual review."
+    },
+    {
+      "restaurantSlug": "the-dabney-washington-dc",
+      "placeId": null,
+      "status": "needs_review",
+      "confidence": "low",
+      "method": "seeded",
+      "reviewedAt": "2026-07-17",
+      "notes": "Awaiting Places API matching or manual review."
+    },
+    {
+      "restaurantSlug": "the-four-horsemen-brooklyn-ny",
+      "placeId": null,
+      "status": "needs_review",
+      "confidence": "low",
+      "method": "seeded",
+      "reviewedAt": "2026-07-17",
+      "notes": "Awaiting Places API matching or manual review."
+    },
+    {
+      "restaurantSlug": "the-french-laundry-yountville-ca",
+      "placeId": null,
+      "status": "needs_review",
+      "confidence": "low",
+      "method": "seeded",
+      "reviewedAt": "2026-07-17",
+      "notes": "Awaiting Places API matching or manual review."
+    },
+    {
+      "restaurantSlug": "the-inn-at-little-washington-washington-dc",
+      "placeId": null,
+      "status": "needs_review",
+      "confidence": "low",
+      "method": "seeded",
+      "reviewedAt": "2026-07-17",
+      "notes": "Awaiting Places API matching or manual review."
+    },
+    {
+      "restaurantSlug": "the-kitchen-sacramento-ca",
+      "placeId": null,
+      "status": "needs_review",
+      "confidence": "low",
+      "method": "seeded",
+      "reviewedAt": "2026-07-17",
+      "notes": "Awaiting Places API matching or manual review."
+    },
+    {
+      "restaurantSlug": "the-modern-new-york-ny",
+      "placeId": null,
+      "status": "needs_review",
+      "confidence": "low",
+      "method": "seeded",
+      "reviewedAt": "2026-07-17",
+      "notes": "Awaiting Places API matching or manual review."
+    },
+    {
+      "restaurantSlug": "the-progress-san-francisco-ca",
+      "placeId": null,
+      "status": "needs_review",
+      "confidence": "low",
+      "method": "seeded",
+      "reviewedAt": "2026-07-17",
+      "notes": "Awaiting Places API matching or manual review."
+    },
+    {
+      "restaurantSlug": "the-restaurant-at-justin-paso-robles-ca",
+      "placeId": null,
+      "status": "needs_review",
+      "confidence": "low",
+      "method": "seeded",
+      "reviewedAt": "2026-07-17",
+      "notes": "Awaiting Places API matching or manual review."
+    },
+    {
+      "restaurantSlug": "the-surf-club-restaurant-surfside-fl",
+      "placeId": null,
+      "status": "needs_review",
+      "confidence": "low",
+      "method": "seeded",
+      "reviewedAt": "2026-07-17",
+      "notes": "Awaiting Places API matching or manual review."
+    },
+    {
+      "restaurantSlug": "the-village-pub-woodside-ca",
+      "placeId": null,
+      "status": "needs_review",
+      "confidence": "low",
+      "method": "seeded",
+      "reviewedAt": "2026-07-17",
+      "notes": "Awaiting Places API matching or manual review."
+    },
+    {
+      "restaurantSlug": "the-wolf-s-tailor-denver-co",
+      "placeId": null,
+      "status": "needs_review",
+      "confidence": "low",
+      "method": "seeded",
+      "reviewedAt": "2026-07-17",
+      "notes": "Awaiting Places API matching or manual review."
+    },
+    {
+      "restaurantSlug": "topolobampo-chicago-il",
+      "placeId": null,
+      "status": "needs_review",
+      "confidence": "low",
+      "method": "seeded",
+      "reviewedAt": "2026-07-17",
+      "notes": "Awaiting Places API matching or manual review."
+    },
+    {
+      "restaurantSlug": "torien-new-york-ny",
+      "placeId": null,
+      "status": "needs_review",
+      "confidence": "low",
+      "method": "seeded",
+      "reviewedAt": "2026-07-17",
+      "notes": "Awaiting Places API matching or manual review."
+    },
+    {
+      "restaurantSlug": "torrisi-new-york-ny",
+      "placeId": null,
+      "status": "needs_review",
+      "confidence": "low",
+      "method": "seeded",
+      "reviewedAt": "2026-07-17",
+      "notes": "Awaiting Places API matching or manual review."
+    },
+    {
+      "restaurantSlug": "troubadour-healdsburg-ca",
+      "placeId": null,
+      "status": "needs_review",
+      "confidence": "low",
+      "method": "seeded",
+      "reviewedAt": "2026-07-17",
+      "notes": "Awaiting Places API matching or manual review."
+    },
+    {
+      "restaurantSlug": "tsukimi-new-york-ny",
+      "placeId": null,
+      "status": "needs_review",
+      "confidence": "low",
+      "method": "seeded",
+      "reviewedAt": "2026-07-17",
+      "notes": "Awaiting Places API matching or manual review."
+    },
+    {
+      "restaurantSlug": "tuome-new-york-ny",
+      "placeId": null,
+      "status": "needs_review",
+      "confidence": "low",
+      "method": "seeded",
+      "reviewedAt": "2026-07-17",
+      "notes": "Awaiting Places API matching or manual review."
+    },
+    {
+      "restaurantSlug": "vern-s-charleston-sc",
+      "placeId": null,
+      "status": "needs_review",
+      "confidence": "low",
+      "method": "seeded",
+      "reviewedAt": "2026-07-17",
+      "notes": "Awaiting Places API matching or manual review."
+    },
+    {
+      "restaurantSlug": "vespertine-culver-city-ca",
+      "placeId": null,
+      "status": "needs_review",
+      "confidence": "low",
+      "method": "seeded",
+      "reviewedAt": "2026-07-17",
+      "notes": "Awaiting Places API matching or manual review."
+    },
+    {
+      "restaurantSlug": "victoria-and-albert-s-orlando-fl",
+      "placeId": null,
+      "status": "needs_review",
+      "confidence": "low",
+      "method": "seeded",
+      "reviewedAt": "2026-07-17",
+      "notes": "Awaiting Places API matching or manual review."
+    },
+    {
+      "restaurantSlug": "wakuriya-san-mateo-ca",
+      "placeId": null,
+      "status": "needs_review",
+      "confidence": "low",
+      "method": "seeded",
+      "reviewedAt": "2026-07-17",
+      "notes": "Awaiting Places API matching or manual review."
+    },
+    {
+      "restaurantSlug": "wild-common-charleston-sc",
+      "placeId": null,
+      "status": "needs_review",
+      "confidence": "low",
+      "method": "seeded",
+      "reviewedAt": "2026-07-17",
+      "notes": "Awaiting Places API matching or manual review."
+    },
+    {
+      "restaurantSlug": "wolfsbane-san-francisco-ca",
+      "placeId": null,
+      "status": "needs_review",
+      "confidence": "low",
+      "method": "seeded",
+      "reviewedAt": "2026-07-17",
+      "notes": "Awaiting Places API matching or manual review."
+    },
+    {
+      "restaurantSlug": "xiquet-washington-dc",
+      "placeId": null,
+      "status": "needs_review",
+      "confidence": "low",
+      "method": "seeded",
+      "reviewedAt": "2026-07-17",
+      "notes": "Awaiting Places API matching or manual review."
+    },
+    {
+      "restaurantSlug": "yamada-new-york-ny",
+      "placeId": null,
+      "status": "needs_review",
+      "confidence": "low",
+      "method": "seeded",
+      "reviewedAt": "2026-07-17",
+      "notes": "Awaiting Places API matching or manual review."
+    },
+    {
+      "restaurantSlug": "yingtao-new-york-ny",
+      "placeId": null,
+      "status": "needs_review",
+      "confidence": "low",
+      "method": "seeded",
+      "reviewedAt": "2026-07-17",
+      "notes": "Awaiting Places API matching or manual review."
+    },
+    {
+      "restaurantSlug": "yoshino-new-york-ny",
+      "placeId": null,
+      "status": "needs_review",
+      "confidence": "low",
+      "method": "seeded",
+      "reviewedAt": "2026-07-17",
+      "notes": "Awaiting Places API matching or manual review."
+    },
+    {
+      "restaurantSlug": "zasu-new-orleans-la",
+      "placeId": null,
+      "status": "needs_review",
+      "confidence": "low",
+      "method": "seeded",
+      "reviewedAt": "2026-07-17",
+      "notes": "Awaiting Places API matching or manual review."
+    }
+  ]
+}

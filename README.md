@@ -79,6 +79,10 @@ Optional Google Places UI Kit: see [`docs/google-places/google-cloud-setup.md`](
 | `npm run data:reservations:report` | Write enrichment coverage report |
 | `npm run data:reservations:review` | Print needs-review candidate report |
 | `npm run data:reservations:check-links` | Manual freshness check for verified URLs |
+| `npm run data:google-places:match` | Match roster restaurants to Google Place IDs (server key) |
+| `npm run data:google-places:review` | Interactive Place ID review |
+| `npm run data:google-places:validate` | Validate Place ID match file invariants |
+| `npm run data:google-places:report` | Write matching coverage report |
 | `npm run typecheck` | TypeScript check |
 | `npm run lint` | ESLint |
 | `npm run test` | Unit tests |

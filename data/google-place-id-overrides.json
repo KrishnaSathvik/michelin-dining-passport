@@ -1,0 +1,51 @@
+{
+  "version": 1,
+  "updatedAt": "2026-07-17T16:22:34.540893+00:00",
+  "overrides": [
+    {
+      "restaurantSlug": "alinea-chicago-il",
+      "placeId": "ChIJuyI60yLTD4gROwTWENq1He0",
+      "status": "manually_approved",
+      "confidence": "high",
+      "method": "spike_fixture",
+      "reviewedAt": "2026-07-17",
+      "notes": "GP1 spike — strong coverage provisional Place ID."
+    },
+    {
+      "restaurantSlug": "lazy-betty-atlanta-ga",
+      "placeId": "ChIJ8c6xXQ0E9YgR5-373N6fF4s",
+      "status": "manually_approved",
+      "confidence": "medium",
+      "method": "spike_fixture",
+      "reviewedAt": "2026-07-17",
+      "notes": "GP1 spike — limited photos provisional Place ID."
+    },
+    {
+      "restaurantSlug": "sushi-nakazawa-new-york-new-york-ny",
+      "placeId": "ChIJ6z1l1y5YwokR6W_l8aK_g2I",
+      "status": "manually_approved",
+      "confidence": "medium",
+      "method": "spike_fixture",
+      "reviewedAt": "2026-07-17",
+      "notes": "GP1 spike — similar-name NY location provisional Place ID."
+    },
+    {
+      "restaurantSlug": "crown-shy-new-york-ny",
+      "placeId": "ChIJyUuE1otYwokR-j9xV7lB03A",
+      "status": "manually_approved",
+      "confidence": "medium",
+      "method": "spike_fixture",
+      "reviewedAt": "2026-07-17",
+      "notes": "GP1 spike — shared-address sibling provisional Place ID."
+    },
+    {
+      "restaurantSlug": "saga-new-york-ny",
+      "placeId": null,
+      "status": "no_match",
+      "confidence": "low",
+      "method": "spike_fixture",
+      "reviewedAt": "2026-07-17",
+      "notes": "GP1 spike — stand-in for missing confident match."
+    }
+  ]
+}
