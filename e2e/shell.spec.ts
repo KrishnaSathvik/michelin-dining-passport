@@ -98,6 +98,19 @@ test.describe("Stitch application shell", () => {
 
   test("foundation route is excluded from production", async ({ page }) => {
     const response = await page.goto("/dev/stitch-foundation");
+    if (!process.env.CI && response?.status() === 200) {
+      test.skip(true, "Running against next dev — production gate checked in CI");
+    }
+    expect(response?.status()).toBe(404);
+  });
+
+  test("restaurant components gallery is excluded from production", async ({
+    page,
+  }) => {
+    const response = await page.goto("/dev/stitch-restaurant-components");
+    if (!process.env.CI && response?.status() === 200) {
+      test.skip(true, "Running against next dev — production gate checked in CI");
+    }
     expect(response?.status()).toBe(404);
   });
 });

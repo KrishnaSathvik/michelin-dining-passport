@@ -181,7 +181,7 @@ export function StitchFoundationClient() {
             <MichelinDistinction stars={1} />
             <MichelinDistinction stars={2} />
             <MichelinDistinction stars={3} />
-            <MichelinDistinction stars={3} badge />
+            <MichelinDistinction stars={3} variant="detail" showLabel />
           </div>
         </section>
 

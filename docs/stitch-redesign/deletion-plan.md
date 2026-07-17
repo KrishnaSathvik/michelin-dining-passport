@@ -53,11 +53,17 @@ Keep `src/lib/data/explore.ts` forever (logic).
 
 ### Restaurant cards / detail (after Phases 3 & 7)
 
-| Path | When safe |
-|---|---|
-| Legacy `RestaurantDiscoveryCard` / `Compact` / `Editorial` once renamed replacements are universal | Zero imports |
-| Old detail layout fragments in page file | After benu composition lands |
-| `RestaurantDetailStickyBar` old styles | After restyle (replace in place OK) |
+| Path | Status | When safe |
+|---|---|---|
+| Legacy `RestaurantDiscoveryCard` | **Still imported** by homepage/explore/taxonomy/related | Zero imports after Phases 4–8 adopt `stitch/restaurant/RestaurantDiscoveryCard` |
+| Legacy `RestaurantCompactCard` | **Still imported** by explore list + Passport lists | Phase 5 / 8 → `RestaurantListRow` |
+| Legacy `RestaurantEditorialCard` | **Still imported** by homepage | Phase 4 → `stitch/restaurant/RestaurantEditorialCard` |
+| Legacy `RestaurantMedia` / `RestaurantImageFallback` / `StarMark` | **Still imported** by legacy cards/detail | After card migrations |
+| Legacy `ReservationButton` / `SaveRestaurantButton` | **Still imported** by legacy cards + sticky bar | After cards/detail migrate to `ReservationAction` / `SaveAction` |
+| `RestaurantDetailStickyBar` old styles | Retained | After Phase 7 restyle (replace in place OK) |
+| New map/related/nearby presentation | Shipped in Phase 3 under `stitch/restaurant/` | Adopted in Phases 6–7 |
+
+**Phase 3 did not delete legacy cards.** Gallery: `/dev/stitch-restaurant-components` (production `notFound`).
 
 ### Passport / collections (after Phases 8–9)
 

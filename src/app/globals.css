@@ -117,6 +117,9 @@
   --color-dp-ink-secondary: var(--dp-ink-secondary);
   --color-dp-ink-muted: var(--dp-ink-muted);
   --color-dp-border: var(--dp-border);
+  --color-dp-outline: var(--dp-outline);
+  --color-dp-outline-variant: var(--dp-outline-variant);
+  --color-dp-surface-container: var(--dp-surface-container);
   --color-dp-primary: var(--dp-primary);
   --color-dp-primary-deep: var(--dp-primary-deep);
   --color-dp-primary-hover: var(--dp-primary-hover);
