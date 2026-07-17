@@ -6,7 +6,10 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "data:import": "python3 scripts/import_restaurants.py",
+    "data:validate": "python3 scripts/validate_restaurants.py",
+    "typecheck": "tsc --noEmit"
   },
   "dependencies": {
     "next": "16.2.10",

@@ -1,0 +1,17 @@
+# UI/UX backlog
+
+Nonblocking visual issues deferred until the consolidated `ui-ux-polish` pass after Phases 2–7.
+
+Record issues that do not break functionality, accessibility, or testability.
+
+| Route | Component | Viewport | Problem | Suggested improvement | Priority |
+| --- | --- | --- | --- | --- | --- |
+| `/` | Homepage sections | Desktop / mobile | Spacing, imagery, and motion not finalized | Full visual audit in polish phase | Low |
+| `/explore` | Minimal explore stub | Desktop / mobile | Phase 1 stub only; full Explore is Phase 2 | Replace with complete directory UI | Medium |
+| `/map` | Map placeholder | Desktop / mobile | Placeholder until Phase 5 | Replace with real map experience | Medium |
+
+## Priority guide
+
+- **High** — noticeable inconsistency or weak hierarchy once core flows exist
+- **Medium** — polish that improves clarity but does not block use
+- **Low** — fine typography, decorative motion, final imagery
