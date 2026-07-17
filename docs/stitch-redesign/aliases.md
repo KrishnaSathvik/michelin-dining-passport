@@ -9,11 +9,16 @@ Existing production routes continue to use legacy presentation components and le
 | Alias | Maps to | Why | Delete by |
 |---|---|---|---|
 | `--font-display` → Literata (`--font-literata`) | Display font for existing `font-display` classes | Avoid loading Instrument Serif while old pages still use `font-display` | Phase 12 (or when no callers remain) |
-| `--font-instrument-serif` CSS variable name unused | Removed from layout | OD-03 | Done in Phase 1 |
+| `--font-instrument-serif` | Removed from layout | OD-03 | **Done in Phase 1** |
 | Legacy `--color-*` / `--radius-*` / `.container-editorial` | Kept for old components only | Keep existing routes compiling and visually stable until replaced | End of each route phase → Phase 12 cleanup |
 | Legacy `src/components/ui/Button.tsx` | Untouched | Old routes import it | Delete when no imports (after shell/routes migrate) |
 | Legacy `Container` / `Section` | Untouched | Old routes | Phase 2–12 per deletion-plan |
 | Legacy `RestaurantMedia` / `StarMark` / fallbacks | Untouched | Old cards/detail | Phase 3–7 |
+| `siteConfig.productName` | `Dining Passport` | OD-02 | Permanent |
+
+## Stitch component location
+
+New primitives live under `src/components/stitch/` and must not import legacy presentation components.
 
 ## Rules
 

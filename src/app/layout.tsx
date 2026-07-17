@@ -1,6 +1,6 @@
 import type { ReactNode } from "react";
 import type { Metadata } from "next";
-import { Instrument_Serif, Inter } from "next/font/google";
+import { Inter, Literata } from "next/font/google";
 import { SiteFooterGate } from "@/components/layout/SiteFooterGate";
 import { SiteHeader } from "@/components/layout/SiteHeader";
 import { PassportClientShell } from "@/components/passport/PassportClientShell";
@@ -8,10 +8,10 @@ import { absoluteUrl, siteConfig } from "@/config/site";
 import { getRestaurants } from "@/lib/data/restaurants";
 import "./globals.css";
 
-const instrumentSerif = Instrument_Serif({
+/** OD-03: Literata is the only display font. Instrument Serif removed. */
+const literata = Literata({
   subsets: ["latin"],
-  weight: "400",
-  variable: "--font-instrument-serif",
+  variable: "--font-literata",
   display: "swap",
 });
 
@@ -45,7 +45,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${instrumentSerif.variable} ${inter.variable} h-full antialiased`}
+      className={`${literata.variable} ${inter.variable} h-full antialiased`}
     >
       <body className="flex min-h-full flex-col font-sans">
         <PassportClientShell restaurants={restaurants}>
