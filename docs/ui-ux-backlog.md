@@ -16,6 +16,9 @@ Record issues that do not break functionality, accessibility, or testability.
 | Shared | `ReservationButton` | Desktop / mobile | Compact vs full density and provider secondary line not finalized | Refine CTA hierarchy in polish pass without weakening truthful labels | Medium |
 | `/map` | Result row + sheet reserve actions | Desktop / mobile | Functional; spacing beside select control temporary | Align touch targets and density with Explore cards | Low |
 | Taxonomy hubs | Collection grids | Desktop / mobile | Shared shell density not finalized | Align with Explore polish | Low |
+| `/login`, `/signup` | Auth forms | Desktop / mobile | Functional dual forms; spacing and hierarchy temporary | Consolidate into a single composed auth surface in polish pass | Medium |
+| `/account` | Account panel | Desktop / mobile | Functional sections; bordered blocks feel utilitarian | Soften section rhythm without cards-as-decoration | Medium |
+| Shared | Site header Account link | Desktop / mobile | Always visible; no signed-in state treatment yet | Show avatar/initials or Sign in CTA once polish lands | Low |
 
 ## Priority guide
 

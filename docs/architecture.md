@@ -18,7 +18,8 @@
 | Styling | Tailwind CSS v4 |
 | Lint | ESLint (Next config) |
 | Data (now) | `/data/*.xlsx` → future `/data/*.json` import |
-| Auth / DB / Maps | **Not connected** |
+| Auth / DB | Supabase (Phase 6) — local JSON remains public discovery source |
+| Maps | MapLibre + committed geocodes (Phase 5) |
 
 Import alias: `@/*` → `./src/*`
 

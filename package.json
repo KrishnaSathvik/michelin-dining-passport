@@ -19,15 +19,28 @@
     "data:reservations:review": "python3 scripts/review_reservations.py --report --needs-review",
     "data:reservations:check-links": "python3 scripts/check_reservation_links.py",
     "typecheck": "tsc --noEmit",
-    "test": "node --test scripts/test_explore.mjs scripts/test_passport_metrics.mjs scripts/test_geocodes.mjs scripts/test_reservations.mjs",
-    "test:e2e": "playwright test"
+    "test": "node --test scripts/test_explore.mjs scripts/test_passport_metrics.mjs scripts/test_geocodes.mjs scripts/test_reservations.mjs scripts/test_auth_redirect.mjs scripts/test_passport_merge.mjs scripts/test_restaurant_ids.mjs",
+    "test:e2e": "playwright test",
+    "supabase:start": "supabase start",
+    "supabase:stop": "supabase stop",
+    "supabase:reset": "supabase db reset",
+    "supabase:migrate": "supabase migration up",
+    "supabase:types": "supabase gen types typescript --local > src/lib/supabase/database.types.ts",
+    "supabase:types:linked": "supabase gen types typescript --linked > src/lib/supabase/database.types.ts",
+    "supabase:seed:generate": "node scripts/generate_supabase_seed.mjs",
+    "supabase:seed:remote": "node scripts/seed_remote_supabase.mjs",
+    "supabase:rls:validate": "node scripts/validate_rls.mjs",
+    "data:seed-validate": "node scripts/generate_supabase_seed.mjs --validate-only"
   },
   "dependencies": {
+    "@supabase/ssr": "^0.12.3",
+    "@supabase/supabase-js": "^2.110.7",
     "maplibre-gl": "^5.24.0",
     "next": "16.2.10",
     "react": "19.2.4",
     "react-dom": "19.2.4",
-    "react-map-gl": "^8.1.1"
+    "react-map-gl": "^8.1.1",
+    "server-only": "^0.0.1"
   },
   "devDependencies": {
     "@playwright/test": "^1.61.1",
@@ -38,6 +51,7 @@
     "@types/react-dom": "^19",
     "eslint": "^9",
     "eslint-config-next": "16.2.10",
+    "supabase": "^2.109.1",
     "tailwindcss": "^4",
     "typescript": "^5"
   }

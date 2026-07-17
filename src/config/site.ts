@@ -20,6 +20,7 @@ export const siteConfig = {
     { href: "/map", label: "Map" },
     { href: "/about-michelin-stars", label: "Michelin Stars Explained" },
     { href: "/passport", label: "Passport" },
+    { href: "/account", label: "Account" },
   ],
 } as const;
 

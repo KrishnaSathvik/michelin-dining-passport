@@ -21,7 +21,7 @@ Feature-first build through Phases 2–7, then one consolidated UI/UX polish pas
 | 4 | Local Passport + personal tracking | **Complete** (`phase-4-local-passport`) |
 | 5 | Geocode + `/map` | **Complete** (`phase-5-map`) — batch geocode, reconciliation, MapLibre map, search-this-area, mobile sheet |
 | 5.5 | Verified reservation links | **Complete** (`phase-5-5-reservations`) — outbound CTAs, discovery/review workflow, no booking APIs |
-| 6 | Supabase auth + personal data | Not started |
+| 6 | Supabase auth + personal data | **In progress** (`phase-6-auth-and-accounts`) |
 | 7 | Admin + roster import pipeline | Not started |
 | — | Consolidated UI/UX polish | After Phases 2–7 |
 

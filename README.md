@@ -6,9 +6,9 @@ Editorial dining atlas + personal restaurant passport. Not affiliated with Miche
 
 ## Status
 
-**Phase 5.5 complete on `phase-5-5-reservations`** — verified outbound reservation actions across the product (no booking APIs, no Supabase yet).
+**Phase 6 in progress on `phase-6-auth-and-accounts`** — Supabase auth, RLS-backed personal data, and local→cloud Passport migration. Public discovery still uses the committed local restaurant dataset.
 
-Phases 0–5.5 are on track for merge to `main`. Building feature-first through Phases 2–7, then one consolidated UI/UX polish pass. Nonblocking visual issues live in [`docs/ui-ux-backlog.md`](./docs/ui-ux-backlog.md).
+Phases 0–5.5 are on `main`. Building feature-first through Phases 2–7, then one consolidated UI/UX polish pass. Nonblocking visual issues live in [`docs/ui-ux-backlog.md`](./docs/ui-ux-backlog.md).
 
 | Metric | Value |
 | --- | ---: |
@@ -30,6 +30,10 @@ Committed JSON: [`data/restaurants.json`](./data/restaurants.json)
 - [Implementation plan](./docs/implementation-plan.md)
 - [Reservations](./docs/reservations.md)
 - [Reservation enrichment report](./docs/reservation-enrichment-report.md)
+- [Supabase setup](./docs/supabase-setup.md)
+- [Authentication](./docs/authentication.md)
+- [RLS policies](./docs/rls-policies.md)
+- [Local-to-cloud migration](./docs/local-to-cloud-migration.md)
 - [UI/UX backlog](./docs/ui-ux-backlog.md)
 - [Passport metrics](./docs/passport-metrics.md)
 - [Map provider ADR](./docs/adr/0001-map-provider.md)
@@ -38,17 +42,20 @@ Committed JSON: [`data/restaurants.json`](./data/restaurants.json)
 
 - Next.js (App Router) + TypeScript + Tailwind CSS
 - MapLibre GL for `/map`
+- Supabase Auth + Postgres (personal data, RLS)
 - `src/` directory, import alias `@/*`
-- No Supabase / auth yet
 
 ## Local development
 
 ```bash
+cp .env.example .env.local   # add Supabase keys from the Connect panel
 npm install
 npm run data:import
 npm run data:validate
 npm run data:validate-geocodes
 npm run data:reservations:validate
+npm run supabase:seed:generate
+npm run supabase:start       # Docker required
 npm run dev
 ```
 
@@ -70,6 +77,11 @@ npm run dev
 | `npm run test` | Unit tests |
 | `npm run test:e2e` | Playwright journeys |
 | `npm run build` | Production build |
+| `npm run supabase:start` | Local Supabase stack |
+| `npm run supabase:reset` | Reset DB + migrations + seed |
+| `npm run supabase:seed:generate` | Build `supabase/seed.sql` from JSON |
+| `npm run supabase:types` | Generate DB TypeScript types |
+| `npm run supabase:rls:validate` | Two-user RLS smoke tests |
 
 Import/validation use Python’s standard library only (no XLSX package in the browser or Node runtime).
 
@@ -79,4 +91,4 @@ Import/validation use Python’s standard library only (no XLSX package in the b
 
 ## Next phase
 
-Phase 6 — Supabase auth + personal data sync, after Phase 5.5 merges.
+Phase 7 — Admin roster tools, after Phase 6 verification and merge.
