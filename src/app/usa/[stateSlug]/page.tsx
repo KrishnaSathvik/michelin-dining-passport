@@ -60,6 +60,7 @@ export default async function StatePage({ params }: StatePageProps) {
       introduction={`${state.count} Michelin-starred restaurants appear in the current United States roster for ${state.state}: ${state.threeStar} three-star, ${state.twoStar} two-star, and ${state.oneStar} one-star. Counts reflect the imported workbook only.`}
       count={state.count}
       restaurants={restaurants}
+      visualTone="destination"
       relatedLinks={[
         {
           href: `/explore?state=${state.stateSlug}`,

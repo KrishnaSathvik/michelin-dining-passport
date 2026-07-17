@@ -69,6 +69,7 @@ export default async function StarPage({ params }: StarPageProps) {
       introduction={`${aggregate?.count ?? restaurants.length} restaurants currently carry a ${label} Michelin Guide distinction in this United States roster. In Guide terms: ${starMeanings[stars]}. See the education page for coverage limits and related distinctions.`}
       count={restaurants.length}
       restaurants={restaurants}
+      visualTone="stars"
       relatedLinks={[
         {
           href: `/explore?stars=${stars}`,

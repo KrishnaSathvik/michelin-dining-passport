@@ -62,6 +62,7 @@ export default async function CityPage({ params }: CityPageProps) {
       introduction={`${city.count} Michelin-starred restaurants are listed for ${city.city}, ${city.state} in the current roster (${city.threeStar} three-star, ${city.twoStar} two-star, ${city.oneStar} one-star).`}
       count={city.count}
       restaurants={restaurants}
+      visualTone="destination"
       relatedLinks={[
         {
           href: `/usa/${city.stateSlug}`,

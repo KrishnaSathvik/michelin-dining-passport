@@ -66,6 +66,7 @@ export default async function CuisinePage({ params }: CuisinePageProps) {
       introduction={`${cuisine.count} restaurants labeled ${cuisine.cuisine} appear in the current Michelin-starred United States roster. Cuisine labels are preserved from the source workbook.`}
       count={cuisine.count}
       restaurants={restaurants}
+      visualTone="cuisine"
       relatedLinks={[
         {
           href: `/explore?cuisine=${cuisine.cuisineSlug}`,
