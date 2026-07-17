@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { Section } from "@/components/layout/Section";
 
 const tiers = [
@@ -67,7 +68,14 @@ export function MichelinStarsExplained() {
       <p className="mt-8 max-w-3xl font-sans text-sm leading-relaxed text-ink-muted">
         Star awards and definitions originate with the Michelin Guide. This site
         summarizes publicly understood distinctions for orientation only and does
-        not reproduce Michelin’s proprietary visual marks, logos, or Guide prose.
+        not reproduce Michelin’s proprietary visual marks, logos, or Guide prose.{" "}
+        <Link
+          href="/about-michelin-stars"
+          className="text-forest underline underline-offset-4"
+        >
+          Read the full explanation
+        </Link>
+        , including coverage limits, Bib Gourmand, and Green Star.
       </p>
     </Section>
   );

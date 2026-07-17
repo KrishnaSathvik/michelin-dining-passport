@@ -38,7 +38,7 @@ export function SiteFooter() {
                 </Link>
               </li>
               <li>
-                <Link href="/#michelin-stars" className="hover:text-ink">
+                <Link href="/about-michelin-stars" className="hover:text-ink">
                   Michelin Stars Explained
                 </Link>
               </li>

@@ -1,3 +1,4 @@
+import Link from "next/link";
 import type { Restaurant } from "@/lib/data/types";
 import { CuisineLabel } from "./CuisineLabel";
 import { ExternalTextLink } from "./ExternalTextLink";
@@ -15,7 +16,14 @@ export function RestaurantCompactCard({
   return (
     <article className="grid gap-2 border-t border-border py-4 first:border-t-0 first:pt-0 sm:grid-cols-[minmax(0,1.4fr)_auto] sm:items-baseline sm:gap-6">
       <div>
-        <h3 className="font-display text-xl text-ink">{restaurant.name}</h3>
+        <h3 className="font-display text-xl text-ink">
+          <Link
+            href={`/restaurants/${restaurant.slug}`}
+            className="hover:text-forest"
+          >
+            {restaurant.name}
+          </Link>
+        </h3>
         <div className="mt-1.5 flex flex-wrap items-center gap-x-3 gap-y-1">
           <StarMark stars={restaurant.stars} size="sm" />
           <CuisineLabel cuisine={restaurant.cuisine} />

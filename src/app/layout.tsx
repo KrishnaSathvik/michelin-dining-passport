@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Instrument_Serif, Inter } from "next/font/google";
 import { SiteFooter } from "@/components/layout/SiteFooter";
 import { SiteHeader } from "@/components/layout/SiteHeader";
-import { siteConfig } from "@/config/site";
+import { absoluteUrl, siteConfig } from "@/config/site";
 import "./globals.css";
 
 const instrumentSerif = Instrument_Serif({
@@ -19,11 +19,17 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL(absoluteUrl("/")),
   title: {
     default: siteConfig.productName,
     template: `%s · ${siteConfig.productName}`,
   },
   description: siteConfig.description,
+  openGraph: {
+    siteName: siteConfig.productName,
+    type: "website",
+    locale: "en_US",
+  },
 };
 
 export default function RootLayout({

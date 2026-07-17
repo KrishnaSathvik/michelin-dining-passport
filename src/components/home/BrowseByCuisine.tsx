@@ -27,7 +27,7 @@ export function BrowseByCuisine({ cuisines }: BrowseByCuisineProps) {
         {visible.map((cuisine) => (
           <li key={cuisine.cuisineSlug}>
             <Link
-              href={`/explore?cuisine=${encodeURIComponent(cuisine.cuisineSlug)}`}
+              href={`/cuisines/${encodeURIComponent(cuisine.cuisineSlug)}`}
               className="group inline-flex items-baseline gap-2 border-b border-transparent font-sans text-base text-ink transition-colors hover:border-forest hover:text-forest"
             >
               <span>{cuisine.cuisine}</span>

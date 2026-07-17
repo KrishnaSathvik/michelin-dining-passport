@@ -6,7 +6,7 @@ Editorial dining atlas + personal restaurant passport. Not affiliated with Miche
 
 ## Status
 
-**Phase 2 complete** — Explore directory with filters, sort, grid/list, pagination, and shareable URL state.
+**Phase 3 complete** — restaurant detail, taxonomy hubs, Michelin education page, sitemap/robots, and structured data.
 
 Building feature-first through Phases 2–7, then one consolidated UI/UX polish pass. Nonblocking visual issues live in [`docs/ui-ux-backlog.md`](./docs/ui-ux-backlog.md).
 
