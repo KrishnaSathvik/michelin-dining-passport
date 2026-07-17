@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-07-17T04:47:24.140845+00:00",
+  "updatedAt": "2026-07-17T04:51:04.497663+00:00",
   "records": {
     "addison-san-diego-ca": {
       "latitude": 32.7157,
@@ -23,9 +23,9 @@
     "atelier-crenn-san-francisco-ca": {
       "latitude": 37.7983224,
       "longitude": -122.435844,
-      "confidence": "low",
-      "approved": false,
-      "uncertain": true,
+      "confidence": "medium",
+      "approved": true,
+      "uncertain": false,
       "provider": "nominatim",
       "providerPlaceId": "404672727",
       "displayName": "3127, Fillmore Street, Cow Hollow, Marina District, San Francisco, California, 94123, United States",
@@ -36,14 +36,14 @@
       "sharedAddressGroup": [
         "atelier-crenn-san-francisco-ca"
       ],
-      "needsManualCorrection": true
+      "needsManualCorrection": false
     },
     "benu-san-francisco-ca": {
       "latitude": 37.7854624,
       "longitude": -122.3990798,
-      "confidence": "low",
-      "approved": false,
-      "uncertain": true,
+      "confidence": "medium",
+      "approved": true,
+      "uncertain": false,
       "provider": "nominatim",
       "providerPlaceId": "323236259",
       "displayName": "Benu, 22, Hawthorne Street, Transbay, Financial District, South of Market, San Francisco, California, 94105, United States",
@@ -54,7 +54,7 @@
       "sharedAddressGroup": [
         "benu-san-francisco-ca"
       ],
-      "needsManualCorrection": true
+      "needsManualCorrection": false
     },
     "californios-san-francisco-ca": {
       "latitude": 37.7712823,
@@ -77,9 +77,9 @@
     "enclos-sonoma-ca": {
       "latitude": 38.291621,
       "longitude": -122.4558085,
-      "confidence": "low",
-      "approved": false,
-      "uncertain": true,
+      "confidence": "medium",
+      "approved": true,
+      "uncertain": false,
       "provider": "nominatim",
       "providerPlaceId": "415393354",
       "displayName": "139, East Napa Street, Sonoma, Sonoma County, California, 95476, United States",
@@ -90,14 +90,14 @@
       "sharedAddressGroup": [
         "enclos-sonoma-ca"
       ],
-      "needsManualCorrection": true
+      "needsManualCorrection": false
     },
     "providence-los-angeles-ca": {
       "latitude": 34.0836255,
       "longitude": -118.330187,
-      "confidence": "low",
-      "approved": false,
-      "uncertain": true,
+      "confidence": "medium",
+      "approved": true,
+      "uncertain": false,
       "provider": "nominatim",
       "providerPlaceId": "320173550",
       "displayName": "Providence, 5955, Melrose Avenue, Hollywood, Los Angeles, Los Angeles County, California, 90038, United States",
@@ -108,14 +108,14 @@
       "sharedAddressGroup": [
         "providence-los-angeles-ca"
       ],
-      "needsManualCorrection": true
+      "needsManualCorrection": false
     },
     "quince-san-francisco-ca": {
       "latitude": 37.7974316,
       "longitude": -122.4032686,
-      "confidence": "low",
-      "approved": false,
-      "uncertain": true,
+      "confidence": "medium",
+      "approved": true,
+      "uncertain": false,
       "provider": "nominatim",
       "providerPlaceId": "404139405",
       "displayName": "470, Pacific Avenue, Telegraph Hill, Financial District, South of Market, San Francisco, California, 94133, United States",
@@ -126,14 +126,14 @@
       "sharedAddressGroup": [
         "quince-san-francisco-ca"
       ],
-      "needsManualCorrection": true
+      "needsManualCorrection": false
     },
     "singlethread-healdsburg-ca": {
       "latitude": 38.6123379,
       "longitude": -122.8696919,
-      "confidence": "low",
-      "approved": false,
-      "uncertain": true,
+      "confidence": "medium",
+      "approved": true,
+      "uncertain": false,
       "provider": "nominatim",
       "providerPlaceId": "317986143",
       "displayName": "SingleThread, 131, North Street, Healdsburg, Sonoma County, California, 95448, United States",
@@ -144,14 +144,14 @@
       "sharedAddressGroup": [
         "singlethread-healdsburg-ca"
       ],
-      "needsManualCorrection": true
+      "needsManualCorrection": false
     },
     "somni-west-hollywood-ca": {
       "latitude": 34.0823639,
       "longitude": -118.3885146,
-      "confidence": "low",
-      "approved": false,
-      "uncertain": true,
+      "confidence": "medium",
+      "approved": true,
+      "uncertain": false,
       "provider": "nominatim",
       "providerPlaceId": "413842269",
       "displayName": "9045, Nemo Street, West Hollywood, Los Angeles County, California, 90069, United States",
@@ -162,14 +162,14 @@
       "sharedAddressGroup": [
         "somni-west-hollywood-ca"
       ],
-      "needsManualCorrection": true
+      "needsManualCorrection": false
     },
     "the-french-laundry-yountville-ca": {
       "latitude": 38.404416,
       "longitude": -122.365039,
-      "confidence": "low",
-      "approved": false,
-      "uncertain": true,
+      "confidence": "medium",
+      "approved": true,
+      "uncertain": false,
       "provider": "nominatim",
       "providerPlaceId": "405450074",
       "displayName": "6640, Washington Street, Yountville, Napa County, California, 94599, United States",
@@ -180,14 +180,14 @@
       "sharedAddressGroup": [
         "the-french-laundry-yountville-ca"
       ],
-      "needsManualCorrection": true
+      "needsManualCorrection": false
     },
     "acquerello-san-francisco-ca": {
       "latitude": 37.7916954,
       "longitude": -122.4215252,
-      "confidence": "low",
-      "approved": false,
-      "uncertain": true,
+      "confidence": "medium",
+      "approved": true,
+      "uncertain": false,
       "provider": "nominatim",
       "providerPlaceId": "323850327",
       "displayName": "1722;1724;1728;1730, Sacramento Street, Chinatown, South of Market, San Francisco, California, 94109, United States",
@@ -198,7 +198,7 @@
       "sharedAddressGroup": [
         "acquerello-san-francisco-ca"
       ],
-      "needsManualCorrection": true
+      "needsManualCorrection": false
     },
     "aubergine-carmel-by-the-sea-ca": {
       "restaurantSlug": "aubergine-carmel-by-the-sea-ca",
@@ -221,9 +221,9 @@
     "birdsong-san-francisco-ca": {
       "latitude": 37.7793774,
       "longitude": -122.4103399,
-      "confidence": "low",
-      "approved": false,
-      "uncertain": true,
+      "confidence": "medium",
+      "approved": true,
+      "uncertain": false,
       "provider": "nominatim",
       "providerPlaceId": "321049240",
       "displayName": "1083;1085, Mission Street, West SoMa, Tenderloin, South of Market, San Francisco, California, 94103, United States",
@@ -234,14 +234,14 @@
       "sharedAddressGroup": [
         "birdsong-san-francisco-ca"
       ],
-      "needsManualCorrection": true
+      "needsManualCorrection": false
     },
     "commis-oakland-ca": {
       "latitude": 37.8246894,
       "longitude": -122.2548896,
-      "confidence": "low",
-      "approved": false,
-      "uncertain": true,
+      "confidence": "medium",
+      "approved": true,
+      "uncertain": false,
       "provider": "nominatim",
       "providerPlaceId": "325691272",
       "displayName": "Commis, 3859, Piedmont Avenue, North Oakland, Oakland, Alameda County, California, 94611, United States",
@@ -252,14 +252,14 @@
       "sharedAddressGroup": [
         "commis-oakland-ca"
       ],
-      "needsManualCorrection": true
+      "needsManualCorrection": false
     },
     "harbor-house-inn-elk-ca": {
       "latitude": 39.1357382,
       "longitude": -123.7196511,
-      "confidence": "low",
-      "approved": false,
-      "uncertain": true,
+      "confidence": "medium",
+      "approved": true,
+      "uncertain": false,
       "provider": "nominatim",
       "providerPlaceId": "320928070",
       "displayName": "Harbor House Inn, 5600 S, Shoreline Highway, Elk, Mendocino County, California, 95432, United States",
@@ -270,7 +270,7 @@
       "sharedAddressGroup": [
         "harbor-house-inn-elk-ca"
       ],
-      "needsManualCorrection": true
+      "needsManualCorrection": false
     },
     "hayato-los-angeles-ca": {
       "latitude": 34.0522,
@@ -311,9 +311,9 @@
     "kiln-san-francisco-ca": {
       "latitude": 37.7760076,
       "longitude": -122.4203817,
-      "confidence": "low",
-      "approved": false,
-      "uncertain": true,
+      "confidence": "medium",
+      "approved": true,
+      "uncertain": false,
       "provider": "nominatim",
       "providerPlaceId": "324446315",
       "displayName": "149, Fell Street, Civic Center, Tenderloin, Mission, San Francisco, California, 94102, United States",
@@ -324,14 +324,14 @@
       "sharedAddressGroup": [
         "kiln-san-francisco-ca"
       ],
-      "needsManualCorrection": true
+      "needsManualCorrection": false
     },
     "lazy-bear-san-francisco-ca": {
       "latitude": 37.7603507,
       "longitude": -122.4197035,
-      "confidence": "low",
-      "approved": false,
-      "uncertain": true,
+      "confidence": "medium",
+      "approved": true,
+      "uncertain": false,
       "provider": "nominatim",
       "providerPlaceId": "323933976",
       "displayName": "Hi Lo BBQ, 3416, 19th Street, Mission, San Francisco, California, 94110, United States",
@@ -342,7 +342,7 @@
       "sharedAddressGroup": [
         "lazy-bear-san-francisco-ca"
       ],
-      "needsManualCorrection": true
+      "needsManualCorrection": false
     },
     "melisse-santa-monica-ca": {
       "latitude": 34.0244231,
@@ -403,9 +403,9 @@
     "sons-and-daughters-san-francisco-ca": {
       "latitude": 37.7616681,
       "longitude": -122.4107535,
-      "confidence": "low",
-      "approved": false,
-      "uncertain": true,
+      "confidence": "medium",
+      "approved": true,
+      "uncertain": false,
       "provider": "nominatim",
       "providerPlaceId": "324697040",
       "displayName": "Osito, 2875, 18th Street, Potrero Hill, Mission, San Francisco, California, 94110, United States",
@@ -416,14 +416,14 @@
       "sharedAddressGroup": [
         "sons-and-daughters-san-francisco-ca"
       ],
-      "needsManualCorrection": true
+      "needsManualCorrection": false
     },
     "vespertine-culver-city-ca": {
       "latitude": 34.0242037,
       "longitude": -118.3817724,
-      "confidence": "low",
-      "approved": false,
-      "uncertain": true,
+      "confidence": "medium",
+      "approved": true,
+      "uncertain": false,
       "provider": "nominatim",
       "providerPlaceId": "320187470",
       "displayName": "Vespertine, 3599, Hayden Avenue, Hayden Tract, Culver City, Los Angeles County, California, 90232, United States",
@@ -434,14 +434,14 @@
       "sharedAddressGroup": [
         "vespertine-culver-city-ca"
       ],
-      "needsManualCorrection": true
+      "needsManualCorrection": false
     },
     "7-adams-san-francisco-ca": {
       "latitude": 37.7860817,
       "longitude": -122.4326393,
-      "confidence": "low",
-      "approved": false,
-      "uncertain": true,
+      "confidence": "medium",
+      "approved": true,
+      "uncertain": false,
       "provider": "nominatim",
       "providerPlaceId": "404677015",
       "displayName": "1963, Sutter Street, Japantown, Western Addition, San Francisco, California, 94115, United States",
@@ -452,14 +452,14 @@
       "sharedAddressGroup": [
         "7-adams-san-francisco-ca"
       ],
-      "needsManualCorrection": true
+      "needsManualCorrection": false
     },
     "angler-sf-san-francisco-ca": {
       "latitude": 37.793083,
       "longitude": -122.392177,
-      "confidence": "low",
-      "approved": false,
-      "uncertain": true,
+      "confidence": "medium",
+      "approved": true,
+      "uncertain": false,
       "provider": "nominatim",
       "providerPlaceId": "323204320",
       "displayName": "Angler, 132, The Embarcadero, Financial District, South of Market, San Francisco, California, 94105, United States",
@@ -470,7 +470,7 @@
       "sharedAddressGroup": [
         "angler-sf-san-francisco-ca"
       ],
-      "needsManualCorrection": true
+      "needsManualCorrection": false
     },
     "auberge-du-soleil-rutherford-ca": {
       "latitude": 38.4934201,
@@ -511,9 +511,9 @@
     "bell-s-los-alamos-ca": {
       "latitude": 34.7439012,
       "longitude": -120.2793656,
-      "confidence": "low",
-      "approved": false,
-      "uncertain": true,
+      "confidence": "medium",
+      "approved": true,
+      "uncertain": false,
       "provider": "nominatim",
       "providerPlaceId": "317084903",
       "displayName": "Bell Street Farm, 406, Bell Street, Los Alamos, Santa Barbara County, California, 93440, United States",
@@ -524,7 +524,7 @@
       "sharedAddressGroup": [
         "bell-s-los-alamos-ca"
       ],
-      "needsManualCorrection": true
+      "needsManualCorrection": false
     },
     "caruso-s-montecito-ca": {
       "restaurantSlug": "caruso-s-montecito-ca",
@@ -601,9 +601,9 @@
     "heritage-long-beach-ca": {
       "latitude": 33.77526,
       "longitude": -118.167139,
-      "confidence": "low",
-      "approved": false,
-      "uncertain": true,
+      "confidence": "medium",
+      "approved": true,
+      "uncertain": false,
       "provider": "nominatim",
       "providerPlaceId": "414012048",
       "displayName": "2030, East 7th Street, Long Beach, Los Angeles County, California, 90804, United States",
@@ -614,14 +614,14 @@
       "sharedAddressGroup": [
         "heritage-long-beach-ca"
       ],
-      "needsManualCorrection": true
+      "needsManualCorrection": false
     },
     "hilda-and-jesse-san-francisco-ca": {
       "latitude": 37.8000754,
       "longitude": -122.4110382,
-      "confidence": "low",
-      "approved": false,
-      "uncertain": true,
+      "confidence": "medium",
+      "approved": true,
+      "uncertain": false,
       "provider": "nominatim",
       "providerPlaceId": "325777180",
       "displayName": "701;705;709, Union Street, Russian Hill, North Beach, San Francisco, California, 94133, United States",
@@ -632,7 +632,7 @@
       "sharedAddressGroup": [
         "hilda-and-jesse-san-francisco-ca"
       ],
-      "needsManualCorrection": true
+      "needsManualCorrection": false
     },
     "holbox-los-angeles-ca": {
       "latitude": 34.0173544,
@@ -673,9 +673,9 @@
     "kali-los-angeles-ca": {
       "latitude": 34.083411,
       "longitude": -118.3246054,
-      "confidence": "low",
-      "approved": false,
-      "uncertain": true,
+      "confidence": "medium",
+      "approved": true,
+      "uncertain": false,
       "provider": "nominatim",
       "providerPlaceId": "414266045",
       "displayName": "5722, Melrose Avenue, Hollywood, Los Angeles, Los Angeles County, California, 90038, United States",
@@ -686,14 +686,14 @@
       "sharedAddressGroup": [
         "kali-los-angeles-ca"
       ],
-      "needsManualCorrection": true
+      "needsManualCorrection": false
     },
     "kin-khao-san-francisco-ca": {
       "latitude": 37.7848779,
       "longitude": -122.4088565,
-      "confidence": "low",
-      "approved": false,
-      "uncertain": true,
+      "confidence": "medium",
+      "approved": true,
+      "uncertain": false,
       "provider": "nominatim",
       "providerPlaceId": "324413599",
       "displayName": "Parc 55 San Francisco - a Hilton Hotel, 55, Cyril Magnin Street, Union Square, Tenderloin, South of Market, San Francisco, California, 94102, United States",
@@ -704,7 +704,7 @@
       "sharedAddressGroup": [
         "kin-khao-san-francisco-ca"
       ],
-      "needsManualCorrection": true
+      "needsManualCorrection": false
     },
     "kojima-los-angeles-ca": {
       "latitude": 34.0522,
@@ -727,9 +727,9 @@
     "lielle-los-angeles-ca": {
       "latitude": 34.0552637,
       "longitude": -118.3977107,
-      "confidence": "low",
-      "approved": false,
-      "uncertain": true,
+      "confidence": "medium",
+      "approved": true,
+      "uncertain": false,
       "provider": "nominatim",
       "providerPlaceId": "416097661",
       "displayName": "9575, West Pico Boulevard, Pico-Robertson, Los Angeles, Los Angeles County, California, 90035, United States",
@@ -740,14 +740,14 @@
       "sharedAddressGroup": [
         "lielle-los-angeles-ca"
       ],
-      "needsManualCorrection": true
+      "needsManualCorrection": false
     },
     "lilo-carlsbad-ca": {
       "latitude": 33.164383,
       "longitude": -117.351481,
-      "confidence": "low",
-      "approved": false,
-      "uncertain": true,
+      "confidence": "medium",
+      "approved": true,
+      "uncertain": false,
       "provider": "nominatim",
       "providerPlaceId": "314655933",
       "displayName": "2571, Roosevelt Street, Downtown Carlsbad, Carlsbad, San Diego County, California, 92008, United States",
@@ -758,14 +758,14 @@
       "sharedAddressGroup": [
         "lilo-carlsbad-ca"
       ],
-      "needsManualCorrection": true
+      "needsManualCorrection": false
     },
     "localis-sacramento-ca": {
       "latitude": 38.5667323,
       "longitude": -121.4836969,
-      "confidence": "low",
-      "approved": false,
-      "uncertain": true,
+      "confidence": "medium",
+      "approved": true,
+      "uncertain": false,
       "provider": "nominatim",
       "providerPlaceId": "385325237",
       "displayName": "2031, S Street, Newton Booth, Sacramento, Sacramento County, California, 95811, United States",
@@ -776,7 +776,7 @@
       "sharedAddressGroup": [
         "localis-sacramento-ca"
       ],
-      "needsManualCorrection": true
+      "needsManualCorrection": false
     },
     "lucien-la-jolla-ca": {
       "restaurantSlug": "lucien-la-jolla-ca",
@@ -799,9 +799,9 @@
     "madcap-san-anselmo-ca": {
       "latitude": 37.974152,
       "longitude": -122.561743,
-      "confidence": "low",
-      "approved": false,
-      "uncertain": true,
+      "confidence": "medium",
+      "approved": true,
+      "uncertain": false,
       "provider": "nominatim",
       "providerPlaceId": "385197789",
       "displayName": "198, Sir Francis Drake Boulevard, San Anselmo, Marin County, California, 94960, United States",
@@ -812,14 +812,14 @@
       "sharedAddressGroup": [
         "madcap-san-anselmo-ca"
       ],
-      "needsManualCorrection": true
+      "needsManualCorrection": false
     },
     "meteora-los-angeles-ca": {
       "latitude": 34.0835339,
       "longitude": -118.3398225,
-      "confidence": "low",
-      "approved": false,
-      "uncertain": true,
+      "confidence": "medium",
+      "approved": true,
+      "uncertain": false,
       "provider": "nominatim",
       "providerPlaceId": "414424508",
       "displayName": "6703, Melrose Avenue, Fairfax, Los Angeles, Los Angeles County, California, 90038, United States",
@@ -830,7 +830,7 @@
       "sharedAddressGroup": [
         "meteora-los-angeles-ca"
       ],
-      "needsManualCorrection": true
+      "needsManualCorrection": false
     },
     "mister-jiu-s-san-francisco-ca": {
       "latitude": 37.7936719,
@@ -853,9 +853,9 @@
     "miura-beverly-hills-ca": {
       "latitude": 34.0674156,
       "longitude": -118.4005855,
-      "confidence": "low",
-      "approved": false,
-      "uncertain": true,
+      "confidence": "medium",
+      "approved": true,
+      "uncertain": false,
       "provider": "nominatim",
       "providerPlaceId": "319932289",
       "displayName": "Sushi Yamamoto, 218, North Rodeo Drive, Golden Triange, Beverly Hills, Los Angeles County, California, 90210, United States",
@@ -866,14 +866,14 @@
       "sharedAddressGroup": [
         "miura-beverly-hills-ca"
       ],
-      "needsManualCorrection": true
+      "needsManualCorrection": false
     },
     "mori-nozomi-los-angeles-ca": {
       "latitude": 34.0336,
       "longitude": -118.441768,
-      "confidence": "low",
-      "approved": false,
-      "uncertain": true,
+      "confidence": "medium",
+      "approved": true,
+      "uncertain": false,
       "provider": "nominatim",
       "providerPlaceId": "384638605",
       "displayName": "11500, West Pico Boulevard, Sawtelle, Los Angeles, Los Angeles County, California, 90064, United States",
@@ -884,14 +884,14 @@
       "sharedAddressGroup": [
         "mori-nozomi-los-angeles-ca"
       ],
-      "needsManualCorrection": true
+      "needsManualCorrection": false
     },
     "n-naka-los-angeles-ca": {
       "latitude": 34.0251269,
       "longitude": -118.412212,
-      "confidence": "low",
-      "approved": false,
-      "uncertain": true,
+      "confidence": "medium",
+      "approved": true,
+      "uncertain": false,
       "provider": "nominatim",
       "providerPlaceId": "320464965",
       "displayName": "n/naka, 3455, Overland Avenue, Palms, Los Angeles, Los Angeles County, California, 90034, United States",
@@ -902,7 +902,7 @@
       "sharedAddressGroup": [
         "n-naka-los-angeles-ca"
       ],
-      "needsManualCorrection": true
+      "needsManualCorrection": false
     },
     "nari-san-francisco-ca": {
       "latitude": 37.7749,
@@ -925,9 +925,9 @@
     "niku-steakhouse-san-francisco-ca": {
       "latitude": 37.7696071,
       "longitude": -122.4040991,
-      "confidence": "low",
-      "approved": false,
-      "uncertain": true,
+      "confidence": "medium",
+      "approved": true,
+      "uncertain": false,
       "provider": "nominatim",
       "providerPlaceId": "404150450",
       "displayName": "61, Division Street, South of Market, San Francisco, California, 94103, United States",
@@ -938,14 +938,14 @@
       "sharedAddressGroup": [
         "niku-steakhouse-san-francisco-ca"
       ],
-      "needsManualCorrection": true
+      "needsManualCorrection": false
     },
     "nisei-san-francisco-ca": {
       "latitude": 37.7981608,
       "longitude": -122.4220036,
-      "confidence": "low",
-      "approved": false,
-      "uncertain": true,
+      "confidence": "medium",
+      "approved": true,
+      "uncertain": false,
       "provider": "nominatim",
       "providerPlaceId": "323267588",
       "displayName": "2316, Polk Street, Russian Hill, Nob Hill, South of Market, San Francisco, California, 94109, United States",
@@ -956,14 +956,14 @@
       "sharedAddressGroup": [
         "nisei-san-francisco-ca"
       ],
-      "needsManualCorrection": true
+      "needsManualCorrection": false
     },
     "nozawa-bar-beverly-hills-ca": {
       "latitude": 34.0681304,
       "longitude": -118.3982683,
-      "confidence": "low",
-      "approved": false,
-      "uncertain": true,
+      "confidence": "medium",
+      "approved": true,
+      "uncertain": false,
       "provider": "nominatim",
       "providerPlaceId": "384736507",
       "displayName": "212, North Canon Drive, Beverly Hills, Los Angeles County, California, 90210, United States",
@@ -974,7 +974,7 @@
       "sharedAddressGroup": [
         "nozawa-bar-beverly-hills-ca"
       ],
-      "needsManualCorrection": true
+      "needsManualCorrection": false
     },
     "orsa-and-winston-los-angeles-ca": {
       "latitude": 34.0536909,
@@ -997,9 +997,9 @@
     "osteria-mozza-los-angeles-ca": {
       "latitude": 34.0833739,
       "longitude": -118.3387469,
-      "confidence": "low",
-      "approved": false,
-      "uncertain": true,
+      "confidence": "medium",
+      "approved": true,
+      "uncertain": false,
       "provider": "nominatim",
       "providerPlaceId": "414209939",
       "displayName": "6602, Melrose Avenue, Fairfax, Los Angeles, Los Angeles County, California, 90038, United States",
@@ -1010,7 +1010,7 @@
       "sharedAddressGroup": [
         "osteria-mozza-los-angeles-ca"
       ],
-      "needsManualCorrection": true
+      "needsManualCorrection": false
     },
     "pasta-bar-encino-ca": {
       "restaurantSlug": "pasta-bar-encino-ca",
@@ -1051,9 +1051,9 @@
     "press-saint-helena-ca": {
       "latitude": 38.4995703,
       "longitude": -122.4624819,
-      "confidence": "low",
-      "approved": false,
-      "uncertain": true,
+      "confidence": "medium",
+      "approved": true,
+      "uncertain": false,
       "provider": "nominatim",
       "providerPlaceId": "384892001",
       "displayName": "587, Main Street, St. Helena, Napa County, California, 94574, United States",
@@ -1064,14 +1064,14 @@
       "sharedAddressGroup": [
         "press-saint-helena-ca"
       ],
-      "needsManualCorrection": true
+      "needsManualCorrection": false
     },
     "protege-palo-alto-ca": {
       "latitude": 37.4280122,
       "longitude": -122.1435645,
-      "confidence": "low",
-      "approved": false,
-      "uncertain": true,
+      "confidence": "medium",
+      "approved": true,
+      "uncertain": false,
       "provider": "nominatim",
       "providerPlaceId": "390871557",
       "displayName": "250, South California Avenue, Evergreen Park, Palo Alto, Santa Clara County, California, 94306, United States",
@@ -1082,14 +1082,14 @@
       "sharedAddressGroup": [
         "protege-palo-alto-ca"
       ],
-      "needsManualCorrection": true
+      "needsManualCorrection": false
     },
     "restaurant-ki-los-angeles-ca": {
       "latitude": 34.0500663,
       "longitude": -118.241391,
-      "confidence": "low",
-      "approved": false,
-      "uncertain": true,
+      "confidence": "medium",
+      "approved": true,
+      "uncertain": false,
       "provider": "nominatim",
       "providerPlaceId": "321331431",
       "displayName": "111, South San Pedro Street, Toy District, Little Tokyo, Downtown, Los Angeles, Los Angeles County, California, 90012, United States",
@@ -1100,14 +1100,14 @@
       "sharedAddressGroup": [
         "restaurant-ki-los-angeles-ca"
       ],
-      "needsManualCorrection": true
+      "needsManualCorrection": false
     },
     "restaurant-naides-san-francisco-ca": {
       "latitude": 37.7902305,
       "longitude": -122.4091292,
-      "confidence": "low",
-      "approved": false,
-      "uncertain": true,
+      "confidence": "medium",
+      "approved": true,
+      "uncertain": false,
       "provider": "nominatim",
       "providerPlaceId": "323932470",
       "displayName": "Sons & Daughters, 708, Bush Street, Lower Nob Hill, Nob Hill, South of Market, San Francisco, California, 94108, United States",
@@ -1118,7 +1118,7 @@
       "sharedAddressGroup": [
         "restaurant-naides-san-francisco-ca"
       ],
-      "needsManualCorrection": true
+      "needsManualCorrection": false
     },
     "r-o-rebel-omakase-laguna-beach-ca": {
       "restaurantSlug": "r-o-rebel-omakase-laguna-beach-ca",
@@ -1141,9 +1141,9 @@
     "san-ho-won-san-francisco-ca": {
       "latitude": 37.7595769,
       "longitude": -122.4102101,
-      "confidence": "low",
-      "approved": false,
-      "uncertain": true,
+      "confidence": "medium",
+      "approved": true,
+      "uncertain": false,
       "provider": "nominatim",
       "providerPlaceId": "323205300",
       "displayName": "San Ho Won, 2170, Bryant Street, Potrero Hill, Mission, San Francisco, California, 94110, United States",
@@ -1154,7 +1154,7 @@
       "sharedAddressGroup": [
         "san-ho-won-san-francisco-ca"
       ],
-      "needsManualCorrection": true
+      "needsManualCorrection": false
     },
     "selby-s-atherton-ca": {
       "latitude": 37.4695937,
@@ -1213,9 +1213,9 @@
     "silvers-omakase-santa-barbara-ca": {
       "latitude": 34.415204,
       "longitude": -119.691757,
-      "confidence": "low",
-      "approved": false,
-      "uncertain": true,
+      "confidence": "medium",
+      "approved": true,
+      "uncertain": false,
       "provider": "nominatim",
       "providerPlaceId": "321020056",
       "displayName": "Silvers Omakase, 224, Helena Avenue, Funk Zone, Santa Barbara, Santa Barbara County, California, 93101, United States",
@@ -1226,7 +1226,7 @@
       "sharedAddressGroup": [
         "silvers-omakase-santa-barbara-ca"
       ],
-      "needsManualCorrection": true
+      "needsManualCorrection": false
     },
     "six-test-kitchen-paso-robles-ca": {
       "restaurantSlug": "six-test-kitchen-paso-robles-ca",
@@ -1249,9 +1249,9 @@
     "soichi-san-diego-ca": {
       "latitude": 32.762674,
       "longitude": -117.141802,
-      "confidence": "low",
-      "approved": false,
-      "uncertain": true,
+      "confidence": "medium",
+      "approved": true,
+      "uncertain": false,
       "provider": "nominatim",
       "providerPlaceId": "319677428",
       "displayName": "2121, Adams Avenue, University Heights, Mission Valley, San Diego, San Diego County, California, 92116, United States",
@@ -1262,14 +1262,14 @@
       "sharedAddressGroup": [
         "soichi-san-diego-ca"
       ],
-      "needsManualCorrection": true
+      "needsManualCorrection": false
     },
     "sorrel-san-francisco-ca": {
       "latitude": 37.7885864,
       "longitude": -122.4462018,
-      "confidence": "low",
-      "approved": false,
-      "uncertain": true,
+      "confidence": "medium",
+      "approved": true,
+      "uncertain": false,
       "provider": "nominatim",
       "providerPlaceId": "324021672",
       "displayName": "3228, Sacramento Street, Laurel Heights, Pacific Heights, San Francisco, California, 94115, United States",
@@ -1280,14 +1280,14 @@
       "sharedAddressGroup": [
         "sorrel-san-francisco-ca"
       ],
-      "needsManualCorrection": true
+      "needsManualCorrection": false
     },
     "ssal-san-francisco-ca": {
       "latitude": 37.797323,
       "longitude": -122.4219316,
-      "confidence": "low",
-      "approved": false,
-      "uncertain": true,
+      "confidence": "medium",
+      "approved": true,
+      "uncertain": false,
       "provider": "nominatim",
       "providerPlaceId": "322872543",
       "displayName": "SSAL, 2226, Polk Street, Russian Hill, Nob Hill, South of Market, San Francisco, California, 94109, United States",
@@ -1298,14 +1298,14 @@
       "sharedAddressGroup": [
         "ssal-san-francisco-ca"
       ],
-      "needsManualCorrection": true
+      "needsManualCorrection": false
     },
     "state-bird-provisions-san-francisco-ca": {
       "latitude": 37.7837055,
       "longitude": -122.4329482,
-      "confidence": "low",
-      "approved": false,
-      "uncertain": true,
+      "confidence": "medium",
+      "approved": true,
+      "uncertain": false,
       "provider": "nominatim",
       "providerPlaceId": "323153943",
       "displayName": "State Bird Provisions, 1529, Fillmore Street, Alamo Square, Western Addition, San Francisco, California, 94115, United States",
@@ -1316,7 +1316,7 @@
       "sharedAddressGroup": [
         "state-bird-provisions-san-francisco-ca"
       ],
-      "needsManualCorrection": true
+      "needsManualCorrection": false
     },
     "sun-moon-studio-oakland-ca": {
       "restaurantSlug": "sun-moon-studio-oakland-ca",
@@ -1339,9 +1339,9 @@
     "sushi-inaba-torrance-ca": {
       "latitude": 33.8401901,
       "longitude": -118.3535091,
-      "confidence": "low",
-      "approved": false,
-      "uncertain": true,
+      "confidence": "medium",
+      "approved": true,
+      "uncertain": false,
       "provider": "nominatim",
       "providerPlaceId": "414622544",
       "displayName": "20918, Hawthorne Boulevard, Torrance, Los Angeles County, California, 90503, United States",
@@ -1352,7 +1352,7 @@
       "sharedAddressGroup": [
         "sushi-inaba-torrance-ca"
       ],
-      "needsManualCorrection": true
+      "needsManualCorrection": false
     },
     "sushi-kaneyoshi-los-angeles-ca": {
       "latitude": 34.0536909,
@@ -1393,9 +1393,9 @@
     "the-progress-san-francisco-ca": {
       "latitude": 37.7836631,
       "longitude": -122.4330799,
-      "confidence": "low",
-      "approved": false,
-      "uncertain": true,
+      "confidence": "medium",
+      "approved": true,
+      "uncertain": false,
       "provider": "nominatim",
       "providerPlaceId": "319854546",
       "displayName": "1525;1527;1529;1539, Fillmore Street, Alamo Square, Western Addition, San Francisco, California, 95115, United States",
@@ -1406,7 +1406,7 @@
       "sharedAddressGroup": [
         "the-progress-san-francisco-ca"
       ],
-      "needsManualCorrection": true
+      "needsManualCorrection": false
     },
     "the-restaurant-at-justin-paso-robles-ca": {
       "restaurantSlug": "the-restaurant-at-justin-paso-robles-ca",
@@ -1429,9 +1429,9 @@
     "the-village-pub-woodside-ca": {
       "latitude": 37.4289517,
       "longitude": -122.251458,
-      "confidence": "low",
-      "approved": false,
-      "uncertain": true,
+      "confidence": "medium",
+      "approved": true,
+      "uncertain": false,
       "provider": "nominatim",
       "providerPlaceId": "322898310",
       "displayName": "The Village Pub, 2967, Woodside Road, Woodside, San Mateo County, California, 94062, United States",
@@ -1442,14 +1442,14 @@
       "sharedAddressGroup": [
         "the-village-pub-woodside-ca"
       ],
-      "needsManualCorrection": true
+      "needsManualCorrection": false
     },
     "troubadour-healdsburg-ca": {
       "latitude": 38.6116256,
       "longitude": -122.8710044,
-      "confidence": "low",
-      "approved": false,
-      "uncertain": true,
+      "confidence": "medium",
+      "approved": true,
+      "uncertain": false,
       "provider": "nominatim",
       "providerPlaceId": "415366570",
       "displayName": "381, Healdsburg Avenue, Healdsburg, Sonoma County, California, 95448, United States",
@@ -1460,14 +1460,14 @@
       "sharedAddressGroup": [
         "troubadour-healdsburg-ca"
       ],
-      "needsManualCorrection": true
+      "needsManualCorrection": false
     },
     "wakuriya-san-mateo-ca": {
       "latitude": 37.5213369,
       "longitude": -122.3368004,
-      "confidence": "low",
-      "approved": false,
-      "uncertain": true,
+      "confidence": "medium",
+      "approved": true,
+      "uncertain": false,
       "provider": "nominatim",
       "providerPlaceId": "323530263",
       "displayName": "Wakuriya Japanese Kitchen, 115, De Anza Boulevard, San Mateo, San Mateo County, California, 94402, United States",
@@ -1478,14 +1478,14 @@
       "sharedAddressGroup": [
         "wakuriya-san-mateo-ca"
       ],
-      "needsManualCorrection": true
+      "needsManualCorrection": false
     },
     "wolfsbane-san-francisco-ca": {
       "latitude": 37.7580869,
       "longitude": -122.3885112,
-      "confidence": "low",
-      "approved": false,
-      "uncertain": true,
+      "confidence": "medium",
+      "approved": true,
+      "uncertain": false,
       "provider": "nominatim",
       "providerPlaceId": "404691865",
       "displayName": "2495, 3rd Street, Dogpatch, Potrero Hill, San Francisco, California, 94107, United States",
@@ -1496,7 +1496,7 @@
       "sharedAddressGroup": [
         "wolfsbane-san-francisco-ca"
       ],
-      "needsManualCorrection": true
+      "needsManualCorrection": false
     },
     "the-wolf-s-tailor-denver-co": {
       "latitude": 39.7727956,
@@ -1519,9 +1519,9 @@
     "alma-fonda-fina-denver-co": {
       "latitude": 39.758103,
       "longitude": -105.0116583,
-      "confidence": "low",
-      "approved": false,
-      "uncertain": true,
+      "confidence": "medium",
+      "approved": true,
+      "uncertain": false,
       "provider": "nominatim",
       "providerPlaceId": "330534854",
       "displayName": "Alma Fonda Fina, 2556, 15th Street, Highland, Denver, Colorado, 80211, United States",
@@ -1532,7 +1532,7 @@
       "sharedAddressGroup": [
         "alma-fonda-fina-denver-co"
       ],
-      "needsManualCorrection": true
+      "needsManualCorrection": false
     },
     "beckon-denver-co": {
       "latitude": 39.7611881,
@@ -1555,9 +1555,9 @@
     "bosq-aspen-co": {
       "latitude": 39.1885009,
       "longitude": -106.8197359,
-      "confidence": "low",
-      "approved": false,
-      "uncertain": true,
+      "confidence": "medium",
+      "approved": true,
+      "uncertain": false,
       "provider": "nominatim",
       "providerPlaceId": "328833080",
       "displayName": "Bosq, 312, South Mill Street, Aspen, Pitkin County, Colorado, 81611, United States",
@@ -1568,7 +1568,7 @@
       "sharedAddressGroup": [
         "bosq-aspen-co"
       ],
-      "needsManualCorrection": true
+      "needsManualCorrection": false
     },
     "brut-denver-co": {
       "latitude": 39.7527933,
@@ -1591,9 +1591,9 @@
     "frasca-food-and-wine-boulder-co": {
       "latitude": 40.0193004,
       "longitude": -105.2724538,
-      "confidence": "low",
-      "approved": false,
-      "uncertain": true,
+      "confidence": "medium",
+      "approved": true,
+      "uncertain": false,
       "provider": "nominatim",
       "providerPlaceId": "326406784",
       "displayName": "Frasca Food and Wine, 1738, Pearl Street, Goss-Grove, Boulder, Boulder County, Colorado, 80302, United States",
@@ -1604,14 +1604,14 @@
       "sharedAddressGroup": [
         "frasca-food-and-wine-boulder-co"
       ],
-      "needsManualCorrection": true
+      "needsManualCorrection": false
     },
     "kizaki-denver-co": {
       "latitude": 39.6883934,
       "longitude": -104.9806129,
-      "confidence": "low",
-      "approved": false,
-      "uncertain": true,
+      "confidence": "medium",
+      "approved": true,
+      "uncertain": false,
       "provider": "nominatim",
       "providerPlaceId": "330849795",
       "displayName": "1551, South Pearl Street, Platt Park, Denver, Colorado, 80210, United States",
@@ -1623,14 +1623,14 @@
         "kizaki-denver-co",
         "margot-denver-co"
       ],
-      "needsManualCorrection": true
+      "needsManualCorrection": false
     },
     "margot-denver-co": {
       "latitude": 39.6883934,
       "longitude": -104.9806129,
-      "confidence": "low",
-      "approved": false,
-      "uncertain": true,
+      "confidence": "medium",
+      "approved": true,
+      "uncertain": false,
       "provider": "nominatim",
       "providerPlaceId": "330849795",
       "displayName": "1551, South Pearl Street, Platt Park, Denver, Colorado, 80210, United States",
@@ -1642,14 +1642,14 @@
         "kizaki-denver-co",
         "margot-denver-co"
       ],
-      "needsManualCorrection": true
+      "needsManualCorrection": false
     },
     "mezcaleria-alma-denver-co": {
       "latitude": 39.7577969,
       "longitude": -105.0111751,
-      "confidence": "low",
-      "approved": false,
-      "uncertain": true,
+      "confidence": "medium",
+      "approved": true,
+      "uncertain": false,
       "provider": "nominatim",
       "providerPlaceId": "402923631",
       "displayName": "2550, 15th Street, Highland, Denver, Colorado, 80211, United States",
@@ -1660,14 +1660,14 @@
       "sharedAddressGroup": [
         "mezcaleria-alma-denver-co"
       ],
-      "needsManualCorrection": true
+      "needsManualCorrection": false
     },
     "l-atelier-de-joel-robuchon-miami-miami-fl": {
       "latitude": 25.8600955,
       "longitude": -80.2614493,
-      "confidence": "low",
-      "approved": false,
-      "uncertain": true,
+      "confidence": "medium",
+      "approved": true,
+      "uncertain": false,
       "provider": "nominatim",
       "providerPlaceId": "305056943",
       "displayName": "East 41st Street, Hialeah, Miami-Dade County, Florida, 33013, United States",
@@ -1678,14 +1678,14 @@
       "sharedAddressGroup": [
         "l-atelier-de-joel-robuchon-miami-miami-fl"
       ],
-      "needsManualCorrection": true
+      "needsManualCorrection": false
     },
     "sorekara-orlando-fl": {
       "latitude": 28.5685437,
       "longitude": -81.3261791,
-      "confidence": "low",
-      "approved": false,
-      "uncertain": true,
+      "confidence": "medium",
+      "approved": true,
+      "uncertain": false,
       "provider": "nominatim",
       "providerPlaceId": "396904428",
       "displayName": "4979, New Broad Street, Baldwin Park, Orlando, Orange County, Florida, 32814, United States",
@@ -1696,14 +1696,14 @@
       "sharedAddressGroup": [
         "sorekara-orlando-fl"
       ],
-      "needsManualCorrection": true
+      "needsManualCorrection": false
     },
     "ariete-miami-fl": {
       "latitude": 25.725139,
       "longitude": -80.2454316,
-      "confidence": "low",
-      "approved": false,
-      "uncertain": true,
+      "confidence": "medium",
+      "approved": true,
+      "uncertain": false,
       "provider": "nominatim",
       "providerPlaceId": "306091033",
       "displayName": "3540, Main Highway, Miami, Miami-Dade County, Florida, 33133, United States",
@@ -1714,14 +1714,14 @@
       "sharedAddressGroup": [
         "ariete-miami-fl"
       ],
-      "needsManualCorrection": true
+      "needsManualCorrection": false
     },
     "boia-de-miami-fl": {
       "latitude": 25.8229932,
       "longitude": -80.2773343,
-      "confidence": "low",
-      "approved": false,
-      "uncertain": true,
+      "confidence": "medium",
+      "approved": true,
+      "uncertain": false,
       "provider": "nominatim",
       "providerPlaceId": "305917803",
       "displayName": "East 2nd Avenue, Hialeah, Miami-Dade County, Florida, 33010, United States",
@@ -1732,14 +1732,14 @@
       "sharedAddressGroup": [
         "boia-de-miami-fl"
       ],
-      "needsManualCorrection": true
+      "needsManualCorrection": false
     },
     "camille-orlando-fl": {
       "latitude": 28.5683758,
       "longitude": -81.3260953,
-      "confidence": "low",
-      "approved": false,
-      "uncertain": true,
+      "confidence": "medium",
+      "approved": true,
+      "uncertain": false,
       "provider": "nominatim",
       "providerPlaceId": "396904432",
       "displayName": "4962, New Broad Street, Baldwin Park, Orlando, Orange County, Florida, 32814, United States",
@@ -1750,7 +1750,7 @@
       "sharedAddressGroup": [
         "camille-orlando-fl"
       ],
-      "needsManualCorrection": true
+      "needsManualCorrection": false
     },
     "chef-s-counter-at-maass-fort-lauderdale-fl": {
       "restaurantSlug": "chef-s-counter-at-maass-fort-lauderdale-fl",
@@ -1791,9 +1791,9 @@
     "ebbe-tampa-fl": {
       "latitude": 27.9536193,
       "longitude": -82.4604292,
-      "confidence": "low",
-      "approved": false,
-      "uncertain": true,
+      "confidence": "medium",
+      "approved": true,
+      "uncertain": false,
       "provider": "nominatim",
       "providerPlaceId": "305139421",
       "displayName": "1202, North Franklin Street, Clarkes, Tampa Heights, Tampa, Hillsborough County, Florida, 33602, United States",
@@ -1804,7 +1804,7 @@
       "sharedAddressGroup": [
         "ebbe-tampa-fl"
       ],
-      "needsManualCorrection": true
+      "needsManualCorrection": false
     },
     "elcielo-miami-miami-fl": {
       "latitude": 25.7741566,
@@ -1845,9 +1845,9 @@
     "hiden-miami-fl": {
       "latitude": 25.8012787,
       "longitude": -80.1446122,
-      "confidence": "low",
-      "approved": false,
-      "uncertain": true,
+      "confidence": "medium",
+      "approved": true,
+      "uncertain": false,
       "provider": "nominatim",
       "providerPlaceId": "307076366",
       "displayName": "West 25th Street, Miami Beach, Miami-Dade County, Florida, 33140, United States",
@@ -1858,14 +1858,14 @@
       "sharedAddressGroup": [
         "hiden-miami-fl"
       ],
-      "needsManualCorrection": true
+      "needsManualCorrection": false
     },
     "kadence-orlando-fl": {
       "latitude": 28.569036,
       "longitude": -81.3459996,
-      "confidence": "low",
-      "approved": false,
-      "uncertain": true,
+      "confidence": "medium",
+      "approved": true,
+      "uncertain": false,
       "provider": "nominatim",
       "providerPlaceId": "396404407",
       "displayName": "1809, Winter Park Road, Audubon Park, Orlando, Orange County, Florida, 32803, United States",
@@ -1876,14 +1876,14 @@
       "sharedAddressGroup": [
         "kadence-orlando-fl"
       ],
-      "needsManualCorrection": true
+      "needsManualCorrection": false
     },
     "koya-tampa-fl": {
       "latitude": 27.9418016,
       "longitude": -82.467808,
-      "confidence": "low",
-      "approved": false,
-      "uncertain": true,
+      "confidence": "medium",
+      "approved": true,
+      "uncertain": false,
       "provider": "nominatim",
       "providerPlaceId": "391307955",
       "displayName": "807, West Platt Street, Riverside, Hyde Park, Tampa, Hillsborough County, Florida, 33606, United States",
@@ -1894,14 +1894,14 @@
       "sharedAddressGroup": [
         "koya-tampa-fl"
       ],
-      "needsManualCorrection": true
+      "needsManualCorrection": false
     },
     "kosen-tampa-fl": {
       "latitude": 27.9623842,
       "longitude": -82.4644055,
-      "confidence": "low",
-      "approved": false,
-      "uncertain": true,
+      "confidence": "medium",
+      "approved": true,
+      "uncertain": false,
       "provider": "nominatim",
       "providerPlaceId": "387933601",
       "displayName": "307, West Palm Avenue, Mathews Place, Tampa Heights, Tampa, Hillsborough County, Florida, 33602, United States",
@@ -1912,7 +1912,7 @@
       "sharedAddressGroup": [
         "kosen-tampa-fl"
       ],
-      "needsManualCorrection": true
+      "needsManualCorrection": false
     },
     "le-jardinier-miami-miami-fl": {
       "latitude": 25.7617,
@@ -1935,9 +1935,9 @@
     "los-felix-miami-fl": {
       "latitude": 25.7272071,
       "longitude": -80.2430803,
-      "confidence": "low",
-      "approved": false,
-      "uncertain": true,
+      "confidence": "medium",
+      "approved": true,
+      "uncertain": false,
       "provider": "nominatim",
       "providerPlaceId": "411752683",
       "displayName": "3413, Main Highway, Ocean View Heights, Miami, Miami-Dade County, Florida, 33133, United States",
@@ -1948,7 +1948,7 @@
       "sharedAddressGroup": [
         "los-felix-miami-fl"
       ],
-      "needsManualCorrection": true
+      "needsManualCorrection": false
     },
     "mutra-north-miami-fl": {
       "restaurantSlug": "mutra-north-miami-fl",
@@ -1989,9 +1989,9 @@
     "rocca-tampa-fl": {
       "latitude": 27.9622165,
       "longitude": -82.4649256,
-      "confidence": "low",
-      "approved": false,
-      "uncertain": true,
+      "confidence": "medium",
+      "approved": true,
+      "uncertain": false,
       "provider": "nominatim",
       "providerPlaceId": "391824995",
       "displayName": "323, West Palm Avenue, Mathews Place, Tampa Heights, Tampa, Hillsborough County, Florida, 33602, United States",
@@ -2002,14 +2002,14 @@
       "sharedAddressGroup": [
         "rocca-tampa-fl"
       ],
-      "needsManualCorrection": true
+      "needsManualCorrection": false
     },
     "shingo-coral-gables-fl": {
       "latitude": 25.7528781,
       "longitude": -80.2573211,
-      "confidence": "low",
-      "approved": false,
-      "uncertain": true,
+      "confidence": "medium",
+      "approved": true,
+      "uncertain": false,
       "provider": "nominatim",
       "providerPlaceId": "411215706",
       "displayName": "112, Alhambra Circle, Coral Gables, Miami-Dade County, Florida, 33134, United States",
@@ -2020,14 +2020,14 @@
       "sharedAddressGroup": [
         "shingo-coral-gables-fl"
       ],
-      "needsManualCorrection": true
+      "needsManualCorrection": false
     },
     "soseki-winter-park-fl": {
       "latitude": 28.5932143,
       "longitude": -81.3617583,
-      "confidence": "low",
-      "approved": false,
-      "uncertain": true,
+      "confidence": "medium",
+      "approved": true,
+      "uncertain": false,
       "provider": "nominatim",
       "providerPlaceId": "302369792",
       "displayName": "955, Fairbanks Avenue, Winter Park, Orange County, Florida, 32789, United States",
@@ -2038,14 +2038,14 @@
       "sharedAddressGroup": [
         "soseki-winter-park-fl"
       ],
-      "needsManualCorrection": true
+      "needsManualCorrection": false
     },
     "stubborn-seed-miami-beach-fl": {
       "latitude": 25.7701325,
       "longitude": -80.1348918,
-      "confidence": "low",
-      "approved": false,
-      "uncertain": true,
+      "confidence": "medium",
+      "approved": true,
+      "uncertain": false,
       "provider": "nominatim",
       "providerPlaceId": "302334627",
       "displayName": "Stubborn Seed, 101, Washington Avenue, South Beach, Miami Beach, Miami-Dade County, Florida, 33139, United States",
@@ -2056,7 +2056,7 @@
       "sharedAddressGroup": [
         "stubborn-seed-miami-beach-fl"
       ],
-      "needsManualCorrection": true
+      "needsManualCorrection": false
     },
     "tambourine-room-by-tristan-brandt-miami-beach-fl": {
       "restaurantSlug": "tambourine-room-by-tristan-brandt-miami-beach-fl",
@@ -2115,9 +2115,9 @@
     "omo-by-jont-winter-park-fl": {
       "latitude": 28.5951042,
       "longitude": -81.3505481,
-      "confidence": "low",
-      "approved": false,
-      "uncertain": true,
+      "confidence": "medium",
+      "approved": true,
+      "uncertain": false,
       "provider": "nominatim",
       "providerPlaceId": "303240268",
       "displayName": "115, Lyman Avenue, Winter Park, Orange County, Florida, 32789, United States",
@@ -2128,14 +2128,14 @@
       "sharedAddressGroup": [
         "omo-by-jont-winter-park-fl"
       ],
-      "needsManualCorrection": true
+      "needsManualCorrection": false
     },
     "atlas-atlanta-ga": {
       "latitude": 33.8398015,
       "longitude": -84.3824159,
-      "confidence": "low",
-      "approved": false,
-      "uncertain": true,
+      "confidence": "medium",
+      "approved": true,
+      "uncertain": false,
       "provider": "nominatim",
       "providerPlaceId": "342355376",
       "displayName": "The St. Regis Atlanta, 88, West Paces Ferry Road Northwest, Buckhead, Atlanta, Fulton County, Georgia, 30305, United States",
@@ -2146,7 +2146,7 @@
       "sharedAddressGroup": [
         "atlas-atlanta-ga"
       ],
-      "needsManualCorrection": true
+      "needsManualCorrection": false
     },
     "bacchanalia-atlanta-ga": {
       "latitude": 33.749,
@@ -2169,9 +2169,9 @@
     "hayakawa-atlanta-ga": {
       "latitude": 33.783342,
       "longitude": -84.4114228,
-      "confidence": "low",
-      "approved": false,
-      "uncertain": true,
+      "confidence": "medium",
+      "approved": true,
+      "uncertain": false,
       "provider": "nominatim",
       "providerPlaceId": "342367688",
       "displayName": "Hayakawa, 1055, Howell Mill Road Northwest, Atlantic Station, Bankhead, Atlanta, Fulton County, Georgia, 30318, United States",
@@ -2182,7 +2182,7 @@
       "sharedAddressGroup": [
         "hayakawa-atlanta-ga"
       ],
-      "needsManualCorrection": true
+      "needsManualCorrection": false
     },
     "lazy-betty-atlanta-ga": {
       "latitude": 33.7809002,
@@ -2259,9 +2259,9 @@
     "spring-marietta-ga": {
       "latitude": 33.9536045,
       "longitude": -84.5509359,
-      "confidence": "low",
-      "approved": false,
-      "uncertain": true,
+      "confidence": "medium",
+      "approved": true,
+      "uncertain": false,
       "provider": "nominatim",
       "providerPlaceId": "342482269",
       "displayName": "Spring, 36, Mill Street Northwest, Northwest Marietta Historic District, Marietta, Cobb County, Georgia, 30060, United States",
@@ -2272,7 +2272,7 @@
       "sharedAddressGroup": [
         "spring-marietta-ga"
       ],
-      "needsManualCorrection": true
+      "needsManualCorrection": false
     },
     "smyth-chicago-il": {
       "latitude": 41.8755616,
@@ -2295,9 +2295,9 @@
     "alinea-chicago-il": {
       "latitude": 41.9134372,
       "longitude": -87.648199,
-      "confidence": "low",
-      "approved": false,
-      "uncertain": true,
+      "confidence": "medium",
+      "approved": true,
+      "uncertain": false,
       "provider": "nominatim",
       "providerPlaceId": "370825695",
       "displayName": "Alinea, 1723, North Halsted Street, Ranch Triangle, Lincoln Park, Chicago, North Chicago Township, Cook County, Illinois, 60614, United States",
@@ -2308,14 +2308,14 @@
       "sharedAddressGroup": [
         "alinea-chicago-il"
       ],
-      "needsManualCorrection": true
+      "needsManualCorrection": false
     },
     "ever-chicago-il": {
       "latitude": 41.8868452,
       "longitude": -87.660486,
-      "confidence": "low",
-      "approved": false,
-      "uncertain": true,
+      "confidence": "medium",
+      "approved": true,
+      "uncertain": false,
       "provider": "nominatim",
       "providerPlaceId": "370469587",
       "displayName": "Ever, 1340, West Fulton Market, Fulton Market District, West Loop, Near West Side, Chicago, West Chicago Township, Cook County, Illinois, 60607, United States",
@@ -2326,14 +2326,14 @@
       "sharedAddressGroup": [
         "ever-chicago-il"
       ],
-      "needsManualCorrection": true
+      "needsManualCorrection": false
     },
     "kasama-chicago-il": {
       "latitude": 41.8996921,
       "longitude": -87.6756548,
-      "confidence": "low",
-      "approved": false,
-      "uncertain": true,
+      "confidence": "medium",
+      "approved": true,
+      "uncertain": false,
       "provider": "nominatim",
       "providerPlaceId": "372348432",
       "displayName": "Kasama, 1001, North Winchester Avenue, Ukrainian Village, Wicker Park, West Town, Chicago, West Chicago Township, Cook County, Illinois, 60622, United States",
@@ -2344,14 +2344,14 @@
       "sharedAddressGroup": [
         "kasama-chicago-il"
       ],
-      "needsManualCorrection": true
+      "needsManualCorrection": false
     },
     "oriole-chicago-il": {
       "latitude": 41.8861178,
       "longitude": -87.6451372,
-      "confidence": "low",
-      "approved": false,
-      "uncertain": true,
+      "confidence": "medium",
+      "approved": true,
+      "uncertain": false,
       "provider": "nominatim",
       "providerPlaceId": "372879613",
       "displayName": "Oriole, 661, West Walnut Street, Fulton River District, West Loop, Near West Side, Chicago, West Chicago Township, Cook County, Illinois, 60661, United States",
@@ -2362,14 +2362,14 @@
       "sharedAddressGroup": [
         "oriole-chicago-il"
       ],
-      "needsManualCorrection": true
+      "needsManualCorrection": false
     },
     "boka-chicago-il": {
       "latitude": 41.9136386,
       "longitude": -87.6482025,
-      "confidence": "low",
-      "approved": false,
-      "uncertain": true,
+      "confidence": "medium",
+      "approved": true,
+      "uncertain": false,
       "provider": "nominatim",
       "providerPlaceId": "370651147",
       "displayName": "Boka, 1729, North Halsted Street, Ranch Triangle, Lincoln Park, Chicago, North Chicago Township, Cook County, Illinois, 60614, United States",
@@ -2380,14 +2380,14 @@
       "sharedAddressGroup": [
         "boka-chicago-il"
       ],
-      "needsManualCorrection": true
+      "needsManualCorrection": false
     },
     "carino-chicago-il": {
       "latitude": 41.9670458,
       "longitude": -87.6586482,
-      "confidence": "low",
-      "approved": false,
-      "uncertain": true,
+      "confidence": "medium",
+      "approved": true,
+      "uncertain": false,
       "provider": "nominatim",
       "providerPlaceId": "390870921",
       "displayName": "4662, North Broadway, Uptown Square, Uptown, Chicago, Lake View Township, Cook County, Illinois, 60640, United States",
@@ -2398,7 +2398,7 @@
       "sharedAddressGroup": [
         "carino-chicago-il"
       ],
-      "needsManualCorrection": true
+      "needsManualCorrection": false
     },
     "el-ideas-chicago-il": {
       "latitude": 41.8624839,
@@ -2439,9 +2439,9 @@
     "esme-chicago-il": {
       "latitude": 41.922972,
       "longitude": -87.639006,
-      "confidence": "low",
-      "approved": false,
-      "uncertain": true,
+      "confidence": "medium",
+      "approved": true,
+      "uncertain": false,
       "provider": "nominatim",
       "providerPlaceId": "390698519",
       "displayName": "2200, North Clark Street, Mid-North District, Lincoln Park, Chicago, North Chicago Township, Cook County, Illinois, 60614, United States",
@@ -2452,14 +2452,14 @@
       "sharedAddressGroup": [
         "esme-chicago-il"
       ],
-      "needsManualCorrection": true
+      "needsManualCorrection": false
     },
     "feld-chicago-il": {
       "latitude": 41.8960817,
       "longitude": -87.6778458,
-      "confidence": "low",
-      "approved": false,
-      "uncertain": true,
+      "confidence": "medium",
+      "approved": true,
+      "uncertain": false,
       "provider": "nominatim",
       "providerPlaceId": "370372030",
       "displayName": "2018, West Chicago Avenue, Ukrainian Village, West Town, Chicago, West Chicago Township, Cook County, Illinois, 60622, United States",
@@ -2470,14 +2470,14 @@
       "sharedAddressGroup": [
         "feld-chicago-il"
       ],
-      "needsManualCorrection": true
+      "needsManualCorrection": false
     },
     "galit-chicago-il": {
       "latitude": 41.9262841,
       "longitude": -87.6495306,
-      "confidence": "low",
-      "approved": false,
-      "uncertain": true,
+      "confidence": "medium",
+      "approved": true,
+      "uncertain": false,
       "provider": "nominatim",
       "providerPlaceId": "370800722",
       "displayName": "Galit, 2429, North Lincoln Avenue, Wrightwood Neighbors, Lincoln Park, Chicago, Lake View Township, Cook County, Illinois, 60614, United States",
@@ -2488,7 +2488,2411 @@
       "sharedAddressGroup": [
         "galit-chicago-il"
       ],
+      "needsManualCorrection": false
+    },
+    "indienne-chicago-il": {
+      "latitude": 41.8945593,
+      "longitude": -87.6351044,
+      "confidence": "medium",
+      "approved": true,
+      "uncertain": false,
+      "provider": "nominatim",
+      "providerPlaceId": "370975102",
+      "displayName": "Indienne, 217, West Huron Street, River North, Near North Side, Chicago, North Chicago Township, Cook County, Illinois, 60610, United States",
+      "geocodedAt": "2026-07-17T04:47:24.681415+00:00",
+      "rawType": "restaurant",
+      "restaurantSlug": "indienne-chicago-il",
+      "address": "217 W. Huron St., Chicago, IL, 60654, USA",
+      "sharedAddressGroup": [
+        "indienne-chicago-il"
+      ],
+      "needsManualCorrection": false
+    },
+    "mako-chicago-il": {
+      "latitude": 41.8854996,
+      "longitude": -87.6468806,
+      "confidence": "medium",
+      "approved": true,
+      "uncertain": false,
+      "provider": "nominatim",
+      "providerPlaceId": "371300476",
+      "displayName": "Mako, 731, West Lake Street, Fulton River District, West Loop, Near West Side, Chicago, West Chicago Township, Cook County, Illinois, 60661, United States",
+      "geocodedAt": "2026-07-17T04:47:26.818168+00:00",
+      "rawType": "restaurant",
+      "restaurantSlug": "mako-chicago-il",
+      "address": "731 W. Lake St., Chicago, IL, 60661, USA",
+      "sharedAddressGroup": [
+        "mako-chicago-il"
+      ],
+      "needsManualCorrection": false
+    },
+    "moody-tongue-chicago-il": {
+      "latitude": 41.846932,
+      "longitude": -87.6248793,
+      "confidence": "low",
+      "approved": false,
+      "uncertain": true,
+      "provider": "nominatim",
+      "providerPlaceId": "371767393",
+      "displayName": "Moody Tongue Brewing Company, 2515, South Wabash Avenue, Near South Side, Chicago, South Chicago Township, Cook County, Illinois, 60616, United States",
+      "geocodedAt": "2026-07-17T04:47:28.756554+00:00",
+      "rawType": "brewery",
+      "restaurantSlug": "moody-tongue-chicago-il",
+      "address": "2515 S. Wabash Ave., Chicago, IL, 60616, USA",
+      "sharedAddressGroup": [
+        "moody-tongue-chicago-il"
+      ],
       "needsManualCorrection": true
+    },
+    "next-chicago-il": {
+      "latitude": 41.8865946,
+      "longitude": -87.6520069,
+      "confidence": "medium",
+      "approved": true,
+      "uncertain": false,
+      "provider": "nominatim",
+      "providerPlaceId": "371796917",
+      "displayName": "Next, 953, West Fulton Market, Fulton Market District, West Loop, Near West Side, Chicago, West Chicago Township, Cook County, Illinois, 60607, United States",
+      "geocodedAt": "2026-07-17T04:47:30.166530+00:00",
+      "rawType": "restaurant",
+      "restaurantSlug": "next-chicago-il",
+      "address": "953 W. Fulton Market, Chicago, IL, 60607, USA",
+      "sharedAddressGroup": [
+        "next-chicago-il"
+      ],
+      "needsManualCorrection": false
+    },
+    "schwa-chicago-il": {
+      "latitude": 41.9089411,
+      "longitude": -87.6679496,
+      "confidence": "medium",
+      "approved": true,
+      "uncertain": false,
+      "provider": "nominatim",
+      "providerPlaceId": "370837314",
+      "displayName": "Schwa, 1466, North Ashland Avenue, Pulaski Park, Wicker Park, West Town, Chicago, West Chicago Township, Cook County, Illinois, 60622, United States",
+      "geocodedAt": "2026-07-17T04:47:31.803120+00:00",
+      "rawType": "restaurant",
+      "restaurantSlug": "schwa-chicago-il",
+      "address": "1466 N. Ashland Ave., Chicago, IL, 60662, USA",
+      "sharedAddressGroup": [
+        "schwa-chicago-il"
+      ],
+      "needsManualCorrection": false
+    },
+    "sepia-chicago-il": {
+      "latitude": 41.883943,
+      "longitude": -87.6425174,
+      "confidence": "medium",
+      "approved": true,
+      "uncertain": false,
+      "provider": "nominatim",
+      "providerPlaceId": "371241265",
+      "displayName": "Sepia, 123, North Jefferson Street, West Loop Gate, West Loop, Near West Side, Chicago, West Chicago Township, Cook County, Illinois, 60661, United States",
+      "geocodedAt": "2026-07-17T04:47:33.331147+00:00",
+      "rawType": "restaurant",
+      "restaurantSlug": "sepia-chicago-il",
+      "address": "123 N. Jefferson St., Chicago, IL, 60661, USA",
+      "sharedAddressGroup": [
+        "sepia-chicago-il"
+      ],
+      "needsManualCorrection": false
+    },
+    "topolobampo-chicago-il": {
+      "latitude": 41.8905369,
+      "longitude": -87.6309213,
+      "confidence": "medium",
+      "approved": true,
+      "uncertain": false,
+      "provider": "nominatim",
+      "providerPlaceId": "372239555",
+      "displayName": "Frontera Grill, 445, North Clark Street, River North, Near North Side, Chicago, North Chicago Township, Cook County, Illinois, 60654, United States",
+      "geocodedAt": "2026-07-17T04:47:35.477800+00:00",
+      "rawType": "restaurant",
+      "restaurantSlug": "topolobampo-chicago-il",
+      "address": "445 N. Clark St., Chicago, IL, 60654, USA",
+      "sharedAddressGroup": [
+        "topolobampo-chicago-il"
+      ],
+      "needsManualCorrection": false
+    },
+    "emeril-s-new-orleans-la": {
+      "latitude": 29.9446386,
+      "longitude": -90.0673486,
+      "confidence": "medium",
+      "approved": true,
+      "uncertain": false,
+      "provider": "nominatim",
+      "providerPlaceId": "304184091",
+      "displayName": "Emeril's, 800, Tchoupitoulas Street, Warehouse District, French Quarter, New Orleans, Orleans Parish, Louisiana, 70130, United States",
+      "geocodedAt": "2026-07-17T04:47:37.033056+00:00",
+      "rawType": "restaurant",
+      "restaurantSlug": "emeril-s-new-orleans-la",
+      "address": "800 Tchoupitoulas St., New Orleans, LA, 70130, USA",
+      "sharedAddressGroup": [
+        "emeril-s-new-orleans-la"
+      ],
+      "needsManualCorrection": false
+    },
+    "saint-germain-new-orleans-la": {
+      "latitude": 29.9675573,
+      "longitude": -90.0446954,
+      "confidence": "medium",
+      "approved": true,
+      "uncertain": false,
+      "provider": "nominatim",
+      "providerPlaceId": "303898355",
+      "displayName": "3054, Saint Claude Avenue, Bywater, New Orleans, Orleans Parish, Louisiana, 70117, United States",
+      "geocodedAt": "2026-07-17T04:47:39.042428+00:00",
+      "rawType": "house",
+      "restaurantSlug": "saint-germain-new-orleans-la",
+      "address": "3054 Saint Claude Ave., New Orleans, LA, 70117, USA",
+      "sharedAddressGroup": [
+        "saint-germain-new-orleans-la"
+      ],
+      "needsManualCorrection": false
+    },
+    "zasu-new-orleans-la": {
+      "latitude": 29.9750884,
+      "longitude": -90.0997385,
+      "confidence": "medium",
+      "approved": true,
+      "uncertain": false,
+      "provider": "nominatim",
+      "providerPlaceId": "394961877",
+      "displayName": "127, North Carrollton Avenue, Mid-City, New Orleans, Orleans Parish, Louisiana, 70119, United States",
+      "geocodedAt": "2026-07-17T04:47:40.427633+00:00",
+      "rawType": "house",
+      "restaurantSlug": "zasu-new-orleans-la",
+      "address": "127 N. Carrollton Ave., New Orleans, LA, 70119, USA",
+      "sharedAddressGroup": [
+        "zasu-new-orleans-la"
+      ],
+      "needsManualCorrection": false
+    },
+    "311-omakase-boston-ma": {
+      "latitude": 42.3431433,
+      "longitude": -71.073644,
+      "confidence": "medium",
+      "approved": true,
+      "uncertain": false,
+      "provider": "nominatim",
+      "providerPlaceId": "359610419",
+      "displayName": "605, Tremont Street, South End, Boston, Suffolk County, Massachusetts, 02118, United States",
+      "geocodedAt": "2026-07-17T04:47:42.170610+00:00",
+      "rawType": "yes",
+      "restaurantSlug": "311-omakase-boston-ma",
+      "address": "605 Tremont St., Boston, MA, 02118, USA",
+      "sharedAddressGroup": [
+        "311-omakase-boston-ma"
+      ],
+      "needsManualCorrection": false
+    },
+    "eleven-madison-park-new-york-ny": {
+      "latitude": 40.7415982,
+      "longitude": -73.9871904,
+      "confidence": "medium",
+      "approved": true,
+      "uncertain": false,
+      "provider": "nominatim",
+      "providerPlaceId": "359228169",
+      "displayName": "Eleven Madison Park, 11, Madison Avenue, Flatiron District, Manhattan Community Board 5, Manhattan, New York County, New York, 10010, United States",
+      "geocodedAt": "2026-07-17T04:47:44.001714+00:00",
+      "rawType": "restaurant",
+      "restaurantSlug": "eleven-madison-park-new-york-ny",
+      "address": "11 Madison Ave., New York, NY, 10010, USA",
+      "sharedAddressGroup": [
+        "eleven-madison-park-new-york-ny"
+      ],
+      "needsManualCorrection": false
+    },
+    "jungsik-new-york-new-york-ny": {
+      "latitude": 40.71879,
+      "longitude": -74.009476,
+      "confidence": "medium",
+      "approved": true,
+      "uncertain": false,
+      "provider": "nominatim",
+      "providerPlaceId": "401318693",
+      "displayName": "2, Harrison Street, Tribeca, Lower Manhattan, Manhattan, New York County, New York, 10013, United States",
+      "geocodedAt": "2026-07-17T04:47:45.749585+00:00",
+      "rawType": "house",
+      "restaurantSlug": "jungsik-new-york-new-york-ny",
+      "address": "2 Harrison St., New York, NY, 10013, USA",
+      "sharedAddressGroup": [
+        "jungsik-new-york-new-york-ny"
+      ],
+      "needsManualCorrection": false
+    },
+    "le-bernardin-new-york-ny": {
+      "latitude": 40.7613945,
+      "longitude": -73.981691,
+      "confidence": "medium",
+      "approved": true,
+      "uncertain": false,
+      "provider": "nominatim",
+      "providerPlaceId": "360447594",
+      "displayName": "Le Bernardin, 155, West 51st Street, Theater District, Manhattan Community Board 5, Manhattan, New York County, New York, 10019, United States",
+      "geocodedAt": "2026-07-17T04:47:47.912963+00:00",
+      "rawType": "restaurant",
+      "restaurantSlug": "le-bernardin-new-york-ny",
+      "address": "155 W. 51st St., New York, NY, 10019, USA",
+      "sharedAddressGroup": [
+        "le-bernardin-new-york-ny"
+      ],
+      "needsManualCorrection": false
+    },
+    "per-se-new-york-ny": {
+      "latitude": 40.7682549,
+      "longitude": -73.9828519,
+      "confidence": "medium",
+      "approved": true,
+      "uncertain": false,
+      "provider": "nominatim",
+      "providerPlaceId": "358516626",
+      "displayName": "Per Se, 10, Columbus Circle, Manhattan Community Board 4, Manhattan, New York County, New York, 10019, United States",
+      "geocodedAt": "2026-07-17T04:47:49.344872+00:00",
+      "rawType": "restaurant",
+      "restaurantSlug": "per-se-new-york-ny",
+      "address": "10 Columbus Circle, New York, NY, 10019, USA",
+      "sharedAddressGroup": [
+        "per-se-new-york-ny"
+      ],
+      "needsManualCorrection": false
+    },
+    "sushi-sho-new-york-ny": {
+      "latitude": 40.752273,
+      "longitude": -73.979858,
+      "confidence": "medium",
+      "approved": true,
+      "uncertain": false,
+      "provider": "nominatim",
+      "providerPlaceId": "401323972",
+      "displayName": "3, East 41st Street, Midtown, Manhattan Community Board 5, Manhattan, New York County, New York, 10017, United States",
+      "geocodedAt": "2026-07-17T04:47:51.223581+00:00",
+      "rawType": "house",
+      "restaurantSlug": "sushi-sho-new-york-ny",
+      "address": "3 E. 41st St., New York, NY, 10017, USA",
+      "sharedAddressGroup": [
+        "sushi-sho-new-york-ny"
+      ],
+      "needsManualCorrection": false
+    },
+    "aquavit-new-york-ny": {
+      "latitude": 40.7607818,
+      "longitude": -73.9721848,
+      "confidence": "medium",
+      "approved": true,
+      "uncertain": false,
+      "provider": "nominatim",
+      "providerPlaceId": "358850258",
+      "displayName": "Aquavit, 65, East 55th Street, Midtown East, Manhattan Community Board 5, Manhattan, New York County, New York, 10022, United States",
+      "geocodedAt": "2026-07-17T04:47:52.799548+00:00",
+      "rawType": "restaurant",
+      "restaurantSlug": "aquavit-new-york-ny",
+      "address": "65 E. 55th St., New York, NY, 10022, USA",
+      "sharedAddressGroup": [
+        "aquavit-new-york-ny"
+      ],
+      "needsManualCorrection": false
+    },
+    "aska-brooklyn-ny": {
+      "latitude": 40.6526006,
+      "longitude": -73.9497211,
+      "confidence": "high",
+      "approved": true,
+      "uncertain": false,
+      "provider": "nominatim",
+      "providerPlaceId": "357303770",
+      "displayName": "Brooklyn, Kings County, New York, United States",
+      "geocodedAt": "2026-07-17T04:47:54.240816+00:00",
+      "rawType": "administrative",
+      "restaurantSlug": "aska-brooklyn-ny",
+      "address": "47 S. 5th St., Brooklyn, NY, 11249, USA",
+      "sharedAddressGroup": [
+        "aska-brooklyn-ny"
+      ],
+      "needsManualCorrection": false
+    },
+    "atera-new-york-ny": {
+      "latitude": 40.716937,
+      "longitude": -74.0056985,
+      "confidence": "medium",
+      "approved": true,
+      "uncertain": false,
+      "provider": "nominatim",
+      "providerPlaceId": "357728743",
+      "displayName": "77, Worth Street, Civic Center, Lower Manhattan, Manhattan, New York County, New York, 10013, United States",
+      "geocodedAt": "2026-07-17T04:47:55.637382+00:00",
+      "rawType": "house",
+      "restaurantSlug": "atera-new-york-ny",
+      "address": "77 Worth St., New York, NY, 10013, USA",
+      "sharedAddressGroup": [
+        "atera-new-york-ny"
+      ],
+      "needsManualCorrection": false
+    },
+    "atomix-new-york-ny": {
+      "latitude": 40.7442224,
+      "longitude": -73.9828456,
+      "confidence": "medium",
+      "approved": true,
+      "uncertain": false,
+      "provider": "nominatim",
+      "providerPlaceId": "356896622",
+      "displayName": "104, East 30th Street, Kips Bay, Manhattan Community Board 5, Manhattan, New York County, New York, 10016, United States",
+      "geocodedAt": "2026-07-17T04:47:57.689106+00:00",
+      "rawType": "yes",
+      "restaurantSlug": "atomix-new-york-ny",
+      "address": "104 E. 30th St., New York, NY, 10016, USA",
+      "sharedAddressGroup": [
+        "atomix-new-york-ny"
+      ],
+      "needsManualCorrection": false
+    },
+    "blue-hill-at-stone-barns-tarrytown-ny": {
+      "latitude": 41.1032128,
+      "longitude": -73.8244628,
+      "confidence": "medium",
+      "approved": true,
+      "uncertain": false,
+      "provider": "nominatim",
+      "providerPlaceId": "356427277",
+      "displayName": "630, Bedford Road, Village of Tarrytown, Westchester County, New York, 10591, United States",
+      "geocodedAt": "2026-07-17T04:47:59.146288+00:00",
+      "rawType": "house",
+      "restaurantSlug": "blue-hill-at-stone-barns-tarrytown-ny",
+      "address": "630 Bedford Rd., Tarrytown, NY, 10591, USA",
+      "sharedAddressGroup": [
+        "blue-hill-at-stone-barns-tarrytown-ny"
+      ],
+      "needsManualCorrection": false
+    },
+    "chef-s-table-at-brooklyn-fare-new-york-ny": {
+      "latitude": 40.7560775,
+      "longitude": -73.996449,
+      "confidence": "medium",
+      "approved": true,
+      "uncertain": false,
+      "provider": "nominatim",
+      "providerPlaceId": "359042444",
+      "displayName": "Chef's Table at Brooklyn Fare, 431, West 37th Street, Hudson Yards, Manhattan Community Board 4, Manhattan, New York County, New York, 10199, United States",
+      "geocodedAt": "2026-07-17T04:48:00.580628+00:00",
+      "rawType": "restaurant",
+      "restaurantSlug": "chef-s-table-at-brooklyn-fare-new-york-ny",
+      "address": "431 W. 37th St., New York, NY, 10018, USA",
+      "sharedAddressGroup": [
+        "chef-s-table-at-brooklyn-fare-new-york-ny"
+      ],
+      "needsManualCorrection": false
+    },
+    "cesar-new-york-ny": {
+      "latitude": 40.7271205,
+      "longitude": -74.0075356,
+      "confidence": "medium",
+      "approved": true,
+      "uncertain": false,
+      "provider": "nominatim",
+      "providerPlaceId": "357070220",
+      "displayName": "333, Hudson Street, Hudson Square, Manhattan, New York County, New York, 10013, United States",
+      "geocodedAt": "2026-07-17T04:48:02.321774+00:00",
+      "rawType": "house",
+      "restaurantSlug": "cesar-new-york-ny",
+      "address": "333 Hudson St., New York, NY, 10013, USA",
+      "sharedAddressGroup": [
+        "cesar-new-york-ny"
+      ],
+      "needsManualCorrection": false
+    },
+    "gabriel-kreuther-new-york-ny": {
+      "latitude": 40.7541195,
+      "longitude": -73.98218,
+      "confidence": "medium",
+      "approved": true,
+      "uncertain": false,
+      "provider": "nominatim",
+      "providerPlaceId": "402249314",
+      "displayName": "41, West 42nd Street, Midtown, Manhattan Community Board 5, Manhattan, New York County, New York, 10036, United States",
+      "geocodedAt": "2026-07-17T04:48:03.903905+00:00",
+      "rawType": "house",
+      "restaurantSlug": "gabriel-kreuther-new-york-ny",
+      "address": "41 W. 42nd St., New York, NY, 10036, USA",
+      "sharedAddressGroup": [
+        "gabriel-kreuther-new-york-ny"
+      ],
+      "needsManualCorrection": false
+    },
+    "jean-georges-new-york-ny": {
+      "latitude": 40.7691474,
+      "longitude": -73.9815403,
+      "confidence": "medium",
+      "approved": true,
+      "uncertain": false,
+      "provider": "nominatim",
+      "providerPlaceId": "360550455",
+      "displayName": "Trump International Hotel and Tower, 1, Central Park West, Lincoln Square, Manhattan Community Board 7, Manhattan, New York County, New York, 10023, United States",
+      "geocodedAt": "2026-07-17T04:48:05.522777+00:00",
+      "rawType": "hotel",
+      "restaurantSlug": "jean-georges-new-york-ny",
+      "address": "Trump International Hotel & Tower, 1 Central Park West, New York, NY, 10023, USA",
+      "sharedAddressGroup": [
+        "jean-georges-new-york-ny"
+      ],
+      "needsManualCorrection": false
+    },
+    "joo-ok-new-york-ny": {
+      "latitude": 40.7128,
+      "longitude": -74.006,
+      "confidence": "low",
+      "approved": false,
+      "uncertain": true,
+      "provider": "city-centroid-fallback",
+      "providerPlaceId": "new-york",
+      "displayName": "22 W. 32nd St., 16th Fl., New York, NY, 10001, USA",
+      "geocodedAt": "2026-07-17T04:48:08.524142+00:00",
+      "rawType": "city-centroid",
+      "restaurantSlug": "joo-ok-new-york-ny",
+      "address": "22 W. 32nd St., 16th Fl., New York, NY, 10001, USA",
+      "sharedAddressGroup": [
+        "joo-ok-new-york-ny"
+      ],
+      "needsManualCorrection": true
+    },
+    "masa-new-york-ny": {
+      "latitude": 40.7128,
+      "longitude": -74.006,
+      "confidence": "low",
+      "approved": false,
+      "uncertain": true,
+      "provider": "city-centroid-fallback",
+      "providerPlaceId": "new-york",
+      "displayName": "10 Columbus Circle, Ste. 401, New York, NY, 10019, USA",
+      "geocodedAt": "2026-07-17T04:48:10.468391+00:00",
+      "rawType": "city-centroid",
+      "restaurantSlug": "masa-new-york-ny",
+      "address": "10 Columbus Circle, Ste. 401, New York, NY, 10019, USA",
+      "sharedAddressGroup": [
+        "masa-new-york-ny"
+      ],
+      "needsManualCorrection": true
+    },
+    "odo-new-york-ny": {
+      "latitude": 40.7403317,
+      "longitude": -73.992193,
+      "confidence": "medium",
+      "approved": true,
+      "uncertain": false,
+      "provider": "nominatim",
+      "providerPlaceId": "419335587",
+      "displayName": "Premier Shōjin, 17, West 20th Street, Flatiron District, Manhattan Community Board 5, Manhattan, New York County, New York, 10011, United States",
+      "geocodedAt": "2026-07-17T04:48:11.252058+00:00",
+      "rawType": "restaurant",
+      "restaurantSlug": "odo-new-york-ny",
+      "address": "17 W. 20th St., New York, NY, 10011, USA",
+      "sharedAddressGroup": [
+        "odo-new-york-ny"
+      ],
+      "needsManualCorrection": false
+    },
+    "saga-new-york-ny": {
+      "latitude": 40.7064733,
+      "longitude": -74.0077415,
+      "confidence": "medium",
+      "approved": true,
+      "uncertain": false,
+      "provider": "nominatim",
+      "providerPlaceId": "356298453",
+      "displayName": "American International Building, 70, Pine Street, Financial District, Lower Manhattan, Manhattan, New York County, New York, 10005, United States",
+      "geocodedAt": "2026-07-17T04:48:13.092555+00:00",
+      "rawType": "yes",
+      "restaurantSlug": "saga-new-york-ny",
+      "address": "70 Pine St., New York, NY, 10005, USA",
+      "sharedAddressGroup": [
+        "saga-new-york-ny",
+        "crown-shy-new-york-ny"
+      ],
+      "needsManualCorrection": false
+    },
+    "crown-shy-new-york-ny": {
+      "latitude": 40.7064733,
+      "longitude": -74.0077415,
+      "confidence": "medium",
+      "approved": true,
+      "uncertain": false,
+      "provider": "nominatim",
+      "providerPlaceId": "356298453",
+      "displayName": "American International Building, 70, Pine Street, Financial District, Lower Manhattan, Manhattan, New York County, New York, 10005, United States",
+      "geocodedAt": "2026-07-17T04:48:13.092555+00:00",
+      "rawType": "yes",
+      "restaurantSlug": "crown-shy-new-york-ny",
+      "address": "70 Pine St., New York, NY, 10005, USA",
+      "sharedAddressGroup": [
+        "saga-new-york-ny",
+        "crown-shy-new-york-ny"
+      ],
+      "needsManualCorrection": false
+    },
+    "sushi-noz-new-york-ny": {
+      "latitude": 40.7738707,
+      "longitude": -73.9581175,
+      "confidence": "medium",
+      "approved": true,
+      "uncertain": false,
+      "provider": "nominatim",
+      "providerPlaceId": "359237963",
+      "displayName": "181, East 78th Street, Upper East Side, Manhattan Community Board 8, Manhattan, New York County, New York, 10075, United States",
+      "geocodedAt": "2026-07-17T04:48:15.243158+00:00",
+      "rawType": "yes",
+      "restaurantSlug": "sushi-noz-new-york-ny",
+      "address": "181 E. 78th St., New York, NY, 10075, USA",
+      "sharedAddressGroup": [
+        "sushi-noz-new-york-ny"
+      ],
+      "needsManualCorrection": false
+    },
+    "the-modern-new-york-ny": {
+      "latitude": 40.7611893,
+      "longitude": -73.9770093,
+      "confidence": "medium",
+      "approved": true,
+      "uncertain": false,
+      "provider": "nominatim",
+      "providerPlaceId": "359224267",
+      "displayName": "9, West 53rd Street, Midtown East, Manhattan Community Board 5, Manhattan, New York County, New York, 10019, United States",
+      "geocodedAt": "2026-07-17T04:48:16.975589+00:00",
+      "rawType": "yes",
+      "restaurantSlug": "the-modern-new-york-ny",
+      "address": "9 W. 53rd St., New York, NY, 10019, USA",
+      "sharedAddressGroup": [
+        "the-modern-new-york-ny"
+      ],
+      "needsManualCorrection": false
+    },
+    "63-clinton-new-york-ny": {
+      "latitude": 40.7195041,
+      "longitude": -73.9851317,
+      "confidence": "medium",
+      "approved": true,
+      "uncertain": false,
+      "provider": "nominatim",
+      "providerPlaceId": "359202294",
+      "displayName": "63, Clinton Street, Lower East Side, Manhattan Community Board 3, Manhattan, New York County, New York, 10002, United States",
+      "geocodedAt": "2026-07-17T04:48:18.809198+00:00",
+      "rawType": "yes",
+      "restaurantSlug": "63-clinton-new-york-ny",
+      "address": "63 Clinton St., New York, NY, 10002, USA",
+      "sharedAddressGroup": [
+        "63-clinton-new-york-ny"
+      ],
+      "needsManualCorrection": false
+    },
+    "bar-miller-new-york-ny": {
+      "latitude": 40.7127281,
+      "longitude": -74.0060152,
+      "confidence": "high",
+      "approved": true,
+      "uncertain": false,
+      "provider": "nominatim",
+      "providerPlaceId": "359971500",
+      "displayName": "New York, United States",
+      "geocodedAt": "2026-07-17T04:48:20.545428+00:00",
+      "rawType": "administrative",
+      "restaurantSlug": "bar-miller-new-york-ny",
+      "address": "620 E. 6th St., New York, NY, 10009, USA",
+      "sharedAddressGroup": [
+        "bar-miller-new-york-ny"
+      ],
+      "needsManualCorrection": false
+    },
+    "bridges-new-york-ny": {
+      "latitude": 40.7140477,
+      "longitude": -73.9980861,
+      "confidence": "medium",
+      "approved": true,
+      "uncertain": false,
+      "provider": "nominatim",
+      "providerPlaceId": "361507537",
+      "displayName": "9, Chatham Square, Five Points, Manhattan Community Board 3, Manhattan, New York County, New York, 10013, United States",
+      "geocodedAt": "2026-07-17T04:48:21.949128+00:00",
+      "rawType": "yes",
+      "restaurantSlug": "bridges-new-york-ny",
+      "address": "9 Chatham Sq., New York, NY, 10038, USA",
+      "sharedAddressGroup": [
+        "bridges-new-york-ny"
+      ],
+      "needsManualCorrection": false
+    },
+    "bom-new-york-ny": {
+      "latitude": 40.7396655,
+      "longitude": -73.9924935,
+      "confidence": "medium",
+      "approved": true,
+      "uncertain": false,
+      "provider": "nominatim",
+      "providerPlaceId": "359156940",
+      "displayName": "Oiji Mi, 17, West 19th Street, Chelsea District, Manhattan Community Board 5, Manhattan, New York County, New York, 10011, United States",
+      "geocodedAt": "2026-07-17T04:48:23.689639+00:00",
+      "rawType": "restaurant",
+      "restaurantSlug": "bom-new-york-ny",
+      "address": "17 W. 19th St., New York, NY, 10011, USA",
+      "sharedAddressGroup": [
+        "bom-new-york-ny",
+        "oiji-mi-new-york-ny"
+      ],
+      "needsManualCorrection": false
+    },
+    "oiji-mi-new-york-ny": {
+      "latitude": 40.7396655,
+      "longitude": -73.9924935,
+      "confidence": "medium",
+      "approved": true,
+      "uncertain": false,
+      "provider": "nominatim",
+      "providerPlaceId": "359156940",
+      "displayName": "Oiji Mi, 17, West 19th Street, Chelsea District, Manhattan Community Board 5, Manhattan, New York County, New York, 10011, United States",
+      "geocodedAt": "2026-07-17T04:48:23.689639+00:00",
+      "rawType": "restaurant",
+      "restaurantSlug": "oiji-mi-new-york-ny",
+      "address": "17 W. 19th St., New York, NY, 10011, USA",
+      "sharedAddressGroup": [
+        "bom-new-york-ny",
+        "oiji-mi-new-york-ny"
+      ],
+      "needsManualCorrection": false
+    },
+    "cafe-boulud-new-york-ny": {
+      "latitude": 40.765401,
+      "longitude": -73.968169,
+      "confidence": "medium",
+      "approved": true,
+      "uncertain": false,
+      "provider": "nominatim",
+      "providerPlaceId": "402254128",
+      "displayName": "100, East 63rd Street, Lenox Hill, Manhattan Community Board 8, Manhattan, New York County, New York, 10065, United States",
+      "geocodedAt": "2026-07-17T04:48:25.117937+00:00",
+      "rawType": "house",
+      "restaurantSlug": "cafe-boulud-new-york-ny",
+      "address": "100 E. 63rd St., New York, NY, 10065, USA",
+      "sharedAddressGroup": [
+        "cafe-boulud-new-york-ny"
+      ],
+      "needsManualCorrection": false
+    },
+    "casa-mono-new-york-ny": {
+      "latitude": 40.7359257,
+      "longitude": -73.9871655,
+      "confidence": "medium",
+      "approved": true,
+      "uncertain": false,
+      "provider": "nominatim",
+      "providerPlaceId": "359221460",
+      "displayName": "Casa Mono, 52, Irving Place, Union Square, Manhattan Community Board 6, Manhattan, New York County, New York, 10003, United States",
+      "geocodedAt": "2026-07-17T04:48:26.683647+00:00",
+      "rawType": "restaurant",
+      "restaurantSlug": "casa-mono-new-york-ny",
+      "address": "52 Irving Pl., New York, NY, 10003, USA",
+      "sharedAddressGroup": [
+        "casa-mono-new-york-ny"
+      ],
+      "needsManualCorrection": false
+    },
+    "corima-new-york-ny": {
+      "latitude": 40.7146828,
+      "longitude": -73.9931273,
+      "confidence": "medium",
+      "approved": true,
+      "uncertain": false,
+      "provider": "nominatim",
+      "providerPlaceId": "356758506",
+      "displayName": "Corima, 3, Allen Street, Two Bridges, Manhattan Community Board 3, Manhattan, New York County, New York, 10002, United States",
+      "geocodedAt": "2026-07-17T04:48:28.842121+00:00",
+      "rawType": "restaurant",
+      "restaurantSlug": "corima-new-york-ny",
+      "address": "3 Allen St., New York, NY, 10002, USA",
+      "sharedAddressGroup": [
+        "corima-new-york-ny"
+      ],
+      "needsManualCorrection": false
+    },
+    "cote-new-york-ny": {
+      "latitude": 40.7410462,
+      "longitude": -73.9914203,
+      "confidence": "medium",
+      "approved": true,
+      "uncertain": false,
+      "provider": "nominatim",
+      "providerPlaceId": "360760525",
+      "displayName": "16, West 22nd Street, Flatiron District, Manhattan Community Board 5, Manhattan, New York County, New York, 10010, United States",
+      "geocodedAt": "2026-07-17T04:48:30.777004+00:00",
+      "rawType": "yes",
+      "restaurantSlug": "cote-new-york-ny",
+      "address": "16 W. 22nd St., New York, NY, 10010, USA",
+      "sharedAddressGroup": [
+        "cote-new-york-ny"
+      ],
+      "needsManualCorrection": false
+    },
+    "daniel-new-york-ny": {
+      "latitude": 40.7667776,
+      "longitude": -73.9675711,
+      "confidence": "medium",
+      "approved": true,
+      "uncertain": false,
+      "provider": "nominatim",
+      "providerPlaceId": "359208491",
+      "displayName": "Daniel, 60, East 65th Street, Manhattan Community Board 8, Manhattan, New York County, New York, 10065, United States",
+      "geocodedAt": "2026-07-17T04:48:32.521625+00:00",
+      "rawType": "restaurant",
+      "restaurantSlug": "daniel-new-york-ny",
+      "address": "60 E. 65th St., New York, NY, 10065, USA",
+      "sharedAddressGroup": [
+        "daniel-new-york-ny"
+      ],
+      "needsManualCorrection": false
+    },
+    "dirt-candy-new-york-ny": {
+      "latitude": 40.7178785,
+      "longitude": -73.9907886,
+      "confidence": "medium",
+      "approved": true,
+      "uncertain": false,
+      "provider": "nominatim",
+      "providerPlaceId": "355476575",
+      "displayName": "Dirt Candy, 86, Allen Street, Lower East Side, Manhattan Community Board 3, Manhattan, New York County, New York, 10002, United States",
+      "geocodedAt": "2026-07-17T04:48:34.127926+00:00",
+      "rawType": "restaurant",
+      "restaurantSlug": "dirt-candy-new-york-ny",
+      "address": "86 Allen St., New York, NY, 10002, USA",
+      "sharedAddressGroup": [
+        "dirt-candy-new-york-ny"
+      ],
+      "needsManualCorrection": false
+    },
+    "essential-by-christophe-new-york-ny": {
+      "latitude": 40.7809405,
+      "longitude": -73.9766202,
+      "confidence": "medium",
+      "approved": true,
+      "uncertain": false,
+      "provider": "nominatim",
+      "providerPlaceId": "360440515",
+      "displayName": "103, West 77th Street, Upper West Side, Manhattan Community Board 7, Manhattan, New York County, New York, 10024, United States",
+      "geocodedAt": "2026-07-17T04:48:36.672611+00:00",
+      "rawType": "yes",
+      "restaurantSlug": "essential-by-christophe-new-york-ny",
+      "address": "103 W. 77th St., New York, NY, 10024, USA",
+      "sharedAddressGroup": [
+        "essential-by-christophe-new-york-ny"
+      ],
+      "needsManualCorrection": false
+    },
+    "estela-new-york-ny": {
+      "latitude": 40.7246346,
+      "longitude": -73.9947669,
+      "confidence": "medium",
+      "approved": true,
+      "uncertain": false,
+      "provider": "nominatim",
+      "providerPlaceId": "359128544",
+      "displayName": "47, East Houston Street, NoHo, Manhattan, New York County, New York, 10012, United States",
+      "geocodedAt": "2026-07-17T04:48:39.009291+00:00",
+      "rawType": "yes",
+      "restaurantSlug": "estela-new-york-ny",
+      "address": "47 E. Houston St., New York, NY, 10012, USA",
+      "sharedAddressGroup": [
+        "estela-new-york-ny"
+      ],
+      "needsManualCorrection": false
+    },
+    "family-meal-at-blue-hill-new-york-ny": {
+      "latitude": 40.7320396,
+      "longitude": -73.9995703,
+      "confidence": "medium",
+      "approved": true,
+      "uncertain": false,
+      "provider": "nominatim",
+      "providerPlaceId": "361773001",
+      "displayName": "Blue Hill, 75, Washington Place, Greenwich Village, Manhattan, New York County, New York, 10011, United States",
+      "geocodedAt": "2026-07-17T04:48:40.416224+00:00",
+      "rawType": "restaurant",
+      "restaurantSlug": "family-meal-at-blue-hill-new-york-ny",
+      "address": "75 Washington Pl., New York, NY, 10011, USA",
+      "sharedAddressGroup": [
+        "family-meal-at-blue-hill-new-york-ny"
+      ],
+      "needsManualCorrection": false
+    },
+    "francie-brooklyn-ny": {
+      "latitude": 40.710234,
+      "longitude": -73.964052,
+      "confidence": "medium",
+      "approved": true,
+      "uncertain": false,
+      "provider": "nominatim",
+      "providerPlaceId": "413612668",
+      "displayName": "136, Broadway, Williamsburg, Brooklyn, Kings County, New York, 11249, United States",
+      "geocodedAt": "2026-07-17T04:48:42.755999+00:00",
+      "rawType": "house",
+      "restaurantSlug": "francie-brooklyn-ny",
+      "address": "136 Broadway, Brooklyn, NY, 11249, USA",
+      "sharedAddressGroup": [
+        "francie-brooklyn-ny"
+      ],
+      "needsManualCorrection": false
+    },
+    "frevo-new-york-ny": {
+      "latitude": 40.7127281,
+      "longitude": -74.0060152,
+      "confidence": "high",
+      "approved": true,
+      "uncertain": false,
+      "provider": "nominatim",
+      "providerPlaceId": "361542306",
+      "displayName": "New York, United States",
+      "geocodedAt": "2026-07-17T04:48:44.270377+00:00",
+      "rawType": "administrative",
+      "restaurantSlug": "frevo-new-york-ny",
+      "address": "48 W. 8th St., New York, NY, 10011, USA",
+      "sharedAddressGroup": [
+        "frevo-new-york-ny"
+      ],
+      "needsManualCorrection": false
+    },
+    "gramercy-tavern-new-york-ny": {
+      "latitude": 40.7383894,
+      "longitude": -73.988414,
+      "confidence": "medium",
+      "approved": true,
+      "uncertain": false,
+      "provider": "nominatim",
+      "providerPlaceId": "356908249",
+      "displayName": "Gramercy Tavern, 42, East 20th Street, Flatiron District, Manhattan Community Board 5, Manhattan, New York County, New York, 10003, United States",
+      "geocodedAt": "2026-07-17T04:48:45.854640+00:00",
+      "rawType": "restaurant",
+      "restaurantSlug": "gramercy-tavern-new-york-ny",
+      "address": "42 E. 20th St., New York, NY, 10003, USA",
+      "sharedAddressGroup": [
+        "gramercy-tavern-new-york-ny"
+      ],
+      "needsManualCorrection": false
+    },
+    "huso-new-york-ny": {
+      "latitude": 40.7173283,
+      "longitude": -74.0105321,
+      "confidence": "medium",
+      "approved": true,
+      "uncertain": false,
+      "provider": "nominatim",
+      "providerPlaceId": "357687467",
+      "displayName": "323A, Greenwich Street, Tribeca, Lower Manhattan, Manhattan, New York County, New York, 10013, United States",
+      "geocodedAt": "2026-07-17T04:48:47.592671+00:00",
+      "rawType": "house",
+      "restaurantSlug": "huso-new-york-ny",
+      "address": "323A Greenwich St., New York, NY, 10013, USA",
+      "sharedAddressGroup": [
+        "huso-new-york-ny"
+      ],
+      "needsManualCorrection": false
+    },
+    "icca-new-york-ny": {
+      "latitude": 40.7143027,
+      "longitude": -74.0076803,
+      "confidence": "medium",
+      "approved": true,
+      "uncertain": false,
+      "provider": "nominatim",
+      "providerPlaceId": "358874454",
+      "displayName": "20, Warren Street, Tribeca, Lower Manhattan, Manhattan, New York County, New York, 10007, United States",
+      "geocodedAt": "2026-07-17T04:48:50.543214+00:00",
+      "rawType": "yes",
+      "restaurantSlug": "icca-new-york-ny",
+      "address": "20 Warren St., New York, NY, 10007, USA",
+      "sharedAddressGroup": [
+        "icca-new-york-ny"
+      ],
+      "needsManualCorrection": false
+    },
+    "jeju-noodle-bar-new-york-ny": {
+      "latitude": 40.7330367,
+      "longitude": -74.0073429,
+      "confidence": "medium",
+      "approved": true,
+      "uncertain": false,
+      "provider": "nominatim",
+      "providerPlaceId": "354724900",
+      "displayName": "679, Greenwich Street, West Village, Manhattan, New York County, New York, 10014, United States",
+      "geocodedAt": "2026-07-17T04:48:52.142025+00:00",
+      "rawType": "house",
+      "restaurantSlug": "jeju-noodle-bar-new-york-ny",
+      "address": "679 Greenwich St., New York, NY, 10014, USA",
+      "sharedAddressGroup": [
+        "jeju-noodle-bar-new-york-ny"
+      ],
+      "needsManualCorrection": false
+    },
+    "jua-new-york-ny": {
+      "latitude": 40.7396992,
+      "longitude": -73.9878215,
+      "confidence": "medium",
+      "approved": true,
+      "uncertain": false,
+      "provider": "nominatim",
+      "providerPlaceId": "360168371",
+      "displayName": "36, East 22nd Street, Flatiron District, Manhattan Community Board 5, Manhattan, New York County, New York, 10010, United States",
+      "geocodedAt": "2026-07-17T04:48:53.989601+00:00",
+      "rawType": "yes",
+      "restaurantSlug": "jua-new-york-ny",
+      "address": "36 E. 22nd St., New York, NY, 10010, USA",
+      "sharedAddressGroup": [
+        "jua-new-york-ny"
+      ],
+      "needsManualCorrection": false
+    },
+    "joji-new-york-ny": {
+      "latitude": 40.7529739,
+      "longitude": -73.9785396,
+      "confidence": "medium",
+      "approved": true,
+      "uncertain": false,
+      "provider": "nominatim",
+      "providerPlaceId": "360532709",
+      "displayName": "One Vanderbilt, 1, Vanderbilt Avenue, Midtown South, Manhattan Community Board 5, Manhattan, New York County, New York, 10017, United States",
+      "geocodedAt": "2026-07-17T04:48:55.415407+00:00",
+      "rawType": "office",
+      "restaurantSlug": "joji-new-york-ny",
+      "address": "1 Vanderbilt Ave., New York, NY, 10017, USA",
+      "sharedAddressGroup": [
+        "joji-new-york-ny",
+        "le-pavillon-new-york-ny"
+      ],
+      "needsManualCorrection": false
+    },
+    "le-pavillon-new-york-ny": {
+      "latitude": 40.7529739,
+      "longitude": -73.9785396,
+      "confidence": "medium",
+      "approved": true,
+      "uncertain": false,
+      "provider": "nominatim",
+      "providerPlaceId": "360532709",
+      "displayName": "One Vanderbilt, 1, Vanderbilt Avenue, Midtown South, Manhattan Community Board 5, Manhattan, New York County, New York, 10017, United States",
+      "geocodedAt": "2026-07-17T04:48:55.415407+00:00",
+      "rawType": "office",
+      "restaurantSlug": "le-pavillon-new-york-ny",
+      "address": "1 Vanderbilt Ave., New York, NY, 10017, USA",
+      "sharedAddressGroup": [
+        "joji-new-york-ny",
+        "le-pavillon-new-york-ny"
+      ],
+      "needsManualCorrection": false
+    },
+    "kochi-new-york-ny": {
+      "latitude": 42.7252526,
+      "longitude": -73.7110577,
+      "confidence": "medium",
+      "approved": true,
+      "uncertain": false,
+      "provider": "nominatim",
+      "providerPlaceId": "354625218",
+      "displayName": "10th Avenue, Town of Colonie, Albany County, New York, 12189, United States",
+      "geocodedAt": "2026-07-17T04:48:56.803351+00:00",
+      "rawType": "residential",
+      "restaurantSlug": "kochi-new-york-ny",
+      "address": "652 Tenth Ave., New York, NY, 10036, USA",
+      "sharedAddressGroup": [
+        "kochi-new-york-ny"
+      ],
+      "needsManualCorrection": false
+    },
+    "kosaka-new-york-ny": {
+      "latitude": 40.738193,
+      "longitude": -74.0014858,
+      "confidence": "low",
+      "approved": false,
+      "uncertain": true,
+      "provider": "nominatim",
+      "providerPlaceId": "357775730",
+      "displayName": "220, West 13th Street, Union Square, Manhattan, New York County, New York, 10011, United States",
+      "geocodedAt": "2026-07-17T04:48:59.257116+00:00",
+      "rawType": "apartments",
+      "restaurantSlug": "kosaka-new-york-ny",
+      "address": "220 W. 13th St., New York, NY, 10011, USA",
+      "sharedAddressGroup": [
+        "kosaka-new-york-ny"
+      ],
+      "needsManualCorrection": true
+    },
+    "la-bastide-by-andrea-calstier-north-salem-ny": {
+      "latitude": 41.3370204,
+      "longitude": -73.5633824,
+      "confidence": "medium",
+      "approved": true,
+      "uncertain": false,
+      "provider": "nominatim",
+      "providerPlaceId": "356085109",
+      "displayName": "La Bastide, 721, Titicus Road, Town of North Salem, Westchester County, New York, 10560, United States",
+      "geocodedAt": "2026-07-17T04:49:00.765451+00:00",
+      "rawType": "restaurant",
+      "restaurantSlug": "la-bastide-by-andrea-calstier-north-salem-ny",
+      "address": "721 Titicus Rd., North Salem, NY, 10560, USA",
+      "sharedAddressGroup": [
+        "la-bastide-by-andrea-calstier-north-salem-ny"
+      ],
+      "needsManualCorrection": false
+    },
+    "le-coucou-new-york-ny": {
+      "latitude": 40.7128,
+      "longitude": -74.006,
+      "confidence": "low",
+      "approved": false,
+      "uncertain": true,
+      "provider": "city-centroid-fallback",
+      "providerPlaceId": "new-york",
+      "displayName": "11 Howard Hotel, 138 Lafayette St., New York, NY, 10013, USA",
+      "geocodedAt": "2026-07-17T04:49:03.924743+00:00",
+      "rawType": "city-centroid",
+      "restaurantSlug": "le-coucou-new-york-ny",
+      "address": "11 Howard Hotel, 138 Lafayette St., New York, NY, 10013, USA",
+      "sharedAddressGroup": [
+        "le-coucou-new-york-ny"
+      ],
+      "needsManualCorrection": true
+    },
+    "l-abeille-new-york-ny": {
+      "latitude": 40.7218248,
+      "longitude": -74.0099473,
+      "confidence": "medium",
+      "approved": true,
+      "uncertain": false,
+      "provider": "nominatim",
+      "providerPlaceId": "402252201",
+      "displayName": "412, Greenwich Street, Hudson Square, Lower Manhattan, Manhattan, New York County, New York, 10013, United States",
+      "geocodedAt": "2026-07-17T04:49:04.270455+00:00",
+      "rawType": "house",
+      "restaurantSlug": "l-abeille-new-york-ny",
+      "address": "412 Greenwich St., New York, NY, 10013, USA",
+      "sharedAddressGroup": [
+        "l-abeille-new-york-ny",
+        "muku-new-york-ny"
+      ],
+      "needsManualCorrection": false
+    },
+    "muku-new-york-ny": {
+      "latitude": 40.7218248,
+      "longitude": -74.0099473,
+      "confidence": "medium",
+      "approved": true,
+      "uncertain": false,
+      "provider": "nominatim",
+      "providerPlaceId": "402252201",
+      "displayName": "412, Greenwich Street, Hudson Square, Lower Manhattan, Manhattan, New York County, New York, 10013, United States",
+      "geocodedAt": "2026-07-17T04:49:04.270455+00:00",
+      "rawType": "house",
+      "restaurantSlug": "muku-new-york-ny",
+      "address": "412 Greenwich St., New York, NY, 10013, USA",
+      "sharedAddressGroup": [
+        "l-abeille-new-york-ny",
+        "muku-new-york-ny"
+      ],
+      "needsManualCorrection": false
+    },
+    "mari-new-york-ny": {
+      "latitude": 40.9157613,
+      "longitude": -73.8036096,
+      "confidence": "medium",
+      "approved": true,
+      "uncertain": false,
+      "provider": "nominatim",
+      "providerPlaceId": "357252966",
+      "displayName": "9th Avenue, North Pelham, Village of Pelham, Town of Pelham, Westchester County, New York, 10803, United States",
+      "geocodedAt": "2026-07-17T04:49:05.880584+00:00",
+      "rawType": "residential",
+      "restaurantSlug": "mari-new-york-ny",
+      "address": "679 Ninth Ave., New York, NY, 10036, USA",
+      "sharedAddressGroup": [
+        "mari-new-york-ny"
+      ],
+      "needsManualCorrection": false
+    },
+    "meju-queens-ny": {
+      "latitude": 40.7435774,
+      "longitude": -73.9552144,
+      "confidence": "low",
+      "approved": false,
+      "uncertain": true,
+      "provider": "nominatim",
+      "providerPlaceId": "359893484",
+      "displayName": "5-28, 49th Avenue, Hunters Point, Long Island City, Queens, Queens County, New York, 11101, United States",
+      "geocodedAt": "2026-07-17T04:49:07.503257+00:00",
+      "rawType": "playground",
+      "restaurantSlug": "meju-queens-ny",
+      "address": "5-28 49th Ave., Queens, NY, 11101, USA",
+      "sharedAddressGroup": [
+        "meju-queens-ny"
+      ],
+      "needsManualCorrection": true
+    },
+    "noda-new-york-ny": {
+      "latitude": 40.740815,
+      "longitude": -73.9930983,
+      "confidence": "medium",
+      "approved": true,
+      "uncertain": false,
+      "provider": "nominatim",
+      "providerPlaceId": "356902826",
+      "displayName": "37, West 20th Street, Flatiron District, Manhattan Community Board 5, Manhattan, New York County, New York, 10010, United States",
+      "geocodedAt": "2026-07-17T04:49:09.501201+00:00",
+      "rawType": "yes",
+      "restaurantSlug": "noda-new-york-ny",
+      "address": "37 W. 20th St., New York, NY, 10011, USA",
+      "sharedAddressGroup": [
+        "noda-new-york-ny"
+      ],
+      "needsManualCorrection": false
+    },
+    "noz-17-new-york-ny": {
+      "latitude": 40.7438626,
+      "longitude": -74.006577,
+      "confidence": "medium",
+      "approved": true,
+      "uncertain": false,
+      "provider": "nominatim",
+      "providerPlaceId": "356838616",
+      "displayName": "458, West 17th Street, Chelsea District, Manhattan Community Board 4, Manhattan, New York County, New York, 10011, United States",
+      "geocodedAt": "2026-07-17T04:49:11.239451+00:00",
+      "rawType": "house",
+      "restaurantSlug": "noz-17-new-york-ny",
+      "address": "458 W. 17th St., New York, NY, 10011, USA",
+      "sharedAddressGroup": [
+        "noz-17-new-york-ny"
+      ],
+      "needsManualCorrection": false
+    },
+    "noksu-new-york-ny": {
+      "latitude": 40.7128,
+      "longitude": -74.006,
+      "confidence": "low",
+      "approved": false,
+      "uncertain": true,
+      "provider": "city-centroid-fallback",
+      "providerPlaceId": "new-york",
+      "displayName": "Martinique New York on Broadway, Curio Collection by Hilton, 49 W. 32nd St., New York, NY, 10001, USA",
+      "geocodedAt": "2026-07-17T04:49:13.933569+00:00",
+      "rawType": "city-centroid",
+      "restaurantSlug": "noksu-new-york-ny",
+      "address": "Martinique New York on Broadway, Curio Collection by Hilton, 49 W. 32nd St., New York, NY, 10001, USA",
+      "sharedAddressGroup": [
+        "noksu-new-york-ny"
+      ],
+      "needsManualCorrection": true
+    },
+    "oxomoco-brooklyn-ny": {
+      "latitude": 40.72977,
+      "longitude": -73.9554604,
+      "confidence": "medium",
+      "approved": true,
+      "uncertain": false,
+      "provider": "nominatim",
+      "providerPlaceId": "359727207",
+      "displayName": "Oxomoco, 128, Greenpoint Avenue, Greenpoint, Brooklyn, Kings County, New York, 11222, United States",
+      "geocodedAt": "2026-07-17T04:49:14.139710+00:00",
+      "rawType": "restaurant",
+      "restaurantSlug": "oxomoco-brooklyn-ny",
+      "address": "128 Greenpoint Ave., Brooklyn, NY, 11222, USA",
+      "sharedAddressGroup": [
+        "oxomoco-brooklyn-ny"
+      ],
+      "needsManualCorrection": false
+    },
+    "restaurant-yuu-brooklyn-ny": {
+      "latitude": 40.6782,
+      "longitude": -73.9442,
+      "confidence": "low",
+      "approved": false,
+      "uncertain": true,
+      "provider": "city-centroid-fallback",
+      "providerPlaceId": "brooklyn",
+      "displayName": "55 Nassau Ave., #1A, Brooklyn, NY, 11222, USA",
+      "geocodedAt": "2026-07-17T04:49:17.033192+00:00",
+      "rawType": "city-centroid",
+      "restaurantSlug": "restaurant-yuu-brooklyn-ny",
+      "address": "55 Nassau Ave., #1A, Brooklyn, NY, 11222, USA",
+      "sharedAddressGroup": [
+        "restaurant-yuu-brooklyn-ny"
+      ],
+      "needsManualCorrection": true
+    },
+    "rezdora-new-york-ny": {
+      "latitude": 40.7390943,
+      "longitude": -73.9893691,
+      "confidence": "medium",
+      "approved": true,
+      "uncertain": false,
+      "provider": "nominatim",
+      "providerPlaceId": "360199698",
+      "displayName": "Rezdôra, 27, East 20th Street, Flatiron District, Manhattan Community Board 5, Manhattan, New York County, New York, 10003, United States",
+      "geocodedAt": "2026-07-17T04:49:17.817797+00:00",
+      "rawType": "restaurant",
+      "restaurantSlug": "rezdora-new-york-ny",
+      "address": "27 E. 20th St., New York, NY, 10003, USA",
+      "sharedAddressGroup": [
+        "rezdora-new-york-ny"
+      ],
+      "needsManualCorrection": false
+    },
+    "semma-new-york-ny": {
+      "latitude": 40.736072,
+      "longitude": -74.000689,
+      "confidence": "medium",
+      "approved": true,
+      "uncertain": false,
+      "provider": "nominatim",
+      "providerPlaceId": "402253410",
+      "displayName": "60, Greenwich Avenue, West Village, Manhattan, New York County, New York, 10011, United States",
+      "geocodedAt": "2026-07-17T04:49:19.189799+00:00",
+      "rawType": "house",
+      "restaurantSlug": "semma-new-york-ny",
+      "address": "60 Greenwich Ave., New York, NY, 10011, USA",
+      "sharedAddressGroup": [
+        "semma-new-york-ny"
+      ],
+      "needsManualCorrection": false
+    },
+    "shmone-new-york-ny": {
+      "latitude": 40.7127281,
+      "longitude": -74.0060152,
+      "confidence": "high",
+      "approved": true,
+      "uncertain": false,
+      "provider": "nominatim",
+      "providerPlaceId": "359692631",
+      "displayName": "New York, United States",
+      "geocodedAt": "2026-07-17T04:49:20.921352+00:00",
+      "rawType": "administrative",
+      "restaurantSlug": "shmone-new-york-ny",
+      "address": "61 W. 8th St., New York, NY, 10011, USA",
+      "sharedAddressGroup": [
+        "shmone-new-york-ny"
+      ],
+      "needsManualCorrection": false
+    },
+    "shota-omakase-brooklyn-ny": {
+      "latitude": 40.6526006,
+      "longitude": -73.9497211,
+      "confidence": "high",
+      "approved": true,
+      "uncertain": false,
+      "provider": "nominatim",
+      "providerPlaceId": "372575184",
+      "displayName": "Brooklyn, Kings County, New York, United States",
+      "geocodedAt": "2026-07-17T04:49:22.555878+00:00",
+      "rawType": "administrative",
+      "restaurantSlug": "shota-omakase-brooklyn-ny",
+      "address": "50 S. 3rd St., Brooklyn, NY, 11249, USA",
+      "sharedAddressGroup": [
+        "shota-omakase-brooklyn-ny"
+      ],
+      "needsManualCorrection": false
+    },
+    "sushi-nakazawa-new-york-new-york-ny": {
+      "latitude": 40.731742,
+      "longitude": -74.0045343,
+      "confidence": "medium",
+      "approved": true,
+      "uncertain": false,
+      "provider": "nominatim",
+      "providerPlaceId": "357087611",
+      "displayName": "23, Commerce Street, West Village, Manhattan, New York County, New York, 10014, United States",
+      "geocodedAt": "2026-07-17T04:49:24.040486+00:00",
+      "rawType": "house",
+      "restaurantSlug": "sushi-nakazawa-new-york-new-york-ny",
+      "address": "23 Commerce St., New York, NY, 10014, USA",
+      "sharedAddressGroup": [
+        "sushi-nakazawa-new-york-new-york-ny"
+      ],
+      "needsManualCorrection": false
+    },
+    "tempura-matsui-new-york-ny": {
+      "latitude": 40.74815,
+      "longitude": -73.9748257,
+      "confidence": "medium",
+      "approved": true,
+      "uncertain": false,
+      "provider": "nominatim",
+      "providerPlaceId": "359201045",
+      "displayName": "222, East 39th Street, Tudor City, Manhattan Community Board 6, Manhattan, New York County, New York, 10016, United States",
+      "geocodedAt": "2026-07-17T04:49:25.681481+00:00",
+      "rawType": "yes",
+      "restaurantSlug": "tempura-matsui-new-york-ny",
+      "address": "222 E. 39th St., New York, NY, 10016, USA",
+      "sharedAddressGroup": [
+        "tempura-matsui-new-york-ny"
+      ],
+      "needsManualCorrection": false
+    },
+    "the-four-horsemen-brooklyn-ny": {
+      "latitude": 40.7131594,
+      "longitude": -73.9572441,
+      "confidence": "medium",
+      "approved": true,
+      "uncertain": false,
+      "provider": "nominatim",
+      "providerPlaceId": "359113723",
+      "displayName": "295, Grand Street, Williamsburg, Brooklyn, Kings County, New York, 11211, United States",
+      "geocodedAt": "2026-07-17T04:49:27.228779+00:00",
+      "rawType": "yes",
+      "restaurantSlug": "the-four-horsemen-brooklyn-ny",
+      "address": "295 Grand St., Brooklyn, NY, 11211, USA",
+      "sharedAddressGroup": [
+        "the-four-horsemen-brooklyn-ny"
+      ],
+      "needsManualCorrection": false
+    },
+    "torien-new-york-ny": {
+      "latitude": 40.7247557,
+      "longitude": -73.9931211,
+      "confidence": "low",
+      "approved": false,
+      "uncertain": true,
+      "provider": "nominatim",
+      "providerPlaceId": "359197767",
+      "displayName": "292, Elizabeth Street, NoHo, Manhattan, New York County, New York, 10012, United States",
+      "geocodedAt": "2026-07-17T04:49:28.967353+00:00",
+      "rawType": "apartments",
+      "restaurantSlug": "torien-new-york-ny",
+      "address": "292 Elizabeth St., New York, NY, 10012, USA",
+      "sharedAddressGroup": [
+        "torien-new-york-ny"
+      ],
+      "needsManualCorrection": true
+    },
+    "torrisi-new-york-ny": {
+      "latitude": 40.724217,
+      "longitude": -73.9954001,
+      "confidence": "medium",
+      "approved": true,
+      "uncertain": false,
+      "provider": "nominatim",
+      "providerPlaceId": "364105390",
+      "displayName": "Torrisi, 275, Mulberry Street, Little Italy, Lower Manhattan, Manhattan, New York County, New York, 10012, United States",
+      "geocodedAt": "2026-07-17T04:49:30.917675+00:00",
+      "rawType": "restaurant",
+      "restaurantSlug": "torrisi-new-york-ny",
+      "address": "275 Mulberry St., New York, NY, 10012, USA",
+      "sharedAddressGroup": [
+        "torrisi-new-york-ny"
+      ],
+      "needsManualCorrection": false
+    },
+    "tsukimi-new-york-ny": {
+      "latitude": 40.7278269,
+      "longitude": -73.9826135,
+      "confidence": "low",
+      "approved": false,
+      "uncertain": true,
+      "provider": "nominatim",
+      "providerPlaceId": "360392871",
+      "displayName": "St. Nicholas of Myra Orthodox Church, 288, East 10th Street, East Village, Manhattan Community Board 3, Manhattan, New York County, New York, 10009, United States",
+      "geocodedAt": "2026-07-17T04:49:35.509063+00:00",
+      "rawType": "place_of_worship",
+      "restaurantSlug": "tsukimi-new-york-ny",
+      "address": "288 E. 10th St., New York, NY, 10003, USA",
+      "sharedAddressGroup": [
+        "tsukimi-new-york-ny"
+      ],
+      "needsManualCorrection": true
+    },
+    "tuome-new-york-ny": {
+      "latitude": 40.7127281,
+      "longitude": -74.0060152,
+      "confidence": "high",
+      "approved": true,
+      "uncertain": false,
+      "provider": "nominatim",
+      "providerPlaceId": "356795879",
+      "displayName": "New York, United States",
+      "geocodedAt": "2026-07-17T04:49:37.338440+00:00",
+      "rawType": "administrative",
+      "restaurantSlug": "tuome-new-york-ny",
+      "address": "536 E. 5th St., New York, NY, 10009, USA",
+      "sharedAddressGroup": [
+        "tuome-new-york-ny"
+      ],
+      "needsManualCorrection": false
+    },
+    "yamada-new-york-ny": {
+      "latitude": 40.7158534,
+      "longitude": -73.9972908,
+      "confidence": "medium",
+      "approved": true,
+      "uncertain": false,
+      "provider": "nominatim",
+      "providerPlaceId": "402251211",
+      "displayName": "16, Elizabeth Street, Five Points, Manhattan Community Board 3, Manhattan, New York County, New York, 10013, United States",
+      "geocodedAt": "2026-07-17T04:49:39.061805+00:00",
+      "rawType": "house",
+      "restaurantSlug": "yamada-new-york-ny",
+      "address": "16 Elizabeth St., New York, NY, 10013, USA",
+      "sharedAddressGroup": [
+        "yamada-new-york-ny"
+      ],
+      "needsManualCorrection": false
+    },
+    "yingtao-new-york-ny": {
+      "latitude": 40.7656289,
+      "longitude": -73.9875071,
+      "confidence": "medium",
+      "approved": true,
+      "uncertain": false,
+      "provider": "nominatim",
+      "providerPlaceId": "402251870",
+      "displayName": "805, 9th Avenue, Hell's Kitchen, Manhattan Community Board 4, Manhattan, New York County, New York, 10019, United States",
+      "geocodedAt": "2026-07-17T04:49:40.612251+00:00",
+      "rawType": "house",
+      "restaurantSlug": "yingtao-new-york-ny",
+      "address": "805 9th Ave., New York, NY, 10019, USA",
+      "sharedAddressGroup": [
+        "yingtao-new-york-ny"
+      ],
+      "needsManualCorrection": false
+    },
+    "yoshino-new-york-ny": {
+      "latitude": 40.7262353,
+      "longitude": -73.992185,
+      "confidence": "low",
+      "approved": false,
+      "uncertain": true,
+      "provider": "nominatim",
+      "providerPlaceId": "358363090",
+      "displayName": "342, Bowery, NoHo, Manhattan, New York County, New York, 10012, United States",
+      "geocodedAt": "2026-07-17T04:49:41.971310+00:00",
+      "rawType": "apartments",
+      "restaurantSlug": "yoshino-new-york-ny",
+      "address": "342 Bowery, New York, NY, 10012, USA",
+      "sharedAddressGroup": [
+        "yoshino-new-york-ny"
+      ],
+      "needsManualCorrection": true
+    },
+    "counter-charlotte-nc": {
+      "restaurantSlug": "counter-charlotte-nc",
+      "address": "2001 W. Morehead St., Ste. D, Charlotte, NC, 28208, USA",
+      "latitude": null,
+      "longitude": null,
+      "confidence": "none",
+      "approved": false,
+      "uncertain": true,
+      "provider": "none",
+      "providerPlaceId": "",
+      "displayName": "2001 W. Morehead St., Ste. D, Charlotte, NC, 28208, USA",
+      "geocodedAt": "2026-07-17T04:49:44.756472+00:00",
+      "rawType": "missing",
+      "sharedAddressGroup": [
+        "counter-charlotte-nc"
+      ],
+      "needsManualCorrection": true
+    },
+    "friday-saturday-sunday-philadelphia-pa": {
+      "latitude": 39.9489314,
+      "longitude": -75.1759317,
+      "confidence": "medium",
+      "approved": true,
+      "uncertain": false,
+      "provider": "nominatim",
+      "providerPlaceId": "343824777",
+      "displayName": "261, South 21st Street, Fitler Square, Center City, Philadelphia, Philadelphia County, Pennsylvania, 19101, United States",
+      "geocodedAt": "2026-07-17T04:49:45.634967+00:00",
+      "rawType": "yes",
+      "restaurantSlug": "friday-saturday-sunday-philadelphia-pa",
+      "address": "261 S. 21st St., Philadelphia, PA, 19103, USA",
+      "sharedAddressGroup": [
+        "friday-saturday-sunday-philadelphia-pa"
+      ],
+      "needsManualCorrection": false
+    },
+    "her-place-supper-club-philadelphia-pa": {
+      "latitude": 39.9507698,
+      "longitude": -75.1701708,
+      "confidence": "low",
+      "approved": false,
+      "uncertain": true,
+      "provider": "nominatim",
+      "providerPlaceId": "345247474",
+      "displayName": "1740, Sansom Street, Fitler Square, Center City, Philadelphia, Philadelphia County, Pennsylvania, 19103, United States",
+      "geocodedAt": "2026-07-17T04:49:47.209635+00:00",
+      "rawType": "retail",
+      "restaurantSlug": "her-place-supper-club-philadelphia-pa",
+      "address": "1740 Sansom St., Philadelphia, PA, 19103, USA",
+      "sharedAddressGroup": [
+        "her-place-supper-club-philadelphia-pa"
+      ],
+      "needsManualCorrection": true
+    },
+    "provenance-philadelphia-pa": {
+      "latitude": 39.9527237,
+      "longitude": -75.1635262,
+      "confidence": "high",
+      "approved": true,
+      "uncertain": false,
+      "provider": "nominatim",
+      "providerPlaceId": "357819242",
+      "displayName": "Philadelphia, Philadelphia County, Pennsylvania, United States",
+      "geocodedAt": "2026-07-17T04:49:48.786385+00:00",
+      "rawType": "administrative",
+      "restaurantSlug": "provenance-philadelphia-pa",
+      "address": "408 S. 2nd St., Philadelphia, PA, 19147, USA",
+      "sharedAddressGroup": [
+        "provenance-philadelphia-pa"
+      ],
+      "needsManualCorrection": false
+    },
+    "malagon-mercado-y-taperia-charleston-sc": {
+      "latitude": 32.7927026,
+      "longitude": -79.9416905,
+      "confidence": "low",
+      "approved": false,
+      "uncertain": true,
+      "provider": "nominatim",
+      "providerPlaceId": "343381624",
+      "displayName": "33, Spring Street, Midtown, Cannonborough-Elliotborough, Charleston, Charleston County, South Carolina, 29403, United States",
+      "geocodedAt": "2026-07-17T04:49:50.412567+00:00",
+      "rawType": "apartments",
+      "restaurantSlug": "malagon-mercado-y-taperia-charleston-sc",
+      "address": "33 Spring St., Charleston, SC, 29403, USA",
+      "sharedAddressGroup": [
+        "malagon-mercado-y-taperia-charleston-sc"
+      ],
+      "needsManualCorrection": true
+    },
+    "scoundrel-greenville-sc": {
+      "latitude": 34.8512349,
+      "longitude": -82.3985036,
+      "confidence": "medium",
+      "approved": true,
+      "uncertain": false,
+      "provider": "nominatim",
+      "providerPlaceId": "337673261",
+      "displayName": "18, North Main Street, Downtown, Greenville, Greenville County, South Carolina, 29601, United States",
+      "geocodedAt": "2026-07-17T04:49:52.546503+00:00",
+      "rawType": "house",
+      "restaurantSlug": "scoundrel-greenville-sc",
+      "address": "18 N. Main St., Greenville, SC, 29601, USA",
+      "sharedAddressGroup": [
+        "scoundrel-greenville-sc"
+      ],
+      "needsManualCorrection": false
+    },
+    "vern-s-charleston-sc": {
+      "latitude": 32.792384,
+      "longitude": -79.945662,
+      "confidence": "medium",
+      "approved": true,
+      "uncertain": false,
+      "provider": "nominatim",
+      "providerPlaceId": "407831949",
+      "displayName": "41, Bogard Street, Midtown, Cannonborough-Elliotborough, Charleston, Charleston County, South Carolina, 29403, United States",
+      "geocodedAt": "2026-07-17T04:49:54.057186+00:00",
+      "rawType": "house",
+      "restaurantSlug": "vern-s-charleston-sc",
+      "address": "41 Bogard St., Charleston, SC, 29403, USA",
+      "sharedAddressGroup": [
+        "vern-s-charleston-sc"
+      ],
+      "needsManualCorrection": false
+    },
+    "wild-common-charleston-sc": {
+      "latitude": 32.7905003,
+      "longitude": -79.9460585,
+      "confidence": "low",
+      "approved": false,
+      "uncertain": true,
+      "provider": "nominatim",
+      "providerPlaceId": "343379521",
+      "displayName": "103, Spring Street, Midtown, Cannonborough-Elliotborough, Charleston, Charleston County, South Carolina, 29403, United States",
+      "geocodedAt": "2026-07-17T04:49:55.794562+00:00",
+      "rawType": "retail",
+      "restaurantSlug": "wild-common-charleston-sc",
+      "address": "103 Spring St., Charleston, SC, 29403, USA",
+      "sharedAddressGroup": [
+        "wild-common-charleston-sc"
+      ],
+      "needsManualCorrection": true
+    },
+    "bastion-nashville-tn": {
+      "latitude": 36.1432063,
+      "longitude": -86.7670711,
+      "confidence": "low",
+      "approved": false,
+      "uncertain": true,
+      "provider": "nominatim",
+      "providerPlaceId": "339027975",
+      "displayName": "Houston Station, 434, Houston Street, Wedgewood-Houston, Nashville, Davidson County, Middle Tennessee, Tennessee, 37203, United States",
+      "geocodedAt": "2026-07-17T04:49:57.408690+00:00",
+      "rawType": "warehouse",
+      "restaurantSlug": "bastion-nashville-tn",
+      "address": "434 Houston St., Nashville, TN, 37203, USA",
+      "sharedAddressGroup": [
+        "bastion-nashville-tn"
+      ],
+      "needsManualCorrection": true
+    },
+    "locust-nashville-tn": {
+      "latitude": 36.1274532,
+      "longitude": -86.78925,
+      "confidence": "medium",
+      "approved": true,
+      "uncertain": false,
+      "provider": "nominatim",
+      "providerPlaceId": "398558595",
+      "displayName": "2305, 12th Avenue South, Nashville, Davidson County, Middle Tennessee, Tennessee, 37204, United States",
+      "geocodedAt": "2026-07-17T04:49:59.018448+00:00",
+      "rawType": "house",
+      "restaurantSlug": "locust-nashville-tn",
+      "address": "2305 12th Ave. S., Nashville, TN, 37204, USA",
+      "sharedAddressGroup": [
+        "locust-nashville-tn"
+      ],
+      "needsManualCorrection": false
+    },
+    "the-catbird-seat-nashville-tn": {
+      "restaurantSlug": "the-catbird-seat-nashville-tn",
+      "address": "700 8th Ave. S., 5th Fl., Nashville, TN, 37203, USA",
+      "latitude": null,
+      "longitude": null,
+      "confidence": "none",
+      "approved": false,
+      "uncertain": true,
+      "provider": "none",
+      "providerPlaceId": "",
+      "displayName": "700 8th Ave. S., 5th Fl., Nashville, TN, 37203, USA",
+      "geocodedAt": "2026-07-17T04:50:01.921328+00:00",
+      "rawType": "missing",
+      "sharedAddressGroup": [
+        "the-catbird-seat-nashville-tn"
+      ],
+      "needsManualCorrection": true
+    },
+    "barley-swine-austin-tx": {
+      "latitude": 30.2672,
+      "longitude": -97.7431,
+      "confidence": "low",
+      "approved": false,
+      "uncertain": true,
+      "provider": "city-centroid-fallback",
+      "providerPlaceId": "austin",
+      "displayName": "6555 Burnet Rd., Ste. 400, Austin, TX, 78757, USA",
+      "geocodedAt": "2026-07-17T04:50:03.657285+00:00",
+      "rawType": "city-centroid",
+      "restaurantSlug": "barley-swine-austin-tx",
+      "address": "6555 Burnet Rd., Ste. 400, Austin, TX, 78757, USA",
+      "sharedAddressGroup": [
+        "barley-swine-austin-tx"
+      ],
+      "needsManualCorrection": true
+    },
+    "bcn-taste-and-tradition-houston-tx": {
+      "latitude": 29.7348923,
+      "longitude": -95.3900899,
+      "confidence": "medium",
+      "approved": true,
+      "uncertain": false,
+      "provider": "nominatim",
+      "providerPlaceId": "303924961",
+      "displayName": "BCN Taste & Traditions, 4210, Roseland Street, Audobon Place, Montrose, Houston, Harris County, Texas, 77006, United States",
+      "geocodedAt": "2026-07-17T04:50:03.966380+00:00",
+      "rawType": "restaurant",
+      "restaurantSlug": "bcn-taste-and-tradition-houston-tx",
+      "address": "4210 Roseland St., Houston, TX, 77006, USA",
+      "sharedAddressGroup": [
+        "bcn-taste-and-tradition-houston-tx"
+      ],
+      "needsManualCorrection": false
+    },
+    "corkscrew-bbq-spring-tx": {
+      "latitude": 30.0806765,
+      "longitude": -95.420013,
+      "confidence": "medium",
+      "approved": true,
+      "uncertain": false,
+      "provider": "nominatim",
+      "providerPlaceId": "300288297",
+      "displayName": "Corkscrew BBQ, 26608, Keith Street, Spring, Harris County, Texas, 77373, United States",
+      "geocodedAt": "2026-07-17T04:50:05.370274+00:00",
+      "rawType": "restaurant",
+      "restaurantSlug": "corkscrew-bbq-spring-tx",
+      "address": "26608 Keith St., Spring, TX, 77373, USA",
+      "sharedAddressGroup": [
+        "corkscrew-bbq-spring-tx"
+      ],
+      "needsManualCorrection": false
+    },
+    "craft-omakase-austin-tx": {
+      "latitude": 30.2672,
+      "longitude": -97.7431,
+      "confidence": "low",
+      "approved": false,
+      "uncertain": true,
+      "provider": "city-centroid-fallback",
+      "providerPlaceId": "austin",
+      "displayName": "4400 N. Lamar Blvd., Ste. 102, Austin, TX, 78756, USA",
+      "geocodedAt": "2026-07-17T04:50:08.156639+00:00",
+      "rawType": "city-centroid",
+      "restaurantSlug": "craft-omakase-austin-tx",
+      "address": "4400 N. Lamar Blvd., Ste. 102, Austin, TX, 78756, USA",
+      "sharedAddressGroup": [
+        "craft-omakase-austin-tx"
+      ],
+      "needsManualCorrection": true
+    },
+    "hestia-austin-tx": {
+      "latitude": 30.2711286,
+      "longitude": -97.7436995,
+      "confidence": "high",
+      "approved": true,
+      "uncertain": false,
+      "provider": "nominatim",
+      "providerPlaceId": "313478768",
+      "displayName": "Austin, Travis County, Texas, United States",
+      "geocodedAt": "2026-07-17T04:50:08.833118+00:00",
+      "rawType": "administrative",
+      "restaurantSlug": "hestia-austin-tx",
+      "address": "607 W. 3rd St., Austin, TX, 78701, USA",
+      "sharedAddressGroup": [
+        "hestia-austin-tx"
+      ],
+      "needsManualCorrection": false
+    },
+    "interstellar-bbq-austin-tx": {
+      "latitude": 30.2672,
+      "longitude": -97.7431,
+      "confidence": "low",
+      "approved": false,
+      "uncertain": true,
+      "provider": "city-centroid-fallback",
+      "providerPlaceId": "austin",
+      "displayName": "12233 Ranch Rd. 620 N., Ste. 105, Austin, TX, 78750, USA",
+      "geocodedAt": "2026-07-17T04:50:11.479752+00:00",
+      "rawType": "city-centroid",
+      "restaurantSlug": "interstellar-bbq-austin-tx",
+      "address": "12233 Ranch Rd. 620 N., Ste. 105, Austin, TX, 78750, USA",
+      "sharedAddressGroup": [
+        "interstellar-bbq-austin-tx"
+      ],
+      "needsManualCorrection": true
+    },
+    "isidore-san-antonio-tx": {
+      "latitude": 29.4407228,
+      "longitude": -98.4813501,
+      "confidence": "medium",
+      "approved": true,
+      "uncertain": false,
+      "provider": "nominatim",
+      "providerPlaceId": "404713639",
+      "displayName": "221, Newell Avenue, Pearl, San Antonio, Bexar County, Texas, 78215, United States",
+      "geocodedAt": "2026-07-17T04:50:11.741620+00:00",
+      "rawType": "house",
+      "restaurantSlug": "isidore-san-antonio-tx",
+      "address": "221 Newell Ave., San Antonio, TX, 78215, USA",
+      "sharedAddressGroup": [
+        "isidore-san-antonio-tx",
+        "nicosi-san-antonio-tx"
+      ],
+      "needsManualCorrection": false
+    },
+    "nicosi-san-antonio-tx": {
+      "latitude": 29.4407228,
+      "longitude": -98.4813501,
+      "confidence": "medium",
+      "approved": true,
+      "uncertain": false,
+      "provider": "nominatim",
+      "providerPlaceId": "404713639",
+      "displayName": "221, Newell Avenue, Pearl, San Antonio, Bexar County, Texas, 78215, United States",
+      "geocodedAt": "2026-07-17T04:50:11.741620+00:00",
+      "rawType": "house",
+      "restaurantSlug": "nicosi-san-antonio-tx",
+      "address": "221 Newell Ave., San Antonio, TX, 78215, USA",
+      "sharedAddressGroup": [
+        "isidore-san-antonio-tx",
+        "nicosi-san-antonio-tx"
+      ],
+      "needsManualCorrection": false
+    },
+    "la-barbecue-austin-tx": {
+      "latitude": 30.254498,
+      "longitude": -97.7176151,
+      "confidence": "medium",
+      "approved": true,
+      "uncertain": false,
+      "provider": "nominatim",
+      "providerPlaceId": "315483579",
+      "displayName": "2401, East Cesar Chavez Street, Holly, Austin, Travis County, Texas, 78702, United States",
+      "geocodedAt": "2026-07-17T04:50:13.336978+00:00",
+      "rawType": "yes",
+      "restaurantSlug": "la-barbecue-austin-tx",
+      "address": "2401 E. Cesar Chavez St., Austin, TX, 78702, USA",
+      "sharedAddressGroup": [
+        "la-barbecue-austin-tx"
+      ],
+      "needsManualCorrection": false
+    },
+    "le-jardinier-houston-houston-tx": {
+      "latitude": 29.7265462,
+      "longitude": -95.3897537,
+      "confidence": "medium",
+      "approved": true,
+      "uncertain": false,
+      "provider": "nominatim",
+      "providerPlaceId": "303903748",
+      "displayName": "Nancy and Rich Kinder Building, 5500, Main Street, Museum District, Houston, Harris County, Texas, 77004, United States",
+      "geocodedAt": "2026-07-17T04:50:15.167194+00:00",
+      "rawType": "museum",
+      "restaurantSlug": "le-jardinier-houston-houston-tx",
+      "address": "5500 Main St., Houston, TX, 77004, USA",
+      "sharedAddressGroup": [
+        "le-jardinier-houston-houston-tx"
+      ],
+      "needsManualCorrection": false
+    },
+    "leroy-and-lewis-barbecue-austin-tx": {
+      "latitude": 30.2103173,
+      "longitude": -97.7872144,
+      "confidence": "medium",
+      "approved": true,
+      "uncertain": false,
+      "provider": "nominatim",
+      "providerPlaceId": "400306918",
+      "displayName": "5621, Emerald Forest Drive, Austin, Travis County, Texas, 78745, United States",
+      "geocodedAt": "2026-07-17T04:50:16.756482+00:00",
+      "rawType": "house",
+      "restaurantSlug": "leroy-and-lewis-barbecue-austin-tx",
+      "address": "5621 Emerald Forest Dr., Austin, TX, 78745, USA",
+      "sharedAddressGroup": [
+        "leroy-and-lewis-barbecue-austin-tx"
+      ],
+      "needsManualCorrection": false
+    },
+    "mamani-dallas-tx": {
+      "latitude": 32.7767,
+      "longitude": -96.797,
+      "confidence": "low",
+      "approved": false,
+      "uncertain": true,
+      "provider": "city-centroid-fallback",
+      "providerPlaceId": "dallas",
+      "displayName": "2681 Howell St., #BU4, Dallas, TX, 75204, USA",
+      "geocodedAt": "2026-07-17T04:50:20.156578+00:00",
+      "rawType": "city-centroid",
+      "restaurantSlug": "mamani-dallas-tx",
+      "address": "2681 Howell St., #BU4, Dallas, TX, 75204, USA",
+      "sharedAddressGroup": [
+        "mamani-dallas-tx"
+      ],
+      "needsManualCorrection": true
+    },
+    "march-houston-tx": {
+      "latitude": 29.742874,
+      "longitude": -95.4001634,
+      "confidence": "medium",
+      "approved": true,
+      "uncertain": false,
+      "provider": "nominatim",
+      "providerPlaceId": "411351205",
+      "displayName": "1624, Westheimer Road, Cherryhurst, Montrose, Houston, Harris County, Texas, 77006, United States",
+      "geocodedAt": "2026-07-17T04:50:20.868303+00:00",
+      "rawType": "house",
+      "restaurantSlug": "march-houston-tx",
+      "address": "1624 Westheimer Rd., Houston, TX, 77006, USA",
+      "sharedAddressGroup": [
+        "march-houston-tx"
+      ],
+      "needsManualCorrection": false
+    },
+    "mixtli-san-antonio-tx": {
+      "restaurantSlug": "mixtli-san-antonio-tx",
+      "address": "812 S. Alamo St., Ste. 103, San Antonio, TX, 78205, USA",
+      "latitude": null,
+      "longitude": null,
+      "confidence": "none",
+      "approved": false,
+      "uncertain": true,
+      "provider": "none",
+      "providerPlaceId": "",
+      "displayName": "812 S. Alamo St., Ste. 103, San Antonio, TX, 78205, USA",
+      "geocodedAt": "2026-07-17T04:50:23.760496+00:00",
+      "rawType": "missing",
+      "sharedAddressGroup": [
+        "mixtli-san-antonio-tx"
+      ],
+      "needsManualCorrection": true
+    },
+    "musaafer-houston-tx": {
+      "latitude": 29.7604,
+      "longitude": -95.3698,
+      "confidence": "low",
+      "approved": false,
+      "uncertain": true,
+      "provider": "city-centroid-fallback",
+      "providerPlaceId": "houston",
+      "displayName": "5115 Westheimer Rd., Ste. 3500, Houston, TX, 77056, USA",
+      "geocodedAt": "2026-07-17T04:50:25.504330+00:00",
+      "rawType": "city-centroid",
+      "restaurantSlug": "musaafer-houston-tx",
+      "address": "5115 Westheimer Rd., Ste. 3500, Houston, TX, 77056, USA",
+      "sharedAddressGroup": [
+        "musaafer-houston-tx"
+      ],
+      "needsManualCorrection": true
+    },
+    "olamaie-austin-tx": {
+      "latitude": 30.2799025,
+      "longitude": -97.7436972,
+      "confidence": "medium",
+      "approved": true,
+      "uncertain": false,
+      "provider": "nominatim",
+      "providerPlaceId": "316252232",
+      "displayName": "1610, San Antonio Street, Austin, Travis County, Texas, 78701, United States",
+      "geocodedAt": "2026-07-17T04:50:26.215804+00:00",
+      "rawType": "yes",
+      "restaurantSlug": "olamaie-austin-tx",
+      "address": "1610 San Antonio St., Austin, TX, 78701, USA",
+      "sharedAddressGroup": [
+        "olamaie-austin-tx"
+      ],
+      "needsManualCorrection": false
+    },
+    "tatemo-houston-tx": {
+      "latitude": 29.7604,
+      "longitude": -95.3698,
+      "confidence": "low",
+      "approved": false,
+      "uncertain": true,
+      "provider": "city-centroid-fallback",
+      "providerPlaceId": "houston",
+      "displayName": "4740 Dacoma St., Unit F., Houston, TX, 77092, USA",
+      "geocodedAt": "2026-07-17T04:50:28.698711+00:00",
+      "rawType": "city-centroid",
+      "restaurantSlug": "tatemo-houston-tx",
+      "address": "4740 Dacoma St., Unit F., Houston, TX, 77092, USA",
+      "sharedAddressGroup": [
+        "tatemo-houston-tx"
+      ],
+      "needsManualCorrection": true
+    },
+    "tatsu-dallas-dallas-tx": {
+      "latitude": 32.7767,
+      "longitude": -96.797,
+      "confidence": "low",
+      "approved": false,
+      "uncertain": true,
+      "provider": "city-centroid-fallback",
+      "providerPlaceId": "dallas",
+      "displayName": "3309 Elm St., Ste. 120, Dallas, TX, 75226, USA",
+      "geocodedAt": "2026-07-17T04:50:30.636956+00:00",
+      "rawType": "city-centroid",
+      "restaurantSlug": "tatsu-dallas-dallas-tx",
+      "address": "3309 Elm St., Ste. 120, Dallas, TX, 75226, USA",
+      "sharedAddressGroup": [
+        "tatsu-dallas-dallas-tx"
+      ],
+      "needsManualCorrection": true
+    },
+    "jont-washington-dc": {
+      "latitude": 38.9157973,
+      "longitude": -77.0320573,
+      "confidence": "medium",
+      "approved": true,
+      "uncertain": false,
+      "provider": "nominatim",
+      "providerPlaceId": "396824821",
+      "displayName": "1904, 14th Street Northwest, Cardozo/Shaw, Ward 2, Washington, District of Columbia, 20009, United States",
+      "geocodedAt": "2026-07-17T04:50:31.426604+00:00",
+      "rawType": "house",
+      "restaurantSlug": "jont-washington-dc",
+      "address": "1904 14th St. NW, Washington, DC, 20009, USA",
+      "sharedAddressGroup": [
+        "jont-washington-dc"
+      ],
+      "needsManualCorrection": false
+    },
+    "minibar-by-jose-andres-washington-dc": {
+      "latitude": 38.8950982,
+      "longitude": -77.0363849,
+      "confidence": "high",
+      "approved": true,
+      "uncertain": false,
+      "provider": "nominatim",
+      "providerPlaceId": "348045494",
+      "displayName": "Washington, District of Columbia, United States",
+      "geocodedAt": "2026-07-17T04:50:32.740499+00:00",
+      "rawType": "city",
+      "restaurantSlug": "minibar-by-jose-andres-washington-dc",
+      "address": "855 E St. NW, Washington, DC, 20004, USA",
+      "sharedAddressGroup": [
+        "minibar-by-jose-andres-washington-dc"
+      ],
+      "needsManualCorrection": false
+    },
+    "the-inn-at-little-washington-washington-dc": {
+      "latitude": 38.9072,
+      "longitude": -77.0369,
+      "confidence": "low",
+      "approved": false,
+      "uncertain": true,
+      "provider": "city-centroid-fallback",
+      "providerPlaceId": "washington",
+      "displayName": "309 Middle St., Washington, DC, 22747, USA",
+      "geocodedAt": "2026-07-17T04:50:35.822599+00:00",
+      "rawType": "city-centroid",
+      "restaurantSlug": "the-inn-at-little-washington-washington-dc",
+      "address": "309 Middle St., Washington, DC, 22747, USA",
+      "sharedAddressGroup": [
+        "the-inn-at-little-washington-washington-dc"
+      ],
+      "needsManualCorrection": true
+    },
+    "albi-washington-dc": {
+      "latitude": 38.8743018,
+      "longitude": -76.9997982,
+      "confidence": "low",
+      "approved": false,
+      "uncertain": true,
+      "provider": "nominatim",
+      "providerPlaceId": "346539121",
+      "displayName": "Guild, 1346, 4th Street Southeast, Capitol Waterfront Neighborhood, Ward 8, Washington, District of Columbia, 20003, United States",
+      "geocodedAt": "2026-07-17T04:50:36.093240+00:00",
+      "rawType": "apartments",
+      "restaurantSlug": "albi-washington-dc",
+      "address": "1346 4th St. SE, Washington, DC, 20003, USA",
+      "sharedAddressGroup": [
+        "albi-washington-dc"
+      ],
+      "needsManualCorrection": true
+    },
+    "bresca-washington-dc": {
+      "latitude": 38.9157574,
+      "longitude": -77.0321871,
+      "confidence": "medium",
+      "approved": true,
+      "uncertain": false,
+      "provider": "nominatim",
+      "providerPlaceId": "348289290",
+      "displayName": "Bresca, 1906, 14th Street Northwest, Cardozo/Shaw, Ward 2, Washington, District of Columbia, 20009, United States",
+      "geocodedAt": "2026-07-17T04:50:37.830207+00:00",
+      "rawType": "restaurant",
+      "restaurantSlug": "bresca-washington-dc",
+      "address": "1906 14th St. NW, Washington, DC, 20009, USA",
+      "sharedAddressGroup": [
+        "bresca-washington-dc"
+      ],
+      "needsManualCorrection": false
+    },
+    "causa-washington-dc": {
+      "latitude": 38.9065532,
+      "longitude": -77.0247508,
+      "confidence": "medium",
+      "approved": true,
+      "uncertain": false,
+      "provider": "nominatim",
+      "providerPlaceId": "347597727",
+      "displayName": "Causa, 920, Blagden Alley Northwest, Logan Circle/Shaw, Ward 2, Washington, District of Columbia, 20001, United States",
+      "geocodedAt": "2026-07-17T04:50:39.346665+00:00",
+      "rawType": "restaurant",
+      "restaurantSlug": "causa-washington-dc",
+      "address": "920 Blagden Alley NW, Washington, DC, 20001, USA",
+      "sharedAddressGroup": [
+        "causa-washington-dc"
+      ],
+      "needsManualCorrection": false
+    },
+    "elcielo-washington-dc-washington-dc": {
+      "latitude": 38.908866,
+      "longitude": -76.999742,
+      "confidence": "medium",
+      "approved": true,
+      "uncertain": false,
+      "provider": "nominatim",
+      "providerPlaceId": "344652796",
+      "displayName": "Peruvian Brothers, 1280, 4th Street Northeast, Ward 5, Washington, District of Columbia, 20002, United States",
+      "geocodedAt": "2026-07-17T04:50:40.788011+00:00",
+      "rawType": "restaurant",
+      "restaurantSlug": "elcielo-washington-dc-washington-dc",
+      "address": "1280 4th St. NE, Washington, DC, 20002, USA",
+      "sharedAddressGroup": [
+        "elcielo-washington-dc-washington-dc"
+      ],
+      "needsManualCorrection": false
+    },
+    "fiola-washington-dc": {
+      "latitude": 38.8932991,
+      "longitude": -77.0205014,
+      "confidence": "medium",
+      "approved": true,
+      "uncertain": false,
+      "provider": "nominatim",
+      "providerPlaceId": "349083159",
+      "displayName": "The Capital Grille - Washington DC, 601, Pennsylvania Avenue Northwest, Penn Quarter, Ward 2, Washington, District of Columbia, 20004, United States",
+      "geocodedAt": "2026-07-17T04:50:42.423377+00:00",
+      "rawType": "restaurant",
+      "restaurantSlug": "fiola-washington-dc",
+      "address": "601 Pennsylvania Ave. NW, Washington, DC, 20004, USA",
+      "sharedAddressGroup": [
+        "fiola-washington-dc"
+      ],
+      "needsManualCorrection": false
+    },
+    "gravitas-washington-dc": {
+      "latitude": 38.9145026,
+      "longitude": -76.984317,
+      "confidence": "medium",
+      "approved": true,
+      "uncertain": false,
+      "provider": "nominatim",
+      "providerPlaceId": "347262291",
+      "displayName": "1401, Okie Street Northeast, Ivy City, Northeast, Ward 5, Washington, District of Columbia, 20002, United States",
+      "geocodedAt": "2026-07-17T04:50:44.013329+00:00",
+      "rawType": "yes",
+      "restaurantSlug": "gravitas-washington-dc",
+      "address": "1401 Okie St. NE, Washington, DC, 20002, USA",
+      "sharedAddressGroup": [
+        "gravitas-washington-dc"
+      ],
+      "needsManualCorrection": false
+    },
+    "imperfecto-the-chef-s-table-washington-dc": {
+      "latitude": 38.9043392,
+      "longitude": -77.050322,
+      "confidence": "medium",
+      "approved": true,
+      "uncertain": false,
+      "provider": "nominatim",
+      "providerPlaceId": "347502602",
+      "displayName": "Imperfecto, 1124, 23rd Street Northwest, West End, Ward 2, Washington, District of Columbia, 20037, United States",
+      "geocodedAt": "2026-07-17T04:50:45.655350+00:00",
+      "rawType": "restaurant",
+      "restaurantSlug": "imperfecto-the-chef-s-table-washington-dc",
+      "address": "1124 23rd St. NW, Washington, DC, 20037, USA",
+      "sharedAddressGroup": [
+        "imperfecto-the-chef-s-table-washington-dc"
+      ],
+      "needsManualCorrection": false
+    },
+    "little-pearl-washington-dc": {
+      "latitude": 38.8830167,
+      "longitude": -76.9931347,
+      "confidence": "medium",
+      "approved": true,
+      "uncertain": false,
+      "provider": "nominatim",
+      "providerPlaceId": "353451798",
+      "displayName": "921, Pennsylvania Avenue Southeast, Barracks Row, Southeast, Capitol Hill, Ward 6, Washington, District of Columbia, 20003, United States",
+      "geocodedAt": "2026-07-17T04:50:47.250583+00:00",
+      "rawType": "yes",
+      "restaurantSlug": "little-pearl-washington-dc",
+      "address": "921 Pennsylvania Ave. SE, Washington, DC, 20003, USA",
+      "sharedAddressGroup": [
+        "little-pearl-washington-dc"
+      ],
+      "needsManualCorrection": false
+    },
+    "masseria-washington-dc": {
+      "latitude": 38.9097171,
+      "longitude": -76.9992339,
+      "confidence": "medium",
+      "approved": true,
+      "uncertain": false,
+      "provider": "nominatim",
+      "providerPlaceId": "350199443",
+      "displayName": "1340, 4th Street Northeast, Ward 5, Washington, District of Columbia, 20002, United States",
+      "geocodedAt": "2026-07-17T04:50:48.614783+00:00",
+      "rawType": "yes",
+      "restaurantSlug": "masseria-washington-dc",
+      "address": "1340 4th St. NE, Washington, DC, 20002, USA",
+      "sharedAddressGroup": [
+        "masseria-washington-dc"
+      ],
+      "needsManualCorrection": false
+    },
+    "mita-washington-dc": {
+      "latitude": 38.8950982,
+      "longitude": -77.0363849,
+      "confidence": "high",
+      "approved": true,
+      "uncertain": false,
+      "provider": "nominatim",
+      "providerPlaceId": "349523488",
+      "displayName": "Washington, District of Columbia, United States",
+      "geocodedAt": "2026-07-17T04:50:50.188381+00:00",
+      "rawType": "city",
+      "restaurantSlug": "mita-washington-dc",
+      "address": "804 V St. NW, Washington, DC, 20001, USA",
+      "sharedAddressGroup": [
+        "mita-washington-dc"
+      ],
+      "needsManualCorrection": false
+    },
+    "omakase-at-barracks-row-washington-dc": {
+      "latitude": 38.8950982,
+      "longitude": -77.0363849,
+      "confidence": "high",
+      "approved": true,
+      "uncertain": false,
+      "provider": "nominatim",
+      "providerPlaceId": "347552420",
+      "displayName": "Washington, District of Columbia, United States",
+      "geocodedAt": "2026-07-17T04:50:51.710694+00:00",
+      "rawType": "city",
+      "restaurantSlug": "omakase-at-barracks-row-washington-dc",
+      "address": "522 8th St. SE, Washington, DC, 20003, USA",
+      "sharedAddressGroup": [
+        "omakase-at-barracks-row-washington-dc"
+      ],
+      "needsManualCorrection": false
+    },
+    "oyster-oyster-washington-dc": {
+      "latitude": 38.9093521,
+      "longitude": -77.0230929,
+      "confidence": "medium",
+      "approved": true,
+      "uncertain": false,
+      "provider": "nominatim",
+      "providerPlaceId": "344657165",
+      "displayName": "Oyster Oyster, 1440, 8th Street Northwest, Logan Circle/Shaw, Ward 2, Washington, District of Columbia, 20001, United States",
+      "geocodedAt": "2026-07-17T04:50:53.157128+00:00",
+      "rawType": "restaurant",
+      "restaurantSlug": "oyster-oyster-washington-dc",
+      "address": "1440 8th St. NW, Washington, DC, 20001, USA",
+      "sharedAddressGroup": [
+        "oyster-oyster-washington-dc"
+      ],
+      "needsManualCorrection": false
+    },
+    "pineapple-and-pearls-washington-dc": {
+      "latitude": 38.8950982,
+      "longitude": -77.0363849,
+      "confidence": "high",
+      "approved": true,
+      "uncertain": false,
+      "provider": "nominatim",
+      "providerPlaceId": "347552420",
+      "displayName": "Washington, District of Columbia, United States",
+      "geocodedAt": "2026-07-17T04:50:54.560746+00:00",
+      "rawType": "city",
+      "restaurantSlug": "pineapple-and-pearls-washington-dc",
+      "address": "715 8th St. SE, Washington, DC, 20003, USA",
+      "sharedAddressGroup": [
+        "pineapple-and-pearls-washington-dc"
+      ],
+      "needsManualCorrection": false
+    },
+    "rania-washington-dc": {
+      "latitude": 38.895164,
+      "longitude": -77.0269413,
+      "confidence": "medium",
+      "approved": true,
+      "uncertain": false,
+      "provider": "nominatim",
+      "providerPlaceId": "396828426",
+      "displayName": "427, 11th Street Northwest, Downtown, Ward 2, Washington, District of Columbia, 20004, United States",
+      "geocodedAt": "2026-07-17T04:50:55.980484+00:00",
+      "rawType": "house",
+      "restaurantSlug": "rania-washington-dc",
+      "address": "427 11th St. NW, Washington, DC, 20004, USA",
+      "sharedAddressGroup": [
+        "rania-washington-dc"
+      ],
+      "needsManualCorrection": false
+    },
+    "rooster-and-owl-washington-dc": {
+      "latitude": 38.92149,
+      "longitude": -77.032167,
+      "confidence": "medium",
+      "approved": true,
+      "uncertain": false,
+      "provider": "nominatim",
+      "providerPlaceId": "344106293",
+      "displayName": "Rooster & Owl, 2436, 14th Street Northwest, Columbia Heights, Ward 1, Washington, District of Columbia, 20009, United States",
+      "geocodedAt": "2026-07-17T04:50:57.499002+00:00",
+      "rawType": "restaurant",
+      "restaurantSlug": "rooster-and-owl-washington-dc",
+      "address": "2436 14th St. NW, Washington, DC, 20009, USA",
+      "sharedAddressGroup": [
+        "rooster-and-owl-washington-dc"
+      ],
+      "needsManualCorrection": false
+    },
+    "rose-s-luxury-washington-dc": {
+      "latitude": 38.8950982,
+      "longitude": -77.0363849,
+      "confidence": "high",
+      "approved": true,
+      "uncertain": false,
+      "provider": "nominatim",
+      "providerPlaceId": "347552420",
+      "displayName": "Washington, District of Columbia, United States",
+      "geocodedAt": "2026-07-17T04:50:59.065847+00:00",
+      "rawType": "city",
+      "restaurantSlug": "rose-s-luxury-washington-dc",
+      "address": "717 8th St. SE, Washington, DC, 20003, USA",
+      "sharedAddressGroup": [
+        "rose-s-luxury-washington-dc"
+      ],
+      "needsManualCorrection": false
+    },
+    "sushi-nakazawa-washington-dc-washington-dc": {
+      "latitude": 38.8941177,
+      "longitude": -77.0275626,
+      "confidence": "medium",
+      "approved": true,
+      "uncertain": false,
+      "provider": "nominatim",
+      "providerPlaceId": "347512506",
+      "displayName": "Waldorf Astoria Washington DC, 1100, Pennsylvania Avenue Northwest, Ward 2, Washington, District of Columbia, 20004, United States",
+      "geocodedAt": "2026-07-17T04:51:00.562043+00:00",
+      "rawType": "hotel",
+      "restaurantSlug": "sushi-nakazawa-washington-dc-washington-dc",
+      "address": "Waldorf Astoria,1100 Pennsylvania Ave. NW, Washington, DC, 20004, USA",
+      "sharedAddressGroup": [
+        "sushi-nakazawa-washington-dc-washington-dc"
+      ],
+      "needsManualCorrection": false
+    },
+    "the-dabney-washington-dc": {
+      "latitude": 38.9063777,
+      "longitude": -77.0245704,
+      "confidence": "medium",
+      "approved": true,
+      "uncertain": false,
+      "provider": "nominatim",
+      "providerPlaceId": "347546948",
+      "displayName": "The Dabney, 122, Blagden Alley Northwest, Logan Circle/Shaw, Ward 2, Washington, District of Columbia, 20001, United States",
+      "geocodedAt": "2026-07-17T04:51:01.854717+00:00",
+      "rawType": "restaurant",
+      "restaurantSlug": "the-dabney-washington-dc",
+      "address": "122 Blagden Alley NW, Washington, DC, 20001, USA",
+      "sharedAddressGroup": [
+        "the-dabney-washington-dc"
+      ],
+      "needsManualCorrection": false
+    },
+    "xiquet-washington-dc": {
+      "latitude": 38.9212775,
+      "longitude": -77.0724181,
+      "confidence": "medium",
+      "approved": true,
+      "uncertain": false,
+      "provider": "nominatim",
+      "providerPlaceId": "348591403",
+      "displayName": "2404, Wisconsin Avenue Northwest, Glover Park, Ward 3, Washington, District of Columbia, 20007, United States",
+      "geocodedAt": "2026-07-17T04:51:03.443000+00:00",
+      "rawType": "yes",
+      "restaurantSlug": "xiquet-washington-dc",
+      "address": "2404 Wisconsin Ave. NW, Washington, DC, 20007, USA",
+      "sharedAddressGroup": [
+        "xiquet-washington-dc"
+      ],
+      "needsManualCorrection": false
     }
   }
 }
