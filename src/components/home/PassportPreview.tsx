@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { Section } from "@/components/layout/Section";
 
 const sample = {
@@ -22,9 +23,9 @@ export function PassportPreview() {
   return (
     <Section
       id="passport"
-      eyebrow="Coming later"
+      eyebrow="On this device"
       title="Your dining passport"
-      dek="A preview of the personal layer — visits, stars, and saved destinations. This example is static illustration only; saving and accounts are not active yet."
+      dek="Save restaurants, mark visits, and build collections locally. Data stays on this device until cloud accounts arrive."
       className="border-t border-border bg-bg-elevated/40"
     >
       <div className="border border-dashed border-burgundy/40 bg-bg-elevated p-5 sm:p-8">
@@ -95,9 +96,15 @@ export function PassportPreview() {
         </div>
 
         <p className="mt-8 max-w-2xl font-sans text-sm leading-relaxed text-ink-muted">
-          Personal saving, visit history, and accounts arrive in a later phase.
-          Nothing on this preview is stored or synced today.
+          The sample numbers above are illustrative. Your real Passport data is
+          saved on this device only — not synced to the cloud yet.
         </p>
+        <Link
+          href="/passport"
+          className="mt-6 inline-flex min-h-11 items-center bg-forest px-5 font-sans text-sm font-medium text-bg-elevated"
+        >
+          Open Passport
+        </Link>
       </div>
     </Section>
   );

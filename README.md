@@ -6,7 +6,7 @@ Editorial dining atlas + personal restaurant passport. Not affiliated with Miche
 
 ## Status
 
-**Phase 3 complete** — restaurant detail, taxonomy hubs, Michelin education page, sitemap/robots, and structured data.
+**Phase 4 complete** — local Passport with saves, visits, collections, export/import, and device-only persistence.
 
 Building feature-first through Phases 2–7, then one consolidated UI/UX polish pass. Nonblocking visual issues live in [`docs/ui-ux-backlog.md`](./docs/ui-ux-backlog.md).
 
@@ -29,6 +29,7 @@ Committed JSON: [`data/restaurants.json`](./data/restaurants.json)
 - [Design system & homepage directions](./docs/design-system.md)
 - [Implementation plan](./docs/implementation-plan.md)
 - [UI/UX backlog](./docs/ui-ux-backlog.md)
+- [Passport metrics](./docs/passport-metrics.md)
 
 ## Stack
 
