@@ -172,6 +172,47 @@ export type Database = {
         }
         Relationships: []
       }
+      restaurant_awards: {
+        Row: {
+          created_at: string
+          guide_year: number
+          id: string
+          is_current: boolean
+          restaurant_id: string
+          source_url: string | null
+          stars: number
+          updated_at: string
+        }
+        Insert: {
+          created_at?: string
+          guide_year: number
+          id?: string
+          is_current?: boolean
+          restaurant_id: string
+          source_url?: string | null
+          stars: number
+          updated_at?: string
+        }
+        Update: {
+          created_at?: string
+          guide_year?: number
+          id?: string
+          is_current?: boolean
+          restaurant_id?: string
+          source_url?: string | null
+          stars?: number
+          updated_at?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "restaurant_awards_restaurant_id_fkey"
+            columns: ["restaurant_id"]
+            isOneToOne: false
+            referencedRelation: "restaurants"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
       restaurant_reservations: {
         Row: {
           confidence: string | null

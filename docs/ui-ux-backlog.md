@@ -19,6 +19,12 @@ Record issues that do not break functionality, accessibility, or testability.
 | `/login`, `/signup` | Auth forms | Desktop / mobile | Functional dual forms; spacing and hierarchy temporary | Consolidate into a single composed auth surface in polish pass | Medium |
 | `/account` | Account panel | Desktop / mobile | Functional sections; bordered blocks feel utilitarian | Soften section rhythm without cards-as-decoration | Medium |
 | Shared | Site header Account link | Desktop / mobile | Always visible; no signed-in state treatment yet | Show avatar/initials or Sign in CTA once polish lands | Low |
+| Legal pages | Document layouts | Desktop / mobile | Functional launch drafts; typography rhythm temporary | Align legal prose spacing with editorial pages | Low |
+| `/corrections` | Correction form | Desktop / mobile | Functional; utilitarian field styling | Soften form hierarchy without card clutter | Medium |
+
+## Next phase recommendation
+
+After Phase 7 merges and launch verification passes, open `ui-ux-polish` and work the backlog top-down (Medium first). Do not mix polish commits into data-maintenance or auth branches.
 
 ## Priority guide
 

@@ -1,3 +1,5 @@
+import type { AnalyticsEvent } from "@/lib/monitoring/analytics";
+import { trackEvent } from "@/lib/monitoring/analytics";
 import type {
   ReservationClickedEvent,
   ReservationProvider,
@@ -12,35 +14,32 @@ type TrackReservationClickInput = {
 };
 
 /**
- * Provider-neutral analytics hook. No third-party SDK is installed in Phase 5.5.
- * Events are emitted to the console in development and to a custom DOM event
- * so a future analytics provider can subscribe without changing call sites.
+ * Provider-neutral analytics hook used by reservation CTAs.
+ * Private notes and secrets are never included.
  */
 export function trackReservationClicked(
   input: TrackReservationClickInput,
 ): ReservationClickedEvent {
-  const event: ReservationClickedEvent = {
+  const event = trackEvent("reservation_clicked", {
+    restaurantSlug: input.restaurantSlug,
+    provider: input.provider,
+    surface: input.surface,
+    isDirectBooking: input.isDirectBooking,
+  }) as AnalyticsEvent;
+
+  return {
     name: "reservation_clicked",
     restaurantSlug: input.restaurantSlug,
     provider: input.provider,
     surface: input.surface,
     isDirectBooking: input.isDirectBooking,
-    timestamp: new Date().toISOString(),
+    timestamp: event.timestamp,
   };
-
-  if (typeof window !== "undefined") {
-    window.dispatchEvent(
-      new CustomEvent("mdp:reservation_clicked", { detail: event }),
-    );
-    if (process.env.NODE_ENV === "development") {
-      console.info("[analytics]", event);
-    }
-  }
-
-  return event;
 }
 
-export function analyticsProviderFromAction(source: string): ReservationClickedEvent["provider"] {
+export function analyticsProviderFromAction(
+  source: string,
+): ReservationClickedEvent["provider"] {
   if (source === "verified_direct") return "other";
   if (source.startsWith("official_website")) return "fallback_website";
   if (source.includes("michelin")) return "fallback_michelin";

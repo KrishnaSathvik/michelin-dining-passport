@@ -1,0 +1,6 @@
+{
+  "version": 1,
+  "updatedAt": "2026-07-17",
+  "description": "Field-level overrides applied after roster import matching. Use for corrected websites, coordinates publication decisions, and reservation-link corrections that must survive workbook refreshes.",
+  "overrides": []
+}

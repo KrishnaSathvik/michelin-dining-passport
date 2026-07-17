@@ -55,13 +55,34 @@ export function SiteFooter() {
             </p>
             <ul className="mt-3 space-y-2 text-ink-muted">
               <li>
-                <span>Privacy (placeholder)</span>
+                <Link href="/privacy" className="hover:text-ink">
+                  Privacy
+                </Link>
               </li>
               <li>
-                <span>Terms (placeholder)</span>
+                <Link href="/terms" className="hover:text-ink">
+                  Terms
+                </Link>
               </li>
               <li>
-                <span>Correction policy (placeholder)</span>
+                <Link href="/correction-policy" className="hover:text-ink">
+                  Correction policy
+                </Link>
+              </li>
+              <li>
+                <Link href="/data-sources" className="hover:text-ink">
+                  Data sources
+                </Link>
+              </li>
+              <li>
+                <Link href="/disclaimer" className="hover:text-ink">
+                  Disclaimer
+                </Link>
+              </li>
+              <li>
+                <Link href="/corrections" className="hover:text-ink">
+                  Submit a correction
+                </Link>
               </li>
             </ul>
           </div>

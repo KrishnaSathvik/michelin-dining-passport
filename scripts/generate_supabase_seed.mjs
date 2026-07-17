@@ -100,11 +100,38 @@ function loadApprovedCoordinates(restaurants, geocodes, overrides) {
 
 function mergeReservationRecords(base, overrideFile) {
   const records = { ...(base.records ?? {}) };
-  const overrides = overrideFile?.overrides ?? {};
-  for (const [slug, patch] of Object.entries(overrides)) {
-    records[slug] = { ...(records[slug] ?? {}), ...patch, restaurantSlug: slug };
+  const raw = overrideFile?.overrides ?? {};
+  const entries = Array.isArray(raw)
+    ? raw.map((item) => [item.restaurantSlug, item])
+    : Object.entries(raw);
+  for (const [slug, patch] of entries) {
+    if (!slug) continue;
+    const fields = { ...(patch ?? {}) };
+    delete fields.restaurantSlug;
+    delete fields.reason;
+    delete fields.decidedAt;
+    records[slug] = { ...(records[slug] ?? {}), ...fields, restaurantSlug: slug };
   }
   return records;
+}
+
+function loadAwards(restaurants) {
+  const awardsPath = join(root, "data/restaurant-awards.json");
+  if (existsSync(awardsPath)) {
+    const payload = readJson("data/restaurant-awards.json");
+    if (Array.isArray(payload.awards) && payload.awards.length > 0) {
+      return payload.awards;
+    }
+  }
+  // Bootstrap current awards from the roster when the artifact is empty.
+  const year = new Date().getUTCFullYear();
+  return restaurants.map((restaurant) => ({
+    restaurantSlug: restaurant.slug,
+    guideYear: year,
+    stars: restaurant.stars,
+    sourceUrl: restaurant.michelinGuideUrl ?? null,
+    isCurrent: true,
+  }));
 }
 
 function buildReport({ restaurants, coords, reservations }) {
@@ -157,11 +184,15 @@ function main() {
       restaurantSlugSetForReport.has(slug),
     ),
   );
+  const awards = loadAwards(restaurants).filter((award) =>
+    restaurantSlugSetForReport.has(award.restaurantSlug),
+  );
   const report = buildReport({
     restaurants,
     coords,
     reservations: reservationsForSeed,
   });
+  report.awardRows = awards.length;
   report.skippedReservationSlugs =
     Object.keys(reservations).length - Object.keys(reservationsForSeed).length;
 
@@ -190,6 +221,7 @@ Generated: ${report.generatedAt}
 | 3★ | ${report.starTotals[3]} |
 | With coordinates | ${report.withCoordinates} (${report.coordinateCoveragePct}%) |
 | Reservation records | ${report.reservationRecords} |
+| Award history rows | ${report.awardRows} |
 
 ## Reservation status counts
 
@@ -203,7 +235,7 @@ ${Object.entries(report.reservationStatusCounts)
 ## Notes
 
 - Restaurant IDs are deterministic UUID v5 values from slug.
-- Seed upserts restaurants and reservations only; user personal data is never deleted.
+- Seed upserts restaurants, reservations, and award history only; user personal data is never deleted.
 - Runtime reservation rows come from \`data/reservations.json\` (+ overrides), not candidate files.
 `;
 
@@ -307,6 +339,37 @@ ${Object.entries(report.reservationStatusCounts)
         "  confidence = excluded.confidence,",
         "  verified_at = excluded.verified_at,",
         "  notes = excluded.notes,",
+        "  updated_at = timezone('utc', now());",
+      ].join("\n"),
+    );
+  }
+
+  lines.push("");
+  lines.push(
+    "-- Replace award history for seeded restaurants (never touches user tables).",
+  );
+  lines.push(
+    "delete from public.restaurant_awards where restaurant_id in (select id from public.restaurants);",
+  );
+  for (const award of awards) {
+    const id = restaurantId(award.restaurantSlug);
+    lines.push(
+      [
+        "insert into public.restaurant_awards (",
+        "restaurant_id, guide_year, stars, source_url, is_current",
+        ") values (",
+        [
+          sqlLiteral(id),
+          award.guideYear,
+          award.stars,
+          sqlLiteral(award.sourceUrl ?? null),
+          award.isCurrent === false ? "false" : "true",
+        ].join(", "),
+        ")",
+        "on conflict (restaurant_id, guide_year) do update set",
+        "  stars = excluded.stars,",
+        "  source_url = excluded.source_url,",
+        "  is_current = excluded.is_current,",
         "  updated_at = timezone('utc', now());",
       ].join("\n"),
     );

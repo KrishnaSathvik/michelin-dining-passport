@@ -54,3 +54,9 @@ __pycache__/
 # Local reservation enrichment caches (regenerable)
 /data/reservation-page-cache.json
 /data/reservation-link-check-log.json
+
+# Generated data-update artifacts (keep overrides and canonical JSON)
+/data/backups/
+/data/reports/*
+!/data/reports/.gitkeep
+/data/correction-requests/

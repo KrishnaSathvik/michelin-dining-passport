@@ -1,0 +1,6 @@
+{
+  "version": 1,
+  "updatedAt": "2026-07-17T00:00:00+00:00",
+  "description": "Minimal award history artifact mirrored into Supabase restaurant_awards. Previous guide-year rows are retained when stars change.",
+  "awards": []
+}

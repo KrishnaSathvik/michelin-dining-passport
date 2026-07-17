@@ -21,9 +21,9 @@ Feature-first build through Phases 2–7, then one consolidated UI/UX polish pas
 | 4 | Local Passport + personal tracking | **Complete** (`phase-4-local-passport`) |
 | 5 | Geocode + `/map` | **Complete** (`phase-5-map`) — batch geocode, reconciliation, MapLibre map, search-this-area, mobile sheet |
 | 5.5 | Verified reservation links | **Complete** (`phase-5-5-reservations`) — outbound CTAs, discovery/review workflow, no booking APIs |
-| 6 | Supabase auth + personal data | **In progress** (`phase-6-auth-and-accounts`) |
-| 7 | Admin + roster import pipeline | Not started |
-| — | Consolidated UI/UX polish | After Phases 2–7 |
+| 6 | Supabase auth + personal data | **Complete** (`phase-6-auth-and-accounts`) |
+| 7 | Production readiness + data-maintenance scripts | **In progress** (`phase-7-production-readiness`) — no admin dashboard |
+| — | Consolidated UI/UX polish | After Phase 7; branch `ui-ux-polish` |
 
 ---
 
@@ -146,12 +146,31 @@ Branch: `phase-2-explore`
 
 ---
 
-## Phase 7 — Admin
+## Phase 7 — Production readiness + safe data maintenance
 
-- Workbook diff import
-- Enrichment editing
-- Image approval
-- Publish flags
+Branch: `phase-7-production-readiness`
+
+**Replaces the original admin-dashboard scope for launch.**
+
+- Dataset diff / apply CLIs with identity matching and reviewed diffs
+- Identity + field override files
+- `restaurant_awards` history (no admin UI)
+- Reservation + geocode maintenance commands
+- Production deployment docs + expanded `.env.example`
+- Legal/content pages + public correction form (no admin queue)
+- Provider-neutral analytics/monitoring hooks (disabled by default)
+- Security headers, CSP, rate limits, CSV formula guards, secret scan
+- Launch-flow Playwright coverage
+
+### Explicitly out of scope
+
+- Admin dashboard / import-review website
+- Image approval queue
+- Complex roles
+- In-browser XLSX uploader
+- UI/UX polish (next dedicated phase)
+
+Docs: [`docs/data-update-workflow.md`](./data-update-workflow.md), [`docs/launch-checklist.md`](./launch-checklist.md)
 
 ---
 
@@ -167,7 +186,7 @@ Branch: `phase-2-explore`
 
 | Risk | Mitigation |
 | --- | --- |
-| Guide updates drift from workbook | Version `source_updated_at`; import diff in admin |
+| Guide updates drift from workbook | Versioned diff/apply CLI + identity overrides; absent rows require review |
 | Shared addresses confuse map pins | Offset sibling markers; show both in preview |
 | Cuisine label inconsistency | Curated grouping map later; don’t over-normalize early |
 | Image licensing | Placeholders until rights-cleared assets |
@@ -178,6 +197,4 @@ Branch: `phase-2-explore`
 
 ## Exact next implementation phase
 
-**Phase 1 — Build the approved homepage only**, using real workbook restaurants, placeholder image treatments, and the combined design direction:
-
-> Modern Dining Guide structure + Editorial Atlas visual identity (+ Immersive `/map` later).
+**UI/UX polish on `ui-ux-polish`** after Phase 7 merge — consolidate visual hierarchy, motion, imagery, and auth/account density using [`docs/ui-ux-backlog.md`](./ui-ux-backlog.md). Do not start polish until production-readiness verification passes.
