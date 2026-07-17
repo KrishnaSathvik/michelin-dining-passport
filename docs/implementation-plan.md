@@ -16,7 +16,7 @@ Feature-first build through Phases 2–7, then one consolidated UI/UX polish pas
 | --- | --- | --- |
 | **0** | Foundation: audit, docs, design direction | **Complete** (on `main`) |
 | 1 | Static homepage (approved direction) | **Complete** (`phase-1-homepage`) |
-| 2 | Explore + filters + result views | Not started |
+| 2 | Explore + filters + result views | **Complete** (`phase-2-explore`) |
 | 3 | Restaurant + taxonomy pages + SEO | Not started |
 | 4 | Local Passport + personal tracking | Not started |
 | 5 | Geocode + `/map` | Not started |

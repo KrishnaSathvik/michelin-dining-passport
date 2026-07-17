@@ -6,7 +6,7 @@ Editorial dining atlas + personal restaurant passport. Not affiliated with Miche
 
 ## Status
 
-**Phase 1 complete** — editorial discovery homepage over committed JSON data.
+**Phase 2 complete** — Explore directory with filters, sort, grid/list, pagination, and shareable URL state.
 
 Building feature-first through Phases 2–7, then one consolidated UI/UX polish pass. Nonblocking visual issues live in [`docs/ui-ux-backlog.md`](./docs/ui-ux-backlog.md).
 
@@ -53,6 +53,7 @@ npm run dev
 | `npm run data:validate` | Verify counts, star split, unique slugs, shared-address pairs |
 | `npm run typecheck` | TypeScript check |
 | `npm run lint` | ESLint |
+| `npm run test` | Unit tests (Explore query engine) |
 | `npm run build` | Production build |
 
 Import/validation use Python’s standard library only (no XLSX package in the browser or Node runtime).
@@ -63,4 +64,4 @@ Import/validation use Python’s standard library only (no XLSX package in the b
 
 ## Next phase
 
-Phase 2 — complete Explore experience (`phase-2-explore`): filters, sort, grid/list, URL state, mobile filter drawer.
+Phase 3 — restaurant detail and taxonomy pages after Phase 2 merges.
