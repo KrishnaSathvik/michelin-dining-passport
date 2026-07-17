@@ -1,0 +1,2445 @@
+{
+  "version": 1,
+  "updatedAt": "2026-07-17T18:44:29.111794+00:00",
+  "matches": [
+    {
+      "restaurantSlug": "311-omakase-boston-ma",
+      "placeId": "ChIJnWDc3Bh744kRdAPopyBzyVk",
+      "status": "matched",
+      "confidence": "high",
+      "method": "browser_name_address_coordinates",
+      "reviewedAt": "2026-07-17",
+      "notes": "strong_name,street,city_state,coords_close,website_domain,restaurant_type"
+    },
+    {
+      "restaurantSlug": "63-clinton-new-york-ny",
+      "placeId": "ChIJ385rlW9ZwokRHTamoLqoosI",
+      "status": "manually_approved",
+      "confidence": "high",
+      "method": "manual_address_review",
+      "reviewedAt": "2026-07-17",
+      "notes": "Manual tip review: name/address/city agreement confirmed."
+    },
+    {
+      "restaurantSlug": "7-adams-san-francisco-ca",
+      "placeId": "ChIJXVvsirKBhYARfWD1MEpT_Uw",
+      "status": "matched",
+      "confidence": "high",
+      "method": "browser_name_address_coordinates",
+      "reviewedAt": "2026-07-17",
+      "notes": "strong_name,street,city_state,coords_close,website_domain,restaurant_type"
+    },
+    {
+      "restaurantSlug": "acquerello-san-francisco-ca",
+      "placeId": "ChIJwYdY3uqAhYARXUJUOIELoqU",
+      "status": "matched",
+      "confidence": "high",
+      "method": "browser_name_address_coordinates",
+      "reviewedAt": "2026-07-17",
+      "notes": "strong_name,street,city_state,coords_close,website_domain,restaurant_type"
+    },
+    {
+      "restaurantSlug": "addison-san-diego-ca",
+      "placeId": "ChIJrVfI5sEH3IARfAmbFue9xNc",
+      "status": "matched",
+      "confidence": "high",
+      "method": "browser_name_address_coordinates",
+      "reviewedAt": "2026-07-17",
+      "notes": "strong_name,street,city_state,website_domain,restaurant_type"
+    },
+    {
+      "restaurantSlug": "albi-washington-dc",
+      "placeId": "ChIJ240L8N25t4kRCoGiQ2-21bI",
+      "status": "matched",
+      "confidence": "high",
+      "method": "browser_name_address_coordinates",
+      "reviewedAt": "2026-07-17",
+      "notes": "strong_name,street,city_state,coords_close,website_domain,restaurant_type"
+    },
+    {
+      "restaurantSlug": "alinea-chicago-il",
+      "placeId": "ChIJuyI60yLTD4gROwTWENq1He0",
+      "status": "matched",
+      "confidence": "high",
+      "method": "browser_name_address_coordinates",
+      "reviewedAt": "2026-07-17",
+      "notes": "strong_name,street,city_state,coords_close,website_domain,restaurant_type"
+    },
+    {
+      "restaurantSlug": "alma-fonda-fina-denver-co",
+      "placeId": "ChIJtcachtF5bIcRZsMfPFA72Ks",
+      "status": "matched",
+      "confidence": "high",
+      "method": "browser_name_address_coordinates",
+      "reviewedAt": "2026-07-17",
+      "notes": "strong_name,street,city_state,coords_close,website_domain,restaurant_type"
+    },
+    {
+      "restaurantSlug": "angler-sf-san-francisco-ca",
+      "placeId": "ChIJgURgKGuBhYARMIlKBN79aOQ",
+      "status": "matched",
+      "confidence": "high",
+      "method": "browser_name_address_coordinates",
+      "reviewedAt": "2026-07-17",
+      "notes": "strong_name,street,city_state,coords_close,restaurant_type"
+    },
+    {
+      "restaurantSlug": "aquavit-new-york-ny",
+      "placeId": "ChIJWfonJ_tYwokRwIGb6Im403E",
+      "status": "matched",
+      "confidence": "high",
+      "method": "browser_name_address_coordinates",
+      "reviewedAt": "2026-07-17",
+      "notes": "strong_name,street,city_state,coords_close,website_domain,restaurant_type"
+    },
+    {
+      "restaurantSlug": "ariete-miami-fl",
+      "placeId": "ChIJEV1uzNq32YgReJLG9ncPUQQ",
+      "status": "matched",
+      "confidence": "high",
+      "method": "browser_name_address_coordinates",
+      "reviewedAt": "2026-07-17",
+      "notes": "strong_name,street,coords_close,website_domain,restaurant_type"
+    },
+    {
+      "restaurantSlug": "aska-brooklyn-ny",
+      "placeId": "ChIJUwatTl1ZwokRUDXxYoFa-hk",
+      "status": "matched",
+      "confidence": "high",
+      "method": "browser_name_address_coordinates",
+      "reviewedAt": "2026-07-17",
+      "notes": "strong_name,street,city_state,website_domain,restaurant_type"
+    },
+    {
+      "restaurantSlug": "atelier-crenn-san-francisco-ca",
+      "placeId": "ChIJx1ULhNCAhYARSRq9NDWTeqI",
+      "status": "matched",
+      "confidence": "high",
+      "method": "browser_name_address_coordinates",
+      "reviewedAt": "2026-07-17",
+      "notes": "strong_name,street,city_state,coords_close,website_domain,restaurant_type"
+    },
+    {
+      "restaurantSlug": "atera-new-york-ny",
+      "placeId": "ChIJ_Y7rMCBawokR0mnRmN5kL2o",
+      "status": "matched",
+      "confidence": "high",
+      "method": "browser_name_address_coordinates",
+      "reviewedAt": "2026-07-17",
+      "notes": "strong_name,street,city_state,coords_close,website_domain,restaurant_type"
+    },
+    {
+      "restaurantSlug": "atlas-atlanta-ga",
+      "placeId": "ChIJC1jB5Y4F9YgRSA2D0d6UDJc",
+      "status": "matched",
+      "confidence": "high",
+      "method": "browser_name_address_coordinates",
+      "reviewedAt": "2026-07-17",
+      "notes": "strong_name,street,city_state,coords_close,website_domain,restaurant_type"
+    },
+    {
+      "restaurantSlug": "atomix-new-york-ny",
+      "placeId": "ChIJ3bmAHghZwokRRXYO57yLuss",
+      "status": "matched",
+      "confidence": "high",
+      "method": "browser_name_address_coordinates",
+      "reviewedAt": "2026-07-17",
+      "notes": "strong_name,street,city_state,coords_close,website_domain,restaurant_type"
+    },
+    {
+      "restaurantSlug": "auberge-du-soleil-rutherford-ca",
+      "placeId": "ChIJH5O5lv5WhIARCuyN4aS9lYg",
+      "status": "manually_approved",
+      "confidence": "high",
+      "method": "manual_tip_approve",
+      "reviewedAt": "2026-07-17",
+      "notes": "Tip-approved reasons=city_state,coords_close,street,strong_name"
+    },
+    {
+      "restaurantSlug": "aubergine-carmel-by-the-sea-ca",
+      "placeId": "ChIJZ7svYhXmjYARp68gV6eBnX4",
+      "status": "manually_approved",
+      "confidence": "high",
+      "method": "manual_tip_approve",
+      "reviewedAt": "2026-07-17",
+      "notes": "Tip-approved reasons=city_state,restaurant_type,strong_name,website_domain"
+    },
+    {
+      "restaurantSlug": "auro-calistoga-ca",
+      "placeId": "ChIJMaW7PHlDhIARZcaR5KPGG8g",
+      "status": "matched",
+      "confidence": "high",
+      "method": "browser_name_address_coordinates",
+      "reviewedAt": "2026-07-17",
+      "notes": "strong_name,street,city_state,coords_near,website_domain,restaurant_type"
+    },
+    {
+      "restaurantSlug": "bacchanalia-atlanta-ga",
+      "placeId": "ChIJX7jCB-wE9YgRNyeBypQUGaE",
+      "status": "matched",
+      "confidence": "high",
+      "method": "browser_name_address_coordinates",
+      "reviewedAt": "2026-07-17",
+      "notes": "strong_name,street,city_state,website_domain,restaurant_type"
+    },
+    {
+      "restaurantSlug": "bar-miller-new-york-ny",
+      "placeId": "ChIJoXWHAlJZwokRVBsijjIYQoQ",
+      "status": "manually_approved",
+      "confidence": "high",
+      "method": "manual_tip_approve",
+      "reviewedAt": "2026-07-17",
+      "notes": "Tip-approved reasons=city_state,restaurant_type,strong_name,website_domain"
+    },
+    {
+      "restaurantSlug": "barley-swine-austin-tx",
+      "placeId": "ChIJid3yLt-0RIYR_JPyeaoX0Uc",
+      "status": "matched",
+      "confidence": "high",
+      "method": "browser_name_address_coordinates",
+      "reviewedAt": "2026-07-17",
+      "notes": "strong_name,street,city_state,website_domain,restaurant_type"
+    },
+    {
+      "restaurantSlug": "bastion-nashville-tn",
+      "placeId": "ChIJIS56-XFmZIgRsvTzijiFReo",
+      "status": "matched",
+      "confidence": "high",
+      "method": "browser_name_address_coordinates",
+      "reviewedAt": "2026-07-17",
+      "notes": "strong_name,street,city_state,coords_close,website_domain,restaurant_type"
+    },
+    {
+      "restaurantSlug": "bcn-taste-and-tradition-houston-tx",
+      "placeId": "ChIJjYk683y_QIYRVaLUbeMhExI",
+      "status": "matched",
+      "confidence": "high",
+      "method": "browser_name_address_coordinates",
+      "reviewedAt": "2026-07-17",
+      "notes": "strong_name,street,city_state,coords_close,website_domain,restaurant_type"
+    },
+    {
+      "restaurantSlug": "beckon-denver-co",
+      "placeId": "ChIJQ_9Q0DJ5bIcRbDAIulshVuY",
+      "status": "matched",
+      "confidence": "high",
+      "method": "browser_name_address_coordinates",
+      "reviewedAt": "2026-07-17",
+      "notes": "strong_name,street,city_state,coords_close,website_domain,restaurant_type"
+    },
+    {
+      "restaurantSlug": "bell-s-los-alamos-ca",
+      "placeId": "ChIJfT-piWsF7IAR5sFnqRC8c7Y",
+      "status": "matched",
+      "confidence": "high",
+      "method": "browser_name_address_coordinates",
+      "reviewedAt": "2026-07-17",
+      "notes": "strong_name,street,city_state,coords_close,website_domain,restaurant_type"
+    },
+    {
+      "restaurantSlug": "benu-san-francisco-ca",
+      "placeId": "ChIJSToWqn2AhYAR1CuH2iGMvuo",
+      "status": "matched",
+      "confidence": "high",
+      "method": "browser_name_address_coordinates",
+      "reviewedAt": "2026-07-17",
+      "notes": "strong_name,street,city_state,coords_close,website_domain,restaurant_type"
+    },
+    {
+      "restaurantSlug": "birdsong-san-francisco-ca",
+      "placeId": "ChIJTwtvfIOAhYARHMEe0c2Xi4s",
+      "status": "matched",
+      "confidence": "high",
+      "method": "browser_name_address_coordinates",
+      "reviewedAt": "2026-07-17",
+      "notes": "strong_name,street,city_state,coords_close,website_domain,restaurant_type"
+    },
+    {
+      "restaurantSlug": "blue-hill-at-stone-barns-tarrytown-ny",
+      "placeId": "ChIJExcPIfK_wokRtc6K_3jkhgM",
+      "status": "matched",
+      "confidence": "high",
+      "method": "browser_name_address_coordinates",
+      "reviewedAt": "2026-07-17",
+      "notes": "strong_name,street,city_state,coords_far,website_domain,restaurant_type"
+    },
+    {
+      "restaurantSlug": "boia-de-miami-fl",
+      "placeId": "ChIJte0b2xux2YgRr8f-xaLb0jw",
+      "status": "manually_approved",
+      "confidence": "high",
+      "method": "manual_tip_approve",
+      "reviewedAt": "2026-07-17",
+      "notes": "Tip-approved reasons=city_state,restaurant_type,strong_name,website_domain"
+    },
+    {
+      "restaurantSlug": "boka-chicago-il",
+      "placeId": "ChIJg7aSMj3TD4gRlHUmzqlebUI",
+      "status": "matched",
+      "confidence": "high",
+      "method": "browser_name_address_coordinates",
+      "reviewedAt": "2026-07-17",
+      "notes": "strong_name,street,city_state,coords_close,website_domain,restaurant_type"
+    },
+    {
+      "restaurantSlug": "bom-new-york-ny",
+      "placeId": "ChIJRY8CqGJZwokR285BA7eLv5g",
+      "status": "manually_approved",
+      "confidence": "medium",
+      "method": "manual_tip_approve",
+      "reviewedAt": "2026-07-17",
+      "notes": "Tip-approved reasons=city_state,coords_close,restaurant_type,shared_address_sibling,street,strong_name,website_domain"
+    },
+    {
+      "restaurantSlug": "bosq-aspen-co",
+      "placeId": "ChIJpwZsz2I5QIcRTrrX_dgF0aM",
+      "status": "matched",
+      "confidence": "high",
+      "method": "browser_name_address_coordinates",
+      "reviewedAt": "2026-07-17",
+      "notes": "strong_name,street,city_state,coords_close,website_domain,restaurant_type"
+    },
+    {
+      "restaurantSlug": "bresca-washington-dc",
+      "placeId": "ChIJIfKOC-i3t4kRjYSije_nwy0",
+      "status": "matched",
+      "confidence": "high",
+      "method": "browser_name_address_coordinates",
+      "reviewedAt": "2026-07-17",
+      "notes": "strong_name,street,city_state,coords_close,website_domain,restaurant_type"
+    },
+    {
+      "restaurantSlug": "bridges-new-york-ny",
+      "placeId": "ChIJ5Q8Bl1NbwokRjuIXKz8OfRQ",
+      "status": "matched",
+      "confidence": "high",
+      "method": "browser_name_address_coordinates",
+      "reviewedAt": "2026-07-17",
+      "notes": "strong_name,street,city_state,coords_close,website_domain,restaurant_type"
+    },
+    {
+      "restaurantSlug": "brut-denver-co",
+      "placeId": "ChIJabPzMvx5bIcRuR-TMXhM1xQ",
+      "status": "matched",
+      "confidence": "high",
+      "method": "browser_name_address_coordinates",
+      "reviewedAt": "2026-07-17",
+      "notes": "strong_name,street,city_state,coords_close,website_domain,restaurant_type"
+    },
+    {
+      "restaurantSlug": "cafe-boulud-new-york-ny",
+      "placeId": "ChIJCcAxi5RYwokRdUqdw5_FHIk",
+      "status": "matched",
+      "confidence": "high",
+      "method": "browser_name_address_coordinates",
+      "reviewedAt": "2026-07-17",
+      "notes": "strong_name,street,city_state,coords_close,website_domain,restaurant_type"
+    },
+    {
+      "restaurantSlug": "californios-san-francisco-ca",
+      "placeId": "ChIJIfD0wjh-j4ARbWVBlaGpKnU",
+      "status": "matched",
+      "confidence": "high",
+      "method": "browser_name_address_coordinates",
+      "reviewedAt": "2026-07-17",
+      "notes": "strong_name,street,city_state,coords_close,website_domain,restaurant_type"
+    },
+    {
+      "restaurantSlug": "camille-orlando-fl",
+      "placeId": "ChIJs-RASQ1l54gR4DSRO8UE7mI",
+      "status": "matched",
+      "confidence": "high",
+      "method": "browser_name_address_coordinates",
+      "reviewedAt": "2026-07-17",
+      "notes": "strong_name,street,city_state,coords_close,website_domain,restaurant_type"
+    },
+    {
+      "restaurantSlug": "carino-chicago-il",
+      "placeId": "ChIJ8USkYSzTD4gRNzwpxKgihBI",
+      "status": "matched",
+      "confidence": "high",
+      "method": "browser_name_address_coordinates",
+      "reviewedAt": "2026-07-17",
+      "notes": "strong_name,street,city_state,coords_close,website_domain,restaurant_type"
+    },
+    {
+      "restaurantSlug": "caruso-s-montecito-ca",
+      "placeId": "ChIJc3vlaSUT6YARjVj5-kbcxrI",
+      "status": "manually_approved",
+      "confidence": "high",
+      "method": "manual_tip_approve",
+      "reviewedAt": "2026-07-17",
+      "notes": "Tip-approved reasons=restaurant_type,street,strong_name,website_domain"
+    },
+    {
+      "restaurantSlug": "casa-mono-new-york-ny",
+      "placeId": "ChIJUd1sYJ9ZwokRRkqniQdJ144",
+      "status": "matched",
+      "confidence": "high",
+      "method": "browser_name_address_coordinates",
+      "reviewedAt": "2026-07-17",
+      "notes": "strong_name,street,city_state,coords_close,website_domain,restaurant_type"
+    },
+    {
+      "restaurantSlug": "causa-washington-dc",
+      "placeId": "ChIJP1ej4ae3t4kRZmPbTsaTz_w",
+      "status": "manually_approved",
+      "confidence": "high",
+      "method": "manual_tip_approve",
+      "reviewedAt": "2026-07-17",
+      "notes": "Tip-approved reasons=city_state,coords_close,restaurant_type,street,strong_name,website_domain"
+    },
+    {
+      "restaurantSlug": "cesar-new-york-ny",
+      "placeId": "ChIJeyzWYABZwokRkxhWJzFpqvU",
+      "status": "matched",
+      "confidence": "high",
+      "method": "browser_name_address_coordinates",
+      "reviewedAt": "2026-07-17",
+      "notes": "strong_name,street,city_state,coords_close,website_domain,restaurant_type"
+    },
+    {
+      "restaurantSlug": "chef-s-counter-at-maass-fort-lauderdale-fl",
+      "placeId": "ChIJF6pqghMB2YgRl7OIepJ4H0s",
+      "status": "manually_approved",
+      "confidence": "high",
+      "method": "manual_address_review",
+      "reviewedAt": "2026-07-17",
+      "notes": "Manual tip review: name/address/city agreement confirmed."
+    },
+    {
+      "restaurantSlug": "chef-s-table-at-brooklyn-fare-new-york-ny",
+      "placeId": "ChIJiVVSAE1awokRzdvqVP_z3aA",
+      "status": "matched",
+      "confidence": "high",
+      "method": "browser_name_address_coordinates",
+      "reviewedAt": "2026-07-17",
+      "notes": "strong_name,city_state,coords_close,website_domain,restaurant_type"
+    },
+    {
+      "restaurantSlug": "chez-noir-carmel-by-the-sea-ca",
+      "placeId": "ChIJSZwHIcTnjYAR40RvFRpNQLM",
+      "status": "manually_approved",
+      "confidence": "high",
+      "method": "manual_tip_approve",
+      "reviewedAt": "2026-07-17",
+      "notes": "Tip-approved reasons=city_state,restaurant_type,strong_name,website_domain"
+    },
+    {
+      "restaurantSlug": "citrin-santa-monica-ca",
+      "placeId": "ChIJB1gJrcelwoARTqn5Yh3E57s",
+      "status": "manually_approved",
+      "confidence": "medium",
+      "method": "manual_tip_approve",
+      "reviewedAt": "2026-07-17",
+      "notes": "Tip-approved reasons=city_state,coords_close,restaurant_type,shared_address_sibling,street,strong_name,website_domain"
+    },
+    {
+      "restaurantSlug": "commis-oakland-ca",
+      "placeId": "ChIJFzl5Mfh9hYARQmOK6_pAIYw",
+      "status": "matched",
+      "confidence": "high",
+      "method": "browser_name_address_coordinates",
+      "reviewedAt": "2026-07-17",
+      "notes": "strong_name,street,city_state,coords_close,website_domain,restaurant_type"
+    },
+    {
+      "restaurantSlug": "corima-new-york-ny",
+      "placeId": "ChIJgaiXlpNbwokRN0vlYTshs-c",
+      "status": "matched",
+      "confidence": "high",
+      "method": "browser_name_address_coordinates",
+      "reviewedAt": "2026-07-17",
+      "notes": "strong_name,street,city_state,coords_close,website_domain,restaurant_type"
+    },
+    {
+      "restaurantSlug": "corkscrew-bbq-spring-tx",
+      "placeId": "ChIJRfY7ATs0R4YRNVMqjkDzTHU",
+      "status": "matched",
+      "confidence": "high",
+      "method": "browser_name_address_coordinates",
+      "reviewedAt": "2026-07-17",
+      "notes": "strong_name,street,city_state,coords_close,restaurant_type"
+    },
+    {
+      "restaurantSlug": "corridor-109-los-angeles-ca",
+      "placeId": "ChIJo_avB77HwoAR6KembIfXRCk",
+      "status": "manually_approved",
+      "confidence": "high",
+      "method": "manual_tip_approve",
+      "reviewedAt": "2026-07-17",
+      "notes": "Tip-approved reasons=city_state,restaurant_type,strong_name,website_domain"
+    },
+    {
+      "restaurantSlug": "cote-miami-miami-fl",
+      "placeId": "ChIJT8zbHlex2YgRbmlvb54NTIY",
+      "status": "manually_approved",
+      "confidence": "high",
+      "method": "manual_address_review",
+      "reviewedAt": "2026-07-17",
+      "notes": "Manual tip review: name/address/city agreement confirmed."
+    },
+    {
+      "restaurantSlug": "cote-new-york-ny",
+      "placeId": "ChIJQ1R3hKNZwokRQM4wbIrc00o",
+      "status": "matched",
+      "confidence": "high",
+      "method": "browser_name_address_coordinates",
+      "reviewedAt": "2026-07-17",
+      "notes": "strong_name,street,city_state,coords_close,website_domain,restaurant_type"
+    },
+    {
+      "restaurantSlug": "counter-charlotte-nc",
+      "placeId": "ChIJP7Nwj_6hVogRLjZmi8ZIIio",
+      "status": "matched",
+      "confidence": "high",
+      "method": "browser_name_address_coordinates",
+      "reviewedAt": "2026-07-17",
+      "notes": "strong_name,street,city_state,website_domain,restaurant_type"
+    },
+    {
+      "restaurantSlug": "craft-omakase-austin-tx",
+      "placeId": "ChIJKWBVYbLLRIYRBUllLQyqLSI",
+      "status": "matched",
+      "confidence": "high",
+      "method": "browser_name_address_coordinates",
+      "reviewedAt": "2026-07-17",
+      "notes": "strong_name,street,city_state,website_domain,restaurant_type"
+    },
+    {
+      "restaurantSlug": "crown-shy-new-york-ny",
+      "placeId": "ChIJ__9LNBZawokREnkOiVx7ydc",
+      "status": "manually_approved",
+      "confidence": "high",
+      "method": "manual_approve",
+      "reviewedAt": "2026-07-17",
+      "notes": "Approved via CLI."
+    },
+    {
+      "restaurantSlug": "cyrus-geyserville-ca",
+      "placeId": "ChIJ1UhpBvsFhIARF1n-brdta8k",
+      "status": "matched",
+      "confidence": "high",
+      "method": "browser_name_address_coordinates",
+      "reviewedAt": "2026-07-17",
+      "notes": "strong_name,street,city_state,website_domain,restaurant_type"
+    },
+    {
+      "restaurantSlug": "daniel-new-york-ny",
+      "placeId": "ChIJ09ZGju5YwokRXOcNC23JRwk",
+      "status": "matched",
+      "confidence": "high",
+      "method": "browser_name_address_coordinates",
+      "reviewedAt": "2026-07-17",
+      "notes": "strong_name,street,city_state,coords_close,website_domain,restaurant_type"
+    },
+    {
+      "restaurantSlug": "dirt-candy-new-york-ny",
+      "placeId": "ChIJBXlte51ZwokRXzXtdaBG9xM",
+      "status": "matched",
+      "confidence": "high",
+      "method": "browser_name_address_coordinates",
+      "reviewedAt": "2026-07-17",
+      "notes": "strong_name,street,city_state,coords_close,website_domain,restaurant_type"
+    },
+    {
+      "restaurantSlug": "ebbe-tampa-fl",
+      "placeId": "ChIJGZ5VTmXFwogRzkkrqI3WyPA",
+      "status": "matched",
+      "confidence": "high",
+      "method": "browser_name_address_coordinates",
+      "reviewedAt": "2026-07-17",
+      "notes": "strong_name,street,city_state,coords_close,website_domain,restaurant_type"
+    },
+    {
+      "restaurantSlug": "el-ideas-chicago-il",
+      "placeId": "ChIJbbQglnAtDogR-Y6w6ETH91A",
+      "status": "matched",
+      "confidence": "high",
+      "method": "browser_name_address_coordinates",
+      "reviewedAt": "2026-07-17",
+      "notes": "strong_name,street,city_state,coords_close,website_domain,restaurant_type"
+    },
+    {
+      "restaurantSlug": "elcielo-miami-miami-fl",
+      "placeId": "ChIJ6VVxuZy22YgRlpY7iByTz_Q",
+      "status": "manually_approved",
+      "confidence": "high",
+      "method": "manual_address_review",
+      "reviewedAt": "2026-07-17",
+      "notes": "Manual tip review: name/address/city agreement confirmed."
+    },
+    {
+      "restaurantSlug": "elcielo-washington-dc-washington-dc",
+      "placeId": "ChIJw43KgEy5t4kRarwZlIG4yg0",
+      "status": "manually_approved",
+      "confidence": "high",
+      "method": "manual_address_review",
+      "reviewedAt": "2026-07-17",
+      "notes": "Manual tip review: name/address/city agreement confirmed."
+    },
+    {
+      "restaurantSlug": "eleven-madison-park-new-york-ny",
+      "placeId": "ChIJEWbXz6ZZwokRLKmKrtPfVFY",
+      "status": "matched",
+      "confidence": "high",
+      "method": "browser_name_address_coordinates",
+      "reviewedAt": "2026-07-17",
+      "notes": "strong_name,street,city_state,coords_close,website_domain,restaurant_type"
+    },
+    {
+      "restaurantSlug": "elske-chicago-il",
+      "placeId": "ChIJSWTvSyYtDogRE-4fa_DPwZA",
+      "status": "matched",
+      "confidence": "high",
+      "method": "browser_name_address_coordinates",
+      "reviewedAt": "2026-07-17",
+      "notes": "strong_name,street,city_state,website_domain,restaurant_type"
+    },
+    {
+      "restaurantSlug": "emelina-west-palm-beach-fl",
+      "placeId": "ChIJz8UO9oLX2IgRkPBUtghdzkA",
+      "status": "matched",
+      "confidence": "high",
+      "method": "browser_name_address_coordinates",
+      "reviewedAt": "2026-07-17",
+      "notes": "strong_name,street,city_state,website_domain,restaurant_type"
+    },
+    {
+      "restaurantSlug": "emeril-s-new-orleans-la",
+      "placeId": "ChIJp6mGj3GmIIYRfS0qjpoGsmo",
+      "status": "matched",
+      "confidence": "high",
+      "method": "browser_name_address_coordinates",
+      "reviewedAt": "2026-07-17",
+      "notes": "strong_name,street,city_state,coords_close,website_domain,restaurant_type"
+    },
+    {
+      "restaurantSlug": "enclos-sonoma-ca",
+      "placeId": "ChIJKUxebcKvhYARsK13AtWct1E",
+      "status": "matched",
+      "confidence": "high",
+      "method": "browser_name_address_coordinates",
+      "reviewedAt": "2026-07-17",
+      "notes": "strong_name,street,city_state,coords_close,website_domain,restaurant_type"
+    },
+    {
+      "restaurantSlug": "esme-chicago-il",
+      "placeId": "ChIJzVJtmfjTD4gRFfVzZaod3Ns",
+      "status": "matched",
+      "confidence": "high",
+      "method": "browser_name_address_coordinates",
+      "reviewedAt": "2026-07-17",
+      "notes": "strong_name,street,city_state,coords_near,website_domain,restaurant_type"
+    },
+    {
+      "restaurantSlug": "essential-by-christophe-new-york-ny",
+      "placeId": "ChIJw6JyhoxZwokR3mKl4FLg5rM",
+      "status": "matched",
+      "confidence": "high",
+      "method": "browser_name_address_coordinates",
+      "reviewedAt": "2026-07-17",
+      "notes": "strong_name,street,city_state,coords_close,website_domain,restaurant_type"
+    },
+    {
+      "restaurantSlug": "estela-new-york-ny",
+      "placeId": "ChIJf3f-f4VZwokRcBCEciTOGRQ",
+      "status": "matched",
+      "confidence": "high",
+      "method": "browser_name_address_coordinates",
+      "reviewedAt": "2026-07-17",
+      "notes": "strong_name,street,city_state,coords_close,website_domain,restaurant_type"
+    },
+    {
+      "restaurantSlug": "ever-chicago-il",
+      "placeId": "ChIJqUoVvkgtDogRLGIKXcfaiKk",
+      "status": "matched",
+      "confidence": "high",
+      "method": "browser_name_address_coordinates",
+      "reviewedAt": "2026-07-17",
+      "notes": "strong_name,street,city_state,coords_close,website_domain,restaurant_type"
+    },
+    {
+      "restaurantSlug": "family-meal-at-blue-hill-new-york-ny",
+      "placeId": "ChIJi9BURJFZwokRDcqvIgxdXds",
+      "status": "matched",
+      "confidence": "high",
+      "method": "browser_name_address_coordinates",
+      "reviewedAt": "2026-07-17",
+      "notes": "strong_name,city_state,coords_close,website_domain,restaurant_type"
+    },
+    {
+      "restaurantSlug": "feld-chicago-il",
+      "placeId": "ChIJSwxFi48tDogR5dycH3Ei-IE",
+      "status": "matched",
+      "confidence": "high",
+      "method": "browser_name_address_coordinates",
+      "reviewedAt": "2026-07-17",
+      "notes": "strong_name,street,city_state,coords_close,website_domain,restaurant_type"
+    },
+    {
+      "restaurantSlug": "fiola-washington-dc",
+      "placeId": "ChIJJT16aoW3t4kRuvr4twwPMFY",
+      "status": "matched",
+      "confidence": "high",
+      "method": "browser_name_address_coordinates",
+      "reviewedAt": "2026-07-17",
+      "notes": "strong_name,street,city_state,coords_close,website_domain,restaurant_type"
+    },
+    {
+      "restaurantSlug": "francie-brooklyn-ny",
+      "placeId": "ChIJ35V_tZlbwokRzolpCln-mG4",
+      "status": "matched",
+      "confidence": "high",
+      "method": "browser_name_address_coordinates",
+      "reviewedAt": "2026-07-17",
+      "notes": "strong_name,street,city_state,coords_close,website_domain,restaurant_type"
+    },
+    {
+      "restaurantSlug": "frasca-food-and-wine-boulder-co",
+      "placeId": "ChIJ32ggfCnsa4cReukO2DP2hXY",
+      "status": "matched",
+      "confidence": "high",
+      "method": "browser_name_address_coordinates",
+      "reviewedAt": "2026-07-17",
+      "notes": "strong_name,street,city_state,coords_close,website_domain,restaurant_type"
+    },
+    {
+      "restaurantSlug": "frevo-new-york-ny",
+      "placeId": "ChIJL6-NTmBZwokRGacx3GWq3D0",
+      "status": "matched",
+      "confidence": "high",
+      "method": "browser_name_address_coordinates",
+      "reviewedAt": "2026-07-17",
+      "notes": "strong_name,street,city_state,website_domain,restaurant_type"
+    },
+    {
+      "restaurantSlug": "friday-saturday-sunday-philadelphia-pa",
+      "placeId": "ChIJf7rSRDjGxokR1cJYp_u6uv8",
+      "status": "matched",
+      "confidence": "high",
+      "method": "browser_name_address_coordinates",
+      "reviewedAt": "2026-07-17",
+      "notes": "strong_name,street,city_state,coords_close,website_domain,restaurant_type"
+    },
+    {
+      "restaurantSlug": "gabriel-kreuther-new-york-ny",
+      "placeId": "ChIJw_TGEwBZwokR-zLts543O-4",
+      "status": "matched",
+      "confidence": "high",
+      "method": "browser_name_address_coordinates",
+      "reviewedAt": "2026-07-17",
+      "notes": "strong_name,street,city_state,coords_close,website_domain,restaurant_type"
+    },
+    {
+      "restaurantSlug": "galit-chicago-il",
+      "placeId": "ChIJ37gaSeXTD4gR4G_7yDPUKME",
+      "status": "matched",
+      "confidence": "high",
+      "method": "browser_name_address_coordinates",
+      "reviewedAt": "2026-07-17",
+      "notes": "strong_name,street,city_state,coords_close,website_domain,restaurant_type"
+    },
+    {
+      "restaurantSlug": "gramercy-tavern-new-york-ny",
+      "placeId": "ChIJvSQIgqFZwokRFYQbJdzceSs",
+      "status": "matched",
+      "confidence": "high",
+      "method": "browser_name_address_coordinates",
+      "reviewedAt": "2026-07-17",
+      "notes": "strong_name,street,city_state,coords_close,website_domain,restaurant_type"
+    },
+    {
+      "restaurantSlug": "gravitas-washington-dc",
+      "placeId": "ChIJlQvkj3O4t4kRbcYbGokqgX8",
+      "status": "manually_approved",
+      "confidence": "medium",
+      "method": "manual_tip_approve",
+      "reviewedAt": "2026-07-17",
+      "notes": "Tip-approved reasons=city_state,coords_close,not_operational,restaurant_type,street,strong_name,website_domain"
+    },
+    {
+      "restaurantSlug": "harbor-house-inn-elk-ca",
+      "placeId": "ChIJRQKgSsUAgYAR4dtFnWx1UTg",
+      "status": "matched",
+      "confidence": "high",
+      "method": "browser_name_address_coordinates",
+      "reviewedAt": "2026-07-17",
+      "notes": "strong_name,street,city_state,coords_close,website_domain,restaurant_type"
+    },
+    {
+      "restaurantSlug": "hayakawa-atlanta-ga",
+      "placeId": "ChIJD9CHgFyn9YgRO1bt1qCxE0I",
+      "status": "matched",
+      "confidence": "high",
+      "method": "browser_name_address_coordinates",
+      "reviewedAt": "2026-07-17",
+      "notes": "strong_name,street,city_state,coords_close,restaurant_type"
+    },
+    {
+      "restaurantSlug": "hayato-los-angeles-ca",
+      "placeId": "ChIJt1RlQi_GwoARja7mYeFk2YI",
+      "status": "manually_approved",
+      "confidence": "high",
+      "method": "manual_address_review",
+      "reviewedAt": "2026-07-17",
+      "notes": "Manual tip review: name/address/city agreement confirmed."
+    },
+    {
+      "restaurantSlug": "her-place-supper-club-philadelphia-pa",
+      "placeId": "ChIJMW-WlpXHxokRw9Sf2FaFXjE",
+      "status": "matched",
+      "confidence": "high",
+      "method": "browser_name_address_coordinates",
+      "reviewedAt": "2026-07-17",
+      "notes": "strong_name,street,city_state,coords_close,website_domain,restaurant_type"
+    },
+    {
+      "restaurantSlug": "heritage-long-beach-ca",
+      "placeId": "ChIJDcD184Qx3YARLeMltHfb8PU",
+      "status": "matched",
+      "confidence": "high",
+      "method": "browser_name_address_coordinates",
+      "reviewedAt": "2026-07-17",
+      "notes": "strong_name,street,city_state,coords_close,restaurant_type"
+    },
+    {
+      "restaurantSlug": "hestia-austin-tx",
+      "placeId": "ChIJlWBjs7-1RIYRsJt0C41E558",
+      "status": "manually_approved",
+      "confidence": "high",
+      "method": "manual_tip_approve",
+      "reviewedAt": "2026-07-17",
+      "notes": "Tip-approved reasons=city_state,restaurant_type,strong_name,website_domain"
+    },
+    {
+      "restaurantSlug": "hiden-miami-fl",
+      "placeId": "ChIJEaa-UrK22YgR6rXu_t7u2hg",
+      "status": "manually_approved",
+      "confidence": "high",
+      "method": "manual_tip_approve",
+      "reviewedAt": "2026-07-17",
+      "notes": "Tip-approved reasons=city_state,restaurant_type,strong_name,website_domain"
+    },
+    {
+      "restaurantSlug": "hilda-and-jesse-san-francisco-ca",
+      "placeId": "ChIJOTx-qBuBhYARiQ7wRTHOyj4",
+      "status": "matched",
+      "confidence": "high",
+      "method": "browser_name_address_coordinates",
+      "reviewedAt": "2026-07-17",
+      "notes": "strong_name,street,city_state,coords_close,website_domain,restaurant_type"
+    },
+    {
+      "restaurantSlug": "holbox-los-angeles-ca",
+      "placeId": "ChIJMc9-jgrIwoARvFaE32ZlJzA",
+      "status": "matched",
+      "confidence": "high",
+      "method": "browser_name_address_coordinates",
+      "reviewedAt": "2026-07-17",
+      "notes": "strong_name,street,city_state,coords_close,website_domain,restaurant_type"
+    },
+    {
+      "restaurantSlug": "huso-new-york-ny",
+      "placeId": "ChIJJy7oGqZZwokReiM-H1qtHYs",
+      "status": "matched",
+      "confidence": "high",
+      "method": "browser_name_address_coordinates",
+      "reviewedAt": "2026-07-17",
+      "notes": "strong_name,street,city_state,coords_close,website_domain,restaurant_type"
+    },
+    {
+      "restaurantSlug": "icca-new-york-ny",
+      "placeId": "ChIJyRIhC_dbwokRqGoh89KPQME",
+      "status": "matched",
+      "confidence": "high",
+      "method": "browser_name_address_coordinates",
+      "reviewedAt": "2026-07-17",
+      "notes": "strong_name,street,city_state,coords_close,restaurant_type"
+    },
+    {
+      "restaurantSlug": "imperfecto-the-chef-s-table-washington-dc",
+      "placeId": "ChIJ3cVPOEW3t4kRoDGlzKQqgKI",
+      "status": "matched",
+      "confidence": "high",
+      "method": "browser_name_address_coordinates",
+      "reviewedAt": "2026-07-17",
+      "notes": "strong_name,street,city_state,coords_close,restaurant_type"
+    },
+    {
+      "restaurantSlug": "indienne-chicago-il",
+      "placeId": "ChIJgaWIsk8tDogRXfsAkui5JOM",
+      "status": "matched",
+      "confidence": "high",
+      "method": "browser_name_address_coordinates",
+      "reviewedAt": "2026-07-17",
+      "notes": "strong_name,street,city_state,coords_close,website_domain,restaurant_type"
+    },
+    {
+      "restaurantSlug": "interstellar-bbq-austin-tx",
+      "placeId": "ChIJneGxbHszW4YRTjsORksF0Xw",
+      "status": "matched",
+      "confidence": "high",
+      "method": "browser_name_address_coordinates",
+      "reviewedAt": "2026-07-17",
+      "notes": "strong_name,street,city_state,website_domain,restaurant_type"
+    },
+    {
+      "restaurantSlug": "isidore-san-antonio-tx",
+      "placeId": "ChIJ-9eV5Gb1XIYRg-VP6Jm2Rt4",
+      "status": "manually_approved",
+      "confidence": "medium",
+      "method": "manual_tip_approve",
+      "reviewedAt": "2026-07-17",
+      "notes": "Tip-approved reasons=city_state,coords_close,restaurant_type,shared_address_sibling,street,strong_name,website_domain"
+    },
+    {
+      "restaurantSlug": "jean-georges-new-york-ny",
+      "placeId": "ChIJh5JzbfZYwokRR7KqJOksL7Y",
+      "status": "matched",
+      "confidence": "high",
+      "method": "browser_name_address_coordinates",
+      "reviewedAt": "2026-07-17",
+      "notes": "strong_name,city_state,coords_close,website_domain,restaurant_type"
+    },
+    {
+      "restaurantSlug": "jeju-noodle-bar-new-york-ny",
+      "placeId": "ChIJvSw_uuxZwokRwESVzh5G33s",
+      "status": "matched",
+      "confidence": "high",
+      "method": "browser_name_address_coordinates",
+      "reviewedAt": "2026-07-17",
+      "notes": "strong_name,street,city_state,coords_close,website_domain,restaurant_type"
+    },
+    {
+      "restaurantSlug": "jeune-et-jolie-carlsbad-ca",
+      "placeId": "ChIJjzQAaqpz3IAREZe5sCZsfGY",
+      "status": "matched",
+      "confidence": "high",
+      "method": "browser_name_address_coordinates",
+      "reviewedAt": "2026-07-17",
+      "notes": "strong_name,city_state,coords_close,website_domain,restaurant_type"
+    },
+    {
+      "restaurantSlug": "joji-new-york-ny",
+      "placeId": "ChIJBchQ93pZwokR5AtYEzo6p1o",
+      "status": "manually_approved",
+      "confidence": "medium",
+      "method": "manual_tip_approve",
+      "reviewedAt": "2026-07-17",
+      "notes": "Tip-approved reasons=city_state,coords_close,restaurant_type,shared_address_sibling,street,strong_name,website_domain"
+    },
+    {
+      "restaurantSlug": "jont-washington-dc",
+      "placeId": "ChIJI_Nce0u3t4kRjBL-1l-nHs0",
+      "status": "matched",
+      "confidence": "high",
+      "method": "browser_name_address_coordinates",
+      "reviewedAt": "2026-07-17",
+      "notes": "strong_name,street,city_state,coords_close,website_domain,restaurant_type"
+    },
+    {
+      "restaurantSlug": "joo-ok-new-york-ny",
+      "placeId": "ChIJfXtCJgBZwokRt0ncRw3PEk4",
+      "status": "matched",
+      "confidence": "high",
+      "method": "browser_name_address_coordinates",
+      "reviewedAt": "2026-07-17",
+      "notes": "strong_name,street,city_state,website_domain,restaurant_type"
+    },
+    {
+      "restaurantSlug": "jua-new-york-ny",
+      "placeId": "ChIJfTgbIE9ZwokRdRjFE2OMZN8",
+      "status": "matched",
+      "confidence": "high",
+      "method": "browser_name_address_coordinates",
+      "reviewedAt": "2026-07-17",
+      "notes": "strong_name,street,city_state,coords_close,website_domain,restaurant_type"
+    },
+    {
+      "restaurantSlug": "jungsik-new-york-new-york-ny",
+      "placeId": "ChIJpSTN0R9awokRI29rK_SfbeA",
+      "status": "matched",
+      "confidence": "high",
+      "method": "browser_name_address_coordinates",
+      "reviewedAt": "2026-07-17",
+      "notes": "strong_name,street,city_state,coords_close,website_domain,restaurant_type"
+    },
+    {
+      "restaurantSlug": "kadence-orlando-fl",
+      "placeId": "ChIJPbVFebF654gRFipJm9-WS6Q",
+      "status": "matched",
+      "confidence": "high",
+      "method": "browser_name_address_coordinates",
+      "reviewedAt": "2026-07-17",
+      "notes": "strong_name,street,city_state,coords_close,website_domain,restaurant_type"
+    },
+    {
+      "restaurantSlug": "kali-los-angeles-ca",
+      "placeId": "ChIJdfiEi8m4woAR82sc6js_AXs",
+      "status": "matched",
+      "confidence": "high",
+      "method": "browser_name_address_coordinates",
+      "reviewedAt": "2026-07-17",
+      "notes": "strong_name,street,city_state,coords_close,website_domain,restaurant_type"
+    },
+    {
+      "restaurantSlug": "kasama-chicago-il",
+      "placeId": "ChIJccHhHs3TD4gRxVcCWUh7-xQ",
+      "status": "matched",
+      "confidence": "high",
+      "method": "browser_name_address_coordinates",
+      "reviewedAt": "2026-07-17",
+      "notes": "strong_name,street,city_state,coords_close,website_domain,restaurant_type"
+    },
+    {
+      "restaurantSlug": "kato-los-angeles-ca",
+      "placeId": "ChIJnd0gSmi7woARCdXsW5usqKU",
+      "status": "manually_approved",
+      "confidence": "high",
+      "method": "manual_tip_approve",
+      "reviewedAt": "2026-07-17",
+      "notes": "Tip-approved reasons=city_state,restaurant_type,strong_name,website_domain"
+    },
+    {
+      "restaurantSlug": "kiln-san-francisco-ca",
+      "placeId": "ChIJlZn9AxyBhYARAY1cJE9KydY",
+      "status": "matched",
+      "confidence": "high",
+      "method": "browser_name_address_coordinates",
+      "reviewedAt": "2026-07-17",
+      "notes": "strong_name,street,city_state,coords_close,website_domain,restaurant_type"
+    },
+    {
+      "restaurantSlug": "kin-khao-san-francisco-ca",
+      "placeId": "ChIJn_ZxYo-AhYAR22wJt4at2K0",
+      "status": "matched",
+      "confidence": "high",
+      "method": "browser_name_address_coordinates",
+      "reviewedAt": "2026-07-17",
+      "notes": "strong_name,street,city_state,coords_close,website_domain,restaurant_type"
+    },
+    {
+      "restaurantSlug": "kizaki-denver-co",
+      "placeId": "ChIJT6LLNQB_bIcRFlId0L9BFOM",
+      "status": "manually_approved",
+      "confidence": "medium",
+      "method": "manual_tip_approve",
+      "reviewedAt": "2026-07-17",
+      "notes": "Tip-approved reasons=city_state,coords_close,restaurant_type,shared_address_sibling,street,strong_name"
+    },
+    {
+      "restaurantSlug": "kochi-new-york-ny",
+      "placeId": "ChIJN8SzjFRZwokR-b5lqNXcg44",
+      "status": "manually_approved",
+      "confidence": "high",
+      "method": "manual_tip_approve",
+      "reviewedAt": "2026-07-17",
+      "notes": "Tip-approved reasons=city_state,restaurant_type,strong_name,website_domain"
+    },
+    {
+      "restaurantSlug": "kojima-los-angeles-ca",
+      "placeId": "ChIJ0ybze4W7woARnWibOHEoHPU",
+      "status": "manually_approved",
+      "confidence": "high",
+      "method": "manual_address_review",
+      "reviewedAt": "2026-07-17",
+      "notes": "Manual tip review: name/address/city agreement confirmed."
+    },
+    {
+      "restaurantSlug": "kosaka-new-york-ny",
+      "placeId": "ChIJZY2-HL5ZwokRnIcy5aBG-o0",
+      "status": "matched",
+      "confidence": "high",
+      "method": "browser_name_address_coordinates",
+      "reviewedAt": "2026-07-17",
+      "notes": "strong_name,street,city_state,coords_close,website_domain,restaurant_type"
+    },
+    {
+      "restaurantSlug": "kosen-tampa-fl",
+      "placeId": "ChIJ27GzUEPFwogRulJovqXIaH0",
+      "status": "matched",
+      "confidence": "high",
+      "method": "browser_name_address_coordinates",
+      "reviewedAt": "2026-07-17",
+      "notes": "strong_name,street,city_state,coords_close,website_domain,restaurant_type"
+    },
+    {
+      "restaurantSlug": "koya-tampa-fl",
+      "placeId": "ChIJo54KyArFwogRAbOa5we8_BQ",
+      "status": "matched",
+      "confidence": "high",
+      "method": "browser_name_address_coordinates",
+      "reviewedAt": "2026-07-17",
+      "notes": "strong_name,street,city_state,coords_close,website_domain,restaurant_type"
+    },
+    {
+      "restaurantSlug": "l-abeille-new-york-ny",
+      "placeId": "ChIJq75Ur-tZwokRo7I_F_PhlcU",
+      "status": "manually_approved",
+      "confidence": "medium",
+      "method": "manual_tip_approve",
+      "reviewedAt": "2026-07-17",
+      "notes": "Tip-approved reasons=city_state,coords_close,restaurant_type,shared_address_sibling,street,strong_name,website_domain"
+    },
+    {
+      "restaurantSlug": "l-atelier-de-joel-robuchon-miami-miami-fl",
+      "placeId": "ChIJJ3pnTr6x2YgRUcKI0-aDyJs",
+      "status": "manually_approved",
+      "confidence": "high",
+      "method": "manual_tip_approve",
+      "reviewedAt": "2026-07-17",
+      "notes": "Tip-approved reasons=city_state,restaurant_type,strong_name,website_domain"
+    },
+    {
+      "restaurantSlug": "la-barbecue-austin-tx",
+      "placeId": "ChIJIR1tw661RIYRUgfHust5Vv0",
+      "status": "matched",
+      "confidence": "high",
+      "method": "browser_name_address_coordinates",
+      "reviewedAt": "2026-07-17",
+      "notes": "strong_name,street,city_state,coords_close,website_domain,restaurant_type"
+    },
+    {
+      "restaurantSlug": "la-bastide-by-andrea-calstier-north-salem-ny",
+      "placeId": "ChIJz1CaY7atwokRqKVLEyrWico",
+      "status": "matched",
+      "confidence": "high",
+      "method": "browser_name_address_coordinates",
+      "reviewedAt": "2026-07-17",
+      "notes": "strong_name,street,city_state,coords_close,website_domain,restaurant_type"
+    },
+    {
+      "restaurantSlug": "lazy-bear-san-francisco-ca",
+      "placeId": "ChIJk35bizx-j4AREil6UPp7Jn4",
+      "status": "matched",
+      "confidence": "high",
+      "method": "browser_name_address_coordinates",
+      "reviewedAt": "2026-07-17",
+      "notes": "strong_name,street,city_state,coords_close,website_domain,restaurant_type"
+    },
+    {
+      "restaurantSlug": "lazy-betty-atlanta-ga",
+      "placeId": "ChIJ00zCHiAH9YgR3l-kmURAKrM",
+      "status": "matched",
+      "confidence": "high",
+      "method": "browser_name_address_coordinates",
+      "reviewedAt": "2026-07-17",
+      "notes": "strong_name,street,city_state,coords_near,website_domain,restaurant_type"
+    },
+    {
+      "restaurantSlug": "le-bernardin-new-york-ny",
+      "placeId": "ChIJV7QQ6kdZwokRax4615zpSGU",
+      "status": "matched",
+      "confidence": "high",
+      "method": "browser_name_address_coordinates",
+      "reviewedAt": "2026-07-17",
+      "notes": "strong_name,street,city_state,coords_close,website_domain,restaurant_type"
+    },
+    {
+      "restaurantSlug": "le-coucou-new-york-ny",
+      "placeId": "ChIJyw5j84lZwokRnUI_UknPSNA",
+      "status": "matched",
+      "confidence": "high",
+      "method": "browser_name_address_coordinates",
+      "reviewedAt": "2026-07-17",
+      "notes": "strong_name,street,city_state,website_domain,restaurant_type"
+    },
+    {
+      "restaurantSlug": "le-jardinier-houston-houston-tx",
+      "placeId": "ChIJIUTbMUu_QIYRvNV3_RXqZDw",
+      "status": "matched",
+      "confidence": "high",
+      "method": "browser_name_address_coordinates",
+      "reviewedAt": "2026-07-17",
+      "notes": "strong_name,city_state,coords_close,website_domain,restaurant_type"
+    },
+    {
+      "restaurantSlug": "le-jardinier-miami-miami-fl",
+      "placeId": "ChIJq6q6Rlex2YgRLVY5meAunEM",
+      "status": "manually_approved",
+      "confidence": "high",
+      "method": "manual_tip_approve",
+      "reviewedAt": "2026-07-17",
+      "notes": "Tip-approved reasons=city_state,restaurant_type,strong_name,website_domain"
+    },
+    {
+      "restaurantSlug": "le-pavillon-new-york-ny",
+      "placeId": "ChIJjcAJd-tZwokRJ0GkkJ2Urp0",
+      "status": "manually_approved",
+      "confidence": "medium",
+      "method": "manual_tip_approve",
+      "reviewedAt": "2026-07-17",
+      "notes": "Tip-approved reasons=city_state,coords_close,restaurant_type,shared_address_sibling,strong_name,website_domain"
+    },
+    {
+      "restaurantSlug": "leroy-and-lewis-barbecue-austin-tx",
+      "placeId": "ChIJ9XodaJW0RIYRFlcMvIfeqJE",
+      "status": "matched",
+      "confidence": "high",
+      "method": "browser_name_address_coordinates",
+      "reviewedAt": "2026-07-17",
+      "notes": "strong_name,street,city_state,coords_close,restaurant_type"
+    },
+    {
+      "restaurantSlug": "lielle-los-angeles-ca",
+      "placeId": "ChIJmQOZTgC7woARN-0kvvPBCBw",
+      "status": "matched",
+      "confidence": "high",
+      "method": "browser_name_address_coordinates",
+      "reviewedAt": "2026-07-17",
+      "notes": "strong_name,street,city_state,coords_close,website_domain,restaurant_type"
+    },
+    {
+      "restaurantSlug": "lilo-carlsbad-ca",
+      "placeId": "ChIJi_11lwRy3IARYn7ySFVDrxw",
+      "status": "matched",
+      "confidence": "high",
+      "method": "browser_name_address_coordinates",
+      "reviewedAt": "2026-07-17",
+      "notes": "strong_name,street,city_state,coords_close,website_domain,restaurant_type"
+    },
+    {
+      "restaurantSlug": "little-pearl-washington-dc",
+      "placeId": "ChIJZamGfTO4t4kRnjETn_wWEqM",
+      "status": "matched",
+      "confidence": "high",
+      "method": "browser_name_address_coordinates",
+      "reviewedAt": "2026-07-17",
+      "notes": "strong_name,street,city_state,coords_close,website_domain,restaurant_type"
+    },
+    {
+      "restaurantSlug": "localis-sacramento-ca",
+      "placeId": "ChIJYUnm_ubQmoARMQ2616W5Yi8",
+      "status": "matched",
+      "confidence": "high",
+      "method": "browser_name_address_coordinates",
+      "reviewedAt": "2026-07-17",
+      "notes": "strong_name,street,city_state,coords_close,website_domain,restaurant_type"
+    },
+    {
+      "restaurantSlug": "locust-nashville-tn",
+      "placeId": "ChIJZTkU2HdlZIgR_V55oayk0Lw",
+      "status": "matched",
+      "confidence": "high",
+      "method": "browser_name_address_coordinates",
+      "reviewedAt": "2026-07-17",
+      "notes": "strong_name,street,city_state,coords_close,website_domain,restaurant_type"
+    },
+    {
+      "restaurantSlug": "los-felix-miami-fl",
+      "placeId": "ChIJ3YT7i5K32YgRvjbujmZU6Ak",
+      "status": "matched",
+      "confidence": "high",
+      "method": "browser_name_address_coordinates",
+      "reviewedAt": "2026-07-17",
+      "notes": "strong_name,street,city_state,coords_close,website_domain,restaurant_type"
+    },
+    {
+      "restaurantSlug": "lucien-la-jolla-ca",
+      "placeId": "ChIJObi7SjUD3IAR6J0Sbt-VQtA",
+      "status": "matched",
+      "confidence": "high",
+      "method": "browser_name_address_coordinates",
+      "reviewedAt": "2026-07-17",
+      "notes": "strong_name,street,city_state,website_domain,restaurant_type"
+    },
+    {
+      "restaurantSlug": "madcap-san-anselmo-ca",
+      "placeId": "ChIJbX6zwz-XhYARl4iaPz63f7E",
+      "status": "matched",
+      "confidence": "high",
+      "method": "browser_name_address_coordinates",
+      "reviewedAt": "2026-07-17",
+      "notes": "strong_name,street,city_state,coords_close,website_domain,restaurant_type"
+    },
+    {
+      "restaurantSlug": "mako-chicago-il",
+      "placeId": "ChIJDdy6PActDogRtHVYT64x2sY",
+      "status": "matched",
+      "confidence": "high",
+      "method": "browser_name_address_coordinates",
+      "reviewedAt": "2026-07-17",
+      "notes": "strong_name,street,city_state,coords_close,website_domain,restaurant_type"
+    },
+    {
+      "restaurantSlug": "malagon-mercado-y-taperia-charleston-sc",
+      "placeId": "ChIJe1E1N0B7_ogRi4DdR7JZ9ms",
+      "status": "matched",
+      "confidence": "high",
+      "method": "browser_name_address_coordinates",
+      "reviewedAt": "2026-07-17",
+      "notes": "strong_name,street,city_state,coords_close,website_domain,restaurant_type"
+    },
+    {
+      "restaurantSlug": "mamani-dallas-tx",
+      "placeId": "ChIJV-YmSQCZToYRFXUxw3gwL-A",
+      "status": "matched",
+      "confidence": "high",
+      "method": "browser_name_address_coordinates",
+      "reviewedAt": "2026-07-17",
+      "notes": "strong_name,street,city_state,website_domain,restaurant_type"
+    },
+    {
+      "restaurantSlug": "march-houston-tx",
+      "placeId": "ChIJEzo-VtLBQIYRAFxlZfioQC8",
+      "status": "matched",
+      "confidence": "high",
+      "method": "browser_name_address_coordinates",
+      "reviewedAt": "2026-07-17",
+      "notes": "strong_name,street,city_state,coords_close,website_domain,restaurant_type"
+    },
+    {
+      "restaurantSlug": "margot-denver-co",
+      "placeId": "ChIJreGQhDd5bIcRP3OYKrquLHk",
+      "status": "manually_approved",
+      "confidence": "medium",
+      "method": "manual_tip_approve",
+      "reviewedAt": "2026-07-17",
+      "notes": "Tip-approved reasons=city_state,coords_close,restaurant_type,shared_address_sibling,street,strong_name,website_domain"
+    },
+    {
+      "restaurantSlug": "mari-new-york-ny",
+      "placeId": "ChIJk_HUw2dZwokR_zqBwmFDHgo",
+      "status": "manually_approved",
+      "confidence": "high",
+      "method": "manual_tip_approve",
+      "reviewedAt": "2026-07-17",
+      "notes": "Tip-approved reasons=city_state,restaurant_type,strong_name,website_domain"
+    },
+    {
+      "restaurantSlug": "masa-new-york-ny",
+      "placeId": "ChIJM26HnlhYwokR4IfXFz-AuCA",
+      "status": "manually_approved",
+      "confidence": "high",
+      "method": "manual_tip_approve",
+      "reviewedAt": "2026-07-17",
+      "notes": "Tip-approved reasons=city_state,restaurant_type,street,strong_name"
+    },
+    {
+      "restaurantSlug": "masseria-washington-dc",
+      "placeId": "ChIJp1AcfBq4t4kR8L1hnsBhxtE",
+      "status": "matched",
+      "confidence": "high",
+      "method": "browser_name_address_coordinates",
+      "reviewedAt": "2026-07-17",
+      "notes": "strong_name,street,city_state,coords_close,website_domain,restaurant_type"
+    },
+    {
+      "restaurantSlug": "meju-queens-ny",
+      "placeId": "ChIJ6alY3R1ZwokRQXUSqpo8OIM",
+      "status": "manually_approved",
+      "confidence": "high",
+      "method": "manual_address_review",
+      "reviewedAt": "2026-07-17",
+      "notes": "Manual tip review: name/address/city agreement confirmed."
+    },
+    {
+      "restaurantSlug": "melisse-santa-monica-ca",
+      "placeId": "ChIJ7fOMUsSkwoARIOVuE_23I1Q",
+      "status": "manually_approved",
+      "confidence": "medium",
+      "method": "manual_tip_approve",
+      "reviewedAt": "2026-07-17",
+      "notes": "Tip-approved reasons=city_state,coords_close,restaurant_type,shared_address_sibling,street,strong_name,website_domain"
+    },
+    {
+      "restaurantSlug": "meteora-los-angeles-ca",
+      "placeId": "ChIJ9-5CroC5woARfbFyVsudp1c",
+      "status": "matched",
+      "confidence": "high",
+      "method": "browser_name_address_coordinates",
+      "reviewedAt": "2026-07-17",
+      "notes": "strong_name,street,city_state,coords_close,website_domain,restaurant_type"
+    },
+    {
+      "restaurantSlug": "mezcaleria-alma-denver-co",
+      "placeId": "ChIJ88IGKnF5bIcRLI5p5QH0Peg",
+      "status": "matched",
+      "confidence": "high",
+      "method": "browser_name_address_coordinates",
+      "reviewedAt": "2026-07-17",
+      "notes": "strong_name,street,city_state,coords_close,website_domain,restaurant_type"
+    },
+    {
+      "restaurantSlug": "minibar-by-jose-andres-washington-dc",
+      "placeId": "ChIJMY6KQ5C3t4kREDURgsrWo2s",
+      "status": "matched",
+      "confidence": "high",
+      "method": "browser_name_address_coordinates",
+      "reviewedAt": "2026-07-17",
+      "notes": "strong_name,street,city_state,website_domain,restaurant_type"
+    },
+    {
+      "restaurantSlug": "mister-jiu-s-san-francisco-ca",
+      "placeId": "ChIJyRDJYIuAhYARyAPkIc7A2Vo",
+      "status": "matched",
+      "confidence": "high",
+      "method": "browser_name_address_coordinates",
+      "reviewedAt": "2026-07-17",
+      "notes": "strong_name,street,city_state,coords_close,website_domain,restaurant_type"
+    },
+    {
+      "restaurantSlug": "mita-washington-dc",
+      "placeId": "ChIJ44jFvt-3t4kRViqXvYDPqg4",
+      "status": "matched",
+      "confidence": "high",
+      "method": "browser_name_address_coordinates",
+      "reviewedAt": "2026-07-17",
+      "notes": "strong_name,street,city_state,website_domain,restaurant_type"
+    },
+    {
+      "restaurantSlug": "miura-beverly-hills-ca",
+      "placeId": "ChIJ_5ydTHu7woARcQmby2lfPME",
+      "status": "matched",
+      "confidence": "high",
+      "method": "browser_name_address_coordinates",
+      "reviewedAt": "2026-07-17",
+      "notes": "strong_name,street,city_state,coords_close,website_domain,restaurant_type"
+    },
+    {
+      "restaurantSlug": "mixtli-san-antonio-tx",
+      "placeId": "ChIJ047pT4RfXIYRRzpq8aeM7ww",
+      "status": "matched",
+      "confidence": "high",
+      "method": "browser_name_address_coordinates",
+      "reviewedAt": "2026-07-17",
+      "notes": "strong_name,street,city_state,website_domain,restaurant_type"
+    },
+    {
+      "restaurantSlug": "moody-tongue-chicago-il",
+      "placeId": "ChIJKREupjctDogRPMJ46mxncfM",
+      "status": "matched",
+      "confidence": "high",
+      "method": "browser_name_address_coordinates",
+      "reviewedAt": "2026-07-17",
+      "notes": "strong_name,street,city_state,coords_close,website_domain,restaurant_type"
+    },
+    {
+      "restaurantSlug": "mori-nozomi-los-angeles-ca",
+      "placeId": "ChIJh_EchAm7woAR_M_f_w6W50c",
+      "status": "matched",
+      "confidence": "high",
+      "method": "browser_name_address_coordinates",
+      "reviewedAt": "2026-07-17",
+      "notes": "strong_name,street,city_state,coords_close,website_domain,restaurant_type"
+    },
+    {
+      "restaurantSlug": "mujo-atlanta-ga",
+      "placeId": "ChIJIb9pCKMF9YgRWsQF-tZOGdI",
+      "status": "matched",
+      "confidence": "high",
+      "method": "browser_name_address_coordinates",
+      "reviewedAt": "2026-07-17",
+      "notes": "strong_name,street,city_state,website_domain,restaurant_type"
+    },
+    {
+      "restaurantSlug": "muku-new-york-ny",
+      "placeId": "ChIJYTKtj2dZwokR3IYU3st5VuA",
+      "status": "manually_approved",
+      "confidence": "medium",
+      "method": "manual_tip_approve",
+      "reviewedAt": "2026-07-17",
+      "notes": "Tip-approved reasons=city_state,coords_close,restaurant_type,shared_address_sibling,street,strong_name,website_domain"
+    },
+    {
+      "restaurantSlug": "musaafer-houston-tx",
+      "placeId": "ChIJk3AANG_BQIYRslF9Sn9-03U",
+      "status": "matched",
+      "confidence": "high",
+      "method": "browser_name_address_coordinates",
+      "reviewedAt": "2026-07-17",
+      "notes": "strong_name,street,city_state,website_domain,restaurant_type"
+    },
+    {
+      "restaurantSlug": "mutra-north-miami-fl",
+      "placeId": "ChIJVxmvsZCz2YgRamqn_tHB5Tw",
+      "status": "manually_approved",
+      "confidence": "high",
+      "method": "manual_tip_approve",
+      "reviewedAt": "2026-07-17",
+      "notes": "Tip-approved reasons=city_state,restaurant_type,strong_name,website_domain"
+    },
+    {
+      "restaurantSlug": "n-naka-los-angeles-ca",
+      "placeId": "ChIJb7GeyDS6woAROVvLEUiLZEk",
+      "status": "matched",
+      "confidence": "high",
+      "method": "browser_name_address_coordinates",
+      "reviewedAt": "2026-07-17",
+      "notes": "strong_name,street,city_state,coords_close,website_domain,restaurant_type"
+    },
+    {
+      "restaurantSlug": "nari-san-francisco-ca",
+      "placeId": "ChIJCf9p82aBhYARQolIoRsK6fE",
+      "status": "matched",
+      "confidence": "high",
+      "method": "browser_name_address_coordinates",
+      "reviewedAt": "2026-07-17",
+      "notes": "strong_name,street,city_state,website_domain,restaurant_type"
+    },
+    {
+      "restaurantSlug": "next-chicago-il",
+      "placeId": "ChIJqdQDvtAsDogRMmlkDTCE-W4",
+      "status": "matched",
+      "confidence": "high",
+      "method": "browser_name_address_coordinates",
+      "reviewedAt": "2026-07-17",
+      "notes": "strong_name,street,city_state,coords_close,website_domain,restaurant_type"
+    },
+    {
+      "restaurantSlug": "nicosi-san-antonio-tx",
+      "placeId": "ChIJAQBA7vb1XIYRt1Aal0okoeA",
+      "status": "manually_approved",
+      "confidence": "high",
+      "method": "manual_address_review",
+      "reviewedAt": "2026-07-17",
+      "notes": "Manual tip review: name/address/city agreement confirmed."
+    },
+    {
+      "restaurantSlug": "niku-steakhouse-san-francisco-ca",
+      "placeId": "ChIJ9fZ1hrV_j4AR-j0CLhwaYc0",
+      "status": "matched",
+      "confidence": "high",
+      "method": "browser_name_address_coordinates",
+      "reviewedAt": "2026-07-17",
+      "notes": "strong_name,street,city_state,coords_close,website_domain,restaurant_type"
+    },
+    {
+      "restaurantSlug": "nisei-san-francisco-ca",
+      "placeId": "ChIJYSfspPSBhYARcVCbbkjGXg0",
+      "status": "matched",
+      "confidence": "high",
+      "method": "browser_name_address_coordinates",
+      "reviewedAt": "2026-07-17",
+      "notes": "strong_name,street,city_state,coords_close,website_domain,restaurant_type"
+    },
+    {
+      "restaurantSlug": "noda-new-york-ny",
+      "placeId": "ChIJBxKYEqZZwokRL__Emm2Tl2Y",
+      "status": "matched",
+      "confidence": "high",
+      "method": "browser_name_address_coordinates",
+      "reviewedAt": "2026-07-17",
+      "notes": "strong_name,street,city_state,coords_close,website_domain,restaurant_type"
+    },
+    {
+      "restaurantSlug": "noksu-new-york-ny",
+      "placeId": "ChIJSfeOCf5ZwokRWuoMT5Kc6KY",
+      "status": "matched",
+      "confidence": "high",
+      "method": "browser_name_address_coordinates",
+      "reviewedAt": "2026-07-17",
+      "notes": "strong_name,street,city_state,website_domain,restaurant_type"
+    },
+    {
+      "restaurantSlug": "noz-17-new-york-ny",
+      "placeId": "ChIJT4q4QIFZwokRs1nRu7_ckVI",
+      "status": "matched",
+      "confidence": "high",
+      "method": "browser_name_address_coordinates",
+      "reviewedAt": "2026-07-17",
+      "notes": "strong_name,street,city_state,coords_close,website_domain,restaurant_type"
+    },
+    {
+      "restaurantSlug": "nozawa-bar-beverly-hills-ca",
+      "placeId": "ChIJwXV42C27woARZnY7NuiUIu4",
+      "status": "matched",
+      "confidence": "high",
+      "method": "browser_name_address_coordinates",
+      "reviewedAt": "2026-07-17",
+      "notes": "strong_name,city_state,coords_close,website_domain,restaurant_type"
+    },
+    {
+      "restaurantSlug": "o-by-brush-atlanta-ga",
+      "placeId": "ChIJAQAkDY4F9YgRHFdUJW4jKo8",
+      "status": "manually_approved",
+      "confidence": "high",
+      "method": "manual_tip_approve",
+      "reviewedAt": "2026-07-17",
+      "notes": "Tip-approved reasons=city_state,street,strong_name,website_domain"
+    },
+    {
+      "restaurantSlug": "odo-new-york-ny",
+      "placeId": "ChIJlRDB34FZwokRUVAP-qsAoUY",
+      "status": "matched",
+      "confidence": "high",
+      "method": "browser_name_address_coordinates",
+      "reviewedAt": "2026-07-17",
+      "notes": "strong_name,street,city_state,coords_close,website_domain,restaurant_type"
+    },
+    {
+      "restaurantSlug": "ogawa-miami-fl",
+      "placeId": "ChIJ0-tCRMux2YgRJIUcLt_1B7s",
+      "status": "manually_approved",
+      "confidence": "high",
+      "method": "manual_tip_approve",
+      "reviewedAt": "2026-07-17",
+      "notes": "Tip-approved reasons=city_state,restaurant_type,strong_name,website_domain"
+    },
+    {
+      "restaurantSlug": "oiji-mi-new-york-ny",
+      "placeId": "ChIJee0VTWZZwokRDYFpAoConlw",
+      "status": "manually_approved",
+      "confidence": "medium",
+      "method": "manual_tip_approve",
+      "reviewedAt": "2026-07-17",
+      "notes": "Tip-approved reasons=city_state,coords_close,restaurant_type,shared_address_sibling,street,strong_name,website_domain"
+    },
+    {
+      "restaurantSlug": "olamaie-austin-tx",
+      "placeId": "ChIJbw26uXW1RIYRJe7jQ8iC5Es",
+      "status": "manually_approved",
+      "confidence": "medium",
+      "method": "manual_tip_approve",
+      "reviewedAt": "2026-07-17",
+      "notes": "Tip-approved reasons=city_state,coords_close,not_operational,restaurant_type,street,strong_name,website_domain"
+    },
+    {
+      "restaurantSlug": "omakase-at-barracks-row-washington-dc",
+      "placeId": "ChIJFZO8ACO5t4kRZPCSdzahTs4",
+      "status": "matched",
+      "confidence": "high",
+      "method": "browser_name_address_coordinates",
+      "reviewedAt": "2026-07-17",
+      "notes": "good_name,street,city_state,website_domain,restaurant_type"
+    },
+    {
+      "restaurantSlug": "omakase-table-atlanta-ga",
+      "placeId": "ChIJFUGvhbcP9YgRWUdLXI3bhxA",
+      "status": "matched",
+      "confidence": "high",
+      "method": "browser_name_address_coordinates",
+      "reviewedAt": "2026-07-17",
+      "notes": "strong_name,street,city_state,website_domain,restaurant_type"
+    },
+    {
+      "restaurantSlug": "omo-by-jont-winter-park-fl",
+      "placeId": "ChIJO3PrEmdx54gRW1c11w1Yxlo",
+      "status": "matched",
+      "confidence": "high",
+      "method": "browser_name_address_coordinates",
+      "reviewedAt": "2026-07-17",
+      "notes": "strong_name,street,city_state,coords_close,website_domain,restaurant_type"
+    },
+    {
+      "restaurantSlug": "oriole-chicago-il",
+      "placeId": "ChIJ4_ovZs8sDogRyw3X3QCiI-Y",
+      "status": "matched",
+      "confidence": "high",
+      "method": "browser_name_address_coordinates",
+      "reviewedAt": "2026-07-17",
+      "notes": "strong_name,street,city_state,coords_close,website_domain,restaurant_type"
+    },
+    {
+      "restaurantSlug": "orsa-and-winston-los-angeles-ca",
+      "placeId": "ChIJh9W-NkrGwoARmn2KQbXkdhg",
+      "status": "manually_approved",
+      "confidence": "high",
+      "method": "manual_tip_approve",
+      "reviewedAt": "2026-07-17",
+      "notes": "Tip-approved reasons=city_state,restaurant_type,strong_name,website_domain"
+    },
+    {
+      "restaurantSlug": "osteria-mozza-los-angeles-ca",
+      "placeId": "ChIJBacpEtO4woAR8TxewBOIolo",
+      "status": "matched",
+      "confidence": "high",
+      "method": "browser_name_address_coordinates",
+      "reviewedAt": "2026-07-17",
+      "notes": "strong_name,street,city_state,coords_close,website_domain,restaurant_type"
+    },
+    {
+      "restaurantSlug": "oxomoco-brooklyn-ny",
+      "placeId": "ChIJ__-z7kBZwokRezHqB39zBLI",
+      "status": "matched",
+      "confidence": "high",
+      "method": "browser_name_address_coordinates",
+      "reviewedAt": "2026-07-17",
+      "notes": "strong_name,street,city_state,coords_close,website_domain,restaurant_type"
+    },
+    {
+      "restaurantSlug": "oyster-oyster-washington-dc",
+      "placeId": "ChIJQcHOEK-3t4kRbvsIP3ccItA",
+      "status": "matched",
+      "confidence": "high",
+      "method": "browser_name_address_coordinates",
+      "reviewedAt": "2026-07-17",
+      "notes": "strong_name,street,city_state,coords_close,website_domain,restaurant_type"
+    },
+    {
+      "restaurantSlug": "pasta-bar-encino-ca",
+      "placeId": "ChIJO84WyaaXwoARGH9mHWHN5mw",
+      "status": "matched",
+      "confidence": "high",
+      "method": "browser_name_address_coordinates",
+      "reviewedAt": "2026-07-17",
+      "notes": "strong_name,street,city_state,website_domain,restaurant_type"
+    },
+    {
+      "restaurantSlug": "per-se-new-york-ny",
+      "placeId": "ChIJp3PsL_ZYwokRZYqs_40RJF4",
+      "status": "matched",
+      "confidence": "high",
+      "method": "browser_name_address_coordinates",
+      "reviewedAt": "2026-07-17",
+      "notes": "strong_name,street,city_state,coords_close,website_domain,restaurant_type"
+    },
+    {
+      "restaurantSlug": "pineapple-and-pearls-washington-dc",
+      "placeId": "ChIJYXzP0cy5t4kRCAgWebW88x0",
+      "status": "matched",
+      "confidence": "high",
+      "method": "browser_name_address_coordinates",
+      "reviewedAt": "2026-07-17",
+      "notes": "strong_name,street,city_state,website_domain,restaurant_type"
+    },
+    {
+      "restaurantSlug": "plumed-horse-saratoga-ca",
+      "placeId": "ChIJ01EehuBKjoARf8mKQoPv8oA",
+      "status": "matched",
+      "confidence": "high",
+      "method": "browser_name_address_coordinates",
+      "reviewedAt": "2026-07-17",
+      "notes": "strong_name,street,city_state,website_domain,restaurant_type"
+    },
+    {
+      "restaurantSlug": "press-saint-helena-ca",
+      "placeId": "ChIJq4L3m9NQhIAR8MaZwYPwSjY",
+      "status": "manually_approved",
+      "confidence": "high",
+      "method": "manual_address_review",
+      "reviewedAt": "2026-07-17",
+      "notes": "Manual tip review: name/address/city agreement confirmed."
+    },
+    {
+      "restaurantSlug": "protege-palo-alto-ca",
+      "placeId": "ChIJ14CVruW6j4ARoh-i6iIAe5g",
+      "status": "matched",
+      "confidence": "high",
+      "method": "browser_name_address_coordinates",
+      "reviewedAt": "2026-07-17",
+      "notes": "strong_name,street,city_state,coords_close,website_domain,restaurant_type"
+    },
+    {
+      "restaurantSlug": "provenance-philadelphia-pa",
+      "placeId": "ChIJUaanwS7JxokR4VDhtfhJ3io",
+      "status": "matched",
+      "confidence": "high",
+      "method": "browser_name_address_coordinates",
+      "reviewedAt": "2026-07-17",
+      "notes": "strong_name,street,city_state,website_domain,restaurant_type"
+    },
+    {
+      "restaurantSlug": "providence-los-angeles-ca",
+      "placeId": "ChIJaUBtetO-woARqyrV4ASPECg",
+      "status": "matched",
+      "confidence": "high",
+      "method": "browser_name_address_coordinates",
+      "reviewedAt": "2026-07-17",
+      "notes": "strong_name,street,city_state,coords_close,website_domain,restaurant_type"
+    },
+    {
+      "restaurantSlug": "quince-san-francisco-ca",
+      "placeId": "ChIJ8biHnb-AhYARSpU8MDPb5vs",
+      "status": "matched",
+      "confidence": "high",
+      "method": "browser_name_address_coordinates",
+      "reviewedAt": "2026-07-17",
+      "notes": "strong_name,street,city_state,coords_close,website_domain,restaurant_type"
+    },
+    {
+      "restaurantSlug": "r-o-rebel-omakase-laguna-beach-ca",
+      "placeId": "ChIJbS4e2ELl3IARpUd8ZG8K_Z4",
+      "status": "manually_approved",
+      "confidence": "high",
+      "method": "manual_tip_approve",
+      "reviewedAt": "2026-07-17",
+      "notes": "Tip-approved reasons=city_state,restaurant_type,strong_name,website_domain"
+    },
+    {
+      "restaurantSlug": "rania-washington-dc",
+      "placeId": "ChIJgQnWynC3t4kRoG2k8vB3owU",
+      "status": "matched",
+      "confidence": "high",
+      "method": "browser_name_address_coordinates",
+      "reviewedAt": "2026-07-17",
+      "notes": "strong_name,street,city_state,coords_close,website_domain,restaurant_type"
+    },
+    {
+      "restaurantSlug": "restaurant-ki-los-angeles-ca",
+      "placeId": "ChIJ6fB8aADHwoARxXCY99wLo0U",
+      "status": "matched",
+      "confidence": "high",
+      "method": "browser_name_address_coordinates",
+      "reviewedAt": "2026-07-17",
+      "notes": "strong_name,street,city_state,coords_close,website_domain,restaurant_type"
+    },
+    {
+      "restaurantSlug": "restaurant-naides-san-francisco-ca",
+      "placeId": "ChIJzyIspeuBhYARUNRInz8tBdk",
+      "status": "matched",
+      "confidence": "high",
+      "method": "browser_name_address_coordinates",
+      "reviewedAt": "2026-07-17",
+      "notes": "strong_name,street,city_state,coords_close,website_domain,restaurant_type"
+    },
+    {
+      "restaurantSlug": "restaurant-yuu-brooklyn-ny",
+      "placeId": "ChIJh2cqMDNZwokRqMMqNP9srxI",
+      "status": "matched",
+      "confidence": "high",
+      "method": "browser_name_address_coordinates",
+      "reviewedAt": "2026-07-17",
+      "notes": "strong_name,street,city_state,website_domain,restaurant_type"
+    },
+    {
+      "restaurantSlug": "rezdora-new-york-ny",
+      "placeId": "ChIJDdKSyCVZwokR-9svvc9YDFo",
+      "status": "matched",
+      "confidence": "high",
+      "method": "browser_name_address_coordinates",
+      "reviewedAt": "2026-07-17",
+      "notes": "strong_name,street,city_state,coords_close,website_domain,restaurant_type"
+    },
+    {
+      "restaurantSlug": "rocca-tampa-fl",
+      "placeId": "ChIJ1WZIXhjFwogR1M-_3DXnG6Y",
+      "status": "matched",
+      "confidence": "high",
+      "method": "browser_name_address_coordinates",
+      "reviewedAt": "2026-07-17",
+      "notes": "strong_name,street,city_state,coords_close,website_domain,restaurant_type"
+    },
+    {
+      "restaurantSlug": "rooster-and-owl-washington-dc",
+      "placeId": "ChIJFRi3Siq3t4kRoH7xEpeT7iI",
+      "status": "matched",
+      "confidence": "high",
+      "method": "browser_name_address_coordinates",
+      "reviewedAt": "2026-07-17",
+      "notes": "strong_name,street,city_state,coords_close,website_domain,restaurant_type"
+    },
+    {
+      "restaurantSlug": "rose-s-luxury-washington-dc",
+      "placeId": "ChIJUZM20My5t4kRnhgopk_e4YA",
+      "status": "matched",
+      "confidence": "high",
+      "method": "browser_name_address_coordinates",
+      "reviewedAt": "2026-07-17",
+      "notes": "strong_name,street,city_state,website_domain,restaurant_type"
+    },
+    {
+      "restaurantSlug": "saga-new-york-ny",
+      "placeId": "ChIJZZlClEZbwokRZj-0-fE25tk",
+      "status": "manually_approved",
+      "confidence": "high",
+      "method": "manual_approve",
+      "reviewedAt": "2026-07-17",
+      "notes": "Approved via CLI."
+    },
+    {
+      "restaurantSlug": "saint-germain-new-orleans-la",
+      "placeId": "ChIJOw-wC7GnIIYRJnpHUhmf00Q",
+      "status": "matched",
+      "confidence": "high",
+      "method": "browser_name_address_coordinates",
+      "reviewedAt": "2026-07-17",
+      "notes": "strong_name,city_state,coords_close,website_domain,restaurant_type"
+    },
+    {
+      "restaurantSlug": "saison-san-francisco-ca",
+      "placeId": "ChIJPUo32Aj3MhURXL06eVIEoHc",
+      "status": "matched",
+      "confidence": "high",
+      "method": "browser_name_address_coordinates",
+      "reviewedAt": "2026-07-17",
+      "notes": "strong_name,street,city_state,website_domain,restaurant_type"
+    },
+    {
+      "restaurantSlug": "san-ho-won-san-francisco-ca",
+      "placeId": "ChIJBQpgwVh_j4ARocWBZnqOXEg",
+      "status": "matched",
+      "confidence": "high",
+      "method": "browser_name_address_coordinates",
+      "reviewedAt": "2026-07-17",
+      "notes": "strong_name,street,city_state,coords_close,website_domain,restaurant_type"
+    },
+    {
+      "restaurantSlug": "schwa-chicago-il",
+      "placeId": "ChIJxXAHLdvSD4gRV6CF2nQJZQs",
+      "status": "matched",
+      "confidence": "high",
+      "method": "browser_name_address_coordinates",
+      "reviewedAt": "2026-07-17",
+      "notes": "strong_name,street,city_state,coords_close,website_domain,restaurant_type"
+    },
+    {
+      "restaurantSlug": "scoundrel-greenville-sc",
+      "placeId": "ChIJNYvUMvwxWIgR9ZTlSZk7wl4",
+      "status": "matched",
+      "confidence": "high",
+      "method": "browser_name_address_coordinates",
+      "reviewedAt": "2026-07-17",
+      "notes": "strong_name,street,city_state,coords_close,website_domain,restaurant_type"
+    },
+    {
+      "restaurantSlug": "selby-s-atherton-ca",
+      "placeId": "ChIJN6lxI3Kjj4ARtyvHC8OJ__k",
+      "status": "manually_approved",
+      "confidence": "high",
+      "method": "manual_tip_approve",
+      "reviewedAt": "2026-07-17",
+      "notes": "Tip-approved reasons=restaurant_type,street,strong_name,website_domain"
+    },
+    {
+      "restaurantSlug": "seline-santa-monica-ca",
+      "placeId": "ChIJFULx1d67woARMCpRP_B7x3Q",
+      "status": "matched",
+      "confidence": "high",
+      "method": "browser_name_address_coordinates",
+      "reviewedAt": "2026-07-17",
+      "notes": "strong_name,street,city_state,website_domain,restaurant_type"
+    },
+    {
+      "restaurantSlug": "semma-new-york-ny",
+      "placeId": "ChIJxZmzO7hZwokRx2fls4uU4YU",
+      "status": "matched",
+      "confidence": "high",
+      "method": "browser_name_address_coordinates",
+      "reviewedAt": "2026-07-17",
+      "notes": "strong_name,street,city_state,coords_close,website_domain,restaurant_type"
+    },
+    {
+      "restaurantSlug": "sepia-chicago-il",
+      "placeId": "ChIJ_0NFbsYsDogRHqnXKkBCgs8",
+      "status": "matched",
+      "confidence": "high",
+      "method": "browser_name_address_coordinates",
+      "reviewedAt": "2026-07-17",
+      "notes": "strong_name,street,city_state,coords_close,website_domain,restaurant_type"
+    },
+    {
+      "restaurantSlug": "shin-sushi-encino-ca",
+      "placeId": "ChIJdUHh7MCZwoAR71vwlsZ5V_o",
+      "status": "manually_approved",
+      "confidence": "high",
+      "method": "manual_tip_approve",
+      "reviewedAt": "2026-07-17",
+      "notes": "Tip-approved reasons=city_state,restaurant_type,street,strong_name"
+    },
+    {
+      "restaurantSlug": "shingo-coral-gables-fl",
+      "placeId": "ChIJu5d4Dui32YgRs6qW_4aQOWM",
+      "status": "matched",
+      "confidence": "high",
+      "method": "browser_name_address_coordinates",
+      "reviewedAt": "2026-07-17",
+      "notes": "strong_name,street,city_state,coords_close,website_domain,restaurant_type"
+    },
+    {
+      "restaurantSlug": "shmone-new-york-ny",
+      "placeId": "ChIJBdMLKZBZwokRJ0tYbQ6nfZ4",
+      "status": "matched",
+      "confidence": "high",
+      "method": "browser_name_address_coordinates",
+      "reviewedAt": "2026-07-17",
+      "notes": "strong_name,street,city_state,website_domain,restaurant_type"
+    },
+    {
+      "restaurantSlug": "shota-omakase-brooklyn-ny",
+      "placeId": "ChIJ34eY6E5ZwokRvof_huM7t3U",
+      "status": "matched",
+      "confidence": "high",
+      "method": "browser_name_address_coordinates",
+      "reviewedAt": "2026-07-17",
+      "notes": "strong_name,street,city_state,website_domain,restaurant_type"
+    },
+    {
+      "restaurantSlug": "silvers-omakase-santa-barbara-ca",
+      "placeId": "ChIJASLuZ2sT6YAR6Oc6_TOqIgc",
+      "status": "matched",
+      "confidence": "high",
+      "method": "browser_name_address_coordinates",
+      "reviewedAt": "2026-07-17",
+      "notes": "strong_name,street,city_state,coords_close,website_domain,restaurant_type"
+    },
+    {
+      "restaurantSlug": "singlethread-healdsburg-ca",
+      "placeId": "ChIJ8TVwjTMXhIARQ5MLkvMyVvY",
+      "status": "matched",
+      "confidence": "high",
+      "method": "browser_name_address_coordinates",
+      "reviewedAt": "2026-07-17",
+      "notes": "strong_name,street,city_state,coords_close,website_domain,restaurant_type"
+    },
+    {
+      "restaurantSlug": "six-test-kitchen-paso-robles-ca",
+      "placeId": "ChIJYe0t119e7IAR-x_rWOYv51s",
+      "status": "matched",
+      "confidence": "high",
+      "method": "browser_name_address_coordinates",
+      "reviewedAt": "2026-07-17",
+      "notes": "strong_name,street,city_state,website_domain,restaurant_type"
+    },
+    {
+      "restaurantSlug": "smyth-chicago-il",
+      "placeId": "ChIJxRcpzSctDogRBKHyFUKauHc",
+      "status": "manually_approved",
+      "confidence": "high",
+      "method": "manual_address_review",
+      "reviewedAt": "2026-07-17",
+      "notes": "Manual tip review: name/address/city agreement confirmed."
+    },
+    {
+      "restaurantSlug": "soichi-san-diego-ca",
+      "placeId": "ChIJfQEdreJV2YARnieTJoa2pGQ",
+      "status": "matched",
+      "confidence": "high",
+      "method": "browser_name_address_coordinates",
+      "reviewedAt": "2026-07-17",
+      "notes": "strong_name,street,city_state,coords_close,website_domain,restaurant_type"
+    },
+    {
+      "restaurantSlug": "somni-west-hollywood-ca",
+      "placeId": "ChIJVa5jok65woARLJWEqmHTCp8",
+      "status": "matched",
+      "confidence": "high",
+      "method": "browser_name_address_coordinates",
+      "reviewedAt": "2026-07-17",
+      "notes": "strong_name,street,city_state,coords_close,website_domain,restaurant_type"
+    },
+    {
+      "restaurantSlug": "sons-and-daughters-san-francisco-ca",
+      "placeId": "ChIJvXXIOoyAhYARe-ixq3WdmrY",
+      "status": "matched",
+      "confidence": "high",
+      "method": "browser_name_address_coordinates",
+      "reviewedAt": "2026-07-17",
+      "notes": "strong_name,street,city_state,coords_close,website_domain,restaurant_type"
+    },
+    {
+      "restaurantSlug": "sorekara-orlando-fl",
+      "placeId": "ChIJDe1xketl54gRUziBLAd5JPA",
+      "status": "matched",
+      "confidence": "high",
+      "method": "browser_name_address_coordinates",
+      "reviewedAt": "2026-07-17",
+      "notes": "strong_name,street,city_state,coords_close,website_domain,restaurant_type"
+    },
+    {
+      "restaurantSlug": "sorrel-san-francisco-ca",
+      "placeId": "ChIJSUqmKoyAhYARHqx0N3gnl8o",
+      "status": "matched",
+      "confidence": "high",
+      "method": "browser_name_address_coordinates",
+      "reviewedAt": "2026-07-17",
+      "notes": "strong_name,street,city_state,coords_close,website_domain,restaurant_type"
+    },
+    {
+      "restaurantSlug": "soseki-winter-park-fl",
+      "placeId": "ChIJo6MoOMNx54gRxJNiP7p3Wz0",
+      "status": "matched",
+      "confidence": "high",
+      "method": "browser_name_address_coordinates",
+      "reviewedAt": "2026-07-17",
+      "notes": "strong_name,street,city_state,coords_close,website_domain,restaurant_type"
+    },
+    {
+      "restaurantSlug": "spring-marietta-ga",
+      "placeId": "ChIJF4nE3yQU9YgRQYpaRDibsts",
+      "status": "matched",
+      "confidence": "high",
+      "method": "browser_name_address_coordinates",
+      "reviewedAt": "2026-07-17",
+      "notes": "strong_name,street,city_state,coords_close,website_domain,restaurant_type"
+    },
+    {
+      "restaurantSlug": "ssal-san-francisco-ca",
+      "placeId": "ChIJz9axs6SBhYARWHXy6JCAk_0",
+      "status": "matched",
+      "confidence": "high",
+      "method": "browser_name_address_coordinates",
+      "reviewedAt": "2026-07-17",
+      "notes": "strong_name,street,city_state,coords_close,website_domain,restaurant_type"
+    },
+    {
+      "restaurantSlug": "state-bird-provisions-san-francisco-ca",
+      "placeId": "ChIJQ7kGpLmAhYARKeCe2pDobWk",
+      "status": "matched",
+      "confidence": "high",
+      "method": "browser_name_address_coordinates",
+      "reviewedAt": "2026-07-17",
+      "notes": "strong_name,street,city_state,coords_close,website_domain,restaurant_type"
+    },
+    {
+      "restaurantSlug": "stubborn-seed-miami-beach-fl",
+      "placeId": "ChIJkwRTevG02YgRQqy7_cHUWGQ",
+      "status": "matched",
+      "confidence": "high",
+      "method": "browser_name_address_coordinates",
+      "reviewedAt": "2026-07-17",
+      "notes": "strong_name,street,city_state,coords_close,website_domain,restaurant_type"
+    },
+    {
+      "restaurantSlug": "sun-moon-studio-oakland-ca",
+      "placeId": "ChIJ05gry4t_hYAR4tpX79itpGo",
+      "status": "matched",
+      "confidence": "high",
+      "method": "browser_name_address_coordinates",
+      "reviewedAt": "2026-07-17",
+      "notes": "strong_name,street,city_state,website_domain,restaurant_type"
+    },
+    {
+      "restaurantSlug": "sushi-inaba-torrance-ca",
+      "placeId": "ChIJx7NewtO0woARCEk05DbH2tA",
+      "status": "manually_approved",
+      "confidence": "high",
+      "method": "manual_address_review",
+      "reviewedAt": "2026-07-17",
+      "notes": "Manual tip review: name/address/city agreement confirmed."
+    },
+    {
+      "restaurantSlug": "sushi-kaneyoshi-los-angeles-ca",
+      "placeId": "ChIJIXKeGv_HwoARtFSSk2sS2AI",
+      "status": "manually_approved",
+      "confidence": "high",
+      "method": "manual_tip_approve",
+      "reviewedAt": "2026-07-17",
+      "notes": "Tip-approved reasons=city_state,restaurant_type,strong_name,website_domain"
+    },
+    {
+      "restaurantSlug": "sushi-nakazawa-new-york-new-york-ny",
+      "placeId": "ChIJsw80F5NZwokRcDtxajLLOeA",
+      "status": "matched",
+      "confidence": "high",
+      "method": "browser_name_address_coordinates",
+      "reviewedAt": "2026-07-17",
+      "notes": "strong_name,street,city_state,coords_close,website_domain,restaurant_type"
+    },
+    {
+      "restaurantSlug": "sushi-nakazawa-washington-dc-washington-dc",
+      "placeId": "ChIJ-f__HJq3t4kRmvtJRiDzurk",
+      "status": "matched",
+      "confidence": "high",
+      "method": "browser_name_address_coordinates",
+      "reviewedAt": "2026-07-17",
+      "notes": "strong_name,street,city_state,coords_close,website_domain,restaurant_type"
+    },
+    {
+      "restaurantSlug": "sushi-noz-new-york-ny",
+      "placeId": "ChIJmUAVNb5YwokRyFZIbhQ_cxM",
+      "status": "matched",
+      "confidence": "high",
+      "method": "browser_name_address_coordinates",
+      "reviewedAt": "2026-07-17",
+      "notes": "strong_name,street,city_state,coords_close,website_domain,restaurant_type"
+    },
+    {
+      "restaurantSlug": "sushi-sho-new-york-ny",
+      "placeId": "ChIJT_JHTgFZwokRXleXHadsVaE",
+      "status": "manually_approved",
+      "confidence": "high",
+      "method": "manual_tip_approve",
+      "reviewedAt": "2026-07-17",
+      "notes": "Tip-approved reasons=city_state,coords_near,restaurant_type,street,strong_name"
+    },
+    {
+      "restaurantSlug": "tambourine-room-by-tristan-brandt-miami-beach-fl",
+      "placeId": "ChIJdQEhRsmz2YgRKkCcRapLA2c",
+      "status": "manually_approved",
+      "confidence": "high",
+      "method": "manual_tip_approve",
+      "reviewedAt": "2026-07-17",
+      "notes": "Tip-approved reasons=city_state,restaurant_type,street,strong_name"
+    },
+    {
+      "restaurantSlug": "tatemo-houston-tx",
+      "placeId": "ChIJCbdfsUW_QIYRrevB02-CIV0",
+      "status": "matched",
+      "confidence": "high",
+      "method": "browser_name_address_coordinates",
+      "reviewedAt": "2026-07-17",
+      "notes": "strong_name,street,city_state,website_domain,restaurant_type"
+    },
+    {
+      "restaurantSlug": "tatsu-dallas-dallas-tx",
+      "placeId": "ChIJh_edlDiZToYR1URAczTccmE",
+      "status": "matched",
+      "confidence": "high",
+      "method": "browser_name_address_coordinates",
+      "reviewedAt": "2026-07-17",
+      "notes": "strong_name,street,city_state,website_domain,restaurant_type"
+    },
+    {
+      "restaurantSlug": "tempura-matsui-new-york-ny",
+      "placeId": "ChIJ3aiOZQRZwokRyTh5pEHCyXY",
+      "status": "matched",
+      "confidence": "high",
+      "method": "browser_name_address_coordinates",
+      "reviewedAt": "2026-07-17",
+      "notes": "strong_name,city_state,coords_close,website_domain,restaurant_type"
+    },
+    {
+      "restaurantSlug": "the-catbird-seat-nashville-tn",
+      "placeId": "ChIJq3tfSZJmZIgRLkkEXv4QxkQ",
+      "status": "manually_approved",
+      "confidence": "high",
+      "method": "manual_tip_approve",
+      "reviewedAt": "2026-07-17",
+      "notes": "Tip-approved reasons=city_state,restaurant_type,strong_name,website_domain"
+    },
+    {
+      "restaurantSlug": "the-dabney-washington-dc",
+      "placeId": "ChIJrTuAH-23t4kRUu2vghXPScI",
+      "status": "matched",
+      "confidence": "high",
+      "method": "browser_name_address_coordinates",
+      "reviewedAt": "2026-07-17",
+      "notes": "strong_name,street,city_state,coords_close,website_domain,restaurant_type"
+    },
+    {
+      "restaurantSlug": "the-four-horsemen-brooklyn-ny",
+      "placeId": "ChIJbTCMl19ZwokRUohF137p9cQ",
+      "status": "matched",
+      "confidence": "high",
+      "method": "browser_name_address_coordinates",
+      "reviewedAt": "2026-07-17",
+      "notes": "strong_name,street,city_state,coords_close,website_domain,restaurant_type"
+    },
+    {
+      "restaurantSlug": "the-french-laundry-yountville-ca",
+      "placeId": "ChIJAAAAAERVhIARYeTLvbbzAxs",
+      "status": "matched",
+      "confidence": "high",
+      "method": "browser_name_address_coordinates",
+      "reviewedAt": "2026-07-17",
+      "notes": "strong_name,street,city_state,coords_close,website_domain,restaurant_type"
+    },
+    {
+      "restaurantSlug": "the-inn-at-little-washington-washington-dc",
+      "placeId": "ChIJ9ydRxCsztIkROPnyuZc6Dbw",
+      "status": "manually_approved",
+      "confidence": "high",
+      "method": "manual_tip_approve",
+      "reviewedAt": "2026-07-17",
+      "notes": "Tip-approved reasons=street,strong_name,website_domain"
+    },
+    {
+      "restaurantSlug": "the-kitchen-sacramento-ca",
+      "placeId": "ChIJxyCQgkfamoARaCjr8r-6xcM",
+      "status": "matched",
+      "confidence": "high",
+      "method": "browser_name_address_coordinates",
+      "reviewedAt": "2026-07-17",
+      "notes": "strong_name,street,city_state,website_domain,restaurant_type"
+    },
+    {
+      "restaurantSlug": "the-modern-new-york-ny",
+      "placeId": "ChIJMW-gxPtYwokRzDlnsRgq9rA",
+      "status": "matched",
+      "confidence": "high",
+      "method": "browser_name_address_coordinates",
+      "reviewedAt": "2026-07-17",
+      "notes": "strong_name,street,city_state,coords_close,website_domain,restaurant_type"
+    },
+    {
+      "restaurantSlug": "the-progress-san-francisco-ca",
+      "placeId": "ChIJ8zXoo7mAhYARtoa-WE3d5NE",
+      "status": "matched",
+      "confidence": "high",
+      "method": "browser_name_address_coordinates",
+      "reviewedAt": "2026-07-17",
+      "notes": "strong_name,street,city_state,coords_close,website_domain,restaurant_type"
+    },
+    {
+      "restaurantSlug": "the-restaurant-at-justin-paso-robles-ca",
+      "placeId": "ChIJm22pMP8p7YARcieBuVH8Qe4",
+      "status": "matched",
+      "confidence": "high",
+      "method": "browser_name_address_coordinates",
+      "reviewedAt": "2026-07-17",
+      "notes": "strong_name,street,city_state,website_domain,restaurant_type"
+    },
+    {
+      "restaurantSlug": "the-surf-club-restaurant-surfside-fl",
+      "placeId": "ChIJY9UXppmz2YgR8eMDCqFBR-0",
+      "status": "matched",
+      "confidence": "high",
+      "method": "browser_name_address_coordinates",
+      "reviewedAt": "2026-07-17",
+      "notes": "strong_name,street,city_state,website_domain,restaurant_type"
+    },
+    {
+      "restaurantSlug": "the-village-pub-woodside-ca",
+      "placeId": "ChIJG1kW_BCkj4AR8ZZ326YvxPU",
+      "status": "matched",
+      "confidence": "high",
+      "method": "browser_name_address_coordinates",
+      "reviewedAt": "2026-07-17",
+      "notes": "strong_name,street,city_state,coords_close,website_domain,restaurant_type"
+    },
+    {
+      "restaurantSlug": "the-wolf-s-tailor-denver-co",
+      "placeId": "ChIJgZlxHYt4bIcRbUoKhywj5CE",
+      "status": "matched",
+      "confidence": "high",
+      "method": "browser_name_address_coordinates",
+      "reviewedAt": "2026-07-17",
+      "notes": "strong_name,street,city_state,coords_close,website_domain,restaurant_type"
+    },
+    {
+      "restaurantSlug": "topolobampo-chicago-il",
+      "placeId": "ChIJ25jYKrIsDogRhv_ykBvwfOQ",
+      "status": "matched",
+      "confidence": "high",
+      "method": "browser_name_address_coordinates",
+      "reviewedAt": "2026-07-17",
+      "notes": "strong_name,street,city_state,coords_close,website_domain,restaurant_type"
+    },
+    {
+      "restaurantSlug": "torien-new-york-ny",
+      "placeId": "ChIJ00d8thlZwokRokFYn2wZy5E",
+      "status": "matched",
+      "confidence": "high",
+      "method": "browser_name_address_coordinates",
+      "reviewedAt": "2026-07-17",
+      "notes": "strong_name,street,city_state,coords_close,website_domain,restaurant_type"
+    },
+    {
+      "restaurantSlug": "torrisi-new-york-ny",
+      "placeId": "ChIJWd7fRdZZwokRhru5tn4KsVM",
+      "status": "matched",
+      "confidence": "high",
+      "method": "browser_name_address_coordinates",
+      "reviewedAt": "2026-07-17",
+      "notes": "strong_name,street,city_state,coords_close,website_domain,restaurant_type"
+    },
+    {
+      "restaurantSlug": "troubadour-healdsburg-ca",
+      "placeId": "ChIJr4-QP0sXhIARaxCxI3oi8AQ",
+      "status": "matched",
+      "confidence": "high",
+      "method": "browser_name_address_coordinates",
+      "reviewedAt": "2026-07-17",
+      "notes": "strong_name,street,city_state,coords_close,website_domain,restaurant_type"
+    },
+    {
+      "restaurantSlug": "tsukimi-new-york-ny",
+      "placeId": "ChIJRQgS7etZwokR8IMUTfuDXOM",
+      "status": "manually_approved",
+      "confidence": "high",
+      "method": "manual_tip_approve",
+      "reviewedAt": "2026-07-17",
+      "notes": "Tip-approved reasons=city_state,coords_far,restaurant_type,strong_name,website_domain"
+    },
+    {
+      "restaurantSlug": "tuome-new-york-ny",
+      "placeId": "ChIJU7iTdXhZwokR2n5XFHPVdAY",
+      "status": "matched",
+      "confidence": "high",
+      "method": "browser_name_address_coordinates",
+      "reviewedAt": "2026-07-17",
+      "notes": "strong_name,street,city_state,website_domain,restaurant_type"
+    },
+    {
+      "restaurantSlug": "vern-s-charleston-sc",
+      "placeId": "ChIJcQ0ZQn57_ogRB6B_A4LHb0A",
+      "status": "matched",
+      "confidence": "high",
+      "method": "browser_name_address_coordinates",
+      "reviewedAt": "2026-07-17",
+      "notes": "strong_name,city_state,coords_close,website_domain,restaurant_type"
+    },
+    {
+      "restaurantSlug": "vespertine-culver-city-ca",
+      "placeId": "ChIJVd04SYW5woAROE52K0dXeYE",
+      "status": "matched",
+      "confidence": "high",
+      "method": "browser_name_address_coordinates",
+      "reviewedAt": "2026-07-17",
+      "notes": "strong_name,street,city_state,coords_close,website_domain,restaurant_type"
+    },
+    {
+      "restaurantSlug": "victoria-and-albert-s-orlando-fl",
+      "placeId": "ChIJfae0pxd-3YgR1ZtP2RQreIY",
+      "status": "manually_approved",
+      "confidence": "high",
+      "method": "manual_tip_approve",
+      "reviewedAt": "2026-07-17",
+      "notes": "Tip-approved reasons=restaurant_type,street,strong_name,website_domain"
+    },
+    {
+      "restaurantSlug": "wakuriya-san-mateo-ca",
+      "placeId": "ChIJw5XHiMifj4ARPKqzyYwc8kw",
+      "status": "matched",
+      "confidence": "high",
+      "method": "browser_name_address_coordinates",
+      "reviewedAt": "2026-07-17",
+      "notes": "strong_name,street,city_state,coords_close,website_domain,restaurant_type"
+    },
+    {
+      "restaurantSlug": "wild-common-charleston-sc",
+      "placeId": "ChIJzUn6Qi17_ogRX1VX24enKTE",
+      "status": "matched",
+      "confidence": "high",
+      "method": "browser_name_address_coordinates",
+      "reviewedAt": "2026-07-17",
+      "notes": "strong_name,street,city_state,coords_close,website_domain,restaurant_type"
+    },
+    {
+      "restaurantSlug": "wolfsbane-san-francisco-ca",
+      "placeId": "ChIJk-mYOAB_j4ARdDPkxEHNfTA",
+      "status": "matched",
+      "confidence": "high",
+      "method": "browser_name_address_coordinates",
+      "reviewedAt": "2026-07-17",
+      "notes": "strong_name,street,city_state,coords_close,website_domain,restaurant_type"
+    },
+    {
+      "restaurantSlug": "xiquet-washington-dc",
+      "placeId": "ChIJZZNZ9Lu3t4kRsIt1tM8JHjk",
+      "status": "matched",
+      "confidence": "high",
+      "method": "browser_name_address_coordinates",
+      "reviewedAt": "2026-07-17",
+      "notes": "strong_name,street,city_state,coords_close,website_domain,restaurant_type"
+    },
+    {
+      "restaurantSlug": "yamada-new-york-ny",
+      "placeId": "ChIJSdFphJdbwokRG3R5uMCxFt4",
+      "status": "matched",
+      "confidence": "high",
+      "method": "browser_name_address_coordinates",
+      "reviewedAt": "2026-07-17",
+      "notes": "strong_name,street,city_state,coords_close,website_domain,restaurant_type"
+    },
+    {
+      "restaurantSlug": "yingtao-new-york-ny",
+      "placeId": "ChIJkYkkoh1ZwokRE01ymVZhhpg",
+      "status": "matched",
+      "confidence": "high",
+      "method": "browser_name_address_coordinates",
+      "reviewedAt": "2026-07-17",
+      "notes": "strong_name,street,city_state,coords_close,website_domain,restaurant_type"
+    },
+    {
+      "restaurantSlug": "yoshino-new-york-ny",
+      "placeId": "ChIJ6WTjLENZwokRsU3IurxvnCI",
+      "status": "matched",
+      "confidence": "high",
+      "method": "browser_name_address_coordinates",
+      "reviewedAt": "2026-07-17",
+      "notes": "strong_name,street,city_state,coords_close,website_domain,restaurant_type"
+    },
+    {
+      "restaurantSlug": "zasu-new-orleans-la",
+      "placeId": "ChIJVVVEYGKvIIYRmbRoIxRmaiA",
+      "status": "matched",
+      "confidence": "high",
+      "method": "browser_name_address_coordinates",
+      "reviewedAt": "2026-07-17",
+      "notes": "strong_name,street,city_state,coords_close,website_domain,restaurant_type"
+    }
+  ]
+}

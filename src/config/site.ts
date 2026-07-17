@@ -10,6 +10,8 @@ export const siteConfig = {
   dataUpdatedLabel: "Dataset current through July 2026",
   independenceDisclaimer:
     "Independent platform. Not affiliated with, endorsed by, or connected to Michelin or the Michelin Guide.",
+  googlePlacesDisclaimer:
+    "When enabled, select pages show photos and live place information from Google inside Google’s Places UI Kit. That content remains Google’s; we do not independently verify Google reviews and do not imply Google sponsorship.",
   coverageNote:
     "Michelin does not currently inspect every U.S. state. Absence from this atlas does not mean a region has been reviewed and found without stars.",
   /**

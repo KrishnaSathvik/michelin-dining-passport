@@ -67,6 +67,18 @@ After Vercel deploy:
 
 Set the same keys in Vercel (or your host), plus the production `NEXT_PUBLIC_SITE_URL`.
 
+### Google Places UI Kit (optional enrichment)
+
+Documented in [`docs/google-places/google-cloud-setup.md`](./google-places/google-cloud-setup.md):
+
+```env
+NEXT_PUBLIC_GOOGLE_PLACES_UI_KIT_ENABLED=false
+NEXT_PUBLIC_GOOGLE_MAPS_BROWSER_KEY=
+GOOGLE_PLACES_MATCHING_API_KEY=
+```
+
+Keep the feature flag false until browser-key referrers, billing budgets, and the technical spike are verified. Never put the matching key in `NEXT_PUBLIC_*` or client bundles.
+
 ## Migrations
 
 Schema changes live only under `supabase/migrations/`. Do not make undocumented schema edits in the hosted SQL editor.

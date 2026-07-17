@@ -28,6 +28,8 @@ import {
 } from "@/lib/map/query";
 import { ReservationButton } from "@/components/restaurant/ReservationButton";
 import { SaveRestaurantButton } from "@/components/restaurant/SaveRestaurantButton";
+import { MapSelectedGooglePlace } from "@/components/google-places/MapSelectedGooglePlace";
+import { getApprovedGooglePlaceId } from "@/lib/google-places/place-ids";
 import { getRestaurantReservation } from "@/lib/reservations/data";
 import { usePassport } from "@/lib/passport/PassportProvider";
 
@@ -94,6 +96,8 @@ export function RestaurantMap({
     () => parseMapSearchParams(initialQuery).selected || null,
   );
   const [sheetExpanded, setSheetExpanded] = useState(false);
+  /** Desktop selected panel is CSS-hidden on mobile — do not mount Google there. */
+  const [isDesktopViewport, setIsDesktopViewport] = useState(false);
   const [showSearchArea, setShowSearchArea] = useState(false);
   const [currentBounds, setCurrentBounds] = useState<MapBounds | null>(null);
   const [searchedBounds, setSearchedBounds] = useState<MapBounds | null>(
@@ -118,6 +122,14 @@ export function RestaurantMap({
       bounds: searchedBounds,
     });
   }, [query, selectedSlug, searchedBounds]);
+
+  useEffect(() => {
+    const media = window.matchMedia("(min-width: 1024px)");
+    const update = () => setIsDesktopViewport(media.matches);
+    update();
+    media.addEventListener("change", update);
+    return () => media.removeEventListener("change", update);
+  }, []);
 
   const filtered = useMemo(() => {
     let items = filterRestaurants(
@@ -150,6 +162,9 @@ export function RestaurantMap({
 
   const selected =
     filtered.find((item) => item.slug === selectedSlug) ?? null;
+  const selectedGooglePlaceId = selected
+    ? getApprovedGooglePlaceId(selected.slug)
+    : null;
 
   const selectedIndex = selected
     ? filtered.findIndex((item) => item.slug === selected.slug)
@@ -339,8 +354,8 @@ export function RestaurantMap({
           </p>
         ) : null}
 
-        {selected ? (
-          <div className="hidden border-t border-border p-4 lg:block">
+        {selected && isDesktopViewport ? (
+          <div className="border-t border-border p-4">
             <p className="font-display text-xl text-ink">{selected.name}</p>
             <p className="mt-1 font-sans text-sm text-ink-muted">
               {"★".repeat(selected.stars)} · {selected.cuisine} · {selected.city}
@@ -363,6 +378,11 @@ export function RestaurantMap({
                 Open page
               </Link>
             </div>
+            <MapSelectedGooglePlace
+              restaurantSlug={selected.slug}
+              placeId={selectedGooglePlaceId}
+              enabled
+            />
           </div>
         ) : null}
       </aside>
@@ -561,6 +581,13 @@ export function RestaurantMap({
                 Open page
               </Link>
             </div>
+            {sheetExpanded ? (
+              <MapSelectedGooglePlace
+                restaurantSlug={selected.slug}
+                placeId={selectedGooglePlaceId}
+                enabled
+              />
+            ) : null}
           </div>
         </div>
       ) : null}
