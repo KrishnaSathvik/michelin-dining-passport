@@ -27,6 +27,7 @@ import {
   type MapQuery,
 } from "@/lib/map/query";
 import { ReservationButton } from "@/components/restaurant/ReservationButton";
+import { SaveRestaurantButton } from "@/components/restaurant/SaveRestaurantButton";
 import { getRestaurantReservation } from "@/lib/reservations/data";
 import { usePassport } from "@/lib/passport/PassportProvider";
 
@@ -36,7 +37,7 @@ const MapCanvas = dynamic(
     ssr: false,
     loading: () => (
       <div
-        className="flex h-full min-h-[20rem] items-center justify-center border border-border bg-bg-elevated font-sans text-sm text-ink-muted"
+        className="flex h-full min-h-[20rem] items-center justify-center bg-surface-soft font-sans text-sm text-ink-muted"
         role="status"
       >
         Loading map…
@@ -44,6 +45,12 @@ const MapCanvas = dynamic(
     ),
   },
 );
+
+const chipClass =
+  "inline-flex min-h-11 items-center rounded-full border border-border bg-bg px-3 font-sans text-sm text-ink shadow-[var(--shadow-float)] transition-colors hover:border-forest focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-forest";
+
+const chipActiveClass =
+  "inline-flex min-h-11 items-center rounded-full border border-forest bg-forest px-3 font-sans text-sm text-white shadow-[var(--shadow-float)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-forest";
 
 type RestaurantMapProps = {
   restaurants: MapRestaurant[];
@@ -86,7 +93,6 @@ export function RestaurantMap({
   const [selectedSlug, setSelectedSlug] = useState<string | null>(
     () => parseMapSearchParams(initialQuery).selected || null,
   );
-  const [filterOpen, setFilterOpen] = useState(false);
   const [sheetExpanded, setSheetExpanded] = useState(false);
   const [showSearchArea, setShowSearchArea] = useState(false);
   const [currentBounds, setCurrentBounds] = useState<MapBounds | null>(null);
@@ -182,126 +188,44 @@ export function RestaurantMap({
   const resultCountLabel = `${filtered.length} restaurant${filtered.length === 1 ? "" : "s"}`;
 
   return (
-    <div className="space-y-3">
-      <div
-        className="flex flex-wrap items-center gap-2 font-sans text-sm"
-        role="toolbar"
-        aria-label="Map filters and controls"
-      >
-        <button
-          type="button"
-          className="inline-flex min-h-11 items-center border border-border px-3 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-forest lg:hidden"
-          aria-expanded={filterOpen}
-          onClick={() => setFilterOpen((value) => !value)}
-        >
-          Filters
-        </button>
-        <button
-          type="button"
-          className={`inline-flex min-h-11 items-center border px-3 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-forest lg:hidden ${
-            query.panel === "list"
-              ? "border-forest bg-forest text-bg-elevated"
-              : "border-border"
-          }`}
-          aria-pressed={query.panel === "list"}
-          onClick={() =>
-            updateQuery({ panel: query.panel === "list" ? "map" : "list" })
-          }
-        >
-          {query.panel === "list" ? "Show map" : "Show list"}
-        </button>
-        <button
-          type="button"
-          className={`inline-flex min-h-11 items-center border px-3 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-forest ${
-            query.savedOnly
-              ? "border-forest bg-forest text-bg-elevated"
-              : "border-border"
-          }`}
-          aria-pressed={query.savedOnly}
-          onClick={() => updateQuery({ savedOnly: !query.savedOnly })}
-        >
-          Saved only
-        </button>
-        <button
-          type="button"
-          className={`inline-flex min-h-11 items-center border px-3 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-forest ${
-            query.visitedOnly
-              ? "border-forest bg-forest text-bg-elevated"
-              : "border-border"
-          }`}
-          aria-pressed={query.visitedOnly}
-          onClick={() => updateQuery({ visitedOnly: !query.visitedOnly })}
-        >
-          Visited only
-        </button>
-        <button
-          type="button"
-          className="inline-flex min-h-11 items-center border border-border px-3 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-forest"
-          onClick={() => {
-            baselineBoundsRef.current = null;
-            setFitToken((value) => value + 1);
-          }}
-        >
-          Fit to results
-        </button>
-        <button
-          type="button"
-          className="inline-flex min-h-11 items-center border border-border px-3 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-forest"
-          onClick={() => {
-            setSearchedBounds(null);
-            baselineBoundsRef.current = null;
-            setShowSearchArea(false);
-            setSelectedSlug(null);
-            setFitToken((value) => value + 1);
-          }}
-        >
-          Reset map
-        </button>
-        {searchedBounds ? (
-          <button
-            type="button"
-            className="inline-flex min-h-11 items-center border border-burgundy px-3 text-burgundy focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-forest"
-            onClick={() => {
-              setSearchedBounds(null);
-              setShowSearchArea(false);
-            }}
-          >
-            Clear area search
-          </button>
-        ) : null}
-        <p className="min-h-11 font-sans text-sm text-ink-muted" aria-live="polite">
-          <span className="sr-only">Result count: </span>
-          {resultCountLabel}
-          {isPending ? " · updating" : ""}
-          {searchedBounds ? " · current map area" : ""}
-        </p>
-      </div>
-
-      <div
-        className={`border border-border bg-bg-elevated p-3 lg:block ${
-          filterOpen ? "block" : "hidden"
+    <div className="relative flex h-full min-h-0 flex-col bg-bg lg:flex-row">
+      {/* Desktop: 420px list LEFT · Mobile: full-width when list panel */}
+      <aside
+        className={`z-20 flex w-full flex-col border-border bg-bg lg:w-[420px] lg:shrink-0 lg:border-r ${
+          query.panel === "map" ? "hidden lg:flex" : "flex min-h-0 flex-1"
         }`}
       >
-        <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
-          <label className="font-sans text-sm text-ink">
-            State
+        <div className="space-y-3 border-b border-border p-4">
+          <div className="flex items-center justify-between gap-2">
+            <h1 className="font-display text-2xl text-ink">Map</h1>
+            <p className="font-sans text-sm text-ink-muted" aria-live="polite">
+              {resultCountLabel}
+              {isPending ? " · updating" : ""}
+            </p>
+          </div>
+          <input
+            className="min-h-11 w-full rounded-[var(--radius-md)] border border-border bg-bg px-3 font-sans text-sm text-ink outline-none focus-visible:border-forest"
+            value={query.q}
+            onChange={(event) => updateQuery({ q: event.target.value })}
+            placeholder="Search name, city, cuisine…"
+            aria-label="Search restaurants on map"
+          />
+          <div className="grid grid-cols-2 gap-2">
             <select
-              className="mt-1 min-h-11 w-full border border-border bg-bg px-2"
+              className="min-h-11 rounded-[var(--radius-md)] border border-border bg-bg px-2 font-sans text-sm"
               value={query.state}
               onChange={(event) => updateQuery({ state: event.target.value })}
+              aria-label="State"
             >
-              <option value="">All states</option>
+              <option value="">State</option>
               {facetOptions.states.map((state) => (
                 <option key={state.value} value={state.value}>
                   {state.label}
                 </option>
               ))}
             </select>
-          </label>
-          <label className="font-sans text-sm text-ink">
-            Stars
             <select
-              className="mt-1 min-h-11 w-full border border-border bg-bg px-2"
+              className="min-h-11 rounded-[var(--radius-md)] border border-border bg-bg px-2 font-sans text-sm"
               value={query.stars ?? ""}
               onChange={(event) => {
                 const value = event.target.value;
@@ -312,163 +236,241 @@ export function RestaurantMap({
                       : null,
                 });
               }}
+              aria-label="Michelin stars"
             >
-              <option value="">All stars</option>
-              <option value="1">1 star</option>
-              <option value="2">2 stars</option>
-              <option value="3">3 stars</option>
+              <option value="">Stars</option>
+              <option value="1">1 Michelin Star</option>
+              <option value="2">2 Michelin Stars</option>
+              <option value="3">3 Michelin Stars</option>
             </select>
-          </label>
-          <label className="font-sans text-sm text-ink">
-            Cuisine
             <select
-              className="mt-1 min-h-11 w-full border border-border bg-bg px-2"
+              className="col-span-2 min-h-11 rounded-[var(--radius-md)] border border-border bg-bg px-2 font-sans text-sm"
               value={query.cuisine}
               onChange={(event) => updateQuery({ cuisine: event.target.value })}
+              aria-label="Cuisine"
             >
-              <option value="">All cuisines</option>
+              <option value="">Cuisine</option>
               {facetOptions.cuisines.map((cuisine) => (
                 <option key={cuisine.value} value={cuisine.value}>
                   {cuisine.label}
                 </option>
               ))}
             </select>
-          </label>
-          <label className="font-sans text-sm text-ink">
-            Search
-            <input
-              className="mt-1 min-h-11 w-full border border-border bg-bg px-2"
-              value={query.q}
-              onChange={(event) => updateQuery({ q: event.target.value })}
-              placeholder="Name, city, cuisine…"
-            />
-          </label>
-        </div>
-      </div>
-
-      <div className="grid gap-0 lg:grid-cols-[minmax(0,1fr)_22rem] lg:gap-4">
-        <div
-          className={`relative ${
-            query.panel === "list" ? "hidden lg:block" : "block"
-          }`}
-        >
-          <div className="h-[min(78vh,42rem)] overflow-hidden border border-border lg:h-[min(70vh,40rem)]">
-            <MapCanvas
-              restaurants={mappableFiltered}
-              selectedSlug={selectedSlug}
-              onSelectSlug={(slug) => selectRestaurant(slug)}
-              onBoundsChange={handleBoundsChange}
-              onMapReady={(ready) => setMapFailed(!ready)}
-              fitToken={fitToken}
-              flyToSlug={flyToSlug}
-            />
           </div>
-          {mapFailed ? (
-            <p className="mt-2 font-sans text-sm text-ink-muted" role="status">
-              Map tiles failed to load. Use the result list to browse restaurants.
-            </p>
-          ) : null}
+          <div className="flex flex-wrap gap-2">
+            <button
+              type="button"
+              className={query.savedOnly ? chipActiveClass : chipClass}
+              aria-pressed={query.savedOnly}
+              onClick={() => updateQuery({ savedOnly: !query.savedOnly })}
+            >
+              Saved
+            </button>
+            <button
+              type="button"
+              className={query.visitedOnly ? chipActiveClass : chipClass}
+              aria-pressed={query.visitedOnly}
+              onClick={() => updateQuery({ visitedOnly: !query.visitedOnly })}
+            >
+              Visited
+            </button>
+          </div>
+        </div>
 
-          {showSearchArea && currentBounds ? (
-            <div className="absolute bottom-14 left-1/2 z-10 -translate-x-1/2">
-              <button
-                type="button"
-                className="min-h-11 border border-forest bg-bg-elevated px-4 font-sans text-sm text-forest shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-forest"
-                onClick={() => {
-                  setSearchedBounds(currentBounds);
-                  setShowSearchArea(false);
-                  setSelectedSlug(null);
+        <ul
+          ref={listRef}
+          className="min-h-0 flex-1 divide-y divide-border overflow-y-auto"
+          aria-label="Map restaurant results"
+        >
+          {filtered.map((restaurant) => {
+            const isSelected = restaurant.slug === selectedSlug;
+            const reservation = getRestaurantReservation(restaurant.slug);
+            return (
+              <li
+                key={restaurant.slug}
+                ref={(node) => {
+                  itemRefs.current[restaurant.slug] = node;
                 }}
+                className={`flex items-stretch gap-2 px-3 py-2 ${
+                  isSelected ? "bg-surface-soft" : "hover:bg-surface-soft/70"
+                }`}
               >
-                Search this area
-              </button>
-            </div>
-          ) : null}
+                <button
+                  type="button"
+                  className="min-w-0 flex-1 px-1 py-2 text-left focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-[-2px] focus-visible:outline-forest"
+                  aria-current={isSelected ? "true" : undefined}
+                  onClick={() => {
+                    selectRestaurant(restaurant.slug);
+                    updateQuery({ panel: "map" });
+                  }}
+                >
+                  <span className="font-display text-lg text-ink">
+                    {restaurant.name}
+                  </span>
+                  <span className="mt-1 block font-sans text-xs text-ink-muted">
+                    {"★".repeat(restaurant.stars)} · {restaurant.cuisine} ·{" "}
+                    {restaurant.city}, {restaurant.stateCode}
+                  </span>
+                  {restaurant.locationPending ? (
+                    <span className="mt-1 block font-sans text-xs text-burgundy">
+                      Location verification pending
+                    </span>
+                  ) : null}
+                </button>
+                <div className="flex shrink-0 items-center py-1">
+                  <ReservationButton
+                    restaurant={restaurant}
+                    reservation={reservation}
+                    surface="map_list"
+                    variant="compact"
+                    showProvider={false}
+                    className="rounded-[var(--radius-md)]"
+                  />
+                </div>
+              </li>
+            );
+          })}
+        </ul>
+        {filtered.length === 0 ? (
+          <p className="px-4 py-8 font-sans text-sm text-ink-muted">
+            No restaurants match the current filters
+            {searchedBounds ? " in this map area" : ""}. Clear filters or area
+            search to broaden results.
+          </p>
+        ) : null}
 
-          <p className="mt-2 font-sans text-xs text-ink-muted">
+        {selected ? (
+          <div className="hidden border-t border-border p-4 lg:block">
+            <p className="font-display text-xl text-ink">{selected.name}</p>
+            <p className="mt-1 font-sans text-sm text-ink-muted">
+              {"★".repeat(selected.stars)} · {selected.cuisine} · {selected.city}
+              , {selected.stateCode}
+            </p>
+            <div className="mt-3 flex flex-wrap items-center gap-2">
+              <ReservationButton
+                restaurant={selected}
+                reservation={getRestaurantReservation(selected.slug)}
+                surface="map_marker"
+                variant="full"
+                showProvider={false}
+                className="rounded-[var(--radius-md)]"
+              />
+              <SaveRestaurantButton restaurantSlug={selected.slug} />
+              <Link
+                href={`/restaurants/${selected.slug}`}
+                className="inline-flex min-h-11 items-center font-sans text-sm text-forest no-underline hover:text-forest-deep"
+              >
+                Open page
+              </Link>
+            </div>
+          </div>
+        ) : null}
+      </aside>
+
+      {/* Map RIGHT (desktop) / full screen (mobile) */}
+      <div
+        className={`relative min-h-0 min-w-0 flex-1 ${
+          query.panel === "list" ? "hidden lg:block" : "block"
+        }`}
+      >
+        <div className="absolute inset-0">
+          <MapCanvas
+            restaurants={mappableFiltered}
+            selectedSlug={selectedSlug}
+            onSelectSlug={(slug) => selectRestaurant(slug)}
+            onBoundsChange={handleBoundsChange}
+            onMapReady={(ready) => setMapFailed(!ready)}
+            fitToken={fitToken}
+            flyToSlug={flyToSlug}
+          />
+        </div>
+
+        <div
+          className="absolute left-3 right-3 top-3 z-10 flex flex-wrap gap-2 lg:left-auto lg:right-4 lg:max-w-md lg:justify-end"
+          role="toolbar"
+          aria-label="Map controls"
+        >
+          <button
+            type="button"
+            className={`${chipClass} lg:hidden`}
+            aria-pressed={query.panel === "list"}
+            onClick={() =>
+              updateQuery({ panel: query.panel === "list" ? "map" : "list" })
+            }
+          >
+            {query.panel === "list" ? "Map" : "List"}
+          </button>
+          <button
+            type="button"
+            className={chipClass}
+            onClick={() => {
+              baselineBoundsRef.current = null;
+              setFitToken((value) => value + 1);
+            }}
+          >
+            Fit
+          </button>
+          <button
+            type="button"
+            className={chipClass}
+            onClick={() => {
+              setSearchedBounds(null);
+              baselineBoundsRef.current = null;
+              setShowSearchArea(false);
+              setSelectedSlug(null);
+              setFitToken((value) => value + 1);
+            }}
+          >
+            Reset
+          </button>
+          {searchedBounds ? (
+            <button
+              type="button"
+              className={chipClass}
+              onClick={() => {
+                setSearchedBounds(null);
+                setShowSearchArea(false);
+              }}
+            >
+              Clear area
+            </button>
+          ) : null}
+        </div>
+
+        {showSearchArea && currentBounds ? (
+          <div className="absolute bottom-24 left-1/2 z-10 -translate-x-1/2 lg:bottom-8">
+            <button
+              type="button"
+              className="min-h-11 rounded-full border border-forest bg-bg px-5 font-sans text-sm font-medium text-forest shadow-[var(--shadow-float)]"
+              onClick={() => {
+                setSearchedBounds(currentBounds);
+                setShowSearchArea(false);
+                setSelectedSlug(null);
+              }}
+            >
+              Search this area
+            </button>
+          </div>
+        ) : null}
+
+        {mapFailed ? (
+          <p
+            className="absolute bottom-4 left-4 right-4 rounded-[var(--radius-md)] bg-bg/95 p-3 font-sans text-sm text-ink-muted shadow-[var(--shadow-float)]"
+            role="status"
+          >
+            Map tiles failed to load. Use the result list to browse restaurants.
+          </p>
+        ) : (
+          <p className="pointer-events-none absolute bottom-2 left-3 hidden font-sans text-[10px] text-ink-muted lg:block">
             {mapConfig.providerName} · {mapConfig.attribution}
           </p>
-        </div>
-
-        <aside
-          className={`border border-border bg-bg-elevated/50 ${
-            query.panel === "map" ? "hidden lg:flex lg:flex-col" : "flex flex-col"
-          } lg:max-h-[min(70vh,40rem)]`}
-        >
-          <div className="border-b border-border px-4 py-3">
-            <h2 className="font-display text-xl text-ink">Results</h2>
-            <p className="mt-1 font-sans text-xs text-ink-muted">
-              List stays in sync with markers. Restaurants without approved
-              coordinates stay in the list with location verification pending.
-            </p>
-          </div>
-          <ul
-            ref={listRef}
-            className="divide-y divide-border overflow-y-auto"
-            aria-label="Map restaurant results"
-          >
-            {filtered.map((restaurant) => {
-              const isSelected = restaurant.slug === selectedSlug;
-              const reservation = getRestaurantReservation(restaurant.slug);
-              return (
-                <li
-                  key={restaurant.slug}
-                  ref={(node) => {
-                    itemRefs.current[restaurant.slug] = node;
-                  }}
-                  className={`flex items-stretch gap-2 px-3 py-2 ${
-                    isSelected ? "bg-bg" : "hover:bg-bg"
-                  }`}
-                >
-                  <button
-                    type="button"
-                    className="min-w-0 flex-1 px-1 py-2 text-left focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-[-2px] focus-visible:outline-forest"
-                    aria-current={isSelected ? "true" : undefined}
-                    onClick={() => {
-                      selectRestaurant(restaurant.slug);
-                      updateQuery({ panel: "map" });
-                    }}
-                  >
-                    <span className="font-display text-lg text-ink">
-                      {restaurant.name}
-                    </span>
-                    <span className="mt-1 block font-sans text-xs text-ink-muted">
-                      {restaurant.city}, {restaurant.stateCode} ·{" "}
-                      {restaurant.stars}★ · {restaurant.cuisine}
-                    </span>
-                    {restaurant.locationPending ? (
-                      <span className="mt-1 block font-sans text-xs text-burgundy">
-                        Location verification pending
-                      </span>
-                    ) : null}
-                  </button>
-                  <div className="flex shrink-0 items-center py-1">
-                    <ReservationButton
-                      restaurant={restaurant}
-                      reservation={reservation}
-                      surface="map_list"
-                      variant="compact"
-                      showProvider={false}
-                    />
-                  </div>
-                </li>
-              );
-            })}
-          </ul>
-          {filtered.length === 0 ? (
-            <p className="px-4 py-8 font-sans text-sm text-ink-muted">
-              No restaurants match the current filters
-              {searchedBounds ? " in this map area" : ""}. Clear filters or area
-              search to broaden results.
-            </p>
-          ) : null}
-        </aside>
+        )}
       </div>
 
       {/* Mobile bottom sheet preview */}
-      {selected ? (
+      {selected && query.panel !== "list" ? (
         <div
-          className="fixed inset-x-0 bottom-0 z-20 border-t border-border bg-bg-elevated shadow-[0_-8px_24px_rgba(0,0,0,0.08)] lg:hidden"
+          className="fixed inset-x-0 bottom-0 z-30 rounded-t-[var(--radius-lg)] border-t border-border bg-bg shadow-[var(--shadow-float)] lg:hidden"
           style={
             {
               paddingBottom: "max(0.75rem, env(safe-area-inset-bottom))",
@@ -477,6 +479,7 @@ export function RestaurantMap({
           role="dialog"
           aria-label="Selected restaurant preview"
         >
+          <div className="mx-auto mt-2 h-1 w-10 rounded-full bg-border" aria-hidden="true" />
           <div className="flex items-center justify-between gap-2 px-3 pt-2">
             <button
               type="button"
@@ -489,7 +492,7 @@ export function RestaurantMap({
             <div className="flex gap-1">
               <button
                 type="button"
-                className="min-h-11 min-w-11 border border-border px-2 font-sans text-sm disabled:opacity-40"
+                className="min-h-11 min-w-11 rounded-[var(--radius-md)] border border-border px-2 font-sans text-sm disabled:opacity-40"
                 disabled={selectedIndex <= 0}
                 onClick={() => {
                   const prev = filtered[selectedIndex - 1];
@@ -501,7 +504,7 @@ export function RestaurantMap({
               </button>
               <button
                 type="button"
-                className="min-h-11 min-w-11 border border-border px-2 font-sans text-sm disabled:opacity-40"
+                className="min-h-11 min-w-11 rounded-[var(--radius-md)] border border-border px-2 font-sans text-sm disabled:opacity-40"
                 disabled={
                   selectedIndex < 0 || selectedIndex >= filtered.length - 1
                 }
@@ -515,7 +518,7 @@ export function RestaurantMap({
               </button>
               <button
                 type="button"
-                className="min-h-11 border border-border px-3 font-sans text-sm"
+                className="min-h-11 rounded-[var(--radius-md)] border border-border px-3 font-sans text-sm"
                 onClick={() => {
                   setSelectedSlug(null);
                   setSheetExpanded(false);
@@ -528,8 +531,8 @@ export function RestaurantMap({
           <div className={`px-4 pb-3 ${sheetExpanded ? "pt-2" : "pt-1"}`}>
             <p className="font-display text-2xl text-ink">{selected.name}</p>
             <p className="mt-1 font-sans text-sm text-ink-muted">
-              {selected.city}, {selected.stateCode} · {selected.stars}★ ·{" "}
-              {selected.cuisine}
+              {"★".repeat(selected.stars)} · {selected.cuisine} · {selected.city}
+              , {selected.stateCode}
             </p>
             {selected.locationPending ? (
               <p className="mt-2 font-sans text-xs text-burgundy">
@@ -541,59 +544,27 @@ export function RestaurantMap({
                 {selected.address}
               </p>
             ) : null}
-            <div className="mt-3 flex flex-wrap items-end gap-2">
+            <div className="mt-3 flex flex-wrap items-center gap-2">
               <ReservationButton
                 restaurant={selected}
                 reservation={getRestaurantReservation(selected.slug)}
                 surface="map_mobile_sheet"
                 variant="full"
+                showProvider={false}
+                className="rounded-[var(--radius-md)]"
               />
+              <SaveRestaurantButton restaurantSlug={selected.slug} />
               <Link
                 href={`/restaurants/${selected.slug}`}
-                className="inline-flex min-h-11 items-center border border-border px-4 font-sans text-sm text-ink"
+                className="inline-flex min-h-11 items-center rounded-[var(--radius-md)] border border-border px-4 font-sans text-sm text-ink no-underline"
               >
-                Open restaurant page
+                Open page
               </Link>
             </div>
           </div>
         </div>
       ) : null}
 
-      {/* Desktop preview */}
-      {selected ? (
-        <div className="hidden border border-border bg-bg-elevated p-4 lg:block">
-          <p className="font-display text-2xl text-ink">{selected.name}</p>
-          <p className="mt-1 font-sans text-sm text-ink-muted">
-            {selected.city}, {selected.stateCode} · {selected.stars}★ ·{" "}
-            {selected.cuisine}
-          </p>
-          {selected.locationPending ? (
-            <p className="mt-2 font-sans text-xs text-burgundy">
-              Location verification pending — listed without a map marker.
-            </p>
-          ) : (
-            <p className="mt-2 font-sans text-sm text-ink-muted">
-              {selected.address}
-            </p>
-          )}
-          <div className="mt-3 flex flex-wrap items-end gap-3">
-            <ReservationButton
-              restaurant={selected}
-              reservation={getRestaurantReservation(selected.slug)}
-              surface="map_marker"
-              variant="full"
-            />
-            <Link
-              href={`/restaurants/${selected.slug}`}
-              className="inline-flex min-h-11 items-center text-forest underline"
-            >
-              Open restaurant page
-            </Link>
-          </div>
-        </div>
-      ) : null}
-
-      {/* Keep pathname referenced so Next treats this as a navigable client island */}
       <span className="sr-only" data-pathname={pathname}>
         Map route
       </span>

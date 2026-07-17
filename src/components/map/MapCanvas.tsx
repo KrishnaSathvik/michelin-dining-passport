@@ -228,7 +228,7 @@ export function MapCanvas({
             type="circle"
             filter={["has", "point_count"]}
             paint={{
-              "circle-color": "#1f3d2f",
+              "circle-color": "#123B2F",
               "circle-radius": [
                 "step",
                 ["get", "point_count"],
@@ -248,7 +248,7 @@ export function MapCanvas({
               "text-field": "{point_count_abbreviated}",
               "text-size": 12,
             }}
-            paint={{ "text-color": "#fffdf8" }}
+            paint={{ "text-color": "#FFFFFF" }}
           />
           <Layer
             id="restaurant-points"
@@ -258,12 +258,12 @@ export function MapCanvas({
               "circle-color": [
                 "case",
                 ["get", "selected"],
-                "#7a2e3a",
-                "#1f3d2f",
+                "#B88A2A",
+                "#123B2F",
               ],
-              "circle-radius": ["case", ["get", "selected"], 8, 6],
-              "circle-stroke-width": 1.5,
-              "circle-stroke-color": "#fffdf8",
+              "circle-radius": ["case", ["get", "selected"], 9, 6],
+              "circle-stroke-width": 2,
+              "circle-stroke-color": "#FFFFFF",
             }}
           />
         </Source>
@@ -276,7 +276,7 @@ export function MapCanvas({
             <span className="sr-only">Selected restaurant marker</span>
             <span
               aria-hidden
-              className="block h-3 w-3 rounded-full border-2 border-bg-elevated bg-burgundy"
+              className="block h-4 w-4 rounded-full border-2 border-white bg-[#B88A2A] shadow-md"
             />
           </Marker>
         ) : null}
