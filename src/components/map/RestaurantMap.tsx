@@ -28,6 +28,8 @@ import {
 } from "@/lib/map/query";
 import { ReservationButton } from "@/components/restaurant/ReservationButton";
 import { SaveRestaurantButton } from "@/components/restaurant/SaveRestaurantButton";
+import { MapSelectedGooglePlace } from "@/components/google-places/MapSelectedGooglePlace";
+import { getApprovedGooglePlaceId } from "@/lib/google-places/place-ids";
 import { getRestaurantReservation } from "@/lib/reservations/data";
 import { usePassport } from "@/lib/passport/PassportProvider";
 
@@ -150,6 +152,9 @@ export function RestaurantMap({
 
   const selected =
     filtered.find((item) => item.slug === selectedSlug) ?? null;
+  const selectedGooglePlaceId = selected
+    ? getApprovedGooglePlaceId(selected.slug)
+    : null;
 
   const selectedIndex = selected
     ? filtered.findIndex((item) => item.slug === selected.slug)
@@ -363,6 +368,11 @@ export function RestaurantMap({
                 Open page
               </Link>
             </div>
+            <MapSelectedGooglePlace
+              restaurantSlug={selected.slug}
+              placeId={selectedGooglePlaceId}
+              enabled
+            />
           </div>
         ) : null}
       </aside>
@@ -561,6 +571,13 @@ export function RestaurantMap({
                 Open page
               </Link>
             </div>
+            {sheetExpanded ? (
+              <MapSelectedGooglePlace
+                restaurantSlug={selected.slug}
+                placeId={selectedGooglePlaceId}
+                enabled
+              />
+            ) : null}
           </div>
         </div>
       ) : null}
