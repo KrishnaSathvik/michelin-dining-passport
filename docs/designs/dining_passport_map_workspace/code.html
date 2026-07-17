@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Dining Passport - Map</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&amp;family=Inter:wght@400;500;600&amp;family=Literata:wght@400;500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "outline-variant": "#c0c8c3",
+                    "on-tertiary-fixed": "#40000c",
+                    "tertiary": "#47000e",
+                    "surface-bright": "#fcf9f8",
+                    "on-primary-fixed": "#002118",
+                    "primary": "#00251b",
+                    "on-error-container": "#93000a",
+                    "surface-container-lowest": "#ffffff",
+                    "error": "#ba1a1a",
+                    "surface-container": "#f0edec",
+                    "on-tertiary-container": "#ef7881",
+                    "surface-container-highest": "#e5e2e1",
+                    "outline": "#717975",
+                    "error-container": "#ffdad6",
+                    "secondary-container": "#ffc964",
+                    "on-secondary": "#ffffff",
+                    "on-primary": "#ffffff",
+                    "tertiary-fixed-dim": "#ffb3b5",
+                    "background": "#fcf9f8",
+                    "on-background": "#1c1b1b",
+                    "surface-container-high": "#ebe7e7",
+                    "tertiary-fixed": "#ffdada",
+                    "surface": "#fcf9f8",
+                    "on-primary-container": "#7ca596",
+                    "surface-tint": "#3f6658",
+                    "secondary": "#7c5800",
+                    "secondary-fixed-dim": "#f3be5a",
+                    "inverse-surface": "#313030",
+                    "on-tertiary": "#ffffff",
+                    "on-secondary-container": "#765400",
+                    "secondary-fixed": "#ffdea7",
+                    "on-surface": "#1c1b1b",
+                    "tertiary-container": "#68111f",
+                    "primary-container": "#123b2f",
+                    "on-tertiary-fixed-variant": "#822530",
+                    "on-primary-fixed-variant": "#274e41",
+                    "primary-fixed-dim": "#a5d0bf",
+                    "on-error": "#ffffff",
+                    "surface-variant": "#e5e2e1",
+                    "surface-dim": "#dcd9d9",
+                    "inverse-on-surface": "#f3f0ef",
+                    "surface-container-low": "#f6f3f2",
+                    "on-secondary-fixed": "#271900",
+                    "primary-fixed": "#c1ecda",
+                    "on-surface-variant": "#414845",
+                    "inverse-primary": "#a5d0bf",
+                    "on-secondary-fixed-variant": "#5e4200",
+                    "restrained-gold": "#B88A2A",
+                    "primary-green": "#123B2F"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "margin-mobile": "20px",
+                    "section-padding": "80px",
+                    "gutter": "24px",
+                    "margin-desktop": "64px",
+                    "container-max-width": "1280px",
+                    "unit": "8px"
+            },
+            "fontFamily": {
+                    "display-lg": [
+                            "Literata"
+                    ],
+                    "label-caps": [
+                            "Inter"
+                    ],
+                    "headline-sm": [
+                            "Literata"
+                    ],
+                    "headline-md": [
+                            "Literata"
+                    ],
+                    "body-lg": [
+                            "Inter"
+                    ],
+                    "meta-data": [
+                            "Inter"
+                    ],
+                    "display-lg-mobile": [
+                            "Literata"
+                    ],
+                    "body-md": [
+                            "Inter"
+                    ],
+                    "serif": ["Instrument Serif", "serif"]
+            },
+            "fontSize": {
+                    "display-lg": [
+                            "48px",
+                            {
+                                    "lineHeight": "1.1",
+                                    "letterSpacing": "-0.02em",
+                                    "fontWeight": "400"
+                            }
+                    ],
+                    "label-caps": [
+                            "12px",
+                            {
+                                    "lineHeight": "1",
+                                    "letterSpacing": "0.08em",
+                                    "fontWeight": "600"
+                            }
+                    ],
+                    "headline-sm": [
+                            "24px",
+                            {
+                                    "lineHeight": "1.3",
+                                    "fontWeight": "500"
+                            }
+                    ],
+                    "headline-md": [
+                            "32px",
+                            {
+                                    "lineHeight": "1.2",
+                                    "fontWeight": "400"
+                            }
+                    ],
+                    "body-lg": [
+                            "18px",
+                            {
+                                    "lineHeight": "1.6",
+                                    "fontWeight": "400"
+                            }
+                    ],
+                    "meta-data": [
+                            "14px",
+                            {
+                                    "lineHeight": "1.4",
+                                    "fontWeight": "400"
+                            }
+                    ],
+                    "display-lg-mobile": [
+                            "36px",
+                            {
+                                    "lineHeight": "1.1",
+                                    "letterSpacing": "-0.01em",
+                                    "fontWeight": "400"
+                            }
+                    ],
+                    "body-md": [
+                            "16px",
+                            {
+                                    "lineHeight": "1.5",
+                                    "fontWeight": "400"
+                            }
+                    ]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .map-bg {
+            background-color: #f0f2f0;
+            background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%23c0c8c3' fill-opacity='0.2' fill-rule='evenodd'/%3E%3C/svg%3E");
+        }
+        
+        /* Custom scrollbar for left panel */
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 6px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #e5e2e1;
+            border-radius: 4px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+            background: #c0c8c3;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background h-screen w-full overflow-hidden flex flex-col font-body-md text-body-md antialiased">
+<!-- TopNavBar -->
+<header class="bg-surface dark:bg-surface h-[72px] sticky top-0 w-full border-b border-outline-variant dark:border-on-surface-variant flex-shrink-0 z-50">
+<div class="flex justify-between items-center w-full px-margin-desktop max-w-container-max-width mx-auto h-full">
+<div class="flex items-center gap-12">
+<!-- Brand Logo -->
+<div class="text-headline-md font-headline-md text-primary dark:text-primary-fixed-dim">
+<span class="font-serif">Dining Passport</span>
+</div>
+<!-- Navigation Links -->
+<nav class="hidden md:flex items-center gap-8 h-full">
+<a class="text-on-surface-variant dark:text-outline-variant font-medium hover:text-primary dark:hover:text-primary-fixed-dim transition-colors duration-200 h-full flex items-center px-1" href="#">Explore</a>
+<a class="text-primary dark:text-primary-fixed-dim font-bold border-b-2 border-primary dark:border-primary-fixed-dim h-full flex items-center px-1" href="#">Map</a>
+<a class="text-on-surface-variant dark:text-outline-variant font-medium hover:text-primary dark:hover:text-primary-fixed-dim transition-colors duration-200 h-full flex items-center px-1" href="#">Michelin Stars</a>
+<a class="text-on-surface-variant dark:text-outline-variant font-medium hover:text-primary dark:hover:text-primary-fixed-dim transition-colors duration-200 h-full flex items-center px-1" href="#">Passport</a>
+</nav>
+</div>
+<!-- Trailing Icons -->
+<div class="flex items-center gap-4 text-primary dark:text-primary-fixed-dim">
+<button class="p-2 hover:bg-surface-variant rounded-full transition-colors">
+<span class="material-symbols-outlined">search</span>
+</button>
+<button class="p-2 hover:bg-surface-variant rounded-full transition-colors">
+<span class="material-symbols-outlined">account_circle</span>
+</button>
+</div>
+</div>
+</header>
+<!-- Main Workspace -->
+<main class="flex flex-1 overflow-hidden">
+<!-- Left Panel -->
+<aside class="w-[420px] bg-surface-container-lowest border-r border-outline-variant flex flex-col flex-shrink-0 z-20 shadow-[4px_0_24px_rgba(0,0,0,0.02)]">
+<!-- Search & Filters -->
+<div class="p-6 border-b border-outline-variant bg-surface-container-lowest z-10 sticky top-0">
+<div class="relative mb-4">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline">search</span>
+<input class="w-full h-12 pl-10 pr-4 bg-surface-container-low border border-outline-variant rounded focus:border-primary focus:ring-1 focus:ring-primary transition-colors text-body-md text-on-surface placeholder:text-outline outline-none" placeholder="Search restaurants or locations..." type="text"/>
+</div>
+<div class="flex gap-2 overflow-x-auto pb-2 custom-scrollbar hide-scrollbar">
+<button class="flex-shrink-0 h-8 px-4 rounded-full border border-outline-variant text-label-caps font-label-caps text-on-surface-variant hover:bg-surface-container-low hover:text-primary transition-colors flex items-center gap-1">
+                        Stars <span class="material-symbols-outlined text-[16px]">arrow_drop_down</span>
+</button>
+<button class="flex-shrink-0 h-8 px-4 rounded-full border border-outline-variant text-label-caps font-label-caps text-on-surface-variant hover:bg-surface-container-low hover:text-primary transition-colors flex items-center gap-1">
+                        State <span class="material-symbols-outlined text-[16px]">arrow_drop_down</span>
+</button>
+<button class="flex-shrink-0 h-8 px-4 rounded-full border border-outline-variant text-label-caps font-label-caps text-on-surface-variant hover:bg-surface-container-low hover:text-primary transition-colors flex items-center gap-1">
+                        Cuisine <span class="material-symbols-outlined text-[16px]">arrow_drop_down</span>
+</button>
+<button class="flex-shrink-0 h-8 px-4 rounded-full border border-outline-variant text-label-caps font-label-caps text-on-surface-variant hover:bg-surface-container-low hover:text-primary transition-colors flex items-center gap-1">
+                        Saved
+                    </button>
+</div>
+</div>
+<!-- Scrollable List -->
+<div class="flex-1 overflow-y-auto custom-scrollbar p-4 space-y-2">
+<!-- Item 1 -->
+<div class="p-4 rounded-lg border border-outline-variant hover:shadow-[0_4px_20px_rgba(0,0,0,0.04)] transition-all cursor-pointer bg-surface-container-lowest group flex justify-between items-center">
+<div>
+<div class="flex items-center gap-1 mb-1">
+<span class="material-symbols-outlined text-[14px] text-restrained-gold" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[14px] text-restrained-gold" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[14px] text-restrained-gold" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<h3 class="font-serif text-[22px] text-primary leading-tight mb-1">Benu</h3>
+<p class="font-meta-data text-meta-data text-on-surface-variant">Contemporary • San Francisco</p>
+</div>
+<button class="h-8 w-8 rounded-full border border-outline-variant flex items-center justify-center text-outline group-hover:text-primary group-hover:border-primary transition-colors">
+<span class="material-symbols-outlined text-[18px]">bookmark</span>
+</button>
+</div>
+<!-- Item 2 (Selected) -->
+<div class="p-4 rounded-lg border-2 border-primary-green bg-surface-container-low shadow-[0_4px_20px_rgba(0,0,0,0.04)] cursor-pointer flex justify-between items-center relative overflow-hidden">
+<div class="absolute left-0 top-0 bottom-0 w-1 bg-primary-green"></div>
+<div class="pl-2">
+<div class="flex items-center gap-1 mb-1">
+<span class="material-symbols-outlined text-[14px] text-restrained-gold" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[14px] text-restrained-gold" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<h3 class="font-serif text-[22px] text-primary leading-tight mb-1">Atomix</h3>
+<p class="font-meta-data text-meta-data text-on-surface-variant">Korean • New York</p>
+</div>
+<button class="h-8 w-8 rounded-full border border-primary-green flex items-center justify-center text-primary-green bg-primary-fixed-dim/20 transition-colors">
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">bookmark</span>
+</button>
+</div>
+<!-- Item 3 -->
+<div class="p-4 rounded-lg border border-outline-variant hover:shadow-[0_4px_20px_rgba(0,0,0,0.04)] transition-all cursor-pointer bg-surface-container-lowest group flex justify-between items-center">
+<div>
+<div class="flex items-center gap-1 mb-1">
+<span class="material-symbols-outlined text-[14px] text-restrained-gold" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[14px] text-restrained-gold" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<h3 class="font-serif text-[22px] text-primary leading-tight mb-1">Blue Hill at Stone Barns</h3>
+<p class="font-meta-data text-meta-data text-on-surface-variant">American • Tarrytown</p>
+</div>
+<button class="h-8 w-8 rounded-full border border-outline-variant flex items-center justify-center text-outline group-hover:text-primary group-hover:border-primary transition-colors">
+<span class="material-symbols-outlined text-[18px]">bookmark</span>
+</button>
+</div>
+<!-- Item 4 -->
+<div class="p-4 rounded-lg border border-outline-variant hover:shadow-[0_4px_20px_rgba(0,0,0,0.04)] transition-all cursor-pointer bg-surface-container-lowest group flex justify-between items-center">
+<div>
+<div class="flex items-center gap-1 mb-1">
+<span class="material-symbols-outlined text-[14px] text-restrained-gold" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[14px] text-restrained-gold" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[14px] text-restrained-gold" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<h3 class="font-serif text-[22px] text-primary leading-tight mb-1">The French Laundry</h3>
+<p class="font-meta-data text-meta-data text-on-surface-variant">French • Yountville</p>
+</div>
+<button class="h-8 w-8 rounded-full border border-outline-variant flex items-center justify-center text-outline group-hover:text-primary group-hover:border-primary transition-colors">
+<span class="material-symbols-outlined text-[18px]">bookmark</span>
+</button>
+</div>
+</div>
+<!-- Sticky Details Card -->
+<div class="p-6 border-t border-outline-variant bg-surface-container-lowest z-10 sticky bottom-0 shadow-[0_-4px_24px_rgba(0,0,0,0.04)]">
+<div class="flex justify-between items-start mb-4">
+<div>
+<div class="flex items-center gap-2 mb-2">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-restrained-gold" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[14px] text-restrained-gold" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase tracking-widest">Selected</span>
+</div>
+<h2 class="font-serif text-[32px] text-primary leading-none mb-2">Atomix</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">Innovative Korean tasting menu in an elegant, minimalist townhouse setting.</p>
+</div>
+</div>
+<div class="flex gap-3 mb-6">
+<button class="flex-1 h-12 bg-primary-green text-on-primary rounded font-label-caps text-label-caps uppercase tracking-wider hover:bg-primary transition-colors flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-[18px]">restaurant_menu</span>
+                        Reserve
+                    </button>
+<button class="h-12 px-6 border border-outline-variant text-primary rounded font-label-caps text-label-caps uppercase tracking-wider hover:bg-surface-container-low hover:border-primary transition-colors flex items-center justify-center">
+                        Details
+                    </button>
+</div>
+<!-- Google Integration Section -->
+<div class="border-t border-outline-variant pt-4">
+<p class="font-label-caps text-[10px] text-outline uppercase tracking-wider mb-3">Live place information from Google</p>
+<div class="flex gap-4">
+<div class="w-16 h-16 rounded overflow-hidden flex-shrink-0 bg-surface-variant">
+<img class="w-full h-full object-cover" data-alt="A macro shot of a meticulously plated fine dining Korean dish featuring delicate, colorful ingredients arranged on a minimalist matte black ceramic plate. High-key lighting highlights the intricate textures. The overall aesthetic is highly sophisticated, clean, and editorial, reflecting a premium Michelin-starred dining experience." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC4wwM3vW4yw1zApLoid_2XxUpzEim65xm-gl9ShkfY4iuIycQElQ8fXqLkZFqhzqb1nCqgYi2B37U2HH2VF03S91mDDJTaKEOD98fUXRQ_SuNj5GYBwLYLyErR5o5uP2DU1SKvD8apXRPZuWl7tx5V6llucvzgAOOCcXFCczsYv3P3Ln6f2t_NFIMO48MSy33ezxW0ernsEWNt4AscYL-K8Ro8K5euIlxsgPyr5NGAaCNWHhJAfmmRv-bzetSMQaVZgUUmFerQ9VE"/>
+</div>
+<div class="flex flex-col justify-center">
+<div class="flex items-center gap-1 mb-1">
+<span class="font-meta-data text-meta-data font-medium text-primary">4.8</span>
+<span class="material-symbols-outlined text-[14px] text-secondary-fixed-dim" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-meta-data text-[12px] text-outline ml-1">(1,245)</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-primary-fixed-dim"></span>
+<span class="font-meta-data text-[13px] text-on-surface-variant">Open • Closes 11 PM</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</aside>
+<!-- Right Side: Map -->
+<section class="flex-1 relative map-bg">
+<!-- Simulated Map Texture/Background -->
+<div class="absolute inset-0 opacity-50 pointer-events-none" style="background-image: radial-gradient(circle at center, transparent 0%, #f0f2f0 100%);"></div>
+<!-- Floating Search Area Button -->
+<div class="absolute top-6 left-1/2 -translate-x-1/2 z-10">
+<button class="h-10 px-6 bg-surface-container-lowest text-primary rounded-full shadow-[0_4px_12px_rgba(0,0,0,0.1)] font-label-caps text-label-caps uppercase tracking-wider hover:bg-surface-container-low transition-all flex items-center gap-2 border border-outline-variant">
+<span class="material-symbols-outlined text-[18px]">refresh</span>
+                    Search this area
+                </button>
+</div>
+<!-- Map Markers -->
+<!-- Benu Marker -->
+<div class="absolute top-1/4 left-1/3 -translate-x-1/2 -translate-y-1/2 flex flex-col items-center group cursor-pointer">
+<div class="bg-surface-container-lowest border border-outline-variant px-3 py-1.5 rounded text-meta-data font-meta-data font-medium text-primary shadow-sm mb-1 opacity-0 group-hover:opacity-100 transition-opacity">Benu</div>
+<div class="w-8 h-8 rounded-full bg-primary-green flex items-center justify-center text-on-primary shadow-md border-2 border-surface-container-lowest">
+<span class="material-symbols-outlined text-[16px]">restaurant</span>
+</div>
+</div>
+<!-- Atomix Marker (Selected) -->
+<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex flex-col items-center cursor-pointer z-10">
+<div class="bg-surface-container-lowest border border-primary-green px-3 py-1.5 rounded text-meta-data font-meta-data font-medium text-primary shadow-md mb-2">Atomix</div>
+<div class="relative flex items-center justify-center">
+<div class="absolute inset-0 rounded-full bg-restrained-gold/20 animate-ping"></div>
+<div class="absolute -inset-2 rounded-full border border-restrained-gold/50"></div>
+<div class="w-10 h-10 rounded-full bg-primary-green flex items-center justify-center text-on-primary shadow-lg border-2 border-restrained-gold z-10">
+<span class="material-symbols-outlined text-[20px]">restaurant</span>
+</div>
+</div>
+</div>
+<!-- Blue Hill Marker -->
+<div class="absolute bottom-1/3 right-1/4 -translate-x-1/2 -translate-y-1/2 flex flex-col items-center group cursor-pointer">
+<div class="bg-surface-container-lowest border border-outline-variant px-3 py-1.5 rounded text-meta-data font-meta-data font-medium text-primary shadow-sm mb-1 opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">Blue Hill</div>
+<div class="w-8 h-8 rounded-full bg-primary-green flex items-center justify-center text-on-primary shadow-md border-2 border-surface-container-lowest">
+<span class="material-symbols-outlined text-[16px]">restaurant</span>
+</div>
+</div>
+<!-- Floating Map Controls -->
+<div class="absolute right-6 bottom-6 flex flex-col gap-4 z-10">
+<!-- Zoom Controls -->
+<div class="flex flex-col bg-surface-container-lowest rounded shadow-[0_4px_12px_rgba(0,0,0,0.1)] border border-outline-variant overflow-hidden">
+<button class="w-10 h-10 flex items-center justify-center text-on-surface hover:bg-surface-container-low transition-colors border-b border-outline-variant">
+<span class="material-symbols-outlined">add</span>
+</button>
+<button class="w-10 h-10 flex items-center justify-center text-on-surface hover:bg-surface-container-low transition-colors">
+<span class="material-symbols-outlined">remove</span>
+</button>
+</div>
+<!-- Action Controls -->
+<div class="flex flex-col gap-2">
+<button class="w-10 h-10 bg-surface-container-lowest rounded shadow-[0_4px_12px_rgba(0,0,0,0.1)] border border-outline-variant flex items-center justify-center text-primary hover:bg-surface-container-low transition-colors" title="My Location">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">my_location</span>
+</button>
+<button class="w-10 h-10 bg-surface-container-lowest rounded shadow-[0_4px_12px_rgba(0,0,0,0.1)] border border-outline-variant flex items-center justify-center text-outline hover:bg-surface-container-low hover:text-primary transition-colors" title="Fit to markers">
+<span class="material-symbols-outlined">crop_free</span>
+</button>
+</div>
+</div>
+<!-- Map Data Attribution -->
+<div class="absolute bottom-2 left-4 z-10 text-[10px] text-outline font-meta-data">
+                Map data ©2024 Google
+            </div>
+</section>
+</main>
+</body></html>

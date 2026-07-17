@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Dining Passport - Component Library</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Literata:wght@400;500;600&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Literata:wght@100..900&display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-family: 'Material Symbols Outlined';
+            font-weight: normal;
+            font-style: normal;
+            font-size: 24px;
+            line-height: 1;
+            letter-spacing: normal;
+            text-transform: none;
+            display: inline-block;
+            white-space: nowrap;
+            word-wrap: normal;
+            direction: ltr;
+            -webkit-font-feature-settings: 'liga';
+            -webkit-font-smoothing: antialiased;
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface": "#fcf9f8",
+                        "tertiary": "#47000e",
+                        "surface-bright": "#fcf9f8",
+                        "on-tertiary-fixed": "#40000c",
+                        "on-secondary-container": "#765400",
+                        "outline": "#717975",
+                        "on-primary-fixed": "#002118",
+                        "error-container": "#ffdad6",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-dim": "#dcd9d9",
+                        "primary": "#00251b",
+                        "on-secondary-fixed": "#271900",
+                        "surface-variant": "#e5e2e1",
+                        "on-tertiary-container": "#ef7881",
+                        "on-primary": "#ffffff",
+                        "primary-container": "#123b2f",
+                        "surface-container": "#f0edec",
+                        "secondary-fixed-dim": "#f3be5a",
+                        "on-tertiary": "#ffffff",
+                        "on-error": "#ffffff",
+                        "surface-container-low": "#f6f3f2",
+                        "secondary": "#7c5800",
+                        "on-tertiary-fixed-variant": "#822530",
+                        "on-primary-fixed-variant": "#274e41",
+                        "inverse-on-surface": "#f3f0ef",
+                        "tertiary-fixed-dim": "#ffb3b5",
+                        "on-primary-container": "#7ca596",
+                        "primary-fixed-dim": "#a5d0bf",
+                        "surface-tint": "#3f6658",
+                        "on-secondary": "#ffffff",
+                        "surface-container-highest": "#e5e2e1",
+                        "error": "#ba1a1a",
+                        "tertiary-container": "#68111f",
+                        "secondary-fixed": "#ffdea7",
+                        "tertiary-fixed": "#ffdada",
+                        "on-error-container": "#93000a",
+                        "surface-container-high": "#ebe7e7",
+                        "outline-variant": "#c0c8c3",
+                        "on-surface": "#1c1b1b",
+                        "on-background": "#1c1b1b",
+                        "secondary-container": "#ffc964",
+                        "background": "#fcf9f8",
+                        "on-surface-variant": "#414845",
+                        "inverse-surface": "#313030",
+                        "inverse-primary": "#a5d0bf",
+                        "primary-fixed": "#c1ecda",
+                        "on-secondary-fixed-variant": "#5e4200"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "section-padding": "80px",
+                        "gutter": "24px",
+                        "container-max-width": "1280px",
+                        "margin-desktop": "64px",
+                        "unit": "8px",
+                        "margin-mobile": "20px"
+                    },
+                    "fontFamily": {
+                        "label-caps": ["Inter"],
+                        "meta-data": ["Inter"],
+                        "headline-md": ["Literata"],
+                        "display-lg-mobile": ["Literata"],
+                        "headline-sm": ["Literata"],
+                        "body-lg": ["Inter"],
+                        "body-md": ["Inter"],
+                        "display-lg": ["Literata"]
+                    },
+                    "fontSize": {
+                        "label-caps": ["12px", { "lineHeight": "1", "letterSpacing": "0.08em", "fontWeight": "600" }],
+                        "meta-data": ["14px", { "lineHeight": "1.4", "fontWeight": "400" }],
+                        "headline-md": ["32px", { "lineHeight": "1.2", "fontWeight": "400" }],
+                        "display-lg-mobile": ["36px", { "lineHeight": "1.1", "letterSpacing": "-0.01em", "fontWeight": "400" }],
+                        "headline-sm": ["24px", { "lineHeight": "1.3", "fontWeight": "500" }],
+                        "body-lg": ["18px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "body-md": ["16px", { "lineHeight": "1.5", "fontWeight": "400" }],
+                        "display-lg": ["48px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "400" }]
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-surface-container-lowest text-on-surface antialiased min-h-screen">
+<div class="max-w-[1440px] mx-auto py-24 px-16">
+<header class="mb-24 pb-8 border-b border-outline-variant">
+<h1 class="font-display-lg text-display-lg text-primary mb-4">Dining Passport Component Library</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">A comprehensive reference for the design system's visual tokens, components, and patterns, built for an audience of discerning epicureans.</p>
+</header>
+<!-- 1. GLOBAL -->
+<section class="mb-32">
+<h2 class="font-headline-md text-headline-md text-primary mb-12 flex items-center gap-4">
+<span class="w-8 h-[1px] bg-primary block"></span> 1. Global Components
+            </h2>
+<div class="space-y-16 bg-surface-container-lowest border border-outline-variant rounded-lg p-8">
+<div>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-6">Header - TopAppBar</h3>
+<nav class="sticky top-0 w-full h-[72px] bg-surface border-b border-outline-variant flex justify-between items-center px-margin-desktop relative z-50">
+<div class="flex items-center">
+<span class="text-headline-sm font-headline-sm text-primary tracking-tight mr-8">Dining Passport</span>
+<div class="hidden md:flex space-x-6">
+<a class="text-primary border-b-2 border-secondary font-semibold pb-1" href="#">Explore</a>
+<a class="text-on-surface-variant font-medium hover:text-primary transition-colors duration-200" href="#">Map</a>
+<a class="text-on-surface-variant font-medium hover:text-primary transition-colors duration-200" href="#">Michelin Stars</a>
+<a class="text-on-surface-variant font-medium hover:text-primary transition-colors duration-200" href="#">Passport</a>
+</div>
+</div>
+<div class="flex items-center space-x-4">
+<button class="text-on-surface-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined">search</span>
+</button>
+<button class="text-on-surface-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined">account_circle</span>
+</button>
+</div>
+</nav>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-6">Footer</h3>
+<footer class="w-full py-section-padding bg-surface-container-low border-t border-outline-variant flex flex-col md:flex-row justify-between items-center px-margin-desktop">
+<div class="mb-8 md:mb-0">
+<span class="text-headline-sm font-headline-sm text-primary block mb-2">Dining Passport</span>
+<span class="text-meta-data font-meta-data text-on-surface-variant">Independent discovery platform. Not affiliated with the Michelin Guide.</span>
+</div>
+<div class="flex flex-wrap gap-6 justify-center md:justify-end">
+<a class="text-body-md font-body-md text-on-surface-variant hover:text-secondary transition-colors" href="#">Privacy Policy</a>
+<a class="text-body-md font-body-md text-on-surface-variant hover:text-secondary transition-colors" href="#">Terms of Service</a>
+<a class="text-body-md font-body-md text-on-surface-variant hover:text-secondary transition-colors" href="#">Contact</a>
+<a class="text-body-md font-body-md text-on-surface-variant hover:text-secondary transition-colors" href="#">Press Kit</a>
+</div>
+</footer>
+</div>
+</div>
+</section>
+<!-- 2. TYPOGRAPHY -->
+<section class="mb-32">
+<h2 class="font-headline-md text-headline-md text-primary mb-12 flex items-center gap-4">
+<span class="w-8 h-[1px] bg-primary block"></span> 2. Typography Hierarchy
+            </h2>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-16 bg-surface-container-low rounded-lg p-12">
+<div class="space-y-12">
+<div>
+<div class="text-meta-data font-meta-data text-on-surface-variant mb-2">Display Large (48px) - Page Titles</div>
+<h1 class="font-display-lg text-display-lg text-primary">Le Bernardin</h1>
+</div>
+<div>
+<div class="text-meta-data font-meta-data text-on-surface-variant mb-2">Headline Medium (32px) - Section Headings</div>
+<h2 class="font-headline-md text-headline-md text-primary">Tasting Menus</h2>
+</div>
+<div>
+<div class="text-meta-data font-meta-data text-on-surface-variant mb-2">Headline Small (24px) - Restaurant Names</div>
+<h3 class="font-headline-sm text-headline-sm text-primary">Eleven Madison Park</h3>
+</div>
+</div>
+<div class="space-y-12">
+<div>
+<div class="text-meta-data font-meta-data text-on-surface-variant mb-2">Body Large (18px) - Editorial Text</div>
+<p class="font-body-lg text-body-lg text-on-surface">The seasonal tasting menu focuses on locally sourced ingredients, presenting a delicate balance of classical technique and modern interpretation.</p>
+</div>
+<div>
+<div class="text-meta-data font-meta-data text-on-surface-variant mb-2">Body Medium (16px) - Standard Text</div>
+<p class="font-body-md text-body-md text-on-surface">Reservations open 30 days in advance. A smart casual dress code is enforced in the main dining room.</p>
+</div>
+<div>
+<div class="text-meta-data font-meta-data text-on-surface-variant mb-2">Meta Data (14px) - Details</div>
+<p class="font-meta-data text-meta-data text-on-surface-variant">$$$$ • Contemporary French • Midtown</p>
+</div>
+<div>
+<div class="text-meta-data font-meta-data text-on-surface-variant mb-2">Label Caps (12px) - Tags & UI Elements</div>
+<p class="font-label-caps text-label-caps text-primary tracking-widest uppercase">Make Reservation</p>
+</div>
+</div>
+</div>
+</section>
+<!-- 3. ACTIONS -->
+<section class="mb-32">
+<h2 class="font-headline-md text-headline-md text-primary mb-12 flex items-center gap-4">
+<span class="w-8 h-[1px] bg-primary block"></span> 3. Actions & Inputs
+            </h2>
+<div class="bg-surface-container-low rounded-lg p-12 space-y-12">
+<div>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-6">Buttons</h3>
+<div class="flex flex-wrap gap-6 items-center">
+<button class="h-12 px-6 bg-primary-container text-on-primary font-body-md text-body-md font-semibold rounded hover:bg-primary transition-colors flex items-center gap-2">
+                            Reserve Table
+                        </button>
+<button class="h-12 px-6 bg-transparent border border-outline-variant text-primary font-body-md text-body-md font-semibold rounded hover:bg-surface-variant transition-colors flex items-center gap-2">
+                            View Menu
+                        </button>
+<button class="h-12 px-6 bg-transparent text-on-surface-variant font-body-md text-body-md hover:text-primary transition-colors flex items-center gap-2">
+                            Save to Passport <span class="material-symbols-outlined text-[20px]">bookmark_add</span>
+</button>
+<button class="h-12 w-12 flex items-center justify-center border border-outline-variant rounded-full text-on-surface-variant hover:text-primary hover:border-primary transition-colors">
+<span class="material-symbols-outlined" data-weight="fill">favorite</span>
+</button>
+<button class="h-12 w-12 flex items-center justify-center border border-outline-variant rounded-full text-error hover:bg-error-container transition-colors">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">favorite</span>
+</button>
+</div>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-6">Input Fields</h3>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl">
+<div class="flex flex-col gap-2">
+<label class="font-label-caps text-label-caps text-on-surface-variant uppercase tracking-wider">Location</label>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant">location_on</span>
+<input class="w-full h-12 pl-10 pr-4 bg-surface border border-outline-variant rounded text-body-md font-body-md focus:border-primary focus:ring-0 outline-none transition-colors placeholder:text-surface-dim" placeholder="City or neighborhood" type="text"/>
+</div>
+</div>
+<div class="flex flex-col gap-2">
+<label class="font-label-caps text-label-caps text-on-surface-variant uppercase tracking-wider">Date</label>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant">calendar_today</span>
+<input class="w-full h-12 pl-10 pr-4 bg-surface border border-outline-variant rounded text-body-md font-body-md focus:border-primary focus:ring-0 outline-none transition-colors placeholder:text-surface-dim" placeholder="Select date" type="text"/>
+</div>
+</div>
+<div class="flex flex-col gap-2">
+<label class="font-label-caps text-label-caps text-on-surface-variant uppercase tracking-wider">Guests</label>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant">group</span>
+<select class="w-full h-12 pl-10 pr-8 bg-surface border border-outline-variant rounded text-body-md font-body-md focus:border-primary focus:ring-0 outline-none transition-colors appearance-none cursor-pointer">
+<option>2 People</option>
+<option>3 People</option>
+<option>4 People</option>
+</select>
+<span class="material-symbols-outlined absolute right-3 top-1/2 -translate-y-1/2 text-on-surface-variant pointer-events-none">expand_more</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 5. RESTAURANT COMPONENTS -->
+<section class="mb-32">
+<h2 class="font-headline-md text-headline-md text-primary mb-12 flex items-center gap-4">
+<span class="w-8 h-[1px] bg-primary block"></span> 5. Restaurant Cards
+            </h2>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Standard Discovery Card -->
+<div class="bg-surface group cursor-pointer">
+<div class="aspect-[4/3] mb-4 overflow-hidden rounded relative">
+<div class="bg-cover bg-center w-full h-full group-hover:scale-105 transition-transform duration-500" data-alt="A meticulously plated high-end contemporary dish in a minimalist, bright dining room setting. The lighting is soft and natural, emphasizing the textures of the food and the pristine white plate. The mood is sophisticated, exclusive, and quiet luxury, typical of a Michelin-starred restaurant experience." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuARauvISYaP3KeaiceqpLiusj5BHBAtyOITb8aK4bdyq3G9_zXswriS8zzWTnx0TW78Sf9daETBVkwOq3j-3Fbj6tjdWDtK5v8nIiBxu6pQY5iN71ad8-lj33DjLqmWcayIeP1Z_vqMA2n2rwE143cKfvPKihLBpwFhfhdsEqN-2ctPCjXsSHD6eHbKZBJJeKrqYkaVaal0AUJfxlIRC5nF56sw-NtZPy-MyUXcu47VQbRuVIk_k9E2d2_9UfvnYO40SQaH-31fz8c')"></div>
+<div class="absolute top-3 right-3 bg-surface/90 backdrop-blur-sm px-2 py-1 rounded flex items-center gap-1 shadow-sm">
+<span class="material-symbols-outlined text-[16px] text-primary" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-label-caps text-label-caps text-primary">3 STARS</span>
+</div>
+</div>
+<div class="flex justify-between items-start">
+<div>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-1 group-hover:text-secondary transition-colors">Alinea</h3>
+<p class="font-meta-data text-meta-data text-on-surface-variant">$$$$ • Innovative • Chicago</p>
+</div>
+<button class="text-on-surface-variant hover:text-primary mt-1">
+<span class="material-symbols-outlined">bookmark</span>
+</button>
+</div>
+</div>
+<!-- Editorial Featured Card (Spans 2 columns) -->
+<div class="md:col-span-2 bg-surface-container-low rounded group cursor-pointer flex flex-col md:flex-row overflow-hidden border border-outline-variant hover:shadow-[0_4px_20px_rgba(0,0,0,0.04)] transition-shadow">
+<div class="w-full md:w-1/2 aspect-[4/3] md:aspect-auto h-full relative">
+<div class="bg-cover bg-center w-full h-full absolute inset-0" data-alt="An elegant, softly lit interior of a luxury fine dining restaurant. The tables are set with crisp white linens and fine glassware. The atmosphere is quiet, exclusive, and moody with warm, low-key lighting highlighting rich wood textures and a sophisticated architectural design." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCx-wUylCiDihNImf4h1aFpTjZzYoPqoQ2OvTW4pl3OPy1ByHuq0Qvo0lYjM8wCiGJZN_3y6wxUVVx0jYYebjKJ0KaHYCugIOSBiZ0JNgGYzG_8-JswwXGwRa6jfNsJ-PMyUiLJGITvipfq9__A9B53N16Gho3Ca7MM4eO-kdrwMshlURJNHP8phy4nH9WhGnhRlVTXJFD-EFQiDeOAAgETW_waHZelX2rDbjoOWfkNPt-rO0JYs4eXwfRpeHgjDWYQwAmzobA_k10')"></div>
+</div>
+<div class="w-full md:w-1/2 p-8 flex flex-col justify-center">
+<div class="inline-flex items-center gap-2 mb-4">
+<span class="font-label-caps text-label-caps text-primary uppercase tracking-widest px-2 py-1 bg-surface-variant rounded">Editors' Choice</span>
+</div>
+<h3 class="font-display-lg-mobile text-display-lg-mobile text-primary mb-4 group-hover:text-secondary transition-colors">The French Laundry</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6 line-clamp-3">Thomas Keller's iconic Napa Valley destination continues to set the standard for fine dining in America, offering an unparalleled sequence of meticulously crafted classical French dishes.</p>
+<div class="flex items-center justify-between mt-auto pt-6 border-t border-outline-variant">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<span class="font-meta-data text-meta-data text-on-surface-variant">Yountville, CA</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 8. GOOGLE MODULE -->
+<section class="mb-32">
+<h2 class="font-headline-md text-headline-md text-primary mb-12 flex items-center gap-4">
+<span class="w-8 h-[1px] bg-primary block"></span> 8. Google Module Integration
+            </h2>
+<div class="max-w-3xl border border-outline-variant rounded p-8 bg-surface">
+<div class="flex items-center gap-2 mb-6">
+<span class="material-symbols-outlined text-on-surface-variant">info</span>
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase tracking-wider">Photos and live place information from Google</span>
+</div>
+<div class="flex flex-col md:flex-row gap-8">
+<div class="w-full md:w-1/3 flex flex-col gap-4">
+<div class="flex items-end gap-2">
+<span class="font-display-lg-mobile text-display-lg-mobile text-primary leading-none">4.8</span>
+<div class="flex flex-col pb-1">
+<div class="flex text-secondary-fixed-dim text-[16px]">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined">star_half</span>
+</div>
+<span class="font-meta-data text-meta-data text-on-surface-variant text-sm">2,419 reviews</span>
+</div>
+</div>
+<div class="space-y-3 pt-4 border-t border-outline-variant">
+<div class="flex items-start gap-3">
+<span class="material-symbols-outlined text-on-surface-variant text-[20px] mt-0.5">schedule</span>
+<div>
+<span class="block font-meta-data text-meta-data text-on-surface font-medium">Open ⋅ Closes 10 PM</span>
+<span class="block font-meta-data text-meta-data text-on-surface-variant text-sm mt-1">Tue-Sun, 5:30 PM - 10:00 PM</span>
+</div>
+</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-on-surface-variant text-[20px]">language</span>
+<a class="font-meta-data text-meta-data text-primary hover:underline" href="#">per-se.com</a>
+</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-on-surface-variant text-[20px]">call</span>
+<span class="font-meta-data text-meta-data text-on-surface">(212) 823-9335</span>
+</div>
+</div>
+</div>
+<div class="w-full md:w-2/3">
+<div class="grid grid-cols-2 gap-2 h-full min-h-[200px]">
+<div class="bg-cover bg-center rounded h-full" data-alt="A detailed close-up of a beautifully composed gourmet dish featuring vibrant green herbs, a delicate sauce, and perfectly cooked protein. The setting suggests a high-end, quiet luxury dining environment with soft, intentional lighting highlighting the culinary artistry." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBLvlKCSnQwMEyDgLunoZl2IV9uAWMMGq67CMsEpjGTMK-tBvhIK-SicpoWK2vOOdRRJ0WHLby_RynXjra79s8jpNOcXpYw0cLK5agt4lBnjKIztB-CJrqL_mnMLjc_mlgNG_reD1l1RULCZRT5aePTLxvLuGq5oBw-thtxj913QQvUvJl_HYUzkUanfeVTIKe2clIGke5j1m5yewKi8YLQrcUagaRyUCO7kguvDvDNQ0aJFI37SyEyebuK-hTTLcgImCOTz0YlIrk')"></div>
+<div class="grid grid-rows-2 gap-2 h-full">
+<div class="bg-cover bg-center rounded h-full" data-alt="An exterior view of a high-end restaurant entrance with subtle signage, clean architectural lines, and a welcoming but exclusive ambiance. Soft street lighting suggests an early evening arrival." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCfG62Pv9bYktPanVDYAjCHTn_zHaElbilHV1eID9AMBo74Mh_jpB2QTdm5P5ZPJlt5-EWBd8BTdVteZH8BXOOExwAdEZpTj3pSMexZkpMVDQWGz4Bha-R4OOdv25ecp_B6M2RIi9AUzqCQZoUIcdKp3Et6LRkq_ovu-WFXriSlIcy_6mzCRuXnnAIoC2cXehDveWTiwx9mYOin79en315DqapLamg0CIE3F7i-zaoR5O2wHmw1LY9_PkDtrFaMzTRkcq_IPkXNXqs')"></div>
+<div class="bg-surface-container flex items-center justify-center rounded cursor-pointer hover:bg-surface-variant transition-colors">
+<span class="font-body-md text-body-md text-on-surface-variant font-medium">+42 photos</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</div>
+</body></html>

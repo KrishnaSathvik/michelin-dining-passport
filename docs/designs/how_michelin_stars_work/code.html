@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>How Michelin Stars Work - Dining Passport</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Literata:opsz,wght@7..72,400;7..72,500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "on-error-container": "#93000a",
+                      "tertiary": "#47000e",
+                      "surface": "#fcf9f8",
+                      "secondary": "#7c5800",
+                      "inverse-primary": "#a5d0bf",
+                      "inverse-surface": "#313030",
+                      "secondary-container": "#ffc964",
+                      "primary-container": "#123b2f",
+                      "on-surface": "#1c1b1b",
+                      "on-primary-fixed-variant": "#274e41",
+                      "on-tertiary": "#ffffff",
+                      "background": "#fcf9f8",
+                      "on-primary": "#ffffff",
+                      "primary-fixed": "#c1ecda",
+                      "inverse-on-surface": "#f3f0ef",
+                      "surface-bright": "#fcf9f8",
+                      "error": "#ba1a1a",
+                      "surface-tint": "#3f6658",
+                      "primary-fixed-dim": "#a5d0bf",
+                      "surface-container-low": "#f6f3f2",
+                      "on-surface-variant": "#414845",
+                      "on-error": "#ffffff",
+                      "surface-dim": "#dcd9d9",
+                      "on-tertiary-container": "#ef7881",
+                      "on-secondary-container": "#765400",
+                      "surface-container-highest": "#e5e2e1",
+                      "tertiary-container": "#68111f",
+                      "on-primary-container": "#7ca596",
+                      "surface-container": "#f0edec",
+                      "on-primary-fixed": "#002118",
+                      "outline-variant": "#c0c8c3",
+                      "surface-variant": "#e5e2e1",
+                      "on-background": "#1c1b1b",
+                      "on-secondary-fixed": "#271900",
+                      "surface-container-high": "#ebe7e7",
+                      "secondary-fixed-dim": "#f3be5a",
+                      "error-container": "#ffdad6",
+                      "tertiary-fixed": "#ffdada",
+                      "outline": "#717975",
+                      "on-secondary-fixed-variant": "#5e4200",
+                      "secondary-fixed": "#ffdea7",
+                      "on-tertiary-fixed": "#40000c",
+                      "on-tertiary-fixed-variant": "#822530",
+                      "primary": "#00251b",
+                      "on-secondary": "#ffffff",
+                      "tertiary-fixed-dim": "#ffb3b5",
+                      "surface-container-lowest": "#ffffff"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.125rem",
+                      "lg": "0.25rem",
+                      "xl": "0.5rem",
+                      "full": "0.75rem",
+                      "2xl": "0.75rem", // Adding 12px for specific requests
+              },
+              "spacing": {
+                      "unit": "8px",
+                      "container-max-width": "1280px",
+                      "section-padding": "80px",
+                      "margin-mobile": "20px",
+                      "margin-desktop": "64px",
+                      "gutter": "24px"
+              },
+              "fontFamily": {
+                      "display-lg": [
+                              "Literata"
+                      ],
+                      "headline-sm": [
+                              "Literata"
+                      ],
+                      "body-md": [
+                              "Inter"
+                      ],
+                      "label-caps": [
+                              "Inter"
+                      ],
+                      "body-lg": [
+                              "Inter"
+                      ],
+                      "meta-data": [
+                              "Inter"
+                      ],
+                      "headline-md": [
+                              "Literata"
+                      ],
+                      "display-lg-mobile": [
+                              "Literata"
+                      ]
+              },
+              "fontSize": {
+                      "display-lg": [
+                              "48px",
+                              {
+                                      "lineHeight": "1.1",
+                                      "letterSpacing": "-0.02em",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "headline-sm": [
+                              "24px",
+                              {
+                                      "lineHeight": "1.3",
+                                      "fontWeight": "500"
+                              }
+                      ],
+                      "body-md": [
+                              "16px",
+                              {
+                                      "lineHeight": "1.5",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "label-caps": [
+                              "12px",
+                              {
+                                      "lineHeight": "1",
+                                      "letterSpacing": "0.08em",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "body-lg": [
+                              "18px",
+                              {
+                                      "lineHeight": "1.6",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "meta-data": [
+                              "14px",
+                              {
+                                      "lineHeight": "1.4",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "headline-md": [
+                              "32px",
+                              {
+                                      "lineHeight": "1.2",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "display-lg-mobile": [
+                              "36px",
+                              {
+                                      "lineHeight": "1.1",
+                                      "letterSpacing": "-0.01em",
+                                      "fontWeight": "400"
+                              }
+                      ]
+              }
+      },
+          },
+        }
+    </script>
+<style>
+        .star-mark { font-family: 'Literata', serif; }
+        .ambient-shadow { box-shadow: 0px 4px 20px rgba(0,0,0,0.04); }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md antialiased selection:bg-primary-container selection:text-on-primary-container">
+<!-- TopNavBar -->
+<nav class="sticky top-0 z-50 flex justify-between items-center h-[72px] px-margin-desktop w-full bg-surface/95 backdrop-blur-sm border-b border-outline-variant dark:border-outline">
+<div class="text-headline-sm font-headline-sm text-primary dark:text-primary-fixed tracking-tight">
+            Dining Passport
+        </div>
+<div class="hidden md:flex items-center gap-6">
+<a class="text-on-surface-variant dark:text-surface-variant font-body-md text-body-md hover:text-primary dark:hover:text-primary-fixed transition-colors duration-200" href="#">Curations</a>
+<a class="text-on-surface-variant dark:text-surface-variant font-body-md text-body-md hover:text-primary dark:hover:text-primary-fixed transition-colors duration-200" href="#">Guides</a>
+<a class="text-on-surface-variant dark:text-surface-variant font-body-md text-body-md hover:text-primary dark:hover:text-primary-fixed transition-colors duration-200" href="#">Membership</a>
+<a class="text-primary dark:text-primary-fixed font-bold border-b-2 border-primary pb-1 font-body-md text-body-md hover:text-primary dark:hover:text-primary-fixed transition-colors duration-200 opacity-80 transition-opacity" href="#">About</a>
+</div>
+<div class="flex items-center">
+<button class="h-[48px] px-6 rounded bg-primary text-on-primary font-body-md font-semibold hover:bg-primary-container transition-colors">Sign In</button>
+</div>
+</nav>
+<!-- Hero Section -->
+<header class="relative w-full h-[600px] flex items-center justify-center px-margin-mobile md:px-margin-desktop bg-surface-container-low overflow-hidden">
+<div class="absolute inset-0 z-0 bg-cover bg-center opacity-30" data-alt="A restrained, elegant fine-dining atmosphere. Soft, warm overhead lighting illuminates a pristine white table cloth set with gleaming silverware and delicate crystal glassware, slightly out of focus in the background. The mood is quiet luxury, editorial, high-resolution photography with a minimalist aesthetic, utilizing a palette of soft whites, warm greys, and subtle hints of gold. The environment feels exclusive and meticulously curated." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuB8MFPL8iOXhS1qDCMV3lBBuktzVIUy0ZTfT6hZQ_ZhAfr3n4ck8pGQK52GApZLUKDOyIZMbYk4XKFWsbW7VAjgpzcctzHW3Gj-pOxeYsC_csPhPrpR4hW0L_4m-7PHDflr0TPuXtWOsI3BkLWyDAoKZaV3E2u2iq4MhgRY1HSAqPUkH5qYXV--kqXWmQa0dNnLJpJUr7v6HtHzJPQLdwXfZDeNrYhWpc8__UBX-LS0dDOSi4RXrIa7CnIzBg17jK3b6RfHD3lX2Oc')"></div>
+<div class="relative z-10 max-w-[800px] text-center flex flex-col items-center gap-4">
+<span class="font-label-caps text-label-caps text-primary tracking-widest uppercase">Understanding the distinctions</span>
+<h1 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-primary">How Michelin Stars Work</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mt-4">
+                Originating in 1900 as a guide for motorists, the Michelin Guide has evolved into the most recognized culinary distinction globally. Anonymous inspectors assess restaurants purely on the quality of the food on the plate, evaluating quality of ingredients, harmony of flavors, mastery of techniques, personality of the chef, and consistency across visits.
+            </p>
+<div class="mt-8 px-4 py-2 bg-surface/80 backdrop-blur rounded border border-outline-variant inline-flex items-center gap-2">
+<span class="material-symbols-outlined text-outline text-sm" style="font-variation-settings: 'FILL' 1;">info</span>
+<span class="font-meta-data text-meta-data text-on-surface-variant">Dining Passport is an independent discovery platform. Not affiliated with the Michelin Guide.</span>
+</div>
+</div>
+</header>
+<!-- Star Comparison Section (Bento Style) -->
+<section class="max-w-container-max-width mx-auto px-margin-mobile md:px-margin-desktop py-section-padding">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<!-- One Star -->
+<div class="bg-surface rounded-2xl p-8 border border-outline-variant hover:ambient-shadow transition-shadow flex flex-col h-full">
+<div class="text-secondary mb-4 text-4xl star-mark">*</div>
+<h2 class="font-headline-md text-headline-md text-primary mb-2">One Star</h2>
+<h3 class="font-body-lg text-body-lg text-on-surface-variant italic mb-6">"A very good restaurant in its category"</h3>
+<p class="font-body-md text-body-md text-on-surface mb-8 flex-grow">
+                    Signifies a restaurant that consistently prepares food to a high standard, using high-quality ingredients. A single star is a mark of exceptional talent and execution, indicating a kitchen operating at a level well above average.
+                </p>
+<div class="mt-auto">
+<div class="flex items-center gap-2 mb-6">
+<span class="px-3 py-1 bg-surface-container-high rounded text-meta-data font-meta-data text-on-surface-variant">Tracked count: 216</span>
+</div>
+<button class="w-full h-[48px] rounded border border-outline-variant text-primary font-body-md font-semibold hover:bg-surface-container-low transition-colors">Browse one-star restaurants</button>
+</div>
+</div>
+<!-- Two Stars -->
+<div class="bg-surface rounded-2xl p-8 border border-outline-variant hover:ambient-shadow transition-shadow flex flex-col h-full relative overflow-hidden">
+<div class="absolute top-0 right-0 w-32 h-32 bg-primary/5 rounded-bl-full -z-10"></div>
+<div class="text-secondary mb-4 text-4xl star-mark tracking-widest">**</div>
+<h2 class="font-headline-md text-headline-md text-primary mb-2">Two Stars</h2>
+<h3 class="font-body-lg text-body-lg text-on-surface-variant italic mb-6">"Excellent cooking, worth a detour"</h3>
+<p class="font-body-md text-body-md text-on-surface mb-8 flex-grow">
+                    Awarded when the personality and talent of the chef are evident in expertly crafted dishes. The food is refined and inspired, marking a destination that elevates dining from a meal to a memorable experience.
+                </p>
+<div class="mt-auto">
+<div class="flex items-center gap-2 mb-6">
+<span class="px-3 py-1 bg-surface-container-high rounded text-meta-data font-meta-data text-on-surface-variant">Tracked count: 39</span>
+</div>
+<button class="w-full h-[48px] rounded border border-outline-variant text-primary font-body-md font-semibold hover:bg-surface-container-low transition-colors">Browse two-star restaurants</button>
+</div>
+</div>
+<!-- Three Stars -->
+<div class="bg-primary text-on-primary rounded-2xl p-8 hover:ambient-shadow transition-shadow flex flex-col h-full relative overflow-hidden">
+<div class="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-primary-container to-primary opacity-50 z-0"></div>
+<div class="relative z-10 h-full flex flex-col">
+<div class="text-secondary-container mb-4 text-4xl star-mark tracking-widest">***</div>
+<h2 class="font-headline-md text-headline-md text-on-primary mb-2">Three Stars</h2>
+<h3 class="font-body-lg text-body-lg text-primary-fixed-dim italic mb-6">"Exceptional cuisine, worth a special journey"</h3>
+<p class="font-body-md text-body-md text-on-primary/90 mb-8 flex-grow">
+                        The ultimate accolade, awarded for the superlative execution of culinary art. These restaurants offer a peerless dining experience where ingredients are exemplary, techniques are flawless, and every dish is a masterpiece.
+                    </p>
+<div class="mt-auto">
+<div class="flex items-center gap-2 mb-6">
+<span class="px-3 py-1 bg-primary-container rounded text-meta-data font-meta-data text-primary-fixed">Tracked count: 16</span>
+</div>
+<button class="w-full h-[48px] rounded bg-secondary-container text-on-secondary-container font-body-md font-semibold hover:opacity-90 transition-opacity">Browse three-star restaurants</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Additional Distinctions -->
+<section class="bg-surface-container-low py-section-padding px-margin-mobile md:px-margin-desktop border-y border-outline-variant">
+<div class="max-w-container-max-width mx-auto">
+<h2 class="font-headline-md text-headline-md text-primary text-center mb-12">Beyond the Stars</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<!-- Bib Gourmand -->
+<div class="bg-surface p-6 rounded-xl border border-outline-variant flex items-start gap-4">
+<div class="w-12 h-12 rounded-full bg-secondary-fixed flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-on-secondary-fixed" style="font-variation-settings: 'FILL' 1;">restaurant</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-2">Bib Gourmand</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                            Recognizes establishments that deliver high-quality food at moderate prices. While Dining Passport focuses primarily on starred venues, select highly-curated Bib Gourmand selections appear in specific city guides.
+                        </p>
+</div>
+</div>
+<!-- Green Star -->
+<div class="bg-surface p-6 rounded-xl border border-outline-variant flex items-start gap-4">
+<div class="w-12 h-12 rounded-full bg-primary-fixed flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-on-primary-fixed" style="font-variation-settings: 'FILL' 1;">eco</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-2">Michelin Green Star</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                            Highlights restaurants at the forefront of sustainable gastronomy. Dining Passport tags these venues prominently within our curations, supporting ethical dining practices.
+                        </p>
+</div>
+</div>
+</div>
+<p class="text-center font-meta-data text-meta-data text-outline mt-8 max-w-3xl mx-auto">
+                Note: Coverage on Dining Passport is dependent on the availability of regional Michelin Guides. We continuously update our database as new selections are announced globally.
+            </p>
+</div>
+</section>
+<!-- Independence Notice -->
+<section class="max-w-3xl mx-auto px-margin-mobile md:px-margin-desktop py-section-padding">
+<div class="bg-surface-dim border border-outline p-8 rounded-xl text-center">
+<h2 class="font-headline-sm text-headline-sm text-primary mb-4">A Note on Independence</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6">
+                Dining Passport is an independent, proprietary tool built for epicureans to manage and track their dining experiences. We are entirely independent and not affiliated with, endorsed by, or sponsored by the Michelin Guide or Michelin North America, Inc.
+            </p>
+<a class="inline-flex items-center gap-2 text-primary font-meta-data font-semibold hover:underline" href="#">
+                Visit the official Michelin Guide website
+                <span class="material-symbols-outlined text-sm">open_in_new</span>
+</a>
+</div>
+</section>
+<!-- Shared Footer -->
+<footer class="w-full py-section-padding px-margin-desktop flex flex-col items-center gap-gutter bg-surface-container-low dark:bg-surface-container-lowest">
+<div class="flex gap-4 mb-8">
+<button class="h-[48px] px-6 rounded bg-primary text-on-primary font-body-md font-semibold hover:bg-primary-container transition-colors">Explore</button>
+<button class="h-[48px] px-6 rounded border border-outline-variant text-primary font-body-md font-semibold hover:bg-surface-container-high transition-colors">Map View</button>
+</div>
+<div class="text-label-caps font-label-caps text-on-surface-variant">
+            Dining Passport
+        </div>
+<div class="flex flex-wrap justify-center gap-6">
+<a class="font-meta-data text-meta-data text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed underline transition-colors" href="#">Privacy Policy</a>
+<a class="font-meta-data text-meta-data text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed underline transition-colors" href="#">Terms of Service</a>
+<a class="font-meta-data text-meta-data text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed underline transition-colors" href="#">Contact</a>
+<a class="font-meta-data text-meta-data text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed underline transition-colors" href="#">Press Kit</a>
+</div>
+<div class="font-meta-data text-meta-data text-on-surface-variant text-center mt-4">
+            © 2024 Dining Passport. Independent discovery platform. Not affiliated with the Michelin Guide.
+        </div>
+</footer>
+</body></html>

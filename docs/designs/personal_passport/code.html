@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Personal Passport Tracker Dashboard - Dining Passport</title>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Literata:ital,opsz,wght@0,7..72,400;0,7..72,500;1,7..72,400&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Tailwind Config -->
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "secondary": "#7c5800",
+                    "outline": "#717975",
+                    "on-tertiary": "#ffffff",
+                    "on-tertiary-fixed": "#40000c",
+                    "inverse-on-surface": "#f3f0ef",
+                    "primary": "#00251b",
+                    "surface-container-highest": "#e5e2e1",
+                    "on-surface": "#1c1b1b",
+                    "secondary-fixed-dim": "#f3be5a",
+                    "tertiary": "#47000e",
+                    "tertiary-fixed": "#ffdada",
+                    "on-primary-fixed": "#002118",
+                    "inverse-surface": "#313030",
+                    "surface-container-low": "#f6f3f2",
+                    "secondary-container": "#ffc964",
+                    "error": "#ba1a1a",
+                    "on-secondary": "#ffffff",
+                    "surface-dim": "#dcd9d9",
+                    "surface-tint": "#3f6658",
+                    "surface-container": "#f0edec",
+                    "on-secondary-fixed": "#271900",
+                    "on-primary-container": "#7ca596",
+                    "tertiary-container": "#68111f",
+                    "outline-variant": "#c0c8c3",
+                    "primary-container": "#123b2f",
+                    "surface-variant": "#e5e2e1",
+                    "on-secondary-fixed-variant": "#5e4200",
+                    "surface": "#fcf9f8",
+                    "primary-fixed-dim": "#a5d0bf",
+                    "primary-fixed": "#c1ecda",
+                    "surface-container-lowest": "#ffffff",
+                    "background": "#fcf9f8",
+                    "on-error-container": "#93000a",
+                    "on-primary": "#ffffff",
+                    "surface-container-high": "#ebe7e7",
+                    "on-surface-variant": "#414845",
+                    "error-container": "#ffdad6",
+                    "secondary-fixed": "#ffdea7",
+                    "surface-bright": "#fcf9f8",
+                    "on-secondary-container": "#765400",
+                    "inverse-primary": "#a5d0bf",
+                    "on-tertiary-container": "#ef7881",
+                    "on-error": "#ffffff",
+                    "on-tertiary-fixed-variant": "#822530",
+                    "on-primary-fixed-variant": "#274e41",
+                    "tertiary-fixed-dim": "#ffb3b5",
+                    "on-background": "#1c1b1b"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "margin-mobile": "20px",
+                    "section-padding": "80px",
+                    "gutter": "24px",
+                    "margin-desktop": "64px",
+                    "unit": "8px",
+                    "container-max-width": "1280px"
+            },
+            "fontFamily": {
+                    "body-lg": [
+                            "Inter"
+                    ],
+                    "label-caps": [
+                            "Inter"
+                    ],
+                    "body-md": [
+                            "Inter"
+                    ],
+                    "headline-md": [
+                            "Literata"
+                    ],
+                    "display-lg-mobile": [
+                            "Literata"
+                    ],
+                    "headline-sm": [
+                            "Literata"
+                    ],
+                    "display-lg": [
+                            "Literata"
+                    ],
+                    "meta-data": [
+                            "Inter"
+                    ]
+            },
+            "fontSize": {
+                    "body-lg": [
+                            "18px",
+                            {
+                                    "lineHeight": "1.6",
+                                    "fontWeight": "400"
+                            }
+                    ],
+                    "label-caps": [
+                            "12px",
+                            {
+                                    "lineHeight": "1",
+                                    "letterSpacing": "0.08em",
+                                    "fontWeight": "600"
+                            }
+                    ],
+                    "body-md": [
+                            "16px",
+                            {
+                                    "lineHeight": "1.5",
+                                    "fontWeight": "400"
+                            }
+                    ],
+                    "headline-md": [
+                            "32px",
+                            {
+                                    "lineHeight": "1.2",
+                                    "fontWeight": "400"
+                            }
+                    ],
+                    "display-lg-mobile": [
+                            "36px",
+                            {
+                                    "lineHeight": "1.1",
+                                    "letterSpacing": "-0.01em",
+                                    "fontWeight": "400"
+                            }
+                    ],
+                    "headline-sm": [
+                            "24px",
+                            {
+                                    "lineHeight": "1.3",
+                                    "fontWeight": "500"
+                            }
+                    ],
+                    "display-lg": [
+                            "48px",
+                            {
+                                    "lineHeight": "1.1",
+                                    "letterSpacing": "-0.02em",
+                                    "fontWeight": "400"
+                            }
+                    ],
+                    "meta-data": [
+                            "14px",
+                            {
+                                    "lineHeight": "1.4",
+                                    "fontWeight": "400"
+                            }
+                    ]
+            }
+    },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .material-symbols-outlined.fill {
+            font-variation-settings: 'FILL' 1;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md min-h-screen flex flex-col">
+<!-- TopNavBar -->
+<nav class="bg-surface border-b border-outline-variant fixed top-0 w-full h-[72px] z-50">
+<div class="flex justify-between items-center px-margin-mobile md:px-margin-desktop w-full max-w-container-max-width mx-auto h-full">
+<div class="font-headline-sm text-headline-sm font-bold text-primary">
+                Dining Passport
+            </div>
+<div class="hidden md:flex gap-gutter items-center font-body-md text-body-md">
+<a class="text-on-surface-variant hover:text-primary transition-colors duration-200" href="#">Explore</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors duration-200" href="#">Map</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors duration-200" href="#">Michelin Stars</a>
+<a class="text-primary border-b-2 border-secondary font-semibold pb-1 opacity-80 transition-opacity" href="#">Passport</a>
+</div>
+<div class="flex items-center gap-unit">
+<button class="text-on-surface-variant hover:text-primary transition-colors duration-200 p-2">
+<span class="material-symbols-outlined">person</span>
+</button>
+</div>
+</div>
+</nav>
+<!-- Main Content -->
+<main class="flex-grow pt-[104px] pb-section-padding px-margin-mobile md:px-margin-desktop w-full max-w-container-max-width mx-auto">
+<!-- Dashboard Hero -->
+<section class="mb-section-padding">
+<h1 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-primary mb-gutter">Your Passport</h1>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<!-- Summary Card 1 -->
+<div class="bg-surface-container-low p-gutter rounded-lg border border-outline-variant hover:shadow-lg transition-shadow duration-300">
+<div class="font-label-caps text-label-caps text-on-surface-variant uppercase mb-unit">Visited</div>
+<div class="font-headline-md text-headline-md text-primary font-bold">24</div>
+</div>
+<!-- Summary Card 2 -->
+<div class="bg-surface-container-low p-gutter rounded-lg border border-outline-variant hover:shadow-lg transition-shadow duration-300">
+<div class="font-label-caps text-label-caps text-on-surface-variant uppercase mb-unit">To Visit</div>
+<div class="font-headline-md text-headline-md text-primary font-bold">12</div>
+</div>
+<!-- Summary Card 3 -->
+<div class="bg-surface-container-low p-gutter rounded-lg border border-outline-variant hover:shadow-lg transition-shadow duration-300">
+<div class="font-label-caps text-label-caps text-on-surface-variant uppercase mb-unit">Favorites</div>
+<div class="font-headline-md text-headline-md text-primary font-bold">8</div>
+</div>
+</div>
+</section>
+<!-- Progress Section -->
+<section class="mb-section-padding grid grid-cols-1 md:grid-cols-2 gap-gutter">
+<div class="bg-surface-container-lowest p-gutter rounded-lg border border-outline-variant">
+<h2 class="font-headline-sm text-headline-sm text-primary mb-6">Stars Collected</h2>
+<div class="mb-4">
+<div class="flex justify-between mb-2">
+<span class="font-body-md text-body-md text-on-surface">Three-Star</span>
+<span class="font-body-md text-body-md text-on-surface-variant">3 / 16</span>
+</div>
+<div class="w-full bg-surface-variant rounded-full h-2">
+<div class="bg-tertiary h-2 rounded-full" style="width: 18.75%"></div>
+</div>
+</div>
+<div class="mb-4">
+<div class="flex justify-between mb-2">
+<span class="font-body-md text-body-md text-on-surface">Two-Star</span>
+<span class="font-body-md text-body-md text-on-surface-variant">8 / 32</span>
+</div>
+<div class="w-full bg-surface-variant rounded-full h-2">
+<div class="bg-tertiary h-2 rounded-full" style="width: 25%"></div>
+</div>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-gutter rounded-lg border border-outline-variant">
+<h2 class="font-headline-sm text-headline-sm text-primary mb-6">States Explored</h2>
+<div class="mb-4">
+<div class="flex justify-between mb-2">
+<span class="font-body-md text-body-md text-on-surface">Regions</span>
+<span class="font-body-md text-body-md text-on-surface-variant">4 / 14</span>
+</div>
+<div class="w-full bg-surface-variant rounded-full h-2">
+<div class="bg-secondary h-2 rounded-full" style="width: 28.5%"></div>
+</div>
+</div>
+<div class="flex items-center justify-center mt-8 text-on-surface-variant">
+<span class="material-symbols-outlined mr-2">map</span>
+<span class="font-meta-data text-meta-data">Explore map for more</span>
+</div>
+</div>
+</section>
+<!-- Personal Collection -->
+<section>
+<h2 class="font-headline-md text-headline-md text-primary mb-gutter">Personal Collection</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter">
+<!-- Card 1 -->
+<div class="bg-surface-container-lowest rounded-lg border border-outline-variant overflow-hidden flex flex-col group">
+<div class="aspect-[4/3] w-full overflow-hidden relative">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A high-end editorial photo of a meticulously plated dish featuring seared scallops with a vibrant green foam, presented on a dark, textured ceramic plate. The lighting is dramatic, highlighting the textures of the food and the plate, set against a dark, minimalist background. The style is sophisticated, luxurious, and highly detailed." src="https://lh3.googleusercontent.com/aida-public/AB6AXuByPdQfHp853AoZCFnlIh65ASIqWabCGoQ2nLPDm4h3pciBhOq6o-ROCymDxKGtOESBu69WSsuboYuMp5cLHQIa8pGJetutdXVjKJkkJl9ERzLWAhhR32GwI0N4nuogEhpRnRLaishgCPJpYTGnaCyHTSQGvqvHwbvTYtjPxMeooapJl3fgWAdI-1ri492n_ZquGj96KXof-FXPFvvvt6p5dcAIrHFAyCG1a24ba3Wo9JcP7tgVbcf-2iEXgk87CL6r3_gWplGSJ00"/>
+<div class="absolute top-2 right-2 bg-surface px-2 py-1 rounded text-xs font-semibold text-primary border border-outline-variant shadow-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] fill">favorite</span>
+                            Visited
+                        </div>
+</div>
+<div class="p-4 flex-grow flex flex-col">
+<h3 class="font-headline-sm text-headline-sm text-primary mb-1">Le Bernardin</h3>
+<div class="font-meta-data text-meta-data text-on-surface-variant mb-4 flex gap-2 items-center">
+<span>$$$$</span> • <span>French</span> • <span>New York</span>
+</div>
+<div class="mt-auto">
+<span class="inline-block bg-surface-container-highest text-on-surface font-label-caps text-[10px] uppercase px-2 py-1 rounded">Tuna Tartare</span>
+<span class="inline-block bg-surface-container-highest text-on-surface font-label-caps text-[10px] uppercase px-2 py-1 rounded">Halibut</span>
+</div>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="bg-surface-container-lowest rounded-lg border border-outline-variant overflow-hidden flex flex-col group">
+<div class="aspect-[4/3] w-full overflow-hidden relative">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A minimalist, top-down shot of a pristine white bowl containing a delicate, clear broth with perfectly arranged colorful edible flowers and tiny mushrooms. The lighting is soft and diffused, creating a serene and elegant atmosphere. The setting is clean and high-end, focusing entirely on the artistry of the dish." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDxIVClO7Q3l_W-Zp4YnRhf40tjIyk5uOIFe0gAjyOree2-Zg_z1dCW7rI6zDoHMgDS-zHAiwMtZcin73WV15GZ0pKDcPuVcHTpBb_r3W3edM8LkHbUuDNxZgLSN98fGOXjiCiIP_3jg46NZI-PzFO8yoHaUYeDaaMdDG3KjJTbpqqWXvk6lj4S7dscfIxbJEWIuDcNodva6Al9fe_2rmu3kzKut6FibhGmZFfaXqN1WF3TR7ttKjPnq6CZ7UJ31Mh9UA3_UELfcWA"/>
+<div class="absolute top-2 right-2 bg-surface px-2 py-1 rounded text-xs font-semibold text-secondary-container border border-outline-variant shadow-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">schedule</span>
+                            Planned
+                        </div>
+</div>
+<div class="p-4 flex-grow flex flex-col">
+<h3 class="font-headline-sm text-headline-sm text-primary mb-1">Alinea</h3>
+<div class="font-meta-data text-meta-data text-on-surface-variant mb-4 flex gap-2 items-center">
+<span>$$$$</span> • <span>Contemporary</span> • <span>Chicago</span>
+</div>
+<div class="mt-auto">
+<span class="inline-block bg-surface-container-highest text-on-surface font-label-caps text-[10px] uppercase px-2 py-1 rounded">Helium Balloon</span>
+</div>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="bg-surface-container-lowest rounded-lg border border-outline-variant overflow-hidden flex flex-col group">
+<div class="aspect-[4/3] w-full overflow-hidden relative">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A close-up, editorial style image of a rustic, crusty loaf of bread being sliced, revealing a steaming, airy interior. The scene is lit with warm, natural sunlight casting long shadows. It sits on a thick, dark wooden board. The aesthetic is artisanal, grounded, yet exceptionally premium." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAfnECXs33W4ZmOCV7xbe7ZApRMIoXvcmqQe_u6mi182cplninx1uVXr-DK4jIhb7Qotv3vLR3_LThGantapHAv3zXUC3q1PZWBbLbeVRUsxgSrvWDJbvlF0oGqn6l6lScskmffyQfMEhz135gLWk9s1Ti2EtzUDBJKGhTYpgU1DUuSUvHE1F-uLa4lR1Dnbz-SVtJihiO2VjVT4TGTZi3VF-cU-hvTeEiiVgKUIEUVy-Kg0qBbfEm8Ler1EVVYNgqO18mSqLlZgXE"/>
+<div class="absolute top-2 right-2 bg-surface px-2 py-1 rounded text-xs font-semibold text-primary border border-outline-variant shadow-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">check_circle</span>
+                            Visited
+                        </div>
+</div>
+<div class="p-4 flex-grow flex flex-col">
+<h3 class="font-headline-sm text-headline-sm text-primary mb-1">The French Laundry</h3>
+<div class="font-meta-data text-meta-data text-on-surface-variant mb-4 flex gap-2 items-center">
+<span>$$$$</span> • <span>French</span> • <span>Yountville</span>
+</div>
+<div class="mt-auto">
+<span class="inline-block bg-surface-container-highest text-on-surface font-label-caps text-[10px] uppercase px-2 py-1 rounded">Oysters and Pearls</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-low w-full py-section-padding border-t border-outline-variant mt-auto">
+<div class="flex flex-col items-center justify-center space-y-gutter px-margin-desktop w-full max-w-container-max-width mx-auto">
+<div class="font-headline-sm text-headline-sm text-primary">
+                Dining Passport
+            </div>
+<div class="flex flex-wrap justify-center gap-6 font-meta-data text-meta-data text-on-surface-variant">
+<a class="hover:text-secondary transition-colors cursor-pointer" href="#">Explore</a>
+<a class="hover:text-secondary transition-colors cursor-pointer" href="#">Map</a>
+<a class="hover:text-secondary transition-colors cursor-pointer" href="#">About Michelin Stars</a>
+<a class="hover:text-secondary transition-colors cursor-pointer" href="#">Privacy</a>
+<a class="hover:text-secondary transition-colors cursor-pointer" href="#">Terms</a>
+</div>
+<div class="text-center font-meta-data text-[12px] text-on-surface-variant opacity-70 max-w-md mx-auto">
+                Independent discovery platform. Not affiliated with the Michelin Guide.
+            </div>
+</div>
+</footer>
+</body></html>

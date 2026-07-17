@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Japanese Cuisine - Dining Passport</title>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Literata:opsz,wght@7..72,400;7..72,500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "on-secondary-container": "#765400",
+                      "on-background": "#1c1b1b",
+                      "tertiary": "#47000e",
+                      "on-surface-variant": "#414845",
+                      "surface-container": "#f0edec",
+                      "surface": "#fcf9f8",
+                      "on-tertiary-fixed": "#40000c",
+                      "primary-container": "#123b2f",
+                      "surface-dim": "#dcd9d9",
+                      "on-error": "#ffffff",
+                      "secondary-fixed": "#ffdea7",
+                      "on-secondary": "#ffffff",
+                      "surface-container-highest": "#e5e2e1",
+                      "inverse-on-surface": "#f3f0ef",
+                      "tertiary-fixed-dim": "#ffb3b5",
+                      "error-container": "#ffdad6",
+                      "outline": "#717975",
+                      "on-error-container": "#93000a",
+                      "surface-container-low": "#f6f3f2",
+                      "secondary-container": "#ffc964",
+                      "background": "#fcf9f8",
+                      "on-surface": "#1c1b1b",
+                      "tertiary-fixed": "#ffdada",
+                      "inverse-surface": "#313030",
+                      "surface-container-lowest": "#ffffff",
+                      "on-primary-fixed": "#002118",
+                      "outline-variant": "#c0c8c3",
+                      "primary-fixed-dim": "#a5d0bf",
+                      "on-tertiary": "#ffffff",
+                      "surface-variant": "#e5e2e1",
+                      "secondary": "#7c5800",
+                      "on-primary-container": "#7ca596",
+                      "error": "#ba1a1a",
+                      "primary": "#00251b",
+                      "on-primary-fixed-variant": "#274e41",
+                      "inverse-primary": "#a5d0bf",
+                      "surface-tint": "#3f6658",
+                      "surface-bright": "#fcf9f8",
+                      "on-tertiary-fixed-variant": "#822530",
+                      "surface-container-high": "#ebe7e7",
+                      "on-primary": "#ffffff",
+                      "on-secondary-fixed": "#271900",
+                      "primary-fixed": "#c1ecda",
+                      "on-secondary-fixed-variant": "#5e4200",
+                      "tertiary-container": "#68111f",
+                      "secondary-fixed-dim": "#f3be5a",
+                      "on-tertiary-container": "#ef7881"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.125rem",
+                      "lg": "0.25rem",
+                      "xl": "0.5rem",
+                      "full": "0.75rem"
+              },
+              "spacing": {
+                      "unit": "8px",
+                      "gutter": "24px",
+                      "section-padding": "80px",
+                      "margin-desktop": "64px",
+                      "margin-mobile": "20px",
+                      "container-max-width": "1280px"
+              },
+              "fontFamily": {
+                      "body-lg": [
+                              "Inter"
+                      ],
+                      "label-caps": [
+                              "Inter"
+                      ],
+                      "display-lg": [
+                              "Literata"
+                      ],
+                      "display-lg-mobile": [
+                              "Literata"
+                      ],
+                      "body-md": [
+                              "Inter"
+                      ],
+                      "headline-sm": [
+                              "Literata"
+                      ],
+                      "meta-data": [
+                              "Inter"
+                      ],
+                      "headline-md": [
+                              "Literata"
+                      ]
+              },
+              "fontSize": {
+                      "body-lg": [
+                              "18px",
+                              {
+                                      "lineHeight": "1.6",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "label-caps": [
+                              "12px",
+                              {
+                                      "lineHeight": "1",
+                                      "letterSpacing": "0.08em",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "display-lg": [
+                              "48px",
+                              {
+                                      "lineHeight": "1.1",
+                                      "letterSpacing": "-0.02em",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "display-lg-mobile": [
+                              "36px",
+                              {
+                                      "lineHeight": "1.1",
+                                      "letterSpacing": "-0.01em",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "body-md": [
+                              "16px",
+                              {
+                                      "lineHeight": "1.5",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "headline-sm": [
+                              "24px",
+                              {
+                                      "lineHeight": "1.3",
+                                      "fontWeight": "500"
+                              }
+                      ],
+                      "meta-data": [
+                              "14px",
+                              {
+                                      "lineHeight": "1.4",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "headline-md": [
+                              "32px",
+                              {
+                                      "lineHeight": "1.2",
+                                      "fontWeight": "400"
+                              }
+                      ]
+              }
+      },
+          },
+        }
+      </script>
+<style>
+          .material-symbols-outlined {
+              font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+          }
+          .material-symbols-outlined.filled {
+              font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+          }
+      </style>
+</head>
+<body class="bg-background text-on-background font-body-lg antialiased">
+<!-- TopNavBar (Shared Component) -->
+<nav class="bg-surface border-b border-outline-variant fixed top-0 w-full z-50">
+<div class="flex justify-between items-center h-[72px] px-margin-desktop max-w-container-max-width mx-auto">
+<div class="flex items-center gap-8">
+<a class="text-headline-md font-headline-md text-primary" href="#">Dining Passport</a>
+<div class="hidden md:flex gap-6">
+<a class="text-primary font-bold border-b-2 border-primary pb-1 font-label-caps text-label-caps" href="#">Explore</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors duration-200 font-label-caps text-label-caps" href="#">Map</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors duration-200 font-label-caps text-label-caps" href="#">Michelin Stars</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors duration-200 font-label-caps text-label-caps" href="#">Passport</a>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<div class="relative hidden lg:block">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline">search</span>
+<input class="h-12 pl-10 pr-4 w-64 bg-surface border border-outline-variant rounded focus:outline-none focus:border-primary font-body-md text-body-md placeholder-on-surface-variant" placeholder="Search..." type="text"/>
+</div>
+<button class="hover:text-primary transition-colors duration-200 flex items-center justify-center h-12 w-12 rounded hover:bg-surface-container-low">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+</button>
+<button class="hover:text-primary transition-colors duration-200 flex items-center justify-center h-12 w-12 rounded hover:bg-surface-container-low">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+</button>
+</div>
+</div>
+</nav>
+<!-- Main Content -->
+<main class="pt-[72px]">
+<!-- Hero Section -->
+<header class="relative w-full h-[614px] min-h-[500px] flex flex-col justify-end">
+<!-- Hero Background Image -->
+<div class="absolute inset-0 w-full h-full bg-surface-container-low">
+<img alt="Japanese Kaiseki" class="w-full h-full object-cover" data-alt="A highly detailed, high-resolution photograph of a minimalist Japanese kaiseki presentation. The dish is exquisitely plated on dark, textured ceramic, featuring vibrant raw fish, delicate seasonal garnishes, and precise knife work. The lighting is soft and directional, creating a moody, premium culinary atmosphere typical of Michelin-starred fine dining photography. The background is a beautifully blurred dark wood texture." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAUEQuVqHciCzkuUK3NZ7jpU9vZh8H6KwdGtP4n81zqD1Oncyf8-DRullvYnF7YEe-uXjZ1jxTkqpanvQHrccwmRea9Gtqd5sjVbPhO_GxQITfZ8NV3uGVHRM22IeHFWmzMDtfKdZ5O3DgMnnBaY-Mfvt7X07LgUGvBYdjMMPZFMcTMnM41bYMUggp-bQFNuWLPjJ6yu9e-SW2MwPOR4JL2qF-LKWNJGcKM4tZhLtLm1CsFtdfuFsTlTIH4RUUNsAm-7d6a5CxbH1E"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/90 to-transparent"></div>
+</div>
+<div class="relative z-10 w-full max-w-container-max-width mx-auto px-margin-desktop pb-section-padding">
+<!-- Breadcrumbs -->
+<nav aria-label="Breadcrumb" class="flex text-on-primary/80 font-meta-data text-meta-data mb-4 uppercase tracking-wider text-[11px]">
+<ol class="inline-flex items-center space-x-1 md:space-x-3">
+<li class="inline-flex items-center">
+<a class="hover:text-on-primary transition-colors" href="#">Home</a>
+</li>
+<li>
+<div class="flex items-center">
+<span class="material-symbols-outlined text-[16px] mx-1">chevron_right</span>
+<a class="hover:text-on-primary transition-colors" href="#">Cuisines</a>
+</div>
+</li>
+<li aria-current="page">
+<div class="flex items-center">
+<span class="material-symbols-outlined text-[16px] mx-1">chevron_right</span>
+<span class="text-on-primary font-medium">Japanese</span>
+</div>
+</li>
+</ol>
+</nav>
+<h1 class="font-display-lg text-display-lg text-on-primary mb-4">Japanese Cuisine</h1>
+<p class="font-body-lg text-body-lg text-on-primary/90 max-w-2xl">
+                    Characterized by profound respect for seasonal ingredients and masterful technique, Japanese culinary traditions hold a revered position within the Michelin Guide. From the meticulous art of Edomae sushi to the philosophical progression of kaiseki, explore the pinnacle of gastronomy.
+                </p>
+</div>
+</header>
+<!-- Filters & Search Bar -->
+<section class="bg-surface border-b border-outline-variant sticky top-[72px] z-40 shadow-sm">
+<div class="max-w-container-max-width mx-auto px-margin-desktop py-4 flex flex-col md:flex-row justify-between items-center gap-4">
+<div class="flex items-center gap-2 overflow-x-auto w-full md:w-auto pb-2 md:pb-0 hide-scrollbar">
+<button class="px-4 py-2 bg-primary text-on-primary rounded font-label-caps text-label-caps whitespace-nowrap">All Japanese</button>
+<button class="px-4 py-2 border border-outline-variant text-on-surface hover:bg-surface-container rounded font-label-caps text-label-caps whitespace-nowrap transition-colors">Sushi</button>
+<button class="px-4 py-2 border border-outline-variant text-on-surface hover:bg-surface-container rounded font-label-caps text-label-caps whitespace-nowrap transition-colors">Kaiseki</button>
+<button class="px-4 py-2 border border-outline-variant text-on-surface hover:bg-surface-container rounded font-label-caps text-label-caps whitespace-nowrap transition-colors">Tempura</button>
+<button class="px-4 py-2 border border-outline-variant text-on-surface hover:bg-surface-container rounded font-label-caps text-label-caps whitespace-nowrap transition-colors">Ramen</button>
+<button class="px-4 py-2 border border-outline-variant text-on-surface hover:bg-surface-container rounded font-label-caps text-label-caps whitespace-nowrap transition-colors">Yakitori</button>
+</div>
+<div class="flex items-center gap-4 w-full md:w-auto">
+<div class="relative w-full md:w-64">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline text-[20px]">filter_list</span>
+<select class="w-full h-10 pl-10 pr-8 bg-surface border border-outline-variant rounded focus:outline-none focus:border-primary font-meta-data text-meta-data text-on-surface appearance-none">
+<option>Sort by: Rating</option>
+<option>Sort by: Michelin Stars</option>
+<option>Sort by: Price (High to Low)</option>
+<option>Sort by: Price (Low to High)</option>
+</select>
+<span class="material-symbols-outlined absolute right-3 top-1/2 -translate-y-1/2 text-outline pointer-events-none text-[20px]">expand_more</span>
+</div>
+</div>
+</div>
+</section>
+<div class="max-w-container-max-width mx-auto px-margin-desktop py-section-padding grid grid-cols-12 gap-gutter">
+<!-- Main Content Area -->
+<div class="col-span-12 lg:col-span-9">
+<!-- Distribution Section (Bento style) -->
+<section class="mb-section-padding">
+<h2 class="font-headline-md text-headline-md text-primary mb-6">Culinary Hubs</h2>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+<div class="md:col-span-2 relative h-64 bg-surface-container-low rounded overflow-hidden group cursor-pointer border border-outline-variant">
+<div class="absolute inset-0 w-full h-full bg-surface-dim">
+<img alt="Tokyo" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A sleek, modern aerial view of Tokyo at dusk, highlighting the vibrant neon lights against deep blue hour skies. The image is captured with a high-end architectural photography style, showcasing the dense, premium urban landscape where top-tier Japanese dining is located. High contrast, sharp details." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCSS9Uh6-Jmko9o8jF87mc3dJxDyJordBho08z0pse8hv2L4PcrYhauJ_d94amyjbhyz9hHd-F5yAKTAT6PzjURAvC6So8ha_8b1zmmwfkc6-P0IUIY1P-KLQgMQ9z-zf708JCUZmow2wEymgVCQhtFN0B5p96FPZy4u3juuzcSuQ8cQ8NIBozKtwC4vp9CAKVoPd3giqalBZdgxJQhLu_SZTiqPonK6HTj-STx8w2pBgEv4KAqP2qzivzrmUzM5PV27vGc5lGQ6JI"/>
+</div>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/80 via-primary/20 to-transparent"></div>
+<div class="absolute bottom-6 left-6 z-10">
+<h3 class="font-headline-sm text-headline-sm text-on-primary">Tokyo, Japan</h3>
+<p class="font-meta-data text-meta-data text-on-primary/80 mt-1">214 Starred Restaurants</p>
+</div>
+</div>
+<div class="relative h-64 bg-surface-container-low rounded overflow-hidden group cursor-pointer border border-outline-variant">
+<div class="absolute inset-0 w-full h-full bg-surface-dim">
+<img alt="Kyoto" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A moody, elegant street-level photograph of Kyoto's traditional Gion district at twilight. Cobblestone streets, wooden machiya houses, and a soft glow from paper lanterns create a serene, historical atmosphere indicative of authentic Kaiseki dining. Premium travel photography style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBxvJgoyLo4X5HmDQBM_huMSBc7yg-shJZsHavTDKfhKeepi-u2iypYtb7A19E2uzRXa3bwBv_zwEBAq2dY6UO-OiGOTi1chUJNSI_Npp7DTEJeA-aBLx_CiELBVMZDLk6mSo72NyD2gawUpjMcSr2gcFX1wBGtjU11gLWRqwFr599gS15dR0tgI0w8o8G0iJceLZcMpeVBGBnhunINm8oC3jvCAXVueQQ3c8ei3X-DHD2hGdjN3odB_JpckDZAVa2HAEZsVywkyYA"/>
+</div>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/80 via-primary/20 to-transparent"></div>
+<div class="absolute bottom-6 left-6 z-10">
+<h3 class="font-headline-sm text-headline-sm text-on-primary">Kyoto, Japan</h3>
+<p class="font-meta-data text-meta-data text-on-primary/80 mt-1">103 Starred Restaurants</p>
+</div>
+</div>
+<div class="relative h-64 bg-surface-container-low rounded overflow-hidden group cursor-pointer border border-outline-variant">
+<div class="absolute inset-0 w-full h-full bg-surface-dim">
+<img alt="New York" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A high-end, sophisticated photograph of the New York City skyline focusing on Manhattan, shot during golden hour with a cinematic feel. The image represents the global spread of premium Japanese cuisine. Sharp focus, deep shadows, and warm highlights." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDB12rNzIBZKpl7Mr42AJEczLHjyKzsyB8Pw90Hq38qMAFjwMW2hncHe0vEkOKd9uksBvjYnLjESNSH6fZM6Ll8TJiixhodko0Z461gNKAo47YUaFn7WoginQO_1luovGSlEOAlcAh7iQ0iq4bSUPpTRYwzUEK3rtqrj2aScXuTiSs3AcOH4iZcIV6k4LIZlA4Lxni2fB5YPiW7Gdwsh5dsJ9efjCEAmxjHeHA9McI5o4l6KPnvhJjcpLg_x6ZUC7TqJVOYxKy73xA"/>
+</div>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/80 via-primary/20 to-transparent"></div>
+<div class="absolute bottom-6 left-6 z-10">
+<h3 class="font-headline-sm text-headline-sm text-on-primary">New York, USA</h3>
+<p class="font-meta-data text-meta-data text-on-primary/80 mt-1">42 Starred Restaurants</p>
+</div>
+</div>
+<div class="md:col-span-2 relative h-64 bg-surface-container-low rounded overflow-hidden group cursor-pointer border border-outline-variant">
+<div class="absolute inset-0 w-full h-full bg-surface-dim">
+<img alt="Paris" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A luxurious, minimalist interior shot of a high-end sushi counter in Paris. Light cypress wood, sleek lines, and soft, diffused architectural lighting create a fusion of Japanese minimalism and European elegance. Highly polished editorial style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA2mRc3S_DFNFZaaXGAMjbZ0TycoZhqfmIFTvltxCKBIQi17gMtbT3cYDaPbiekqm1nQmFGgStTKBrw3-lEkn4EzG-EW_T_jMonUozk007WHsYHDM-nHv7SFA4mFz1YM6IbWrjeI-TB6d78-2nn43I4kVgHf1k7E3VD1MYE-jPVtJTFn2XTzizdj24rR_OYrdlJYTFJ-8jX9Hg02vYanJ-sg90au3okiVLA9RfRujldaponQ-_wcX-piAnPg25F18qpI19DgCgEGr8"/>
+</div>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/80 via-primary/20 to-transparent"></div>
+<div class="absolute bottom-6 left-6 z-10">
+<h3 class="font-headline-sm text-headline-sm text-on-primary">Paris, France</h3>
+<p class="font-meta-data text-meta-data text-on-primary/80 mt-1">28 Starred Restaurants</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Premium Grid -->
+<section>
+<div class="flex justify-between items-end mb-6">
+<h2 class="font-headline-md text-headline-md text-primary">Featured Establishments</h2>
+<span class="font-meta-data text-meta-data text-on-surface-variant">Showing 24 results</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-gutter">
+<!-- Restaurant Card 1 -->
+<article class="group cursor-pointer">
+<div class="w-full aspect-[4/3] bg-surface-container-low rounded overflow-hidden mb-4 border border-outline-variant relative">
+<img alt="Sukiyabashi Jiro" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="A stunning close-up photograph of a single piece of Ootoro (fatty tuna) nigiri sushi resting on a minimalist wooden plate. The lighting highlights the rich marbling and glistening texture of the fish. Extreme macro photography, high resolution, editorial food styling, set against a dark background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCeGEn4HTu3mBudMt0QBcFVWna_4d-OBUBPjowK5_S_NOFGVd9LsBrkLgwc2PGp55Y-pEQMT5CTN_LXtYTIqg2MnRUe_BKm70J4mrCnhB56CkEoR8bH2belCC11ZmM0pM_1Vh8H0A36ASN-ruinFkA_eXWrBXT5k5IhxSkF5I4jqDW__OhRib91TRnA9uLEZPl6ABnpKrHoE-SJ_Fj2ZOWQ4avzGTr6gq0ueSDHjR3rA4RG2yWDZ-H-eQM4K4sSYZI9rG2V84WO2nU"/>
+<div class="absolute top-4 left-4 flex gap-2">
+<span class="px-2 py-1 bg-secondary-container text-on-secondary-container rounded font-label-caps text-[10px] flex items-center gap-1">
+<span class="material-symbols-outlined filled text-[12px]">star</span>
+<span class="material-symbols-outlined filled text-[12px]">star</span>
+<span class="material-symbols-outlined filled text-[12px]">star</span>
+</span>
+</div>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-1 group-hover:text-tertiary transition-colors">Sukiyabashi Jiro</h3>
+<div class="flex items-center gap-2 font-meta-data text-meta-data text-on-surface-variant">
+<span>Sushi</span>
+<span class="w-1 h-1 bg-outline rounded-full"></span>
+<span>Ginza, Tokyo</span>
+<span class="w-1 h-1 bg-outline rounded-full"></span>
+<span>$$$$</span>
+</div>
+</article>
+<!-- Restaurant Card 2 -->
+<article class="group cursor-pointer">
+<div class="w-full aspect-[4/3] bg-surface-container-low rounded overflow-hidden mb-4 border border-outline-variant relative">
+<img alt="Kikunoi" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="A beautifully composed flat-lay photograph of a traditional Japanese Kaiseki autumn course. Small, intricate ceramic dishes hold meticulously arranged seasonal vegetables, sashimi, and delicate soups. Warm, sophisticated lighting accentuates the textures and colors of the food. Editorial high-end dining style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCNieGrT9HQZ45E-NqXMKQCjmoqj9Fci20sHxlFTt0nMl3mz610swjtn7RHO62ztYGXjbYMydPJJutbeB8vfDAvME9qlpI58zDKC1eQG-al6_kAhmBt8oPXwg_bJHFCLcU3cDTF3OvPmTTsTGl-2caCHsMuI-lfEqRuyC7VVEW_SN2GKhGQPnRLsM1BphoVnXEl8aRuGnUTGdCNfuJKL9wiJ6nwQm7-L1IvF3f-aLZbcEV7DhM8gjtCe0h3Y14EWnMGhr_kgwJrgeY"/>
+<div class="absolute top-4 left-4 flex gap-2">
+<span class="px-2 py-1 bg-secondary-container text-on-secondary-container rounded font-label-caps text-[10px] flex items-center gap-1">
+<span class="material-symbols-outlined filled text-[12px]">star</span>
+<span class="material-symbols-outlined filled text-[12px]">star</span>
+<span class="material-symbols-outlined filled text-[12px]">star</span>
+</span>
+</div>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-1 group-hover:text-tertiary transition-colors">Kikunoi Honten</h3>
+<div class="flex items-center gap-2 font-meta-data text-meta-data text-on-surface-variant">
+<span>Kaiseki</span>
+<span class="w-1 h-1 bg-outline rounded-full"></span>
+<span>Higashiyama, Kyoto</span>
+<span class="w-1 h-1 bg-outline rounded-full"></span>
+<span>$$$$</span>
+</div>
+</article>
+<!-- Restaurant Card 3 -->
+<article class="group cursor-pointer">
+<div class="w-full aspect-[4/3] bg-surface-container-low rounded overflow-hidden mb-4 border border-outline-variant relative">
+<img alt="Kondo" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="A refined photograph of perfectly fried golden tempura, specifically a tiger prawn, resting on traditional white tempura paper on a minimalist ceramic dish. The background is softly out of focus, showing a clean wooden counter. High crispness, elegant lighting highlighting the delicate batter." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAjKiVzzXIpUgTuvpZTL-P9SaFcp5Ne6afC5IgSLBLg3KPGN9bvVqNcLAYGgOn4qqgHQsh_yUJFPpGrivTV0bFvF__KwVs9wFGuuclGSDeGyBAStj5yH1ZR60dO8-03ByaPfou6leSkGCWVkHMvujnlD-lzbZSKh1XJQHCF2siXcfzepm1Lf_6GYVRcumRNfKo1qfUf4LAr0WIE0ZQa9romR4BlStfxYlUpkizKGn-gEfLKNBQefbQXF9JYVUKbjVRIgmg8C5dCeGs"/>
+<div class="absolute top-4 left-4 flex gap-2">
+<span class="px-2 py-1 bg-secondary-container text-on-secondary-container rounded font-label-caps text-[10px] flex items-center gap-1">
+<span class="material-symbols-outlined filled text-[12px]">star</span>
+<span class="material-symbols-outlined filled text-[12px]">star</span>
+</span>
+</div>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-1 group-hover:text-tertiary transition-colors">Tempura Kondo</h3>
+<div class="flex items-center gap-2 font-meta-data text-meta-data text-on-surface-variant">
+<span>Tempura</span>
+<span class="w-1 h-1 bg-outline rounded-full"></span>
+<span>Ginza, Tokyo</span>
+<span class="w-1 h-1 bg-outline rounded-full"></span>
+<span>$$$</span>
+</div>
+</article>
+<!-- Restaurant Card 4 -->
+<article class="group cursor-pointer">
+<div class="w-full aspect-[4/3] bg-surface-container-low rounded overflow-hidden mb-4 border border-outline-variant relative">
+<img alt="Tsuta" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="A sleek, modern editorial shot of a steaming bowl of artisanal ramen in a dark, moody setting. The broth is rich and opaque, topped with perfectly sliced chashu, a soft-boiled egg with a bright orange yolk, and delicate scallions. High contrast lighting emphasizing the steam and textures." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA7PhjE4mKeJA8Sdv-S3nkjIKuJVSQ9jSNiVUfy7Sbbs8YmD8adGNvrtjQGa967JxnG4v7paN4-iCuCKVli9448b-TdVS79nE23EoFLLERYaKfFUwBcHWzMDyG3cpC0L4QmcCrJ73zKrHBApvq6Hmw4TPnnj3nOknrbxux-4u16iLe-y95ZkmX6TcrH5MPYT46VPhB32H1np-Rd3zryrcRgWRqdc4Myt_0dKBMruaO6wN3weCVlDFhMqtdoUU2dAILFbwuGeGIsW-Y"/>
+<div class="absolute top-4 left-4 flex gap-2">
+<span class="px-2 py-1 bg-secondary-container text-on-secondary-container rounded font-label-caps text-[10px] flex items-center gap-1">
+<span class="material-symbols-outlined filled text-[12px]">star</span>
+</span>
+</div>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-1 group-hover:text-tertiary transition-colors">Tsuta</h3>
+<div class="flex items-center gap-2 font-meta-data text-meta-data text-on-surface-variant">
+<span>Ramen</span>
+<span class="w-1 h-1 bg-outline rounded-full"></span>
+<span>Yoyogi-Uehara, Tokyo</span>
+<span class="w-1 h-1 bg-outline rounded-full"></span>
+<span>$</span>
+</div>
+</article>
+</div>
+<div class="mt-8 flex justify-center">
+<button class="px-8 py-3 bg-surface border border-outline-variant text-primary rounded font-label-caps text-label-caps hover:bg-surface-container transition-colors">Load More</button>
+</div>
+</section>
+</div>
+<!-- Sidebar -->
+<aside class="col-span-12 lg:col-span-3">
+<div class="sticky top-[150px]">
+<!-- Related Cuisines -->
+<div class="bg-surface border border-outline-variant rounded p-6 mb-8">
+<h3 class="font-headline-sm text-headline-sm text-primary mb-4 border-b border-outline-variant pb-2">Related Cuisines</h3>
+<ul class="space-y-3">
+<li>
+<a class="flex justify-between items-center group" href="#">
+<span class="font-meta-data text-meta-data text-on-surface group-hover:text-primary transition-colors">Korean</span>
+<span class="material-symbols-outlined text-[16px] text-outline group-hover:text-primary transition-colors">arrow_forward</span>
+</a>
+</li>
+<li>
+<a class="flex justify-between items-center group" href="#">
+<span class="font-meta-data text-meta-data text-on-surface group-hover:text-primary transition-colors">Chinese</span>
+<span class="material-symbols-outlined text-[16px] text-outline group-hover:text-primary transition-colors">arrow_forward</span>
+</a>
+</li>
+<li>
+<a class="flex justify-between items-center group" href="#">
+<span class="font-meta-data text-meta-data text-on-surface group-hover:text-primary transition-colors">Taiwanese</span>
+<span class="material-symbols-outlined text-[16px] text-outline group-hover:text-primary transition-colors">arrow_forward</span>
+</a>
+</li>
+</ul>
+</div>
+<!-- Glossary / Info -->
+<div class="bg-surface-container-low border border-outline-variant rounded p-6">
+<h3 class="font-headline-sm text-headline-sm text-primary mb-4">Terminology</h3>
+<dl class="space-y-4">
+<div>
+<dt class="font-label-caps text-label-caps text-primary mb-1">Omakase</dt>
+<dd class="font-meta-data text-meta-data text-on-surface-variant">"I'll leave it up to you." A meal consisting of dishes selected by the chef.</dd>
+</div>
+<div>
+<dt class="font-label-caps text-label-caps text-primary mb-1">Kaiseki</dt>
+<dd class="font-meta-data text-meta-data text-on-surface-variant">A traditional multi-course Japanese dinner; the ultimate expression of seasonal dining.</dd>
+</div>
+<div>
+<dt class="font-label-caps text-label-caps text-primary mb-1">Edomae</dt>
+<dd class="font-meta-data text-meta-data text-on-surface-variant">Traditional Tokyo-style sushi, often involving marinating or curing the fish.</dd>
+</div>
+</dl>
+</div>
+</div>
+</aside>
+</div>
+</main>
+<!-- Footer (Shared Component) -->
+<footer class="bg-surface-container-low">
+<div class="flex flex-col md:flex-row justify-between items-center py-section-padding px-margin-desktop max-w-container-max-width mx-auto">
+<div class="font-headline-sm text-headline-sm text-primary mb-4 md:mb-0">Dining Passport</div>
+<div class="flex gap-6 mb-6 md:mb-0">
+<a class="text-on-surface-variant hover:text-primary transition-colors duration-200 font-meta-data text-meta-data" href="#">Privacy Policy</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors duration-200 font-meta-data text-meta-data" href="#">Terms of Service</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors duration-200 font-meta-data text-meta-data" href="#">Contact</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors duration-200 font-meta-data text-meta-data" href="#">About Us</a>
+</div>
+<div class="font-meta-data text-meta-data text-on-surface-variant text-[12px] text-center md:text-right">
+                Independent discovery platform. Not affiliated with the Michelin Guide.
+            </div>
+</div>
+</footer>
+</body></html>

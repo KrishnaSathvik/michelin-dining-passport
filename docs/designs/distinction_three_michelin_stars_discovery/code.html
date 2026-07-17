@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Three Michelin Stars - Dining Passport</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Literata:ital,opsz,wght@0,7..72,400;0,7..72,500;1,7..72,400&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "on-secondary-container": "#765400",
+                      "on-background": "#1c1b1b",
+                      "tertiary": "#47000e",
+                      "on-surface-variant": "#414845",
+                      "surface-container": "#f0edec",
+                      "surface": "#fcf9f8",
+                      "on-tertiary-fixed": "#40000c",
+                      "primary-container": "#123b2f",
+                      "surface-dim": "#dcd9d9",
+                      "on-error": "#ffffff",
+                      "secondary-fixed": "#ffdea7",
+                      "on-secondary": "#ffffff",
+                      "surface-container-highest": "#e5e2e1",
+                      "inverse-on-surface": "#f3f0ef",
+                      "tertiary-fixed-dim": "#ffb3b5",
+                      "error-container": "#ffdad6",
+                      "outline": "#717975",
+                      "on-error-container": "#93000a",
+                      "surface-container-low": "#f6f3f2",
+                      "secondary-container": "#ffc964",
+                      "background": "#fcf9f8",
+                      "on-surface": "#1c1b1b",
+                      "tertiary-fixed": "#ffdada",
+                      "inverse-surface": "#313030",
+                      "surface-container-lowest": "#ffffff",
+                      "on-primary-fixed": "#002118",
+                      "outline-variant": "#c0c8c3",
+                      "primary-fixed-dim": "#a5d0bf",
+                      "on-tertiary": "#ffffff",
+                      "surface-variant": "#e5e2e1",
+                      "secondary": "#7c5800",
+                      "on-primary-container": "#7ca596",
+                      "error": "#ba1a1a",
+                      "primary": "#00251b",
+                      "on-primary-fixed-variant": "#274e41",
+                      "inverse-primary": "#a5d0bf",
+                      "surface-tint": "#3f6658",
+                      "surface-bright": "#fcf9f8",
+                      "on-tertiary-fixed-variant": "#822530",
+                      "surface-container-high": "#ebe7e7",
+                      "on-primary": "#ffffff",
+                      "on-secondary-fixed": "#271900",
+                      "primary-fixed": "#c1ecda",
+                      "on-secondary-fixed-variant": "#5e4200",
+                      "tertiary-container": "#68111f",
+                      "secondary-fixed-dim": "#f3be5a",
+                      "on-tertiary-container": "#ef7881"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.125rem",
+                      "lg": "0.25rem",
+                      "xl": "0.5rem",
+                      "full": "0.75rem"
+              },
+              "spacing": {
+                      "unit": "8px",
+                      "gutter": "24px",
+                      "section-padding": "80px",
+                      "margin-desktop": "64px",
+                      "margin-mobile": "20px",
+                      "container-max-width": "1280px"
+              },
+              "fontFamily": {
+                      "body-lg": [
+                              "Inter"
+                      ],
+                      "label-caps": [
+                              "Inter"
+                      ],
+                      "display-lg": [
+                              "Literata"
+                      ],
+                      "display-lg-mobile": [
+                              "Literata"
+                      ],
+                      "body-md": [
+                              "Inter"
+                      ],
+                      "headline-sm": [
+                              "Literata"
+                      ],
+                      "meta-data": [
+                              "Inter"
+                      ],
+                      "headline-md": [
+                              "Literata"
+                      ]
+              },
+              "fontSize": {
+                      "body-lg": [
+                              "18px",
+                              {
+                                      "lineHeight": "1.6",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "label-caps": [
+                              "12px",
+                              {
+                                      "lineHeight": "1",
+                                      "letterSpacing": "0.08em",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "display-lg": [
+                              "48px",
+                              {
+                                      "lineHeight": "1.1",
+                                      "letterSpacing": "-0.02em",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "display-lg-mobile": [
+                              "36px",
+                              {
+                                      "lineHeight": "1.1",
+                                      "letterSpacing": "-0.01em",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "body-md": [
+                              "16px",
+                              {
+                                      "lineHeight": "1.5",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "headline-sm": [
+                              "24px",
+                              {
+                                      "lineHeight": "1.3",
+                                      "fontWeight": "500"
+                              }
+                      ],
+                      "meta-data": [
+                              "14px",
+                              {
+                                      "lineHeight": "1.4",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "headline-md": [
+                              "32px",
+                              {
+                                      "lineHeight": "1.2",
+                                      "fontWeight": "400"
+                              }
+                      ]
+              }
+      },
+          },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+          font-variation-settings:
+          'FILL' 0,
+          'wght' 400,
+          'GRAD' 0,
+          'opsz' 24
+        }
+        .filled-icon {
+            font-variation-settings: 'FILL' 1;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md antialiased min-h-screen flex flex-col">
+<!-- TopNavBar -->
+<nav class="bg-surface border-b border-outline-variant fixed top-0 w-full z-50">
+<div class="flex justify-between items-center h-[72px] px-margin-desktop max-w-container-max-width mx-auto">
+<div class="text-headline-md font-headline-md text-primary tracking-tight">Dining Passport</div>
+<div class="hidden md:flex gap-8">
+<a class="text-on-surface-variant font-label-caps text-label-caps hover:text-primary transition-colors duration-200" href="#">Explore</a>
+<a class="text-on-surface-variant font-label-caps text-label-caps hover:text-primary transition-colors duration-200" href="#">Map</a>
+<a class="text-primary font-bold font-label-caps text-label-caps border-b-2 border-primary pb-1 hover:text-primary transition-colors duration-200 active:scale-95" href="#">Michelin Stars</a>
+<a class="text-on-surface-variant font-label-caps text-label-caps hover:text-primary transition-colors duration-200" href="#">Passport</a>
+</div>
+<div class="flex items-center gap-4 text-primary">
+<button aria-label="Notifications" class="hover:text-primary transition-colors duration-200">
+<span class="material-symbols-outlined text-[24px]">notifications</span>
+</button>
+<button aria-label="Profile" class="hover:text-primary transition-colors duration-200">
+<span class="material-symbols-outlined text-[24px]">person</span>
+</button>
+</div>
+</div>
+</nav>
+<!-- Main Content -->
+<main class="flex-grow pt-[72px]">
+<!-- Header Section -->
+<section class="bg-surface-container-low px-margin-mobile md:px-margin-desktop py-section-padding">
+<div class="max-w-container-max-width mx-auto">
+<!-- Breadcrumbs -->
+<nav aria-label="Breadcrumb" class="mb-gutter">
+<ol class="flex items-center space-x-2 text-meta-data font-meta-data text-on-surface-variant">
+<li><a class="hover:text-primary transition-colors" href="#">Home</a></li>
+<li><span class="material-symbols-outlined text-[16px] mx-1">chevron_right</span></li>
+<li><a class="hover:text-primary transition-colors" href="#">Michelin Stars</a></li>
+<li><span class="material-symbols-outlined text-[16px] mx-1">chevron_right</span></li>
+<li aria-current="page" class="text-primary">Three Stars</li>
+</ol>
+</nav>
+<div class="max-w-3xl">
+<div class="flex items-center gap-4 mb-unit">
+<div class="flex text-secondary">
+<span class="material-symbols-outlined filled-icon text-[32px]">star</span>
+<span class="material-symbols-outlined filled-icon text-[32px]">star</span>
+<span class="material-symbols-outlined filled-icon text-[32px]">star</span>
+</div>
+<span class="text-label-caps font-label-caps tracking-widest uppercase text-secondary">Exceptional Cuisine</span>
+</div>
+<h1 class="text-display-lg-mobile md:text-display-lg font-display-lg text-primary mb-gutter">Three Michelin Stars</h1>
+<p class="text-body-lg font-body-lg text-on-surface-variant max-w-2xl">
+                        Our highest award is given for the superlative cooking of chefs at the peak of their profession; their ingredients are exemplary, their cooking is elevated to an art form and their dishes are often destined to become classics. Worth a special journey.
+                    </p>
+<div class="mt-gutter text-meta-data font-meta-data text-on-surface-variant">
+                        Showing 16 destinations in the United States
+                    </div>
+</div>
+</div>
+</section>
+<!-- Grid Section -->
+<section class="px-margin-mobile md:px-margin-desktop py-section-padding bg-background">
+<div class="max-w-container-max-width mx-auto">
+<!-- Bento Grid Layout -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+<!-- Featured Large Card (Spans 8 cols) -->
+<article class="col-span-1 md:col-span-8 group cursor-pointer relative overflow-hidden rounded-lg bg-surface border border-outline-variant hover:shadow-[0px_4px_20px_rgba(0,0,0,0.04)] transition-all duration-300">
+<div class="aspect-[16/9] w-full relative">
+<img alt="Restaurant Image" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Exquisite, minimalist plating of a seafood dish featuring a solitary scallop adorned with delicate microgreens and a translucent, intricately patterned foam. The plate is pristine white ceramic, set against a dark, moody background with focused, dramatic lighting highlighting the textures of the food. High-end culinary photography, editorial style, emphasizing elegance and restraint." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBjEK5jaoWXPcfJZPZo21gGaoopEKv3-KBWY7lfzH0lOjD9tnj8gvtd2WpLAKNa3ILy99W3sFxTutyLmJASYUjaEys-zbTspUIGtkvL_pVTd1C0T9-ZMLHHsXVBUuVsDx8z2mAmFE3CSrWzpSDgyBJM63p3yeTzAxlaL_AcjLt4GmBmmYLeSIzVsqJUDFsXDZgVYKvfwohOO2QJYdXExWEyq7UyK-t4ZSvHwh0Z1Zid9tMpgXc7xlJvk1ZIyds61uuWY34m9bkdNn4"/>
+<div class="absolute top-4 left-4 flex gap-2">
+<span class="bg-surface/90 backdrop-blur-sm px-3 py-1 rounded text-label-caps font-label-caps text-secondary flex items-center gap-1 shadow-sm border border-secondary/20">
+<span class="material-symbols-outlined filled-icon text-[14px]">star</span>
+<span class="material-symbols-outlined filled-icon text-[14px]">star</span>
+<span class="material-symbols-outlined filled-icon text-[14px]">star</span>
+</span>
+</div>
+</div>
+<div class="p-6">
+<h2 class="text-headline-md font-headline-md text-primary mb-2">The French Laundry</h2>
+<div class="flex items-center gap-4 text-meta-data font-meta-data text-on-surface-variant">
+<span>$$$$</span>
+<span class="w-1 h-1 rounded-full bg-outline-variant"></span>
+<span>French, Contemporary</span>
+<span class="w-1 h-1 rounded-full bg-outline-variant"></span>
+<span>Yountville, CA</span>
+</div>
+</div>
+</article>
+<!-- Medium Card (Spans 4 cols) -->
+<article class="col-span-1 md:col-span-4 group cursor-pointer relative overflow-hidden rounded-lg bg-surface border border-outline-variant hover:shadow-[0px_4px_20px_rgba(0,0,0,0.04)] transition-all duration-300">
+<div class="aspect-[4/3] w-full relative">
+<img alt="Restaurant Image" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A meticulously crafted miniature tartlet filled with vibrant green herb emulsion and topped with a single, perfectly spherical dollop of golden caviar. The setting is an austere, matte black table surface. The lighting is soft and diffused, creating a luxurious, quiet atmosphere typical of a multi-course tasting menu experience in a highly exclusive restaurant." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAxQL3GejB8ZK7FKQl2KTKjTdJxjVepx9_XgRoj4uBzibQvxDiHdOvIdjePfvbIck-wSlQEGAy0jIQ23iJZzoi-UlclDt70KJPIaDydVRR6Ljj6J0ncmSGD-es4btcqiJ7OVFBYcwY-9OAFBeLyy5CR5EiyBTsnUOjwKFxdJ0x8oiit_G_N3OwN538rnvwzYK4db5ePG5VU1FH8MYx1i2DZcOcbV_aAPfvO0r4Z6kbDzliluDNAHCRluV_twyI4F1bg_uA-yAbbJYY"/>
+<div class="absolute top-4 left-4 flex gap-2">
+<span class="bg-surface/90 backdrop-blur-sm px-3 py-1 rounded text-label-caps font-label-caps text-secondary flex items-center gap-1 shadow-sm border border-secondary/20">
+<span class="material-symbols-outlined filled-icon text-[14px]">star</span> 3
+                                </span>
+</div>
+</div>
+<div class="p-6">
+<h2 class="text-headline-sm font-headline-sm text-primary mb-2">Alinea</h2>
+<div class="flex items-center gap-2 text-meta-data font-meta-data text-on-surface-variant">
+<span>$$$$</span>
+<span class="w-1 h-1 rounded-full bg-outline-variant"></span>
+<span>Contemporary</span>
+</div>
+<div class="mt-1 text-meta-data font-meta-data text-on-surface-variant">Chicago, IL</div>
+</div>
+</article>
+<!-- Standard Cards (Span 3 cols each) -->
+<article class="col-span-1 md:col-span-3 group cursor-pointer relative overflow-hidden rounded-lg bg-surface border border-outline-variant hover:shadow-[0px_4px_20px_rgba(0,0,0,0.04)] transition-all duration-300">
+<div class="aspect-[4/3] w-full relative">
+<img alt="Restaurant Image" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="An overhead view of a perfectly seared slice of A5 Wagyu beef, resting on a bed of dark, earthy truffle puree, garnished with a single, delicate gold leaf. The plate is a textured, unglazed ceramic in charcoal grey. The lighting is cinematic, casting deep shadows that emphasize the richness of the ingredients. Elite, modern fine dining aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDBQ-pGzqRwbm8oQuU_L-RkakoFLtNbFvH_y0taeA6wvFazWZPGEEWsACA2tIeXWAl6uGPUAsw_WvoULMnKFPege0PfAVSXi8xqLPCsQBlOwXM6AJmzRxHFwWMLnQM5E1DOuwEZ-CPBgA909GFz43auJdxaYzOlayVhCaXnUiJ51y749wdIy2FH1aKQL__kTAIQFiO-0vcdQHMV0OysRQlZMOp9BowF48S63A-F3s1EyJTEMoC3PEU48pYm2a41kG6WmcGErq0-55g"/>
+</div>
+<div class="p-4">
+<h2 class="text-headline-sm font-headline-sm text-primary mb-1">Eleven Madison Park</h2>
+<div class="flex items-center gap-2 text-meta-data font-meta-data text-on-surface-variant">
+<span>$$$$</span>
+<span class="w-1 h-1 rounded-full bg-outline-variant"></span>
+<span>Plant Based</span>
+</div>
+</div>
+</article>
+<article class="col-span-1 md:col-span-3 group cursor-pointer relative overflow-hidden rounded-lg bg-surface border border-outline-variant hover:shadow-[0px_4px_20px_rgba(0,0,0,0.04)] transition-all duration-300">
+<div class="aspect-[4/3] w-full relative">
+<img alt="Restaurant Image" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A minimalist presentation of raw seafood, likely sashimi, arranged with geometric precision on a chilled slab of pale grey stone. A subtle brushstroke of dark soy glaze decorates the plate. The environment is serene and immaculate, bathed in cool, bright, natural-looking light. The aesthetic communicates extreme purity, freshness, and high-end Japanese culinary tradition." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBAKEtKcl-QjuNQTKTTMPeX384g7kU4zMuGkGnD031IV6L_qX9qTJ4ZyFVh2BXhn7N8ZDkiKY3SLJoekjWPknEL6cv88jX3Yiv5O7BATm0hn3KpraZSpZEW2yRsIWKHDguByfuYLs0hjffjcH9z2BhJm2oy2Ps6v8fuUzkAN48a7Ea8_so_ee4W6ro5qPGT-UAnYvAHrlfePsBjrJX12D4axacQgkiciZPAMIkQgVKqMfW2WJdmFQtRQCwQwe28XnS-Pbck4PWfi-0"/>
+</div>
+<div class="p-4">
+<h2 class="text-headline-sm font-headline-sm text-primary mb-1">Masa</h2>
+<div class="flex items-center gap-2 text-meta-data font-meta-data text-on-surface-variant">
+<span>$$$$</span>
+<span class="w-1 h-1 rounded-full bg-outline-variant"></span>
+<span>Japanese, Sushi</span>
+</div>
+</div>
+</article>
+<article class="col-span-1 md:col-span-3 group cursor-pointer relative overflow-hidden rounded-lg bg-surface border border-outline-variant hover:shadow-[0px_4px_20px_rgba(0,0,0,0.04)] transition-all duration-300">
+<div class="aspect-[4/3] w-full relative">
+<img alt="Restaurant Image" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A vibrant, abstract composition on a plate featuring a vivid beetroot reduction forming a perfect circle, centered with a delicate quenelle of smoked crème fraîche. The background is a clean, white tablecloth. The image is bright, high-contrast, and focuses on the intersection of art and gastronomy. The overall feel is modern, sophisticated, and flawlessly executed." src="https://lh3.googleusercontent.com/aida-public/AB6AXuATE3AFLaZB7ycD2g0i5xJY-9om7IMHx38oeU0YF9vQa6iJshtDKQL7ZzmlRqN85xStvAdQ5RTKcMthmJSr3bPKpP9vjCti6VUlWlxc_WEvaJ-jypaU6bYu0Nk8yV1mBSETkkAsWABUOpKg1Bav3FAWkZUzMOlR098XORzNto0BmsCOyVypVA1Zbr6sApQhFlGo6KbymbHBDiCE3oEVATXv6L-EMrNNsKOtSAqAdaD5SFJPd8rPAo6EeUt-IWk0HFHgf8lrl6l3eUc"/>
+</div>
+<div class="p-4">
+<h2 class="text-headline-sm font-headline-sm text-primary mb-1">SingleThread</h2>
+<div class="flex items-center gap-2 text-meta-data font-meta-data text-on-surface-variant">
+<span>$$$$</span>
+<span class="w-1 h-1 rounded-full bg-outline-variant"></span>
+<span>Contemporary</span>
+</div>
+</div>
+</article>
+<article class="col-span-1 md:col-span-3 flex flex-col justify-center items-center bg-surface-container-low border border-outline-variant rounded-lg p-6 text-center">
+<span class="material-symbols-outlined text-[32px] text-secondary mb-4">explore</span>
+<h3 class="text-headline-sm font-headline-sm text-primary mb-2">View 11 More</h3>
+<p class="text-meta-data font-meta-data text-on-surface-variant mb-6">Discover the remaining pinnacle destinations across the country.</p>
+<button class="h-[48px] px-6 bg-primary text-on-primary font-label-caps text-label-caps rounded flex items-center justify-center hover:bg-on-primary-fixed transition-colors">
+                            Explore All Three Stars
+                        </button>
+</article>
+</div>
+</div>
+</section>
+<!-- Navigation Links Section -->
+<section class="border-t border-outline-variant bg-surface px-margin-mobile md:px-margin-desktop py-section-padding">
+<div class="max-w-container-max-width mx-auto grid grid-cols-1 md:grid-cols-2 gap-gutter">
+<a class="group block p-8 rounded-lg border border-outline-variant hover:border-secondary transition-colors duration-300 bg-surface-container-lowest" href="#">
+<div class="flex items-center justify-between mb-4">
+<div class="flex text-secondary opacity-50 group-hover:opacity-100 transition-opacity">
+<span class="material-symbols-outlined filled-icon">star</span>
+<span class="material-symbols-outlined filled-icon">star</span>
+</div>
+<span class="material-symbols-outlined text-outline group-hover:text-secondary transition-colors">arrow_forward</span>
+</div>
+<h3 class="text-headline-md font-headline-md text-primary mb-2">Two Michelin Stars</h3>
+<p class="text-body-md font-body-md text-on-surface-variant">Excellent cooking, worth a detour.</p>
+</a>
+<a class="group block p-8 rounded-lg border border-outline-variant hover:border-secondary transition-colors duration-300 bg-surface-container-lowest" href="#">
+<div class="flex items-center justify-between mb-4">
+<div class="flex text-secondary opacity-50 group-hover:opacity-100 transition-opacity">
+<span class="material-symbols-outlined filled-icon">star</span>
+</div>
+<span class="material-symbols-outlined text-outline group-hover:text-secondary transition-colors">arrow_forward</span>
+</div>
+<h3 class="text-headline-md font-headline-md text-primary mb-2">One Michelin Star</h3>
+<p class="text-body-md font-body-md text-on-surface-variant">High quality cooking, worth a stop.</p>
+</a>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-low w-full">
+<div class="flex flex-col md:flex-row justify-between items-center py-section-padding px-margin-desktop max-w-container-max-width mx-auto">
+<div class="font-headline-sm text-headline-sm text-primary mb-4 md:mb-0">Dining Passport</div>
+<div class="flex flex-wrap justify-center gap-6 mb-4 md:mb-0">
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors duration-200" href="#">Privacy Policy</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors duration-200" href="#">Terms of Service</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors duration-200" href="#">Contact</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors duration-200" href="#">About Us</a>
+</div>
+<div class="font-meta-data text-meta-data text-on-surface-variant text-center md:text-right max-w-xs">
+                Independent discovery platform. Not affiliated with the Michelin Guide.
+            </div>
+</div>
+</footer>
+</body></html>

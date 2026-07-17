@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Benu - Dining Passport</title>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Literata:opsz,wght@7..72,400;500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "secondary": "#7c5800",
+                        "outline": "#717975",
+                        "on-tertiary": "#ffffff",
+                        "on-tertiary-fixed": "#40000c",
+                        "inverse-on-surface": "#f3f0ef",
+                        "primary": "#00251b",
+                        "surface-container-highest": "#e5e2e1",
+                        "on-surface": "#1c1b1b",
+                        "secondary-fixed-dim": "#f3be5a",
+                        "tertiary": "#47000e",
+                        "tertiary-fixed": "#ffdada",
+                        "on-primary-fixed": "#002118",
+                        "inverse-surface": "#313030",
+                        "surface-container-low": "#f6f3f2",
+                        "secondary-container": "#ffc964",
+                        "error": "#ba1a1a",
+                        "on-secondary": "#ffffff",
+                        "surface-dim": "#dcd9d9",
+                        "surface-tint": "#3f6658",
+                        "surface-container": "#f0edec",
+                        "on-secondary-fixed": "#271900",
+                        "on-primary-container": "#7ca596",
+                        "tertiary-container": "#68111f",
+                        "outline-variant": "#c0c8c3",
+                        "primary-container": "#123b2f",
+                        "surface-variant": "#e5e2e1",
+                        "on-secondary-fixed-variant": "#5e4200",
+                        "surface": "#fcf9f8",
+                        "primary-fixed-dim": "#a5d0bf",
+                        "primary-fixed": "#c1ecda",
+                        "surface-container-lowest": "#ffffff",
+                        "background": "#fcf9f8",
+                        "on-error-container": "#93000a",
+                        "on-primary": "#ffffff",
+                        "surface-container-high": "#ebe7e7",
+                        "on-surface-variant": "#414845",
+                        "error-container": "#ffdad6",
+                        "secondary-fixed": "#ffdea7",
+                        "surface-bright": "#fcf9f8",
+                        "on-secondary-container": "#765400",
+                        "inverse-primary": "#a5d0bf",
+                        "on-tertiary-container": "#ef7881",
+                        "on-error": "#ffffff",
+                        "on-tertiary-fixed-variant": "#822530",
+                        "on-primary-fixed-variant": "#274e41",
+                        "tertiary-fixed-dim": "#ffb3b5",
+                        "on-background": "#1c1b1b"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "margin-mobile": "20px",
+                        "section-padding": "80px",
+                        "gutter": "24px",
+                        "margin-desktop": "64px",
+                        "unit": "8px",
+                        "container-max-width": "1280px"
+                    },
+                    "fontFamily": {
+                        "body-lg": ["Inter"],
+                        "label-caps": ["Inter"],
+                        "body-md": ["Inter"],
+                        "headline-md": ["Literata"],
+                        "display-lg-mobile": ["Literata"],
+                        "headline-sm": ["Literata"],
+                        "display-lg": ["Literata"],
+                        "meta-data": ["Inter"]
+                    },
+                    "fontSize": {
+                        "body-lg": ["18px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "label-caps": ["12px", { "lineHeight": "1", "letterSpacing": "0.08em", "fontWeight": "600" }],
+                        "body-md": ["16px", { "lineHeight": "1.5", "fontWeight": "400" }],
+                        "headline-md": ["32px", { "lineHeight": "1.2", "fontWeight": "400" }],
+                        "display-lg-mobile": ["36px", { "lineHeight": "1.1", "letterSpacing": "-0.01em", "fontWeight": "400" }],
+                        "headline-sm": ["24px", { "lineHeight": "1.3", "fontWeight": "500" }],
+                        "display-lg": ["48px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "400" }],
+                        "meta-data": ["14px", { "lineHeight": "1.4", "fontWeight": "400" }]
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-background text-on-background font-body-md min-h-screen flex flex-col">
+<!-- TopNavBar -->
+<header class="bg-surface dark:bg-surface fixed top-0 w-full h-[72px] border-b border-outline-variant dark:border-outline z-50">
+<div class="flex justify-between items-center px-margin-desktop w-full max-w-container-max-width mx-auto h-full">
+<a class="font-headline-sm text-headline-sm font-bold text-primary dark:text-primary-fixed" href="#">
+                Dining Passport
+            </a>
+<nav class="hidden md:flex gap-gutter items-center h-full">
+<a class="font-body-md text-body-md text-on-surface-variant dark:text-on-surface-variant hover:text-primary dark:hover:text-primary-fixed hover:text-secondary dark:hover:text-secondary-fixed transition-colors duration-200" href="#">Explore</a>
+<a class="font-body-md text-body-md text-on-surface-variant dark:text-on-surface-variant hover:text-primary dark:hover:text-primary-fixed hover:text-secondary dark:hover:text-secondary-fixed transition-colors duration-200" href="#">Map</a>
+<a class="font-body-md text-body-md text-primary dark:text-primary-fixed border-b-2 border-secondary font-semibold pb-1 opacity-80 transition-opacity" href="#">Michelin Stars</a>
+<a class="font-body-md text-body-md text-on-surface-variant dark:text-on-surface-variant hover:text-primary dark:hover:text-primary-fixed hover:text-secondary dark:hover:text-secondary-fixed transition-colors duration-200" href="#">Passport</a>
+</nav>
+<div class="flex items-center gap-4">
+<button class="text-primary dark:text-primary-fixed hover:text-secondary dark:hover:text-secondary-fixed transition-colors duration-200">
+<span class="material-symbols-outlined">search</span>
+</button>
+<button class="text-primary dark:text-primary-fixed hover:text-secondary dark:hover:text-secondary-fixed transition-colors duration-200">
+<span class="material-symbols-outlined">person</span>
+</button>
+</div>
+</div>
+</header>
+<main class="flex-grow pt-[72px]">
+<!-- Hero Section -->
+<section class="relative w-full aspect-[16/9] max-h-[716px] bg-surface-variant overflow-hidden">
+<div class="absolute inset-0 bg-cover bg-center" data-alt="A highly detailed, professional interior photograph of Benu restaurant in San Francisco. The minimalist, Zen-inspired dining room features warm wood tones, perfectly spaced tables with crisp white linens, and soft, natural lighting filtering through subtle window treatments. The overall aesthetic is serene, extremely luxurious, and meticulously organized, emphasizing a quiet luxury culinary experience." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDXQN2S-s89M-yukzqQxfAZpWhYBDk3rhKJ-yxFreemIwefb9wL9mP8bHb9t43twgaAHyEQXzj41pspwM99fRsE_84PI4Auk-KprxBOATNyG92HoTY473ZGwvFyUXFYVhMzTpB7o1E109-GORIe75GJhQUof5Ox5v6c07EHwtikeMlOdC9pFq1Y1VmNsMURn6OE-6ugpv0ROds_t6BBJMTMXhNJQmhzJgb3mTGfFqti7K4E53hJI_sTTekrAEfbw88VRjOHidvgW4o')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent"></div>
+<div class="absolute bottom-0 left-0 right-0 p-margin-mobile md:p-margin-desktop max-w-container-max-width mx-auto">
+<div class="flex items-end justify-between w-full">
+<div>
+<h1 class="font-display-lg text-display-lg-mobile md:text-display-lg text-on-primary mb-2">Benu</h1>
+<div class="flex items-center gap-2">
+<span class="bg-secondary text-on-secondary font-label-caps text-label-caps px-2 py-1 rounded h-[24px] inline-flex items-center">3 MICHELIN STARS</span>
+<span class="text-on-primary font-meta-data text-meta-data">Contemporary, Asian Influences</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Main Content Area -->
+<div class="max-w-container-max-width mx-auto px-margin-mobile md:px-margin-desktop py-section-padding grid grid-cols-1 md:grid-cols-12 gap-gutter">
+<!-- Left Column: Details -->
+<div class="md:col-span-8 flex flex-col gap-[64px]">
+<!-- Action Bar -->
+<div class="flex flex-wrap gap-4 border-b border-outline-variant pb-6">
+<button class="h-[48px] px-6 border border-outline-variant text-primary rounded font-label-caps text-label-caps hover:bg-surface-container-highest transition-colors flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px]">bookmark_border</span>
+                        SAVE
+                    </button>
+<button class="h-[48px] px-6 border border-outline-variant text-primary rounded font-label-caps text-label-caps hover:bg-surface-container-highest transition-colors flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px]">flag</span>
+                        WANT TO VISIT
+                    </button>
+<button class="h-[48px] px-6 border border-outline-variant text-primary rounded font-label-caps text-label-caps hover:bg-surface-container-highest transition-colors flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px]">check_circle</span>
+                        VISITED
+                    </button>
+<button class="h-[48px] px-6 border border-outline-variant text-primary rounded font-label-caps text-label-caps hover:bg-surface-container-highest transition-colors flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px]">favorite_border</span>
+                        FAVORITE
+                    </button>
+</div>
+<!-- About Section -->
+<section>
+<h2 class="font-headline-sm text-headline-sm mb-4">About</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-prose">
+                        Corey Lee’s flagship restaurant remains a serene oasis in SoMa, where diners are treated to a masterclass in culinary precision. The tasting menu seamlessly weaves Asian techniques and flavors with Western fine-dining sensibilities. Signatures like the faux shark fin soup and thousand-year-old quail egg are enduring testaments to a kitchen operating at the highest level of execution and creativity.
+                    </p>
+</section>
+<!-- Google Integration -->
+<section class="bg-surface-container-lowest border border-outline-variant rounded p-6">
+<div class="flex items-center gap-2 mb-6">
+<span class="material-symbols-outlined text-secondary">google</span>
+<h3 class="font-body-md text-body-md font-semibold text-on-surface-variant">Photos and live place information from Google</h3>
+</div>
+<div class="flex items-center gap-4 mb-6">
+<div class="flex items-center text-secondary">
+<span class="font-headline-sm text-headline-sm mr-1">4.8</span>
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<span class="font-meta-data text-meta-data text-on-surface-variant">1,200 reviews</span>
+</div>
+<div class="grid grid-cols-2 sm:grid-cols-4 gap-2">
+<img class="w-full aspect-square object-cover rounded" data-alt="Close up food photography of a meticulously plated miniature tart at Benu restaurant. The dish features intricate layers of pristine ingredients arranged precisely on a textured ceramic plate. High-contrast, editorial lighting highlights the glossy textures and vibrant colors of the food against a dark, moody background, emphasizing a luxurious fine-dining aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDuzAKIKOiCr9Nffj-EbUggeb-Y6M8-E8WVKmEE86q3lA9uNR7uxql3XeRKTZ3cOVW_V2sL_JsxpwPy-Jnz_5QTOWBM1ab-sMjWbsUtSqjJpcAFDVEWe3za_14_gRpZ5mGtoort8B0sMVjtijOH_lArl8M3VOV-Rtzo-cLYUeDPKJErFJFUnGC_wjLbokJnFvufkxG7VWScNAsnz5QOMCQKCXQgHMmjLraGaZiE7ndMIJvl8o21SKGMOlOdebp-GDY6j1LuIcMe3e0"/>
+<img class="w-full aspect-square object-cover rounded" data-alt="Professional food photography of the famous thousand-year-old quail egg signature dish at Benu. The small, jewel-like egg rests in a delicate, handcrafted bowl with a rich, dark broth. Soft, directional light catches the subtle garnishes. The styling is minimalist, clean, and highly sophisticated, reflecting three-Michelin-star quality." src="https://lh3.googleusercontent.com/aida-public/AB6AXuALyymdeK9Oo2QQfKsqB6UuGc2N6Bbssk_-42nyI-0eKmy-ED6p3mJQ5VdYEOjodqREUURevUfDn0dzEKhaKLPazODMrIaH4_Qcb_HI6Q_sGey8Ru-Oh0RQ6WiJZG-rZ6DgWlXDgJq9PH_hD7Mv7Zbp-J_uuqdXis7iVtwr8cZoTUmi1n6kdsAkUAdTQ_mYbvOgKhKYmaY47BcTdUU9nZs-MkJdZK_8uu5FdaZnZIS-lmVl5eY-4IWUteo111ccGQjsw3TJEXEXK0s"/>
+<img class="w-full aspect-square object-cover rounded" data-alt="Architectural photograph of the serene exterior courtyard at Benu restaurant in San Francisco. A minimalist aesthetic featuring clean concrete lines, lush but contained greenery, and subtle exterior lighting. The mood is calm, exclusive, and refined, serving as a quiet transition from the busy city into a luxurious dining space." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAFAFyH9LKUTSp4ledL1M2Gap4oJW0DPjTycAHWwDp6pIoxEwQCC3aEq4wsQCYYKdr9HfH2HZPC0QKp7Y54ER-QQCgHdO1n_SsLjyQY9HjoUrtJs13P8YHa6Oo_wBjQ5svCZlDjFW4iO6aOBkcs5UmhC84An9yxz-LzJ8pltopSsIWnOiHFhR139NZKzpdJ2lIb4aZq3KOZZKqSWk0AKOOX87xNDpFOOBdr7fZFyQ9Flxg3mKTPJWZuUUrwBNvwusxbxOxDNuFDFUc"/>
+<img class="w-full aspect-square object-cover rounded" data-alt="A beautifully crafted, minimalist cocktail served in a pristine, thin-lipped glass on a dark wooden table at Benu. The drink is crystal clear with a perfectly clear ice cube and a minimal garnish. Soft, ambient restaurant lighting creates elegant reflections on the glass. The aesthetic conveys refined taste and quiet luxury." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA0ZidEbKWn5_7hzZrQiYxq8wzgZtgrzCaETJo0L-2sMLLv9a1jrDu2zupoGrA5FbAGib9EG2V8IH6tb6lSiWdGGdgJOco8DNvhmQv66U_vzLZUdc-CSzNwp6ah668muOIH_jS-_rZ-zeU-QfLmjve1VVM6680UBP43y3xOlIQ4HcwEbqd37azTfop9PMgUE7f2xloXw7P-iyue_43EZOcUMvsiMHN9NyJ7gZN1ct2TmxssPgEfFl6oJsG0uG7g73ty1kJDZheLWoM"/>
+</div>
+</section>
+</div>
+<!-- Right Column: Sidebar -->
+<div class="md:col-span-4 flex flex-col gap-6">
+<!-- Reservation Card -->
+<div class="bg-surface-container-lowest border border-outline-variant rounded p-6 sticky top-[100px]">
+<div class="mb-6 pb-6 border-b border-outline-variant">
+<h3 class="font-headline-sm text-headline-sm mb-2">Reserve your table</h3>
+<div class="flex items-center gap-2 mb-4">
+<span class="font-body-md text-body-md text-on-surface-variant">$$$$</span>
+<span class="text-outline-variant">•</span>
+<span class="font-body-md text-body-md text-on-surface-variant">Contemporary Asian</span>
+</div>
+<button class="w-full h-[48px] bg-primary text-on-primary font-label-caps text-label-caps rounded hover:bg-primary-container transition-colors flex items-center justify-center">
+                            RESERVE NOW
+                        </button>
+</div>
+<div class="space-y-4">
+<div class="flex gap-3">
+<span class="material-symbols-outlined text-on-surface-variant">location_on</span>
+<div>
+<p class="font-body-md text-body-md text-on-surface">22 Hawthorne St</p>
+<p class="font-meta-data text-meta-data text-on-surface-variant">San Francisco, CA 94105</p>
+</div>
+</div>
+<div class="flex gap-3">
+<span class="material-symbols-outlined text-on-surface-variant">language</span>
+<a class="font-body-md text-body-md text-secondary hover:underline" href="#">benusf.com</a>
+</div>
+</div>
+<div class="mt-6 rounded overflow-hidden h-[200px] border border-outline-variant relative">
+<!-- Map Placeholder -->
+<div class="w-full h-full bg-surface-variant flex items-center justify-center">
+<img alt="Map" class="object-cover w-full h-full opacity-80 mix-blend-multiply" data-location="San Francisco" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD7rf1ioUEeUTIOTtkp8q1yKSpQ1_7TINajXJGJWz7h6LUfXWmYWxEjkI9Y7m9nb-3XnastkTw2ucDppi0uZCDc0sWJlKZinzXOcywLbHKQbsYxxzcADCRv-crh-LAvc_KavO6FKK_wm-JkDSr3ro_Cy5zf90DTVLtuj-cxWoLQmplGKj2t4auX2JT10KUfwNeFuVSvdhCDTSn4zAkXLFJFu32HoVC8mKzrqT2fO9A4osFxKCattC_EwySIoe0Txc-4LxPSSmoFTbw"/>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-low dark:bg-surface-container-low w-full py-section-padding border-t border-outline-variant mt-auto">
+<div class="flex flex-col items-center justify-center space-y-gutter px-margin-desktop w-full max-w-container-max-width mx-auto">
+<div class="font-headline-sm text-headline-sm text-primary text-center">
+                Dining Passport
+            </div>
+<nav class="flex flex-wrap justify-center gap-6">
+<a class="font-meta-data text-meta-data text-on-surface-variant dark:text-on-surface-variant hover:text-secondary dark:hover:text-secondary-fixed transition-colors cursor-pointer transition-all" href="#">Explore</a>
+<a class="font-meta-data text-meta-data text-on-surface-variant dark:text-on-surface-variant hover:text-secondary dark:hover:text-secondary-fixed transition-colors cursor-pointer transition-all" href="#">Map</a>
+<a class="font-meta-data text-meta-data text-on-surface-variant dark:text-on-surface-variant hover:text-secondary dark:hover:text-secondary-fixed transition-colors cursor-pointer transition-all" href="#">About Michelin Stars</a>
+<a class="font-meta-data text-meta-data text-on-surface-variant dark:text-on-surface-variant hover:text-secondary dark:hover:text-secondary-fixed transition-colors cursor-pointer transition-all" href="#">Privacy</a>
+<a class="font-meta-data text-meta-data text-on-surface-variant dark:text-on-surface-variant hover:text-secondary dark:hover:text-secondary-fixed transition-colors cursor-pointer transition-all" href="#">Terms</a>
+</nav>
+<p class="font-meta-data text-meta-data text-on-surface-variant text-center opacity-70">
+                Independent discovery platform. Not affiliated with the Michelin Guide.
+            </p>
+</div>
+</footer>
+<div class="fixed inset-0 z-[100] flex items-center justify-center bg-black/40 p-margin-mobile">
+<div class="bg-surface-container-lowest w-full max-w-[560px] rounded-xl shadow-lg overflow-hidden flex flex-col">
+<!-- Header -->
+<div class="p-6 border-b border-outline-variant flex justify-between items-start">
+<div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface mb-1">Record your visit</h2>
+<div class="flex items-center gap-2">
+<span class="font-body-md text-body-md text-on-surface-variant">Benu</span>
+<span class="bg-secondary text-on-secondary font-label-caps text-[10px] px-1.5 py-0.5 rounded">3 MICHELIN STARS</span>
+</div>
+</div>
+<button class="text-on-surface-variant hover:text-on-surface transition-colors">
+<span class="material-symbols-outlined">close</span>
+</button>
+</div>
+<!-- Content -->
+<div class="p-6 space-y-[18px]">
+<div class="flex flex-col gap-2">
+<label class="font-label-caps text-label-caps text-on-surface-variant">VISIT DATE</label>
+<input class="w-full h-[48px] px-4 border border-outline-variant rounded bg-surface-container-low focus:border-primary outline-none transition-colors" type="date" value="2023-10-27"/>
+</div>
+<div class="flex flex-col gap-2">
+<label class="font-label-caps text-label-caps text-on-surface-variant">FAVORITE DISHES</label>
+<textarea class="w-full p-4 border border-outline-variant rounded bg-surface-container-low focus:border-primary outline-none transition-colors min-h-[80px]" placeholder="e.g. Faux shark fin soup, thousand-year-old quail egg"></textarea>
+</div>
+<div class="flex flex-col gap-2">
+<label class="font-label-caps text-label-caps text-on-surface-variant">PRIVATE NOTES</label>
+<textarea class="w-full p-4 border border-outline-variant rounded bg-surface-container-low focus:border-primary outline-none transition-colors min-h-[80px]" placeholder="Add your personal thoughts..."></textarea>
+</div>
+<div class="flex items-center justify-between py-2">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary">favorite</span>
+<span class="font-body-md text-body-md text-on-surface">Mark as favorite</span>
+</div>
+<div class="w-12 h-6 bg-secondary rounded-full relative cursor-pointer">
+<div class="absolute right-1 top-1 w-4 h-4 bg-on-secondary rounded-full"></div>
+</div>
+</div>
+<div class="flex items-center gap-2 text-primary">
+<span class="material-symbols-outlined">check_circle</span>
+<span class="font-label-caps text-label-caps">STATUS: VISITED</span>
+</div>
+</div>
+<!-- Footer -->
+<div class="p-6 border-t border-outline-variant flex justify-between items-center">
+<button class="font-label-caps text-label-caps text-on-surface-variant hover:text-on-surface transition-colors">CANCEL</button>
+<button class="h-[48px] px-8 bg-primary text-on-primary font-label-caps text-label-caps rounded hover:bg-primary-container transition-colors">
+                SAVE VISIT
+            </button>
+</div>
+</div>
+</div></body></html>
