@@ -22,9 +22,9 @@ Complexity: **L** low · **M** medium · **H** high · **VH** very high
 | `RestaurantDiscoveryCard` / `Compact` / `Editorial` | Cards | Linking, badges data | Card layout | New card variants | library + explore + home | H | reservations e2e selectors | Phase 3 |
 | `RestaurantMedia` / fallbacks | Images | First-party + fallback rules | Visual fallback | Stitch media/fallback | DESIGN.md | M | — | Phase 3 |
 | `StarMark` / `PriceMark` / `CuisineLabel` | Meta atoms | Data formatting | Styling | Restyle or replace | library | L | — | Phase 3 |
-| `passport/page` + `PassportHome` | Passport hub | Metrics, sections, empty | Dashboard layout | New passport narrative | `personal_passport` + empty | H | `test_passport_*.mjs` | Phase 8 |
-| `PassportRestaurantList` | Saved/visited lists | Mode filtering | List chrome | List pages from designs | saved/visited/planned | M | — | Phase 8 |
-| `saved/page` / `visited/page` | Personal lists | Data filters | Presentation | Stitch list pages | saved/visited | M | — | Phase 8 |
+| `passport/page` + `PassportHome` | Passport hub | Metrics, sections, empty | Dashboard layout | **Done** — `stitch/passport/PassportPageView` (`PassportHome` deleted) | `personal_passport` + empty | H | `test_passport_*.mjs`, `e2e/passport.spec.ts` | **Phase 8 complete** |
+| `PassportRestaurantList` | Saved/visited/planned lists | Mode filtering | List chrome | **Done** — `PassportListPage` + mode cards (`PassportRestaurantList` deleted) | saved/visited/planned | M | e2e passport + reservations | **Phase 8 complete** |
+| `saved/page` / `visited/page` / **`planned/page`** | Personal lists | Data filters | Presentation | **Done** — Stitch list pages; `/planned` added (OD-07) | saved/visited/planned | M | e2e | **Phase 8 complete** |
 | `CollectionsManager` / `CollectionDetail` | Collections CRUD UI | Collection store ops | Presentation | New collection components | collections overview/detail | H | — | Phase 9 |
 | `(auth)/*` + `AuthForm` | Auth flows | Server actions, redirects | Split shell / forms | `AuthShell` + forms | auth quartet | M | `e2e/auth.spec.ts`, `test_auth_redirect.mjs` | Phase 10 |
 | `(auth)/layout.tsx` | Auth aside | — | Current forest aside | Match Stitch atmospheric split | sign_in etc. | M | — | Phase 10 |

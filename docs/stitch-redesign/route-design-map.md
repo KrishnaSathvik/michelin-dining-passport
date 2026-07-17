@@ -88,43 +88,46 @@ Canonical visual conventions (**approved 2026-07-17**):
 
 ## Passport & personal lists
 
-### `/passport` (active)
+### `/passport` (active) — **Phase 8 complete**
 
 | Field | Spec |
 |---|---|
 | **Stitch reference** | `personal_passport` |
-| **Composition** | Your Passport → Visited / To Visit / Favorites summary → Stars Collected + States Explored → Personal Collection previews linking to lists |
-| **Preserve** | `usePassport`, metrics, local/cloud sync notices |
-| **Unsupported** | Fake dish tags unless from favorite dishes field; wrong totals |
+| **Composition** | **Done** — `stitch/passport/PassportPageView` → My Passport hero → Visited / To Visit / Favorites → Stars Collected + States Explored → Personal Collection previews → sync notice |
+| **Preserve** | `PassportProvider`, store, merge, sync notices; To Visit = OD-09 |
+| **Unsupported** | Fake dish tags; L'Assiette branding; bottom nav; Google content |
 
-### `/passport` (empty)
+### `/passport` (empty) — **Phase 8 complete**
 
 | Field | Spec |
 |---|---|
 | **Stitch reference** | `personal_passport_new_user_state` (body only; ignore alternate nav) |
-| **Composition** | Empty hero + CTAs to Explore/Map → feature explanation → device/cloud note |
+| **Composition** | **Done** — aspirational hero + Explore/Map CTAs → Save→Plan→Visit explanation → device/cloud note |
 
-### `/saved`
+### `/saved` — **Phase 8 complete**
 
 | Field | Spec |
 |---|---|
 | **Stitch reference** | `saved_restaurants` |
-| **Preserve** | Saved filter from passport store |
-| **Unsupported** | Move to Planned if UX not wired — wire to existing planned flag or omit |
+| **Composition** | **Done** — `PassportListPage` mode=`saved` + `SavedRestaurantCard` |
+| **Preserve** | Predicate `saved === true`; Move to Planned via Phase 7 planning dialog |
+| **Unsupported** | Google content; fake Reserve labels |
 
-### `/visited`
+### `/visited` — **Phase 8 complete**
 
 | Field | Spec |
 |---|---|
 | **Stitch reference** | `visited_restaurants` |
-| **Title** | `Visited` with optional subtitle `Your dining history` (OD-15) |
+| **Composition** | **Done** — `PassportListPage` mode=`visited` + `VisitedRestaurantCard` |
+| **Title** | H1 `Visited` · subtitle `Your dining history` (OD-15) |
 
-### `/planned` (OD-07 approved)
+### `/planned` (OD-07) — **Phase 8 complete**
 
 | Field | Spec |
 |---|---|
 | **Stitch reference** | `planned_restaurants` |
-| **Route** | `/planned` beside `/saved` and `/visited` |
+| **Route** | **Shipped** at `/planned` beside `/saved` and `/visited` |
+| **Composition** | **Done** — `PassportListPage` mode=`planned` + `PlannedRestaurantRow` |
 | **Preserve** | Existing `planned` flag and persistence — no new database concept |
 
 ### `/collections`

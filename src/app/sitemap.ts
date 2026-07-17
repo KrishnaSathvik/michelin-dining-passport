@@ -15,6 +15,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/about-michelin-stars",
     "/passport",
     "/saved",
+    "/planned",
     "/visited",
     "/collections",
     "/stars/1",

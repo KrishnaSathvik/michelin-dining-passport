@@ -4,21 +4,21 @@ import { getRestaurants } from "@/lib/data/restaurants";
 import { buildPageMetadata } from "@/lib/seo/metadata";
 
 export const metadata: Metadata = buildPageMetadata({
-  title: "Visited",
-  description: "Your dining history — restaurants marked visited in your passport.",
-  path: "/visited",
+  title: "Planned visits",
+  description: "Restaurants marked planned in your dining passport.",
+  path: "/planned",
 });
 
-type VisitedPageProps = {
+type PlannedPageProps = {
   searchParams: Promise<Record<string, string | string[] | undefined>>;
 };
 
 /**
- * Visited list — Stitch personal-list composition (Phase 8).
- * H1: Visited · subtitle: Your dining history
- * Predicate: unique Passport records where visited === true.
+ * Planned list — first-class sibling to /saved and /visited (OD-07).
+ * View over existing Passport records where planned === true.
+ * No new database entity or persistence format.
  */
-export default async function VisitedPage({ searchParams }: VisitedPageProps) {
+export default async function PlannedPage({ searchParams }: PlannedPageProps) {
   const params = await searchParams;
   const restaurants = getRestaurants();
   const proof =
@@ -29,6 +29,6 @@ export default async function VisitedPage({ searchParams }: VisitedPageProps) {
       : undefined;
 
   return (
-    <PassportListPage mode="visited" restaurants={restaurants} proof={proof} />
+    <PassportListPage mode="planned" restaurants={restaurants} proof={proof} />
   );
 }

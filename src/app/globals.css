@@ -113,6 +113,7 @@
   --color-dp-surface: var(--dp-surface);
   --color-dp-soft: var(--dp-soft);
   --color-dp-surface-low: var(--dp-surface-low);
+  --color-dp-surface-highest: var(--dp-surface-highest);
   --color-dp-ink: var(--dp-ink);
   --color-dp-ink-secondary: var(--dp-ink-secondary);
   --color-dp-ink-muted: var(--dp-ink-muted);
@@ -125,6 +126,8 @@
   --color-dp-primary-hover: var(--dp-primary-hover);
   --color-dp-star-gold: var(--dp-star-gold);
   --color-dp-burgundy: var(--dp-burgundy);
+  --color-dp-secondary: var(--dp-secondary);
+  --color-dp-secondary-container: var(--dp-secondary-container);
   --color-dp-error: var(--dp-error);
   --color-dp-error-container: var(--dp-error-container);
   --color-dp-focus: var(--dp-focus);

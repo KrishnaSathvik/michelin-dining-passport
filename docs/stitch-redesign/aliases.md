@@ -69,8 +69,10 @@ New homepage location: `src/components/stitch/home/*` → `HomepageView`.
 
 | Legacy path | New replacement | Remaining importers | Delete by |
 |---|---|---|---|
-| `src/components/restaurant/RestaurantDiscoveryCard.tsx` | `stitch/restaurant/RestaurantDiscoveryCard` | Related lists, Passport grids (homepage + explore + taxonomy migrated) | Phase 6–8 |
-| `src/components/restaurant/RestaurantCompactCard.tsx` | `stitch/restaurant/RestaurantListRow` | Passport lists (explore list migrated) | Phase 8 |
+| `src/components/restaurant/RestaurantDiscoveryCard.tsx` | `stitch/restaurant/RestaurantDiscoveryCard` | Dead home modules / legacy explore remnants | Phase 12 |
+| `src/components/restaurant/RestaurantCompactCard.tsx` | `stitch/restaurant/RestaurantListRow` / passport cards | Collections detail only (Phase 9) | Phase 9 |
+| `src/components/passport/PassportHome.tsx` | **Deleted** | `stitch/passport/PassportPageView` | Phase 8 done |
+| `src/components/passport/PassportRestaurantList.tsx` | **Deleted** | `stitch/passport/PassportListPage` | Phase 8 done |
 | `src/components/restaurant/RestaurantEditorialCard.tsx` | `stitch/restaurant/RestaurantEditorialCard` | Unused after Phase 4 homepage | Phase 7 cleanup if still unused |
 | `src/components/restaurant/RestaurantMedia.tsx` | `stitch/restaurant/RestaurantMedia` | Legacy cards + detail | Phase 5–7 |
 | `src/components/restaurant/RestaurantImageFallback.tsx` | `stitch/restaurant/RestaurantFallback` | Legacy media | Phase 5–7 |

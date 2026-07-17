@@ -98,8 +98,11 @@ test.describe("Phase 5.5 reservation actions", () => {
   test("Planned passport restaurant shows reservation action", async ({ page }) => {
     await page.goto("/restaurants/benu-san-francisco-ca");
     await page.getByRole("button", { name: "Planned" }).click();
-    await page.goto("/passport");
-    await expect(page.getByRole("heading", { name: "Planned restaurants" })).toBeVisible();
+    // Planning dialog may open; navigate to the dedicated /planned route (OD-07).
+    await page.goto("/planned");
+    await expect(
+      page.getByRole("heading", { level: 1, name: "Planned Visits" }),
+    ).toBeVisible();
     const planned = page.locator("article").filter({ hasText: "Benu" }).first();
     await expect(planned).toBeVisible();
     await expect(
