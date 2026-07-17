@@ -19,6 +19,7 @@
     "data:reservations:review": "python3 scripts/review_reservations.py --report --needs-review",
     "data:reservations:check-links": "python3 scripts/check_reservation_links.py",
     "data:google-places:match": "python3 scripts/match_google_place_ids.py",
+    "data:google-places:match:browser": "node scripts/match_google_place_ids_browser.mjs",
     "data:google-places:review": "python3 scripts/review_google_place_ids.py",
     "data:google-places:validate": "python3 scripts/validate_google_place_ids.py",
     "data:google-places:report": "python3 scripts/write_google_place_report.py",

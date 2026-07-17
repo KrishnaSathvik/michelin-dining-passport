@@ -138,7 +138,23 @@ def haversine_m(lat1: float, lon1: float, lat2: float, lon2: float) -> float:
 
 
 def name_similarity(a: str, b: str) -> float:
-    return SequenceMatcher(None, normalize_text(a), normalize_text(b)).ratio()
+    na = normalize_text(a)
+    nb = normalize_text(b)
+    if not na or not nb:
+        return 0.0
+    if na == nb:
+        return 1.0
+    # Containment handles "SingleThread" vs "SingleThread Farm - Restaurant - Inn"
+    if na in nb or nb in na:
+        shorter, longer = (na, nb) if len(na) <= len(nb) else (nb, na)
+        return max(0.92, SequenceMatcher(None, shorter, longer).ratio())
+    token_a = set(na.split())
+    token_b = set(nb.split())
+    if token_a and token_b:
+        jaccard = len(token_a & token_b) / len(token_a | token_b)
+        if token_a.issubset(token_b) or token_b.issubset(token_a):
+            return max(0.9, jaccard)
+    return SequenceMatcher(None, na, nb).ratio()
 
 
 def shared_address_groups(restaurants: list[dict]) -> dict[str, list[str]]:
