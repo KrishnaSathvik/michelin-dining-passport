@@ -20,6 +20,9 @@ export function SiteFooter() {
           <p className="mt-3 max-w-lg font-sans text-base leading-relaxed text-ink-muted">
             {siteConfig.coverageNote}
           </p>
+          <p className="mt-3 max-w-lg font-sans text-sm leading-relaxed text-ink-muted">
+            {siteConfig.googlePlacesDisclaimer}
+          </p>
           <p className="mt-3 font-sans text-sm text-ink-muted">
             {siteConfig.dataUpdatedLabel}. Roster import dated {source.importedAt}.{" "}
             {totals.restaurants} starred restaurants currently listed.
