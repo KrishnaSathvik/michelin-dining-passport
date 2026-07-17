@@ -122,9 +122,15 @@ function AppHeaderInner({
           </div>
 
           <div className="flex items-center gap-1 sm:gap-2">
-            <Link
+            {/*
+              Native anchor (not next/link): search must always reach /explore.
+              next/link preventDefaults and can drop navigation when the App
+              Router transition is interrupted under load.
+            */}
+            <a
               href="/explore"
               aria-label="Search restaurants"
+              data-header-search
               className="inline-flex h-11 w-11 items-center justify-center rounded-[var(--dp-radius-md)] text-dp-ink-secondary transition-colors hover:bg-dp-soft hover:text-dp-primary"
             >
               <svg
@@ -148,7 +154,7 @@ function AppHeaderInner({
                   strokeLinecap="round"
                 />
               </svg>
-            </Link>
+            </a>
 
             {signedIn ? (
               <div className="relative hidden sm:block">
@@ -270,13 +276,13 @@ function AppHeaderInner({
               );
             })}
             <li>
-              <Link
+              <a
                 href="/explore"
                 className="flex min-h-11 items-center rounded-[var(--dp-radius-md)] px-3 font-sans text-base text-dp-ink no-underline hover:bg-dp-soft"
                 onClick={() => setMenuOpen(false)}
               >
                 Search
-              </Link>
+              </a>
             </li>
             <li>
               {signedIn ? (

@@ -48,11 +48,51 @@ test.describe("Stitch application shell", () => {
   });
 
   test("search affordance goes to explore", async ({ page }) => {
+    await page.setViewportSize({ width: 1440, height: 900 });
     await page.goto("/");
-    await page
+    const banner = page.getByRole("banner");
+    // Guard: fail clearly if a foreign localhost app is serving instead of Dining Passport.
+    await expect(
+      banner.getByRole("link", { name: "Dining Passport" }),
+    ).toBeVisible();
+    const search = banner.getByRole("link", { name: "Search restaurants" });
+    await expect(search).toHaveAttribute("href", "/explore");
+    await Promise.all([
+      page.waitForURL(/\/explore/),
+      search.click(),
+    ]);
+    await expect(page).toHaveURL(/\/explore/);
+  });
+
+  test("search affordance keyboard activation goes to explore", async ({
+    page,
+  }) => {
+    await page.setViewportSize({ width: 1440, height: 900 });
+    await page.goto("/passport");
+    const search = page
       .getByRole("banner")
-      .getByRole("link", { name: "Search restaurants" })
-      .click();
+      .getByRole("link", { name: "Search restaurants" });
+    await expect(search).toHaveAttribute("href", "/explore");
+    await search.focus();
+    await expect(search).toBeFocused();
+    await Promise.all([
+      page.waitForURL(/\/explore/),
+      page.keyboard.press("Enter"),
+    ]);
+    await expect(page).toHaveURL(/\/explore/);
+  });
+
+  test("mobile search affordance goes to explore", async ({ page }) => {
+    await page.setViewportSize({ width: 390, height: 844 });
+    await page.goto("/");
+    const search = page
+      .getByRole("banner")
+      .getByRole("link", { name: "Search restaurants" });
+    await expect(search).toHaveAttribute("href", "/explore");
+    await Promise.all([
+      page.waitForURL(/\/explore/),
+      search.click(),
+    ]);
     await expect(page).toHaveURL(/\/explore/);
   });
 
