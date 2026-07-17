@@ -1,0 +1,2494 @@
+{
+  "version": 1,
+  "updatedAt": "2026-07-17T04:47:24.140845+00:00",
+  "records": {
+    "addison-san-diego-ca": {
+      "latitude": 32.7157,
+      "longitude": -117.1611,
+      "confidence": "low",
+      "approved": false,
+      "uncertain": true,
+      "provider": "city-centroid-fallback",
+      "providerPlaceId": "san-diego",
+      "displayName": "Fairmont Grand Del Mar, 5200 Grand Del Mar Way, San Diego, CA, 92130, USA",
+      "geocodedAt": "2026-07-17T04:43:32.121383+00:00",
+      "rawType": "city-centroid",
+      "restaurantSlug": "addison-san-diego-ca",
+      "address": "Fairmont Grand Del Mar, 5200 Grand Del Mar Way, San Diego, CA, 92130, USA",
+      "sharedAddressGroup": [
+        "addison-san-diego-ca"
+      ],
+      "needsManualCorrection": true
+    },
+    "atelier-crenn-san-francisco-ca": {
+      "latitude": 37.7983224,
+      "longitude": -122.435844,
+      "confidence": "low",
+      "approved": false,
+      "uncertain": true,
+      "provider": "nominatim",
+      "providerPlaceId": "404672727",
+      "displayName": "3127, Fillmore Street, Cow Hollow, Marina District, San Francisco, California, 94123, United States",
+      "geocodedAt": "2026-07-17T04:43:32.648630+00:00",
+      "rawType": "house",
+      "restaurantSlug": "atelier-crenn-san-francisco-ca",
+      "address": "3127 Fillmore St., San Francisco, CA, 94123, USA",
+      "sharedAddressGroup": [
+        "atelier-crenn-san-francisco-ca"
+      ],
+      "needsManualCorrection": true
+    },
+    "benu-san-francisco-ca": {
+      "latitude": 37.7854624,
+      "longitude": -122.3990798,
+      "confidence": "low",
+      "approved": false,
+      "uncertain": true,
+      "provider": "nominatim",
+      "providerPlaceId": "323236259",
+      "displayName": "Benu, 22, Hawthorne Street, Transbay, Financial District, South of Market, San Francisco, California, 94105, United States",
+      "geocodedAt": "2026-07-17T04:43:34.219837+00:00",
+      "rawType": "restaurant",
+      "restaurantSlug": "benu-san-francisco-ca",
+      "address": "22 Hawthorne St., San Francisco, CA, 94105, USA",
+      "sharedAddressGroup": [
+        "benu-san-francisco-ca"
+      ],
+      "needsManualCorrection": true
+    },
+    "californios-san-francisco-ca": {
+      "latitude": 37.7712823,
+      "longitude": -122.4130526,
+      "confidence": "low",
+      "approved": false,
+      "uncertain": true,
+      "provider": "nominatim",
+      "providerPlaceId": "323837459",
+      "displayName": "Bar Agricole, 355, 11th Street, Civic Center, Mission, San Francisco, California, 94103, United States",
+      "geocodedAt": "2026-07-17T04:43:35.776492+00:00",
+      "rawType": "bar",
+      "restaurantSlug": "californios-san-francisco-ca",
+      "address": "355 11th St., San Francisco, CA, 94103, USA",
+      "sharedAddressGroup": [
+        "californios-san-francisco-ca"
+      ],
+      "needsManualCorrection": true
+    },
+    "enclos-sonoma-ca": {
+      "latitude": 38.291621,
+      "longitude": -122.4558085,
+      "confidence": "low",
+      "approved": false,
+      "uncertain": true,
+      "provider": "nominatim",
+      "providerPlaceId": "415393354",
+      "displayName": "139, East Napa Street, Sonoma, Sonoma County, California, 95476, United States",
+      "geocodedAt": "2026-07-17T04:43:37.416407+00:00",
+      "rawType": "house",
+      "restaurantSlug": "enclos-sonoma-ca",
+      "address": "139 E. Napa St., Sonoma, CA, 95476, USA",
+      "sharedAddressGroup": [
+        "enclos-sonoma-ca"
+      ],
+      "needsManualCorrection": true
+    },
+    "providence-los-angeles-ca": {
+      "latitude": 34.0836255,
+      "longitude": -118.330187,
+      "confidence": "low",
+      "approved": false,
+      "uncertain": true,
+      "provider": "nominatim",
+      "providerPlaceId": "320173550",
+      "displayName": "Providence, 5955, Melrose Avenue, Hollywood, Los Angeles, Los Angeles County, California, 90038, United States",
+      "geocodedAt": "2026-07-17T04:43:38.994936+00:00",
+      "rawType": "restaurant",
+      "restaurantSlug": "providence-los-angeles-ca",
+      "address": "5955 Melrose Ave., Los Angeles, CA, 90038, USA",
+      "sharedAddressGroup": [
+        "providence-los-angeles-ca"
+      ],
+      "needsManualCorrection": true
+    },
+    "quince-san-francisco-ca": {
+      "latitude": 37.7974316,
+      "longitude": -122.4032686,
+      "confidence": "low",
+      "approved": false,
+      "uncertain": true,
+      "provider": "nominatim",
+      "providerPlaceId": "404139405",
+      "displayName": "470, Pacific Avenue, Telegraph Hill, Financial District, South of Market, San Francisco, California, 94133, United States",
+      "geocodedAt": "2026-07-17T04:43:40.397075+00:00",
+      "rawType": "house",
+      "restaurantSlug": "quince-san-francisco-ca",
+      "address": "470 Pacific Ave., San Francisco, CA, 94133, USA",
+      "sharedAddressGroup": [
+        "quince-san-francisco-ca"
+      ],
+      "needsManualCorrection": true
+    },
+    "singlethread-healdsburg-ca": {
+      "latitude": 38.6123379,
+      "longitude": -122.8696919,
+      "confidence": "low",
+      "approved": false,
+      "uncertain": true,
+      "provider": "nominatim",
+      "providerPlaceId": "317986143",
+      "displayName": "SingleThread, 131, North Street, Healdsburg, Sonoma County, California, 95448, United States",
+      "geocodedAt": "2026-07-17T04:43:41.736745+00:00",
+      "rawType": "restaurant",
+      "restaurantSlug": "singlethread-healdsburg-ca",
+      "address": "131 North St., Healdsburg, CA, 95448, USA",
+      "sharedAddressGroup": [
+        "singlethread-healdsburg-ca"
+      ],
+      "needsManualCorrection": true
+    },
+    "somni-west-hollywood-ca": {
+      "latitude": 34.0823639,
+      "longitude": -118.3885146,
+      "confidence": "low",
+      "approved": false,
+      "uncertain": true,
+      "provider": "nominatim",
+      "providerPlaceId": "413842269",
+      "displayName": "9045, Nemo Street, West Hollywood, Los Angeles County, California, 90069, United States",
+      "geocodedAt": "2026-07-17T04:43:43.249668+00:00",
+      "rawType": "house",
+      "restaurantSlug": "somni-west-hollywood-ca",
+      "address": "9045 Nemo St., West Hollywood, CA, 90069, USA",
+      "sharedAddressGroup": [
+        "somni-west-hollywood-ca"
+      ],
+      "needsManualCorrection": true
+    },
+    "the-french-laundry-yountville-ca": {
+      "latitude": 38.404416,
+      "longitude": -122.365039,
+      "confidence": "low",
+      "approved": false,
+      "uncertain": true,
+      "provider": "nominatim",
+      "providerPlaceId": "405450074",
+      "displayName": "6640, Washington Street, Yountville, Napa County, California, 94599, United States",
+      "geocodedAt": "2026-07-17T04:43:44.741744+00:00",
+      "rawType": "house",
+      "restaurantSlug": "the-french-laundry-yountville-ca",
+      "address": "6640 Washington St., Yountville, CA, 94599, USA",
+      "sharedAddressGroup": [
+        "the-french-laundry-yountville-ca"
+      ],
+      "needsManualCorrection": true
+    },
+    "acquerello-san-francisco-ca": {
+      "latitude": 37.7916954,
+      "longitude": -122.4215252,
+      "confidence": "low",
+      "approved": false,
+      "uncertain": true,
+      "provider": "nominatim",
+      "providerPlaceId": "323850327",
+      "displayName": "1722;1724;1728;1730, Sacramento Street, Chinatown, South of Market, San Francisco, California, 94109, United States",
+      "geocodedAt": "2026-07-17T04:43:46.174322+00:00",
+      "rawType": "yes",
+      "restaurantSlug": "acquerello-san-francisco-ca",
+      "address": "1722 Sacramento St., San Francisco, CA, 94109, USA",
+      "sharedAddressGroup": [
+        "acquerello-san-francisco-ca"
+      ],
+      "needsManualCorrection": true
+    },
+    "aubergine-carmel-by-the-sea-ca": {
+      "restaurantSlug": "aubergine-carmel-by-the-sea-ca",
+      "address": "L'Auberge Carmel, Monte Verde at 7th Ave., Carmel-by-the-Sea, CA, 93921, USA",
+      "latitude": null,
+      "longitude": null,
+      "confidence": "none",
+      "approved": false,
+      "uncertain": true,
+      "provider": "none",
+      "providerPlaceId": "",
+      "displayName": "L'Auberge Carmel, Monte Verde at 7th Ave., Carmel-by-the-Sea, CA, 93921, USA",
+      "geocodedAt": "2026-07-17T04:43:49.077477+00:00",
+      "rawType": "missing",
+      "sharedAddressGroup": [
+        "aubergine-carmel-by-the-sea-ca"
+      ],
+      "needsManualCorrection": true
+    },
+    "birdsong-san-francisco-ca": {
+      "latitude": 37.7793774,
+      "longitude": -122.4103399,
+      "confidence": "low",
+      "approved": false,
+      "uncertain": true,
+      "provider": "nominatim",
+      "providerPlaceId": "321049240",
+      "displayName": "1083;1085, Mission Street, West SoMa, Tenderloin, South of Market, San Francisco, California, 94103, United States",
+      "geocodedAt": "2026-07-17T04:43:50.069702+00:00",
+      "rawType": "yes",
+      "restaurantSlug": "birdsong-san-francisco-ca",
+      "address": "1085 Mission St., San Francisco, CA, 94103, USA",
+      "sharedAddressGroup": [
+        "birdsong-san-francisco-ca"
+      ],
+      "needsManualCorrection": true
+    },
+    "commis-oakland-ca": {
+      "latitude": 37.8246894,
+      "longitude": -122.2548896,
+      "confidence": "low",
+      "approved": false,
+      "uncertain": true,
+      "provider": "nominatim",
+      "providerPlaceId": "325691272",
+      "displayName": "Commis, 3859, Piedmont Avenue, North Oakland, Oakland, Alameda County, California, 94611, United States",
+      "geocodedAt": "2026-07-17T04:43:51.368899+00:00",
+      "rawType": "restaurant",
+      "restaurantSlug": "commis-oakland-ca",
+      "address": "3859 Piedmont Ave., Oakland, CA, 94611, USA",
+      "sharedAddressGroup": [
+        "commis-oakland-ca"
+      ],
+      "needsManualCorrection": true
+    },
+    "harbor-house-inn-elk-ca": {
+      "latitude": 39.1357382,
+      "longitude": -123.7196511,
+      "confidence": "low",
+      "approved": false,
+      "uncertain": true,
+      "provider": "nominatim",
+      "providerPlaceId": "320928070",
+      "displayName": "Harbor House Inn, 5600 S, Shoreline Highway, Elk, Mendocino County, California, 95432, United States",
+      "geocodedAt": "2026-07-17T04:43:53.218986+00:00",
+      "rawType": "hotel",
+      "restaurantSlug": "harbor-house-inn-elk-ca",
+      "address": "5600 CA-1, Elk, CA, 95432, USA",
+      "sharedAddressGroup": [
+        "harbor-house-inn-elk-ca"
+      ],
+      "needsManualCorrection": true
+    },
+    "hayato-los-angeles-ca": {
+      "latitude": 34.0522,
+      "longitude": -118.2437,
+      "confidence": "low",
+      "approved": false,
+      "uncertain": true,
+      "provider": "city-centroid-fallback",
+      "providerPlaceId": "los-angeles",
+      "displayName": "1320 E. 7th St., Ste. 126, Los Angeles, CA, 90021, USA",
+      "geocodedAt": "2026-07-17T04:43:56.139934+00:00",
+      "rawType": "city-centroid",
+      "restaurantSlug": "hayato-los-angeles-ca",
+      "address": "1320 E. 7th St., Ste. 126, Los Angeles, CA, 90021, USA",
+      "sharedAddressGroup": [
+        "hayato-los-angeles-ca"
+      ],
+      "needsManualCorrection": true
+    },
+    "kato-los-angeles-ca": {
+      "latitude": 34.0522,
+      "longitude": -118.2437,
+      "confidence": "low",
+      "approved": false,
+      "uncertain": true,
+      "provider": "city-centroid-fallback",
+      "providerPlaceId": "los-angeles",
+      "displayName": "777 Alameda St., #114, Los Angeles, CA, 90021, USA",
+      "geocodedAt": "2026-07-17T04:43:58.479585+00:00",
+      "rawType": "city-centroid",
+      "restaurantSlug": "kato-los-angeles-ca",
+      "address": "777 Alameda St., #114, Los Angeles, CA, 90021, USA",
+      "sharedAddressGroup": [
+        "kato-los-angeles-ca"
+      ],
+      "needsManualCorrection": true
+    },
+    "kiln-san-francisco-ca": {
+      "latitude": 37.7760076,
+      "longitude": -122.4203817,
+      "confidence": "low",
+      "approved": false,
+      "uncertain": true,
+      "provider": "nominatim",
+      "providerPlaceId": "324446315",
+      "displayName": "149, Fell Street, Civic Center, Tenderloin, Mission, San Francisco, California, 94102, United States",
+      "geocodedAt": "2026-07-17T04:43:58.977493+00:00",
+      "rawType": "yes",
+      "restaurantSlug": "kiln-san-francisco-ca",
+      "address": "149 Fell St., San Francisco, CA, 94102, USA",
+      "sharedAddressGroup": [
+        "kiln-san-francisco-ca"
+      ],
+      "needsManualCorrection": true
+    },
+    "lazy-bear-san-francisco-ca": {
+      "latitude": 37.7603507,
+      "longitude": -122.4197035,
+      "confidence": "low",
+      "approved": false,
+      "uncertain": true,
+      "provider": "nominatim",
+      "providerPlaceId": "323933976",
+      "displayName": "Hi Lo BBQ, 3416, 19th Street, Mission, San Francisco, California, 94110, United States",
+      "geocodedAt": "2026-07-17T04:44:00.717659+00:00",
+      "rawType": "restaurant",
+      "restaurantSlug": "lazy-bear-san-francisco-ca",
+      "address": "3416 19th St., San Francisco, CA, 94110, USA",
+      "sharedAddressGroup": [
+        "lazy-bear-san-francisco-ca"
+      ],
+      "needsManualCorrection": true
+    },
+    "melisse-santa-monica-ca": {
+      "latitude": 34.0244231,
+      "longitude": -118.4913266,
+      "confidence": "low",
+      "approved": false,
+      "uncertain": true,
+      "provider": "nominatim",
+      "providerPlaceId": "319781784",
+      "displayName": "1104, Wilshire Boulevard, Downtown Santa Monica, Santa Monica, Los Angeles County, California, 90025, United States",
+      "geocodedAt": "2026-07-17T04:44:02.151799+00:00",
+      "rawType": "commercial",
+      "restaurantSlug": "melisse-santa-monica-ca",
+      "address": "1104 Wilshire Blvd., Santa Monica, CA, 90401, USA",
+      "sharedAddressGroup": [
+        "melisse-santa-monica-ca",
+        "citrin-santa-monica-ca"
+      ],
+      "needsManualCorrection": true
+    },
+    "citrin-santa-monica-ca": {
+      "latitude": 34.0244231,
+      "longitude": -118.4913266,
+      "confidence": "low",
+      "approved": false,
+      "uncertain": true,
+      "provider": "nominatim",
+      "providerPlaceId": "319781784",
+      "displayName": "1104, Wilshire Boulevard, Downtown Santa Monica, Santa Monica, Los Angeles County, California, 90025, United States",
+      "geocodedAt": "2026-07-17T04:44:02.151799+00:00",
+      "rawType": "commercial",
+      "restaurantSlug": "citrin-santa-monica-ca",
+      "address": "1104 Wilshire Blvd., Santa Monica, CA, 90401, USA",
+      "sharedAddressGroup": [
+        "melisse-santa-monica-ca",
+        "citrin-santa-monica-ca"
+      ],
+      "needsManualCorrection": true
+    },
+    "saison-san-francisco-ca": {
+      "latitude": 37.7745056,
+      "longitude": -122.3983072,
+      "confidence": "low",
+      "approved": false,
+      "uncertain": true,
+      "provider": "nominatim",
+      "providerPlaceId": "323211675",
+      "displayName": "Townsend Street, Mission Bay, San Francisco, California, 94107, United States",
+      "geocodedAt": "2026-07-17T04:44:03.903857+00:00",
+      "rawType": "tertiary",
+      "restaurantSlug": "saison-san-francisco-ca",
+      "address": "178 Townsend St., San Francisco, CA, 94107, USA",
+      "sharedAddressGroup": [
+        "saison-san-francisco-ca"
+      ],
+      "needsManualCorrection": true
+    },
+    "sons-and-daughters-san-francisco-ca": {
+      "latitude": 37.7616681,
+      "longitude": -122.4107535,
+      "confidence": "low",
+      "approved": false,
+      "uncertain": true,
+      "provider": "nominatim",
+      "providerPlaceId": "324697040",
+      "displayName": "Osito, 2875, 18th Street, Potrero Hill, Mission, San Francisco, California, 94110, United States",
+      "geocodedAt": "2026-07-17T04:44:05.693653+00:00",
+      "rawType": "restaurant",
+      "restaurantSlug": "sons-and-daughters-san-francisco-ca",
+      "address": "2875 18th St., San Francisco, CA, 94110, USA",
+      "sharedAddressGroup": [
+        "sons-and-daughters-san-francisco-ca"
+      ],
+      "needsManualCorrection": true
+    },
+    "vespertine-culver-city-ca": {
+      "latitude": 34.0242037,
+      "longitude": -118.3817724,
+      "confidence": "low",
+      "approved": false,
+      "uncertain": true,
+      "provider": "nominatim",
+      "providerPlaceId": "320187470",
+      "displayName": "Vespertine, 3599, Hayden Avenue, Hayden Tract, Culver City, Los Angeles County, California, 90232, United States",
+      "geocodedAt": "2026-07-17T04:44:07.270785+00:00",
+      "rawType": "restaurant",
+      "restaurantSlug": "vespertine-culver-city-ca",
+      "address": "3599 Hayden Ave., Culver City, CA, 90232, USA",
+      "sharedAddressGroup": [
+        "vespertine-culver-city-ca"
+      ],
+      "needsManualCorrection": true
+    },
+    "7-adams-san-francisco-ca": {
+      "latitude": 37.7860817,
+      "longitude": -122.4326393,
+      "confidence": "low",
+      "approved": false,
+      "uncertain": true,
+      "provider": "nominatim",
+      "providerPlaceId": "404677015",
+      "displayName": "1963, Sutter Street, Japantown, Western Addition, San Francisco, California, 94115, United States",
+      "geocodedAt": "2026-07-17T04:44:08.639453+00:00",
+      "rawType": "house",
+      "restaurantSlug": "7-adams-san-francisco-ca",
+      "address": "1963 Sutter St., San Francisco, CA, 94115, USA",
+      "sharedAddressGroup": [
+        "7-adams-san-francisco-ca"
+      ],
+      "needsManualCorrection": true
+    },
+    "angler-sf-san-francisco-ca": {
+      "latitude": 37.793083,
+      "longitude": -122.392177,
+      "confidence": "low",
+      "approved": false,
+      "uncertain": true,
+      "provider": "nominatim",
+      "providerPlaceId": "323204320",
+      "displayName": "Angler, 132, The Embarcadero, Financial District, South of Market, San Francisco, California, 94105, United States",
+      "geocodedAt": "2026-07-17T04:44:10.241134+00:00",
+      "rawType": "restaurant",
+      "restaurantSlug": "angler-sf-san-francisco-ca",
+      "address": "132 The Embarcadero, San Francisco, CA, 94105, USA",
+      "sharedAddressGroup": [
+        "angler-sf-san-francisco-ca"
+      ],
+      "needsManualCorrection": true
+    },
+    "auberge-du-soleil-rutherford-ca": {
+      "latitude": 38.4934201,
+      "longitude": -122.4062051,
+      "confidence": "low",
+      "approved": false,
+      "uncertain": true,
+      "provider": "nominatim",
+      "providerPlaceId": "318858561",
+      "displayName": "The Bar at Auberge du Soleil, 180, Rutherford Hill Road, Napa County, California, 94573, United States",
+      "geocodedAt": "2026-07-17T04:44:11.699347+00:00",
+      "rawType": "pub",
+      "restaurantSlug": "auberge-du-soleil-rutherford-ca",
+      "address": "180 Rutherford Hill Rd., Rutherford, CA, 94573, USA",
+      "sharedAddressGroup": [
+        "auberge-du-soleil-rutherford-ca"
+      ],
+      "needsManualCorrection": true
+    },
+    "auro-calistoga-ca": {
+      "latitude": 38.5847929,
+      "longitude": -122.567908,
+      "confidence": "low",
+      "approved": false,
+      "uncertain": true,
+      "provider": "nominatim",
+      "providerPlaceId": "321195181",
+      "displayName": "Four Seasons Resort and Residences Napa Valley, 400, Silverado Trail, Calistoga, Napa County, California, 94515, United States",
+      "geocodedAt": "2026-07-17T04:44:13.052537+00:00",
+      "rawType": "resort",
+      "restaurantSlug": "auro-calistoga-ca",
+      "address": "Four Seasons Resort and Residences Napa Valley, 400 Silverado Trl., Calistoga, CA, 94515, USA",
+      "sharedAddressGroup": [
+        "auro-calistoga-ca"
+      ],
+      "needsManualCorrection": true
+    },
+    "bell-s-los-alamos-ca": {
+      "latitude": 34.7439012,
+      "longitude": -120.2793656,
+      "confidence": "low",
+      "approved": false,
+      "uncertain": true,
+      "provider": "nominatim",
+      "providerPlaceId": "317084903",
+      "displayName": "Bell Street Farm, 406, Bell Street, Los Alamos, Santa Barbara County, California, 93440, United States",
+      "geocodedAt": "2026-07-17T04:44:14.485453+00:00",
+      "rawType": "restaurant",
+      "restaurantSlug": "bell-s-los-alamos-ca",
+      "address": "406 Bell St., Los Alamos, CA, 93440, USA",
+      "sharedAddressGroup": [
+        "bell-s-los-alamos-ca"
+      ],
+      "needsManualCorrection": true
+    },
+    "caruso-s-montecito-ca": {
+      "restaurantSlug": "caruso-s-montecito-ca",
+      "address": "Rosewood Miramar Beach, 1759 S. Jameson Ln., Montecito, CA, 93108, USA",
+      "latitude": null,
+      "longitude": null,
+      "confidence": "none",
+      "approved": false,
+      "uncertain": true,
+      "provider": "none",
+      "providerPlaceId": "",
+      "displayName": "Rosewood Miramar Beach, 1759 S. Jameson Ln., Montecito, CA, 93108, USA",
+      "geocodedAt": "2026-07-17T04:44:17.300697+00:00",
+      "rawType": "missing",
+      "sharedAddressGroup": [
+        "caruso-s-montecito-ca"
+      ],
+      "needsManualCorrection": true
+    },
+    "chez-noir-carmel-by-the-sea-ca": {
+      "restaurantSlug": "chez-noir-carmel-by-the-sea-ca",
+      "address": "5th Ave. btw. Dolores and San Carlos Sts., Carmel-by-the-Sea, CA, 93921, USA",
+      "latitude": null,
+      "longitude": null,
+      "confidence": "none",
+      "approved": false,
+      "uncertain": true,
+      "provider": "none",
+      "providerPlaceId": "",
+      "displayName": "5th Ave. btw. Dolores and San Carlos Sts., Carmel-by-the-Sea, CA, 93921, USA",
+      "geocodedAt": "2026-07-17T04:44:18.975809+00:00",
+      "rawType": "missing",
+      "sharedAddressGroup": [
+        "chez-noir-carmel-by-the-sea-ca"
+      ],
+      "needsManualCorrection": true
+    },
+    "corridor-109-los-angeles-ca": {
+      "latitude": 34.0522,
+      "longitude": -118.2437,
+      "confidence": "low",
+      "approved": false,
+      "uncertain": true,
+      "provider": "city-centroid-fallback",
+      "providerPlaceId": "los-angeles",
+      "displayName": "641 North Western Ave., Ste. A, Los Angeles, CA, 90004, USA",
+      "geocodedAt": "2026-07-17T04:44:20.912842+00:00",
+      "rawType": "city-centroid",
+      "restaurantSlug": "corridor-109-los-angeles-ca",
+      "address": "641 North Western Ave., Ste. A, Los Angeles, CA, 90004, USA",
+      "sharedAddressGroup": [
+        "corridor-109-los-angeles-ca"
+      ],
+      "needsManualCorrection": true
+    },
+    "cyrus-geyserville-ca": {
+      "latitude": 38.7136094,
+      "longitude": -122.9190784,
+      "confidence": "low",
+      "approved": false,
+      "uncertain": true,
+      "provider": "nominatim",
+      "providerPlaceId": "322531034",
+      "displayName": "Canyon Road, Omus, Geyserville, Sonoma County, California, 95441, United States",
+      "geocodedAt": "2026-07-17T04:44:21.438016+00:00",
+      "rawType": "trunk",
+      "restaurantSlug": "cyrus-geyserville-ca",
+      "address": "275 CA-128, Geyserville, CA, 95441, USA",
+      "sharedAddressGroup": [
+        "cyrus-geyserville-ca"
+      ],
+      "needsManualCorrection": true
+    },
+    "heritage-long-beach-ca": {
+      "latitude": 33.77526,
+      "longitude": -118.167139,
+      "confidence": "low",
+      "approved": false,
+      "uncertain": true,
+      "provider": "nominatim",
+      "providerPlaceId": "414012048",
+      "displayName": "2030, East 7th Street, Long Beach, Los Angeles County, California, 90804, United States",
+      "geocodedAt": "2026-07-17T04:44:23.480487+00:00",
+      "rawType": "house",
+      "restaurantSlug": "heritage-long-beach-ca",
+      "address": "2030 E. 7th St., Long Beach, CA, 90804, USA",
+      "sharedAddressGroup": [
+        "heritage-long-beach-ca"
+      ],
+      "needsManualCorrection": true
+    },
+    "hilda-and-jesse-san-francisco-ca": {
+      "latitude": 37.8000754,
+      "longitude": -122.4110382,
+      "confidence": "low",
+      "approved": false,
+      "uncertain": true,
+      "provider": "nominatim",
+      "providerPlaceId": "325777180",
+      "displayName": "701;705;709, Union Street, Russian Hill, North Beach, San Francisco, California, 94133, United States",
+      "geocodedAt": "2026-07-17T04:44:25.293498+00:00",
+      "rawType": "yes",
+      "restaurantSlug": "hilda-and-jesse-san-francisco-ca",
+      "address": "701 Union St., San Francisco, CA, 94133, USA",
+      "sharedAddressGroup": [
+        "hilda-and-jesse-san-francisco-ca"
+      ],
+      "needsManualCorrection": true
+    },
+    "holbox-los-angeles-ca": {
+      "latitude": 34.0173544,
+      "longitude": -118.2783867,
+      "confidence": "low",
+      "approved": false,
+      "uncertain": true,
+      "provider": "nominatim",
+      "providerPlaceId": "321489376",
+      "displayName": "Mercado la Paloma, 3655, South Grand Avenue, Jefferson, Historic South-Central, Los Angeles, Los Angeles County, California, 90007, United States",
+      "geocodedAt": "2026-07-17T04:44:27.099467+00:00",
+      "rawType": "marketplace",
+      "restaurantSlug": "holbox-los-angeles-ca",
+      "address": "3655 S. Grand Ave., Los Angeles, CA, 90007, USA",
+      "sharedAddressGroup": [
+        "holbox-los-angeles-ca"
+      ],
+      "needsManualCorrection": true
+    },
+    "jeune-et-jolie-carlsbad-ca": {
+      "latitude": 33.1629042,
+      "longitude": -117.3517723,
+      "confidence": "low",
+      "approved": false,
+      "uncertain": true,
+      "provider": "nominatim",
+      "providerPlaceId": "318169946",
+      "displayName": "BLOC Carlsbad Village, 2659, State Street, Downtown Carlsbad, Carlsbad, San Diego County, California, 92008, United States",
+      "geocodedAt": "2026-07-17T04:44:29.447172+00:00",
+      "rawType": "coworking",
+      "restaurantSlug": "jeune-et-jolie-carlsbad-ca",
+      "address": "2659 State St., Carlsbad, CA, 92008, USA",
+      "sharedAddressGroup": [
+        "jeune-et-jolie-carlsbad-ca"
+      ],
+      "needsManualCorrection": true
+    },
+    "kali-los-angeles-ca": {
+      "latitude": 34.083411,
+      "longitude": -118.3246054,
+      "confidence": "low",
+      "approved": false,
+      "uncertain": true,
+      "provider": "nominatim",
+      "providerPlaceId": "414266045",
+      "displayName": "5722, Melrose Avenue, Hollywood, Los Angeles, Los Angeles County, California, 90038, United States",
+      "geocodedAt": "2026-07-17T04:44:31.130890+00:00",
+      "rawType": "house",
+      "restaurantSlug": "kali-los-angeles-ca",
+      "address": "5722 Melrose Ave., Los Angeles, CA, 90038, USA",
+      "sharedAddressGroup": [
+        "kali-los-angeles-ca"
+      ],
+      "needsManualCorrection": true
+    },
+    "kin-khao-san-francisco-ca": {
+      "latitude": 37.7848779,
+      "longitude": -122.4088565,
+      "confidence": "low",
+      "approved": false,
+      "uncertain": true,
+      "provider": "nominatim",
+      "providerPlaceId": "324413599",
+      "displayName": "Parc 55 San Francisco - a Hilton Hotel, 55, Cyril Magnin Street, Union Square, Tenderloin, South of Market, San Francisco, California, 94102, United States",
+      "geocodedAt": "2026-07-17T04:44:32.594853+00:00",
+      "rawType": "hotel",
+      "restaurantSlug": "kin-khao-san-francisco-ca",
+      "address": "Parc 55 San Francisco - a Hilton Hotel, 55 Cyril Magnin St., San Francisco, CA, 94102, USA",
+      "sharedAddressGroup": [
+        "kin-khao-san-francisco-ca"
+      ],
+      "needsManualCorrection": true
+    },
+    "kojima-los-angeles-ca": {
+      "latitude": 34.0522,
+      "longitude": -118.2437,
+      "confidence": "low",
+      "approved": false,
+      "uncertain": true,
+      "provider": "city-centroid-fallback",
+      "providerPlaceId": "los-angeles",
+      "displayName": "2130 Sawtelle Blvd., Ste. 211, Los Angeles, CA, 90025, USA",
+      "geocodedAt": "2026-07-17T04:44:35.398620+00:00",
+      "rawType": "city-centroid",
+      "restaurantSlug": "kojima-los-angeles-ca",
+      "address": "2130 Sawtelle Blvd., Ste. 211, Los Angeles, CA, 90025, USA",
+      "sharedAddressGroup": [
+        "kojima-los-angeles-ca"
+      ],
+      "needsManualCorrection": true
+    },
+    "lielle-los-angeles-ca": {
+      "latitude": 34.0552637,
+      "longitude": -118.3977107,
+      "confidence": "low",
+      "approved": false,
+      "uncertain": true,
+      "provider": "nominatim",
+      "providerPlaceId": "416097661",
+      "displayName": "9575, West Pico Boulevard, Pico-Robertson, Los Angeles, Los Angeles County, California, 90035, United States",
+      "geocodedAt": "2026-07-17T04:44:36.495156+00:00",
+      "rawType": "house",
+      "restaurantSlug": "lielle-los-angeles-ca",
+      "address": "9575 W. Pico Blvd., Los Angeles, CA, 90035, USA",
+      "sharedAddressGroup": [
+        "lielle-los-angeles-ca"
+      ],
+      "needsManualCorrection": true
+    },
+    "lilo-carlsbad-ca": {
+      "latitude": 33.164383,
+      "longitude": -117.351481,
+      "confidence": "low",
+      "approved": false,
+      "uncertain": true,
+      "provider": "nominatim",
+      "providerPlaceId": "314655933",
+      "displayName": "2571, Roosevelt Street, Downtown Carlsbad, Carlsbad, San Diego County, California, 92008, United States",
+      "geocodedAt": "2026-07-17T04:44:37.993673+00:00",
+      "rawType": "house",
+      "restaurantSlug": "lilo-carlsbad-ca",
+      "address": "2571 Roosevelt St., Carlsbad, CA, 92008, USA",
+      "sharedAddressGroup": [
+        "lilo-carlsbad-ca"
+      ],
+      "needsManualCorrection": true
+    },
+    "localis-sacramento-ca": {
+      "latitude": 38.5667323,
+      "longitude": -121.4836969,
+      "confidence": "low",
+      "approved": false,
+      "uncertain": true,
+      "provider": "nominatim",
+      "providerPlaceId": "385325237",
+      "displayName": "2031, S Street, Newton Booth, Sacramento, Sacramento County, California, 95811, United States",
+      "geocodedAt": "2026-07-17T04:44:39.384844+00:00",
+      "rawType": "house",
+      "restaurantSlug": "localis-sacramento-ca",
+      "address": "2031 S. St., Sacramento, CA, 95811, USA",
+      "sharedAddressGroup": [
+        "localis-sacramento-ca"
+      ],
+      "needsManualCorrection": true
+    },
+    "lucien-la-jolla-ca": {
+      "restaurantSlug": "lucien-la-jolla-ca",
+      "address": "7863 Girard Ave., Ste. 308, La Jolla, CA, 92037, USA",
+      "latitude": null,
+      "longitude": null,
+      "confidence": "none",
+      "approved": false,
+      "uncertain": true,
+      "provider": "none",
+      "providerPlaceId": "",
+      "displayName": "7863 Girard Ave., Ste. 308, La Jolla, CA, 92037, USA",
+      "geocodedAt": "2026-07-17T04:44:42.797247+00:00",
+      "rawType": "missing",
+      "sharedAddressGroup": [
+        "lucien-la-jolla-ca"
+      ],
+      "needsManualCorrection": true
+    },
+    "madcap-san-anselmo-ca": {
+      "latitude": 37.974152,
+      "longitude": -122.561743,
+      "confidence": "low",
+      "approved": false,
+      "uncertain": true,
+      "provider": "nominatim",
+      "providerPlaceId": "385197789",
+      "displayName": "198, Sir Francis Drake Boulevard, San Anselmo, Marin County, California, 94960, United States",
+      "geocodedAt": "2026-07-17T04:44:43.418504+00:00",
+      "rawType": "house",
+      "restaurantSlug": "madcap-san-anselmo-ca",
+      "address": "198 Sir Francis Drake Blvd., San Anselmo, CA, 94960, USA",
+      "sharedAddressGroup": [
+        "madcap-san-anselmo-ca"
+      ],
+      "needsManualCorrection": true
+    },
+    "meteora-los-angeles-ca": {
+      "latitude": 34.0835339,
+      "longitude": -118.3398225,
+      "confidence": "low",
+      "approved": false,
+      "uncertain": true,
+      "provider": "nominatim",
+      "providerPlaceId": "414424508",
+      "displayName": "6703, Melrose Avenue, Fairfax, Los Angeles, Los Angeles County, California, 90038, United States",
+      "geocodedAt": "2026-07-17T04:44:45.029396+00:00",
+      "rawType": "house",
+      "restaurantSlug": "meteora-los-angeles-ca",
+      "address": "6703 Melrose Ave., Los Angeles, CA, 90038, USA",
+      "sharedAddressGroup": [
+        "meteora-los-angeles-ca"
+      ],
+      "needsManualCorrection": true
+    },
+    "mister-jiu-s-san-francisco-ca": {
+      "latitude": 37.7936719,
+      "longitude": -122.4065757,
+      "confidence": "low",
+      "approved": false,
+      "uncertain": true,
+      "provider": "nominatim",
+      "providerPlaceId": "321072557",
+      "displayName": "Moongate Lounge, 28, Waverly Place, Chinatown, South of Market, San Francisco, California, 94108, United States",
+      "geocodedAt": "2026-07-17T04:44:46.695836+00:00",
+      "rawType": "bar",
+      "restaurantSlug": "mister-jiu-s-san-francisco-ca",
+      "address": "28 Waverly Pl., San Francisco, CA, 94108, USA",
+      "sharedAddressGroup": [
+        "mister-jiu-s-san-francisco-ca"
+      ],
+      "needsManualCorrection": true
+    },
+    "miura-beverly-hills-ca": {
+      "latitude": 34.0674156,
+      "longitude": -118.4005855,
+      "confidence": "low",
+      "approved": false,
+      "uncertain": true,
+      "provider": "nominatim",
+      "providerPlaceId": "319932289",
+      "displayName": "Sushi Yamamoto, 218, North Rodeo Drive, Golden Triange, Beverly Hills, Los Angeles County, California, 90210, United States",
+      "geocodedAt": "2026-07-17T04:44:48.202758+00:00",
+      "rawType": "restaurant",
+      "restaurantSlug": "miura-beverly-hills-ca",
+      "address": "218 N. Rodeo Dr., Beverly Hills, CA, 90210, USA",
+      "sharedAddressGroup": [
+        "miura-beverly-hills-ca"
+      ],
+      "needsManualCorrection": true
+    },
+    "mori-nozomi-los-angeles-ca": {
+      "latitude": 34.0336,
+      "longitude": -118.441768,
+      "confidence": "low",
+      "approved": false,
+      "uncertain": true,
+      "provider": "nominatim",
+      "providerPlaceId": "384638605",
+      "displayName": "11500, West Pico Boulevard, Sawtelle, Los Angeles, Los Angeles County, California, 90064, United States",
+      "geocodedAt": "2026-07-17T04:44:49.972218+00:00",
+      "rawType": "house",
+      "restaurantSlug": "mori-nozomi-los-angeles-ca",
+      "address": "11500 W. Pico Blvd., Los Angeles, CA, 90064, USA",
+      "sharedAddressGroup": [
+        "mori-nozomi-los-angeles-ca"
+      ],
+      "needsManualCorrection": true
+    },
+    "n-naka-los-angeles-ca": {
+      "latitude": 34.0251269,
+      "longitude": -118.412212,
+      "confidence": "low",
+      "approved": false,
+      "uncertain": true,
+      "provider": "nominatim",
+      "providerPlaceId": "320464965",
+      "displayName": "n/naka, 3455, Overland Avenue, Palms, Los Angeles, Los Angeles County, California, 90034, United States",
+      "geocodedAt": "2026-07-17T04:44:51.392035+00:00",
+      "rawType": "restaurant",
+      "restaurantSlug": "n-naka-los-angeles-ca",
+      "address": "3455 Overland Ave., Los Angeles, CA, 90034, USA",
+      "sharedAddressGroup": [
+        "n-naka-los-angeles-ca"
+      ],
+      "needsManualCorrection": true
+    },
+    "nari-san-francisco-ca": {
+      "latitude": 37.7749,
+      "longitude": -122.4194,
+      "confidence": "low",
+      "approved": false,
+      "uncertain": true,
+      "provider": "city-centroid-fallback",
+      "providerPlaceId": "san-francisco",
+      "displayName": "Hotel Kabuki - JDV by Hyatt, 1625 Post St., San Francisco, CA, 94115, USA",
+      "geocodedAt": "2026-07-17T04:44:54.390798+00:00",
+      "rawType": "city-centroid",
+      "restaurantSlug": "nari-san-francisco-ca",
+      "address": "Hotel Kabuki - JDV by Hyatt, 1625 Post St., San Francisco, CA, 94115, USA",
+      "sharedAddressGroup": [
+        "nari-san-francisco-ca"
+      ],
+      "needsManualCorrection": true
+    },
+    "niku-steakhouse-san-francisco-ca": {
+      "latitude": 37.7696071,
+      "longitude": -122.4040991,
+      "confidence": "low",
+      "approved": false,
+      "uncertain": true,
+      "provider": "nominatim",
+      "providerPlaceId": "404150450",
+      "displayName": "61, Division Street, South of Market, San Francisco, California, 94103, United States",
+      "geocodedAt": "2026-07-17T04:44:54.939768+00:00",
+      "rawType": "house",
+      "restaurantSlug": "niku-steakhouse-san-francisco-ca",
+      "address": "61 Division St., San Francisco, CA, 94103, USA",
+      "sharedAddressGroup": [
+        "niku-steakhouse-san-francisco-ca"
+      ],
+      "needsManualCorrection": true
+    },
+    "nisei-san-francisco-ca": {
+      "latitude": 37.7981608,
+      "longitude": -122.4220036,
+      "confidence": "low",
+      "approved": false,
+      "uncertain": true,
+      "provider": "nominatim",
+      "providerPlaceId": "323267588",
+      "displayName": "2316, Polk Street, Russian Hill, Nob Hill, South of Market, San Francisco, California, 94109, United States",
+      "geocodedAt": "2026-07-17T04:44:56.530004+00:00",
+      "rawType": "yes",
+      "restaurantSlug": "nisei-san-francisco-ca",
+      "address": "2316 Polk St., San Francisco, CA, 94109, USA",
+      "sharedAddressGroup": [
+        "nisei-san-francisco-ca"
+      ],
+      "needsManualCorrection": true
+    },
+    "nozawa-bar-beverly-hills-ca": {
+      "latitude": 34.0681304,
+      "longitude": -118.3982683,
+      "confidence": "low",
+      "approved": false,
+      "uncertain": true,
+      "provider": "nominatim",
+      "providerPlaceId": "384736507",
+      "displayName": "212, North Canon Drive, Beverly Hills, Los Angeles County, California, 90210, United States",
+      "geocodedAt": "2026-07-17T04:44:58.153632+00:00",
+      "rawType": "house",
+      "restaurantSlug": "nozawa-bar-beverly-hills-ca",
+      "address": "212 N. Cañon Dr., Beverly Hills, CA, 90210, USA",
+      "sharedAddressGroup": [
+        "nozawa-bar-beverly-hills-ca"
+      ],
+      "needsManualCorrection": true
+    },
+    "orsa-and-winston-los-angeles-ca": {
+      "latitude": 34.0536909,
+      "longitude": -118.242766,
+      "confidence": "high",
+      "approved": true,
+      "uncertain": false,
+      "provider": "nominatim",
+      "providerPlaceId": "316388634",
+      "displayName": "Los Angeles, Los Angeles County, California, United States",
+      "geocodedAt": "2026-07-17T04:44:59.909585+00:00",
+      "rawType": "administrative",
+      "restaurantSlug": "orsa-and-winston-los-angeles-ca",
+      "address": "122 W. 4th St., Los Angeles, CA, 90013, USA",
+      "sharedAddressGroup": [
+        "orsa-and-winston-los-angeles-ca"
+      ],
+      "needsManualCorrection": false
+    },
+    "osteria-mozza-los-angeles-ca": {
+      "latitude": 34.0833739,
+      "longitude": -118.3387469,
+      "confidence": "low",
+      "approved": false,
+      "uncertain": true,
+      "provider": "nominatim",
+      "providerPlaceId": "414209939",
+      "displayName": "6602, Melrose Avenue, Fairfax, Los Angeles, Los Angeles County, California, 90038, United States",
+      "geocodedAt": "2026-07-17T04:45:01.511047+00:00",
+      "rawType": "house",
+      "restaurantSlug": "osteria-mozza-los-angeles-ca",
+      "address": "6602 Melrose Ave., Los Angeles, CA, 90038, USA",
+      "sharedAddressGroup": [
+        "osteria-mozza-los-angeles-ca"
+      ],
+      "needsManualCorrection": true
+    },
+    "pasta-bar-encino-ca": {
+      "restaurantSlug": "pasta-bar-encino-ca",
+      "address": "16101 Ventura Blvd., Ste. 250, Encino, CA, 91436, USA",
+      "latitude": null,
+      "longitude": null,
+      "confidence": "none",
+      "approved": false,
+      "uncertain": true,
+      "provider": "none",
+      "providerPlaceId": "",
+      "displayName": "16101 Ventura Blvd., Ste. 250, Encino, CA, 91436, USA",
+      "geocodedAt": "2026-07-17T04:45:03.968225+00:00",
+      "rawType": "missing",
+      "sharedAddressGroup": [
+        "pasta-bar-encino-ca"
+      ],
+      "needsManualCorrection": true
+    },
+    "plumed-horse-saratoga-ca": {
+      "latitude": 37.2593076,
+      "longitude": -122.0319333,
+      "confidence": "low",
+      "approved": false,
+      "uncertain": true,
+      "provider": "nominatim",
+      "providerPlaceId": "419836360",
+      "displayName": "Big Basin Way, Saratoga, Santa Clara County, California, 95070, United States",
+      "geocodedAt": "2026-07-17T04:45:04.751031+00:00",
+      "rawType": "primary",
+      "restaurantSlug": "plumed-horse-saratoga-ca",
+      "address": "14555 Big Basin Way, Saratoga, CA, 95070, USA",
+      "sharedAddressGroup": [
+        "plumed-horse-saratoga-ca"
+      ],
+      "needsManualCorrection": true
+    },
+    "press-saint-helena-ca": {
+      "latitude": 38.4995703,
+      "longitude": -122.4624819,
+      "confidence": "low",
+      "approved": false,
+      "uncertain": true,
+      "provider": "nominatim",
+      "providerPlaceId": "384892001",
+      "displayName": "587, Main Street, St. Helena, Napa County, California, 94574, United States",
+      "geocodedAt": "2026-07-17T04:45:07.114134+00:00",
+      "rawType": "house",
+      "restaurantSlug": "press-saint-helena-ca",
+      "address": "587 St. Helena St., Saint Helena, CA, 94574, USA",
+      "sharedAddressGroup": [
+        "press-saint-helena-ca"
+      ],
+      "needsManualCorrection": true
+    },
+    "protege-palo-alto-ca": {
+      "latitude": 37.4280122,
+      "longitude": -122.1435645,
+      "confidence": "low",
+      "approved": false,
+      "uncertain": true,
+      "provider": "nominatim",
+      "providerPlaceId": "390871557",
+      "displayName": "250, South California Avenue, Evergreen Park, Palo Alto, Santa Clara County, California, 94306, United States",
+      "geocodedAt": "2026-07-17T04:45:09.154030+00:00",
+      "rawType": "house",
+      "restaurantSlug": "protege-palo-alto-ca",
+      "address": "250 California Ave., Palo Alto, CA, 94306, USA",
+      "sharedAddressGroup": [
+        "protege-palo-alto-ca"
+      ],
+      "needsManualCorrection": true
+    },
+    "restaurant-ki-los-angeles-ca": {
+      "latitude": 34.0500663,
+      "longitude": -118.241391,
+      "confidence": "low",
+      "approved": false,
+      "uncertain": true,
+      "provider": "nominatim",
+      "providerPlaceId": "321331431",
+      "displayName": "111, South San Pedro Street, Toy District, Little Tokyo, Downtown, Los Angeles, Los Angeles County, California, 90012, United States",
+      "geocodedAt": "2026-07-17T04:45:11.909300+00:00",
+      "rawType": "house",
+      "restaurantSlug": "restaurant-ki-los-angeles-ca",
+      "address": "111 San Pedro St., Los Angeles, CA, 90012, USA",
+      "sharedAddressGroup": [
+        "restaurant-ki-los-angeles-ca"
+      ],
+      "needsManualCorrection": true
+    },
+    "restaurant-naides-san-francisco-ca": {
+      "latitude": 37.7902305,
+      "longitude": -122.4091292,
+      "confidence": "low",
+      "approved": false,
+      "uncertain": true,
+      "provider": "nominatim",
+      "providerPlaceId": "323932470",
+      "displayName": "Sons & Daughters, 708, Bush Street, Lower Nob Hill, Nob Hill, South of Market, San Francisco, California, 94108, United States",
+      "geocodedAt": "2026-07-17T04:45:13.654152+00:00",
+      "rawType": "restaurant",
+      "restaurantSlug": "restaurant-naides-san-francisco-ca",
+      "address": "708 Bush St., San Francisco, CA, 94108, USA",
+      "sharedAddressGroup": [
+        "restaurant-naides-san-francisco-ca"
+      ],
+      "needsManualCorrection": true
+    },
+    "r-o-rebel-omakase-laguna-beach-ca": {
+      "restaurantSlug": "r-o-rebel-omakase-laguna-beach-ca",
+      "address": "361 Forest Ave., Ste. 103, Laguna Beach, CA, 92651, USA",
+      "latitude": null,
+      "longitude": null,
+      "confidence": "none",
+      "approved": false,
+      "uncertain": true,
+      "provider": "none",
+      "providerPlaceId": "",
+      "displayName": "361 Forest Ave., Ste. 103, Laguna Beach, CA, 92651, USA",
+      "geocodedAt": "2026-07-17T04:45:16.820818+00:00",
+      "rawType": "missing",
+      "sharedAddressGroup": [
+        "r-o-rebel-omakase-laguna-beach-ca"
+      ],
+      "needsManualCorrection": true
+    },
+    "san-ho-won-san-francisco-ca": {
+      "latitude": 37.7595769,
+      "longitude": -122.4102101,
+      "confidence": "low",
+      "approved": false,
+      "uncertain": true,
+      "provider": "nominatim",
+      "providerPlaceId": "323205300",
+      "displayName": "San Ho Won, 2170, Bryant Street, Potrero Hill, Mission, San Francisco, California, 94110, United States",
+      "geocodedAt": "2026-07-17T04:45:17.092513+00:00",
+      "rawType": "restaurant",
+      "restaurantSlug": "san-ho-won-san-francisco-ca",
+      "address": "2170 Bryant St., San Francisco, CA, 94110, USA",
+      "sharedAddressGroup": [
+        "san-ho-won-san-francisco-ca"
+      ],
+      "needsManualCorrection": true
+    },
+    "selby-s-atherton-ca": {
+      "latitude": 37.4695937,
+      "longitude": -122.212484,
+      "confidence": "low",
+      "approved": false,
+      "uncertain": true,
+      "provider": "nominatim",
+      "providerPlaceId": "323768809",
+      "displayName": "El Camino Real, Atherton, San Mateo County, California, 94061, United States",
+      "geocodedAt": "2026-07-17T04:45:18.739794+00:00",
+      "rawType": "primary",
+      "restaurantSlug": "selby-s-atherton-ca",
+      "address": "3001 El Camino Real, Atherton, CA, 94061, USA",
+      "sharedAddressGroup": [
+        "selby-s-atherton-ca"
+      ],
+      "needsManualCorrection": true
+    },
+    "seline-santa-monica-ca": {
+      "restaurantSlug": "seline-santa-monica-ca",
+      "address": "3110 Main St., Ste. 132, Santa Monica, CA, 90405, USA",
+      "latitude": null,
+      "longitude": null,
+      "confidence": "none",
+      "approved": false,
+      "uncertain": true,
+      "provider": "none",
+      "providerPlaceId": "",
+      "displayName": "3110 Main St., Ste. 132, Santa Monica, CA, 90405, USA",
+      "geocodedAt": "2026-07-17T04:45:21.943724+00:00",
+      "rawType": "missing",
+      "sharedAddressGroup": [
+        "seline-santa-monica-ca"
+      ],
+      "needsManualCorrection": true
+    },
+    "shin-sushi-encino-ca": {
+      "restaurantSlug": "shin-sushi-encino-ca",
+      "address": "16573 Ventura Blvd., Ste. 14, Encino, CA, 91436, USA",
+      "latitude": null,
+      "longitude": null,
+      "confidence": "none",
+      "approved": false,
+      "uncertain": true,
+      "provider": "none",
+      "providerPlaceId": "",
+      "displayName": "16573 Ventura Blvd., Ste. 14, Encino, CA, 91436, USA",
+      "geocodedAt": "2026-07-17T04:45:23.488115+00:00",
+      "rawType": "missing",
+      "sharedAddressGroup": [
+        "shin-sushi-encino-ca"
+      ],
+      "needsManualCorrection": true
+    },
+    "silvers-omakase-santa-barbara-ca": {
+      "latitude": 34.415204,
+      "longitude": -119.691757,
+      "confidence": "low",
+      "approved": false,
+      "uncertain": true,
+      "provider": "nominatim",
+      "providerPlaceId": "321020056",
+      "displayName": "Silvers Omakase, 224, Helena Avenue, Funk Zone, Santa Barbara, Santa Barbara County, California, 93101, United States",
+      "geocodedAt": "2026-07-17T04:45:23.865228+00:00",
+      "rawType": "restaurant",
+      "restaurantSlug": "silvers-omakase-santa-barbara-ca",
+      "address": "224 Helena Ave., Santa Barbara, CA, 93101, USA",
+      "sharedAddressGroup": [
+        "silvers-omakase-santa-barbara-ca"
+      ],
+      "needsManualCorrection": true
+    },
+    "six-test-kitchen-paso-robles-ca": {
+      "restaurantSlug": "six-test-kitchen-paso-robles-ca",
+      "address": "3075 Blue Rock Rd., Paso Robles, CA, 93446, USA",
+      "latitude": null,
+      "longitude": null,
+      "confidence": "none",
+      "approved": false,
+      "uncertain": true,
+      "provider": "none",
+      "providerPlaceId": "",
+      "displayName": "3075 Blue Rock Rd., Paso Robles, CA, 93446, USA",
+      "geocodedAt": "2026-07-17T04:45:27.000048+00:00",
+      "rawType": "missing",
+      "sharedAddressGroup": [
+        "six-test-kitchen-paso-robles-ca"
+      ],
+      "needsManualCorrection": true
+    },
+    "soichi-san-diego-ca": {
+      "latitude": 32.762674,
+      "longitude": -117.141802,
+      "confidence": "low",
+      "approved": false,
+      "uncertain": true,
+      "provider": "nominatim",
+      "providerPlaceId": "319677428",
+      "displayName": "2121, Adams Avenue, University Heights, Mission Valley, San Diego, San Diego County, California, 92116, United States",
+      "geocodedAt": "2026-07-17T04:45:27.894365+00:00",
+      "rawType": "house",
+      "restaurantSlug": "soichi-san-diego-ca",
+      "address": "2121 Adams Ave., San Diego, CA, 92116, USA",
+      "sharedAddressGroup": [
+        "soichi-san-diego-ca"
+      ],
+      "needsManualCorrection": true
+    },
+    "sorrel-san-francisco-ca": {
+      "latitude": 37.7885864,
+      "longitude": -122.4462018,
+      "confidence": "low",
+      "approved": false,
+      "uncertain": true,
+      "provider": "nominatim",
+      "providerPlaceId": "324021672",
+      "displayName": "3228, Sacramento Street, Laurel Heights, Pacific Heights, San Francisco, California, 94115, United States",
+      "geocodedAt": "2026-07-17T04:45:29.304814+00:00",
+      "rawType": "yes",
+      "restaurantSlug": "sorrel-san-francisco-ca",
+      "address": "3228 Sacramento St., San Francisco, CA, 94115, USA",
+      "sharedAddressGroup": [
+        "sorrel-san-francisco-ca"
+      ],
+      "needsManualCorrection": true
+    },
+    "ssal-san-francisco-ca": {
+      "latitude": 37.797323,
+      "longitude": -122.4219316,
+      "confidence": "low",
+      "approved": false,
+      "uncertain": true,
+      "provider": "nominatim",
+      "providerPlaceId": "322872543",
+      "displayName": "SSAL, 2226, Polk Street, Russian Hill, Nob Hill, South of Market, San Francisco, California, 94109, United States",
+      "geocodedAt": "2026-07-17T04:45:31.045555+00:00",
+      "rawType": "restaurant",
+      "restaurantSlug": "ssal-san-francisco-ca",
+      "address": "2226 Polk St., San Francisco, CA, 94109, USA",
+      "sharedAddressGroup": [
+        "ssal-san-francisco-ca"
+      ],
+      "needsManualCorrection": true
+    },
+    "state-bird-provisions-san-francisco-ca": {
+      "latitude": 37.7837055,
+      "longitude": -122.4329482,
+      "confidence": "low",
+      "approved": false,
+      "uncertain": true,
+      "provider": "nominatim",
+      "providerPlaceId": "323153943",
+      "displayName": "State Bird Provisions, 1529, Fillmore Street, Alamo Square, Western Addition, San Francisco, California, 94115, United States",
+      "geocodedAt": "2026-07-17T04:45:32.600461+00:00",
+      "rawType": "restaurant",
+      "restaurantSlug": "state-bird-provisions-san-francisco-ca",
+      "address": "1529 Fillmore St., San Francisco, CA, 94115, USA",
+      "sharedAddressGroup": [
+        "state-bird-provisions-san-francisco-ca"
+      ],
+      "needsManualCorrection": true
+    },
+    "sun-moon-studio-oakland-ca": {
+      "restaurantSlug": "sun-moon-studio-oakland-ca",
+      "address": "1940 Union St., Ste. 21, Oakland, CA, 94607, USA",
+      "latitude": null,
+      "longitude": null,
+      "confidence": "none",
+      "approved": false,
+      "uncertain": true,
+      "provider": "none",
+      "providerPlaceId": "",
+      "displayName": "1940 Union St., Ste. 21, Oakland, CA, 94607, USA",
+      "geocodedAt": "2026-07-17T04:45:36.424910+00:00",
+      "rawType": "missing",
+      "sharedAddressGroup": [
+        "sun-moon-studio-oakland-ca"
+      ],
+      "needsManualCorrection": true
+    },
+    "sushi-inaba-torrance-ca": {
+      "latitude": 33.8401901,
+      "longitude": -118.3535091,
+      "confidence": "low",
+      "approved": false,
+      "uncertain": true,
+      "provider": "nominatim",
+      "providerPlaceId": "414622544",
+      "displayName": "20918, Hawthorne Boulevard, Torrance, Los Angeles County, California, 90503, United States",
+      "geocodedAt": "2026-07-17T04:45:37.102026+00:00",
+      "rawType": "house",
+      "restaurantSlug": "sushi-inaba-torrance-ca",
+      "address": "20918 Hawthorne Blvd., Torrance, CA, 90503, USA",
+      "sharedAddressGroup": [
+        "sushi-inaba-torrance-ca"
+      ],
+      "needsManualCorrection": true
+    },
+    "sushi-kaneyoshi-los-angeles-ca": {
+      "latitude": 34.0536909,
+      "longitude": -118.242766,
+      "confidence": "high",
+      "approved": true,
+      "uncertain": false,
+      "provider": "nominatim",
+      "providerPlaceId": "314414187",
+      "displayName": "Los Angeles, Los Angeles County, California, United States",
+      "geocodedAt": "2026-07-17T04:45:40.051470+00:00",
+      "rawType": "administrative",
+      "restaurantSlug": "sushi-kaneyoshi-los-angeles-ca",
+      "address": "250 E. 1st St., B1, Los Angeles, CA, 90012, USA",
+      "sharedAddressGroup": [
+        "sushi-kaneyoshi-los-angeles-ca"
+      ],
+      "needsManualCorrection": false
+    },
+    "the-kitchen-sacramento-ca": {
+      "restaurantSlug": "the-kitchen-sacramento-ca",
+      "address": "915 Broadway, Ste. 100, Sacramento, CA, 95818, USA",
+      "latitude": null,
+      "longitude": null,
+      "confidence": "none",
+      "approved": false,
+      "uncertain": true,
+      "provider": "none",
+      "providerPlaceId": "",
+      "displayName": "915 Broadway, Ste. 100, Sacramento, CA, 95818, USA",
+      "geocodedAt": "2026-07-17T04:45:43.057646+00:00",
+      "rawType": "missing",
+      "sharedAddressGroup": [
+        "the-kitchen-sacramento-ca"
+      ],
+      "needsManualCorrection": true
+    },
+    "the-progress-san-francisco-ca": {
+      "latitude": 37.7836631,
+      "longitude": -122.4330799,
+      "confidence": "low",
+      "approved": false,
+      "uncertain": true,
+      "provider": "nominatim",
+      "providerPlaceId": "319854546",
+      "displayName": "1525;1527;1529;1539, Fillmore Street, Alamo Square, Western Addition, San Francisco, California, 95115, United States",
+      "geocodedAt": "2026-07-17T04:45:43.297227+00:00",
+      "rawType": "yes",
+      "restaurantSlug": "the-progress-san-francisco-ca",
+      "address": "1525 Fillmore St., San Francisco, CA, 94115, USA",
+      "sharedAddressGroup": [
+        "the-progress-san-francisco-ca"
+      ],
+      "needsManualCorrection": true
+    },
+    "the-restaurant-at-justin-paso-robles-ca": {
+      "restaurantSlug": "the-restaurant-at-justin-paso-robles-ca",
+      "address": "11680 Chimney Rock Rd., Paso Robles, CA, 93446, USA",
+      "latitude": null,
+      "longitude": null,
+      "confidence": "none",
+      "approved": false,
+      "uncertain": true,
+      "provider": "none",
+      "providerPlaceId": "",
+      "displayName": "11680 Chimney Rock Rd., Paso Robles, CA, 93446, USA",
+      "geocodedAt": "2026-07-17T04:45:46.194734+00:00",
+      "rawType": "missing",
+      "sharedAddressGroup": [
+        "the-restaurant-at-justin-paso-robles-ca"
+      ],
+      "needsManualCorrection": true
+    },
+    "the-village-pub-woodside-ca": {
+      "latitude": 37.4289517,
+      "longitude": -122.251458,
+      "confidence": "low",
+      "approved": false,
+      "uncertain": true,
+      "provider": "nominatim",
+      "providerPlaceId": "322898310",
+      "displayName": "The Village Pub, 2967, Woodside Road, Woodside, San Mateo County, California, 94062, United States",
+      "geocodedAt": "2026-07-17T04:45:46.805579+00:00",
+      "rawType": "restaurant",
+      "restaurantSlug": "the-village-pub-woodside-ca",
+      "address": "2967 Woodside Rd., Woodside, CA, 94062, USA",
+      "sharedAddressGroup": [
+        "the-village-pub-woodside-ca"
+      ],
+      "needsManualCorrection": true
+    },
+    "troubadour-healdsburg-ca": {
+      "latitude": 38.6116256,
+      "longitude": -122.8710044,
+      "confidence": "low",
+      "approved": false,
+      "uncertain": true,
+      "provider": "nominatim",
+      "providerPlaceId": "415366570",
+      "displayName": "381, Healdsburg Avenue, Healdsburg, Sonoma County, California, 95448, United States",
+      "geocodedAt": "2026-07-17T04:45:48.377687+00:00",
+      "rawType": "house",
+      "restaurantSlug": "troubadour-healdsburg-ca",
+      "address": "381 Healdsburg Ave., Healdsburg, CA, 95448, USA",
+      "sharedAddressGroup": [
+        "troubadour-healdsburg-ca"
+      ],
+      "needsManualCorrection": true
+    },
+    "wakuriya-san-mateo-ca": {
+      "latitude": 37.5213369,
+      "longitude": -122.3368004,
+      "confidence": "low",
+      "approved": false,
+      "uncertain": true,
+      "provider": "nominatim",
+      "providerPlaceId": "323530263",
+      "displayName": "Wakuriya Japanese Kitchen, 115, De Anza Boulevard, San Mateo, San Mateo County, California, 94402, United States",
+      "geocodedAt": "2026-07-17T04:45:49.773723+00:00",
+      "rawType": "restaurant",
+      "restaurantSlug": "wakuriya-san-mateo-ca",
+      "address": "115 De Anza Blvd., San Mateo, CA, 94402, USA",
+      "sharedAddressGroup": [
+        "wakuriya-san-mateo-ca"
+      ],
+      "needsManualCorrection": true
+    },
+    "wolfsbane-san-francisco-ca": {
+      "latitude": 37.7580869,
+      "longitude": -122.3885112,
+      "confidence": "low",
+      "approved": false,
+      "uncertain": true,
+      "provider": "nominatim",
+      "providerPlaceId": "404691865",
+      "displayName": "2495, 3rd Street, Dogpatch, Potrero Hill, San Francisco, California, 94107, United States",
+      "geocodedAt": "2026-07-17T04:45:51.924859+00:00",
+      "rawType": "house",
+      "restaurantSlug": "wolfsbane-san-francisco-ca",
+      "address": "2495 3rd St., San Francisco, CA, 94107, USA",
+      "sharedAddressGroup": [
+        "wolfsbane-san-francisco-ca"
+      ],
+      "needsManualCorrection": true
+    },
+    "the-wolf-s-tailor-denver-co": {
+      "latitude": 39.7727956,
+      "longitude": -105.0109862,
+      "confidence": "low",
+      "approved": false,
+      "uncertain": true,
+      "provider": "nominatim",
+      "providerPlaceId": "330807221",
+      "displayName": "4058, Tejon Street, Sunnyside, Denver, Colorado, 80211, United States",
+      "geocodedAt": "2026-07-17T04:45:53.473366+00:00",
+      "rawType": "retail",
+      "restaurantSlug": "the-wolf-s-tailor-denver-co",
+      "address": "4058 Tejon St., Denver, CO, 80211, USA",
+      "sharedAddressGroup": [
+        "the-wolf-s-tailor-denver-co"
+      ],
+      "needsManualCorrection": true
+    },
+    "alma-fonda-fina-denver-co": {
+      "latitude": 39.758103,
+      "longitude": -105.0116583,
+      "confidence": "low",
+      "approved": false,
+      "uncertain": true,
+      "provider": "nominatim",
+      "providerPlaceId": "330534854",
+      "displayName": "Alma Fonda Fina, 2556, 15th Street, Highland, Denver, Colorado, 80211, United States",
+      "geocodedAt": "2026-07-17T04:45:55.375602+00:00",
+      "rawType": "restaurant",
+      "restaurantSlug": "alma-fonda-fina-denver-co",
+      "address": "2556 15th St., Denver, CO, 80211, USA",
+      "sharedAddressGroup": [
+        "alma-fonda-fina-denver-co"
+      ],
+      "needsManualCorrection": true
+    },
+    "beckon-denver-co": {
+      "latitude": 39.7611881,
+      "longitude": -104.9823915,
+      "confidence": "low",
+      "approved": false,
+      "uncertain": true,
+      "provider": "nominatim",
+      "providerPlaceId": "329675237",
+      "displayName": "2843, Larimer Street, Five Points, Denver, Colorado, 80205, United States",
+      "geocodedAt": "2026-07-17T04:45:56.746281+00:00",
+      "rawType": "retail",
+      "restaurantSlug": "beckon-denver-co",
+      "address": "2843 Larimer St., Denver, CO, 80205, USA",
+      "sharedAddressGroup": [
+        "beckon-denver-co"
+      ],
+      "needsManualCorrection": true
+    },
+    "bosq-aspen-co": {
+      "latitude": 39.1885009,
+      "longitude": -106.8197359,
+      "confidence": "low",
+      "approved": false,
+      "uncertain": true,
+      "provider": "nominatim",
+      "providerPlaceId": "328833080",
+      "displayName": "Bosq, 312, South Mill Street, Aspen, Pitkin County, Colorado, 81611, United States",
+      "geocodedAt": "2026-07-17T04:45:58.686849+00:00",
+      "rawType": "restaurant",
+      "restaurantSlug": "bosq-aspen-co",
+      "address": "312 S. Mill St., Aspen, CO, 81611, USA",
+      "sharedAddressGroup": [
+        "bosq-aspen-co"
+      ],
+      "needsManualCorrection": true
+    },
+    "brut-denver-co": {
+      "latitude": 39.7527933,
+      "longitude": -104.9967909,
+      "confidence": "low",
+      "approved": false,
+      "uncertain": true,
+      "provider": "nominatim",
+      "providerPlaceId": "328134113",
+      "displayName": "1801, Blake Street, Central Business District, Denver, Colorado, 80202, United States",
+      "geocodedAt": "2026-07-17T04:46:00.445135+00:00",
+      "rawType": "commercial",
+      "restaurantSlug": "brut-denver-co",
+      "address": "1801 Blake St., Denver, CO, 80202, USA",
+      "sharedAddressGroup": [
+        "brut-denver-co"
+      ],
+      "needsManualCorrection": true
+    },
+    "frasca-food-and-wine-boulder-co": {
+      "latitude": 40.0193004,
+      "longitude": -105.2724538,
+      "confidence": "low",
+      "approved": false,
+      "uncertain": true,
+      "provider": "nominatim",
+      "providerPlaceId": "326406784",
+      "displayName": "Frasca Food and Wine, 1738, Pearl Street, Goss-Grove, Boulder, Boulder County, Colorado, 80302, United States",
+      "geocodedAt": "2026-07-17T04:46:02.311770+00:00",
+      "rawType": "restaurant",
+      "restaurantSlug": "frasca-food-and-wine-boulder-co",
+      "address": "1738 Pearl St., Boulder, CO, 80302, USA",
+      "sharedAddressGroup": [
+        "frasca-food-and-wine-boulder-co"
+      ],
+      "needsManualCorrection": true
+    },
+    "kizaki-denver-co": {
+      "latitude": 39.6883934,
+      "longitude": -104.9806129,
+      "confidence": "low",
+      "approved": false,
+      "uncertain": true,
+      "provider": "nominatim",
+      "providerPlaceId": "330849795",
+      "displayName": "1551, South Pearl Street, Platt Park, Denver, Colorado, 80210, United States",
+      "geocodedAt": "2026-07-17T04:46:03.815515+00:00",
+      "rawType": "house",
+      "restaurantSlug": "kizaki-denver-co",
+      "address": "1551 S. Pearl St., Denver, CO, 80210, USA",
+      "sharedAddressGroup": [
+        "kizaki-denver-co",
+        "margot-denver-co"
+      ],
+      "needsManualCorrection": true
+    },
+    "margot-denver-co": {
+      "latitude": 39.6883934,
+      "longitude": -104.9806129,
+      "confidence": "low",
+      "approved": false,
+      "uncertain": true,
+      "provider": "nominatim",
+      "providerPlaceId": "330849795",
+      "displayName": "1551, South Pearl Street, Platt Park, Denver, Colorado, 80210, United States",
+      "geocodedAt": "2026-07-17T04:46:03.815515+00:00",
+      "rawType": "house",
+      "restaurantSlug": "margot-denver-co",
+      "address": "1551 S. Pearl St., Denver, CO, 80210, USA",
+      "sharedAddressGroup": [
+        "kizaki-denver-co",
+        "margot-denver-co"
+      ],
+      "needsManualCorrection": true
+    },
+    "mezcaleria-alma-denver-co": {
+      "latitude": 39.7577969,
+      "longitude": -105.0111751,
+      "confidence": "low",
+      "approved": false,
+      "uncertain": true,
+      "provider": "nominatim",
+      "providerPlaceId": "402923631",
+      "displayName": "2550, 15th Street, Highland, Denver, Colorado, 80211, United States",
+      "geocodedAt": "2026-07-17T04:46:05.644300+00:00",
+      "rawType": "house",
+      "restaurantSlug": "mezcaleria-alma-denver-co",
+      "address": "2550 15th St., Denver, CO, 80211, USA",
+      "sharedAddressGroup": [
+        "mezcaleria-alma-denver-co"
+      ],
+      "needsManualCorrection": true
+    },
+    "l-atelier-de-joel-robuchon-miami-miami-fl": {
+      "latitude": 25.8600955,
+      "longitude": -80.2614493,
+      "confidence": "low",
+      "approved": false,
+      "uncertain": true,
+      "provider": "nominatim",
+      "providerPlaceId": "305056943",
+      "displayName": "East 41st Street, Hialeah, Miami-Dade County, Florida, 33013, United States",
+      "geocodedAt": "2026-07-17T04:46:07.498244+00:00",
+      "rawType": "residential",
+      "restaurantSlug": "l-atelier-de-joel-robuchon-miami-miami-fl",
+      "address": "151 N.E. 41st St., Miami, FL, 33137, USA",
+      "sharedAddressGroup": [
+        "l-atelier-de-joel-robuchon-miami-miami-fl"
+      ],
+      "needsManualCorrection": true
+    },
+    "sorekara-orlando-fl": {
+      "latitude": 28.5685437,
+      "longitude": -81.3261791,
+      "confidence": "low",
+      "approved": false,
+      "uncertain": true,
+      "provider": "nominatim",
+      "providerPlaceId": "396904428",
+      "displayName": "4979, New Broad Street, Baldwin Park, Orlando, Orange County, Florida, 32814, United States",
+      "geocodedAt": "2026-07-17T04:46:09.233680+00:00",
+      "rawType": "house",
+      "restaurantSlug": "sorekara-orlando-fl",
+      "address": "4979 New Broad St., Orlando, FL, 32814, USA",
+      "sharedAddressGroup": [
+        "sorekara-orlando-fl"
+      ],
+      "needsManualCorrection": true
+    },
+    "ariete-miami-fl": {
+      "latitude": 25.725139,
+      "longitude": -80.2454316,
+      "confidence": "low",
+      "approved": false,
+      "uncertain": true,
+      "provider": "nominatim",
+      "providerPlaceId": "306091033",
+      "displayName": "3540, Main Highway, Miami, Miami-Dade County, Florida, 33133, United States",
+      "geocodedAt": "2026-07-17T04:46:10.587128+00:00",
+      "rawType": "yes",
+      "restaurantSlug": "ariete-miami-fl",
+      "address": "3540 Main Hwy., Miami, FL, 33133, USA",
+      "sharedAddressGroup": [
+        "ariete-miami-fl"
+      ],
+      "needsManualCorrection": true
+    },
+    "boia-de-miami-fl": {
+      "latitude": 25.8229932,
+      "longitude": -80.2773343,
+      "confidence": "low",
+      "approved": false,
+      "uncertain": true,
+      "provider": "nominatim",
+      "providerPlaceId": "305917803",
+      "displayName": "East 2nd Avenue, Hialeah, Miami-Dade County, Florida, 33010, United States",
+      "geocodedAt": "2026-07-17T04:46:12.425936+00:00",
+      "rawType": "residential",
+      "restaurantSlug": "boia-de-miami-fl",
+      "address": "5205 N.E. 2nd Ave., Miami, FL, 33137, USA",
+      "sharedAddressGroup": [
+        "boia-de-miami-fl"
+      ],
+      "needsManualCorrection": true
+    },
+    "camille-orlando-fl": {
+      "latitude": 28.5683758,
+      "longitude": -81.3260953,
+      "confidence": "low",
+      "approved": false,
+      "uncertain": true,
+      "provider": "nominatim",
+      "providerPlaceId": "396904432",
+      "displayName": "4962, New Broad Street, Baldwin Park, Orlando, Orange County, Florida, 32814, United States",
+      "geocodedAt": "2026-07-17T04:46:14.162795+00:00",
+      "rawType": "house",
+      "restaurantSlug": "camille-orlando-fl",
+      "address": "4962 New Broad St., Orlando, FL, 32814, USA",
+      "sharedAddressGroup": [
+        "camille-orlando-fl"
+      ],
+      "needsManualCorrection": true
+    },
+    "chef-s-counter-at-maass-fort-lauderdale-fl": {
+      "restaurantSlug": "chef-s-counter-at-maass-fort-lauderdale-fl",
+      "address": "Four Seasons Hotel and Residences, 525 N. Fort Lauderdale Beach Blvd., Fort Lauderdale, FL, 33304, USA",
+      "latitude": null,
+      "longitude": null,
+      "confidence": "none",
+      "approved": false,
+      "uncertain": true,
+      "provider": "none",
+      "providerPlaceId": "",
+      "displayName": "Four Seasons Hotel and Residences, 525 N. Fort Lauderdale Beach Blvd., Fort Lauderdale, FL, 33304, USA",
+      "geocodedAt": "2026-07-17T04:46:17.151000+00:00",
+      "rawType": "missing",
+      "sharedAddressGroup": [
+        "chef-s-counter-at-maass-fort-lauderdale-fl"
+      ],
+      "needsManualCorrection": true
+    },
+    "cote-miami-miami-fl": {
+      "latitude": 25.7617,
+      "longitude": -80.1918,
+      "confidence": "low",
+      "approved": false,
+      "uncertain": true,
+      "provider": "city-centroid-fallback",
+      "providerPlaceId": "miami",
+      "displayName": "3900 N.E. 2nd Ave., Miami, FL, 33137, USA",
+      "geocodedAt": "2026-07-17T04:46:18.888363+00:00",
+      "rawType": "city-centroid",
+      "restaurantSlug": "cote-miami-miami-fl",
+      "address": "3900 N.E. 2nd Ave., Miami, FL, 33137, USA",
+      "sharedAddressGroup": [
+        "cote-miami-miami-fl"
+      ],
+      "needsManualCorrection": true
+    },
+    "ebbe-tampa-fl": {
+      "latitude": 27.9536193,
+      "longitude": -82.4604292,
+      "confidence": "low",
+      "approved": false,
+      "uncertain": true,
+      "provider": "nominatim",
+      "providerPlaceId": "305139421",
+      "displayName": "1202, North Franklin Street, Clarkes, Tampa Heights, Tampa, Hillsborough County, Florida, 33602, United States",
+      "geocodedAt": "2026-07-17T04:46:19.232879+00:00",
+      "rawType": "yes",
+      "restaurantSlug": "ebbe-tampa-fl",
+      "address": "1202 N. Franklin St., Tampa, FL, 33602, USA",
+      "sharedAddressGroup": [
+        "ebbe-tampa-fl"
+      ],
+      "needsManualCorrection": true
+    },
+    "elcielo-miami-miami-fl": {
+      "latitude": 25.7741566,
+      "longitude": -80.1935973,
+      "confidence": "high",
+      "approved": true,
+      "uncertain": false,
+      "provider": "nominatim",
+      "providerPlaceId": "420850231",
+      "displayName": "Miami, Miami-Dade County, Florida, United States",
+      "geocodedAt": "2026-07-17T04:46:20.902516+00:00",
+      "rawType": "administrative",
+      "restaurantSlug": "elcielo-miami-miami-fl",
+      "address": "31 S.E. 5th St., Miami, FL, 33131, USA",
+      "sharedAddressGroup": [
+        "elcielo-miami-miami-fl"
+      ],
+      "needsManualCorrection": false
+    },
+    "emelina-west-palm-beach-fl": {
+      "restaurantSlug": "emelina-west-palm-beach-fl",
+      "address": "424 Park Pl #101, West Palm Beach, FL 33401, West Palm Beach, FL, 33401, USA",
+      "latitude": null,
+      "longitude": null,
+      "confidence": "none",
+      "approved": false,
+      "uncertain": true,
+      "provider": "none",
+      "providerPlaceId": "",
+      "displayName": "424 Park Pl #101, West Palm Beach, FL 33401, West Palm Beach, FL, 33401, USA",
+      "geocodedAt": "2026-07-17T04:46:23.791003+00:00",
+      "rawType": "missing",
+      "sharedAddressGroup": [
+        "emelina-west-palm-beach-fl"
+      ],
+      "needsManualCorrection": true
+    },
+    "hiden-miami-fl": {
+      "latitude": 25.8012787,
+      "longitude": -80.1446122,
+      "confidence": "low",
+      "approved": false,
+      "uncertain": true,
+      "provider": "nominatim",
+      "providerPlaceId": "307076366",
+      "displayName": "West 25th Street, Miami Beach, Miami-Dade County, Florida, 33140, United States",
+      "geocodedAt": "2026-07-17T04:46:24.662364+00:00",
+      "rawType": "residential",
+      "restaurantSlug": "hiden-miami-fl",
+      "address": "313 N.W. 25th St., Miami, FL, 33127, USA",
+      "sharedAddressGroup": [
+        "hiden-miami-fl"
+      ],
+      "needsManualCorrection": true
+    },
+    "kadence-orlando-fl": {
+      "latitude": 28.569036,
+      "longitude": -81.3459996,
+      "confidence": "low",
+      "approved": false,
+      "uncertain": true,
+      "provider": "nominatim",
+      "providerPlaceId": "396404407",
+      "displayName": "1809, Winter Park Road, Audubon Park, Orlando, Orange County, Florida, 32803, United States",
+      "geocodedAt": "2026-07-17T04:46:26.329875+00:00",
+      "rawType": "house",
+      "restaurantSlug": "kadence-orlando-fl",
+      "address": "1809 Winter Park Rd., Orlando, FL, 32803, USA",
+      "sharedAddressGroup": [
+        "kadence-orlando-fl"
+      ],
+      "needsManualCorrection": true
+    },
+    "koya-tampa-fl": {
+      "latitude": 27.9418016,
+      "longitude": -82.467808,
+      "confidence": "low",
+      "approved": false,
+      "uncertain": true,
+      "provider": "nominatim",
+      "providerPlaceId": "391307955",
+      "displayName": "807, West Platt Street, Riverside, Hyde Park, Tampa, Hillsborough County, Florida, 33606, United States",
+      "geocodedAt": "2026-07-17T04:46:27.874939+00:00",
+      "rawType": "house",
+      "restaurantSlug": "koya-tampa-fl",
+      "address": "807 W. Platt St., Tampa, FL, 33606, USA",
+      "sharedAddressGroup": [
+        "koya-tampa-fl"
+      ],
+      "needsManualCorrection": true
+    },
+    "kosen-tampa-fl": {
+      "latitude": 27.9623842,
+      "longitude": -82.4644055,
+      "confidence": "low",
+      "approved": false,
+      "uncertain": true,
+      "provider": "nominatim",
+      "providerPlaceId": "387933601",
+      "displayName": "307, West Palm Avenue, Mathews Place, Tampa Heights, Tampa, Hillsborough County, Florida, 33602, United States",
+      "geocodedAt": "2026-07-17T04:46:29.299997+00:00",
+      "rawType": "house",
+      "restaurantSlug": "kosen-tampa-fl",
+      "address": "307 W. Palm Ave., Tampa, FL, 33602, USA",
+      "sharedAddressGroup": [
+        "kosen-tampa-fl"
+      ],
+      "needsManualCorrection": true
+    },
+    "le-jardinier-miami-miami-fl": {
+      "latitude": 25.7617,
+      "longitude": -80.1918,
+      "confidence": "low",
+      "approved": false,
+      "uncertain": true,
+      "provider": "city-centroid-fallback",
+      "providerPlaceId": "miami",
+      "displayName": "151 N.E. 41st St., Ste. 135, Miami, FL, 33137, USA",
+      "geocodedAt": "2026-07-17T04:46:32.897088+00:00",
+      "rawType": "city-centroid",
+      "restaurantSlug": "le-jardinier-miami-miami-fl",
+      "address": "151 N.E. 41st St., Ste. 135, Miami, FL, 33137, USA",
+      "sharedAddressGroup": [
+        "le-jardinier-miami-miami-fl"
+      ],
+      "needsManualCorrection": true
+    },
+    "los-felix-miami-fl": {
+      "latitude": 25.7272071,
+      "longitude": -80.2430803,
+      "confidence": "low",
+      "approved": false,
+      "uncertain": true,
+      "provider": "nominatim",
+      "providerPlaceId": "411752683",
+      "displayName": "3413, Main Highway, Ocean View Heights, Miami, Miami-Dade County, Florida, 33133, United States",
+      "geocodedAt": "2026-07-17T04:46:33.497765+00:00",
+      "rawType": "house",
+      "restaurantSlug": "los-felix-miami-fl",
+      "address": "3413 Main Hwy., Miami, FL, 33133, USA",
+      "sharedAddressGroup": [
+        "los-felix-miami-fl"
+      ],
+      "needsManualCorrection": true
+    },
+    "mutra-north-miami-fl": {
+      "restaurantSlug": "mutra-north-miami-fl",
+      "address": "2188 N.E. 123rd St., North Miami, FL, 33181, USA",
+      "latitude": null,
+      "longitude": null,
+      "confidence": "none",
+      "approved": false,
+      "uncertain": true,
+      "provider": "none",
+      "providerPlaceId": "",
+      "displayName": "2188 N.E. 123rd St., North Miami, FL, 33181, USA",
+      "geocodedAt": "2026-07-17T04:46:36.141140+00:00",
+      "rawType": "missing",
+      "sharedAddressGroup": [
+        "mutra-north-miami-fl"
+      ],
+      "needsManualCorrection": true
+    },
+    "ogawa-miami-fl": {
+      "latitude": 25.7617,
+      "longitude": -80.1918,
+      "confidence": "low",
+      "approved": false,
+      "uncertain": true,
+      "provider": "city-centroid-fallback",
+      "providerPlaceId": "miami",
+      "displayName": "7223 N.W. 2nd Ave., Miami, FL, 33150, USA",
+      "geocodedAt": "2026-07-17T04:46:37.981230+00:00",
+      "rawType": "city-centroid",
+      "restaurantSlug": "ogawa-miami-fl",
+      "address": "7223 N.W. 2nd Ave., Miami, FL, 33150, USA",
+      "sharedAddressGroup": [
+        "ogawa-miami-fl"
+      ],
+      "needsManualCorrection": true
+    },
+    "rocca-tampa-fl": {
+      "latitude": 27.9622165,
+      "longitude": -82.4649256,
+      "confidence": "low",
+      "approved": false,
+      "uncertain": true,
+      "provider": "nominatim",
+      "providerPlaceId": "391824995",
+      "displayName": "323, West Palm Avenue, Mathews Place, Tampa Heights, Tampa, Hillsborough County, Florida, 33602, United States",
+      "geocodedAt": "2026-07-17T04:46:38.372663+00:00",
+      "rawType": "house",
+      "restaurantSlug": "rocca-tampa-fl",
+      "address": "323 W. Palm Ave., Tampa, FL, 33602, USA",
+      "sharedAddressGroup": [
+        "rocca-tampa-fl"
+      ],
+      "needsManualCorrection": true
+    },
+    "shingo-coral-gables-fl": {
+      "latitude": 25.7528781,
+      "longitude": -80.2573211,
+      "confidence": "low",
+      "approved": false,
+      "uncertain": true,
+      "provider": "nominatim",
+      "providerPlaceId": "411215706",
+      "displayName": "112, Alhambra Circle, Coral Gables, Miami-Dade County, Florida, 33134, United States",
+      "geocodedAt": "2026-07-17T04:46:39.713482+00:00",
+      "rawType": "house",
+      "restaurantSlug": "shingo-coral-gables-fl",
+      "address": "112 Alhambra Cir., Coral Gables, FL, 33134, USA",
+      "sharedAddressGroup": [
+        "shingo-coral-gables-fl"
+      ],
+      "needsManualCorrection": true
+    },
+    "soseki-winter-park-fl": {
+      "latitude": 28.5932143,
+      "longitude": -81.3617583,
+      "confidence": "low",
+      "approved": false,
+      "uncertain": true,
+      "provider": "nominatim",
+      "providerPlaceId": "302369792",
+      "displayName": "955, Fairbanks Avenue, Winter Park, Orange County, Florida, 32789, United States",
+      "geocodedAt": "2026-07-17T04:46:41.115507+00:00",
+      "rawType": "house",
+      "restaurantSlug": "soseki-winter-park-fl",
+      "address": "955 W. Fairbanks Ave., Winter Park, FL, 32789, USA",
+      "sharedAddressGroup": [
+        "soseki-winter-park-fl"
+      ],
+      "needsManualCorrection": true
+    },
+    "stubborn-seed-miami-beach-fl": {
+      "latitude": 25.7701325,
+      "longitude": -80.1348918,
+      "confidence": "low",
+      "approved": false,
+      "uncertain": true,
+      "provider": "nominatim",
+      "providerPlaceId": "302334627",
+      "displayName": "Stubborn Seed, 101, Washington Avenue, South Beach, Miami Beach, Miami-Dade County, Florida, 33139, United States",
+      "geocodedAt": "2026-07-17T04:46:42.650016+00:00",
+      "rawType": "restaurant",
+      "restaurantSlug": "stubborn-seed-miami-beach-fl",
+      "address": "101 Washington Ave., Miami Beach, FL, 33139, USA",
+      "sharedAddressGroup": [
+        "stubborn-seed-miami-beach-fl"
+      ],
+      "needsManualCorrection": true
+    },
+    "tambourine-room-by-tristan-brandt-miami-beach-fl": {
+      "restaurantSlug": "tambourine-room-by-tristan-brandt-miami-beach-fl",
+      "address": "Carillon Miami Wellness Resort, 6801 Collins Ave., Miami Beach, FL, 33141, USA",
+      "latitude": null,
+      "longitude": null,
+      "confidence": "none",
+      "approved": false,
+      "uncertain": true,
+      "provider": "none",
+      "providerPlaceId": "",
+      "displayName": "Carillon Miami Wellness Resort, 6801 Collins Ave., Miami Beach, FL, 33141, USA",
+      "geocodedAt": "2026-07-17T04:46:45.441159+00:00",
+      "rawType": "missing",
+      "sharedAddressGroup": [
+        "tambourine-room-by-tristan-brandt-miami-beach-fl"
+      ],
+      "needsManualCorrection": true
+    },
+    "the-surf-club-restaurant-surfside-fl": {
+      "restaurantSlug": "the-surf-club-restaurant-surfside-fl",
+      "address": "Four Seasons Hotel at The Surf Club, Surfside, 9011 Collins Ave., Surfside, FL, 33154, USA",
+      "latitude": null,
+      "longitude": null,
+      "confidence": "none",
+      "approved": false,
+      "uncertain": true,
+      "provider": "none",
+      "providerPlaceId": "",
+      "displayName": "Four Seasons Hotel at The Surf Club, Surfside, 9011 Collins Ave., Surfside, FL, 33154, USA",
+      "geocodedAt": "2026-07-17T04:46:47.174274+00:00",
+      "rawType": "missing",
+      "sharedAddressGroup": [
+        "the-surf-club-restaurant-surfside-fl"
+      ],
+      "needsManualCorrection": true
+    },
+    "victoria-and-albert-s-orlando-fl": {
+      "restaurantSlug": "victoria-and-albert-s-orlando-fl",
+      "address": "Disney's Grand Floridian Resort & Spa, 4401 Floridian Way, Orlando, FL, 32830, USA",
+      "latitude": null,
+      "longitude": null,
+      "confidence": "none",
+      "approved": false,
+      "uncertain": true,
+      "provider": "none",
+      "providerPlaceId": "",
+      "displayName": "Disney's Grand Floridian Resort & Spa, 4401 Floridian Way, Orlando, FL, 32830, USA",
+      "geocodedAt": "2026-07-17T04:46:48.903520+00:00",
+      "rawType": "missing",
+      "sharedAddressGroup": [
+        "victoria-and-albert-s-orlando-fl"
+      ],
+      "needsManualCorrection": true
+    },
+    "omo-by-jont-winter-park-fl": {
+      "latitude": 28.5951042,
+      "longitude": -81.3505481,
+      "confidence": "low",
+      "approved": false,
+      "uncertain": true,
+      "provider": "nominatim",
+      "providerPlaceId": "303240268",
+      "displayName": "115, Lyman Avenue, Winter Park, Orange County, Florida, 32789, United States",
+      "geocodedAt": "2026-07-17T04:46:49.402352+00:00",
+      "rawType": "house",
+      "restaurantSlug": "omo-by-jont-winter-park-fl",
+      "address": "115 E. Lyman Ave., Winter Park, FL, 32789, USA",
+      "sharedAddressGroup": [
+        "omo-by-jont-winter-park-fl"
+      ],
+      "needsManualCorrection": true
+    },
+    "atlas-atlanta-ga": {
+      "latitude": 33.8398015,
+      "longitude": -84.3824159,
+      "confidence": "low",
+      "approved": false,
+      "uncertain": true,
+      "provider": "nominatim",
+      "providerPlaceId": "342355376",
+      "displayName": "The St. Regis Atlanta, 88, West Paces Ferry Road Northwest, Buckhead, Atlanta, Fulton County, Georgia, 30305, United States",
+      "geocodedAt": "2026-07-17T04:46:50.974064+00:00",
+      "rawType": "hotel",
+      "restaurantSlug": "atlas-atlanta-ga",
+      "address": "The St. Regis Atlanta, 88 W. Paces Ferry Rd. NW, Atlanta, GA, 30305, USA",
+      "sharedAddressGroup": [
+        "atlas-atlanta-ga"
+      ],
+      "needsManualCorrection": true
+    },
+    "bacchanalia-atlanta-ga": {
+      "latitude": 33.749,
+      "longitude": -84.388,
+      "confidence": "low",
+      "approved": false,
+      "uncertain": true,
+      "provider": "city-centroid-fallback",
+      "providerPlaceId": "atlanta",
+      "displayName": "1460 Ellsworth Industrial Blvd., Ste. A, Atlanta, GA, 30318, USA",
+      "geocodedAt": "2026-07-17T04:46:53.962210+00:00",
+      "rawType": "city-centroid",
+      "restaurantSlug": "bacchanalia-atlanta-ga",
+      "address": "1460 Ellsworth Industrial Blvd., Ste. A, Atlanta, GA, 30318, USA",
+      "sharedAddressGroup": [
+        "bacchanalia-atlanta-ga"
+      ],
+      "needsManualCorrection": true
+    },
+    "hayakawa-atlanta-ga": {
+      "latitude": 33.783342,
+      "longitude": -84.4114228,
+      "confidence": "low",
+      "approved": false,
+      "uncertain": true,
+      "provider": "nominatim",
+      "providerPlaceId": "342367688",
+      "displayName": "Hayakawa, 1055, Howell Mill Road Northwest, Atlantic Station, Bankhead, Atlanta, Fulton County, Georgia, 30318, United States",
+      "geocodedAt": "2026-07-17T04:46:54.461316+00:00",
+      "rawType": "restaurant",
+      "restaurantSlug": "hayakawa-atlanta-ga",
+      "address": "1055 Howell Mill Rd., Atlanta, GA, 30318, USA",
+      "sharedAddressGroup": [
+        "hayakawa-atlanta-ga"
+      ],
+      "needsManualCorrection": true
+    },
+    "lazy-betty-atlanta-ga": {
+      "latitude": 33.7809002,
+      "longitude": -84.3829982,
+      "confidence": "low",
+      "approved": false,
+      "uncertain": true,
+      "provider": "nominatim",
+      "providerPlaceId": "342261508",
+      "displayName": "999 Peachtree Parking Garage, 999, Peachtree Street Northeast, Midtown, Old Fourth Ward, Atlanta, Fulton County, Georgia, 30309, United States",
+      "geocodedAt": "2026-07-17T04:46:56.089986+00:00",
+      "rawType": "parking",
+      "restaurantSlug": "lazy-betty-atlanta-ga",
+      "address": "999 Peachtree St. NE, Atlanta, GA, 30309, USA",
+      "sharedAddressGroup": [
+        "lazy-betty-atlanta-ga"
+      ],
+      "needsManualCorrection": true
+    },
+    "mujo-atlanta-ga": {
+      "latitude": 33.749,
+      "longitude": -84.388,
+      "confidence": "low",
+      "approved": false,
+      "uncertain": true,
+      "provider": "city-centroid-fallback",
+      "providerPlaceId": "atlanta",
+      "displayName": "691 14th St. NW, Ste. C, Atlanta, GA, 30318, USA",
+      "geocodedAt": "2026-07-17T04:46:59.082146+00:00",
+      "rawType": "city-centroid",
+      "restaurantSlug": "mujo-atlanta-ga",
+      "address": "691 14th St. NW, Ste. C, Atlanta, GA, 30318, USA",
+      "sharedAddressGroup": [
+        "mujo-atlanta-ga"
+      ],
+      "needsManualCorrection": true
+    },
+    "o-by-brush-atlanta-ga": {
+      "latitude": 33.749,
+      "longitude": -84.388,
+      "confidence": "low",
+      "approved": false,
+      "uncertain": true,
+      "provider": "city-centroid-fallback",
+      "providerPlaceId": "atlanta",
+      "displayName": "3009 Peachtree Rd. NE, Ste. 140, Atlanta, GA, 30305, USA",
+      "geocodedAt": "2026-07-17T04:47:00.717422+00:00",
+      "rawType": "city-centroid",
+      "restaurantSlug": "o-by-brush-atlanta-ga",
+      "address": "3009 Peachtree Rd. NE, Ste. 140, Atlanta, GA, 30305, USA",
+      "sharedAddressGroup": [
+        "o-by-brush-atlanta-ga"
+      ],
+      "needsManualCorrection": true
+    },
+    "omakase-table-atlanta-ga": {
+      "latitude": 33.749,
+      "longitude": -84.388,
+      "confidence": "low",
+      "approved": false,
+      "uncertain": true,
+      "provider": "city-centroid-fallback",
+      "providerPlaceId": "atlanta",
+      "displayName": "3330 Piedmont Rd. NE, #22A, Atlanta, GA, 30305, USA",
+      "geocodedAt": "2026-07-17T04:47:02.460689+00:00",
+      "rawType": "city-centroid",
+      "restaurantSlug": "omakase-table-atlanta-ga",
+      "address": "3330 Piedmont Rd. NE, #22A, Atlanta, GA, 30305, USA",
+      "sharedAddressGroup": [
+        "omakase-table-atlanta-ga"
+      ],
+      "needsManualCorrection": true
+    },
+    "spring-marietta-ga": {
+      "latitude": 33.9536045,
+      "longitude": -84.5509359,
+      "confidence": "low",
+      "approved": false,
+      "uncertain": true,
+      "provider": "nominatim",
+      "providerPlaceId": "342482269",
+      "displayName": "Spring, 36, Mill Street Northwest, Northwest Marietta Historic District, Marietta, Cobb County, Georgia, 30060, United States",
+      "geocodedAt": "2026-07-17T04:47:02.976833+00:00",
+      "rawType": "restaurant",
+      "restaurantSlug": "spring-marietta-ga",
+      "address": "36 Mill St., Marietta, GA, 30060, USA",
+      "sharedAddressGroup": [
+        "spring-marietta-ga"
+      ],
+      "needsManualCorrection": true
+    },
+    "smyth-chicago-il": {
+      "latitude": 41.8755616,
+      "longitude": -87.6244212,
+      "confidence": "high",
+      "approved": true,
+      "uncertain": false,
+      "provider": "nominatim",
+      "providerPlaceId": "418248522",
+      "displayName": "Chicago, South Chicago Township, Cook County, Illinois, United States",
+      "geocodedAt": "2026-07-17T04:47:04.581968+00:00",
+      "rawType": "administrative",
+      "restaurantSlug": "smyth-chicago-il",
+      "address": "177 N. Ada St., Chicago, IL, 60607, USA",
+      "sharedAddressGroup": [
+        "smyth-chicago-il"
+      ],
+      "needsManualCorrection": false
+    },
+    "alinea-chicago-il": {
+      "latitude": 41.9134372,
+      "longitude": -87.648199,
+      "confidence": "low",
+      "approved": false,
+      "uncertain": true,
+      "provider": "nominatim",
+      "providerPlaceId": "370825695",
+      "displayName": "Alinea, 1723, North Halsted Street, Ranch Triangle, Lincoln Park, Chicago, North Chicago Township, Cook County, Illinois, 60614, United States",
+      "geocodedAt": "2026-07-17T04:47:06.163461+00:00",
+      "rawType": "restaurant",
+      "restaurantSlug": "alinea-chicago-il",
+      "address": "1723 N. Halsted St., Chicago, IL, 60614, USA",
+      "sharedAddressGroup": [
+        "alinea-chicago-il"
+      ],
+      "needsManualCorrection": true
+    },
+    "ever-chicago-il": {
+      "latitude": 41.8868452,
+      "longitude": -87.660486,
+      "confidence": "low",
+      "approved": false,
+      "uncertain": true,
+      "provider": "nominatim",
+      "providerPlaceId": "370469587",
+      "displayName": "Ever, 1340, West Fulton Market, Fulton Market District, West Loop, Near West Side, Chicago, West Chicago Township, Cook County, Illinois, 60607, United States",
+      "geocodedAt": "2026-07-17T04:47:07.730104+00:00",
+      "rawType": "restaurant",
+      "restaurantSlug": "ever-chicago-il",
+      "address": "1340 W. Fulton St., Chicago, IL, 60607, USA",
+      "sharedAddressGroup": [
+        "ever-chicago-il"
+      ],
+      "needsManualCorrection": true
+    },
+    "kasama-chicago-il": {
+      "latitude": 41.8996921,
+      "longitude": -87.6756548,
+      "confidence": "low",
+      "approved": false,
+      "uncertain": true,
+      "provider": "nominatim",
+      "providerPlaceId": "372348432",
+      "displayName": "Kasama, 1001, North Winchester Avenue, Ukrainian Village, Wicker Park, West Town, Chicago, West Chicago Township, Cook County, Illinois, 60622, United States",
+      "geocodedAt": "2026-07-17T04:47:09.967196+00:00",
+      "rawType": "restaurant",
+      "restaurantSlug": "kasama-chicago-il",
+      "address": "1001 N. Winchester Ave., Chicago, IL, 60622, USA",
+      "sharedAddressGroup": [
+        "kasama-chicago-il"
+      ],
+      "needsManualCorrection": true
+    },
+    "oriole-chicago-il": {
+      "latitude": 41.8861178,
+      "longitude": -87.6451372,
+      "confidence": "low",
+      "approved": false,
+      "uncertain": true,
+      "provider": "nominatim",
+      "providerPlaceId": "372879613",
+      "displayName": "Oriole, 661, West Walnut Street, Fulton River District, West Loop, Near West Side, Chicago, West Chicago Township, Cook County, Illinois, 60661, United States",
+      "geocodedAt": "2026-07-17T04:47:11.562803+00:00",
+      "rawType": "restaurant",
+      "restaurantSlug": "oriole-chicago-il",
+      "address": "661 W. Walnut St., Chicago, IL, 60661, USA",
+      "sharedAddressGroup": [
+        "oriole-chicago-il"
+      ],
+      "needsManualCorrection": true
+    },
+    "boka-chicago-il": {
+      "latitude": 41.9136386,
+      "longitude": -87.6482025,
+      "confidence": "low",
+      "approved": false,
+      "uncertain": true,
+      "provider": "nominatim",
+      "providerPlaceId": "370651147",
+      "displayName": "Boka, 1729, North Halsted Street, Ranch Triangle, Lincoln Park, Chicago, North Chicago Township, Cook County, Illinois, 60614, United States",
+      "geocodedAt": "2026-07-17T04:47:13.024821+00:00",
+      "rawType": "restaurant",
+      "restaurantSlug": "boka-chicago-il",
+      "address": "1729 N. Halsted St., Chicago, IL, 60614, USA",
+      "sharedAddressGroup": [
+        "boka-chicago-il"
+      ],
+      "needsManualCorrection": true
+    },
+    "carino-chicago-il": {
+      "latitude": 41.9670458,
+      "longitude": -87.6586482,
+      "confidence": "low",
+      "approved": false,
+      "uncertain": true,
+      "provider": "nominatim",
+      "providerPlaceId": "390870921",
+      "displayName": "4662, North Broadway, Uptown Square, Uptown, Chicago, Lake View Township, Cook County, Illinois, 60640, United States",
+      "geocodedAt": "2026-07-17T04:47:14.525215+00:00",
+      "rawType": "house",
+      "restaurantSlug": "carino-chicago-il",
+      "address": "4662 N. Broadway, Chicago, IL, 60640, USA",
+      "sharedAddressGroup": [
+        "carino-chicago-il"
+      ],
+      "needsManualCorrection": true
+    },
+    "el-ideas-chicago-il": {
+      "latitude": 41.8624839,
+      "longitude": -87.686895,
+      "confidence": "low",
+      "approved": false,
+      "uncertain": true,
+      "provider": "nominatim",
+      "providerPlaceId": "370436536",
+      "displayName": "K-suerte Cookies & Cards, 2419, West 14th Street, Near West Side, Chicago, West Chicago Township, Cook County, Illinois, 60608, United States",
+      "geocodedAt": "2026-07-17T04:47:16.215007+00:00",
+      "rawType": "bakery",
+      "restaurantSlug": "el-ideas-chicago-il",
+      "address": "2419 W. 14th St., Chicago, IL, 60608, USA",
+      "sharedAddressGroup": [
+        "el-ideas-chicago-il"
+      ],
+      "needsManualCorrection": true
+    },
+    "elske-chicago-il": {
+      "latitude": 41.8781,
+      "longitude": -87.6298,
+      "confidence": "low",
+      "approved": false,
+      "uncertain": true,
+      "provider": "city-centroid-fallback",
+      "providerPlaceId": "chicago",
+      "displayName": "1350 W. Randolph Ave., Chicago, IL, 60607, USA",
+      "geocodedAt": "2026-07-17T04:47:19.109527+00:00",
+      "rawType": "city-centroid",
+      "restaurantSlug": "elske-chicago-il",
+      "address": "1350 W. Randolph Ave., Chicago, IL, 60607, USA",
+      "sharedAddressGroup": [
+        "elske-chicago-il"
+      ],
+      "needsManualCorrection": true
+    },
+    "esme-chicago-il": {
+      "latitude": 41.922972,
+      "longitude": -87.639006,
+      "confidence": "low",
+      "approved": false,
+      "uncertain": true,
+      "provider": "nominatim",
+      "providerPlaceId": "390698519",
+      "displayName": "2200, North Clark Street, Mid-North District, Lincoln Park, Chicago, North Chicago Township, Cook County, Illinois, 60614, United States",
+      "geocodedAt": "2026-07-17T04:47:19.790800+00:00",
+      "rawType": "house",
+      "restaurantSlug": "esme-chicago-il",
+      "address": "2200 N. Clark St., Chicago, IL, 60614, USA",
+      "sharedAddressGroup": [
+        "esme-chicago-il"
+      ],
+      "needsManualCorrection": true
+    },
+    "feld-chicago-il": {
+      "latitude": 41.8960817,
+      "longitude": -87.6778458,
+      "confidence": "low",
+      "approved": false,
+      "uncertain": true,
+      "provider": "nominatim",
+      "providerPlaceId": "370372030",
+      "displayName": "2018, West Chicago Avenue, Ukrainian Village, West Town, Chicago, West Chicago Township, Cook County, Illinois, 60622, United States",
+      "geocodedAt": "2026-07-17T04:47:21.251142+00:00",
+      "rawType": "yes",
+      "restaurantSlug": "feld-chicago-il",
+      "address": "2018 W. Chicago Ave., Chicago, IL, 60622, USA",
+      "sharedAddressGroup": [
+        "feld-chicago-il"
+      ],
+      "needsManualCorrection": true
+    },
+    "galit-chicago-il": {
+      "latitude": 41.9262841,
+      "longitude": -87.6495306,
+      "confidence": "low",
+      "approved": false,
+      "uncertain": true,
+      "provider": "nominatim",
+      "providerPlaceId": "370800722",
+      "displayName": "Galit, 2429, North Lincoln Avenue, Wrightwood Neighbors, Lincoln Park, Chicago, Lake View Township, Cook County, Illinois, 60614, United States",
+      "geocodedAt": "2026-07-17T04:47:23.087519+00:00",
+      "rawType": "restaurant",
+      "restaurantSlug": "galit-chicago-il",
+      "address": "2429 N. Lincoln Ave., Chicago, IL, 60614, USA",
+      "sharedAddressGroup": [
+        "galit-chicago-il"
+      ],
+      "needsManualCorrection": true
+    }
+  }
+}

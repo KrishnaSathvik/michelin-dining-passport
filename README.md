@@ -6,7 +6,7 @@ Editorial dining atlas + personal restaurant passport. Not affiliated with Miche
 
 ## Status
 
-**Phase 4 complete** — local Passport with saves, visits, collections, export/import, and device-only persistence.
+**Phase 5 in progress on `phase-5-map`** — MapLibre map, batch geocoding, and provider ADR.
 
 Building feature-first through Phases 2–7, then one consolidated UI/UX polish pass. Nonblocking visual issues live in [`docs/ui-ux-backlog.md`](./docs/ui-ux-backlog.md).
 
@@ -52,6 +52,7 @@ npm run dev
 | --- | --- |
 | `npm run data:import` | Read the workbook → write `data/restaurants.json` |
 | `npm run data:validate` | Verify counts, star split, unique slugs, shared-address pairs |
+| `npm run data:geocode` | Batch-geocode addresses into `data/geocodes.json` (never on page load) |
 | `npm run typecheck` | TypeScript check |
 | `npm run lint` | ESLint |
 | `npm run test` | Unit tests (Explore query engine) |
