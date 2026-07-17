@@ -2,9 +2,15 @@
 
 import Link from "next/link";
 import { DeviceSaveNotice } from "@/components/passport/DeviceSaveNotice";
+import { RestaurantCompactCard } from "@/components/restaurant/RestaurantCompactCard";
 import { usePassport } from "@/lib/passport/PassportProvider";
+import type { Restaurant } from "@/lib/data/types";
 
-export function PassportHome() {
+type PassportHomeProps = {
+  restaurants?: Restaurant[];
+};
+
+export function PassportHome({ restaurants = [] }: PassportHomeProps) {
   const { ready, metrics, exportJson, importJson, clearAll, store } =
     usePassport();
 
@@ -26,6 +32,15 @@ export function PassportHome() {
     },
   ];
 
+  const plannedSlugs = new Set(
+    Object.values(store.userRestaurants)
+      .filter((record) => record.planned)
+      .map((record) => record.restaurantSlug),
+  );
+  const plannedRestaurants = restaurants.filter((restaurant) =>
+    plannedSlugs.has(restaurant.slug),
+  );
+
   return (
     <div className="space-y-8">
       <DeviceSaveNotice />
@@ -43,6 +58,27 @@ export function PassportHome() {
           </div>
         ))}
       </div>
+
+      {plannedRestaurants.length > 0 ? (
+        <section className="border border-border p-5">
+          <h2 className="font-display text-2xl text-ink">Planned reservations</h2>
+          <p className="mt-2 max-w-2xl font-sans text-sm text-ink-muted">
+            Outbound booking links for restaurants you marked planned. Opening a
+            link does not mark the meal visited.
+          </p>
+          <ul className="mt-4 divide-y divide-border border border-border bg-bg-elevated/40 px-4 sm:px-5">
+            {plannedRestaurants.map((restaurant) => (
+              <li key={restaurant.slug}>
+                <RestaurantCompactCard
+                  restaurant={restaurant}
+                  surface="planned"
+                  emphasizeReservation
+                />
+              </li>
+            ))}
+          </ul>
+        </section>
+      ) : null}
 
       <section className="border border-border p-5">
         <h2 className="font-display text-2xl text-ink">Stars experienced</h2>

@@ -13,8 +13,13 @@
     "data:geocode": "python3 scripts/geocode_restaurants.py",
     "data:geocode-reclassify": "python3 scripts/reclassify_geocodes.py",
     "data:geocode-report": "python3 scripts/write_geocoding_report.py",
+    "data:reservations:discover": "python3 scripts/discover_reservations.py",
+    "data:reservations:validate": "python3 scripts/validate_reservations.py",
+    "data:reservations:report": "python3 scripts/write_reservation_report.py",
+    "data:reservations:review": "python3 scripts/review_reservations.py --report --needs-review",
+    "data:reservations:check-links": "python3 scripts/check_reservation_links.py",
     "typecheck": "tsc --noEmit",
-    "test": "node --test scripts/test_explore.mjs scripts/test_passport_metrics.mjs scripts/test_geocodes.mjs",
+    "test": "node --test scripts/test_explore.mjs scripts/test_passport_metrics.mjs scripts/test_geocodes.mjs scripts/test_reservations.mjs",
     "test:e2e": "playwright test"
   },
   "dependencies": {

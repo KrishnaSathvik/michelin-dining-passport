@@ -1,9 +1,11 @@
 import Link from "next/link";
 import type { Restaurant } from "@/lib/data/types";
+import { getRestaurantReservation } from "@/lib/reservations/data";
 import { CuisineLabel } from "./CuisineLabel";
 import { ExternalTextLink } from "./ExternalTextLink";
 import { LocationLine } from "./LocationLine";
 import { PriceMark } from "./PriceMark";
+import { ReservationButton } from "./ReservationButton";
 import { RestaurantImagePlaceholder } from "./RestaurantImagePlaceholder";
 import { StarMark } from "./StarMark";
 
@@ -14,6 +16,8 @@ type RestaurantEditorialCardProps = {
 export function RestaurantEditorialCard({
   restaurant,
 }: RestaurantEditorialCardProps) {
+  const reservation = getRestaurantReservation(restaurant.slug);
+
   return (
     <article className="grid gap-6 lg:grid-cols-[minmax(0,1.35fr)_minmax(0,1fr)] lg:gap-10">
       <Link
@@ -52,7 +56,13 @@ export function RestaurantEditorialCard({
           location, and source links only.
         </p>
 
-        <div className="mt-6 flex flex-wrap gap-x-5 gap-y-2 font-sans text-sm">
+        <div className="mt-6 flex flex-wrap items-end gap-x-5 gap-y-2 font-sans text-sm">
+          <ReservationButton
+            restaurant={restaurant}
+            reservation={reservation}
+            surface="homepage"
+            variant="full"
+          />
           <ExternalTextLink href={restaurant.michelinGuideUrl}>
             Michelin Guide listing
           </ExternalTextLink>

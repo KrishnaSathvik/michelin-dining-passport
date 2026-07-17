@@ -49,7 +49,11 @@ export function TaxonomyPageShell({
         </p>
 
         <div className="mt-10">
-          <ExploreResults restaurants={restaurants} view="grid" />
+          <ExploreResults
+            restaurants={restaurants}
+            view="grid"
+            surface="taxonomy"
+          />
         </div>
 
         {relatedLinks.length > 0 ? (

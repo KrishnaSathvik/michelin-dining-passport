@@ -32,8 +32,9 @@ Import alias: `@/*` → `./src/*`
 | Database | Supabase Postgres | Personal layer / admin |
 | Auth | Supabase Auth | `/account`, persistence |
 | Storage | Supabase Storage | Approved images |
-| Maps | MapLibre or Mapbox (prefer over Google until Places needed) | `/map` + geocodes |
-| Geocoding | Batch offline job → store lat/lng | Before map launch |
+| Maps | MapLibre (Phase 5 complete) | `/map` + geocodes |
+| Geocoding | Batch offline job → store lat/lng | Phase 5 |
+| Reservations | Verified outbound URLs only (no partner booking APIs) | Phase 5.5 |
 | Search | Client filter (271 rows) → optional Typesense/Meilisearch later | Only if scale demands |
 
 **Decision note:** At 271 restaurants, full-text search and filters can remain in-memory on the client or via a thin server loader. Do not add a search SaaS in Phase 1.
@@ -85,6 +86,19 @@ xlsx (workbook)
 ```
 
 Phase 0 may read the xlsx only in audit scripts; the app can keep the default Next scaffold until homepage implementation.
+
+### Reservation enrichment (Phase 5.5)
+
+```text
+official website
+  → scripts/discover_reservations.py (local only)
+  → data/reservation-candidates.json
+  → manual review / auto-approve high confidence
+  → data/reservations.json + data/reservation-overrides.json
+  → src/lib/reservations/* → ReservationButton (outbound only)
+```
+
+Runtime never reads candidate JSON. Booking availability APIs are out of scope until authorized partner access exists.
 
 ---
 

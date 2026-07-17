@@ -80,7 +80,7 @@ export function PassportProvider({
   children,
 }: PassportProviderProps) {
   const [store, setStore] = useState<PassportStore>(() => ({
-    version: 1,
+    version: 2,
     userRestaurants: {},
     collections: {},
   }));
