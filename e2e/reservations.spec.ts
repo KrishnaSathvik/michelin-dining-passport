@@ -79,12 +79,7 @@ test.describe("Phase 5.5 reservation actions", () => {
     });
 
     await page.setViewportSize({ width: 390, height: 844 });
-    await page.goto("/map?state=california");
-    await page
-      .getByRole("button", { name: "Show list" })
-      .or(page.getByRole("button", { name: "Show map" }))
-      .first()
-      .click();
+    await page.goto("/map?state=california&panel=list");
     const mobileResult = page
       .getByRole("list", { name: "Map restaurant results" })
       .getByRole("button")

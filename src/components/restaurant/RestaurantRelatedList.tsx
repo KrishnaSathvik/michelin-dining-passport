@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { RestaurantCompactCard } from "@/components/restaurant/RestaurantCompactCard";
+import { RestaurantDiscoveryCard } from "@/components/restaurant/RestaurantDiscoveryCard";
 import type { Restaurant } from "@/lib/data/types";
 
 type RestaurantRelatedListProps = {
@@ -16,7 +16,7 @@ export function RestaurantRelatedList({
   if (restaurants.length === 0) {
     return emptyNote ? (
       <section className="mt-12 border-t border-border pt-8">
-        <h2 className="font-display text-2xl text-ink">{title}</h2>
+        <h2 className="font-display text-2xl text-ink sm:text-3xl">{title}</h2>
         <p className="mt-3 font-sans text-sm text-ink-muted">{emptyNote}</p>
       </section>
     ) : null;
@@ -25,18 +25,18 @@ export function RestaurantRelatedList({
   return (
     <section className="mt-12 border-t border-border pt-8">
       <div className="flex items-baseline justify-between gap-4">
-        <h2 className="font-display text-2xl text-ink">{title}</h2>
+        <h2 className="font-display text-2xl text-ink sm:text-3xl">{title}</h2>
         <Link
           href="/explore"
-          className="font-sans text-sm text-forest underline underline-offset-4"
+          className="font-sans text-sm text-forest no-underline hover:underline"
         >
           Explore all
         </Link>
       </div>
-      <ul className="mt-4 divide-y divide-border border border-border bg-bg-elevated/40 px-4 sm:px-5">
+      <ul className="mt-6 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
         {restaurants.map((restaurant) => (
           <li key={restaurant.slug}>
-            <RestaurantCompactCard
+            <RestaurantDiscoveryCard
               restaurant={restaurant}
               surface="related_restaurant"
             />

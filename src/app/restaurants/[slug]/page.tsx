@@ -8,12 +8,16 @@ import { ExternalTextLink } from "@/components/restaurant/ExternalTextLink";
 import { LocationLine } from "@/components/restaurant/LocationLine";
 import { PriceMark } from "@/components/restaurant/PriceMark";
 import { ReservationButton } from "@/components/restaurant/ReservationButton";
+import { RestaurantDetailStickyBar } from "@/components/restaurant/RestaurantDetailStickyBar";
+import { RestaurantLocationPreview } from "@/components/restaurant/RestaurantLocationPreview";
 import { RestaurantMedia } from "@/components/restaurant/RestaurantMedia";
 import { RestaurantRelatedList } from "@/components/restaurant/RestaurantRelatedList";
+import { SaveRestaurantButton } from "@/components/restaurant/SaveRestaurantButton";
 import { StarMark } from "@/components/restaurant/StarMark";
 import { RestaurantPassportControls } from "@/components/passport/RestaurantPassportControls";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { siteConfig } from "@/config/site";
+import { getMapRestaurants } from "@/lib/data/geocodes";
 import {
   getNearbyRestaurants,
   getRelatedByCuisine,
@@ -59,6 +63,12 @@ export async function generateMetadata({
   });
 }
 
+function starDistinctionLabel(stars: 1 | 2 | 3): string {
+  if (stars === 1) return "1 Michelin Star";
+  if (stars === 2) return "2 Michelin Stars";
+  return "3 Michelin Stars";
+}
+
 export default async function RestaurantPage({ params }: RestaurantPageProps) {
   const { slug } = await params;
   const restaurant = getRestaurantBySlug(slug);
@@ -80,6 +90,12 @@ export default async function RestaurantPage({ params }: RestaurantPageProps) {
     restaurant,
     reservationAction,
   );
+  const mapRestaurant =
+    getMapRestaurants().find((item) => item.slug === restaurant.slug) ?? null;
+  const hasApprovedImage = Boolean(
+    (restaurant as { heroImageUrl?: string | null }).heroImageUrl?.trim(),
+  );
+
   const breadcrumbs = [
     { name: "Home", path: "/" },
     { name: "Explore", path: "/explore" },
@@ -89,47 +105,71 @@ export default async function RestaurantPage({ params }: RestaurantPageProps) {
   ];
 
   return (
-    <div className="border-b border-border">
+    <div className="border-b border-border pb-24 lg:pb-0">
       <JsonLd data={breadcrumbJsonLd(breadcrumbs)} />
       <JsonLd data={restaurantJsonLd(restaurant)} />
-      <Container className="py-10 sm:py-14">
+      <Container className="py-8 sm:py-12">
         <Breadcrumbs items={breadcrumbs} />
 
-        <div className="mt-8 grid gap-8 lg:grid-cols-[minmax(0,1.1fr)_minmax(0,0.9fr)] lg:items-start">
+        {/* Hero: media ~60% · info ~40% on desktop; stacked mobile */}
+        <div className="mt-8 grid gap-8 lg:grid-cols-[minmax(0,1.55fr)_minmax(0,1fr)] lg:items-start lg:gap-10">
           <div>
-            <p className="font-sans text-xs uppercase tracking-[0.18em] text-burgundy">
-              Restaurant
+            <RestaurantMedia
+              restaurant={restaurant}
+              priorityVisual
+              className="aspect-[4/3] w-full lg:aspect-[5/4]"
+              sizes="(max-width: 1024px) 100vw, 60vw"
+            />
+            {!hasApprovedImage ? (
+              <p className="mt-3 font-sans text-xs leading-relaxed text-ink-muted">
+                Designed presentation until an approved restaurant photograph is
+                available. This platform does not ingest Michelin Guide
+                photography.
+              </p>
+            ) : null}
+          </div>
+
+          <div className="lg:pt-1">
+            <p className="font-sans text-xs uppercase tracking-[0.18em] text-ink-muted">
+              {starDistinctionLabel(restaurant.stars)}
             </p>
-            <h1 className="mt-3 font-display text-4xl text-ink sm:text-5xl">
+            <h1 className="mt-3 font-display text-4xl leading-tight text-ink sm:text-5xl">
               {restaurant.name}
             </h1>
+
             <div className="mt-4 flex flex-wrap items-center gap-x-3 gap-y-2">
-              <StarMark stars={restaurant.stars} />
+              <StarMark stars={restaurant.stars} size="lg" />
               <CuisineLabel cuisine={restaurant.cuisine} />
               <PriceMark price={restaurant.price} />
             </div>
-            <p className="mt-4 font-sans text-base text-ink-muted">
+
+            <p className="mt-4 font-sans text-base text-ink-secondary">
               <LocationLine
                 city={restaurant.city}
                 state={restaurant.state}
                 stateCode={restaurant.stateCode}
               />
             </p>
-            <p className="mt-3 max-w-xl font-sans text-sm leading-relaxed text-ink-muted">
+            <p className="mt-2 max-w-md font-sans text-sm leading-relaxed text-ink-muted">
               {restaurant.address}
             </p>
 
-            <div className="mt-6 flex flex-wrap items-end gap-3 font-sans text-sm">
+            <div className="mt-6 hidden flex-wrap items-center gap-3 lg:flex">
               <ReservationButton
                 restaurant={restaurant}
                 reservation={reservation}
                 surface="restaurant_detail"
                 variant="full"
+                className="rounded-[var(--radius-md)]"
               />
+              <SaveRestaurantButton restaurantSlug={restaurant.slug} />
+            </div>
+
+            <div className="mt-4 flex flex-wrap gap-x-4 gap-y-2 font-sans text-sm">
               {restaurant.website && !hideWebsiteBecauseReservation ? (
                 <ExternalTextLink
                   href={restaurant.website}
-                  className="inline-flex min-h-11 items-center border border-border px-4"
+                  className="text-ink-secondary underline-offset-4 hover:text-forest hover:underline"
                 >
                   Official website
                 </ExternalTextLink>
@@ -137,18 +177,14 @@ export default async function RestaurantPage({ params }: RestaurantPageProps) {
               {!hideMichelinBecauseReservation ? (
                 <ExternalTextLink
                   href={restaurant.michelinGuideUrl}
-                  className="inline-flex min-h-11 items-center border border-border px-4"
+                  className="text-ink-secondary underline-offset-4 hover:text-forest hover:underline"
                 >
                   Michelin Guide
                 </ExternalTextLink>
               ) : null}
             </div>
 
-            <div className="mt-8">
-              <RestaurantPassportControls restaurantSlug={restaurant.slug} />
-            </div>
-
-            <dl className="mt-8 grid gap-4 border border-border bg-bg-elevated/50 p-5 sm:grid-cols-2">
+            <dl className="mt-8 grid gap-4 border-t border-border pt-6 sm:grid-cols-2">
               <div>
                 <dt className="font-sans text-xs uppercase tracking-[0.16em] text-ink-muted">
                   Cuisine
@@ -156,7 +192,7 @@ export default async function RestaurantPage({ params }: RestaurantPageProps) {
                 <dd className="mt-1">
                   <Link
                     href={`/cuisines/${restaurant.cuisineSlug}`}
-                    className="font-sans text-sm text-forest underline underline-offset-4"
+                    className="font-sans text-sm text-forest no-underline hover:underline"
                   >
                     {restaurant.cuisine}
                   </Link>
@@ -164,16 +200,14 @@ export default async function RestaurantPage({ params }: RestaurantPageProps) {
               </div>
               <div>
                 <dt className="font-sans text-xs uppercase tracking-[0.16em] text-ink-muted">
-                  Star level
+                  Distinction
                 </dt>
                 <dd className="mt-1">
                   <Link
                     href={`/stars/${restaurant.stars}`}
-                    className="font-sans text-sm text-forest underline underline-offset-4"
+                    className="font-sans text-sm text-forest no-underline hover:underline"
                   >
-                    {restaurant.stars === 1
-                      ? "1 star"
-                      : `${restaurant.stars} stars`}
+                    {starDistinctionLabel(restaurant.stars)}
                   </Link>
                 </dd>
               </div>
@@ -184,7 +218,7 @@ export default async function RestaurantPage({ params }: RestaurantPageProps) {
                 <dd className="mt-1">
                   <Link
                     href={`/cities/${restaurant.citySlug}`}
-                    className="font-sans text-sm text-forest underline underline-offset-4"
+                    className="font-sans text-sm text-forest no-underline hover:underline"
                   >
                     {restaurant.city}, {restaurant.stateCode}
                   </Link>
@@ -197,7 +231,7 @@ export default async function RestaurantPage({ params }: RestaurantPageProps) {
                 <dd className="mt-1">
                   <Link
                     href={`/usa/${restaurant.stateSlug}`}
-                    className="font-sans text-sm text-forest underline underline-offset-4"
+                    className="font-sans text-sm text-forest no-underline hover:underline"
                   >
                     {restaurant.state}
                   </Link>
@@ -205,19 +239,15 @@ export default async function RestaurantPage({ params }: RestaurantPageProps) {
               </div>
             </dl>
           </div>
-
-          <div>
-            <RestaurantMedia
-              restaurant={restaurant}
-              priorityVisual
-              className="aspect-[4/3] w-full"
-            />
-            <p className="mt-3 font-sans text-xs leading-relaxed text-ink-muted">
-              Designed fallback until an approved restaurant photograph is
-              available. This platform does not ingest Michelin Guide photography.
-            </p>
-          </div>
         </div>
+
+        <div className="mt-10 max-w-3xl">
+          <RestaurantPassportControls restaurantSlug={restaurant.slug} />
+        </div>
+
+        {mapRestaurant ? (
+          <RestaurantLocationPreview restaurant={mapRestaurant} />
+        ) : null}
 
         <RestaurantRelatedList
           title={`Also in ${restaurant.city}`}
@@ -240,6 +270,11 @@ export default async function RestaurantPage({ params }: RestaurantPageProps) {
           </p>
         </section>
       </Container>
+
+      <RestaurantDetailStickyBar
+        restaurant={restaurant}
+        reservation={reservation}
+      />
     </div>
   );
 }
