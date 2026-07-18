@@ -156,11 +156,14 @@ test.describe("Stitch application shell", () => {
     expect(response?.status()).toBe(404);
   });
 
-  test("account preview is excluded from production", async ({ page }) => {
+  test("obsolete account preview route is gone", async ({ page }) => {
     const response = await page.goto("/dev/stitch-account-preview");
-    if (!process.env.CI && response?.status() === 200) {
-      test.skip(true, "Running against next dev — production gate checked in CI");
-    }
     expect(response?.status()).toBe(404);
+    await expect(
+      page.getByRole("heading", {
+        level: 1,
+        name: "This table could not be found.",
+      }),
+    ).toBeVisible();
   });
 });

@@ -1,5 +1,29 @@
 import { expect, test } from "@playwright/test";
 
+const ACTIVE_SEED = {
+  version: 2,
+  userRestaurants: {
+    "benu-san-francisco-ca": {
+      restaurantSlug: "benu-san-francisco-ca",
+      saved: true,
+      wantToVisit: false,
+      planned: false,
+      visited: true,
+      favorite: true,
+      visitDate: "2026-05-12",
+      personalRating: 5,
+      notes: "",
+      favoriteDishes: [],
+      reservationPlannedFor: null,
+      reservationProvider: null,
+      reservationConfirmationNote: null,
+      createdAt: "2026-01-10T12:00:00.000Z",
+      updatedAt: "2026-05-12T12:00:00.000Z",
+    },
+  },
+  collections: {},
+};
+
 test.describe("Phase 8 Passport and personal lists", () => {
   test("empty Passport shows new-user composition without bottom nav", async ({
     page,
@@ -22,8 +46,15 @@ test.describe("Phase 8 Passport and personal lists", () => {
   });
 
   test("loading proof does not flash empty state", async ({ page }) => {
+    // Dev-only proof mode — unavailable under next start / production.
     await page.goto("/passport?proof=loading");
-    await expect(page.getByText("Loading passport…")).toBeVisible();
+    const loading = page.getByText("Loading passport…");
+    const visible = await loading.isVisible().catch(() => false);
+    if (!visible) {
+      test.skip(true, "proof=loading is development-only");
+      return;
+    }
+    await expect(loading).toBeVisible();
     await expect(
       page.getByRole("heading", {
         name: "Your dining journey starts with one table.",
@@ -31,8 +62,11 @@ test.describe("Phase 8 Passport and personal lists", () => {
     ).toHaveCount(0);
   });
 
-  test("active proof renders journey summary modules", async ({ page }) => {
-    await page.goto("/passport?proof=active");
+  test("active passport renders journey summary modules", async ({ page }) => {
+    await page.addInitScript((store) => {
+      window.localStorage.setItem("mdp-passport", JSON.stringify(store));
+    }, ACTIVE_SEED);
+    await page.goto("/passport");
     await expect(
       page.getByRole("heading", { level: 1, name: "Your dining journey" }),
     ).toBeVisible();

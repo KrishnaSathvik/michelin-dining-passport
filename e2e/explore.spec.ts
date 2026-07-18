@@ -57,12 +57,24 @@ test.describe("Phase 5 Explore Stitch rebuild", () => {
     page,
   }) => {
     await page.goto("/explore?stars=3&state=california&cuisine=contemporary");
-    const chips = page.getByLabel("Active filters");
-    await expect(chips.getByRole("link").first()).toBeVisible();
-    await chips.getByRole("link").filter({ hasText: "3 Michelin Stars" }).click();
+    await expect(page.locator('[data-explore="loading"]')).toHaveCount(0);
+    const active = () =>
+      page
+        .locator('[data-explore="stitch-directory"]')
+        .getByLabel("Active filters");
+    await expect(active().getByRole("link").first()).toBeVisible();
+    await active()
+      .getByRole("link")
+      .filter({ hasText: "3 Michelin Stars" })
+      .click();
     await expect(page).not.toHaveURL(/stars=/);
     await expect(page).toHaveURL(/state=california/);
-    await page.getByRole("link", { name: "Clear all" }).click();
+    await expect(page.locator('[data-explore="loading"]')).toHaveCount(0);
+    // "Clear all" sits beside the chip row, not inside the Active filters label.
+    await page
+      .locator('[data-explore="stitch-directory"]')
+      .getByRole("link", { name: "Clear all", exact: true })
+      .click();
     await expect(page).toHaveURL(/\/explore(\?view=|\/?$|\?sort=)/);
     await expect(page).not.toHaveURL(/stars=/);
     await expect(page).not.toHaveURL(/state=/);
@@ -111,7 +123,11 @@ test.describe("Phase 5 Explore Stitch rebuild", () => {
 
   test("empty result state", async ({ page }) => {
     await page.goto("/explore?q=zzzz-no-such-restaurant-xyz");
-    await expect(page.locator("[data-explore-empty]")).toBeVisible();
+    // Wait for Suspense loading shell to swap out (streamed HTML keeps a hidden twin).
+    await expect(page.locator('[data-explore="loading"]')).toHaveCount(0);
+    await expect(
+      page.locator('[data-explore="stitch-directory"] [data-explore-empty]'),
+    ).toBeVisible();
     await expect(
       page.getByRole("heading", { name: "No restaurants match these filters" }),
     ).toBeVisible();
@@ -148,13 +164,17 @@ test.describe("Phase 5 Explore Stitch rebuild", () => {
     page,
   }) => {
     await page.goto("/explore?view=grid");
-    const card = page.locator("article").filter({ hasText: "Addison" }).first();
+    await expect(page.locator('[data-explore="loading"]')).toHaveCount(0);
+    const card = page
+      .locator('[data-explore="stitch-directory"] article')
+      .filter({ hasText: "Addison" })
+      .first();
     await expect(card).toBeVisible();
 
     const reserve = card.getByRole("link", { name: /Reserve now/i });
     await expect(reserve).toHaveAttribute("target", "_blank");
     const before = page.url();
-    await reserve.click();
+    await reserve.click({ modifiers: [] });
     await expect(page).toHaveURL(before);
 
     const save = card
@@ -163,8 +183,10 @@ test.describe("Phase 5 Explore Stitch rebuild", () => {
     await save.click();
     await expect(page).toHaveURL(before);
 
-    await card.getByRole("link", { name: "View Addison" }).click();
-    await expect(page).toHaveURL(/\/restaurants\/addison-san-diego-ca/);
+    await Promise.all([
+      page.waitForURL(/\/restaurants\/addison-san-diego-ca/),
+      card.getByRole("link", { name: "View Addison" }).click(),
+    ]);
   });
 
   test("list view truthful reservation labels", async ({ page }) => {

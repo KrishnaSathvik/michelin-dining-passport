@@ -1,9 +1,17 @@
 import { test, expect } from "@playwright/test";
 
-async function expectNotFound(page: import("@playwright/test").Page) {
-  // App Router dynamic taxonomy routes call notFound(); local next start may
-  // surface not-found metadata/UI with HTTP 200 (same pattern as restaurant detail).
+async function expectNotFound(
+  page: import("@playwright/test").Page,
+  response: import("@playwright/test").Response | null,
+) {
+  expect(response?.status()).toBe(404);
   await expect(page).toHaveTitle(/not found/i);
+  await expect(
+    page.getByRole("heading", {
+      level: 1,
+      name: "This table could not be found.",
+    }),
+  ).toBeVisible();
 }
 
 test.describe("Phase 11 taxonomy routes", () => {
@@ -21,8 +29,8 @@ test.describe("Phase 11 taxonomy routes", () => {
   });
 
   test("invalid state route fails safely", async ({ page }) => {
-    await page.goto("/usa/not-a-real-state-zzz");
-    await expectNotFound(page);
+    const response = await page.goto("/usa/not-a-real-state-zzz");
+    await expectNotFound(page, response);
     await expect(
       page.getByRole("heading", { level: 1, name: "California" }),
     ).toHaveCount(0);
@@ -42,8 +50,8 @@ test.describe("Phase 11 taxonomy routes", () => {
   });
 
   test("invalid city route fails safely", async ({ page }) => {
-    await page.goto("/cities/not-a-real-city-zzz");
-    await expectNotFound(page);
+    const response = await page.goto("/cities/not-a-real-city-zzz");
+    await expectNotFound(page, response);
   });
 
   test("cuisine hubs are U.S. only and omit global cities", async ({
@@ -61,8 +69,8 @@ test.describe("Phase 11 taxonomy routes", () => {
   });
 
   test("invalid cuisine route fails safely", async ({ page }) => {
-    await page.goto("/cuisines/not-a-real-cuisine-zzz");
-    await expectNotFound(page);
+    const response = await page.goto("/cuisines/not-a-real-cuisine-zzz");
+    await expectNotFound(page, response);
   });
 
   test("star routes render and invalid fails", async ({ page }) => {
@@ -73,7 +81,7 @@ test.describe("Phase 11 taxonomy routes", () => {
         page.getByRole("heading", { name: "Other distinctions" }),
       ).toBeVisible();
     }
-    await page.goto("/stars/4");
-    await expectNotFound(page);
+    const response = await page.goto("/stars/4");
+    await expectNotFound(page, response);
   });
 });

@@ -24,7 +24,7 @@
     "data:google-places:validate": "python3 scripts/validate_google_place_ids.py",
     "data:google-places:report": "python3 scripts/write_google_place_report.py",
     "typecheck": "tsc --noEmit",
-    "test": "node --test scripts/test_explore.mjs scripts/test_explore_ui.mjs scripts/test_map_ui.mjs scripts/test_passport_metrics.mjs scripts/test_passport_phase8.mjs scripts/test_collections_phase9.mjs scripts/test_auth_phase10.mjs scripts/test_taxonomy_phase11.mjs scripts/test_geocodes.mjs scripts/test_reservations.mjs scripts/test_auth_redirect.mjs scripts/test_passport_merge.mjs scripts/test_restaurant_ids.mjs scripts/test_google_places.mjs scripts/test_google_places_matching.mjs scripts/test_restaurant_presentation.mjs scripts/test_homepage.mjs scripts/test_restaurant_detail.mjs",
+    "test": "node --test scripts/test_explore.mjs scripts/test_explore_ui.mjs scripts/test_map_ui.mjs scripts/test_passport_metrics.mjs scripts/test_passport_phase8.mjs scripts/test_collections_phase9.mjs scripts/test_auth_phase10.mjs scripts/test_taxonomy_phase11.mjs scripts/test_phase12.mjs scripts/test_geocodes.mjs scripts/test_reservations.mjs scripts/test_auth_redirect.mjs scripts/test_passport_merge.mjs scripts/test_restaurant_ids.mjs scripts/test_google_places.mjs scripts/test_google_places_matching.mjs scripts/test_restaurant_presentation.mjs scripts/test_homepage.mjs scripts/test_restaurant_detail.mjs",
     "secrets:scan": "node scripts/scan_secrets.mjs",
     "test:e2e": "playwright test",
     "supabase:start": "supabase start",

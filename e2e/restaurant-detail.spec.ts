@@ -12,11 +12,13 @@ test.describe("Phase 7 restaurant detail", () => {
 
   test("unknown slug returns not found", async ({ page }) => {
     const response = await page.goto("/restaurants/this-slug-does-not-exist-xyz");
-    // next dev may surface the not-found UI with 200; production/CI expect 404.
-    if (process.env.CI) {
-      expect(response?.status()).toBe(404);
-    }
-    await expect(page.getByText(/Restaurant not found|404/i).first()).toBeVisible();
+    expect(response?.status()).toBe(404);
+    await expect(
+      page.getByRole("heading", {
+        level: 1,
+        name: "This table could not be found.",
+      }),
+    ).toBeVisible();
     await expect(
       page.locator('[data-restaurant-detail="stitch"]'),
     ).toHaveCount(0);

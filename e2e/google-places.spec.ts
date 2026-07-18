@@ -10,7 +10,7 @@ test.describe("google places enrichment (flag off)", () => {
     await page.locator("#google-places-heading").scrollIntoViewIfNeeded();
     await expect(page.getByRole("heading", { name: /Photos and live place information from Google/i })).toBeVisible();
     await expect(
-      page.getByText("Live photos and Google place details are currently unavailable."),
+      page.getByText("Live Google place information is currently unavailable."),
     ).toBeVisible();
   });
 
@@ -23,14 +23,14 @@ test.describe("google places enrichment (flag off)", () => {
     await expect(page.getByText("Live place information from Google")).toBeVisible();
   });
 
-  test("dev spike is available outside production builds", async ({ page }) => {
+  test("obsolete Google spike route is removed", async ({ page }) => {
     const response = await page.goto("/dev/google-places-spike");
-    if (response?.status() === 404) {
-      test.skip(true, "spike route is disabled in production builds");
-    }
+    expect(response?.status()).toBe(404);
     await expect(
-      page.getByRole("heading", { name: "Google Places UI Kit spike" }),
+      page.getByRole("heading", {
+        level: 1,
+        name: "This table could not be found.",
+      }),
     ).toBeVisible();
-    await expect(page.getByTestId("spike-flag")).toBeVisible();
   });
 });
