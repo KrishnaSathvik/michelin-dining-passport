@@ -5,7 +5,7 @@
 ## Checklist
 
 - [x] Branch `stitch-full-redesign` contains Phases 1–12 work
-- [ ] Branch pushed to `origin/stitch-full-redesign` (verify after push)
+- [x] Branch pushed to `origin/stitch-full-redesign`
 - [x] `npm run typecheck` green
 - [x] `npm run lint` green
 - [x] `npm test` green
