@@ -4,7 +4,7 @@
  */
 import assert from "node:assert/strict";
 import { describe, it, beforeEach, afterEach } from "node:test";
-import { readFileSync } from "node:fs";
+import { existsSync, readFileSync } from "node:fs";
 import { fileURLToPath } from "node:url";
 import { dirname, join } from "node:path";
 
@@ -112,14 +112,17 @@ describe("places UI kit loader source contracts", () => {
   });
 });
 
-describe("dev spike route gating", () => {
-  it("returns notFound in production", () => {
-    const page = readFileSync(
-      join(root, "src/app/dev/google-places-spike/page.tsx"),
-      "utf8",
+describe("obsolete Google spike cleanup", () => {
+  it("removes the technical spike page and client", () => {
+    assert.equal(
+      existsSync(join(root, "src/app/dev/google-places-spike/page.tsx")),
+      false,
     );
-    assert.match(page, /NODE_ENV === "production"/);
-    assert.match(page, /notFound\(\)/);
-    assert.match(page, /robots:\s*\{\s*index:\s*false/);
+    assert.equal(
+      existsSync(
+        join(root, "src/components/google-places/GooglePlacesSpikeClient.tsx"),
+      ),
+      false,
+    );
   });
 });

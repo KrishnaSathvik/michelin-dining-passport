@@ -1,8 +1,8 @@
 @import "tailwindcss";
 
 /*
- * Stitch design tokens (--dp-*) — Phase 1 foundation.
- * Legacy --color-* tokens remain for unrebuilt routes (see docs/stitch-redesign/aliases.md).
+ * Stitch design tokens (--dp-*) — single active presentation system (Phase 12).
+ * Tailwind @theme --color-* entries below are thin mappings onto --dp-* only.
  * Do not recreate paper textures, grain, warm brown cards, or full-page beige blocks.
  */
 
@@ -82,30 +82,9 @@
   --z-toast: 100;
   --z-skip: 110;
 
-  /* Display font: Literata (OD-03). Alias keeps legacy font-display callers compiling. */
+  /* Display font: Literata (OD-03). font-display utility maps here. */
   --font-display: var(--font-literata), ui-serif, Georgia, serif;
   --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
-
-  /* —— Legacy tokens (unrebuilt routes only; delete by Phase 12) —— */
-  --color-bg: #ffffff;
-  --color-bg-deep: #f5f6f4;
-  --color-bg-elevated: #ffffff;
-  --color-surface-soft: #f5f6f4;
-  --color-ink: #121212;
-  --color-ink-secondary: #4a4a4a;
-  --color-ink-muted: #737373;
-  --color-forest: #123b2f;
-  --color-forest-deep: #0a2b21;
-  --color-burgundy: #7a1f2b;
-  --color-gold: #b88a2a;
-  --color-border: #e5e7e4;
-  --color-focus: #123b2f;
-  --radius-sm: 6px;
-  --radius-md: 10px;
-  --radius-lg: 12px;
-  --space-section: clamp(4rem, 8vw, 7rem);
-  --max-content: 80rem;
-  --shadow-float: 0 8px 28px rgba(18, 18, 18, 0.1);
 }
 
 @theme inline {
@@ -140,24 +119,27 @@
   --radius-dp-md: var(--dp-radius-md);
   --radius-dp-lg: var(--dp-radius-lg);
 
-  /* Legacy theme colors for unrebuilt routes */
-  --color-bg: #ffffff;
-  --color-bg-deep: #f5f6f4;
-  --color-bg-elevated: #ffffff;
-  --color-surface-soft: #f5f6f4;
-  --color-ink: #121212;
-  --color-ink-secondary: #4a4a4a;
-  --color-ink-muted: #737373;
-  --color-forest: #123b2f;
-  --color-forest-deep: #0a2b21;
-  --color-burgundy: #7a1f2b;
-  --color-gold: #b88a2a;
-  --color-border: #e5e7e4;
-  --color-focus: #123b2f;
-  --radius-sm: 6px;
-  --radius-md: 10px;
-  --radius-lg: 12px;
-  --shadow-float: 0 8px 28px rgba(18, 18, 18, 0.1);
+  /*
+   * Convenience Tailwind mappings → Stitch tokens only.
+   * Prefer bg-dp-* / text-dp-* in new code. These exist so migrated surfaces
+   * that still use bg-bg / text-ink / border-border resolve to --dp-*.
+   */
+  --color-bg: var(--dp-bg);
+  --color-bg-deep: var(--dp-soft);
+  --color-bg-elevated: var(--dp-surface);
+  --color-surface-soft: var(--dp-soft);
+  --color-ink: var(--dp-ink);
+  --color-ink-secondary: var(--dp-ink-secondary);
+  --color-ink-muted: var(--dp-ink-muted);
+  --color-forest: var(--dp-primary);
+  --color-forest-deep: var(--dp-primary-deep);
+  --color-burgundy: var(--dp-burgundy);
+  --color-gold: var(--dp-star-gold);
+  --color-border: var(--dp-border);
+  --color-focus: var(--dp-focus);
+  --radius-sm: var(--dp-radius-sm);
+  --radius-md: var(--dp-radius-md);
+  --radius-lg: var(--dp-radius-lg);
 }
 
 @layer base {
@@ -180,8 +162,8 @@
   }
 
   body {
-    background: var(--color-bg);
-    color: var(--color-ink);
+    background: var(--dp-bg);
+    color: var(--dp-ink);
     font-family: var(--font-sans);
     font-size: 16px;
     line-height: 1.5;
@@ -287,26 +269,6 @@
 
   .dp-border {
     border: 1px solid var(--dp-border);
-  }
-
-  .container-editorial {
-    margin-inline: auto;
-    width: min(100% - 2rem, var(--max-content));
-  }
-
-  @media (min-width: 768px) {
-    .container-editorial {
-      width: min(100% - 3rem, var(--max-content));
-    }
-  }
-
-  .section-space {
-    padding-block: var(--space-section);
-  }
-
-  /* Deprecated brand texture — kept as no-op alias so callers do not break */
-  .paper-texture {
-    background-image: none;
   }
 
   .rise-in {

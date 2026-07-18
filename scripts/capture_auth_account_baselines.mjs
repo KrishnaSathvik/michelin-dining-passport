@@ -147,78 +147,19 @@ try {
   });
   await shot(page, join(resetDir, "reset-success.png"));
 
+  // Phase 12: /dev/stitch-account-preview removed. Capture authenticated account
+  // only when a session exists; otherwise record the unauthenticated redirect.
   await setViewport(page, 1440);
-  await page.goto(`${base}/dev/stitch-account-preview`, {
-    waitUntil: "networkidle",
-  });
+  await page.goto(`${base}/account`, { waitUntil: "networkidle" });
   await shot(page, join(accountDir, "account-1440.png"));
-  await shot(page, join(accountDir, "profile-section.png"));
-
-  await page.locator("#security").scrollIntoViewIfNeeded();
-  await shot(page, join(accountDir, "security-section.png"), {
-    fullPage: false,
-  });
-
-  await page.locator("#sync").scrollIntoViewIfNeeded();
-  await shot(page, join(accountDir, "passport-sync-section.png"), {
-    fullPage: false,
-  });
-
-  await page.locator("#data").scrollIntoViewIfNeeded();
-  await shot(page, join(accountDir, "data-section.png"), { fullPage: false });
-
-  await page.locator("#danger").scrollIntoViewIfNeeded();
-  await shot(page, join(accountDir, "danger-zone.png"), { fullPage: false });
-
-  await page.getByRole("button", { name: "Delete Account" }).click();
-  await page.waitForSelector('[data-account-dialog="delete"]');
-  await shot(page, join(accountDir, "delete-dialog-1440.png"), {
-    fullPage: false,
-  });
-  await page.getByRole("button", { name: "Cancel" }).click();
-
-  await setViewport(page, 1280);
-  await page.goto(`${base}/dev/stitch-account-preview`, {
-    waitUntil: "networkidle",
-  });
-  await shot(page, join(accountDir, "account-1280.png"));
-
-  await setViewport(page, 1024);
-  await page.goto(`${base}/dev/stitch-account-preview`, {
-    waitUntil: "networkidle",
-  });
-  await shot(page, join(accountDir, "account-1024.png"));
-
-  await setViewport(page, 768);
-  await page.goto(`${base}/dev/stitch-account-preview`, {
-    waitUntil: "networkidle",
-  });
-  await shot(page, join(accountDir, "account-768.png"));
-  await shot(page, join(accountDir, "account-navigation-mobile.png"));
 
   await setViewport(page, 390, 844);
-  await page.goto(`${base}/dev/stitch-account-preview`, {
-    waitUntil: "networkidle",
-  });
+  await page.goto(`${base}/account`, { waitUntil: "networkidle" });
   await shot(page, join(accountDir, "account-390.png"));
-  await page.getByRole("button", { name: "Delete Account" }).click();
-  await page.waitForSelector('[data-account-dialog="delete"]');
-  await shot(page, join(accountDir, "delete-dialog-390.png"), {
-    fullPage: false,
-  });
 
-  await setViewport(page, 1440);
-  await page.goto(`${base}/dev/stitch-account-preview?state=loading`, {
-    waitUntil: "networkidle",
-  });
-  await shot(page, join(accountDir, "account-loading.png"));
-
-  await page.goto(`${base}/dev/stitch-account-preview?state=error`, {
-    waitUntil: "networkidle",
-  });
-  await shot(page, join(accountDir, "account-error.png"));
-
-  console.log("Phase 10 auth/account baselines captured.");
+  console.log(
+    "Phase 10/12 auth/account baselines captured (account preview route removed).",
+  );
 } finally {
   await browser.close();
 }

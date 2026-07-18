@@ -246,7 +246,8 @@ function scoreCandidate(restaurant, geocode, candidate, siblingSlugs) {
 
 const browser = await chromium.launch();
 const page = await browser.newPage();
-await page.goto(`${base}/dev/google-places-spike`, { waitUntil: "domcontentloaded", timeout: 60000 });
+// Use a stable production page as the Maps JS host (spike route removed in Phase 12).
+await page.goto(`${base}/`, { waitUntil: "domcontentloaded", timeout: 60000 });
 await page.waitForTimeout(1500);
 
 // Ensure maps bootstrap + places library

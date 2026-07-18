@@ -64,7 +64,7 @@ npm run supabase:start       # Docker required
 npm run dev
 ```
 
-Optional Google Places UI Kit: see [`docs/google-places/google-cloud-setup.md`](./docs/google-places/google-cloud-setup.md). With the flag disabled (default), discovery and MapLibre work without Google. Dev-only spike route: `/dev/google-places-spike`.
+Optional Google Places UI Kit: see [`docs/google-places/google-cloud-setup.md`](./docs/google-places/google-cloud-setup.md). With the flag disabled (default), discovery and MapLibre work without Google. Production Google mounts live on Map (compact) and restaurant detail (full); the obsolete `/dev/google-places-spike` route was removed in Phase 12.
 
 ### Data scripts
 

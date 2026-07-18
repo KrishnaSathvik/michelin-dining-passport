@@ -45,7 +45,7 @@ Keep the flag `false` until keys, referrers, budgets, and the technical spike ar
 2. Paste the browser key (optional for UI fallback testing)
 3. Paste the matching key only when running `npm run data:google-places:*`
 4. Set `NEXT_PUBLIC_GOOGLE_PLACES_UI_KIT_ENABLED=true` to exercise live components
-5. Open the dev-only spike: `/dev/google-places-spike` (404 in production builds)
+5. Validate Google mounts on Map (compact selected place) and restaurant detail (full kit). The obsolete `/dev/google-places-spike` route was removed in Phase 12; historical proof remains under `docs/google-places/proof/`.
 
 ## Vercel / deployment
 

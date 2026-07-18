@@ -9,17 +9,17 @@ export function DeviceSaveNotice() {
   if (mode === "cloud") {
     return (
       <div className="space-y-2">
-        <p className="border border-border bg-bg-elevated/60 px-4 py-3 font-sans text-sm text-ink-muted">
+        <p className="border border-dp-border bg-dp-surface/60 px-4 py-3 font-sans text-sm text-dp-ink-muted">
           Signed in — Passport changes sync to your account.{" "}
           <Link
             href="/account"
-            className="text-forest underline-offset-4 hover:underline"
+            className="text-dp-primary underline-offset-4 hover:underline"
           >
             Manage account
           </Link>
         </p>
         {migrationMessage ? (
-          <p className="border border-border px-4 py-3 font-sans text-sm text-forest">
+          <p className="border border-dp-border px-4 py-3 font-sans text-sm text-dp-primary">
             {migrationMessage}
           </p>
         ) : null}
@@ -28,11 +28,11 @@ export function DeviceSaveNotice() {
   }
 
   return (
-    <p className="border border-border bg-bg-elevated/60 px-4 py-3 font-sans text-sm text-ink-muted">
+    <p className="border border-dp-border bg-dp-surface/60 px-4 py-3 font-sans text-sm text-dp-ink-muted">
       Saved on this device.{" "}
       <Link
         href="/login?next=/passport"
-        className="text-forest underline-offset-4 hover:underline"
+        className="text-dp-primary underline-offset-4 hover:underline"
       >
         Sign in
       </Link>{" "}
