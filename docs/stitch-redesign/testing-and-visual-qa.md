@@ -73,6 +73,15 @@ docs/stitch-redesign/baselines/
 
 Prefer accessible selectors (`getByRole`, labels) tied to Stitch copy.
 
+## Phase 12 test isolation
+
+- Playwright default port: **3112** (`E2E_PORT`). Do not point at an arbitrary `:3000` app.
+- Fail fast when the page title/wordmark is not Dining Passport.
+- Production `next start` is the status-code source of truth (invalid public resources → HTTP 404).
+- Dev-only `?proof=` modes are disabled in production; e2e skips or seeds storage instead.
+- Exit code **143** from intentionally stopping the owned test server is not a failure.
+- Final visual set: `docs/stitch-redesign/baselines/final/`.
+
 ## Accessibility minimums
 
 - Focus visible on all controls

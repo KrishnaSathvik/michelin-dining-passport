@@ -23,7 +23,7 @@ Phasing follows **dependencies and visual consistency**, not file counts. Prefer
 
 ## Phase 1 — New design foundation
 
-**Status:** Authorized — implement next; stop after this phase until Phase 1 gates pass.
+**Status:** Complete.
 
 | Item | Detail |
 |---|---|
@@ -187,14 +187,16 @@ Phasing follows **dependencies and visual consistency**, not file counts. Prefer
 
 ## Phase 12 — System states and responsive completion
 
+**Status:** Complete — see [`final-audit.md`](./final-audit.md), [`release-readiness.md`](./release-readiness.md).
+
 | Item | Detail |
 |---|---|
 | **Scope** | 404, error, network failure, provider unavailable, full responsive audit, a11y audit, visual regression, delete obsolete UI |
 | **Dependencies** | Phases 4–11 |
 | **Acceptance** | All quality gates green; deletion plan executed; single token system remains |
-| **Screenshots** | Full baseline set |
-| **Tests** | Full unit + e2e + build |
-| **Commit** | `feat(ui): complete Stitch redesign system states and cleanup` |
+| **Screenshots** | `baselines/final/` |
+| **Tests** | Full unit + e2e on port **3112** + build |
+| **Commit** | `feat(ui): complete Stitch redesign system states and cleanup` (and related Phase 12 commits) |
 
 ---
 

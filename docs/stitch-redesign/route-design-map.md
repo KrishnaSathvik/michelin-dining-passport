@@ -188,7 +188,7 @@ Presentation: `src/components/stitch/taxonomy/*`, `src/components/stitch/educati
 | Network failure | None | InlineError pattern from system + auth errors |
 | Google unavailable | Component library + existing wrappers | Restyle chrome only |
 | Auth required (`/account`) | Partial (account + login) | Keep redirect; branded interstitial optional |
-| `/dev/google-places-spike` | Out of scope | Leave or delete later; not product |
+| `/dev/google-places-spike` | Out of scope | **Deleted Phase 12**; historical proof under `docs/google-places/proof/` |
 
 ---
 

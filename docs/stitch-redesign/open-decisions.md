@@ -12,7 +12,7 @@
 | **Package** | `docs/stitch-redesign/` |
 | **Approved source-of-truth rules** | Stitch designs (`docs/designs/`) control entire visual composition. The existing application supplies features, data, persistence, and business logic only. Prior `docs/ui-ux-rebuild/` is historical and must not influence new layouts. |
 | **Branch strategy** | Create `stitch-full-redesign` from the branch that contains the complete functional application (including Google Places UI Kit and all 271 reviewed Place IDs) — not blindly from `main` if `main` lags. Route-by-route presentation replacement; preserve domain logic. |
-| **Implementation gate** | Phase 1 (design foundation) may proceed. Shell and route redesigns require Phase 1 gates green first. |
+| **Implementation gate** | Phases 1–12 complete on `stitch-full-redesign`. See `final-audit.md` / `release-readiness.md`. |
 
 ### Decision list (approved)
 

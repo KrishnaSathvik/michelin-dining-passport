@@ -1,8 +1,9 @@
 # Stitch Full Visual Rebuild — Implementation Plan
 
-> **Status:** **Approved** 2026-07-17. Open decisions OD-01–OD-18 resolved. Phase 1 implementation authorized.  
-> **Branch:** `stitch-full-redesign` from the complete functional source branch (see approval record).  
-> **Design source location:** `docs/designs/` (canonical; OD-01).
+> **Status:** **Phases 1–12 complete** on `stitch-full-redesign` (2026-07-17). Awaiting human merge review.  
+> **Branch:** `stitch-full-redesign`  
+> **Design source location:** `docs/designs/` (canonical; OD-01).  
+> **Final audit:** [final-audit.md](./final-audit.md) · [release-readiness.md](./release-readiness.md) · [final-route-inventory.md](./final-route-inventory.md) · [remaining-debt.md](./remaining-debt.md)
 
 ## Purpose
 
@@ -74,23 +75,27 @@ Full detail: [open-decisions.md](./open-decisions.md).
 | [testing-and-visual-qa.md](./testing-and-visual-qa.md) | Quality gates |
 | [deletion-plan.md](./deletion-plan.md) | Obsolete UI removal |
 | [open-decisions.md](./open-decisions.md) | **Resolved** OD-01–OD-18 + approval record |
-| [aliases.md](./aliases.md) | Temporary compatibility aliases (Phase 1+) |
+| [aliases.md](./aliases.md) | Compatibility aliases — **closed** Phase 12 |
+| [final-route-inventory.md](./final-route-inventory.md) | Final route/state inventory |
+| [final-audit.md](./final-audit.md) | Phase 12 audit |
+| [release-readiness.md](./release-readiness.md) | Merge checklist (do not auto-merge) |
+| [remaining-debt.md](./remaining-debt.md) | Residual non-blocking debt |
 
 ## Phase order
 
 0. Design audit *(complete)*  
-1. New design foundation ← **current authorized work**  
-2. Global application shell  
-3. Shared restaurant presentation  
-4. Homepage (`explore_feed` only)  
-5. Explore  
-6. Map (workspace)  
-7. Restaurant details (Benu)  
-8. Passport + `/saved` `/visited` `/planned`  
-9. Collections  
-10. Authentication and account  
-11. Taxonomy and education  
-12. System states and responsive completion  
+1. New design foundation *(complete)*  
+2. Global application shell *(complete)*  
+3. Shared restaurant presentation *(complete)*  
+4. Homepage (`explore_feed` only) *(complete)*  
+5. Explore *(complete)*  
+6. Map (workspace) *(complete)*  
+7. Restaurant details (Benu) *(complete)*  
+8. Passport + `/saved` `/visited` `/planned` *(complete)*  
+9. Collections *(complete)*  
+10. Authentication and account *(complete)*  
+11. Taxonomy and education *(complete)*  
+12. System states and responsive completion *(complete)*  
 
 ## Approval gates
 
@@ -98,7 +103,7 @@ Full detail: [open-decisions.md](./open-decisions.md).
 |---|---|
 | Plan reviewed | **Approved 2026-07-17** |
 | OD-01–OD-18 resolved | **Done** |
-| Branch `stitch-full-redesign` from functional source | Required before/with Phase 1 |
-| Phase N quality gates | Per [testing-and-visual-qa.md](./testing-and-visual-qa.md) |
+| Branch `stitch-full-redesign` from functional source | **Done** |
+| Phases 1–12 quality gates | **Green on Phase 12** — human merge review pending |
 
 Do not reopen resolved decisions unless a genuine implementation conflict is found.

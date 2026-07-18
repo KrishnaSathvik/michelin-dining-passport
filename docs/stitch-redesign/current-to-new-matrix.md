@@ -37,9 +37,9 @@ Complexity: **L** low · **M** medium · **H** high · **VH** very high
 | `Breadcrumbs` | Nav trail | Item model | Styling | Restyle | detail/taxonomy | L | — | Phase 2 |
 | Google Places wrappers | Live Google UI | Loader, flags, place IDs, boundaries | Outer frames | Keep kits; new frames | benu + map + library | M | `e2e/google-places.spec.ts`, `test_google_places*.mjs` | Phase 6–7 |
 | `globals.css` tokens | Theme | a11y base, reduced motion | Old token values | New `--dp-*` tokens | DESIGN.md | H | visual | Phase 1 |
-| `GooglePlacesSpikeClient` / `/dev/google-places-spike` | Spike | None for product | Entire surface | — | — | L | spike-only | After Google prod paths stable |
+| `GooglePlacesSpikeClient` / `/dev/google-places-spike` | Spike | None for product | Entire surface | — | — | L | spike-only | **Deleted Phase 12** |
 | `.paper-texture` | Deprecated alias | None | Utility | Delete | — | L | — | Phase 1 |
-| Missing `not-found.tsx` / `error.tsx` | Defaults | — | — | New system states | derive from system_states | M | — | Phase 12 |
+| Missing `not-found.tsx` / `error.tsx` | Defaults | — | — | New system states | derive from system_states | M | — | **Done Phase 12** |
 
 ## Classification reminder
 
