@@ -27,14 +27,7 @@ export async function generateMetadata({
 }: StatePageProps): Promise<Metadata> {
   const { stateSlug } = await params;
   const state = getStateAggregate(stateSlug);
-  if (!state) {
-    return buildPageMetadata({
-      title: "State not found",
-      description: "This state page could not be found.",
-      path: `/usa/${stateSlug}`,
-      noIndex: true,
-    });
-  }
+  if (!state) notFound();
 
   return buildPageMetadata({
     title: `Michelin-Starred Restaurants in ${state.state}`,

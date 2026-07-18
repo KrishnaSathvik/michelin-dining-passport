@@ -26,14 +26,7 @@ export async function generateMetadata({
 }: StarPageProps): Promise<Metadata> {
   const { starCount } = await params;
   const stars = parseStarCount(starCount);
-  if (!stars) {
-    return buildPageMetadata({
-      title: "Star level not found",
-      description: "This star level page could not be found.",
-      path: `/stars/${starCount}`,
-      noIndex: true,
-    });
-  }
+  if (!stars) notFound();
 
   const aggregate = getStarAggregates().find((item) => item.stars === stars);
   const title =

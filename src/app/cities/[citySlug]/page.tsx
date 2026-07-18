@@ -26,14 +26,7 @@ export async function generateMetadata({
 }: CityPageProps): Promise<Metadata> {
   const { citySlug } = await params;
   const city = getCityAggregate(citySlug);
-  if (!city) {
-    return buildPageMetadata({
-      title: "City not found",
-      description: "This city page could not be found.",
-      path: `/cities/${citySlug}`,
-      noIndex: true,
-    });
-  }
+  if (!city) notFound();
 
   return buildPageMetadata({
     title: `Michelin-Starred Restaurants in ${city.city}`,

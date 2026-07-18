@@ -10,7 +10,7 @@ export function GooglePlaceSkeleton({
   const height = variant === "full" ? "min-h-[28rem]" : "min-h-[5.5rem]";
   return (
     <div
-      className={`animate-pulse rounded-[var(--radius-md)] border border-border bg-surface-soft ${height} ${className}`}
+      className={`animate-pulse rounded-[var(--dp-radius-md)] border border-dp-border bg-dp-soft ${height} ${className}`}
       role="status"
       aria-label="Loading Google place details"
       data-google-places-skeleton={variant}

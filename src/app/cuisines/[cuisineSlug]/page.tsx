@@ -28,14 +28,7 @@ export async function generateMetadata({
 }: CuisinePageProps): Promise<Metadata> {
   const { cuisineSlug } = await params;
   const cuisine = getCuisineAggregate(cuisineSlug);
-  if (!cuisine) {
-    return buildPageMetadata({
-      title: "Cuisine not found",
-      description: "This cuisine page could not be found.",
-      path: `/cuisines/${cuisineSlug}`,
-      noIndex: true,
-    });
-  }
+  if (!cuisine) notFound();
 
   return buildPageMetadata({
     title: `${cuisine.cuisine} Michelin-Starred Restaurants`,

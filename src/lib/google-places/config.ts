@@ -34,4 +34,4 @@ export function getGooglePlacesUiKitAvailability(): GooglePlacesUiKitAvailabilit
 export const GOOGLE_PLACES_UI_KIT_LOAD_TIMEOUT_MS = 20_000;
 
 export const GOOGLE_PLACES_UNAVAILABLE_MESSAGE =
-  "Live photos and Google place details are currently unavailable.";
+  "Live Google place information is currently unavailable.";

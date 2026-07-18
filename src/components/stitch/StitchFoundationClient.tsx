@@ -11,9 +11,11 @@ import {
   IconButton,
   Input,
   MichelinDistinction,
+  NotFoundState,
   PageContainer,
   RestaurantFallback,
   RestaurantMedia,
+  RouteErrorState,
   SearchInput,
   SectionHeader,
   Select,
@@ -233,6 +235,32 @@ export function StitchFoundationClient() {
               actionLabel="Clear filters"
               onAction={() => undefined}
             />
+          </div>
+        </section>
+
+        <section id="system-states" className="mt-20">
+          <SectionHeader
+            title="System states"
+            description="Phase 12 global not-found and route-error language."
+          />
+          <div className="space-y-8">
+            <div
+              className="rounded-[var(--dp-radius-lg)] border border-dp-border bg-dp-surface"
+              data-foundation-system-state="not-found"
+            >
+              <NotFoundState />
+            </div>
+            <div
+              className="rounded-[var(--dp-radius-lg)] border border-dp-border bg-dp-surface"
+              data-foundation-system-state="route-error"
+            >
+              <RouteErrorState
+                error={Object.assign(new Error("foundation-demo"), {
+                  digest: "FOUNDATION_DEMO",
+                })}
+                reset={() => undefined}
+              />
+            </div>
           </div>
         </section>
 

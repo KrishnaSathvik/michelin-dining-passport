@@ -21,6 +21,9 @@ type RestaurantPageProps = {
   params: Promise<{ slug: string }>;
 };
 
+/** Unknown slugs 404 at the router — required for a genuine HTTP 404. */
+export const dynamicParams = false;
+
 export function generateStaticParams() {
   return getRestaurants().map((restaurant) => ({ slug: restaurant.slug }));
 }
@@ -30,14 +33,7 @@ export async function generateMetadata({
 }: RestaurantPageProps): Promise<Metadata> {
   const { slug } = await params;
   const restaurant = getRestaurantBySlug(slug);
-  if (!restaurant) {
-    return buildPageMetadata({
-      title: "Restaurant not found",
-      description: "This restaurant listing could not be found.",
-      path: `/restaurants/${slug}`,
-      noIndex: true,
-    });
-  }
+  if (!restaurant) notFound();
 
   return buildPageMetadata({
     title: restaurant.name,

@@ -23,17 +23,20 @@ const reasonCopy: Record<
   load_error: GOOGLE_PLACES_UNAVAILABLE_MESSAGE,
 };
 
+/**
+ * Google provider outer state — does not imply the restaurant itself is unavailable.
+ */
 export function GooglePlaceUnavailable({
   reason = "error",
   className = "",
 }: GooglePlaceUnavailableProps) {
   return (
     <div
-      className={`rounded-[var(--radius-md)] border border-border bg-surface-soft px-4 py-5 ${className}`}
+      className={`rounded-[var(--dp-radius-lg)] border border-dp-border bg-dp-soft px-4 py-5 ${className}`}
       role="status"
       data-google-places-fallback={reason}
     >
-      <p className="font-sans text-sm leading-relaxed text-ink-muted">
+      <p className="font-sans text-sm leading-relaxed text-dp-ink-secondary">
         {reasonCopy[reason]}
       </p>
     </div>

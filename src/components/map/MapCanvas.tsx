@@ -163,15 +163,16 @@ export function MapCanvas({
   if (failed) {
     return (
       <div
-        className={`flex h-full min-h-[20rem] flex-col justify-center border border-border bg-bg-elevated px-4 py-8 ${className ?? ""}`}
+        className={`flex h-full min-h-[20rem] flex-col justify-center border border-dp-border bg-dp-surface px-4 py-8 ${className ?? ""}`}
         role="alert"
+        data-map-unavailable
       >
-        <p className="font-display text-xl text-ink">Map unavailable</p>
-        <p className="mt-2 font-sans text-sm text-ink-muted">
+        <p className="font-display text-xl text-dp-ink">Map unavailable</p>
+        <p className="mt-2 font-sans text-sm text-dp-ink-muted">
           The map failed to initialize. The restaurant list remains available
           with the same filters.
         </p>
-        <p className="mt-3 font-sans text-xs text-ink-muted">
+        <p className="mt-3 font-sans text-xs text-dp-ink-muted">
           {mapConfig.attribution}
         </p>
       </div>
