@@ -37,9 +37,9 @@ export default function AboutPage() {
 
       <ContentSection heading="What this is not">
         <p>
-          {siteConfig.footerDisclaimer} We do not award, review, or influence
-          Michelin distinctions, and we are not a reservation service — booking
-          links point to whatever service the restaurant itself uses.
+          {siteConfig.independenceDisclaimer} We do not award, review, or
+          influence Michelin distinctions, and we are not a reservation service
+          — booking links point to whatever service the restaurant itself uses.
         </p>
         <p>
           Michelin does not currently inspect every U.S. state. A region missing

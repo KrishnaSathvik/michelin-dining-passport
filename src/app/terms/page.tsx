@@ -57,10 +57,10 @@ export default function TermsPage() {
 
       <ContentSection heading="Third-party content and trademarks">
         <p>
-          {siteConfig.footerDisclaimer} Michelin, the Michelin Guide, and related
-          marks belong to their owners, and are referred to here only to describe
-          which restaurants hold which distinctions. Place information supplied
-          by Google remains subject to Google&rsquo;s terms. See{" "}
+          {siteConfig.independenceDisclaimer} Michelin, the Michelin Guide, and
+          related marks belong to their owners, and are referred to here only to
+          describe which restaurants hold which distinctions. Place information
+          supplied by Google remains subject to Google&rsquo;s terms. See{" "}
           <Link href="/sources">Sources</Link>.
         </p>
       </ContentSection>
