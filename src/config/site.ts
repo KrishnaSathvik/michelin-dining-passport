@@ -7,7 +7,13 @@ export const siteConfig = {
   tagline: "An independent atlas of Michelin-starred dining in the United States.",
   description:
     "Browse Michelin-starred restaurants across the United States. Independent and not affiliated with Michelin.",
-  dataUpdatedLabel: "Dataset current through July 2026",
+  dataUpdatedLabel: "Information current through July 2026",
+  /** Footer product summary — the single plain-language description of the product. */
+  footerDescription:
+    "Discover Michelin-starred restaurants, plan future visits, and remember the meals you loved.",
+  /** The one disclaimer the footer renders. Longer legal context lives on /about and /sources. */
+  footerDisclaimer:
+    "Dining Passport is an independent discovery platform and is not affiliated with the Michelin Guide.",
   independenceDisclaimer:
     "Independent platform. Not affiliated with, endorsed by, or connected to Michelin or the Michelin Guide.",
   googlePlacesDisclaimer:
