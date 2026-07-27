@@ -50,14 +50,20 @@ test.describe("site footer", () => {
     }
   });
 
+  const FOOTER_DISCLAIMER =
+    "Dining Passport is an independent discovery platform and is not affiliated with the Michelin Guide.";
+
   test("carries only one independence disclaimer per page", async ({ page }) => {
     await page.goto("/explore");
-    await expect(
-      page.getByText(
-        "Dining Passport is an independent discovery platform and is not affiliated with the Michelin Guide.",
-      ),
-    ).toHaveCount(1);
+    await expect(page.getByText(FOOTER_DISCLAIMER)).toHaveCount(1);
   });
+
+  for (const path of ["/about", "/terms"]) {
+    test(`${path} shows footer disclaimer only once`, async ({ page }) => {
+      await page.goto(path);
+      await expect(page.getByText(FOOTER_DISCLAIMER)).toHaveCount(1);
+    });
+  }
 
   test("wraps cleanly on narrow mobile", async ({ page }) => {
     await page.setViewportSize({ width: 375, height: 667 });
