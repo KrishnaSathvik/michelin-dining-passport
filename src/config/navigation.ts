@@ -3,7 +3,19 @@ export const primaryNav = [
   { href: "/explore", label: "Explore" },
   { href: "/map", label: "Map" },
   { href: "/about-michelin-stars", label: "Michelin Stars" },
-  { href: "/passport", label: "Passport" },
+  { href: "/passport", label: "My Restaurants" },
+] as const;
+
+/**
+ * Footer links. Deliberately disjoint from `primaryNav` — the footer explains
+ * the product, it does not repeat the header.
+ */
+export const footerNav = [
+  { href: "/about", label: "About" },
+  { href: "/privacy", label: "Privacy" },
+  { href: "/terms", label: "Terms" },
+  { href: "/contact", label: "Contact" },
+  { href: "/sources", label: "Sources" },
 ] as const;
 
 export const AUTH_PATH_PREFIXES = [

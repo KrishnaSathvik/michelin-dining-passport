@@ -1,17 +1,12 @@
-import { getRestaurantReservationAction } from "@/lib/reservations/resolve";
 import type { Restaurant } from "@/lib/data/types";
-import type { PassportStore, UserRestaurantRecord } from "@/lib/passport/types";
-import type { RestaurantReservation } from "@/lib/reservations/types";
+import { getApprovedGooglePlaceId } from "@/lib/google-places/place-ids";
+import type { PassportStore } from "@/lib/passport/types";
+import { classifyPlan } from "@/lib/passport/journey";
 import {
   buildCollectionPreviews,
   buildJourneySummary,
-  buildStarsCollected,
-  buildStatesExplored,
   buildSupportingCopy,
   hasPassportActivity,
-  isPlannedRecord,
-  isSavedRecord,
-  isVisitedRecord,
 } from "./metrics";
 import type {
   CatalogDenominators,
@@ -19,9 +14,9 @@ import type {
   PassportEmptyModel,
   PassportListPageModel,
   PassportSyncState,
-  PlannedRestaurantRowModel,
-  SavedRestaurantCardModel,
-  VisitedRestaurantCardModel,
+  PassportPlanModel,
+  PassportSavedRestaurantModel,
+  PassportVisitModel,
 } from "./models";
 
 function formatLocation(restaurant: Restaurant): string {
@@ -41,17 +36,13 @@ function formatDisplayDate(iso: string | null | undefined): string | null {
   });
 }
 
-function truncateNote(value: string, max = 140): string | null {
-  const trimmed = value.trim();
-  if (!trimmed) return null;
-  if (trimmed.length <= max) return trimmed;
-  return `${trimmed.slice(0, max - 1)}…`;
-}
-
 export function toSyncState(input: {
   mode: "local" | "cloud";
   migrationMessage: string | null;
   migrationCompleted: boolean;
+  status?: "idle" | "pending" | "failed";
+  message?: string | null;
+  storageError?: boolean;
 }): PassportSyncState {
   return {
     mode: input.mode,
@@ -60,7 +51,140 @@ export function toSyncState(input: {
       input.mode === "cloud" &&
       Boolean(input.migrationMessage) &&
       !input.migrationCompleted,
+    status: input.status ?? "idle",
+    message: input.message ?? null,
+    storageError: Boolean(input.storageError),
   };
+}
+
+function formatTime(value: string | null): string | null {
+  if (!value) return null;
+  const [hoursText, minutesText] = value.split(":");
+  const hours = Number(hoursText);
+  const minutes = Number(minutesText);
+  if (
+    !Number.isInteger(hours) ||
+    !Number.isInteger(minutes) ||
+    hours < 0 ||
+    hours > 23 ||
+    minutes < 0 ||
+    minutes > 59
+  ) {
+    return value;
+  }
+  const suffix = hours >= 12 ? "PM" : "AM";
+  const displayHours = hours % 12 || 12;
+  return `${displayHours}:${String(minutes).padStart(2, "0")} ${suffix}`;
+}
+
+function listDashboardPlans(
+  store: PassportStore,
+  restaurants: readonly Restaurant[],
+  today: string,
+): PassportPlanModel[] {
+  const bySlug = new Map(
+    restaurants.map((restaurant) => [restaurant.slug, restaurant]),
+  );
+  return Object.values(store.plans)
+    .flatMap((plan) => {
+      const restaurant = bySlug.get(plan.restaurantSlug);
+      if (!restaurant) return [];
+      const status = classifyPlan(plan.plannedDate, today);
+      if (status === "past") return [];
+      return [
+        {
+          plan,
+          status,
+          slug: restaurant.slug,
+          name: restaurant.name,
+          distinction: restaurant.stars,
+          cuisine: restaurant.cuisine?.trim() || undefined,
+          location: formatLocation(restaurant),
+          dateLabel:
+            formatDisplayDate(plan.plannedDate) ?? "Date not recorded",
+          timeLabel: formatTime(plan.plannedTime),
+          imageUrl: null,
+          placeId: getApprovedGooglePlaceId(restaurant.slug),
+          alsoVisited: Object.values(store.visits).some(
+            (visit) => visit.restaurantSlug === restaurant.slug,
+          ),
+        } satisfies PassportPlanModel,
+      ];
+    })
+    .sort((a, b) => {
+      if (a.status === "needs-update" && b.status !== "needs-update") return -1;
+      if (b.status === "needs-update" && a.status !== "needs-update") return 1;
+      return (a.plan.plannedDate ?? "9999-12-31").localeCompare(
+        b.plan.plannedDate ?? "9999-12-31",
+      );
+    });
+}
+
+function listDashboardVisits(
+  store: PassportStore,
+  restaurants: readonly Restaurant[],
+): PassportVisitModel[] {
+  const bySlug = new Map(
+    restaurants.map((restaurant) => [restaurant.slug, restaurant]),
+  );
+  return Object.values(store.visits)
+    .sort((a, b) => {
+      const dateOrder = (b.visitDate ?? "").localeCompare(a.visitDate ?? "");
+      return dateOrder || b.createdAt.localeCompare(a.createdAt);
+    })
+    .flatMap((visit) => {
+      const restaurant = bySlug.get(visit.restaurantSlug);
+      if (!restaurant) return [];
+      const dishes = visit.favoriteDishes.trim();
+      return [
+        {
+          visit,
+          slug: restaurant.slug,
+          name: restaurant.name,
+          distinction: restaurant.stars,
+          cuisine: restaurant.cuisine?.trim() || undefined,
+          location: formatLocation(restaurant),
+          dateLabel:
+            formatDisplayDate(visit.visitDate) ?? "Date not recorded",
+          imageUrl: null,
+          placeId: getApprovedGooglePlaceId(restaurant.slug),
+          favoriteDishesPreview: dishes
+            ? dishes.length > 96
+              ? `${dishes.slice(0, 95)}…`
+              : dishes
+            : null,
+          wouldReturn: visit.wouldReturn,
+          personalFavorite: visit.personalFavorite,
+        } satisfies PassportVisitModel,
+      ];
+    });
+}
+
+function listDashboardSaved(
+  store: PassportStore,
+  restaurants: readonly Restaurant[],
+): PassportSavedRestaurantModel[] {
+  const bySlug = new Map(
+    restaurants.map((restaurant) => [restaurant.slug, restaurant]),
+  );
+  return Object.values(store.bookmarks)
+    .sort((a, b) => b.updatedAt.localeCompare(a.updatedAt))
+    .flatMap((bookmark) => {
+      const restaurant = bySlug.get(bookmark.restaurantSlug);
+      if (!restaurant) return [];
+      return [
+        {
+          slug: restaurant.slug,
+          name: restaurant.name,
+          distinction: restaurant.stars,
+          cuisine: restaurant.cuisine?.trim() || undefined,
+          location: formatLocation(restaurant),
+          price: restaurant.price?.trim() || undefined,
+          imageUrl: null,
+          placeId: getApprovedGooglePlaceId(restaurant.slug),
+        } satisfies PassportSavedRestaurantModel,
+      ];
+    });
 }
 
 export function toPassportActiveModel(input: {
@@ -68,26 +192,22 @@ export function toPassportActiveModel(input: {
   restaurants: readonly Restaurant[];
   denominators: CatalogDenominators;
   sync: PassportSyncState;
+  today?: string;
 }): PassportActiveModel {
+  const today = input.today ?? new Date().toISOString().slice(0, 10);
+  const plans = listDashboardPlans(input.store, input.restaurants, today);
   return {
     hero: {
-      eyebrow: "My Passport",
+      eyebrow: "My Restaurants",
       title: "Your dining journey",
       supporting: buildSupportingCopy(input.store, input.restaurants),
       exploreHref: "/explore",
-      mapHref: "/map?visited=1",
+      mapHref: "/map",
     },
-    summary: buildJourneySummary(input.store),
-    stars: buildStarsCollected(
-      input.store,
-      input.restaurants,
-      input.denominators,
-    ),
-    states: buildStatesExplored(
-      input.store,
-      input.restaurants,
-      input.denominators.states,
-    ),
+    featuredPlan: plans[0] ?? null,
+    recentVisits: listDashboardVisits(input.store, input.restaurants),
+    savedRestaurants: listDashboardSaved(input.store, input.restaurants),
+    summary: buildJourneySummary(input.store, input.restaurants, plans.length),
     collections: buildCollectionPreviews(input.store, input.restaurants, 3),
     sync: input.sync,
   };
@@ -95,139 +215,13 @@ export function toPassportActiveModel(input: {
 
 export function toPassportEmptyModel(sync: PassportSyncState): PassportEmptyModel {
   return {
-    title: "Your dining journey starts with one table.",
+    title: "Your dining journey starts here",
     supporting:
-      "Save restaurants you want to try, plan future visits, record meals you have enjoyed, and build private collections. Your passport stays personal — on this device until you sign in.",
+      "Save restaurants that interest you, plan the meals ahead, and remember every visit in one private list.",
     exploreHref: "/explore",
     mapHref: "/map",
     sync,
   };
-}
-
-export function toSavedCardModel(
-  restaurant: Restaurant,
-  record: UserRestaurantRecord,
-  reservation: RestaurantReservation | null = null,
-): SavedRestaurantCardModel {
-  return {
-    slug: restaurant.slug,
-    name: restaurant.name,
-    distinction: restaurant.stars,
-    cuisine: restaurant.cuisine?.trim() || undefined,
-    location: formatLocation(restaurant),
-    price: restaurant.price?.trim() || undefined,
-    imageUrl: null,
-    savedAtLabel: formatDisplayDate(record.createdAt.slice(0, 10)),
-    isSaved: record.saved,
-    reservation: getRestaurantReservationAction(restaurant, reservation),
-    surface: "saved",
-    record,
-  };
-}
-
-export function toPlannedRowModel(
-  restaurant: Restaurant,
-  record: UserRestaurantRecord,
-  reservation: RestaurantReservation | null = null,
-): PlannedRestaurantRowModel {
-  return {
-    slug: restaurant.slug,
-    name: restaurant.name,
-    distinction: restaurant.stars,
-    cuisine: restaurant.cuisine?.trim() || undefined,
-    location: formatLocation(restaurant),
-    imageUrl: null,
-    plannedDateLabel: formatDisplayDate(record.reservationPlannedFor),
-    plannedDateIso: record.reservationPlannedFor,
-    reservationProvider: record.reservationProvider,
-    hasConfirmationNote: Boolean(record.reservationConfirmationNote?.trim()),
-    hasPlanningNote: Boolean(record.reservationConfirmationNote?.trim()),
-    alsoVisited: record.visited,
-    reservation: getRestaurantReservationAction(restaurant, reservation),
-    surface: "planned",
-    record,
-  };
-}
-
-export function toVisitedCardModel(
-  restaurant: Restaurant,
-  record: UserRestaurantRecord,
-  reservation: RestaurantReservation | null = null,
-): VisitedRestaurantCardModel {
-  return {
-    slug: restaurant.slug,
-    name: restaurant.name,
-    distinction: restaurant.stars,
-    cuisine: restaurant.cuisine?.trim() || undefined,
-    location: formatLocation(restaurant),
-    imageUrl: null,
-    visitDateLabel: formatDisplayDate(record.visitDate),
-    visitDateIso: record.visitDate,
-    favoriteDishes: record.favoriteDishes.filter(Boolean),
-    notesPreview: truncateNote(record.notes),
-    isFavorite: record.favorite,
-    reservation: getRestaurantReservationAction(restaurant, reservation),
-    surface: "visited",
-    record,
-  };
-}
-
-export function listSavedCards(
-  store: PassportStore,
-  restaurants: readonly Restaurant[],
-): SavedRestaurantCardModel[] {
-  const bySlug = new Map(
-    restaurants.map((restaurant) => [restaurant.slug, restaurant]),
-  );
-  return Object.values(store.userRestaurants)
-    .filter(isSavedRecord)
-    .flatMap((record) => {
-      const restaurant = bySlug.get(record.restaurantSlug);
-      if (!restaurant) return [];
-      return [toSavedCardModel(restaurant, record)];
-    });
-}
-
-export function listPlannedRows(
-  store: PassportStore,
-  restaurants: readonly Restaurant[],
-): PlannedRestaurantRowModel[] {
-  const bySlug = new Map(
-    restaurants.map((restaurant) => [restaurant.slug, restaurant]),
-  );
-  return Object.values(store.userRestaurants)
-    .filter(isPlannedRecord)
-    .flatMap((record) => {
-      const restaurant = bySlug.get(record.restaurantSlug);
-      if (!restaurant) return [];
-      return [toPlannedRowModel(restaurant, record)];
-    });
-}
-
-export function listVisitedCards(
-  store: PassportStore,
-  restaurants: readonly Restaurant[],
-): VisitedRestaurantCardModel[] {
-  const bySlug = new Map(
-    restaurants.map((restaurant) => [restaurant.slug, restaurant]),
-  );
-  return Object.values(store.userRestaurants)
-    .filter(isVisitedRecord)
-    .flatMap((record) => {
-      const restaurant = bySlug.get(record.restaurantSlug);
-      if (!restaurant) return [];
-      return [toVisitedCardModel(restaurant, record)];
-    });
-}
-
-export function countStaleRecords(
-  store: PassportStore,
-  restaurants: readonly Restaurant[],
-): number {
-  const known = new Set(restaurants.map((restaurant) => restaurant.slug));
-  return Object.values(store.userRestaurants).filter(
-    (record) => !known.has(record.restaurantSlug),
-  ).length;
 }
 
 export function toListPageModel(
@@ -237,11 +231,12 @@ export function toListPageModel(
     case "saved":
       return {
         mode,
-        title: "Saved Restaurants",
-        subtitle: "Keep track of the tables you're dreaming of.",
+        title: "Saved restaurants",
+        subtitle:
+          "Every restaurant bookmarked in My Restaurants, including tables you have planned or visited.",
         breadcrumbs: [
           { label: "Home", href: "/" },
-          { label: "Passport", href: "/passport" },
+          { label: "My Restaurants", href: "/passport" },
           { label: "Saved" },
         ],
         resultCount: 0,
@@ -256,19 +251,19 @@ export function toListPageModel(
     case "planned":
       return {
         mode,
-        title: "Planned Visits",
-        subtitle: "Upcoming Michelin meals you have scheduled.",
+        title: "Planned meals",
+        subtitle:
+          "Upcoming dining plans and past dates that still need your attention.",
         breadcrumbs: [
           { label: "Home", href: "/" },
-          { label: "Passport", href: "/passport" },
+          { label: "My Restaurants", href: "/passport" },
           { label: "Planned" },
         ],
         resultCount: 0,
-        emptyTitle: "No planned visits yet",
+        emptyTitle: "No meals planned yet",
         emptyBody:
-          "Move a saved restaurant to Planned, or mark Planned from any restaurant detail page.",
+          "Choose Plan a visit from any restaurant profile when a table becomes part of your journey.",
         emptyLinks: [
-          { label: "View saved", href: "/saved" },
           { label: "Explore restaurants", href: "/explore" },
           { label: "Open map", href: "/map" },
         ],
@@ -276,21 +271,21 @@ export function toListPageModel(
     case "visited":
       return {
         mode,
-        title: "Visited",
-        subtitle: "Your dining history",
+        title: "Visited restaurants",
+        subtitle:
+          "A private history of meals you have recorded, grouped by restaurant.",
         breadcrumbs: [
           { label: "Home", href: "/" },
-          { label: "Passport", href: "/passport" },
+          { label: "My Restaurants", href: "/passport" },
           { label: "Visited" },
         ],
         resultCount: 0,
-        emptyTitle: "No visits logged yet",
+        emptyTitle: "No visits recorded yet",
         emptyBody:
-          "Mark a restaurant as visited from its detail page to build your dining history.",
+          "Record a visit from a restaurant profile to begin your private dining history.",
         emptyLinks: [
           { label: "Explore restaurants", href: "/explore" },
-          { label: "View planned visits", href: "/planned" },
-          { label: "Open map", href: "/map" },
+          { label: "Open My Restaurants", href: "/passport" },
         ],
       };
     default: {

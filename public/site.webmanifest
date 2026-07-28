@@ -1,0 +1,21 @@
+{
+  "name": "Orellin",
+  "short_name": "Orellin",
+  "description": "The guide to remarkable dining. Discover Michelin-starred restaurants across the United States.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#fcf9f8",
+  "theme_color": "#123b2f",
+  "icons": [
+    {
+      "src": "/brand/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/brand/android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

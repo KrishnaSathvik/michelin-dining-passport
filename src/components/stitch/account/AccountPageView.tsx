@@ -34,7 +34,7 @@ export function AccountPageView({ profile, flash }: AccountPageViewProps) {
           Account settings
         </h1>
         <p className="mt-3 font-sans text-[16px] leading-relaxed text-dp-ink-muted">
-          Manage your profile, security, Passport sync, and data export.
+          Manage your profile, security, My Restaurants sync, and data export.
         </p>
       </header>
 

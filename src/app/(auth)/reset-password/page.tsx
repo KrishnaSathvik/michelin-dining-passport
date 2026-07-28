@@ -5,7 +5,7 @@ import { getVerifiedUser } from "@/lib/auth/session";
 
 export const metadata = buildPageMetadata({
   title: "Reset password",
-  description: "Choose a new password for your Dining Passport account.",
+  description: "Choose a new password for your Orellin account.",
   path: "/reset-password",
   noIndex: true,
 });

@@ -4,6 +4,7 @@ import {
   RestaurantDiscoveryCard,
 } from "@/components/stitch/restaurant";
 import { SectionHeader } from "@/components/stitch/SectionHeader";
+import { getApprovedGooglePlaceId } from "@/lib/google-places/place-ids";
 import type { HomepageFeaturedSectionModel } from "./models";
 
 type HomepageFeaturedSectionProps = {
@@ -106,6 +107,7 @@ export function HomepageFeaturedSection({
               <RestaurantDiscoveryCard
                 model={restaurant}
                 priority={index === 0}
+                placeId={getApprovedGooglePlaceId(restaurant.slug)}
               />
             </div>
           ))}

@@ -1,8 +1,9 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { ReservationAction, SaveAction } from "@/components/stitch/restaurant";
+import { ReservationAction } from "@/components/stitch/restaurant";
 import type { RestaurantDetailModel } from "./models";
+import { RestaurantJourneySaveButton } from "./RestaurantJourneyActions";
 
 type RestaurantDetailStickyBarProps = {
   restaurant: RestaurantDetailModel;
@@ -15,6 +16,7 @@ export function RestaurantDetailStickyBar({
   restaurant,
 }: RestaurantDetailStickyBarProps) {
   const [dialogOpen, setDialogOpen] = useState(false);
+  const [primaryActionsVisible, setPrimaryActionsVisible] = useState(true);
 
   useEffect(() => {
     const check = () => {
@@ -31,7 +33,39 @@ export function RestaurantDetailStickyBar({
     return () => observer.disconnect();
   }, []);
 
-  if (dialogOpen) return null;
+  // The primary actions only mount once the Passport store has loaded, so the
+  // element can be absent on first paint. Re-run until it exists, otherwise the
+  // observer never attaches and the sticky bar stays permanently hidden.
+  useEffect(() => {
+    if (typeof IntersectionObserver === "undefined") return;
+
+    let observer: IntersectionObserver | null = null;
+    const attach = () => {
+      const primaryActions = document.querySelector(
+        "[data-restaurant-journey-actions]",
+      );
+      if (!primaryActions) return false;
+      observer = new IntersectionObserver(
+        ([entry]) => setPrimaryActionsVisible(entry.isIntersecting),
+        { threshold: 0.1 },
+      );
+      observer.observe(primaryActions);
+      return true;
+    };
+
+    if (attach()) return () => observer?.disconnect();
+
+    const mutations = new MutationObserver(() => {
+      if (attach()) mutations.disconnect();
+    });
+    mutations.observe(document.body, { childList: true, subtree: true });
+    return () => {
+      mutations.disconnect();
+      observer?.disconnect();
+    };
+  }, []);
+
+  if (dialogOpen || primaryActionsVisible) return null;
 
   return (
     <div
@@ -40,16 +74,23 @@ export function RestaurantDetailStickyBar({
       data-restaurant-sticky-bar
     >
       <div className="mx-auto flex max-w-lg items-center gap-2">
-        <ReservationAction
+        {restaurant.reservation.isDirectBooking ? (
+          <ReservationAction
+            restaurantSlug={restaurant.slug}
+            action={restaurant.reservation}
+            surface="restaurant_detail"
+            variant="primary"
+            showProvider={false}
+            analyticsProvider={restaurant.reservationProvider}
+            labelOverride="Reserve a table"
+            className="min-w-0 flex-1"
+          />
+        ) : null}
+        <RestaurantJourneySaveButton
           restaurantSlug={restaurant.slug}
-          action={restaurant.reservation}
-          surface="restaurant_detail"
-          variant="primary"
-          showProvider={false}
-          analyticsProvider={restaurant.reservationProvider}
-          className="min-w-0 flex-1"
+          restaurantName={restaurant.name}
+          className={restaurant.reservation.isDirectBooking ? "" : "w-full"}
         />
-        <SaveAction restaurantSlug={restaurant.slug} variant="compact" />
       </div>
     </div>
   );

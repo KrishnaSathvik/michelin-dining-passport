@@ -12,6 +12,7 @@ import {
   primaryNav,
 } from "@/config/navigation";
 import type { VerifiedUser } from "@/lib/auth/session";
+import { GlobalSearchDialog } from "./GlobalSearchDialog";
 
 type AppHeaderClientProps = {
   user: VerifiedUser | null;
@@ -47,6 +48,7 @@ function AppHeaderInner({
 }: AppHeaderClientProps & { pathname: string }) {
   const [menuOpen, setMenuOpen] = useState(false);
   const [accountOpen, setAccountOpen] = useState(false);
+  const [searchOpen, setSearchOpen] = useState(false);
   const menuTriggerRef = useRef<HTMLButtonElement>(null);
   const accountTriggerRef = useRef<HTMLButtonElement>(null);
   const accountMenuId = useId();
@@ -88,6 +90,29 @@ function AppHeaderInner({
     };
   }, [accountOpen, accountMenuId]);
 
+  // Cmd/Ctrl+K and "/" open global search, unless the user is already typing.
+  useEffect(() => {
+    const onKey = (event: KeyboardEvent) => {
+      const target = event.target as HTMLElement | null;
+      const typing =
+        target instanceof HTMLElement &&
+        (target.tagName === "INPUT" ||
+          target.tagName === "TEXTAREA" ||
+          target.tagName === "SELECT" ||
+          target.isContentEditable);
+
+      const shortcut =
+        (event.key === "k" && (event.metaKey || event.ctrlKey)) ||
+        (event.key === "/" && !event.metaKey && !event.ctrlKey && !typing);
+
+      if (!shortcut) return;
+      event.preventDefault();
+      setSearchOpen(true);
+    };
+    document.addEventListener("keydown", onKey);
+    return () => document.removeEventListener("keydown", onKey);
+  }, []);
+
   return (
     <>
       <header className="sticky top-0 z-[var(--z-header)] h-[var(--dp-header-height)] border-b border-dp-border bg-dp-surface">
@@ -95,9 +120,9 @@ function AppHeaderInner({
           <div className="flex min-w-0 items-center gap-8">
             <Link
               href="/"
-              className="shrink-0 font-display text-[1.35rem] leading-none tracking-tight text-dp-primary no-underline md:text-[1.5rem]"
+              className="shrink-0 font-display text-[1.35rem] leading-none tracking-[0.08em] text-dp-primary no-underline uppercase md:text-[1.5rem]"
             >
-              {siteConfig.productName}
+              {siteConfig.wordmark}
             </Link>
 
             <nav aria-label="Primary" className="hidden items-center gap-6 lg:flex">
@@ -122,40 +147,6 @@ function AppHeaderInner({
           </div>
 
           <div className="flex items-center gap-1 sm:gap-2">
-            {/*
-              Native anchor (not next/link): search must always reach /explore.
-              next/link preventDefaults and can drop navigation when the App
-              Router transition is interrupted under load.
-            */}
-            <a
-              href="/explore"
-              aria-label="Search restaurants"
-              data-header-search
-              className="inline-flex h-11 w-11 items-center justify-center rounded-[var(--dp-radius-md)] text-dp-ink-secondary transition-colors hover:bg-dp-soft hover:text-dp-primary"
-            >
-              <svg
-                width="20"
-                height="20"
-                viewBox="0 0 24 24"
-                fill="none"
-                aria-hidden="true"
-              >
-                <circle
-                  cx="11"
-                  cy="11"
-                  r="7"
-                  stroke="currentColor"
-                  strokeWidth="1.5"
-                />
-                <path
-                  d="M20 20l-3.5-3.5"
-                  stroke="currentColor"
-                  strokeWidth="1.5"
-                  strokeLinecap="round"
-                />
-              </svg>
-            </a>
-
             {signedIn ? (
               <div className="relative hidden sm:block">
                 <button
@@ -195,7 +186,7 @@ function AppHeaderInner({
                       className="block px-4 py-2.5 font-sans text-sm text-dp-ink no-underline hover:bg-dp-soft"
                       onClick={() => setAccountOpen(false)}
                     >
-                      Passport
+                      My Restaurants
                     </Link>
                     {!forceSignedInPreview ? (
                       <form action={signOutAction}>
@@ -214,7 +205,7 @@ function AppHeaderInner({
             ) : (
               <Link
                 href="/login?next=/account"
-                className="hidden min-h-11 items-center rounded-[var(--dp-radius-md)] px-3 font-sans text-[14px] font-medium text-dp-primary no-underline hover:bg-dp-soft sm:inline-flex"
+                className="hidden min-h-11 items-center rounded-[var(--dp-radius-md)] px-3 font-sans text-[14px] font-medium text-dp-primary no-underline hover:bg-dp-soft lg:inline-flex"
               >
                 Sign in
               </Link>
@@ -276,15 +267,6 @@ function AppHeaderInner({
               );
             })}
             <li>
-              <a
-                href="/explore"
-                className="flex min-h-11 items-center rounded-[var(--dp-radius-md)] px-3 font-sans text-base text-dp-ink no-underline hover:bg-dp-soft"
-                onClick={() => setMenuOpen(false)}
-              >
-                Search
-              </a>
-            </li>
-            <li>
               {signedIn ? (
                 <Link
                   href="/account"
@@ -306,6 +288,11 @@ function AppHeaderInner({
           </ul>
         </nav>
       </Drawer>
+
+      <GlobalSearchDialog
+        open={searchOpen}
+        onClose={() => setSearchOpen(false)}
+      />
     </>
   );
 }

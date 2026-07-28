@@ -30,11 +30,11 @@ export function ExploreLoadingState({
         <Skeleton className="mt-3 h-4 w-40" />
       </PageContainer>
 
-      <div className="sticky top-[var(--dp-header-height)] z-30 border-b border-dp-border bg-dp-surface/95 backdrop-blur-sm">
-        <PageContainer className="flex flex-col gap-4 py-4 pb-6">
-          <div className="flex flex-col gap-3 sm:flex-row">
+      <div className="sticky top-[var(--dp-header-height)] z-30 border-b border-dp-border bg-dp-surface">
+        <PageContainer className="flex flex-col gap-3 py-3">
+          <div className="flex gap-2 sm:gap-4">
             <Skeleton className="h-12 w-full flex-1" />
-            <Skeleton className="h-12 w-full sm:w-28" />
+            <Skeleton className="h-12 w-20 shrink-0 sm:w-28" />
           </div>
           <div className="flex gap-3 overflow-hidden">
             <Skeleton className="h-11 w-28 shrink-0" />

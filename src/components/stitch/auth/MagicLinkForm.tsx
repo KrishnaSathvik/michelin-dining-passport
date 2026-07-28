@@ -47,15 +47,15 @@ export function MagicLinkForm({ action, next, onBack }: MagicLinkFormProps) {
 
   return (
     <div className="flex flex-col gap-8" data-auth-form="magic-link">
-      <header className="space-y-2">
-        <h1 className="dp-headline-md text-dp-ink">Magic link</h1>
-        <p className="font-sans text-[16px] leading-relaxed text-dp-ink-muted">
-          Passwordless sign-in via email. We will send a one-time link — you are
-          not signed in until you open it.
+      <header className="space-y-3">
+        <p className="dp-label-caps text-dp-ink-muted">Passwordless</p>
+        <h1 className="dp-headline-md text-dp-primary-deep">Sign in with email</h1>
+        <p className="font-sans text-[16px] leading-relaxed text-dp-ink-secondary">
+          We’ll send a one-time link. You are not signed in until you open it.
         </p>
       </header>
 
-      <form action={formAction} className="flex flex-col gap-6">
+      <form action={formAction} noValidate className="flex flex-col gap-5">
         <input type="hidden" name="next" value={next} />
         <AuthTextField
           name="email"
@@ -64,6 +64,7 @@ export function MagicLinkForm({ action, next, onBack }: MagicLinkFormProps) {
           required
           autoComplete="email"
           inputMode="email"
+          error={state.fieldErrors?.email}
         />
 
         {state.message ? <AuthErrorState message={state.message} /> : null}
@@ -74,13 +75,15 @@ export function MagicLinkForm({ action, next, onBack }: MagicLinkFormProps) {
       </form>
 
       {onBack ? (
-        <button
-          type="button"
-          onClick={onBack}
-          className="font-sans text-[14px] text-dp-ink-secondary underline-offset-4 hover:underline"
-        >
-          Use password instead
-        </button>
+        <p className="text-center">
+          <button
+            type="button"
+            onClick={onBack}
+            className="inline-flex min-h-11 items-center font-sans text-[14px] text-dp-ink-secondary underline-offset-4 hover:text-dp-primary hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-dp-focus"
+          >
+            Use password instead
+          </button>
+        </p>
       ) : null}
     </div>
   );

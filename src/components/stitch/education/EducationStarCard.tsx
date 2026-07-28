@@ -33,11 +33,18 @@ export function EducationStarCard({ model }: EducationStarCardProps) {
         {model.title}
       </h3>
       <p
+        className={`mt-3 font-sans text-[15px] font-medium italic leading-snug ${
+          featured ? "text-[var(--dp-star-gold)]" : "text-dp-primary"
+        }`}
+      >
+        {model.summary}
+      </p>
+      <p
         className={`mt-3 flex-1 font-sans text-sm leading-relaxed ${
           featured ? "text-dp-on-primary/85" : "text-dp-ink-secondary"
         }`}
       >
-        {model.summary}
+        {model.detail}
       </p>
       <p
         className={`mt-4 font-sans text-[12px] font-semibold uppercase tracking-[0.08em] ${

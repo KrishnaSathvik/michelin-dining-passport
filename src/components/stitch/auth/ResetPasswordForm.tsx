@@ -90,14 +90,15 @@ export function ResetPasswordForm({
 
   return (
     <div className="flex flex-col gap-8" data-auth-form="reset-password">
-      <header className="space-y-2">
-        <h1 className="dp-headline-md text-dp-ink">Reset Password</h1>
-        <p className="font-sans text-[16px] leading-relaxed text-dp-ink-muted">
-          Choose a new password for your Dining Passport account.
+      <header className="space-y-3">
+        <p className="dp-label-caps text-dp-ink-muted">Account</p>
+        <h1 className="dp-headline-md text-dp-primary-deep">Reset password</h1>
+        <p className="font-sans text-[16px] leading-relaxed text-dp-ink-secondary">
+          Choose a new password for your Orellin account.
         </p>
       </header>
 
-      <form action={formAction} className="flex flex-col gap-6">
+      <form action={formAction} noValidate className="flex flex-col gap-5">
         <input type="hidden" name="next" value="/account" />
         <PasswordField
           name="password"
@@ -106,6 +107,7 @@ export function ResetPasswordForm({
           autoComplete="new-password"
           minLength={8}
           hint="At least 8 characters."
+          error={state.fieldErrors?.password}
         />
 
         {state.message ? <AuthErrorState message={state.message} /> : null}

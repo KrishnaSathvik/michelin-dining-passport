@@ -1,5 +1,5 @@
-import { RestaurantMedia } from "@/components/stitch/restaurant";
 import type { RestaurantDetailModel } from "./models";
+import { RestaurantGallery } from "./RestaurantGallery";
 import { RestaurantIdentityContent } from "./RestaurantIdentityContent";
 
 type RestaurantIdentityHeroProps = {
@@ -7,34 +7,24 @@ type RestaurantIdentityHeroProps = {
 };
 
 /**
- * Canonical Benu hero: ~58% media / ~42% identity at desktop.
- * Media height locked to 500px on md+ to match Stitch silhouette.
+ * Stable 7/5 editorial split. The gallery selects finite sparse-media states,
+ * so the identity never depends on a five-image minimum.
  */
 export function RestaurantIdentityHero({
   restaurant,
 }: RestaurantIdentityHeroProps) {
   return (
     <section
-      className="mb-[var(--dp-section)] flex flex-col gap-6 md:flex-row md:gap-6"
+      className="mb-[var(--dp-section)] grid min-w-0 grid-cols-1 gap-8 lg:grid-cols-12 lg:gap-10"
       aria-labelledby="restaurant-identity-heading"
       data-restaurant-hero="identity"
     >
-      <div className="w-full overflow-hidden rounded-[var(--dp-radius-md)] md:h-[500px] md:w-[58%]">
-        <RestaurantMedia
-          name={restaurant.name}
-          seed={restaurant.slug}
-          city={restaurant.city}
-          stars={restaurant.stars}
-          imageUrl={restaurant.image?.url}
-          objectPosition={restaurant.image?.objectPosition}
-          alt={restaurant.image?.alt}
-          priority
-          ratioClass="aspect-[4/3] md:aspect-auto md:h-full"
-          className="h-full rounded-[var(--dp-radius-md)]"
-          sizes="(max-width: 768px) 100vw, 58vw"
-        />
+      <div className="min-w-0 lg:col-span-7">
+        <RestaurantGallery restaurant={restaurant} />
       </div>
-      <RestaurantIdentityContent restaurant={restaurant} />
+      <div className="min-w-0 lg:col-span-5">
+        <RestaurantIdentityContent restaurant={restaurant} />
+      </div>
     </section>
   );
 }

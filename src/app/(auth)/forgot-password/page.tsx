@@ -7,7 +7,7 @@ type SearchParams = Promise<Record<string, string | string[] | undefined>>;
 
 export const metadata = buildPageMetadata({
   title: "Forgot password",
-  description: "Request a password reset link for your Dining Passport account.",
+  description: "Request a password reset link for your Orellin account.",
   path: "/forgot-password",
   noIndex: true,
 });

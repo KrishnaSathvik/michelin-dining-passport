@@ -33,7 +33,7 @@ try {
     for (const route of routes) {
       await page.goto(`${base}${route}`, { waitUntil: "domcontentloaded" });
       const title = await page.title();
-      if (!/Dining Passport/i.test(title)) {
+      if (!/Orellin/i.test(title)) {
         failures.push(`${width} ${route}: wrong app title ${title}`);
         continue;
       }

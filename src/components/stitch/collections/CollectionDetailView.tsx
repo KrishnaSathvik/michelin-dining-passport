@@ -1,224 +1,313 @@
 "use client";
 
-import { useMemo, useState } from "react";
-import { Breadcrumbs } from "@/components/navigation/Breadcrumbs";
+import Link from "next/link";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { PageContainer } from "@/components/stitch/PageContainer";
 import { Button } from "@/components/stitch/Button";
 import { PassportSyncNotice } from "@/components/stitch/passport/PassportSyncNotice";
-import { usePassport } from "@/lib/passport/PassportProvider";
-import type { Restaurant } from "@/lib/data/types";
+import { toSyncState } from "@/components/stitch/passport/adapters";
 import {
-  toCollectionDetailModel,
-  toCollectionsSyncState,
-} from "./adapters";
+  buildCollectionDetail,
+  findCollectionBySlug,
+  type CollectionRestaurantItem,
+} from "@/lib/passport/collections";
+import { usePassport } from "@/lib/passport/PassportProvider";
 import { AddRestaurantsDialog } from "./AddRestaurantsDialog";
-import { CollectionDetailEmptyState } from "./CollectionDetailEmptyState";
-import { CollectionDetailHero } from "./CollectionDetailHero";
-import { CollectionDetailMissing } from "./CollectionDetailMissing";
-import { CollectionRestaurantList } from "./CollectionRestaurantList";
+import { CollectionFormDialog } from "./CollectionFormDialog";
+import { CollectionRestaurantCard } from "./CollectionRestaurantCard";
 import { CollectionsLoadingState } from "./CollectionsLoadingState";
 import { DeleteCollectionDialog } from "./DeleteCollectionDialog";
-import { EditCollectionDialog } from "./EditCollectionDialog";
+import type { CollectionDetailProof } from "./proof";
 
 type CollectionDetailViewProps = {
   slug: string;
-  restaurants: Restaurant[];
-  /** Dev-only visual QA overrides. */
-  proof?: "loading" | "empty" | "missing";
+  proof?: CollectionDetailProof;
 };
+
+function today(): string {
+  const now = new Date();
+  return `${now.getFullYear()}-${String(now.getMonth() + 1).padStart(2, "0")}-${String(
+    now.getDate(),
+  ).padStart(2, "0")}`;
+}
+
+function CollectionMissing() {
+  return (
+    <div className="min-w-0 bg-dp-bg" data-collections-page="missing">
+      <PageContainer className="min-w-0 pb-[var(--dp-section)] pt-[104px]">
+        <div className="rounded-[var(--dp-radius-lg)] border border-dp-outline-variant bg-dp-surface px-6 py-14 text-center">
+          <h1 className="dp-headline-sm text-dp-primary-deep">
+            Collection not found
+          </h1>
+          <p className="mx-auto mt-3 max-w-lg font-sans text-[15px] leading-relaxed text-dp-ink-secondary">
+            This collection may have been deleted, or it belongs to a different
+            device. Your saved restaurants are unaffected.
+          </p>
+          <Link
+            href="/collections"
+            className="mt-7 inline-flex h-12 min-h-11 items-center justify-center rounded-[var(--dp-radius-md)] bg-dp-primary px-5 font-sans text-[14px] font-semibold text-dp-on-primary no-underline hover:bg-dp-primary-hover"
+          >
+            Back to collections
+          </Link>
+        </div>
+      </PageContainer>
+    </div>
+  );
+}
 
 export function CollectionDetailView({
   slug,
-  restaurants,
   proof,
 }: CollectionDetailViewProps) {
   const {
     ready,
-    mode,
+    restaurants,
     store,
+    mode,
     migrationMessage,
     migrationStatus,
-    findCollectionBySlug,
+    storageError,
+    collectionSyncStatus,
+    collectionSyncMessage,
+    retryCollectionSync,
+    removeFromCollection,
   } = usePassport();
   const [editOpen, setEditOpen] = useState(false);
   const [deleteOpen, setDeleteOpen] = useState(false);
   const [addOpen, setAddOpen] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+  const menuRef = useRef<HTMLDivElement | null>(null);
 
-  const sync = useMemo(
+  const collection = findCollectionBySlug(store, slug);
+  const detail = useMemo(
     () =>
-      toCollectionsSyncState({
-        mode,
-        migrationMessage,
-        migrationCompleted: migrationStatus.completed,
-      }),
-    [mode, migrationMessage, migrationStatus.completed],
+      collection
+        ? buildCollectionDetail(store, restaurants, collection, today())
+        : null,
+    [collection, store, restaurants],
   );
 
-  const collection = findCollectionBySlug(slug);
+  useEffect(() => {
+    if (!menuOpen) return;
+    const onPointerDown = (event: PointerEvent) => {
+      if (!menuRef.current?.contains(event.target as Node)) setMenuOpen(false);
+    };
+    const onKey = (event: KeyboardEvent) => {
+      if (event.key === "Escape") setMenuOpen(false);
+    };
+    document.addEventListener("pointerdown", onPointerDown);
+    document.addEventListener("keydown", onKey);
+    return () => {
+      document.removeEventListener("pointerdown", onPointerDown);
+      document.removeEventListener("keydown", onKey);
+    };
+  }, [menuOpen]);
 
-  if (proof === "loading" || !ready) {
+  const sync = toSyncState({
+    mode: proof === "device-only" ? "local" : mode,
+    migrationMessage,
+    migrationCompleted: migrationStatus.completed,
+    status:
+      proof === "sync-pending"
+        ? "pending"
+        : proof === "sync-failed"
+          ? "failed"
+          : collectionSyncStatus,
+    message:
+      proof === "sync-failed"
+        ? "This collection is still saved on this device."
+        : collectionSyncMessage,
+    storageError,
+  });
+
+  if (!ready || proof === "loading") {
     return <CollectionsLoadingState variant="detail" />;
   }
 
-  if (proof === "missing" || !collection) {
-    return <CollectionDetailMissing />;
+  if (proof === "missing" || !collection || !detail) {
+    return <CollectionMissing />;
   }
 
-  const model = toCollectionDetailModel({
-    collection,
-    store,
-    restaurants,
-    sync,
-  });
-
-  const members = proof === "empty" ? [] : model.members;
-  const progress =
-    proof === "empty"
-      ? {
-          ...model.progress,
-          totalMembers: 0,
-          visitedMembers: 0,
-          remainingMembers: 0,
-          percent: 0,
-          starsInCollection: 0,
-          statesRepresented: 0,
-          stateLabels: [] as string[],
-        }
-      : model.progress;
+  const items: CollectionRestaurantItem[] = proof === "empty" ? [] : detail.items;
+  const countLabel = `${items.length} ${
+    items.length === 1 ? "restaurant" : "restaurants"
+  }`;
 
   return (
     <div
-      className="border-b border-dp-outline-variant bg-dp-bg"
+      className="min-w-0 bg-dp-bg"
       data-collections-page="detail"
       data-collection-slug={collection.slug}
     >
-      <PageContainer className="pb-[var(--dp-section)] pt-[104px]">
-        <div className="mb-12">
-          <Breadcrumbs items={model.breadcrumbs} />
-        </div>
+      <PageContainer className="min-w-0 pb-[var(--dp-section)] pt-[104px]">
+        <nav aria-label="Breadcrumb" className="mb-6">
+          <ol className="flex flex-wrap items-center gap-2 font-sans text-[14px] text-dp-ink-muted">
+            <li>
+              <Link href="/passport" className="no-underline hover:underline">
+                My Restaurants
+              </Link>
+            </li>
+            <li aria-hidden="true">/</li>
+            <li>
+              <Link href="/collections" className="no-underline hover:underline">
+                Collections
+              </Link>
+            </li>
+            <li aria-hidden="true">/</li>
+            <li aria-current="page" className="min-w-0 truncate">
+              {collection.name}
+            </li>
+          </ol>
+        </nav>
 
-        <section
-          className="mb-[var(--dp-section)] grid grid-cols-1 items-end gap-[var(--dp-gutter)] lg:grid-cols-12"
-          data-collections-section="title"
-        >
-          <div className="lg:col-span-8">
-            <div className="mb-4 flex flex-wrap items-center gap-x-4 gap-y-2 font-sans text-[14px] text-dp-ink-muted">
-              <span>
-                {progress.totalMembers}{" "}
-                {progress.totalMembers === 1 ? "restaurant" : "restaurants"}
-              </span>
-              <span aria-hidden="true">·</span>
-              <span className="font-medium text-dp-primary">
-                {progress.visitedMembers} visited
-              </span>
-              {progress.statesRepresented > 0 ? (
-                <>
-                  <span aria-hidden="true">·</span>
-                  <span>
-                    {progress.statesRepresented}{" "}
-                    {progress.statesRepresented === 1 ? "state" : "states"}
-                    {progress.stateLabels.length
-                      ? ` (${progress.stateLabels.join(", ")})`
-                      : ""}
-                  </span>
-                </>
-              ) : null}
-            </div>
-            <h1 className="dp-display-lg break-words text-dp-ink max-md:dp-display-lg-mobile">
-              {model.name}
+        <header className="mb-8 flex min-w-0 flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
+          <div className="min-w-0 max-w-2xl">
+            <h1 className="font-display text-[36px] leading-[1.1] tracking-[-0.01em] break-words text-dp-primary-deep md:text-[48px] md:tracking-[-0.02em]">
+              {collection.name}
             </h1>
-            {model.description ? (
-              <p className="mt-4 max-w-2xl font-sans text-[18px] leading-relaxed text-dp-ink-muted">
-                {model.description}
+            {collection.description ? (
+              <p className="dp-body-lg mt-4 text-dp-ink-secondary">
+                {collection.description}
               </p>
             ) : null}
+            <p className="mt-4 font-sans text-sm font-medium text-dp-ink-muted">
+              {countLabel}
+              {detail.updatedLabel ? ` · ${detail.updatedLabel}` : ""}
+            </p>
           </div>
-          <div className="relative flex flex-wrap items-center gap-3 lg:col-span-4 lg:justify-end">
+
+          <div className="flex shrink-0 flex-wrap items-center gap-3">
+            {/* The empty state already offers this, so it is not repeated here. */}
+            {items.length > 0 ? (
+              <Button
+                type="button"
+                variant="primary"
+                onClick={() => setAddOpen(true)}
+              >
+                Add restaurants
+              </Button>
+            ) : null}
             <Button
               type="button"
               variant="secondary"
               onClick={() => setEditOpen(true)}
-              data-collections-action="edit"
             >
-              Edit
+              Edit collection
             </Button>
-            <button
-              type="button"
-              aria-label="More collection actions"
-              aria-expanded={menuOpen}
-              onClick={() => setMenuOpen((open) => !open)}
-              className="inline-flex h-12 w-12 items-center justify-center rounded-full border border-dp-outline-variant text-dp-primary hover:bg-dp-soft focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-dp-focus"
-            >
-              ⋯
-            </button>
-            {menuOpen ? (
-              <div
-                role="menu"
-                className="absolute right-0 top-14 z-20 w-44 overflow-hidden rounded-[var(--dp-radius-md)] border border-dp-outline-variant bg-dp-surface shadow-[var(--dp-shadow-hover)]"
+            <div className="relative" ref={menuRef}>
+              <button
+                type="button"
+                aria-label="More collection actions"
+                aria-expanded={menuOpen}
+                aria-haspopup="menu"
+                onClick={() => setMenuOpen((open) => !open)}
+                className="inline-flex h-12 w-12 items-center justify-center rounded-[var(--dp-radius-md)] border border-dp-outline-variant font-sans text-lg leading-none text-dp-ink-secondary hover:bg-dp-soft focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-dp-focus"
               >
-                <button
-                  type="button"
-                  role="menuitem"
-                  className="block w-full px-4 py-3 text-left font-sans text-[14px] text-dp-error hover:bg-dp-soft"
-                  onClick={() => {
-                    setMenuOpen(false);
-                    setDeleteOpen(true);
-                  }}
+                <span aria-hidden="true">⋯</span>
+              </button>
+              {menuOpen ? (
+                <div
+                  role="menu"
+                  aria-label="Collection actions"
+                  className="absolute right-0 top-14 z-20 w-52 overflow-hidden rounded-[var(--dp-radius-md)] border border-dp-outline-variant bg-dp-surface shadow-[var(--dp-shadow-hover)]"
                 >
-                  Delete collection
-                </button>
-              </div>
-            ) : null}
+                  <button
+                    type="button"
+                    role="menuitem"
+                    className="block w-full px-4 py-3 text-left font-sans text-[14px] text-dp-error hover:bg-dp-soft"
+                    onClick={() => {
+                      setMenuOpen(false);
+                      setDeleteOpen(true);
+                    }}
+                  >
+                    Delete collection
+                  </button>
+                </div>
+              ) : null}
+            </div>
           </div>
-        </section>
+        </header>
 
-        <CollectionDetailHero
-          cover={model.cover}
-          progress={progress}
-          onAddRestaurants={() => setAddOpen(true)}
-        />
+        <div className="mb-6">
+          <PassportSyncNotice sync={sync} compact onRetry={retryCollectionSync} />
+        </div>
 
-        {members.length === 0 ? (
-          <div className="mt-[var(--dp-section)]">
-            <CollectionDetailEmptyState
-              onAddRestaurants={() => setAddOpen(true)}
-            />
+        {detail.missingCount > 0 ? (
+          <p className="mb-6 rounded-[var(--dp-radius-md)] border border-dp-outline-variant bg-dp-surface-low px-4 py-3 font-sans text-sm text-dp-ink-secondary">
+            {detail.missingCount}{" "}
+            {detail.missingCount === 1 ? "restaurant is" : "restaurants are"} no
+            longer in the guide and {detail.missingCount === 1 ? "is" : "are"}{" "}
+            hidden from this collection.
+          </p>
+        ) : null}
+
+        {items.length === 0 ? (
+          <div
+            className="rounded-[var(--dp-radius-lg)] border border-dp-outline-variant bg-dp-surface px-6 py-12 text-center"
+            data-collections-state="detail-empty"
+          >
+            <h2 className="dp-headline-sm text-dp-primary-deep">
+              Nothing in this collection yet
+            </h2>
+            <p className="mx-auto mt-3 max-w-lg font-sans text-[15px] leading-relaxed text-dp-ink-secondary">
+              Add restaurants you have already saved. Adding one here also keeps
+              it saved in My Restaurants.
+            </p>
+            <div className="mt-7 flex flex-col items-center justify-center gap-3 sm:flex-row">
+              <Button
+                type="button"
+                variant="primary"
+                onClick={() => setAddOpen(true)}
+              >
+                Add restaurants
+              </Button>
+              <Link
+                href="/explore"
+                className="inline-flex h-[var(--dp-control-height)] min-h-11 items-center justify-center rounded-[var(--dp-radius-lg)] border border-dp-outline-variant bg-dp-surface px-5 font-sans text-[14px] font-semibold text-dp-primary no-underline hover:bg-dp-soft"
+              >
+                Explore restaurants
+              </Link>
+            </div>
           </div>
         ) : (
-          <CollectionRestaurantList members={members} collection={collection} />
+          <ul className="grid min-w-0 grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+            {items.map((item) => (
+              <li key={item.slug} className="min-w-0">
+                <CollectionRestaurantCard
+                  item={item}
+                  onRemove={() => removeFromCollection(collection.id, item.slug)}
+                />
+              </li>
+            ))}
+          </ul>
         )}
-
-        <div className="mt-[var(--dp-section)]">
-          <PassportSyncNotice
-            sync={{
-              mode: sync.mode,
-              migrationMessage: sync.migrationMessage,
-              hasSyncError: sync.hasSyncError,
-            }}
-            compact
-          />
-        </div>
       </PageContainer>
 
-      <EditCollectionDialog
-        key={`edit-${collection.id}-${editOpen ? "open" : "closed"}`}
-        open={editOpen}
-        onClose={() => setEditOpen(false)}
-        collection={collection}
-      />
-      <DeleteCollectionDialog
-        open={deleteOpen}
-        onClose={() => setDeleteOpen(false)}
-        collection={collection}
-      />
-      <AddRestaurantsDialog
-        key={`add-${collection.id}`}
-        open={addOpen}
-        onClose={() => setAddOpen(false)}
-        collection={collection}
-        restaurants={restaurants}
-      />
+      {editOpen ? (
+        <CollectionFormDialog
+          key={`edit-${collection.id}`}
+          open
+          collection={collection}
+          onClose={() => setEditOpen(false)}
+        />
+      ) : null}
+
+      {deleteOpen ? (
+        <DeleteCollectionDialog
+          open
+          collection={collection}
+          redirectToIndex
+          onClose={() => setDeleteOpen(false)}
+        />
+      ) : null}
+
+      {addOpen ? (
+        <AddRestaurantsDialog
+          open
+          collection={collection}
+          onClose={() => setAddOpen(false)}
+        />
+      ) : null}
     </div>
   );
 }

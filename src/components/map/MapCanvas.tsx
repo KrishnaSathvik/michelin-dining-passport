@@ -2,7 +2,7 @@
 
 import "maplibre-gl/dist/maplibre-gl.css";
 
-import { useEffect, useMemo, useRef, useState } from "react";
+import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import MapGL, {
   GeolocateControl,
   Layer,
@@ -11,7 +11,11 @@ import MapGL, {
   Source,
   type MapRef,
 } from "react-map-gl/maplibre";
-import type { MapLayerMouseEvent, Map as MaplibreMap } from "maplibre-gl";
+import type {
+  GeoJSONSource,
+  MapLayerMouseEvent,
+  Map as MaplibreMap,
+} from "maplibre-gl";
 import { mapConfig } from "@/config/map";
 import type { MappableRestaurant } from "@/lib/data/geocodes";
 import { offsetSharedCoordinates } from "@/lib/data/geocodes";
@@ -85,22 +89,36 @@ export function MapCanvas({
     [plotted, selectedSlug],
   );
 
+  /** Frame all pins. Only meaningful once the map is loaded and sized —
+      fitting before the container has real dimensions computes a bad zoom. */
+  const fitToPlotted = useCallback(
+    (map: MaplibreMap, animate: boolean) => {
+      if (plotted.length === 0) return;
+      const lngs = plotted.map((item) => item.longitude);
+      const lats = plotted.map((item) => item.latitude);
+      map.fitBounds(
+        [
+          [Math.min(...lngs), Math.min(...lats)],
+          [Math.max(...lngs), Math.max(...lats)],
+        ],
+        {
+          padding: 64,
+          maxZoom: 6,
+          duration: animate && !reduceMotion ? 500 : 0,
+        },
+      );
+    },
+    [plotted, reduceMotion],
+  );
+
+  // Re-fit when explicitly asked (fitToken) — the initial fit runs on load.
+  const didFitToken = useRef(0);
   useEffect(() => {
-    const map = mapRef.current;
-    if (!map || plotted.length === 0) return;
-    const lngs = plotted.map((item) => item.longitude);
-    const lats = plotted.map((item) => item.latitude);
-    map.fitBounds(
-      [
-        [Math.min(...lngs), Math.min(...lats)],
-        [Math.max(...lngs), Math.max(...lats)],
-      ],
-      {
-        padding: 56,
-        duration: reduceMotion ? 0 : 500,
-      },
-    );
-  }, [fitToken, plotted, reduceMotion]);
+    const map = mapRef.current?.getMap();
+    if (!map || fitToken === didFitToken.current) return;
+    didFitToken.current = fitToken;
+    fitToPlotted(map, true);
+  }, [fitToken, fitToPlotted]);
 
   useEffect(() => {
     if (!flyToSlug) return;
@@ -109,8 +127,9 @@ export function MapCanvas({
     if (!target || !map) return;
     map.flyTo({
       center: [target.longitude, target.latitude],
-      zoom: Math.max(map.getZoom(), 11),
-      duration: reduceMotion ? 0 : 450,
+      // Past clusterMaxZoom so the target shows as an individual pin.
+      zoom: Math.max(map.getZoom(), 14),
+      duration: reduceMotion ? 0 : 600,
     });
   }, [bySlug, flyToSlug, reduceMotion]);
 
@@ -133,27 +152,30 @@ export function MapCanvas({
     if (feature.layer?.id === "restaurant-clusters") {
       const map = mapRef.current;
       const clusterId = feature.properties?.cluster_id;
-      if (!map || typeof clusterId !== "number") return;
-      const source = map.getSource("restaurants");
-      if (source && "getClusterExpansionZoom" in source) {
-        (
-          source as {
-            getClusterExpansionZoom: (
-              id: number,
-              cb: (err: Error | null, zoom: number) => void,
-            ) => void;
-          }
-        ).getClusterExpansionZoom(clusterId, (err, zoom) => {
-          if (err || !feature.geometry || feature.geometry.type !== "Point") {
-            return;
-          }
+      const source = map?.getSource("restaurants") as GeoJSONSource | undefined;
+      if (
+        !map ||
+        !source ||
+        typeof clusterId !== "number" ||
+        feature.geometry?.type !== "Point"
+      ) {
+        return;
+      }
+      const center = feature.geometry.coordinates as [number, number];
+      // maplibre-gl v5: getClusterExpansionZoom returns a Promise.
+      void source
+        .getClusterExpansionZoom(clusterId)
+        .then((zoom) => {
+          map.easeTo({ center, zoom, duration: reduceMotion ? 0 : 300 });
+        })
+        .catch(() => {
+          // Fall back to a gentle zoom-in on the cluster center.
           map.easeTo({
-            center: feature.geometry.coordinates as [number, number],
-            zoom,
+            center,
+            zoom: Math.min(map.getZoom() + 2, mapConfig.maxZoom),
             duration: reduceMotion ? 0 : 300,
           });
         });
-      }
       return;
     }
     const slug = feature.properties?.slug;
@@ -202,7 +224,6 @@ export function MapCanvas({
         }}
         onMoveEnd={(event) => emitBounds(event.target)}
         style={{ width: "100%", height: "100%" }}
-        reuseMaps
       >
         <NavigationControl position="bottom-right" showCompass={false} />
         <GeolocateControl
@@ -257,7 +278,7 @@ export function MapCanvas({
             filter={["!", ["has", "point_count"]]}
             paint={{
               "circle-color": "#123B2F",
-              "circle-radius": ["case", ["get", "selected"], 8, 6],
+              "circle-radius": ["case", ["get", "selected"], 11, 8],
               "circle-stroke-width": [
                 "case",
                 ["get", "selected"],

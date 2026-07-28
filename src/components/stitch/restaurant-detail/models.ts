@@ -2,7 +2,6 @@ import type {
   ApprovedRestaurantImage,
   ResolvedReservationAction,
   RestaurantCardModel,
-  RestaurantNearbyRowModel,
 } from "@/components/stitch/restaurant";
 import type { ReservationProvider } from "@/lib/reservations/types";
 import type { BreadcrumbItem } from "@/lib/seo/jsonld";
@@ -29,7 +28,7 @@ export type RestaurantDetailModel = {
     latitude: number;
     longitude: number;
   };
-  image?: ApprovedRestaurantImage;
+  gallery: RestaurantGalleryImage[];
   reservation: ResolvedReservationAction;
   /** Provider for reservation analytics when available. */
   reservationProvider?: ReservationProvider;
@@ -43,18 +42,17 @@ export type RestaurantDetailModel = {
   googlePlaceId: string | null;
 };
 
-export type RestaurantDetailSourceNote = {
-  importedAt: string;
-  dataUpdatedLabel: string;
-  independenceDisclaimer: string;
+export type RestaurantGalleryImage = ApprovedRestaurantImage & {
+  id: string;
+  kind: "verified" | "representative";
+  credit?: string;
 };
 
 export type RestaurantDetailViewModel = {
   restaurant: RestaurantDetailModel;
   breadcrumbs: BreadcrumbItem[];
   related: RestaurantCardModel[];
-  nearby: RestaurantNearbyRowModel[];
+  nearby: RestaurantCardModel[];
   relatedTitle: string;
   nearbyTitle: string;
-  source: RestaurantDetailSourceNote;
 };

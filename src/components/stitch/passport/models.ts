@@ -1,45 +1,16 @@
-import type { ResolvedReservationAction } from "@/components/stitch/restaurant/models";
-import type { LocalCollection, UserRestaurantRecord } from "@/lib/passport/types";
-import type { ReservationSurface } from "@/lib/reservations/types";
-
+import type { LocalCollection } from "@/lib/passport/types";
+import type {
+  RestaurantPlan,
+  RestaurantVisit,
+} from "@/lib/passport/types";
 export type PassportListMode = "saved" | "planned" | "visited";
 
-export type PassportSortOption =
-  | "date-saved-newest"
-  | "date-saved-oldest"
-  | "name-asc"
-  | "name-desc"
-  | "planned-upcoming"
-  | "planned-furthest"
-  | "visit-newest"
-  | "visit-oldest";
-
-export type PassportViewMode = "grid" | "list";
-
 export type JourneySummaryMetric = {
-  key: "visited" | "toVisit" | "favorites";
+  key: "saved" | "planned" | "visits" | "cities";
   label: string;
   value: number;
   description: string;
   href: string | null;
-};
-
-export type StarProgressRow = {
-  stars: 1 | 2 | 3;
-  label: string;
-  visited: number;
-  total: number;
-};
-
-export type StarsCollectedModel = {
-  totalStars: number;
-  rows: StarProgressRow[];
-};
-
-export type StatesExploredModel = {
-  explored: number;
-  total: number;
-  stateLabels: string[];
 };
 
 export type CollectionPreviewModel = {
@@ -50,19 +21,23 @@ export type CollectionPreviewModel = {
   restaurantCount: number;
   visitedCount: number;
   href: string;
-  cover: {
+  covers: Array<{
     name: string;
     seed: string;
     city?: string;
     stars?: 1 | 2 | 3;
     imageUrl?: string | null;
-  } | null;
+    placeId?: string | null;
+  }>;
 };
 
 export type PassportSyncState = {
   mode: "local" | "cloud";
   migrationMessage: string | null;
   hasSyncError: boolean;
+  status?: "idle" | "pending" | "failed";
+  message?: string | null;
+  storageError?: boolean;
 };
 
 export type PassportHeroModel = {
@@ -75,9 +50,10 @@ export type PassportHeroModel = {
 
 export type PassportActiveModel = {
   hero: PassportHeroModel;
+  featuredPlan: PassportPlanModel | null;
+  recentVisits: PassportVisitModel[];
+  savedRestaurants: PassportSavedRestaurantModel[];
   summary: JourneySummaryMetric[];
-  stars: StarsCollectedModel;
-  states: StatesExploredModel;
   collections: CollectionPreviewModel[];
   sync: PassportSyncState;
 };
@@ -90,7 +66,37 @@ export type PassportEmptyModel = {
   sync: PassportSyncState;
 };
 
-export type SavedRestaurantCardModel = {
+export type PassportPlanModel = {
+  plan: RestaurantPlan;
+  status: "upcoming" | "needs-update" | "past" | "undated";
+  slug: string;
+  name: string;
+  distinction: 1 | 2 | 3;
+  cuisine?: string;
+  location: string;
+  dateLabel: string;
+  timeLabel: string | null;
+  imageUrl?: string | null;
+  placeId?: string | null;
+  alsoVisited: boolean;
+};
+
+export type PassportVisitModel = {
+  visit: RestaurantVisit;
+  slug: string;
+  name: string;
+  distinction: 1 | 2 | 3;
+  cuisine?: string;
+  location: string;
+  dateLabel: string;
+  imageUrl?: string | null;
+  placeId?: string | null;
+  favoriteDishesPreview: string | null;
+  wouldReturn: boolean | null;
+  personalFavorite: boolean;
+};
+
+export type PassportSavedRestaurantModel = {
   slug: string;
   name: string;
   distinction: 1 | 2 | 3;
@@ -98,46 +104,7 @@ export type SavedRestaurantCardModel = {
   location: string;
   price?: string;
   imageUrl?: string | null;
-  savedAtLabel: string | null;
-  isSaved: boolean;
-  reservation: ResolvedReservationAction;
-  surface: ReservationSurface;
-  record: UserRestaurantRecord;
-};
-
-export type PlannedRestaurantRowModel = {
-  slug: string;
-  name: string;
-  distinction: 1 | 2 | 3;
-  cuisine?: string;
-  location: string;
-  imageUrl?: string | null;
-  plannedDateLabel: string | null;
-  plannedDateIso: string | null;
-  reservationProvider: string | null;
-  hasConfirmationNote: boolean;
-  hasPlanningNote: boolean;
-  alsoVisited: boolean;
-  reservation: ResolvedReservationAction;
-  surface: ReservationSurface;
-  record: UserRestaurantRecord;
-};
-
-export type VisitedRestaurantCardModel = {
-  slug: string;
-  name: string;
-  distinction: 1 | 2 | 3;
-  cuisine?: string;
-  location: string;
-  imageUrl?: string | null;
-  visitDateLabel: string | null;
-  visitDateIso: string | null;
-  favoriteDishes: string[];
-  notesPreview: string | null;
-  isFavorite: boolean;
-  reservation: ResolvedReservationAction;
-  surface: ReservationSurface;
-  record: UserRestaurantRecord;
+  placeId?: string | null;
 };
 
 export type PassportListPageModel = {
@@ -158,4 +125,4 @@ export type CatalogDenominators = {
   states: number;
 };
 
-export type { LocalCollection, UserRestaurantRecord };
+export type { LocalCollection };

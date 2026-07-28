@@ -17,9 +17,9 @@ type ExplorePageProps = {
 };
 
 export const metadata = {
-  title: "Explore",
+  title: "Explore Michelin-Starred Restaurants",
   description:
-    "Search and filter Michelin-starred restaurants across the United States.",
+    "Discover Michelin-starred restaurants across the United States. Explore by city, cuisine, and distinction, and find official booking options.",
 };
 
 /**

@@ -10,8 +10,8 @@ export function PassportSyncSection({ sync }: PassportSyncSectionProps) {
   return (
     <AccountSection
       id="sync"
-      title="Passport Sync"
-      description="How this signed-in account relates to your device Passport."
+      title="My Restaurants Sync"
+      description="How this signed-in account relates to your device saves."
     >
       <div className="flex flex-col gap-5" data-account-section-body="sync">
         <p
@@ -33,7 +33,7 @@ export function PassportSyncSection({ sync }: PassportSyncSectionProps) {
             href="/passport"
             className="inline-flex h-[var(--dp-control-height)] items-center justify-center rounded-[var(--dp-radius-lg)] border border-dp-border bg-dp-surface px-5 font-sans text-[14px] font-semibold text-dp-primary no-underline hover:bg-dp-soft focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-dp-focus"
           >
-            View Passport
+            View My Restaurants
           </Link>
         </div>
       </div>

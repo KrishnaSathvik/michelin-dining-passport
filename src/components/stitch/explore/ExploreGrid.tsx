@@ -1,6 +1,7 @@
 import { RestaurantDiscoveryCard } from "@/components/stitch/restaurant";
 import type { RestaurantCardModel } from "@/components/stitch/restaurant";
 import { PageContainer } from "@/components/stitch/PageContainer";
+import { getApprovedGooglePlaceId } from "@/lib/google-places/place-ids";
 
 type ExploreGridProps = {
   cards: RestaurantCardModel[];
@@ -19,7 +20,11 @@ export function ExploreGrid({ cards }: ExploreGridProps) {
       >
         {cards.map((card, index) => (
           <li key={card.slug}>
-            <RestaurantDiscoveryCard model={card} priority={index < 4} />
+            <RestaurantDiscoveryCard
+              model={card}
+              priority={index < 4}
+              placeId={getApprovedGooglePlaceId(card.slug)}
+            />
           </li>
         ))}
       </ul>

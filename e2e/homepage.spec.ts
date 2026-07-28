@@ -1,14 +1,14 @@
 import { test, expect } from "@playwright/test";
 
 test.describe("Stitch homepage explore_feed", () => {
-  test("shows Dining Passport branding and one H1", async ({ page }) => {
+  test("shows Orellin branding and one H1", async ({ page }) => {
     await page.goto("/");
     await expect(
-      page.getByRole("banner").getByRole("link", { name: "Dining Passport" }),
+      page.getByRole("banner").getByRole("link", { name: "Orellin" }),
     ).toBeVisible();
     await expect(page.getByRole("heading", { level: 1 })).toHaveCount(1);
     await expect(page.getByRole("heading", { level: 1 })).toContainText(
-      /Michelin-starred|America/,
+      /Remarkable restaurants/i,
     );
   });
 
@@ -54,6 +54,11 @@ test.describe("Stitch homepage explore_feed", () => {
       .getByRole("banner")
       .getByRole("link", { name: "Search restaurants" })
       .click();
+    // The header trigger now opens global search; Explore stays the full-results
+    // destination reached from inside the dialog.
+    const search = page.getByRole("dialog", { name: "Search restaurants" });
+    await expect(search).toBeVisible();
+    await search.locator("[data-global-search-see-all]").click();
     await expect(page).toHaveURL(/\/explore/);
   });
 

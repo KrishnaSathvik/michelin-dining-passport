@@ -30,7 +30,7 @@ export function AppChrome({ user, footer, children }: AppChromeProps) {
       {!auth ? <AppHeaderClient user={user} /> : null}
       <main
         id="main-content"
-        className={map ? "flex min-h-0 flex-1 flex-col" : "flex-1"}
+        className={map ? "flex min-h-0 min-w-0 flex-1 flex-col" : "min-w-0 flex-1"}
         tabIndex={-1}
       >
         {children}

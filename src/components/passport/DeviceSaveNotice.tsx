@@ -10,7 +10,7 @@ export function DeviceSaveNotice() {
     return (
       <div className="space-y-2">
         <p className="border border-dp-border bg-dp-surface/60 px-4 py-3 font-sans text-sm text-dp-ink-muted">
-          Signed in — Passport changes sync to your account.{" "}
+          Signed in — My Restaurants changes sync to your account.{" "}
           <Link
             href="/account"
             className="text-dp-primary underline-offset-4 hover:underline"

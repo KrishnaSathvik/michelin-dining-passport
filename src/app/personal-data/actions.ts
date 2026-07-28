@@ -137,11 +137,11 @@ export async function loadCloudPassportStore(): Promise<PassportStore | null> {
     };
   }
 
-  return {
+  return migratePassportStore({
     version: 2,
     userRestaurants,
     collections: localCollections,
-  };
+  });
 }
 
 export async function upsertCloudRestaurant(
@@ -218,11 +218,13 @@ export async function migrateLocalPassportToCloud(
   }
 
   const local = migratePassportStore(localRaw);
-  const cloud = (await loadCloudPassportStore()) ?? {
-    version: 2 as const,
-    userRestaurants: {},
-    collections: {},
-  };
+  const cloud =
+    (await loadCloudPassportStore()) ??
+    migratePassportStore({
+      version: 2,
+      userRestaurants: {},
+      collections: {},
+    });
 
   const conflicts: MergeConflict[] = [];
   const unknownSlugs: string[] = [];

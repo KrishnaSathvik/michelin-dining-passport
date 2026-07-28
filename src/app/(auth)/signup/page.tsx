@@ -8,7 +8,7 @@ type SearchParams = Promise<Record<string, string | string[] | undefined>>;
 
 export const metadata = buildPageMetadata({
   title: "Create account",
-  description: "Create a Dining Passport account to sync saves across devices.",
+  description: "Create a Orellin account to sync saves across devices.",
   path: "/signup",
   noIndex: true,
 });

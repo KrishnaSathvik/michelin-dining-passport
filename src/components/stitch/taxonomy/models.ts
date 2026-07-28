@@ -74,6 +74,12 @@ export type StarPageViewModel = {
   stars: 1 | 2 | 3;
   hero: TaxonomyHeroModel;
   meaning: string;
+  /** Level explainer shown before the restaurant listing. */
+  explainer: {
+    heading: string;
+    tagline: string;
+    paragraphs: string[];
+  };
   restaurants: RestaurantCardModel[];
   /** When set, page shows a capped subset and this Explore CTA. */
   remainingExploreHref: string | null;

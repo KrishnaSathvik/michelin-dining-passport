@@ -59,6 +59,8 @@
   --dp-section: 80px;
   --dp-content-max: 1280px;
   --dp-header-height: 72px;
+  /* Compact Explore sticky search+filters (≤132px per explore redesign). */
+  --dp-explore-sticky-height: 132px;
   --dp-control-height: 48px;
   --dp-map-panel-width: 420px;
   --dp-drawer-width: 400px;
@@ -145,6 +147,8 @@
 @layer base {
   html {
     scroll-behavior: smooth;
+    overflow-x: clip;
+    max-width: 100%;
   }
 
   @media (prefers-reduced-motion: reduce) {
@@ -168,6 +172,15 @@
     font-size: 16px;
     line-height: 1.5;
     min-height: 100%;
+    overflow-x: clip;
+    max-width: 100%;
+  }
+
+  /* Keep major layout shells from forcing horizontal scroll on narrow phones. */
+  #__next,
+  main {
+    max-width: 100%;
+    min-width: 0;
   }
 
   ::selection {

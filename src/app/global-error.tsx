@@ -2,7 +2,7 @@
 
 /**
  * Root failure shell — must not depend on layout providers or Passport state.
- * Minimal independent styles that still read as Dining Passport.
+ * Minimal independent styles that still read as Orellin.
  */
 export default function GlobalError({
   reset,
@@ -12,6 +12,12 @@ export default function GlobalError({
 }) {
   return (
     <html lang="en">
+      <head>
+        <meta
+          name="viewport"
+          content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
+        />
+      </head>
       <body
         style={{
           margin: 0,
@@ -21,11 +27,14 @@ export default function GlobalError({
           alignItems: "center",
           justifyContent: "center",
           padding: "48px 24px",
+          /* Match --dp-* tokens; cannot import layout fonts here. */
           fontFamily:
             'ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif',
           background: "#fcf9f8",
           color: "#1c1b1b",
           textAlign: "center",
+          overflowX: "clip",
+          maxWidth: "100%",
         }}
       >
         <p
@@ -38,14 +47,15 @@ export default function GlobalError({
             color: "#123b2f",
           }}
         >
-          Dining Passport
+          ORELLIN
         </p>
         <h1
           style={{
             margin: "24px 0 0",
-            maxWidth: 28 * 16,
-            fontFamily: 'Georgia, "Times New Roman", serif',
-            fontSize: 28,
+            maxWidth: "min(28rem, 100%)",
+            /* Display stack mirrors Literata fallbacks used by --font-display. */
+            fontFamily: 'ui-serif, Georgia, "Times New Roman", serif',
+            fontSize: "clamp(1.5rem, 5vw, 1.75rem)",
             fontWeight: 500,
             lineHeight: 1.3,
             color: "#1c1b1b",

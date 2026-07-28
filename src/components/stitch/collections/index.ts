@@ -1,23 +1,16 @@
 export { CollectionsPageView } from "./CollectionsPageView";
 export { CollectionDetailView } from "./CollectionDetailView";
 export { CollectionsLoadingState } from "./CollectionsLoadingState";
+export { CollectionCard } from "./CollectionCard";
+export { CollectionMosaic } from "./CollectionMosaic";
+export { CollectionRestaurantCard } from "./CollectionRestaurantCard";
+export { CollectionFormDialog } from "./CollectionFormDialog";
+export { DeleteCollectionDialog } from "./DeleteCollectionDialog";
+export { AddRestaurantsDialog } from "./AddRestaurantsDialog";
+export { CollectionsEmptyState } from "./CollectionsEmptyState";
 export {
-  selectFeaturedCollection,
-  buildCollectionProgress,
-  toCollectionCardModel,
-  uniqueMemberSlugs,
-  resolveMembers,
-} from "./metrics";
-export {
-  toCollectionsIndexModel,
-  toCollectionDetailModel,
-  toCollectionsSyncState,
-} from "./adapters";
-export { filterCollectionsByQuery, sortCollections } from "./filters";
-export type {
-  CollectionCardModel,
-  CollectionDetailModel,
-  CollectionProgressModel,
-  CollectionSortId,
-  CollectionsIndexModel,
-} from "./models";
+  UI_PROOFS_ENABLED,
+  readCollectionsProof,
+  readCollectionDetailProof,
+} from "./proof";
+export type { CollectionsProof, CollectionDetailProof } from "./proof";

@@ -1,6 +1,6 @@
 export type {
   RestaurantDetailModel,
-  RestaurantDetailSourceNote,
+  RestaurantGalleryImage,
   RestaurantDetailViewModel,
 } from "./models";
 export {
@@ -16,10 +16,6 @@ export { RestaurantIdentityContent } from "./RestaurantIdentityContent";
 export { RestaurantFacts } from "./RestaurantFacts";
 export { RestaurantLocationPreview } from "./RestaurantLocationPreview";
 export { RestaurantGoogleSection } from "./RestaurantGoogleSection";
-export { RestaurantJourneySection } from "./RestaurantJourneySection";
-export { JourneyControls } from "./JourneyControls";
-export { PlanningDetailsDialog } from "./PlanningDetailsDialog";
-export { VisitDetailsDialog } from "./VisitDetailsDialog";
 export { RelatedRestaurantsSection } from "./RelatedRestaurantsSection";
 export { NearbyRestaurantsSection } from "./NearbyRestaurantsSection";
 export { RestaurantDetailStickyBar } from "./RestaurantDetailStickyBar";

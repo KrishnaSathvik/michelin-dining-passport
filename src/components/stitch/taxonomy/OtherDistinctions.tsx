@@ -26,7 +26,7 @@ export function OtherDistinctions({ items }: OtherDistinctionsProps) {
               <Link
                 href={item.href}
                 aria-current={item.current ? "page" : undefined}
-                className={`flex min-h-[8rem] flex-col justify-between rounded-[var(--dp-radius-xl)] border p-5 no-underline transition-colors ${
+                className={`flex h-full min-h-[8rem] flex-col justify-between rounded-[var(--dp-radius-xl)] border p-5 no-underline transition-colors ${
                   item.current
                     ? "border-[var(--dp-star-gold)] bg-[color-mix(in_srgb,var(--dp-star-gold)_10%,white)]"
                     : "border-dp-border bg-dp-surface hover:border-dp-primary"

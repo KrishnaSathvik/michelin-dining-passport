@@ -1,14 +1,17 @@
-# Michelin Dining Passport (working title)
+# Orellin
 
 Independent discovery and personal tracking for **Michelin-starred restaurants in the United States**.
 
-Editorial dining atlas + personal restaurant passport. Not affiliated with Michelin.
+**Brand:** Orellin — *The guide to remarkable dining.*  
+Discover Michelin-starred restaurants across the United States. Explore by city, cuisine, and distinction, learn what you need to know, and book directly.
+
+Not affiliated with Michelin.
 
 ## Status
 
-**Phase 6 in progress on `phase-6-auth-and-accounts`** — Supabase auth, RLS-backed personal data, and local→cloud Passport migration. Public discovery still uses the committed local restaurant dataset.
+Active development on `stitch-full-redesign` — Stitch front-end redesign, shared foundation, and personal tracking (My Restaurants). Public discovery uses the committed local restaurant dataset.
 
-Phases 0–5.5 are on `main`. Building feature-first through Phases 2–7, then one consolidated UI/UX polish pass. Nonblocking visual issues live in [`docs/ui-ux-backlog.md`](./docs/ui-ux-backlog.md).
+Phases 0–5.5 are on `main`. Nonblocking visual issues live in [`docs/ui-ux-backlog.md`](./docs/ui-ux-backlog.md).
 
 | Metric | Value |
 | --- | ---: |
@@ -69,7 +72,7 @@ Optional Google Places UI Kit: see [`docs/google-places/google-cloud-setup.md`](
 ### Data scripts
 
 | Script | Purpose |
-| --- | --- |
+| --- | ---: |
 | `npm run data:import` | Read the workbook → write `data/restaurants.json` |
 | `npm run data:validate` | Verify counts, star split, unique slugs, shared-address pairs |
 | `npm run data:geocode` | Batch-geocode addresses into `data/geocodes.json` (never on page load) |
@@ -100,6 +103,8 @@ Import/validation use Python’s standard library only (no XLSX package in the b
 
 **Modern Dining Guide structure + Editorial Atlas visual identity + Immersive `/map`.**
 
+Personal tracking lives under **My Restaurants** (`/passport` route preserved). Platform name is **Orellin**.
+
 ## Next phase
 
-Phase 7 — Admin roster tools, after Phase 6 verification and merge.
+Admin roster tools and release hardening after Stitch redesign verification.

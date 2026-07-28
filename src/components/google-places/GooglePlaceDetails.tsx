@@ -31,6 +31,7 @@ type SharedProps = {
   lazy?: boolean;
   className?: string;
   style?: CSSProperties;
+  variant?: "full" | "focused";
 };
 
 function useNearViewport(
@@ -117,6 +118,17 @@ function FullContentConfig() {
       <gmp-place-summary />
       <gmp-place-review-summary />
       <gmp-place-reviews />
+      <PlaceAttribution />
+    </gmp-place-content-config>
+  );
+}
+
+function FocusedContentConfig() {
+  return (
+    <gmp-place-content-config>
+      <gmp-place-rating />
+      <gmp-place-opening-hours />
+      <gmp-place-phone-number />
       <PlaceAttribution />
     </gmp-place-content-config>
   );
@@ -256,6 +268,7 @@ export function GooglePlaceDetails({
   lazy = true,
   className = "",
   style,
+  variant = "full",
 }: SharedProps) {
   const availability = getGooglePlacesUiKitAvailability();
   const [shellRef, nearViewport] = useNearViewport(lazy);
@@ -289,7 +302,7 @@ export function GooglePlaceDetails({
   if (!nearViewport) {
     return (
       <div ref={shellRef}>
-        <GooglePlaceSkeleton variant="full" className={className} />
+        <GooglePlaceSkeleton variant={variant} className={className} />
       </div>
     );
   }
@@ -297,7 +310,7 @@ export function GooglePlaceDetails({
   if (loader.status === "idle" || loader.status === "loading") {
     return (
       <div ref={shellRef}>
-        <GooglePlaceSkeleton variant="full" className={className} />
+        <GooglePlaceSkeleton variant={variant} className={className} />
       </div>
     );
   }
@@ -332,7 +345,7 @@ export function GooglePlaceDetails({
           className={className}
           style={{
             width: "100%",
-            maxWidth: "400px",
+            maxWidth: variant === "focused" ? "100%" : "400px",
             colorScheme: "light",
             ...style,
           }}
@@ -340,7 +353,11 @@ export function GooglePlaceDetails({
         >
           <gmp-place-details className="mdp-gmp-place-details">
             <PlaceRequest placeId={placeId} />
-            <FullContentConfig />
+            {variant === "focused" ? (
+              <FocusedContentConfig />
+            ) : (
+              <FullContentConfig />
+            )}
           </gmp-place-details>
         </PlaceDetailsHost>
       </GooglePlaceErrorBoundary>

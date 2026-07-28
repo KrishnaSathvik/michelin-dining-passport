@@ -39,8 +39,9 @@ export function ExplorePagination({
 
   return (
     <PageContainer className="mb-20 md:mb-24">
+      {/* Wraps: 9 x 44px controls cannot fit one row at 375px. */}
       <nav
-        className="flex items-center justify-center gap-2"
+        className="flex flex-wrap items-center justify-center gap-x-2 gap-y-1"
         aria-label="Pagination"
       >
         {previousPage ? (

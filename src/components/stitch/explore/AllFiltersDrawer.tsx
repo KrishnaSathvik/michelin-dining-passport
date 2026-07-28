@@ -4,9 +4,10 @@ import { useId, useRef, useState } from "react";
 import { Drawer } from "@/components/stitch/Drawer";
 import { Button } from "@/components/stitch/Button";
 import { Select } from "@/components/stitch/Select";
-import { SearchInput } from "@/components/stitch/SearchInput";
 import {
   buildExploreHref,
+  EXPLORE_SORT_LABELS,
+  EXPLORE_SORT_OPTIONS,
   type ExploreFacets,
   type ExploreQuery,
 } from "@/lib/data/explore";
@@ -17,14 +18,17 @@ type AllFiltersDrawerProps = {
   activeCount: number;
 };
 
-const sectionLabel =
-  "dp-label-caps mb-4 block text-dp-ink-muted";
+const sectionLabel = "dp-label-caps mb-4 block text-dp-ink-muted";
 
 const radioRow =
   "flex min-h-11 cursor-pointer items-center gap-3 rounded-[var(--dp-radius-md)] px-1 font-sans text-[15px] text-dp-ink";
 
 const priceButton =
   "inline-flex min-h-11 flex-1 items-center justify-center rounded-[var(--dp-radius-md)] border border-dp-border bg-dp-surface px-3 font-sans text-[14px] text-dp-ink transition-colors hover:border-dp-primary has-[:checked]:border-dp-primary has-[:checked]:bg-dp-soft has-[:checked]:font-medium has-[:checked]:text-dp-primary";
+
+const chevronStyle = {
+  backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' fill='none'%3E%3Cpath d='M1 1.5 6 6.5 11 1.5' stroke='%23717975' stroke-width='1.5' stroke-linecap='round'/%3E%3C/svg%3E")`,
+} as const;
 
 export function AllFiltersDrawer({
   query,
@@ -41,21 +45,15 @@ export function AllFiltersDrawer({
         ref={triggerRef}
         type="button"
         onClick={() => setOpen(true)}
-        className="inline-flex h-11 min-h-11 shrink-0 items-center gap-2 rounded-[var(--dp-radius-lg)] border border-dp-border bg-dp-surface-low px-4 font-sans text-[14px] font-medium text-dp-ink transition-colors hover:border-dp-primary focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-dp-focus data-[open=true]:border-dp-primary data-[open=true]:bg-dp-soft"
+        className="inline-flex h-11 min-h-11 shrink-0 appearance-none items-center gap-2 rounded-[var(--dp-radius-lg)] border border-dp-border bg-dp-surface bg-[length:12px] bg-[position:right_12px_center] bg-no-repeat px-3 pr-9 font-sans text-[14px] text-dp-ink transition-colors hover:border-dp-primary focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-dp-focus data-[open=true]:border-dp-primary data-[open=true]:bg-dp-soft data-[open=true]:font-medium data-[active=true]:border-dp-primary data-[active=true]:bg-dp-soft data-[active=true]:font-medium"
+        style={chevronStyle}
         aria-haspopup="dialog"
         aria-expanded={open}
         data-open={open ? "true" : "false"}
+        data-active={activeCount > 0 ? "true" : "false"}
         data-explore-all-filters
       >
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-          <path
-            d="M4 7h16M7 12h10M10 17h4"
-            stroke="currentColor"
-            strokeWidth="1.5"
-            strokeLinecap="round"
-          />
-        </svg>
-        All Filters
+        Filters
         {activeCount > 0 ? (
           <span className="inline-flex min-h-6 min-w-6 items-center justify-center rounded-[var(--dp-radius-md)] bg-dp-primary px-1.5 text-[12px] font-semibold text-dp-on-primary">
             {activeCount}
@@ -66,7 +64,7 @@ export function AllFiltersDrawer({
       <Drawer
         open={open}
         onClose={() => setOpen(false)}
-        title="All filters"
+        title="Filters"
         returnFocusRef={triggerRef}
         footer={
           <div className="flex items-center justify-between gap-4">
@@ -97,19 +95,22 @@ export function AllFiltersDrawer({
           method="get"
           className="flex flex-col gap-8"
         >
-          <input type="hidden" name="sort" value={query.sort} />
+          <input type="hidden" name="q" value={query.q} />
           <input type="hidden" name="view" value={query.view} />
 
           <section>
-            <span className={sectionLabel}>Search within results</span>
-            <SearchInput
-              id="drawer-q"
-              name="q"
-              defaultValue={query.q}
-              label="Search within results"
-              placeholder="Restaurant, city, cuisine…"
-              autoComplete="off"
-            />
+            <Select
+              id="drawer-sort"
+              name="sort"
+              label="Sort"
+              defaultValue={query.sort}
+            >
+              {EXPLORE_SORT_OPTIONS.map((option) => (
+                <option key={option} value={option}>
+                  {EXPLORE_SORT_LABELS[option]}
+                </option>
+              ))}
+            </Select>
           </section>
 
           <fieldset className="border-0 p-0">

@@ -7,11 +7,26 @@ async function expectNoHorizontalOverflow(page: Page) {
   expect(overflow).toBe(false);
 }
 
+/**
+ * Navigate to an Explore URL and wait for the streamed composition to settle.
+ *
+ * The App Router streams the resolved directory inside a hidden Suspense buffer
+ * that a client script reveals on load. Until that swap completes, strict-mode
+ * locators transiently match both the live directory and its hidden twin
+ * (the `#S:0` buffer). Waiting on these two counts is a deterministic settle
+ * signal — no arbitrary timeouts — so assertions see a single, stable page.
+ */
+async function gotoExplore(page: Page, url: string) {
+  await page.goto(url);
+  await expect(page.locator('[data-explore="loading"]')).toHaveCount(0);
+  await expect(page.locator('[data-explore="stitch-directory"]')).toHaveCount(1);
+}
+
 test.describe("Phase 5 Explore Stitch rebuild", () => {
   test("default Explore loads Stitch composition with one H1", async ({
     page,
   }) => {
-    await page.goto("/explore");
+    await gotoExplore(page, "/explore");
     await expect(page.getByRole("heading", { level: 1 })).toHaveCount(1);
     await expect(page.getByRole("heading", { level: 1 })).toHaveText(
       "Explore Michelin-starred restaurants",
@@ -37,13 +52,13 @@ test.describe("Phase 5 Explore Stitch rebuild", () => {
   test("star / state / cuisine / price filters work via URL", async ({
     page,
   }) => {
-    await page.goto("/explore?stars=1");
+    await gotoExplore(page, "/explore?stars=1");
     await expect(page.locator("[data-explore-result-count]")).toContainText(
       /restaurant/,
     );
-    await page.goto("/explore?stars=2");
+    await gotoExplore(page, "/explore?stars=2");
     await expect(page.getByRole("heading", { level: 1 })).toBeVisible();
-    await page.goto("/explore?stars=3");
+    await gotoExplore(page, "/explore?stars=3");
     await expect(page.getByRole("heading", { level: 1 })).toBeVisible();
     await page.goto("/explore?state=new-york");
     await expect(page).toHaveURL(/state=new-york/);
@@ -81,7 +96,7 @@ test.describe("Phase 5 Explore Stitch rebuild", () => {
   });
 
   test("sort and view toggle preserve filters", async ({ page }) => {
-    await page.goto("/explore?stars=2&state=california");
+    await gotoExplore(page, "/explore?stars=2&state=california");
     await page.locator("#explore-sort").selectOption("name-asc");
     await expect(page).toHaveURL(/sort=name-asc/);
     await expect(page).toHaveURL(/stars=2/);
@@ -116,15 +131,13 @@ test.describe("Phase 5 Explore Stitch rebuild", () => {
   });
 
   test("invalid query values fail gracefully", async ({ page }) => {
-    await page.goto("/explore?stars=9&sort=popularity&view=map&page=0");
+    await gotoExplore(page, "/explore?stars=9&sort=popularity&view=map&page=0");
     await expect(page.getByRole("heading", { level: 1 })).toBeVisible();
     await expect(page.locator('[data-explore-results="grid"]')).toBeVisible();
   });
 
   test("empty result state", async ({ page }) => {
-    await page.goto("/explore?q=zzzz-no-such-restaurant-xyz");
-    // Wait for Suspense loading shell to swap out (streamed HTML keeps a hidden twin).
-    await expect(page.locator('[data-explore="loading"]')).toHaveCount(0);
+    await gotoExplore(page, "/explore?q=zzzz-no-such-restaurant-xyz");
     await expect(
       page.locator('[data-explore="stitch-directory"] [data-explore-empty]'),
     ).toBeVisible();
@@ -139,11 +152,13 @@ test.describe("Phase 5 Explore Stitch rebuild", () => {
   test("filter drawer opens, Escape closes, focus returns", async ({
     page,
   }) => {
+    await page.setViewportSize({ width: 390, height: 844 });
     await page.goto("/explore");
-    const trigger = page.getByRole("button", { name: /All Filters/i });
+    const trigger = page.getByRole("button", { name: /^Filters/ });
     await trigger.click();
-    const dialog = page.getByRole("dialog", { name: "All filters" });
+    const dialog = page.getByRole("dialog", { name: "Filters" });
     await expect(dialog).toBeVisible();
+    await expect(dialog.getByLabel("Sort")).toBeVisible();
     await page.keyboard.press("Escape");
     await expect(dialog).toHaveCount(0);
     await expect(trigger).toBeFocused();
@@ -152,12 +167,39 @@ test.describe("Phase 5 Explore Stitch rebuild", () => {
   test("mobile drawer is full-width", async ({ page }) => {
     await page.setViewportSize({ width: 390, height: 844 });
     await page.goto("/explore");
-    await page.getByRole("button", { name: /All Filters/i }).click();
-    const dialog = page.getByRole("dialog", { name: "All filters" });
+    await page.getByRole("button", { name: /^Filters/ }).click();
+    const dialog = page.getByRole("dialog", { name: "Filters" });
     await expect(dialog).toBeVisible();
     const box = await dialog.boundingBox();
     expect(box).toBeTruthy();
     expect(box!.width).toBeGreaterThan(350);
+  });
+
+  test("desktop keeps inline quick filters instead of the drawer trigger", async ({
+    page,
+  }) => {
+    await page.setViewportSize({ width: 1280, height: 900 });
+    await page.goto("/explore");
+    await expect(page.getByRole("button", { name: /^Filters/ })).toHaveCount(0);
+    await expect(page.getByRole("group", { name: "Quick filters" })).toBeVisible();
+    await expect(page.locator("#quick-stars")).toBeVisible();
+    await expect(page.locator("#explore-sort")).toBeVisible();
+    await expect(page.getByRole("group", { name: "Result view" })).toBeVisible();
+  });
+
+  test("mobile control row keeps Filters, Sort, and view together", async ({
+    page,
+  }) => {
+    await page.setViewportSize({ width: 390, height: 844 });
+    await page.goto("/explore");
+    const toolbar = page.locator("[data-explore-toolbar]");
+    await expect(
+      toolbar.getByRole("button", { name: /^Filters/ }),
+    ).toBeVisible();
+    await expect(toolbar.locator("#explore-sort")).toBeVisible();
+    await expect(
+      toolbar.getByRole("group", { name: "Result view" }),
+    ).toBeVisible();
   });
 
   test("discovery card opens detail; Save and reservation stay put", async ({
@@ -170,6 +212,9 @@ test.describe("Phase 5 Explore Stitch rebuild", () => {
       .filter({ hasText: "Addison" })
       .first();
     await expect(card).toBeVisible();
+    await expect(
+      card.locator('[data-restaurant-action="view-detail"]'),
+    ).toHaveText("View details");
 
     const reserve = card.getByRole("link", { name: /Reserve now/i });
     await expect(reserve).toHaveAttribute("target", "_blank");
@@ -185,8 +230,51 @@ test.describe("Phase 5 Explore Stitch rebuild", () => {
 
     await Promise.all([
       page.waitForURL(/\/restaurants\/addison-san-diego-ca/),
-      card.getByRole("link", { name: "View Addison" }).click(),
+      card.locator('[data-restaurant-action="view-detail"]').click(),
     ]);
+  });
+
+  test("sticky filters stay compact and pinned under the header", async ({
+    page,
+  }) => {
+    await page.setViewportSize({ width: 390, height: 844 });
+    await gotoExplore(page, "/explore");
+    const toolbar = page.locator("[data-explore-toolbar]");
+    await expect(toolbar).toBeVisible();
+
+    const atTopHeight = await toolbar.evaluate(
+      (el) => el.getBoundingClientRect().height,
+    );
+    expect(atTopHeight).toBeLessThanOrEqual(132);
+
+    // Scroll past the intro until the toolbar sticks under the shared header.
+    await page.evaluate(() => {
+      const toolbarEl = document.querySelector("[data-explore-toolbar]");
+      if (!toolbarEl) return;
+      const target =
+        window.scrollY + toolbarEl.getBoundingClientRect().top - 72 + 40;
+      window.scrollTo(0, Math.max(0, target));
+    });
+    await expect
+      .poll(async () =>
+        toolbar.evaluate((el) => Math.round(el.getBoundingClientRect().top)),
+      )
+      .toBe(72);
+
+    const metrics = await page.evaluate(() => {
+      const toolbarEl = document.querySelector("[data-explore-toolbar]");
+      if (!toolbarEl) return null;
+      const tb = toolbarEl.getBoundingClientRect();
+      return {
+        toolbarTop: Math.round(tb.top),
+        toolbarHeight: Math.round(tb.height),
+        visibleBelowToolbar: Math.round(window.innerHeight - tb.bottom),
+      };
+    });
+    expect(metrics).not.toBeNull();
+    expect(metrics!.toolbarHeight).toBeLessThanOrEqual(132);
+    // Leave most of the viewport for restaurant cards while filters stay visible.
+    expect(metrics!.visibleBelowToolbar).toBeGreaterThanOrEqual(500);
   });
 
   test("list view truthful reservation labels", async ({ page }) => {
@@ -226,7 +314,7 @@ test.describe("Phase 5 Explore Stitch rebuild", () => {
     });
     const box = await searchBtn.boundingBox();
     expect(box!.height).toBeGreaterThanOrEqual(44);
-    const allFilters = page.getByRole("button", { name: /All Filters/i });
+    const allFilters = page.getByRole("button", { name: /^Filters/ });
     const filtersBox = await allFilters.boundingBox();
     expect(filtersBox!.height).toBeGreaterThanOrEqual(44);
   });

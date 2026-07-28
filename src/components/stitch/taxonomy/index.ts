@@ -28,3 +28,4 @@ export { StatePageView } from "./StatePageView";
 export { CityPageView } from "./CityPageView";
 export { CuisinePageView } from "./CuisinePageView";
 export { StarPageView } from "./StarPageView";
+export { StarLevelExplainer } from "./StarLevelExplainer";

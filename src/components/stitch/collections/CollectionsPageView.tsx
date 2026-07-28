@@ -2,117 +2,144 @@
 
 import { useMemo, useState } from "react";
 import { PageContainer } from "@/components/stitch/PageContainer";
+import { Button } from "@/components/stitch/Button";
 import { PassportSyncNotice } from "@/components/stitch/passport/PassportSyncNotice";
+import { toSyncState } from "@/components/stitch/passport/adapters";
+import { buildCollectionsIndex } from "@/lib/passport/collections";
 import { usePassport } from "@/lib/passport/PassportProvider";
-import type { Restaurant } from "@/lib/data/types";
-import { toCollectionsIndexModel, toCollectionsSyncState } from "./adapters";
-import { filterCollectionsByQuery, sortCollections } from "./filters";
+import type { LocalCollection } from "@/lib/passport/types";
+import { CollectionCard } from "./CollectionCard";
+import { CollectionFormDialog } from "./CollectionFormDialog";
 import { CollectionsEmptyState } from "./CollectionsEmptyState";
-import { CollectionsHeader } from "./CollectionsHeader";
 import { CollectionsLoadingState } from "./CollectionsLoadingState";
-import { CollectionsToolbar } from "./CollectionsToolbar";
-import { CollectionGrid } from "./CollectionGrid";
-import { CreateCollectionDialog } from "./CreateCollectionDialog";
-import { FeaturedCollectionCard } from "./FeaturedCollectionCard";
-import type { CollectionSortId } from "./models";
+import { DeleteCollectionDialog } from "./DeleteCollectionDialog";
+import type { CollectionsProof } from "./proof";
 
 type CollectionsPageViewProps = {
-  restaurants: Restaurant[];
-  /** Dev-only visual QA overrides. */
-  proof?: "loading" | "empty" | "active";
+  proof?: CollectionsProof;
 };
 
-export function CollectionsPageView({
-  restaurants,
-  proof,
-}: CollectionsPageViewProps) {
-  const { ready, mode, store, migrationMessage, migrationStatus } =
-    usePassport();
+export function CollectionsPageView({ proof }: CollectionsPageViewProps) {
+  const {
+    ready,
+    restaurants,
+    store,
+    mode,
+    migrationMessage,
+    migrationStatus,
+    storageError,
+    collectionSyncStatus,
+    collectionSyncMessage,
+    retryCollectionSync,
+  } = usePassport();
   const [createOpen, setCreateOpen] = useState(false);
-  const [query, setQuery] = useState("");
-  const [sort, setSort] = useState<CollectionSortId>("updated-desc");
+  const [renameTarget, setRenameTarget] = useState<LocalCollection | null>(null);
+  const [deleteTarget, setDeleteTarget] = useState<LocalCollection | null>(null);
 
-  const sync = useMemo(
-    () =>
-      toCollectionsSyncState({
-        mode,
-        migrationMessage,
-        migrationCompleted: migrationStatus.completed,
-      }),
-    [mode, migrationMessage, migrationStatus.completed],
+  const summaries = useMemo(
+    () => buildCollectionsIndex(store, restaurants),
+    [store, restaurants],
   );
 
-  const indexModel = useMemo(
-    () => toCollectionsIndexModel({ store, restaurants, sync }),
-    [store, restaurants, sync],
-  );
+  const sync = toSyncState({
+    mode: proof === "device-only" ? "local" : mode,
+    migrationMessage,
+    migrationCompleted: migrationStatus.completed,
+    status:
+      proof === "sync-pending"
+        ? "pending"
+        : proof === "sync-failed"
+          ? "failed"
+          : collectionSyncStatus,
+    message:
+      proof === "sync-failed"
+        ? "Your collections are still saved on this device."
+        : collectionSyncMessage,
+    storageError,
+  });
 
-  const showEmpty =
-    proof === "empty" ||
-    (ready && indexModel.collections.length === 0 && proof !== "active");
-
-  const visibleGrid = useMemo(() => {
-    if (showEmpty) return [];
-    return sortCollections(
-      filterCollectionsByQuery(indexModel.grid, query),
-      sort,
-    );
-  }, [indexModel.grid, query, showEmpty, sort]);
-
-  if (proof === "loading" || !ready) {
+  if (!ready || proof === "loading") {
     return <CollectionsLoadingState variant="index" />;
   }
 
-  const featuredCollection = indexModel.featured
-    ? store.collections[indexModel.featured.id]
-    : undefined;
+  const empty = proof === "empty" || summaries.length === 0;
 
   return (
-    <div
-      className="border-b border-dp-outline-variant bg-dp-bg"
-      data-collections-page="index"
-    >
-      <PageContainer className="pb-[var(--dp-section)] pt-[104px]">
-        <CollectionsHeader onCreate={() => setCreateOpen(true)} />
+    <div className="min-w-0 bg-dp-bg" data-collections-page="index">
+      <PageContainer className="min-w-0 pb-[var(--dp-section)] pt-[104px]">
+        <header className="mb-8 flex min-w-0 flex-col gap-6 md:flex-row md:items-end md:justify-between">
+          <div className="min-w-0 max-w-2xl">
+            <h1 className="font-display text-[36px] leading-[1.1] tracking-[-0.01em] text-dp-primary-deep md:text-[48px] md:tracking-[-0.02em]">
+              Collections
+            </h1>
+            <p className="dp-body-lg mt-4 text-dp-ink-secondary">
+              Private groups for the restaurants you have saved — a trip, an
+              occasion, or a theme. A restaurant can sit in several collections
+              at once.
+            </p>
+          </div>
+          {empty ? null : (
+            <Button
+              type="button"
+              variant="primary"
+              className="shrink-0"
+              onClick={() => setCreateOpen(true)}
+            >
+              Create collection
+            </Button>
+          )}
+        </header>
 
-        {showEmpty ? (
-          <CollectionsEmptyState onCreate={() => setCreateOpen(true)} />
-        ) : (
-          <>
-            {indexModel.featured && featuredCollection ? (
-              <FeaturedCollectionCard
-                model={indexModel.featured}
-                collection={featuredCollection}
-              />
-            ) : null}
-            <CollectionsToolbar
-              query={query}
-              onQueryChange={setQuery}
-              sort={sort}
-              onSortChange={setSort}
-            />
-            <CollectionGrid
-              cards={visibleGrid}
-              collectionsById={store.collections}
-            />
-          </>
-        )}
-
-        <div className="mt-[var(--dp-section)]">
+        <div className="mb-6">
           <PassportSyncNotice
-            sync={{
-              mode: sync.mode,
-              migrationMessage: sync.migrationMessage,
-              hasSyncError: sync.hasSyncError,
-            }}
+            sync={sync}
+            compact
+            onRetry={retryCollectionSync}
           />
         </div>
+
+        {empty ? (
+          <CollectionsEmptyState onCreate={() => setCreateOpen(true)} />
+        ) : (
+          <ul className="grid min-w-0 grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            {summaries.map((summary) => {
+              const collection = store.collections[summary.id];
+              if (!collection) return null;
+              return (
+                <li key={summary.id} className="min-w-0">
+                  <CollectionCard
+                    summary={summary}
+                    collection={collection}
+                    onRename={setRenameTarget}
+                    onDelete={setDeleteTarget}
+                  />
+                </li>
+              );
+            })}
+          </ul>
+        )}
       </PageContainer>
 
-      <CreateCollectionDialog
-        open={createOpen}
-        onClose={() => setCreateOpen(false)}
-      />
+      {createOpen ? (
+        <CollectionFormDialog open onClose={() => setCreateOpen(false)} />
+      ) : null}
+
+      {renameTarget ? (
+        <CollectionFormDialog
+          key={`rename-${renameTarget.id}`}
+          open
+          collection={renameTarget}
+          onClose={() => setRenameTarget(null)}
+        />
+      ) : null}
+
+      {deleteTarget ? (
+        <DeleteCollectionDialog
+          open
+          collection={deleteTarget}
+          onClose={() => setDeleteTarget(null)}
+        />
+      ) : null}
     </div>
   );
 }

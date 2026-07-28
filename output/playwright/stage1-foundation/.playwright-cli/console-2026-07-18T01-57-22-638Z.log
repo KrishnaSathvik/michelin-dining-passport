@@ -1,0 +1,4 @@
+[     594ms] [LOG] [Fast Refresh] rebuilding @ http://127.0.0.1:3112/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2477
+[     689ms] [LOG] [Fast Refresh] done in 200ms @ http://127.0.0.1:3112/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2477
+[    1021ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://127.0.0.1:3112/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2477
+[    1085ms] [LOG] [HMR] connected @ http://127.0.0.1:3112/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2477

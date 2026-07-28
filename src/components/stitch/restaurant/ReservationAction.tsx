@@ -21,6 +21,7 @@ type ReservationActionProps = {
   showProvider?: boolean;
   className?: string;
   disabled?: boolean;
+  labelOverride?: string;
 };
 
 const variantClass: Record<ReservationActionVariant, string> = {
@@ -47,6 +48,7 @@ export function ReservationAction({
   showProvider = false,
   className = "",
   disabled = false,
+  labelOverride,
 }: ReservationActionProps) {
   if (disabled) {
     return (
@@ -59,6 +61,7 @@ export function ReservationAction({
     );
   }
 
+  const visibleLabel = labelOverride ?? action.label;
   const providerTone =
     variant === "primary" || variant === "editorial"
       ? "text-white/85"
@@ -70,7 +73,7 @@ export function ReservationAction({
       target="_blank"
       rel="noopener noreferrer"
       className={`${variantClass[variant]} no-underline ${className}`}
-      title={`${action.label}${action.providerLabel ? ` — ${action.providerLabel}` : ""}`}
+      title={`${visibleLabel}${action.providerLabel ? ` — ${action.providerLabel}` : ""}`}
       onClick={(event) => {
         event.stopPropagation();
         trackReservationClicked({
@@ -85,7 +88,7 @@ export function ReservationAction({
       }}
     >
       <span className="font-sans text-[14px] font-semibold leading-tight tracking-wide">
-        {action.label}
+        {visibleLabel}
         <span aria-hidden="true"> ↗</span>
         <span className="sr-only"> (opens in a new tab)</span>
       </span>

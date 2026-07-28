@@ -42,6 +42,7 @@ export function SignInForm({
     initialState,
   );
   const q = `?next=${encodeURIComponent(next)}`;
+  const fieldErrors = state.fieldErrors ?? {};
 
   if (mode === "magic") {
     return (
@@ -58,10 +59,12 @@ export function SignInForm({
 
   return (
     <div className="flex flex-col gap-8" data-auth-form="sign-in">
-      <header className="space-y-2">
-        <h1 className="dp-headline-md text-dp-ink">Welcome back</h1>
-        <p className="font-sans text-[16px] leading-relaxed text-dp-ink-muted">
-          Sign in to sync your Passport across devices.
+      <header className="space-y-3">
+        <p className="dp-label-caps text-dp-ink-muted">Sign in</p>
+        <h1 className="dp-headline-md text-dp-primary-deep">Welcome back</h1>
+        <p className="font-sans text-[16px] leading-relaxed text-dp-ink-secondary">
+          Sync your restaurants across devices — or keep browsing without an
+          account.
         </p>
       </header>
 
@@ -80,7 +83,8 @@ export function SignInForm({
         </p>
       ) : null}
 
-      <form action={formAction} className="flex flex-col gap-6">
+      {/* noValidate: action-supplied field errors replace browser bubbles. */}
+      <form action={formAction} noValidate className="flex flex-col gap-5">
         <input type="hidden" name="next" value={next} />
         <AuthTextField
           name="email"
@@ -89,12 +93,14 @@ export function SignInForm({
           required
           autoComplete="email"
           inputMode="email"
+          error={fieldErrors.email}
         />
         <PasswordField
           name="password"
           label="Password"
           required
           autoComplete="current-password"
+          error={fieldErrors.password}
           labelEnd={
             <Link
               href={`/forgot-password${q}`}
@@ -118,31 +124,31 @@ export function SignInForm({
         </Button>
       </form>
 
-      <AuthDivider />
-
-      <div className="flex flex-col gap-3">
-        <Button
+      <p className="text-center">
+        <button
           type="button"
-          variant="secondary"
-          fullWidth
           onClick={() => setMode("magic")}
+          className="inline-flex min-h-11 items-center font-sans text-[14px] text-dp-ink-secondary underline-offset-4 hover:text-dp-primary hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-dp-focus"
         >
-          Continue with Magic Link
-        </Button>
+          Email me a magic link instead
+        </button>
+      </p>
 
-        {googleEnabled && googleAction ? (
+      {googleEnabled && googleAction ? (
+        <>
+          <AuthDivider />
           <form action={googleAction}>
             <input type="hidden" name="next" value={next} />
             <Button type="submit" variant="secondary" fullWidth>
               Continue with Google
             </Button>
           </form>
-        ) : null}
-      </div>
+        </>
+      ) : null}
 
-      <div className="space-y-3 text-center">
+      <div className="space-y-3 border-t border-dp-border pt-6 text-center">
         <p className="font-sans text-[14px] text-dp-ink-muted">
-          New to Dining Passport?{" "}
+          New to Orellin?{" "}
           <Link
             href={`/signup${q}`}
             className="font-semibold text-dp-primary underline-offset-4 hover:underline"

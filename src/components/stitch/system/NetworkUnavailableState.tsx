@@ -14,7 +14,7 @@ type NetworkUnavailableStateProps = {
  */
 export function NetworkUnavailableState({
   onRetry,
-  title = "We could not reach Dining Passport.",
+  title = "We could not reach Orellin.",
   description = "Required data could not be loaded. Check your connection, then try again.",
 }: NetworkUnavailableStateProps) {
   return (

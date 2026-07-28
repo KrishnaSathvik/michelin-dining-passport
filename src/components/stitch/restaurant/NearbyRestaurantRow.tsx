@@ -1,7 +1,6 @@
 import Link from "next/link";
 import type { RestaurantNearbyRowModel } from "./models";
 import { MichelinDistinction } from "./MichelinDistinction";
-import { ReservationAction } from "./ReservationAction";
 import { RestaurantMeta } from "./RestaurantMeta";
 import { SaveAction } from "./SaveAction";
 
@@ -51,12 +50,12 @@ export function NearbyRestaurantRow({
       </div>
       <div className="flex flex-wrap items-center gap-2">
         <SaveAction restaurantSlug={model.slug} variant="compact" />
-        <ReservationAction
-          restaurantSlug={model.slug}
-          action={model.reservation}
-          surface={model.surface}
-          variant="text"
-        />
+        <Link
+          href={href}
+          className="inline-flex min-h-11 items-center rounded-[var(--dp-radius-md)] px-2 font-sans text-sm font-semibold text-dp-primary no-underline hover:underline"
+        >
+          Open details
+        </Link>
       </div>
     </article>
   );

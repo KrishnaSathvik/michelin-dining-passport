@@ -11,27 +11,27 @@ import { buildPageMetadata } from "@/lib/seo/metadata";
 export const metadata: Metadata = buildPageMetadata({
   title: "About",
   description:
-    "What Dining Passport is, what it is not, and how it relates to the Michelin Guide.",
+    "What Orellin is, what it is not, and how it relates to the Michelin Guide.",
   path: "/about",
 });
 
 export default function AboutPage() {
   return (
     <ContentPage
-      title="About Dining Passport"
+      title="About Orellin"
       intro={siteConfig.footerDescription}
       purpose="Browse. Plan. Remember — independently."
     >
       <ContentSection heading="What this is">
         <p>
-          Dining Passport is an independent way to browse Michelin-starred
+          Orellin is an independent way to browse Michelin-starred
           restaurants in the United States, plan the meals you want, and keep a
           private record of the ones you have already had.
         </p>
         <p>
-          Browsing never requires an account. You can keep a Passport on the
+          Browsing never requires an account. You can keep My Restaurants on the
           device you are using, and create an account later if you want the same
-          Passport on more than one device.
+          saves, plans, and visits on more than one device.
         </p>
       </ContentSection>
 
@@ -63,7 +63,7 @@ export default function AboutPage() {
         </p>
       </ContentSection>
 
-      <ContentSection heading="Your Passport is private">
+      <ContentSection heading="My Restaurants is private">
         <p>
           Saves, plans, visits, ratings, and notes are yours. They are never
           shown publicly and are not part of any ranking.{" "}

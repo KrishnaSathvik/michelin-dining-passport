@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import { GooglePlaceCardMedia } from "@/components/google-places/GooglePlaceCardMedia";
 import { RestaurantFallback } from "./RestaurantFallback";
 
 type RestaurantMediaProps = {
@@ -10,6 +11,15 @@ type RestaurantMediaProps = {
   stars?: 1 | 2 | 3;
   /** Approved first-party image URL only — never Google or unrelated stock. */
   imageUrl?: string | null;
+  /**
+   * Approved Google Places place ID. Used only when no first-party `imageUrl`
+   * exists — renders a media-only Google photo element (never a cached URL).
+   */
+  placeId?: string | null;
+  /** Stable slug for Google analytics + fallback seeding. */
+  slug?: string;
+  /** Analytics surface for Google media, e.g. "explore". */
+  page?: string;
   objectPosition?: string;
   className?: string;
   /** Aspect ratio container class. Default 4:3. Use `aspect-auto h-full` for editorial fills. */
@@ -21,6 +31,7 @@ type RestaurantMediaProps = {
   forceLoading?: boolean;
   /** Force error fallback (gallery / tests). */
   forceError?: boolean;
+  fit?: "cover" | "contain";
 };
 
 /**
@@ -33,6 +44,9 @@ export function RestaurantMedia({
   city,
   stars,
   imageUrl,
+  placeId,
+  slug,
+  page = "explore",
   objectPosition = "center",
   className = "",
   ratioClass = "aspect-[4/3]",
@@ -41,8 +55,10 @@ export function RestaurantMedia({
   alt,
   forceLoading = false,
   forceError = false,
+  fit = "cover",
 }: RestaurantMediaProps) {
   const url = imageUrl?.trim() || null;
+  const resolvedPlaceId = placeId?.trim() || null;
   const imgRef = useRef<HTMLImageElement | null>(null);
   const [status, setStatus] = useState<"loading" | "ready" | "error">(
     forceError ? "error" : forceLoading || url ? "loading" : "ready",
@@ -59,6 +75,30 @@ export function RestaurantMedia({
       }
     }
   }, [url, forceError, forceLoading]);
+
+  // No approved first-party photo, but an approved Google place ID exists:
+  // show a media-only Google photo (it falls back internally when unavailable).
+  if (
+    (!url || status === "error") &&
+    !forceError &&
+    !forceLoading &&
+    resolvedPlaceId
+  ) {
+    return (
+      <GooglePlaceCardMedia
+        placeId={resolvedPlaceId}
+        restaurantSlug={slug ?? seed ?? name}
+        page={page}
+        name={name}
+        seed={seed ?? name}
+        city={city}
+        stars={stars}
+        ratioClass={ratioClass}
+        className={className}
+        priority={priority}
+      />
+    );
+  }
 
   if (!url || status === "error" || forceError) {
     return (
@@ -88,7 +128,9 @@ export function RestaurantMedia({
         src={url}
         alt={alt ?? `Photograph of ${name}`}
         sizes={sizes}
-        className={`h-full w-full object-cover transition-opacity duration-[var(--dp-duration)] ${
+        className={`h-full w-full transition-opacity duration-[var(--dp-duration)] ${
+          fit === "contain" ? "object-contain" : "object-cover"
+        } ${
           status === "ready" && !forceLoading ? "opacity-100" : "opacity-0"
         }`}
         style={{ objectPosition }}

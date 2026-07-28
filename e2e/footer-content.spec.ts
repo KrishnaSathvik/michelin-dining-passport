@@ -17,7 +17,7 @@ test.describe("site footer", () => {
 
     await expect(
       footer.getByText(
-        "Discover Michelin-starred restaurants, plan future visits, and remember the meals you loved.",
+        "Discover Michelin-starred restaurants across the United States. Explore by city, cuisine, and distinction, learn what you need to know, and book directly.",
       ),
     ).toBeVisible();
 
@@ -29,7 +29,7 @@ test.describe("site footer", () => {
 
     await expect(
       footer.getByText(
-        "Dining Passport is an independent discovery platform and is not affiliated with the Michelin Guide.",
+        "Orellin is an independent discovery platform and is not affiliated with the Michelin Guide.",
       ),
     ).toHaveCount(1);
   });
@@ -43,7 +43,7 @@ test.describe("site footer", () => {
   test("does not repeat primary navigation", async ({ page }) => {
     await page.goto("/");
     const footer = page.getByRole("contentinfo");
-    for (const label of ["Explore", "Map", "Michelin Stars", "Passport"]) {
+    for (const label of ["Explore", "Map", "Michelin Stars", "My Restaurants"]) {
       await expect(
         footer.getByRole("link", { name: label, exact: true }),
       ).toHaveCount(0);
@@ -51,7 +51,7 @@ test.describe("site footer", () => {
   });
 
   const FOOTER_DISCLAIMER =
-    "Dining Passport is an independent discovery platform and is not affiliated with the Michelin Guide.";
+    "Orellin is an independent discovery platform and is not affiliated with the Michelin Guide.";
 
   test("carries only one independence disclaimer per page", async ({ page }) => {
     await page.goto("/explore");

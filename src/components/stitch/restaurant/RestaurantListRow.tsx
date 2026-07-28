@@ -9,6 +9,8 @@ import { SaveAction } from "./SaveAction";
 type RestaurantListRowProps = {
   model: RestaurantCardModel;
   className?: string;
+  /** Approved Google place ID, supplied by server components (off the model). */
+  placeId?: string | null;
 };
 
 /**
@@ -17,6 +19,7 @@ type RestaurantListRowProps = {
 export function RestaurantListRow({
   model,
   className = "",
+  placeId,
 }: RestaurantListRowProps) {
   const href = `/restaurants/${model.slug}`;
   const detailLabel = `View ${model.name}`;
@@ -35,9 +38,12 @@ export function RestaurantListRow({
         <RestaurantMedia
           name={model.name}
           seed={model.id}
+          slug={model.slug}
           city={model.location}
           stars={model.distinction}
           imageUrl={model.image?.url}
+          placeId={placeId}
+          page={model.surface}
           objectPosition={model.image?.objectPosition}
           alt={model.image?.alt}
           ratioClass="aspect-[4/3] sm:aspect-square"
@@ -67,6 +73,13 @@ export function RestaurantListRow({
 
       <div className="flex flex-wrap items-center gap-2 sm:shrink-0 sm:justify-end">
         <SaveAction restaurantSlug={model.slug} variant="compact" />
+        <Link
+          href={href}
+          data-restaurant-action="view-detail"
+          className="inline-flex min-h-11 items-center justify-center rounded-[var(--dp-radius-lg)] border border-dp-border bg-dp-surface px-4 py-2 font-sans text-[14px] font-semibold tracking-wide text-dp-primary no-underline transition-colors hover:border-dp-primary hover:bg-dp-soft focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-dp-focus"
+        >
+          View details
+        </Link>
         <ReservationAction
           restaurantSlug={model.slug}
           action={model.reservation}

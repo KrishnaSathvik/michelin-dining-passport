@@ -3,7 +3,7 @@ import { defineConfig, devices } from "@playwright/test";
 /**
  * Phase 12 dedicated e2e port — never reuse whatever happens to own :3000.
  * A foreign Next app on localhost:3000 previously caused shell search
- * tests to miss the Dining Passport header entirely.
+ * tests to miss the Orellin header entirely.
  *
  * Override with E2E_PORT when needed. Default: 3112.
  */
@@ -15,6 +15,7 @@ export default defineConfig({
   fullyParallel: true,
   forbidOnly: Boolean(process.env.CI),
   retries: process.env.CI ? 1 : 0,
+  
   workers: process.env.CI ? 1 : undefined,
   reporter: "list",
   use: {

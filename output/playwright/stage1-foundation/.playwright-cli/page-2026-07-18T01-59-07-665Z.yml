@@ -1,0 +1,38 @@
+- generic [active] [ref=f9e1]:
+  - link "Skip to main content" [ref=f9e2] [cursor=pointer]:
+    - /url: "#main-content"
+  - main [ref=f9e3]:
+    - generic [ref=f9e6]:
+      - paragraph [ref=f9e7]: Dining Passport
+      - generic [ref=f9e9]:
+        - generic [ref=f9e10]:
+          - heading "Create an Account" [level=1] [ref=f9e11]
+          - paragraph [ref=f9e12]: Save visits, notes, and collections to your cloud Passport.
+        - generic [ref=f9e13]:
+          - generic [ref=f9e14]:
+            - generic [ref=f9e15]: Display name
+            - textbox "Display name" [ref=f9e16]
+            - generic [ref=f9e17]: Optional
+          - generic [ref=f9e18]:
+            - generic [ref=f9e19]: Email address
+            - textbox "Email address" [ref=f9e20]
+          - generic [ref=f9e21]:
+            - generic [ref=f9e22]: Password
+            - generic [ref=f9e24]:
+              - textbox "Password" [ref=f9e25]
+              - button "Show password" [ref=f9e26]
+            - generic [ref=f9e30]: At least 8 characters.
+          - button "Create account" [ref=f9e31]
+        - paragraph [ref=f9e32]: By creating an account you agree to use Dining Passport responsibly. An account is optional — you can keep a device-only Passport.
+        - generic [ref=f9e33]:
+          - paragraph [ref=f9e34]:
+            - text: Already have an account?
+            - link "Sign in" [ref=f9e35] [cursor=pointer]:
+              - /url: /login?next=%2Fpassport
+          - paragraph [ref=f9e36]:
+            - link "Continue with device-only Passport" [ref=f9e37] [cursor=pointer]:
+              - /url: /passport
+              - text: Continue with device-only Passport
+              - generic [ref=f9e38]: →
+  - button "Open Next.js Dev Tools" [ref=f9e44] [cursor=pointer]
+  - alert [ref=f9e48]

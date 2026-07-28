@@ -8,7 +8,7 @@ import { describe, it } from "node:test";
 const ACCOUNT_NAV = [
   { id: "profile", label: "Profile" },
   { id: "security", label: "Security" },
-  { id: "sync", label: "Passport Sync" },
+  { id: "sync", label: "My Restaurants Sync" },
   { id: "data", label: "Data & Export" },
   { id: "danger", label: "Delete Account", destructive: true },
 ];
@@ -16,7 +16,7 @@ const ACCOUNT_NAV = [
 function toSyncPresentation(migration) {
   if (migration.completed) {
     return {
-      headline: "Signed in — Passport syncs to your account when online.",
+      headline: "Signed in — My Restaurants syncs to your account when online.",
       detail: migration.completedAt
         ? `Local device migration completed (${migration.completedAt}).`
         : "Local device migration completed on this browser.",
@@ -31,7 +31,7 @@ function toSyncPresentation(migration) {
     };
   }
   return {
-    headline: "Signed in — Passport changes sync to your account when online.",
+    headline: "Signed in — My Restaurants changes sync to your account when online.",
     detail:
       "Local migration has not completed on this device yet. It runs automatically after sign-in.",
     tone: "pending",
@@ -70,7 +70,7 @@ describe("Phase 10 account IA", () => {
     assert.deepEqual(labels, [
       "Profile",
       "Security",
-      "Passport Sync",
+      "My Restaurants Sync",
       "Data & Export",
       "Delete Account",
     ]);

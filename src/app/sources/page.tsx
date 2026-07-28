@@ -12,7 +12,7 @@ import { buildPageMetadata } from "@/lib/seo/metadata";
 export const metadata: Metadata = buildPageMetadata({
   title: "Sources",
   description:
-    "Where the restaurant information on Dining Passport comes from, and how current it is.",
+    "Where the restaurant information on Orellin comes from, and how current it is.",
   path: "/sources",
 });
 
@@ -20,7 +20,7 @@ export default function SourcesPage() {
   return (
     <ContentPage
       title="Sources"
-      intro="Where the information on this site comes from, and how far you should trust each part of it."
+      intro="Where this site’s information comes from, and how far to trust it."
     >
       <ContentCallout title="How current this is">
         <p>{siteConfig.dataUpdatedLabel}.</p>
@@ -58,7 +58,7 @@ export default function SourcesPage() {
         <p>{siteConfig.googlePlacesDisclaimer}</p>
         <p>
           Google ratings are kept visually and conceptually separate from
-          Michelin distinctions, and from anything in your private Passport.
+          Michelin distinctions, and from anything in your private list.
         </p>
       </ContentSection>
 

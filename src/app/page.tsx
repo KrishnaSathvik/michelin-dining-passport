@@ -12,14 +12,14 @@ import {
 
 export const metadata: Metadata = {
   title: {
-    absolute: `${siteConfig.productName} · Michelin-starred restaurants in the United States`,
+    absolute: `${siteConfig.productName} — The Guide to Remarkable Dining`,
   },
   description: siteConfig.description,
   alternates: {
     canonical: absoluteUrl("/"),
   },
   openGraph: {
-    title: siteConfig.productName,
+    title: `${siteConfig.productName} — The Guide to Remarkable Dining`,
     description: siteConfig.description,
     url: absoluteUrl("/"),
     siteName: siteConfig.productName,

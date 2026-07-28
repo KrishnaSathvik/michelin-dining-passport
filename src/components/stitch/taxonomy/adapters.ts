@@ -208,6 +208,33 @@ export function toCuisinePageViewModel(input: {
 
 const ONE_STAR_GRID_LIMIT = 24;
 
+const STAR_EXPLAINERS: Record<
+  1 | 2 | 3,
+  { tagline: string; paragraphs: string[] }
+> = {
+  1: {
+    tagline: "High-quality cooking, worth a stop.",
+    paragraphs: [
+      "One star is the entry point into the Michelin star world — but there is nothing ordinary about it. It marks a very good restaurant in its category, where the cooking meets a consistently high standard plate after plate.",
+      "These are often the kitchens where a region's most exciting chefs first make their name. A single star is reason enough to plan a meal around.",
+    ],
+  },
+  2: {
+    tagline: "Excellent cooking, worth a detour.",
+    paragraphs: [
+      "Two stars reward excellent cooking that is refined, expertly crafted, and personal — skilled enough that Michelin considers it worth going out of your way for.",
+      "The ambition is a clear step above one star: a distinct point of view runs through the whole menu, and the chef's command of technique and flavour shows in every course.",
+    ],
+  },
+  3: {
+    tagline: "Exceptional cuisine, worth a special journey.",
+    paragraphs: [
+      "Three stars is the highest honour Michelin awards — exceptional, singular cuisine from a chef at the very peak of the craft, distinctive enough to be a destination in its own right.",
+      "Only a small number of restaurants hold three stars in any country, and a table is often booked weeks or months ahead. A meal here is an event, not simply dinner.",
+    ],
+  },
+};
+
 export function toStarPageViewModel(input: {
   stars: 1 | 2 | 3;
   restaurants: Restaurant[];
@@ -228,11 +255,17 @@ export function toStarPageViewModel(input: {
     ? 0
     : Math.max(0, restaurants.length - ONE_STAR_GRID_LIMIT);
 
+  const starWord = stars === 1 ? "one" : stars === 2 ? "two" : "three";
+  const explainerHeading =
+    stars === 1
+      ? "What one Michelin star means"
+      : `What ${starWord} Michelin stars mean`;
+
   return {
     stars,
     hero: {
       title: label,
-      introduction: `${count} restaurants currently carry a ${shortLabel} Michelin Guide distinction in this United States roster. In Guide terms: ${STAR_MEANINGS[stars]}. Dining Passport is independent and not affiliated with Michelin.`,
+      introduction: `${count} restaurants currently carry a ${shortLabel} Michelin Guide distinction in this United States roster. Orellin is independent and not affiliated with Michelin.`,
       count,
       countLabel: countLabel(count),
       imageSrc: null,
@@ -246,6 +279,11 @@ export function toStarPageViewModel(input: {
       ],
     },
     meaning: STAR_MEANINGS[stars],
+    explainer: {
+      heading: explainerHeading,
+      tagline: STAR_EXPLAINERS[stars].tagline,
+      paragraphs: STAR_EXPLAINERS[stars].paragraphs,
+    },
     restaurants: toExploreGridCards(visible, "taxonomy"),
     remainingExploreHref:
       remainingCount > 0 ? `/explore?stars=${stars}` : null,

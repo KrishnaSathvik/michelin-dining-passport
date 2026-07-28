@@ -6,7 +6,7 @@ test.describe("Stitch application shell", () => {
   }) => {
     await page.goto("/explore");
     const banner = page.getByRole("banner");
-    await expect(banner.getByRole("link", { name: "Dining Passport" })).toHaveAttribute(
+    await expect(banner.getByRole("link", { name: "Orellin" })).toHaveAttribute(
       "href",
       "/",
     );
@@ -23,7 +23,7 @@ test.describe("Stitch application shell", () => {
     await expect(
       nav.getByRole("link", { name: "Michelin Stars" }),
     ).toHaveAttribute("href", "/about-michelin-stars");
-    await expect(nav.getByRole("link", { name: "Passport" })).toHaveAttribute(
+    await expect(nav.getByRole("link", { name: "My Restaurants" })).toHaveAttribute(
       "href",
       "/passport",
     );
@@ -47,24 +47,26 @@ test.describe("Stitch application shell", () => {
     ).toBeVisible();
   });
 
-  test("search affordance goes to explore", async ({ page }) => {
+  test("search affordance opens global search and keeps /explore fallback", async ({
+    page,
+  }) => {
     await page.setViewportSize({ width: 1440, height: 900 });
     await page.goto("/");
     const banner = page.getByRole("banner");
-    // Guard: fail clearly if a foreign localhost app is serving instead of Dining Passport.
+    // Guard: fail clearly if a foreign localhost app is serving instead of Orellin.
     await expect(
-      banner.getByRole("link", { name: "Dining Passport" }),
+      banner.getByRole("link", { name: "Orellin" }),
     ).toBeVisible();
     const search = banner.getByRole("link", { name: "Search restaurants" });
+    // href is the no-JS / new-tab fallback and must survive.
     await expect(search).toHaveAttribute("href", "/explore");
-    await Promise.all([
-      page.waitForURL(/\/explore/),
-      search.click(),
-    ]);
-    await expect(page).toHaveURL(/\/explore/);
+    await search.click();
+    await expect(
+      page.getByRole("dialog", { name: "Search restaurants" }),
+    ).toBeVisible();
   });
 
-  test("search affordance keyboard activation goes to explore", async ({
+  test("search affordance keyboard activation opens global search", async ({
     page,
   }) => {
     await page.setViewportSize({ width: 1440, height: 900 });
@@ -75,25 +77,23 @@ test.describe("Stitch application shell", () => {
     await expect(search).toHaveAttribute("href", "/explore");
     await search.focus();
     await expect(search).toBeFocused();
-    await Promise.all([
-      page.waitForURL(/\/explore/),
-      page.keyboard.press("Enter"),
-    ]);
-    await expect(page).toHaveURL(/\/explore/);
+    await page.keyboard.press("Enter");
+    await expect(
+      page.getByRole("dialog", { name: "Search restaurants" }),
+    ).toBeVisible();
   });
 
-  test("mobile search affordance goes to explore", async ({ page }) => {
+  test("mobile search affordance opens global search", async ({ page }) => {
     await page.setViewportSize({ width: 390, height: 844 });
     await page.goto("/");
     const search = page
       .getByRole("banner")
       .getByRole("link", { name: "Search restaurants" });
     await expect(search).toHaveAttribute("href", "/explore");
-    await Promise.all([
-      page.waitForURL(/\/explore/),
-      search.click(),
-    ]);
-    await expect(page).toHaveURL(/\/explore/);
+    await search.click();
+    await expect(
+      page.getByRole("dialog", { name: "Search restaurants" }),
+    ).toBeVisible();
   });
 
   test("mobile menu opens, Escape closes, focus returns", async ({ page }) => {

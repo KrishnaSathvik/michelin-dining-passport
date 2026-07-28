@@ -18,7 +18,7 @@ const ROUTES = ["about", "privacy", "terms", "contact", "sources"];
 
 async function assertApp(page) {
   const title = await page.title();
-  if (!/Dining Passport/i.test(title)) {
+  if (!/Orellin/i.test(title)) {
     throw new Error(`Wrong app title at ${page.url()}: ${title}`);
   }
 }

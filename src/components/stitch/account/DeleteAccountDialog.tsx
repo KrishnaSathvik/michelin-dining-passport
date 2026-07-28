@@ -70,10 +70,10 @@ export function DeleteAccountDialog({
       <div className="space-y-4" data-account-dialog="delete">
         <p className="font-sans text-[16px] text-dp-ink">
           This permanently deletes your authentication account and cloud
-          Passport records (personal restaurants and collections).
+          My Restaurants records (personal restaurants and collections).
         </p>
         <p className="font-sans text-[14px] text-dp-ink-muted">
-          Device-local Passport data on this browser is not cleared by this
+          Device-local My Restaurants data on this browser is not cleared by this
           action. Type <span className="font-semibold text-dp-ink">DELETE</span>{" "}
           to confirm.
         </p>

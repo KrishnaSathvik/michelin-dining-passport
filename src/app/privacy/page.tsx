@@ -10,7 +10,7 @@ import { buildPageMetadata } from "@/lib/seo/metadata";
 export const metadata: Metadata = buildPageMetadata({
   title: "Privacy",
   description:
-    "What Dining Passport stores, where it is stored, and how to remove it.",
+    "What Orellin stores, where it is stored, and how to remove it.",
   path: "/privacy",
 });
 
@@ -23,18 +23,18 @@ export default function PrivacyPage() {
     >
       <ContentSection heading="Browsing without an account">
         <p>
-          You can browse the whole atlas without signing in. If you use a
-          device-only Passport, your saves, plans, visits, ratings, and notes
-          stay in your browser on that device and are not sent to us. Clearing
-          site data erases them, and we cannot recover them for you.
+          You can browse the whole atlas without signing in. If you keep
+          device-only saves, your plans, visits, ratings, and notes stay in your
+          browser on that device and are not sent to us. Clearing site data
+          erases them, and we cannot recover them for you.
         </p>
       </ContentSection>
 
       <ContentSection heading="If you create an account">
         <p>
           An account is handled by Supabase, which stores your email address, a
-          hashed password, and the display name you choose. Signing in lets your
-          Passport sync across devices, which means these are stored against
+          hashed password, and the display name you choose. Signing in lets My
+          Restaurants sync across devices, which means these are stored against
           your account:
         </p>
         <ul>
@@ -56,7 +56,7 @@ export default function PrivacyPage() {
           Google directly and Google&rsquo;s own terms and privacy policy apply
           to that request. That content remains Google&rsquo;s; we do not verify
           Google ratings and they are kept separate from Michelin distinctions
-          and from your Passport.
+          and from My Restaurants.
         </p>
       </ContentSection>
 
@@ -64,10 +64,10 @@ export default function PrivacyPage() {
         <p>
           From your <Link href="/account">Account</Link> page you can export the
           data stored against your account and request deletion of your account
-          and its Passport data.
+          and its My Restaurants data.
         </p>
         <p>
-          A device-only Passport is removed by clearing site data in your
+          Device-only saves are removed by clearing site data in your
           browser.
         </p>
       </ContentSection>

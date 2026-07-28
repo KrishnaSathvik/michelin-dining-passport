@@ -1,4 +1,4 @@
-# Architecture — Michelin Dining Passport
+# Architecture — Orellin
 
 ## Principles
 

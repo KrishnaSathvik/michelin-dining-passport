@@ -1,16 +1,18 @@
 import { Breadcrumbs } from "@/components/navigation/Breadcrumbs";
 import { PageContainer } from "@/components/stitch/PageContainer";
 import { JsonLd } from "@/components/seo/JsonLd";
-import { siteConfig } from "@/config/site";
 import { breadcrumbJsonLd, restaurantJsonLd } from "@/lib/seo/jsonld";
+import { Suspense } from "react";
 import type { Restaurant } from "@/lib/data/types";
+import { BackToResultsLink } from "./BackToResultsLink";
 import type { RestaurantDetailViewModel } from "./models";
 import { NearbyRestaurantsSection } from "./NearbyRestaurantsSection";
 import { RelatedRestaurantsSection } from "./RelatedRestaurantsSection";
 import { RestaurantDetailStickyBar } from "./RestaurantDetailStickyBar";
-import { RestaurantFacts } from "./RestaurantFacts";
-import { RestaurantGoogleSection } from "./RestaurantGoogleSection";
-import { RestaurantIdentityHero } from "./RestaurantIdentityHero";
+import { RestaurantDetailsPanel } from "./RestaurantDetailsPanel";
+import { RestaurantLocationSection } from "./RestaurantLocationSection";
+import { RestaurantPassportSummary } from "./RestaurantPassportSummary";
+import { RestaurantPhotoHero } from "./RestaurantPhotoHero";
 
 type RestaurantDetailViewProps = {
   model: RestaurantDetailViewModel;
@@ -19,14 +21,14 @@ type RestaurantDetailViewProps = {
 };
 
 /**
- * Full Stitch restaurant-detail composition (Benu silhouette).
- * Server-rendered shell with client islands for journey, Google, sticky bar.
+ * Restaurant detail: a single full-width hero (with photo lightbox), the name
+ * and stars, then one consolidated Details panel, location, and discovery.
  */
 export function RestaurantDetailView({
   model,
   restaurantEntity,
 }: RestaurantDetailViewProps) {
-  const { restaurant, breadcrumbs, related, nearby, source } = model;
+  const { restaurant, breadcrumbs, related, nearby } = model;
 
   return (
     <div
@@ -38,22 +40,31 @@ export function RestaurantDetailView({
 
       <PageContainer className="py-8 md:py-[var(--dp-margin-desktop)]">
         <Breadcrumbs items={breadcrumbs} />
+        <Suspense fallback={null}>
+          <BackToResultsLink />
+        </Suspense>
 
-        <div className="mt-8">
-          <RestaurantIdentityHero restaurant={restaurant} />
-        </div>
-
-        {/* Details + Google band — preserves Benu  silhouette */}
-        <section
-          className="mb-[var(--dp-section)] flex flex-col gap-6 lg:flex-row"
-          aria-label="Restaurant details and live place information"
+        <div
+          className="mb-[var(--dp-section)] mt-8"
+          data-restaurant-hero="identity"
         >
-          <RestaurantFacts restaurant={restaurant} />
-          <RestaurantGoogleSection
-            restaurantSlug={restaurant.slug}
+          <RestaurantPhotoHero
+            name={restaurant.name}
+            slug={restaurant.slug}
+            city={restaurant.city}
+            stars={restaurant.stars}
             placeId={restaurant.googlePlaceId}
           />
-        </section>
+          <div className="mt-10 max-w-3xl">
+            <RestaurantDetailsPanel restaurant={restaurant} />
+          </div>
+        </div>
+
+        <RestaurantLocationSection restaurant={restaurant} />
+        <RestaurantPassportSummary
+          restaurantSlug={restaurant.slug}
+          restaurantName={restaurant.name}
+        />
 
         <RelatedRestaurantsSection
           title={model.relatedTitle}
@@ -63,24 +74,6 @@ export function RestaurantDetailView({
           title={model.nearbyTitle}
           restaurants={nearby}
         />
-
-        <section
-          className="mb-[var(--dp-section)] border-t border-dp-border pt-8"
-          aria-labelledby="source-note-heading"
-        >
-          <h2 id="source-note-heading" className="sr-only">
-            Source and independence
-          </h2>
-          <p className="max-w-2xl font-sans text-sm leading-relaxed text-dp-ink-muted">
-            Last dataset import: {source.importedAt}. {source.dataUpdatedLabel}.
-            Facts on this page come from the verified workbook roster only.
-            Google photos, ratings, hours, and reviews appear only inside the
-            Google module above.
-          </p>
-          <p className="mt-3 max-w-2xl font-sans text-sm leading-relaxed text-dp-ink-muted">
-            {source.independenceDisclaimer || siteConfig.independenceDisclaimer}
-          </p>
-        </section>
       </PageContainer>
 
       <RestaurantDetailStickyBar restaurant={restaurant} />

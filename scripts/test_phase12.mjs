@@ -81,14 +81,14 @@ describe("Phase 12 production HTTP status (opt-in live server)", () => {
       const html = await home.text();
       healthy =
         home.ok &&
-        /Dining Passport/i.test(html) &&
+        /Orellin/i.test(html) &&
         !/wrong application/i.test(html);
     } catch {
       healthy = false;
     }
     if (!healthy) {
       t.skip(
-        `No Dining Passport server at ${base}. Start with: npm run start -- --hostname 127.0.0.1 --port 3112`,
+        `No Orellin server at ${base}. Start with: npm run start -- --hostname 127.0.0.1 --port 3112`,
       );
       return;
     }
@@ -107,7 +107,7 @@ describe("Phase 12 production HTTP status (opt-in live server)", () => {
       assert.equal(res.status, 404, `${path} expected 404, got ${res.status}`);
       const body = await res.text();
       assert.match(body, /This table could not be found/i);
-      assert.match(body, /Dining Passport/i);
+      assert.match(body, /Orellin/i);
     }
 
     const okHome = await fetch(`${base}/`);

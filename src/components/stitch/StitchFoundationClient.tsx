@@ -47,7 +47,7 @@ export function StitchFoundationClient() {
       <PageContainer className="py-16">
         <p className="dp-label-caps text-dp-ink-muted">Development reference</p>
         <h1 className="dp-display-lg mt-4 text-dp-primary max-md:dp-display-lg-mobile">
-          Dining Passport Component Library
+          Orellin Component Library
         </h1>
         <p className="dp-body-lg mt-4 max-w-2xl text-dp-ink-secondary">
           Phase 1–2 Stitch primitives and application shell. Live AppHeader and

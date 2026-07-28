@@ -1,0 +1,1143 @@
+- generic [active] [ref=f11e1]:
+  - link "Skip to main content" [ref=f11e2] [cursor=pointer]:
+    - /url: "#main-content"
+  - banner [ref=f11e3]:
+    - generic [ref=f11e4]:
+      - link "Dining Passport" [ref=f11e6] [cursor=pointer]:
+        - /url: /
+      - generic [ref=f11e7]:
+        - link "Search restaurants" [ref=f11e8] [cursor=pointer]:
+          - /url: /explore
+        - button "Open menu" [ref=f11e12]
+  - main [ref=f11e15]:
+    - generic [ref=f11e16]:
+      - generic [ref=f11e17]:
+        - navigation "Breadcrumb" [ref=f11e18]:
+          - list [ref=f11e19]:
+            - listitem [ref=f11e20]:
+              - link "Home" [ref=f11e21] [cursor=pointer]:
+                - /url: /
+            - listitem [ref=f11e22]: /
+            - listitem [ref=f11e23]: Explore
+        - generic [ref=f11e24]:
+          - heading "Explore Michelin-starred restaurants" [level=1] [ref=f11e25]
+          - paragraph [ref=f11e26]: Search and filter 271 Michelin-starred restaurants across the United States.
+          - paragraph [ref=f11e27]: 271 restaurants
+      - region "Search and filters" [ref=f11e28]:
+        - generic [ref=f11e29]:
+          - search [ref=f11e30]:
+            - generic [ref=f11e32]:
+              - generic [ref=f11e33]: Search restaurants by name, city, state, or cuisine
+              - searchbox "Search restaurants by name, city, state, or cuisine" [ref=f11e34]
+            - button "Search" [ref=f11e35]
+          - group "Quick filters" [ref=f11e38]:
+            - generic [ref=f11e39]:
+              - generic [ref=f11e40]: Michelin stars
+              - combobox "Michelin stars" [ref=f11e41]:
+                - option "Michelin Stars" [selected]
+                - option "3 Michelin Stars (16)"
+                - option "2 Michelin Stars (39)"
+                - option "1 Michelin Star (216)"
+              - generic [ref=f11e42]: State
+              - combobox "State" [ref=f11e43]:
+                - option "State" [selected]
+                - option "California (83)"
+                - option "Colorado (9)"
+                - option "Florida (26)"
+                - option "Georgia (8)"
+                - option "Illinois (19)"
+                - option "Louisiana (3)"
+                - option "Massachusetts (1)"
+                - option "New York (71)"
+                - option "North Carolina (1)"
+                - option "Pennsylvania (3)"
+                - option "South Carolina (4)"
+                - option "Tennessee (3)"
+                - option "Texas (18)"
+                - option "Washington, D.C. (22)"
+              - generic [ref=f11e44]: City
+              - combobox "City" [ref=f11e45]:
+                - option "City" [selected]
+                - option "Aspen, CO (1)"
+                - option "Atherton, CA (1)"
+                - option "Atlanta, GA (7)"
+                - option "Austin, TX (7)"
+                - option "Beverly Hills, CA (2)"
+                - option "Boston, MA (1)"
+                - option "Boulder, CO (1)"
+                - option "Brooklyn, NY (6)"
+                - option "Calistoga, CA (1)"
+                - option "Carlsbad, CA (2)"
+                - option "Carmel-by-the-Sea, CA (2)"
+                - option "Charleston, SC (3)"
+                - option "Charlotte, NC (1)"
+                - option "Chicago, IL (19)"
+                - option "Coral Gables, FL (1)"
+                - option "Culver City, CA (1)"
+                - option "Dallas, TX (2)"
+                - option "Denver, CO (7)"
+                - option "Elk, CA (1)"
+                - option "Encino, CA (2)"
+                - option "Fort Lauderdale, FL (1)"
+                - option "Geyserville, CA (1)"
+                - option "Greenville, SC (1)"
+                - option "Healdsburg, CA (2)"
+                - option "Houston, TX (5)"
+                - option "La Jolla, CA (1)"
+                - option "Laguna Beach, CA (1)"
+                - option "Long Beach, CA (1)"
+                - option "Los Alamos, CA (1)"
+                - option "Los Angeles, CA (15)"
+                - option "Marietta, GA (1)"
+                - option "Miami, FL (9)"
+                - option "Miami Beach, FL (2)"
+                - option "Montecito, CA (1)"
+                - option "Nashville, TN (3)"
+                - option "New Orleans, LA (3)"
+                - option "New York, NY (62)"
+                - option "North Miami, FL (1)"
+                - option "North Salem, NY (1)"
+                - option "Oakland, CA (2)"
+                - option "Orlando, FL (4)"
+                - option "Palo Alto, CA (1)"
+                - option "Paso Robles, CA (2)"
+                - option "Philadelphia, PA (3)"
+                - option "Queens, NY (1)"
+                - option "Rutherford, CA (1)"
+                - option "Sacramento, CA (2)"
+                - option "Saint Helena, CA (1)"
+                - option "San Anselmo, CA (1)"
+                - option "San Antonio, TX (3)"
+                - option "San Diego, CA (2)"
+                - option "San Francisco, CA (25)"
+                - option "San Mateo, CA (1)"
+                - option "Santa Barbara, CA (1)"
+                - option "Santa Monica, CA (3)"
+                - option "Saratoga, CA (1)"
+                - option "Sonoma, CA (1)"
+                - option "Spring, TX (1)"
+                - option "Surfside, FL (1)"
+                - option "Tampa, FL (4)"
+                - option "Tarrytown, NY (1)"
+                - option "Torrance, CA (1)"
+                - option "Washington, DC (22)"
+                - option "West Hollywood, CA (1)"
+                - option "West Palm Beach, FL (1)"
+                - option "Winter Park, FL (2)"
+                - option "Woodside, CA (1)"
+                - option "Yountville, CA (1)"
+              - generic [ref=f11e46]: Cuisine
+              - combobox "Cuisine" [ref=f11e47]:
+                - option "Cuisine" [selected]
+                - option "American (14)"
+                - option "American Contemporary (4)"
+                - option "Asian (2)"
+                - option "Asian Contemporary (1)"
+                - option "Barbecue (4)"
+                - option "Californian (17)"
+                - option "Chinese (1)"
+                - option "Colombian (2)"
+                - option "Contemporary (86)"
+                - option "Creative (6)"
+                - option "Cuban (1)"
+                - option "Filipino (2)"
+                - option "French (15)"
+                - option "French Contemporary (3)"
+                - option "Fusion (2)"
+                - option "Indian (4)"
+                - option "Israeli (1)"
+                - option "Italian (7)"
+                - option "Japanese (48)"
+                - option "Korean (14)"
+                - option "Korean Contemporary (1)"
+                - option "Latin American (1)"
+                - option "Mexican (11)"
+                - option "Middle Eastern (3)"
+                - option "Modern Cuisine (1)"
+                - option "Modern French (1)"
+                - option "Peruvian (1)"
+                - option "Scandinavian (2)"
+                - option "Seafood (2)"
+                - option "Spanish (4)"
+                - option "Steakhouse (2)"
+                - option "Sushi (2)"
+                - option "Thai (2)"
+                - option "Vegetarian (3)"
+                - option "Vietnamese (1)"
+              - generic [ref=f11e48]: Price
+              - combobox "Price" [ref=f11e49]:
+                - option "Price" [selected]
+                - option "$$$$ (236)"
+                - option "$$$ (28)"
+                - option "$$ (7)"
+            - button "All Filters" [ref=f11e50]
+      - generic [ref=f11e54]:
+        - paragraph [ref=f11e55]: Page 1 of 12 · 271 restaurants
+        - generic [ref=f11e56]:
+          - generic [ref=f11e57]:
+            - generic [ref=f11e58]: Sort
+            - combobox "Sort" [ref=f11e59]:
+              - option "Featured" [selected]
+              - option "Stars · highest first"
+              - option "Stars · lowest first"
+              - option "Restaurant name · A–Z"
+              - option "Restaurant name · Z–A"
+              - option "State"
+              - option "City"
+          - group "Result view" [ref=f11e60]:
+            - link "Grid view" [ref=f11e61] [cursor=pointer]:
+              - /url: /explore
+            - link "List view" [ref=f11e67] [cursor=pointer]:
+              - /url: /explore?view=list
+      - list [ref=f11e71]:
+        - listitem [ref=f11e72]:
+          - article [ref=f11e73]:
+            - generic [ref=f11e74]:
+              - link "View SingleThread" [ref=f11e75] [cursor=pointer]:
+                - /url: /restaurants/singlethread-healdsburg-ca
+                - img "SingleThread in Healdsburg, CA" [ref=f11e77]:
+                  - generic [ref=f11e78]:
+                    - generic [ref=f11e79]:
+                      - paragraph [ref=f11e80]: SI
+                      - generic "Three Michelin Stars" [ref=f11e81]:
+                        - generic [ref=f11e82]: ★★★
+                        - generic [ref=f11e83]: 3 Michelin stars
+                    - generic [ref=f11e84]:
+                      - paragraph [ref=f11e85]: SingleThread
+                      - paragraph [ref=f11e86]: Healdsburg, CA
+              - button "Save to passport" [disabled] [ref=f11e88]:
+                - generic [ref=f11e89]: ♡
+                - generic [ref=f11e90]: Not saved
+            - generic [ref=f11e91]:
+              - generic "Three Michelin Stars" [ref=f11e92]:
+                - generic [ref=f11e93]: ★★★
+                - generic [ref=f11e94]: 3 Michelin stars
+              - heading [level=3] [ref=f11e95]:
+                - link "SingleThread" [ref=f11e96] [cursor=pointer]:
+                  - /url: /restaurants/singlethread-healdsburg-ca
+              - paragraph [ref=f11e97]:
+                - generic [ref=f11e98]: Contemporary
+                - generic [ref=f11e99]:
+                  - generic [ref=f11e100]: ·
+                  - text: Healdsburg, CA
+                - generic [ref=f11e101]:
+                  - generic [ref=f11e102]: ·
+                  - text: $$$$
+              - link "Reserve now (opens in a new tab)" [ref=f11e104] [cursor=pointer]:
+                - /url: https://singlethreadfarms.com/bookings
+                - generic [ref=f11e105]:
+                  - text: Reserve now ↗
+                  - generic [ref=f11e106]: (opens in a new tab)
+        - listitem [ref=f11e107]:
+          - article [ref=f11e108]:
+            - generic [ref=f11e109]:
+              - link "View Kasama" [ref=f11e110] [cursor=pointer]:
+                - /url: /restaurants/kasama-chicago-il
+                - img "Kasama in Chicago, IL" [ref=f11e112]:
+                  - generic [ref=f11e113]:
+                    - generic [ref=f11e114]:
+                      - paragraph [ref=f11e115]: KA
+                      - generic "Two Michelin Stars" [ref=f11e116]:
+                        - generic [ref=f11e117]: ★★
+                        - generic [ref=f11e118]: 2 Michelin stars
+                    - generic [ref=f11e119]:
+                      - paragraph [ref=f11e120]: Kasama
+                      - paragraph [ref=f11e121]: Chicago, IL
+              - button "Save to passport" [disabled] [ref=f11e123]:
+                - generic [ref=f11e124]: ♡
+                - generic [ref=f11e125]: Not saved
+            - generic [ref=f11e126]:
+              - generic "Two Michelin Stars" [ref=f11e127]:
+                - generic [ref=f11e128]: ★★
+                - generic [ref=f11e129]: 2 Michelin stars
+              - heading [level=3] [ref=f11e130]:
+                - link "Kasama" [ref=f11e131] [cursor=pointer]:
+                  - /url: /restaurants/kasama-chicago-il
+              - paragraph [ref=f11e132]:
+                - generic [ref=f11e133]: Filipino
+                - generic [ref=f11e134]:
+                  - generic [ref=f11e135]: ·
+                  - text: Chicago, IL
+                - generic [ref=f11e136]:
+                  - generic [ref=f11e137]: ·
+                  - text: $$$$
+              - link "Reserve now (opens in a new tab)" [ref=f11e139] [cursor=pointer]:
+                - /url: https://www.kasamachicago.com/reservations-dinner
+                - generic [ref=f11e140]:
+                  - text: Reserve now ↗
+                  - generic [ref=f11e141]: (opens in a new tab)
+        - listitem [ref=f11e142]:
+          - article [ref=f11e143]:
+            - generic [ref=f11e144]:
+              - link "View Elcielo Miami" [ref=f11e145] [cursor=pointer]:
+                - /url: /restaurants/elcielo-miami-miami-fl
+                - img "Elcielo Miami in Miami, FL" [ref=f11e147]:
+                  - generic [ref=f11e148]:
+                    - generic [ref=f11e149]:
+                      - paragraph [ref=f11e150]: EM
+                      - generic "One Michelin Star" [ref=f11e151]:
+                        - generic [ref=f11e152]: ★
+                        - generic [ref=f11e153]: 1 Michelin star
+                    - generic [ref=f11e154]:
+                      - paragraph [ref=f11e155]: Elcielo Miami
+                      - paragraph [ref=f11e156]: Miami, FL
+              - button "Save to passport" [disabled] [ref=f11e158]:
+                - generic [ref=f11e159]: ♡
+                - generic [ref=f11e160]: Not saved
+            - generic [ref=f11e161]:
+              - generic "One Michelin Star" [ref=f11e162]:
+                - generic [ref=f11e163]: ★
+                - generic [ref=f11e164]: 1 Michelin star
+              - heading [level=3] [ref=f11e165]:
+                - link "Elcielo Miami" [ref=f11e166] [cursor=pointer]:
+                  - /url: /restaurants/elcielo-miami-miami-fl
+              - paragraph [ref=f11e167]:
+                - generic [ref=f11e168]: Colombian
+                - generic [ref=f11e169]:
+                  - generic [ref=f11e170]: ·
+                  - text: Miami, FL
+                - generic [ref=f11e171]:
+                  - generic [ref=f11e172]: ·
+                  - text: $$$$
+              - link "Check availability (opens in a new tab)" [ref=f11e174] [cursor=pointer]:
+                - /url: https://elcielomiami.com
+                - generic [ref=f11e175]:
+                  - text: Check availability ↗
+                  - generic [ref=f11e176]: (opens in a new tab)
+        - listitem [ref=f11e177]:
+          - article [ref=f11e178]:
+            - generic [ref=f11e179]:
+              - link "View minibar by José Andrés" [ref=f11e180] [cursor=pointer]:
+                - /url: /restaurants/minibar-by-jose-andres-washington-dc
+                - img "minibar by José Andrés in Washington, DC" [ref=f11e182]:
+                  - generic [ref=f11e183]:
+                    - generic [ref=f11e184]:
+                      - paragraph [ref=f11e185]: MB
+                      - generic "Two Michelin Stars" [ref=f11e186]:
+                        - generic [ref=f11e187]: ★★
+                        - generic [ref=f11e188]: 2 Michelin stars
+                    - generic [ref=f11e189]:
+                      - paragraph [ref=f11e190]: minibar by José Andrés
+                      - paragraph [ref=f11e191]: Washington, DC
+              - button "Save to passport" [disabled] [ref=f11e193]:
+                - generic [ref=f11e194]: ♡
+                - generic [ref=f11e195]: Not saved
+            - generic [ref=f11e196]:
+              - generic "Two Michelin Stars" [ref=f11e197]:
+                - generic [ref=f11e198]: ★★
+                - generic [ref=f11e199]: 2 Michelin stars
+              - heading [level=3] [ref=f11e200]:
+                - link "minibar by José Andrés" [ref=f11e201] [cursor=pointer]:
+                  - /url: /restaurants/minibar-by-jose-andres-washington-dc
+              - paragraph [ref=f11e202]:
+                - generic [ref=f11e203]: Creative
+                - generic [ref=f11e204]:
+                  - generic [ref=f11e205]: ·
+                  - text: Washington, DC
+                - generic [ref=f11e206]:
+                  - generic [ref=f11e207]: ·
+                  - text: $$$$
+              - link "Reserve now (opens in a new tab)" [ref=f11e209] [cursor=pointer]:
+                - /url: https://www.minibarbyjoseandres.com/reservations/
+                - generic [ref=f11e210]:
+                  - text: Reserve now ↗
+                  - generic [ref=f11e211]: (opens in a new tab)
+        - listitem [ref=f11e212]:
+          - article [ref=f11e213]:
+            - generic [ref=f11e214]:
+              - link "View Semma" [ref=f11e215] [cursor=pointer]:
+                - /url: /restaurants/semma-new-york-ny
+                - img "Semma in New York, NY" [ref=f11e217]:
+                  - generic [ref=f11e218]:
+                    - generic [ref=f11e219]:
+                      - paragraph [ref=f11e220]: SE
+                      - generic "One Michelin Star" [ref=f11e221]:
+                        - generic [ref=f11e222]: ★
+                        - generic [ref=f11e223]: 1 Michelin star
+                    - generic [ref=f11e224]:
+                      - paragraph [ref=f11e225]: Semma
+                      - paragraph [ref=f11e226]: New York, NY
+              - button "Save to passport" [disabled] [ref=f11e228]:
+                - generic [ref=f11e229]: ♡
+                - generic [ref=f11e230]: Not saved
+            - generic [ref=f11e231]:
+              - generic "One Michelin Star" [ref=f11e232]:
+                - generic [ref=f11e233]: ★
+                - generic [ref=f11e234]: 1 Michelin star
+              - heading [level=3] [ref=f11e235]:
+                - link "Semma" [ref=f11e236] [cursor=pointer]:
+                  - /url: /restaurants/semma-new-york-ny
+              - paragraph [ref=f11e237]:
+                - generic [ref=f11e238]: Indian
+                - generic [ref=f11e239]:
+                  - generic [ref=f11e240]: ·
+                  - text: New York, NY
+                - generic [ref=f11e241]:
+                  - generic [ref=f11e242]: ·
+                  - text: $$$
+              - link "Reserve now (opens in a new tab)" [ref=f11e244] [cursor=pointer]:
+                - /url: https://www.sevenrooms.com/explore/semma/reservations/create/search/
+                - generic [ref=f11e245]:
+                  - text: Reserve now ↗
+                  - generic [ref=f11e246]: (opens in a new tab)
+        - listitem [ref=f11e247]:
+          - article [ref=f11e248]:
+            - generic [ref=f11e249]:
+              - link "View Frasca Food and Wine" [ref=f11e250] [cursor=pointer]:
+                - /url: /restaurants/frasca-food-and-wine-boulder-co
+                - img "Frasca Food and Wine in Boulder, CO" [ref=f11e252]:
+                  - generic [ref=f11e253]:
+                    - generic [ref=f11e254]:
+                      - paragraph [ref=f11e255]: FF
+                      - generic "One Michelin Star" [ref=f11e256]:
+                        - generic [ref=f11e257]: ★
+                        - generic [ref=f11e258]: 1 Michelin star
+                    - generic [ref=f11e259]:
+                      - paragraph [ref=f11e260]: Frasca Food and Wine
+                      - paragraph [ref=f11e261]: Boulder, CO
+              - button "Save to passport" [disabled] [ref=f11e263]:
+                - generic [ref=f11e264]: ♡
+                - generic [ref=f11e265]: Not saved
+            - generic [ref=f11e266]:
+              - generic "One Michelin Star" [ref=f11e267]:
+                - generic [ref=f11e268]: ★
+                - generic [ref=f11e269]: 1 Michelin star
+              - heading [level=3] [ref=f11e270]:
+                - link "Frasca Food and Wine" [ref=f11e271] [cursor=pointer]:
+                  - /url: /restaurants/frasca-food-and-wine-boulder-co
+              - paragraph [ref=f11e272]:
+                - generic [ref=f11e273]: Italian
+                - generic [ref=f11e274]:
+                  - generic [ref=f11e275]: ·
+                  - text: Boulder, CO
+                - generic [ref=f11e276]:
+                  - generic [ref=f11e277]: ·
+                  - text: $$$$
+              - link "Check availability (opens in a new tab)" [ref=f11e279] [cursor=pointer]:
+                - /url: https://www.frascafoodandwine.com/
+                - generic [ref=f11e280]:
+                  - text: Check availability ↗
+                  - generic [ref=f11e281]: (opens in a new tab)
+        - listitem [ref=f11e282]:
+          - article [ref=f11e283]:
+            - generic [ref=f11e284]:
+              - link "View Harbor House Inn" [ref=f11e285] [cursor=pointer]:
+                - /url: /restaurants/harbor-house-inn-elk-ca
+                - img "Harbor House Inn in Elk, CA" [ref=f11e287]:
+                  - generic [ref=f11e288]:
+                    - generic [ref=f11e289]:
+                      - paragraph [ref=f11e290]: HH
+                      - generic "Two Michelin Stars" [ref=f11e291]:
+                        - generic [ref=f11e292]: ★★
+                        - generic [ref=f11e293]: 2 Michelin stars
+                    - generic [ref=f11e294]:
+                      - paragraph [ref=f11e295]: Harbor House Inn
+                      - paragraph [ref=f11e296]: Elk, CA
+              - button "Save to passport" [disabled] [ref=f11e298]:
+                - generic [ref=f11e299]: ♡
+                - generic [ref=f11e300]: Not saved
+            - generic [ref=f11e301]:
+              - generic "Two Michelin Stars" [ref=f11e302]:
+                - generic [ref=f11e303]: ★★
+                - generic [ref=f11e304]: 2 Michelin stars
+              - heading [level=3] [ref=f11e305]:
+                - link "Harbor House Inn" [ref=f11e306] [cursor=pointer]:
+                  - /url: /restaurants/harbor-house-inn-elk-ca
+              - paragraph [ref=f11e307]:
+                - generic [ref=f11e308]: Californian
+                - generic [ref=f11e309]:
+                  - generic [ref=f11e310]: ·
+                  - text: Elk, CA
+                - generic [ref=f11e311]:
+                  - generic [ref=f11e312]: ·
+                  - text: $$$$
+              - link "Check availability (opens in a new tab)" [ref=f11e314] [cursor=pointer]:
+                - /url: https://www.theharborhouseinn.com/
+                - generic [ref=f11e315]:
+                  - text: Check availability ↗
+                  - generic [ref=f11e316]: (opens in a new tab)
+        - listitem [ref=f11e317]:
+          - article [ref=f11e318]:
+            - generic [ref=f11e319]:
+              - link "View Addison" [ref=f11e320] [cursor=pointer]:
+                - /url: /restaurants/addison-san-diego-ca
+                - img "Addison in San Diego, CA" [ref=f11e322]:
+                  - generic [ref=f11e323]:
+                    - generic [ref=f11e324]:
+                      - paragraph [ref=f11e325]: AD
+                      - generic "Three Michelin Stars" [ref=f11e326]:
+                        - generic [ref=f11e327]: ★★★
+                        - generic [ref=f11e328]: 3 Michelin stars
+                    - generic [ref=f11e329]:
+                      - paragraph [ref=f11e330]: Addison
+                      - paragraph [ref=f11e331]: San Diego, CA
+              - button "Save to passport" [disabled] [ref=f11e333]:
+                - generic [ref=f11e334]: ♡
+                - generic [ref=f11e335]: Not saved
+            - generic [ref=f11e336]:
+              - generic "Three Michelin Stars" [ref=f11e337]:
+                - generic [ref=f11e338]: ★★★
+                - generic [ref=f11e339]: 3 Michelin stars
+              - heading [level=3] [ref=f11e340]:
+                - link "Addison" [ref=f11e341] [cursor=pointer]:
+                  - /url: /restaurants/addison-san-diego-ca
+              - paragraph [ref=f11e342]:
+                - generic [ref=f11e343]: Contemporary
+                - generic [ref=f11e344]:
+                  - generic [ref=f11e345]: ·
+                  - text: San Diego, CA
+                - generic [ref=f11e346]:
+                  - generic [ref=f11e347]: ·
+                  - text: $$$$
+              - link "Reserve now (opens in a new tab)" [ref=f11e349] [cursor=pointer]:
+                - /url: https://www.addisondelmar.com/reservations/
+                - generic [ref=f11e350]:
+                  - text: Reserve now ↗
+                  - generic [ref=f11e351]: (opens in a new tab)
+        - listitem [ref=f11e352]:
+          - article [ref=f11e353]:
+            - generic [ref=f11e354]:
+              - link "View Atelier Crenn" [ref=f11e355] [cursor=pointer]:
+                - /url: /restaurants/atelier-crenn-san-francisco-ca
+                - img "Atelier Crenn in San Francisco, CA" [ref=f11e357]:
+                  - generic [ref=f11e358]:
+                    - generic [ref=f11e359]:
+                      - paragraph [ref=f11e360]: AC
+                      - generic "Three Michelin Stars" [ref=f11e361]:
+                        - generic [ref=f11e362]: ★★★
+                        - generic [ref=f11e363]: 3 Michelin stars
+                    - generic [ref=f11e364]:
+                      - paragraph [ref=f11e365]: Atelier Crenn
+                      - paragraph [ref=f11e366]: San Francisco, CA
+              - button "Save to passport" [disabled] [ref=f11e368]:
+                - generic [ref=f11e369]: ♡
+                - generic [ref=f11e370]: Not saved
+            - generic [ref=f11e371]:
+              - generic "Three Michelin Stars" [ref=f11e372]:
+                - generic [ref=f11e373]: ★★★
+                - generic [ref=f11e374]: 3 Michelin stars
+              - heading [level=3] [ref=f11e375]:
+                - link "Atelier Crenn" [ref=f11e376] [cursor=pointer]:
+                  - /url: /restaurants/atelier-crenn-san-francisco-ca
+              - paragraph [ref=f11e377]:
+                - generic [ref=f11e378]: Contemporary
+                - generic [ref=f11e379]:
+                  - generic [ref=f11e380]: ·
+                  - text: San Francisco, CA
+                - generic [ref=f11e381]:
+                  - generic [ref=f11e382]: ·
+                  - text: $$$$
+              - link "Reserve now (opens in a new tab)" [ref=f11e384] [cursor=pointer]:
+                - /url: https://www.opentable.com/r/atelier-crenn
+                - generic [ref=f11e385]:
+                  - text: Reserve now ↗
+                  - generic [ref=f11e386]: (opens in a new tab)
+        - listitem [ref=f11e387]:
+          - article [ref=f11e388]:
+            - generic [ref=f11e389]:
+              - link "View Benu" [ref=f11e390] [cursor=pointer]:
+                - /url: /restaurants/benu-san-francisco-ca
+                - img "Benu in San Francisco, CA" [ref=f11e392]:
+                  - generic [ref=f11e393]:
+                    - generic [ref=f11e394]:
+                      - paragraph [ref=f11e395]: BE
+                      - generic "Three Michelin Stars" [ref=f11e396]:
+                        - generic [ref=f11e397]: ★★★
+                        - generic [ref=f11e398]: 3 Michelin stars
+                    - generic [ref=f11e399]:
+                      - paragraph [ref=f11e400]: Benu
+                      - paragraph [ref=f11e401]: San Francisco, CA
+              - button "Save to passport" [disabled] [ref=f11e403]:
+                - generic [ref=f11e404]: ♡
+                - generic [ref=f11e405]: Not saved
+            - generic [ref=f11e406]:
+              - generic "Three Michelin Stars" [ref=f11e407]:
+                - generic [ref=f11e408]: ★★★
+                - generic [ref=f11e409]: 3 Michelin stars
+              - heading [level=3] [ref=f11e410]:
+                - link "Benu" [ref=f11e411] [cursor=pointer]:
+                  - /url: /restaurants/benu-san-francisco-ca
+              - paragraph [ref=f11e412]:
+                - generic [ref=f11e413]: Asian
+                - generic [ref=f11e414]:
+                  - generic [ref=f11e415]: ·
+                  - text: San Francisco, CA
+                - generic [ref=f11e416]:
+                  - generic [ref=f11e417]: ·
+                  - text: $$$$
+              - link "Check availability (opens in a new tab)" [ref=f11e419] [cursor=pointer]:
+                - /url: https://www.benusf.com/
+                - generic [ref=f11e420]:
+                  - text: Check availability ↗
+                  - generic [ref=f11e421]: (opens in a new tab)
+        - listitem [ref=f11e422]:
+          - article [ref=f11e423]:
+            - generic [ref=f11e424]:
+              - link "View Californios" [ref=f11e425] [cursor=pointer]:
+                - /url: /restaurants/californios-san-francisco-ca
+                - img "Californios in San Francisco, CA" [ref=f11e427]:
+                  - generic [ref=f11e428]:
+                    - generic [ref=f11e429]:
+                      - paragraph [ref=f11e430]: CA
+                      - generic "Three Michelin Stars" [ref=f11e431]:
+                        - generic [ref=f11e432]: ★★★
+                        - generic [ref=f11e433]: 3 Michelin stars
+                    - generic [ref=f11e434]:
+                      - paragraph [ref=f11e435]: Californios
+                      - paragraph [ref=f11e436]: San Francisco, CA
+              - button "Save to passport" [disabled] [ref=f11e438]:
+                - generic [ref=f11e439]: ♡
+                - generic [ref=f11e440]: Not saved
+            - generic [ref=f11e441]:
+              - generic "Three Michelin Stars" [ref=f11e442]:
+                - generic [ref=f11e443]: ★★★
+                - generic [ref=f11e444]: 3 Michelin stars
+              - heading [level=3] [ref=f11e445]:
+                - link "Californios" [ref=f11e446] [cursor=pointer]:
+                  - /url: /restaurants/californios-san-francisco-ca
+              - paragraph [ref=f11e447]:
+                - generic [ref=f11e448]: Mexican
+                - generic [ref=f11e449]:
+                  - generic [ref=f11e450]: ·
+                  - text: San Francisco, CA
+                - generic [ref=f11e451]:
+                  - generic [ref=f11e452]: ·
+                  - text: $$$$
+              - link "Check availability (opens in a new tab)" [ref=f11e454] [cursor=pointer]:
+                - /url: https://www.californiossf.com
+                - generic [ref=f11e455]:
+                  - text: Check availability ↗
+                  - generic [ref=f11e456]: (opens in a new tab)
+        - listitem [ref=f11e457]:
+          - article [ref=f11e458]:
+            - generic [ref=f11e459]:
+              - link "View Eleven Madison Park" [ref=f11e460] [cursor=pointer]:
+                - /url: /restaurants/eleven-madison-park-new-york-ny
+                - img "Eleven Madison Park in New York, NY" [ref=f11e462]:
+                  - generic [ref=f11e463]:
+                    - generic [ref=f11e464]:
+                      - paragraph [ref=f11e465]: EM
+                      - generic "Three Michelin Stars" [ref=f11e466]:
+                        - generic [ref=f11e467]: ★★★
+                        - generic [ref=f11e468]: 3 Michelin stars
+                    - generic [ref=f11e469]:
+                      - paragraph [ref=f11e470]: Eleven Madison Park
+                      - paragraph [ref=f11e471]: New York, NY
+              - button "Save to passport" [disabled] [ref=f11e473]:
+                - generic [ref=f11e474]: ♡
+                - generic [ref=f11e475]: Not saved
+            - generic [ref=f11e476]:
+              - generic "Three Michelin Stars" [ref=f11e477]:
+                - generic [ref=f11e478]: ★★★
+                - generic [ref=f11e479]: 3 Michelin stars
+              - heading [level=3] [ref=f11e480]:
+                - link "Eleven Madison Park" [ref=f11e481] [cursor=pointer]:
+                  - /url: /restaurants/eleven-madison-park-new-york-ny
+              - paragraph [ref=f11e482]:
+                - generic [ref=f11e483]: Contemporary
+                - generic [ref=f11e484]:
+                  - generic [ref=f11e485]: ·
+                  - text: New York, NY
+                - generic [ref=f11e486]:
+                  - generic [ref=f11e487]: ·
+                  - text: $$$$
+              - link "Reserve now (opens in a new tab)" [ref=f11e489] [cursor=pointer]:
+                - /url: https://resy.com/cities/new-york-ny/venues/eleven-madison-park
+                - generic [ref=f11e490]:
+                  - text: Reserve now ↗
+                  - generic [ref=f11e491]: (opens in a new tab)
+        - listitem [ref=f11e492]:
+          - article [ref=f11e493]:
+            - generic [ref=f11e494]:
+              - link "View Enclos" [ref=f11e495] [cursor=pointer]:
+                - /url: /restaurants/enclos-sonoma-ca
+                - img "Enclos in Sonoma, CA" [ref=f11e497]:
+                  - generic [ref=f11e498]:
+                    - generic [ref=f11e499]:
+                      - paragraph [ref=f11e500]: EN
+                      - generic "Three Michelin Stars" [ref=f11e501]:
+                        - generic [ref=f11e502]: ★★★
+                        - generic [ref=f11e503]: 3 Michelin stars
+                    - generic [ref=f11e504]:
+                      - paragraph [ref=f11e505]: Enclos
+                      - paragraph [ref=f11e506]: Sonoma, CA
+              - button "Save to passport" [disabled] [ref=f11e508]:
+                - generic [ref=f11e509]: ♡
+                - generic [ref=f11e510]: Not saved
+            - generic [ref=f11e511]:
+              - generic "Three Michelin Stars" [ref=f11e512]:
+                - generic [ref=f11e513]: ★★★
+                - generic [ref=f11e514]: 3 Michelin stars
+              - heading [level=3] [ref=f11e515]:
+                - link "Enclos" [ref=f11e516] [cursor=pointer]:
+                  - /url: /restaurants/enclos-sonoma-ca
+              - paragraph [ref=f11e517]:
+                - generic [ref=f11e518]: Contemporary
+                - generic [ref=f11e519]:
+                  - generic [ref=f11e520]: ·
+                  - text: Sonoma, CA
+                - generic [ref=f11e521]:
+                  - generic [ref=f11e522]: ·
+                  - text: $$$$
+              - link "Check availability (opens in a new tab)" [ref=f11e524] [cursor=pointer]:
+                - /url: https://enclos-sonoma.com/
+                - generic [ref=f11e525]:
+                  - text: Check availability ↗
+                  - generic [ref=f11e526]: (opens in a new tab)
+        - listitem [ref=f11e527]:
+          - article [ref=f11e528]:
+            - generic [ref=f11e529]:
+              - link "View Jungsik New York" [ref=f11e530] [cursor=pointer]:
+                - /url: /restaurants/jungsik-new-york-new-york-ny
+                - img "Jungsik New York in New York, NY" [ref=f11e532]:
+                  - generic [ref=f11e533]:
+                    - generic [ref=f11e534]:
+                      - paragraph [ref=f11e535]: JN
+                      - generic "Three Michelin Stars" [ref=f11e536]:
+                        - generic [ref=f11e537]: ★★★
+                        - generic [ref=f11e538]: 3 Michelin stars
+                    - generic [ref=f11e539]:
+                      - paragraph [ref=f11e540]: Jungsik New York
+                      - paragraph [ref=f11e541]: New York, NY
+              - button "Save to passport" [disabled] [ref=f11e543]:
+                - generic [ref=f11e544]: ♡
+                - generic [ref=f11e545]: Not saved
+            - generic [ref=f11e546]:
+              - generic "Three Michelin Stars" [ref=f11e547]:
+                - generic [ref=f11e548]: ★★★
+                - generic [ref=f11e549]: 3 Michelin stars
+              - heading [level=3] [ref=f11e550]:
+                - link "Jungsik New York" [ref=f11e551] [cursor=pointer]:
+                  - /url: /restaurants/jungsik-new-york-new-york-ny
+              - paragraph [ref=f11e552]:
+                - generic [ref=f11e553]: Korean
+                - generic [ref=f11e554]:
+                  - generic [ref=f11e555]: ·
+                  - text: New York, NY
+                - generic [ref=f11e556]:
+                  - generic [ref=f11e557]: ·
+                  - text: $$$$
+              - link "Check availability (opens in a new tab)" [ref=f11e559] [cursor=pointer]:
+                - /url: https://www.jungsik.com/
+                - generic [ref=f11e560]:
+                  - text: Check availability ↗
+                  - generic [ref=f11e561]: (opens in a new tab)
+        - listitem [ref=f11e562]:
+          - article [ref=f11e563]:
+            - generic [ref=f11e564]:
+              - link "View Le Bernardin" [ref=f11e565] [cursor=pointer]:
+                - /url: /restaurants/le-bernardin-new-york-ny
+                - img "Le Bernardin in New York, NY" [ref=f11e567]:
+                  - generic [ref=f11e568]:
+                    - generic [ref=f11e569]:
+                      - paragraph [ref=f11e570]: LB
+                      - generic "Three Michelin Stars" [ref=f11e571]:
+                        - generic [ref=f11e572]: ★★★
+                        - generic [ref=f11e573]: 3 Michelin stars
+                    - generic [ref=f11e574]:
+                      - paragraph [ref=f11e575]: Le Bernardin
+                      - paragraph [ref=f11e576]: New York, NY
+              - button "Save to passport" [disabled] [ref=f11e578]:
+                - generic [ref=f11e579]: ♡
+                - generic [ref=f11e580]: Not saved
+            - generic [ref=f11e581]:
+              - generic "Three Michelin Stars" [ref=f11e582]:
+                - generic [ref=f11e583]: ★★★
+                - generic [ref=f11e584]: 3 Michelin stars
+              - heading [level=3] [ref=f11e585]:
+                - link "Le Bernardin" [ref=f11e586] [cursor=pointer]:
+                  - /url: /restaurants/le-bernardin-new-york-ny
+              - paragraph [ref=f11e587]:
+                - generic [ref=f11e588]: Seafood
+                - generic [ref=f11e589]:
+                  - generic [ref=f11e590]: ·
+                  - text: New York, NY
+                - generic [ref=f11e591]:
+                  - generic [ref=f11e592]: ·
+                  - text: $$$$
+              - link "Check availability (opens in a new tab)" [ref=f11e594] [cursor=pointer]:
+                - /url: https://www.le-bernardin.com/
+                - generic [ref=f11e595]:
+                  - text: Check availability ↗
+                  - generic [ref=f11e596]: (opens in a new tab)
+        - listitem [ref=f11e597]:
+          - article [ref=f11e598]:
+            - generic [ref=f11e599]:
+              - link "View Per Se" [ref=f11e600] [cursor=pointer]:
+                - /url: /restaurants/per-se-new-york-ny
+                - img "Per Se in New York, NY" [ref=f11e602]:
+                  - generic [ref=f11e603]:
+                    - generic [ref=f11e604]:
+                      - paragraph [ref=f11e605]: PS
+                      - generic "Three Michelin Stars" [ref=f11e606]:
+                        - generic [ref=f11e607]: ★★★
+                        - generic [ref=f11e608]: 3 Michelin stars
+                    - generic [ref=f11e609]:
+                      - paragraph [ref=f11e610]: Per Se
+                      - paragraph [ref=f11e611]: New York, NY
+              - button "Save to passport" [disabled] [ref=f11e613]:
+                - generic [ref=f11e614]: ♡
+                - generic [ref=f11e615]: Not saved
+            - generic [ref=f11e616]:
+              - generic "Three Michelin Stars" [ref=f11e617]:
+                - generic [ref=f11e618]: ★★★
+                - generic [ref=f11e619]: 3 Michelin stars
+              - heading [level=3] [ref=f11e620]:
+                - link "Per Se" [ref=f11e621] [cursor=pointer]:
+                  - /url: /restaurants/per-se-new-york-ny
+              - paragraph [ref=f11e622]:
+                - generic [ref=f11e623]: Contemporary
+                - generic [ref=f11e624]:
+                  - generic [ref=f11e625]: ·
+                  - text: New York, NY
+                - generic [ref=f11e626]:
+                  - generic [ref=f11e627]: ·
+                  - text: $$$$
+              - link "Check availability (opens in a new tab)" [ref=f11e629] [cursor=pointer]:
+                - /url: https://www.thomaskeller.com/perseny
+                - generic [ref=f11e630]:
+                  - text: Check availability ↗
+                  - generic [ref=f11e631]: (opens in a new tab)
+        - listitem [ref=f11e632]:
+          - article [ref=f11e633]:
+            - generic [ref=f11e634]:
+              - link "View Providence" [ref=f11e635] [cursor=pointer]:
+                - /url: /restaurants/providence-los-angeles-ca
+                - img "Providence in Los Angeles, CA" [ref=f11e637]:
+                  - generic [ref=f11e638]:
+                    - generic [ref=f11e639]:
+                      - paragraph [ref=f11e640]: PR
+                      - generic "Three Michelin Stars" [ref=f11e641]:
+                        - generic [ref=f11e642]: ★★★
+                        - generic [ref=f11e643]: 3 Michelin stars
+                    - generic [ref=f11e644]:
+                      - paragraph [ref=f11e645]: Providence
+                      - paragraph [ref=f11e646]: Los Angeles, CA
+              - button "Save to passport" [disabled] [ref=f11e648]:
+                - generic [ref=f11e649]: ♡
+                - generic [ref=f11e650]: Not saved
+            - generic [ref=f11e651]:
+              - generic "Three Michelin Stars" [ref=f11e652]:
+                - generic [ref=f11e653]: ★★★
+                - generic [ref=f11e654]: 3 Michelin stars
+              - heading [level=3] [ref=f11e655]:
+                - link "Providence" [ref=f11e656] [cursor=pointer]:
+                  - /url: /restaurants/providence-los-angeles-ca
+              - paragraph [ref=f11e657]:
+                - generic [ref=f11e658]: Seafood
+                - generic [ref=f11e659]:
+                  - generic [ref=f11e660]: ·
+                  - text: Los Angeles, CA
+                - generic [ref=f11e661]:
+                  - generic [ref=f11e662]: ·
+                  - text: $$$$
+              - link "Reserve now (opens in a new tab)" [ref=f11e664] [cursor=pointer]:
+                - /url: https://providencela.com/reservations/
+                - generic [ref=f11e665]:
+                  - text: Reserve now ↗
+                  - generic [ref=f11e666]: (opens in a new tab)
+        - listitem [ref=f11e667]:
+          - article [ref=f11e668]:
+            - generic [ref=f11e669]:
+              - link "View Quince" [ref=f11e670] [cursor=pointer]:
+                - /url: /restaurants/quince-san-francisco-ca
+                - img "Quince in San Francisco, CA" [ref=f11e672]:
+                  - generic [ref=f11e673]:
+                    - generic [ref=f11e674]:
+                      - paragraph [ref=f11e675]: QU
+                      - generic "Three Michelin Stars" [ref=f11e676]:
+                        - generic [ref=f11e677]: ★★★
+                        - generic [ref=f11e678]: 3 Michelin stars
+                    - generic [ref=f11e679]:
+                      - paragraph [ref=f11e680]: Quince
+                      - paragraph [ref=f11e681]: San Francisco, CA
+              - button "Save to passport" [disabled] [ref=f11e683]:
+                - generic [ref=f11e684]: ♡
+                - generic [ref=f11e685]: Not saved
+            - generic [ref=f11e686]:
+              - generic "Three Michelin Stars" [ref=f11e687]:
+                - generic [ref=f11e688]: ★★★
+                - generic [ref=f11e689]: 3 Michelin stars
+              - heading [level=3] [ref=f11e690]:
+                - link "Quince" [ref=f11e691] [cursor=pointer]:
+                  - /url: /restaurants/quince-san-francisco-ca
+              - paragraph [ref=f11e692]:
+                - generic [ref=f11e693]: Contemporary
+                - generic [ref=f11e694]:
+                  - generic [ref=f11e695]: ·
+                  - text: San Francisco, CA
+                - generic [ref=f11e696]:
+                  - generic [ref=f11e697]: ·
+                  - text: $$$$
+              - link "Reserve now (opens in a new tab)" [ref=f11e699] [cursor=pointer]:
+                - /url: https://www.sevenrooms.com/explore/quince/reservations/create/search/
+                - generic [ref=f11e700]:
+                  - text: Reserve now ↗
+                  - generic [ref=f11e701]: (opens in a new tab)
+        - listitem [ref=f11e702]:
+          - article [ref=f11e703]:
+            - generic [ref=f11e704]:
+              - link "View Smyth" [ref=f11e705] [cursor=pointer]:
+                - /url: /restaurants/smyth-chicago-il
+                - img "Smyth in Chicago, IL" [ref=f11e707]:
+                  - generic [ref=f11e708]:
+                    - generic [ref=f11e709]:
+                      - paragraph [ref=f11e710]: SM
+                      - generic "Three Michelin Stars" [ref=f11e711]:
+                        - generic [ref=f11e712]: ★★★
+                        - generic [ref=f11e713]: 3 Michelin stars
+                    - generic [ref=f11e714]:
+                      - paragraph [ref=f11e715]: Smyth
+                      - paragraph [ref=f11e716]: Chicago, IL
+              - button "Save to passport" [disabled] [ref=f11e718]:
+                - generic [ref=f11e719]: ♡
+                - generic [ref=f11e720]: Not saved
+            - generic [ref=f11e721]:
+              - generic "Three Michelin Stars" [ref=f11e722]:
+                - generic [ref=f11e723]: ★★★
+                - generic [ref=f11e724]: 3 Michelin stars
+              - heading [level=3] [ref=f11e725]:
+                - link "Smyth" [ref=f11e726] [cursor=pointer]:
+                  - /url: /restaurants/smyth-chicago-il
+              - paragraph [ref=f11e727]:
+                - generic [ref=f11e728]: Contemporary
+                - generic [ref=f11e729]:
+                  - generic [ref=f11e730]: ·
+                  - text: Chicago, IL
+                - generic [ref=f11e731]:
+                  - generic [ref=f11e732]: ·
+                  - text: $$$$
+              - link "Check availability (opens in a new tab)" [ref=f11e734] [cursor=pointer]:
+                - /url: https://www.smythandtheloyalist.com/
+                - generic [ref=f11e735]:
+                  - text: Check availability ↗
+                  - generic [ref=f11e736]: (opens in a new tab)
+        - listitem [ref=f11e737]:
+          - article [ref=f11e738]:
+            - generic [ref=f11e739]:
+              - link "View Somni" [ref=f11e740] [cursor=pointer]:
+                - /url: /restaurants/somni-west-hollywood-ca
+                - img "Somni in West Hollywood, CA" [ref=f11e742]:
+                  - generic [ref=f11e743]:
+                    - generic [ref=f11e744]:
+                      - paragraph [ref=f11e745]: SO
+                      - generic "Three Michelin Stars" [ref=f11e746]:
+                        - generic [ref=f11e747]: ★★★
+                        - generic [ref=f11e748]: 3 Michelin stars
+                    - generic [ref=f11e749]:
+                      - paragraph [ref=f11e750]: Somni
+                      - paragraph [ref=f11e751]: West Hollywood, CA
+              - button "Save to passport" [disabled] [ref=f11e753]:
+                - generic [ref=f11e754]: ♡
+                - generic [ref=f11e755]: Not saved
+            - generic [ref=f11e756]:
+              - generic "Three Michelin Stars" [ref=f11e757]:
+                - generic [ref=f11e758]: ★★★
+                - generic [ref=f11e759]: 3 Michelin stars
+              - heading [level=3] [ref=f11e760]:
+                - link "Somni" [ref=f11e761] [cursor=pointer]:
+                  - /url: /restaurants/somni-west-hollywood-ca
+              - paragraph [ref=f11e762]:
+                - generic [ref=f11e763]: Contemporary
+                - generic [ref=f11e764]:
+                  - generic [ref=f11e765]: ·
+                  - text: West Hollywood, CA
+                - generic [ref=f11e766]:
+                  - generic [ref=f11e767]: ·
+                  - text: $$$$
+              - link "Reserve now (opens in a new tab)" [ref=f11e769] [cursor=pointer]:
+                - /url: https://resy.com/cities/los-angeles-ca/venues/somni-ca
+                - generic [ref=f11e770]:
+                  - text: Reserve now ↗
+                  - generic [ref=f11e771]: (opens in a new tab)
+        - listitem [ref=f11e772]:
+          - article [ref=f11e773]:
+            - generic [ref=f11e774]:
+              - link "View Sushi Sho" [ref=f11e775] [cursor=pointer]:
+                - /url: /restaurants/sushi-sho-new-york-ny
+                - img "Sushi Sho in New York, NY" [ref=f11e777]:
+                  - generic [ref=f11e778]:
+                    - generic [ref=f11e779]:
+                      - paragraph [ref=f11e780]: SS
+                      - generic "Three Michelin Stars" [ref=f11e781]:
+                        - generic [ref=f11e782]: ★★★
+                        - generic [ref=f11e783]: 3 Michelin stars
+                    - generic [ref=f11e784]:
+                      - paragraph [ref=f11e785]: Sushi Sho
+                      - paragraph [ref=f11e786]: New York, NY
+              - button "Save to passport" [disabled] [ref=f11e788]:
+                - generic [ref=f11e789]: ♡
+                - generic [ref=f11e790]: Not saved
+            - generic [ref=f11e791]:
+              - generic "Three Michelin Stars" [ref=f11e792]:
+                - generic [ref=f11e793]: ★★★
+                - generic [ref=f11e794]: 3 Michelin stars
+              - heading [level=3] [ref=f11e795]:
+                - link "Sushi Sho" [ref=f11e796] [cursor=pointer]:
+                  - /url: /restaurants/sushi-sho-new-york-ny
+              - paragraph [ref=f11e797]:
+                - generic [ref=f11e798]: Japanese
+                - generic [ref=f11e799]:
+                  - generic [ref=f11e800]: ·
+                  - text: New York, NY
+                - generic [ref=f11e801]:
+                  - generic [ref=f11e802]: ·
+                  - text: $$$$
+              - link "View booking options (opens in a new tab)" [ref=f11e804] [cursor=pointer]:
+                - /url: https://guide.michelin.com/en/new-york-state/new-york/restaurant/sushi-sho-1213976
+                - generic [ref=f11e805]:
+                  - text: View booking options ↗
+                  - generic [ref=f11e806]: (opens in a new tab)
+        - listitem [ref=f11e807]:
+          - article [ref=f11e808]:
+            - generic [ref=f11e809]:
+              - link "View The French Laundry" [ref=f11e810] [cursor=pointer]:
+                - /url: /restaurants/the-french-laundry-yountville-ca
+                - img "The French Laundry in Yountville, CA" [ref=f11e812]:
+                  - generic [ref=f11e813]:
+                    - generic [ref=f11e814]:
+                      - paragraph [ref=f11e815]: TF
+                      - generic "Three Michelin Stars" [ref=f11e816]:
+                        - generic [ref=f11e817]: ★★★
+                        - generic [ref=f11e818]: 3 Michelin stars
+                    - generic [ref=f11e819]:
+                      - paragraph [ref=f11e820]: The French Laundry
+                      - paragraph [ref=f11e821]: Yountville, CA
+              - button "Save to passport" [disabled] [ref=f11e823]:
+                - generic [ref=f11e824]: ♡
+                - generic [ref=f11e825]: Not saved
+            - generic [ref=f11e826]:
+              - generic "Three Michelin Stars" [ref=f11e827]:
+                - generic [ref=f11e828]: ★★★
+                - generic [ref=f11e829]: 3 Michelin stars
+              - heading [level=3] [ref=f11e830]:
+                - link "The French Laundry" [ref=f11e831] [cursor=pointer]:
+                  - /url: /restaurants/the-french-laundry-yountville-ca
+              - paragraph [ref=f11e832]:
+                - generic [ref=f11e833]: Contemporary
+                - generic [ref=f11e834]:
+                  - generic [ref=f11e835]: ·
+                  - text: Yountville, CA
+                - generic [ref=f11e836]:
+                  - generic [ref=f11e837]: ·
+                  - text: $$$$
+              - link "Check availability (opens in a new tab)" [ref=f11e839] [cursor=pointer]:
+                - /url: https://www.thomaskeller.com/tfl
+                - generic [ref=f11e840]:
+                  - text: Check availability ↗
+                  - generic [ref=f11e841]: (opens in a new tab)
+        - listitem [ref=f11e842]:
+          - article [ref=f11e843]:
+            - generic [ref=f11e844]:
+              - link "View Acquerello" [ref=f11e845] [cursor=pointer]:
+                - /url: /restaurants/acquerello-san-francisco-ca
+                - img "Acquerello in San Francisco, CA" [ref=f11e847]:
+                  - generic [ref=f11e848]:
+                    - generic [ref=f11e849]:
+                      - paragraph [ref=f11e850]: AC
+                      - generic "Two Michelin Stars" [ref=f11e851]:
+                        - generic [ref=f11e852]: ★★
+                        - generic [ref=f11e853]: 2 Michelin stars
+                    - generic [ref=f11e854]:
+                      - paragraph [ref=f11e855]: Acquerello
+                      - paragraph [ref=f11e856]: San Francisco, CA
+              - button "Save to passport" [disabled] [ref=f11e858]:
+                - generic [ref=f11e859]: ♡
+                - generic [ref=f11e860]: Not saved
+            - generic [ref=f11e861]:
+              - generic "Two Michelin Stars" [ref=f11e862]:
+                - generic [ref=f11e863]: ★★
+                - generic [ref=f11e864]: 2 Michelin stars
+              - heading [level=3] [ref=f11e865]:
+                - link "Acquerello" [ref=f11e866] [cursor=pointer]:
+                  - /url: /restaurants/acquerello-san-francisco-ca
+              - paragraph [ref=f11e867]:
+                - generic [ref=f11e868]: Italian
+                - generic [ref=f11e869]:
+                  - generic [ref=f11e870]: ·
+                  - text: San Francisco, CA
+                - generic [ref=f11e871]:
+                  - generic [ref=f11e872]: ·
+                  - text: $$$$
+              - link "Reserve now (opens in a new tab)" [ref=f11e874] [cursor=pointer]:
+                - /url: https://www.acquerellosf.com/reservations
+                - generic [ref=f11e875]:
+                  - text: Reserve now ↗
+                  - generic [ref=f11e876]: (opens in a new tab)
+        - listitem [ref=f11e877]:
+          - article [ref=f11e878]:
+            - generic [ref=f11e879]:
+              - link "View Alinea" [ref=f11e880] [cursor=pointer]:
+                - /url: /restaurants/alinea-chicago-il
+                - img "Alinea in Chicago, IL" [ref=f11e882]:
+                  - generic [ref=f11e883]:
+                    - generic [ref=f11e884]:
+                      - paragraph [ref=f11e885]: AL
+                      - generic "Two Michelin Stars" [ref=f11e886]:
+                        - generic [ref=f11e887]: ★★
+                        - generic [ref=f11e888]: 2 Michelin stars
+                    - generic [ref=f11e889]:
+                      - paragraph [ref=f11e890]: Alinea
+                      - paragraph [ref=f11e891]: Chicago, IL
+              - button "Save to passport" [disabled] [ref=f11e893]:
+                - generic [ref=f11e894]: ♡
+                - generic [ref=f11e895]: Not saved
+            - generic [ref=f11e896]:
+              - generic "Two Michelin Stars" [ref=f11e897]:
+                - generic [ref=f11e898]: ★★
+                - generic [ref=f11e899]: 2 Michelin stars
+              - heading [level=3] [ref=f11e900]:
+                - link "Alinea" [ref=f11e901] [cursor=pointer]:
+                  - /url: /restaurants/alinea-chicago-il
+              - paragraph [ref=f11e902]:
+                - generic [ref=f11e903]: Creative
+                - generic [ref=f11e904]:
+                  - generic [ref=f11e905]: ·
+                  - text: Chicago, IL
+                - generic [ref=f11e906]:
+                  - generic [ref=f11e907]: ·
+                  - text: $$$$
+              - link "Check availability (opens in a new tab)" [ref=f11e909] [cursor=pointer]:
+                - /url: https://www.alinearestaurant.com/
+                - generic [ref=f11e910]:
+                  - text: Check availability ↗
+                  - generic [ref=f11e911]: (opens in a new tab)
+      - navigation "Pagination" [ref=f11e913]:
+        - generic [ref=f11e914]:
+          - generic [ref=f11e915]: ‹
+          - generic [ref=f11e916]: Previous page unavailable
+        - generic [ref=f11e917]: "1"
+        - link "2" [ref=f11e920] [cursor=pointer]:
+          - /url: /explore?page=2
+        - link "3" [ref=f11e922] [cursor=pointer]:
+          - /url: /explore?page=3
+        - link "4" [ref=f11e924] [cursor=pointer]:
+          - /url: /explore?page=4
+        - generic [ref=f11e925]:
+          - generic [ref=f11e926]: …
+          - link "12" [ref=f11e927] [cursor=pointer]:
+            - /url: /explore?page=12
+        - link "Next page" [ref=f11e928] [cursor=pointer]:
+          - /url: /explore?page=2
+          - generic [ref=f11e929]: ›
+  - contentinfo [ref=f11e930]:
+    - generic [ref=f11e931]:
+      - generic [ref=f11e932]:
+        - generic [ref=f11e933]:
+          - paragraph [ref=f11e934]: Dining Passport
+          - paragraph [ref=f11e935]: An independent atlas of Michelin-starred dining in the United States.
+          - paragraph [ref=f11e936]: Independent discovery platform. Not affiliated with the Michelin Guide.
+          - paragraph [ref=f11e937]: Dataset current through July 2026. 271 starred restaurants listed · roster 2026-07-16.
+        - navigation "Footer" [ref=f11e938]:
+          - link "Explore" [ref=f11e939] [cursor=pointer]:
+            - /url: /explore
+          - link "Map" [ref=f11e940] [cursor=pointer]:
+            - /url: /map
+          - link "Michelin Stars" [ref=f11e941] [cursor=pointer]:
+            - /url: /about-michelin-stars
+          - link "Passport" [ref=f11e942] [cursor=pointer]:
+            - /url: /passport
+          - link "Account" [ref=f11e943] [cursor=pointer]:
+            - /url: /account
+      - paragraph [ref=f11e944]: Independent platform. Not affiliated with, endorsed by, or connected to Michelin or the Michelin Guide. Michelin does not currently inspect every U.S. state. Absence from this atlas does not mean a region has been reviewed and found without stars.
+  - button "Open Next.js Dev Tools" [ref=f11e950] [cursor=pointer]

@@ -1,4 +1,5 @@
 import type { LocalCollection, PassportStore, UserRestaurantRecord } from "@/lib/passport/types";
+import type { CollectionInputError } from "@/lib/passport/store";
 
 export type PersonalDataMode = "local" | "cloud";
 
@@ -13,24 +14,28 @@ export type PersonalDataRepository = {
   createCollection(input: {
     name: string;
     description?: string;
-    private?: boolean;
     coverRestaurantSlug?: string | null;
     restaurantSlugs?: string[];
-  }): Promise<{ store: PassportStore; collection: LocalCollection }>;
+  }): Promise<{
+    store: PassportStore;
+    collection: LocalCollection | null;
+    error: CollectionInputError | null;
+  }>;
   updateCollection(
     id: string,
     patch: Partial<
-      Pick<
-        LocalCollection,
-        | "name"
-        | "description"
-        | "private"
-        | "coverRestaurantSlug"
-        | "restaurantSlugs"
-      >
+      Pick<LocalCollection, "name" | "description" | "coverRestaurantSlug">
     >,
   ): Promise<PassportStore>;
   deleteCollection(id: string): Promise<PassportStore>;
+  addRestaurantToCollection(
+    collectionId: string,
+    restaurantSlug: string,
+  ): Promise<PassportStore>;
+  removeRestaurantFromCollection(
+    collectionId: string,
+    restaurantSlug: string,
+  ): Promise<PassportStore>;
   exportJson(): Promise<string>;
   importJson(json: string): Promise<PassportStore>;
   clearAll(): Promise<PassportStore>;

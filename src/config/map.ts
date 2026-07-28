@@ -4,18 +4,20 @@
  */
 
 export const mapConfig = {
-  providerName: "MapLibre",
+  providerName: "CARTO",
+  // Real keyless OSM basemap with U.S. state borders, roads, and city labels.
+  // Override with NEXT_PUBLIC_MAP_STYLE_URL if a branded style is provisioned.
   styleUrl:
     process.env.NEXT_PUBLIC_MAP_STYLE_URL ||
-    "https://demotiles.maplibre.org/style.json",
+    "https://basemaps.cartocdn.com/gl/voyager-gl-style/style.json",
   attribution:
     process.env.NEXT_PUBLIC_MAP_ATTRIBUTION ||
-    "© OpenStreetMap contributors · © MapLibre",
+    "© OpenStreetMap contributors · © CARTO",
   defaultCenter: {
-    longitude: -98.5,
-    latitude: 39.8,
+    longitude: -96,
+    latitude: 37.5,
   },
-  defaultZoom: 3.4,
+  defaultZoom: 3.8,
   minZoom: 2,
   maxZoom: 18,
   /** Contiguous U.S. focus bounds [west, south, east, north] */

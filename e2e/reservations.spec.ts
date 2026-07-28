@@ -95,20 +95,32 @@ test.describe("Phase 5.5 reservation actions", () => {
     ).toBeVisible();
   });
 
-  test("Planned passport restaurant shows reservation action", async ({ page }) => {
+  test("Plan a visit records a plan that appears on the planned list", async ({
+    page,
+  }) => {
     await page.goto("/restaurants/benu-san-francisco-ca");
-    await page.getByRole("button", { name: "Planned" }).click();
-    // Planning dialog may open; navigate to the dedicated /planned route (OD-07).
+    // "Plan a visit" opens the plan dialog; saving it puts the restaurant on /planned.
+    await page.getByRole("button", { name: "Plan a visit" }).click();
+    const planDialog = page.getByRole("dialog", { name: "Plan a visit" });
+    await expect(planDialog).toBeVisible();
+    // A plan requires a date of today or later.
+    const future = new Date(Date.now() + 30 * 24 * 60 * 60 * 1000)
+      .toISOString()
+      .slice(0, 10);
+    await planDialog.getByLabel("Planned date").fill(future);
+    await planDialog.getByRole("button", { name: "Save plan" }).click();
+    await expect(planDialog).toHaveCount(0);
+
     await page.goto("/planned");
     await expect(
-      page.getByRole("heading", { level: 1, name: "Planned Visits" }),
+      page.getByRole("heading", { level: 1, name: "Planned meals" }),
     ).toBeVisible();
+    // The Stage-10 planned card links back to the restaurant, where the
+    // reservation action lives; the card itself does not ship the catalog.
     const planned = page.locator("article").filter({ hasText: "Benu" }).first();
     await expect(planned).toBeVisible();
     await expect(
-      planned.getByRole("link", {
-        name: /Check availability|Reserve now|View booking options|Visit restaurant website/i,
-      }),
-    ).toBeVisible();
+      planned.getByRole("link", { name: "Open restaurant" }),
+    ).toHaveAttribute("href", "/restaurants/benu-san-francisco-ca");
   });
 });

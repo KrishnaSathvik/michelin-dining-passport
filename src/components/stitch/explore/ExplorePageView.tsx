@@ -29,7 +29,6 @@ export function ExplorePageView({ model }: ExplorePageViewProps) {
       />
       <ActiveFilters query={query} chips={chips} />
       <ExploreResultsToolbar
-        query={query}
         total={results.total}
         page={results.page}
         totalPages={results.totalPages}

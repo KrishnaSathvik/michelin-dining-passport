@@ -2,6 +2,7 @@ import {
   RelatedRestaurantCard,
   type RestaurantCardModel,
 } from "@/components/stitch/restaurant";
+import { getApprovedGooglePlaceId } from "@/lib/google-places/place-ids";
 
 type RelatedRestaurantsSectionProps = {
   title: string;
@@ -28,7 +29,11 @@ export function RelatedRestaurantsSection({
       </h2>
       <div className="grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-3">
         {restaurants.map((model) => (
-          <RelatedRestaurantCard key={model.slug} model={model} />
+          <RelatedRestaurantCard
+            key={model.slug}
+            model={model}
+            placeId={getApprovedGooglePlaceId(model.slug)}
+          />
         ))}
       </div>
     </section>

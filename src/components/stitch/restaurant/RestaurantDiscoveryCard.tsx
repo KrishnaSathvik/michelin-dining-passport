@@ -10,16 +10,24 @@ type RestaurantDiscoveryCardProps = {
   model: RestaurantCardModel;
   className?: string;
   priority?: boolean;
+  /**
+   * Approved Google place ID, supplied by server components (kept off the
+   * Google-free card model). Enables a media-only Google photo when the
+   * restaurant has no approved first-party image.
+   */
+  placeId?: string | null;
 };
 
 /**
  * Primary discovery card for Explore grid, saved grid, taxonomy, homepage support.
- * Card body links to detail; Save and Reservation do not navigate to detail.
+ * Explicit "View details" CTA navigates to the restaurant profile; Save and
+ * Reservation do not.
  */
 export function RestaurantDiscoveryCard({
   model,
   className = "",
   priority = false,
+  placeId,
 }: RestaurantDiscoveryCardProps) {
   const href = `/restaurants/${model.slug}`;
   const detailLabel = `View ${model.name}`;
@@ -40,9 +48,12 @@ export function RestaurantDiscoveryCard({
             <RestaurantMedia
               name={model.name}
               seed={model.id}
+              slug={model.slug}
               city={model.location}
               stars={model.distinction}
               imageUrl={model.image?.url}
+              placeId={placeId}
+              page={model.surface}
               objectPosition={model.image?.objectPosition}
               alt={model.image?.alt}
               priority={priority}
@@ -70,7 +81,14 @@ export function RestaurantDiscoveryCard({
           location={model.location}
           price={model.price}
         />
-        <div className="mt-auto pt-3">
+        <div className="mt-auto flex flex-col gap-2 pt-3">
+          <Link
+            href={href}
+            data-restaurant-action="view-detail"
+            className="inline-flex min-h-11 w-full items-center justify-center rounded-[var(--dp-radius-lg)] border border-dp-border bg-dp-surface px-5 py-2.5 font-sans text-[14px] font-semibold tracking-wide text-dp-primary no-underline transition-colors hover:border-dp-primary hover:bg-dp-soft focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-dp-focus"
+          >
+            View details
+          </Link>
           <ReservationAction
             restaurantSlug={model.slug}
             action={model.reservation}

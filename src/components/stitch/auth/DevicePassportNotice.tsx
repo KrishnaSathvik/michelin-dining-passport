@@ -7,7 +7,7 @@ type DevicePassportNoticeProps = {
 
 export function DevicePassportNotice({
   href = "/passport",
-  label = "Continue with device-only Passport",
+  label = "Continue with device-only saves",
 }: DevicePassportNoticeProps) {
   return (
     <p className="text-center">

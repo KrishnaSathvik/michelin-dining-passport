@@ -17,8 +17,8 @@ const STEPS = [
     body: "Mark planned visits and keep private dates or confirmation notes.",
   },
   {
-    title: "Visit",
-    body: "Record visit dates, favorite dishes, and private notes after a meal.",
+    title: "Remember",
+    body: "Record each meal as its own private memory, including repeat visits.",
   },
 ] as const;
 
@@ -26,23 +26,23 @@ export function PassportEmptyView({ model }: PassportEmptyViewProps) {
   return (
     <div className="bg-dp-bg" data-passport-view="empty">
       <PageContainer className="pb-[var(--dp-section)] pt-[104px]">
-        <section className="mx-auto mb-[120px] flex max-w-3xl flex-col items-center text-center">
-          <h1 className="font-display text-[36px] leading-[1.1] tracking-[-0.01em] text-dp-primary-deep md:text-[48px] md:tracking-[-0.02em]">
+        <section className="mx-auto mb-16 flex max-w-3xl flex-col items-center text-center md:mb-24">
+          <h1 className="dp-display-lg-mobile text-dp-primary-deep md:text-[48px] md:leading-[1.1] md:tracking-[-0.02em]">
             {model.title}
           </h1>
           <p className="dp-body-lg mt-6 max-w-2xl text-dp-ink-secondary">
             {model.supporting}
           </p>
-          <div className="mt-10 flex flex-wrap justify-center gap-4">
+          <div className="mt-10 flex w-full max-w-md flex-col gap-3 sm:max-w-none sm:flex-row sm:flex-wrap sm:justify-center sm:gap-4">
             <Link
               href={model.exploreHref}
-              className="inline-flex h-12 min-h-11 items-center justify-center rounded-[var(--dp-radius-md)] bg-dp-primary px-8 font-sans text-[14px] font-semibold text-dp-on-primary no-underline transition-colors hover:bg-dp-primary-hover focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-dp-focus"
+              className="inline-flex h-12 min-h-11 w-full items-center justify-center rounded-[var(--dp-radius-md)] bg-dp-primary px-8 font-sans text-[14px] font-semibold text-dp-on-primary no-underline transition-colors hover:bg-dp-primary-hover focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-dp-focus sm:w-auto"
             >
               Explore restaurants
             </Link>
             <Link
               href={model.mapHref}
-              className="inline-flex h-12 min-h-11 items-center justify-center rounded-[var(--dp-radius-md)] border border-dp-outline-variant bg-dp-surface px-8 font-sans text-[14px] font-semibold text-dp-primary-deep no-underline transition-colors hover:bg-dp-surface-low focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-dp-focus"
+              className="inline-flex h-12 min-h-11 w-full items-center justify-center rounded-[var(--dp-radius-md)] border border-dp-outline-variant bg-dp-surface px-8 font-sans text-[14px] font-semibold text-dp-primary-deep no-underline transition-colors hover:bg-dp-surface-low focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-dp-focus sm:w-auto"
             >
               Open map
             </Link>
@@ -50,42 +50,30 @@ export function PassportEmptyView({ model }: PassportEmptyViewProps) {
         </section>
 
         <section
-          className="relative mb-[120px] overflow-hidden rounded-[var(--dp-radius-xl)] border border-dp-outline-variant bg-dp-surface-low"
-          aria-hidden="true"
+          className="mb-16 overflow-hidden rounded-[var(--dp-radius-xl)] border border-dp-outline-variant bg-dp-surface md:mb-24"
+          aria-labelledby="passport-steps-heading"
         >
-          <div className="flex min-h-[220px] flex-col items-center justify-center gap-8 px-6 py-12 md:min-h-[280px] md:flex-row md:gap-12">
-            <div className="flex items-center gap-3 md:gap-4">
-              {(["Save", "Plan", "Visit"] as const).map((label, index) => (
-                <div key={label} className="flex items-center gap-3 md:gap-4">
-                  <div className="flex flex-col items-center gap-2">
-                    <div className="flex h-12 w-12 items-center justify-center rounded-full border-2 border-dp-outline-variant bg-dp-surface font-sans text-sm font-semibold text-dp-primary-deep">
-                      {index + 1}
-                    </div>
-                    <span className="dp-label-caps text-dp-ink-muted">
-                      {label}
-                    </span>
-                  </div>
-                  {index < 2 ? (
-                    <div className="mb-6 h-[2px] w-8 bg-dp-outline-variant md:w-12" />
-                  ) : null}
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        <section className="mb-[120px] grid grid-cols-1 gap-[var(--dp-gutter)] md:grid-cols-3">
-          {STEPS.map((step) => (
-            <div key={step.title}>
-              <div className="mb-6 flex h-12 w-12 items-center justify-center rounded-[var(--dp-radius-md)] bg-dp-surface-highest font-sans text-sm font-semibold text-dp-primary-deep">
-                {step.title.slice(0, 1)}
-              </div>
-              <h2 className="dp-headline-sm mb-3 text-dp-primary-deep">
-                {step.title}
-              </h2>
-              <p className="dp-body-md text-dp-ink-secondary">{step.body}</p>
-            </div>
-          ))}
+          <h2 id="passport-steps-heading" className="sr-only">
+            How My Restaurants works
+          </h2>
+          <ol className="grid grid-cols-1 md:grid-cols-3">
+            {STEPS.map((step, index) => (
+              <li
+                key={step.title}
+                className="relative border-b border-dp-border p-6 last:border-b-0 md:border-b-0 md:border-r md:p-8 md:last:border-r-0"
+              >
+                <span className="font-display text-4xl text-dp-star-gold/70">
+                  0{index + 1}
+                </span>
+                <h3 className="dp-headline-sm mt-6 text-dp-primary-deep">
+                  {step.title}
+                </h3>
+                <p className="dp-body-md mt-3 text-dp-ink-secondary">
+                  {step.body}
+                </p>
+              </li>
+            ))}
+          </ol>
         </section>
 
         <PassportSyncNotice sync={model.sync} />

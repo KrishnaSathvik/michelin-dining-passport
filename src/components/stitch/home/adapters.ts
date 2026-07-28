@@ -25,8 +25,12 @@ export function toHomepageViewModel(input: {
 
   return {
     hero: {
-      headline: "America's Michelin-starred tables",
-      supporting: `Explore ${totals.restaurants} starred restaurants across the United States. Save favorites and plan remarkable visits — an independent dining atlas.`,
+      eyebrow: "Independent dining guide",
+      headline: "Remarkable restaurants, clearly discovered.",
+      supporting:
+        "Discover Michelin-starred restaurants across the United States. Explore by city, cuisine, and distinction — then book directly.",
+      primaryCta: { label: "Explore restaurants", href: "/explore" },
+      secondaryCta: { label: "View the map", href: "/map" },
       imageSrc: HERO_IMAGE.src,
       imageAlt: HERO_IMAGE.alt,
     },

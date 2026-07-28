@@ -46,7 +46,7 @@ export function SecuritySection({ hasPasswordProvider }: SecuritySectionProps) {
         <div className="border-t border-dp-border pt-6">
           <p className="mb-4 font-sans text-[15px] text-dp-ink-muted">
             Sign out clears your cloud session on this browser. Device-local
-            Passport data is not deleted.
+            My Restaurants data is not deleted.
           </p>
           <form action={signOutAction}>
             <Button type="submit" variant="secondary">

@@ -1,0 +1,44 @@
+- generic [active] [ref=e1]:
+  - link "Skip to main content" [ref=e2] [cursor=pointer]:
+    - /url: "#main-content"
+  - banner [ref=e3]:
+    - generic [ref=e4]:
+      - generic [ref=e5]:
+        - link "Dining Passport" [ref=e6] [cursor=pointer]:
+          - /url: /
+        - navigation "Primary" [ref=e7]:
+          - link "Explore" [ref=e8] [cursor=pointer]:
+            - /url: /explore
+          - link "Map" [ref=e9] [cursor=pointer]:
+            - /url: /map
+          - link "Michelin Stars" [ref=e10] [cursor=pointer]:
+            - /url: /about-michelin-stars
+          - link "Passport" [ref=e11] [cursor=pointer]:
+            - /url: /passport
+      - generic [ref=e12]:
+        - link "Search restaurants" [ref=e13] [cursor=pointer]:
+          - /url: /explore
+        - link "Sign in" [ref=e17] [cursor=pointer]:
+          - /url: /login?next=/account
+  - main [ref=e18]:
+    - paragraph [ref=e91]: Loading restaurants…
+  - contentinfo [ref=e92]:
+    - generic [ref=e93]:
+      - generic [ref=e94]:
+        - generic [ref=e95]:
+          - paragraph [ref=e96]: Dining Passport
+          - paragraph [ref=e97]: An independent atlas of Michelin-starred dining in the United States.
+          - paragraph [ref=e98]: Independent discovery platform. Not affiliated with the Michelin Guide.
+          - paragraph [ref=e99]: Dataset current through July 2026. 271 starred restaurants listed · roster 2026-07-16.
+        - navigation "Footer" [ref=e100]:
+          - link "Explore" [ref=e101] [cursor=pointer]:
+            - /url: /explore
+          - link "Map" [ref=e102] [cursor=pointer]:
+            - /url: /map
+          - link "Michelin Stars" [ref=e103] [cursor=pointer]:
+            - /url: /about-michelin-stars
+          - link "Passport" [ref=e104] [cursor=pointer]:
+            - /url: /passport
+          - link "Account" [ref=e105] [cursor=pointer]:
+            - /url: /account
+      - paragraph [ref=e106]: Independent platform. Not affiliated with, endorsed by, or connected to Michelin or the Michelin Guide. Michelin does not currently inspect every U.S. state. Absence from this atlas does not mean a region has been reviewed and found without stars.

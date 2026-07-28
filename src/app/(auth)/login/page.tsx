@@ -12,7 +12,7 @@ type SearchParams = Promise<Record<string, string | string[] | undefined>>;
 
 export const metadata = buildPageMetadata({
   title: "Sign in",
-  description: "Welcome back to Dining Passport.",
+  description: "Welcome back to Orellin.",
   path: "/login",
   noIndex: true,
 });

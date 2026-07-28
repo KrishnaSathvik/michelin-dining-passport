@@ -1,0 +1,72 @@
+- generic [active] [ref=f7e1]:
+  - link "Skip to main content" [ref=f7e2] [cursor=pointer]:
+    - /url: "#main-content"
+  - banner [ref=f7e3]:
+    - generic [ref=f7e4]:
+      - link "Dining Passport" [ref=f7e6] [cursor=pointer]:
+        - /url: /
+      - generic [ref=f7e7]:
+        - link "Search restaurants" [ref=f7e8] [cursor=pointer]:
+          - /url: /explore
+        - button "Open menu" [ref=f7e12]
+  - main [ref=f7e15]:
+    - generic [ref=f7e17]:
+      - generic [ref=f7e18]:
+        - heading "Your dining journey starts with one table." [level=1] [ref=f7e19]
+        - paragraph [ref=f7e20]: Save restaurants you want to try, plan future visits, record meals you have enjoyed, and build private collections. Your passport stays personal — on this device until you sign in.
+        - generic [ref=f7e21]:
+          - link "Explore restaurants" [ref=f7e22] [cursor=pointer]:
+            - /url: /explore
+          - link "Open map" [ref=f7e23] [cursor=pointer]:
+            - /url: /map
+      - generic [ref=f7e26]:
+        - generic [ref=f7e28]:
+          - generic [ref=f7e29]: "1"
+          - generic [ref=f7e30]: Save
+        - generic [ref=f7e33]:
+          - generic [ref=f7e34]: "2"
+          - generic [ref=f7e35]: Plan
+        - generic [ref=f7e38]:
+          - generic [ref=f7e39]: "3"
+          - generic [ref=f7e40]: Visit
+      - generic [ref=f7e41]:
+        - generic [ref=f7e42]:
+          - generic [ref=f7e43]: S
+          - heading "Save" [level=2] [ref=f7e44]
+          - paragraph [ref=f7e45]: Bookmark restaurants from Explore, Map, or any detail page.
+        - generic [ref=f7e46]:
+          - generic [ref=f7e47]: P
+          - heading "Plan" [level=2] [ref=f7e48]
+          - paragraph [ref=f7e49]: Mark planned visits and keep private dates or confirmation notes.
+        - generic [ref=f7e50]:
+          - generic [ref=f7e51]: V
+          - heading "Visit" [level=2] [ref=f7e52]
+          - paragraph [ref=f7e53]: Record visit dates, favorite dishes, and private notes after a meal.
+      - complementary "Device-only passport notice" [ref=f7e54]:
+        - paragraph [ref=f7e55]:
+          - text: Passport data is stored on this device.
+          - link "Sign in" [ref=f7e56] [cursor=pointer]:
+            - /url: /login?next=/passport
+          - text: to enable supported cloud synchronization across browsers.
+  - contentinfo [ref=f7e57]:
+    - generic [ref=f7e58]:
+      - generic [ref=f7e59]:
+        - generic [ref=f7e60]:
+          - paragraph [ref=f7e61]: Dining Passport
+          - paragraph [ref=f7e62]: An independent atlas of Michelin-starred dining in the United States.
+          - paragraph [ref=f7e63]: Independent discovery platform. Not affiliated with the Michelin Guide.
+          - paragraph [ref=f7e64]: Dataset current through July 2026. 271 starred restaurants listed · roster 2026-07-16.
+        - navigation "Footer" [ref=f7e65]:
+          - link "Explore" [ref=f7e66] [cursor=pointer]:
+            - /url: /explore
+          - link "Map" [ref=f7e67] [cursor=pointer]:
+            - /url: /map
+          - link "Michelin Stars" [ref=f7e68] [cursor=pointer]:
+            - /url: /about-michelin-stars
+          - link "Passport" [ref=f7e69] [cursor=pointer]:
+            - /url: /passport
+          - link "Account" [ref=f7e70] [cursor=pointer]:
+            - /url: /account
+      - paragraph [ref=f7e71]: Independent platform. Not affiliated with, endorsed by, or connected to Michelin or the Michelin Guide. Michelin does not currently inspect every U.S. state. Absence from this atlas does not mean a region has been reviewed and found without stars.
+  - button "Open Next.js Dev Tools" [ref=f7e77] [cursor=pointer]
+  - alert [ref=f7e81]

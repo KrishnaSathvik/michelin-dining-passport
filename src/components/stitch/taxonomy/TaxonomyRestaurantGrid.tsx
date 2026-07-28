@@ -1,5 +1,6 @@
 import { RestaurantDiscoveryCard } from "@/components/stitch/restaurant";
 import type { RestaurantCardModel } from "@/components/stitch/restaurant";
+import { getApprovedGooglePlaceId } from "@/lib/google-places/place-ids";
 
 type TaxonomyRestaurantGridProps = {
   restaurants: RestaurantCardModel[];
@@ -29,7 +30,10 @@ export function TaxonomyRestaurantGrid({
     >
       {restaurants.map((card) => (
         <li key={card.slug}>
-          <RestaurantDiscoveryCard model={card} />
+          <RestaurantDiscoveryCard
+            model={card}
+            placeId={getApprovedGooglePlaceId(card.slug)}
+          />
         </li>
       ))}
     </ul>

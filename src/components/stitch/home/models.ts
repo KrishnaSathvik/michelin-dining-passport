@@ -8,8 +8,11 @@ export type HomepageTotals = {
 };
 
 export type HomepageHeroModel = {
+  eyebrow?: string;
   headline: string;
   supporting: string;
+  primaryCta?: { label: string; href: string };
+  secondaryCta?: { label: string; href: string };
   /** Generic atmospheric hero image — never a named-restaurant photo. */
   imageSrc: string;
   imageAlt: string;

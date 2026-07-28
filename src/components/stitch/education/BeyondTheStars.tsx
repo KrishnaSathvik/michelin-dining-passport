@@ -21,9 +21,9 @@ export function BeyondTheStars({ items }: BeyondTheStarsProps) {
         </h2>
         <p className="mx-auto mt-3 max-w-2xl text-center font-sans text-sm text-dp-ink-muted">
           Educational context only — these distinctions are not part of the
-          starred-restaurant roster totals on Dining Passport.
+          starred-restaurant roster totals on Orellin.
         </p>
-        <ul className="mx-auto mt-10 grid max-w-4xl gap-6 md:grid-cols-2">
+        <ul className="mx-auto mt-10 grid max-w-5xl gap-6 md:grid-cols-3">
           {items.map((item) => (
             <li
               key={item.id}

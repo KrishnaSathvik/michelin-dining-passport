@@ -7,7 +7,11 @@ export async function GET(request: Request) {
   const requestUrl = new URL(request.url);
   const code = requestUrl.searchParams.get("code");
   const next = safeInternalPath(requestUrl.searchParams.get("next"), "/passport");
-  const errorDescription = requestUrl.searchParams.get("error_description");
+  // Supabase sends `error` alone for some failures and `error_description`
+  // for others; treat either as a failed callback.
+  const errorDescription =
+    requestUrl.searchParams.get("error_description") ??
+    requestUrl.searchParams.get("error");
 
   if (!isSupabaseConfigured()) {
     return NextResponse.redirect(

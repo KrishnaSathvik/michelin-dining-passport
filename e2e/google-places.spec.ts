@@ -8,7 +8,11 @@ test.describe("google places enrichment (flag off)", () => {
   test("restaurant detail shows Google section fallback", async ({ page }) => {
     await page.goto("/restaurants/alinea-chicago-il");
     await page.locator("#google-places-heading").scrollIntoViewIfNeeded();
-    await expect(page.getByRole("heading", { name: /Photos and live place information from Google/i })).toBeVisible();
+    await expect(
+      page.getByRole("heading", {
+        name: "Current place information from Google",
+      }),
+    ).toBeVisible();
     await expect(
       page.getByText("Live Google place information is currently unavailable."),
     ).toBeVisible();

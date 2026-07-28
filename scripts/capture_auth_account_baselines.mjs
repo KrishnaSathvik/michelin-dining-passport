@@ -96,7 +96,9 @@ try {
   await shot(page, join(loginDir, "login-pending.png"));
 
   await page.goto(`${base}/login`, { waitUntil: "networkidle" });
-  await page.getByRole("button", { name: "Continue with Magic Link" }).click();
+  await page
+    .getByRole("button", { name: "Email me a magic link instead" })
+    .click();
   await page.waitForSelector('[data-auth-form="magic-link"]');
   await shot(page, join(loginDir, "login-magic-link.png"));
 

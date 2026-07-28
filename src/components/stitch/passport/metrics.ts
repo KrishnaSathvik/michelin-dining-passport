@@ -1,171 +1,55 @@
 import type { Restaurant } from "@/lib/data/types";
-import type { PassportStore, UserRestaurantRecord } from "@/lib/passport/types";
+import { getApprovedGooglePlaceId } from "@/lib/google-places/place-ids";
+import type { PassportStore } from "@/lib/passport/types";
 import type {
-  CatalogDenominators,
   CollectionPreviewModel,
   JourneySummaryMetric,
-  StarsCollectedModel,
-  StatesExploredModel,
 } from "./models";
-
-/**
- * Saved predicate for `/saved`: unique records where `saved === true`.
- * Matches current SaveAction / PassportRestaurantList semantics
- * (includes visited restaurants that remain saved).
- */
-export function isSavedRecord(record: UserRestaurantRecord): boolean {
-  return record.saved === true;
-}
-
-/** Planned predicate for `/planned`: unique records where `planned === true`. */
-export function isPlannedRecord(record: UserRestaurantRecord): boolean {
-  return record.planned === true;
-}
-
-/** Visited predicate for `/visited`: unique records where `visited === true`. */
-export function isVisitedRecord(record: UserRestaurantRecord): boolean {
-  return record.visited === true;
-}
-
-/**
- * OD-09 To Visit:
- * unique restaurants where (wantToVisit || planned) && !visited.
- * Want + Planned on the same restaurant counts once.
- */
-export function isToVisitRecord(record: UserRestaurantRecord): boolean {
-  return (
-    (record.wantToVisit === true || record.planned === true) &&
-    record.visited !== true
-  );
-}
-
-export function uniqueRestaurantIds(
-  records: readonly UserRestaurantRecord[],
-): string[] {
-  return [...new Set(records.map((record) => record.restaurantSlug))];
-}
-
-export function countVisited(store: PassportStore): number {
-  return uniqueRestaurantIds(
-    Object.values(store.userRestaurants).filter(isVisitedRecord),
-  ).length;
-}
-
-export function countToVisit(store: PassportStore): number {
-  return uniqueRestaurantIds(
-    Object.values(store.userRestaurants).filter(isToVisitRecord),
-  ).length;
-}
-
-export function countFavorites(store: PassportStore): number {
-  return uniqueRestaurantIds(
-    Object.values(store.userRestaurants).filter(
-      (record) => record.favorite === true,
-    ),
-  ).length;
-}
 
 export function buildJourneySummary(
   store: PassportStore,
+  restaurants: readonly Restaurant[] = [],
+  visiblePlanCount = Object.keys(store.plans).length,
 ): JourneySummaryMetric[] {
+  const bySlug = new Map(
+    restaurants.map((restaurant) => [restaurant.slug, restaurant]),
+  );
+  const cities = new Set(
+    Object.values(store.visits)
+      .map((visit) => bySlug.get(visit.restaurantSlug))
+      .filter((restaurant): restaurant is Restaurant => Boolean(restaurant))
+      .map((restaurant) => `${restaurant.city}|${restaurant.stateCode}`),
+  );
   return [
     {
-      key: "visited",
-      label: "Visited",
-      value: countVisited(store),
-      description: "Restaurants marked visited",
-      href: "/visited",
+      key: "saved",
+      label: "Restaurants saved",
+      value: Object.keys(store.bookmarks).length,
+      description: "In My Restaurants",
+      href: "/saved",
     },
     {
-      key: "toVisit",
-      label: "To Visit",
-      value: countToVisit(store),
-      description: "Want to visit or currently planned",
+      key: "planned",
+      label: "Upcoming plans",
+      value: visiblePlanCount,
+      description: "Active dining plans",
       href: "/planned",
     },
     {
-      key: "favorites",
-      label: "Favorites",
-      value: countFavorites(store),
-      description: "Restaurants marked favorite",
+      key: "visits",
+      label: "Visits recorded",
+      value: Object.keys(store.visits).length,
+      description: "Private dining memories",
+      href: "/visited",
+    },
+    {
+      key: "cities",
+      label: "Cities explored",
+      value: cities.size,
+      description: "Across recorded visits",
       href: null,
     },
   ];
-}
-
-export function buildStarsCollected(
-  store: PassportStore,
-  restaurants: readonly Restaurant[],
-  denominators: CatalogDenominators,
-): StarsCollectedModel {
-  const bySlug = new Map(
-    restaurants.map((restaurant) => [restaurant.slug, restaurant]),
-  );
-  const visitedSlugs = uniqueRestaurantIds(
-    Object.values(store.userRestaurants).filter(isVisitedRecord),
-  );
-
-  let totalStars = 0;
-  let one = 0;
-  let two = 0;
-  let three = 0;
-
-  for (const slug of visitedSlugs) {
-    const restaurant = bySlug.get(slug);
-    if (!restaurant) continue;
-    totalStars += restaurant.stars;
-    if (restaurant.stars === 1) one += 1;
-    if (restaurant.stars === 2) two += 1;
-    if (restaurant.stars === 3) three += 1;
-  }
-
-  return {
-    totalStars,
-    rows: [
-      {
-        stars: 1,
-        label: "One-Star",
-        visited: one,
-        total: denominators.oneStar,
-      },
-      {
-        stars: 2,
-        label: "Two-Star",
-        visited: two,
-        total: denominators.twoStar,
-      },
-      {
-        stars: 3,
-        label: "Three-Star",
-        visited: three,
-        total: denominators.threeStar,
-      },
-    ],
-  };
-}
-
-export function buildStatesExplored(
-  store: PassportStore,
-  restaurants: readonly Restaurant[],
-  totalStates: number,
-): StatesExploredModel {
-  const bySlug = new Map(
-    restaurants.map((restaurant) => [restaurant.slug, restaurant]),
-  );
-  const states = new Map<string, string>();
-
-  for (const record of Object.values(store.userRestaurants)) {
-    if (!isVisitedRecord(record)) continue;
-    const restaurant = bySlug.get(record.restaurantSlug);
-    if (!restaurant) continue;
-    states.set(restaurant.stateSlug, restaurant.state);
-  }
-
-  return {
-    explored: states.size,
-    total: totalStates,
-    stateLabels: [...states.values()].sort((a, b) => a.localeCompare(b)),
-  };
 }
 
 export function buildCollectionPreviews(
@@ -177,18 +61,20 @@ export function buildCollectionPreviews(
     restaurants.map((restaurant) => [restaurant.slug, restaurant]),
   );
   const visited = new Set(
-    Object.values(store.userRestaurants)
-      .filter(isVisitedRecord)
-      .map((record) => record.restaurantSlug),
+    Object.values(store.visits).map((visit) => visit.restaurantSlug),
   );
 
   return Object.values(store.collections)
     .sort((a, b) => a.name.localeCompare(b.name))
     .slice(0, limit)
     .map((collection) => {
-      const coverSlug =
-        collection.coverRestaurantSlug ?? collection.restaurantSlugs[0] ?? null;
-      const coverRestaurant = coverSlug ? bySlug.get(coverSlug) : undefined;
+      const coverSlugs = [
+        collection.coverRestaurantSlug,
+        ...collection.restaurantSlugs,
+      ]
+        .filter((slug): slug is string => Boolean(slug))
+        .filter((slug, index, all) => all.indexOf(slug) === index)
+        .slice(0, 3);
       const visitedCount = collection.restaurantSlugs.filter((slug) =>
         visited.has(slug),
       ).length;
@@ -201,15 +87,21 @@ export function buildCollectionPreviews(
         restaurantCount: collection.restaurantSlugs.length,
         visitedCount,
         href: `/collections/${collection.slug}`,
-        cover: coverRestaurant
-          ? {
-              name: coverRestaurant.name,
-              seed: coverRestaurant.slug,
-              city: `${coverRestaurant.city}, ${coverRestaurant.stateCode}`,
-              stars: coverRestaurant.stars,
-              imageUrl: null,
-            }
-          : null,
+        covers: coverSlugs.flatMap((slug) => {
+          const restaurant = bySlug.get(slug);
+          return restaurant
+            ? [
+                {
+                  name: restaurant.name,
+                  seed: restaurant.slug,
+                  city: `${restaurant.city}, ${restaurant.stateCode}`,
+                  stars: restaurant.stars,
+                  imageUrl: null,
+                  placeId: getApprovedGooglePlaceId(restaurant.slug),
+                },
+              ]
+            : [];
+        }),
       };
     });
 }
@@ -218,25 +110,31 @@ export function buildSupportingCopy(
   store: PassportStore,
   restaurants: readonly Restaurant[],
 ): string {
-  const visited = countVisited(store);
-  const states = buildStatesExplored(
-    store,
-    restaurants,
-    Number.POSITIVE_INFINITY,
-  ).explored;
+  const visitedSlugs = new Set(
+    Object.values(store.visits).map((visit) => visit.restaurantSlug),
+  );
+  const visited = visitedSlugs.size;
+  const bySlug = new Map(
+    restaurants.map((restaurant) => [restaurant.slug, restaurant]),
+  );
+  const states = new Set(
+    [...visitedSlugs]
+      .map((slug) => bySlug.get(slug)?.stateSlug)
+      .filter((state): state is string => Boolean(state)),
+  ).size;
 
   if (visited === 0) {
-    const toVisit = countToVisit(store);
-    const saved = uniqueRestaurantIds(
-      Object.values(store.userRestaurants).filter(isSavedRecord),
-    ).length;
-    if (toVisit > 0) {
-      return `You have ${toVisit} ${toVisit === 1 ? "restaurant" : "restaurants"} to visit.`;
+    const plans = new Set(
+      Object.values(store.plans).map((plan) => plan.restaurantSlug),
+    ).size;
+    const saved = Object.keys(store.bookmarks).length;
+    if (plans > 0) {
+      return `You have ${plans} ${plans === 1 ? "meal" : "meals"} planned.`;
     }
     if (saved > 0) {
       return `You have saved ${saved} ${saved === 1 ? "restaurant" : "restaurants"}.`;
     }
-    return "Track the Michelin-starred tables you want, plan, and visit.";
+    return "Save restaurants, plan meals, and remember every visit.";
   }
 
   if (states <= 0) {
@@ -248,7 +146,9 @@ export function buildSupportingCopy(
 
 export function hasPassportActivity(store: PassportStore): boolean {
   return (
-    Object.keys(store.userRestaurants).length > 0 ||
+    Object.keys(store.bookmarks).length > 0 ||
+    Object.keys(store.plans).length > 0 ||
+    Object.keys(store.visits).length > 0 ||
     Object.keys(store.collections).length > 0
   );
 }

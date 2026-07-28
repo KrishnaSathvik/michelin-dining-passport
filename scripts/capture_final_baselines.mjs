@@ -1,7 +1,7 @@
 /**
  * Phase 12 final visual baselines.
  * Owns a dedicated port via BASE_URL (default http://127.0.0.1:3112).
- * Verifies Dining Passport identity before capture.
+ * Verifies Orellin identity before capture.
  */
 import { chromium } from "@playwright/test";
 import { mkdirSync } from "node:fs";
@@ -16,12 +16,12 @@ const base = process.env.BASE_URL ?? "http://127.0.0.1:3112";
 
 async function assertApp(page) {
   const title = await page.title();
-  if (!/Dining Passport/i.test(title)) {
+  if (!/Orellin/i.test(title)) {
     throw new Error(`Wrong app title at ${page.url()}: ${title}`);
   }
-  const mark = page.getByText("Dining Passport").first();
+  const mark = page.getByText(/ORELLIN|Orellin/).first();
   if (!(await mark.count())) {
-    throw new Error(`Dining Passport wordmark missing at ${page.url()}`);
+    throw new Error(`Orellin wordmark missing at ${page.url()}`);
   }
 }
 

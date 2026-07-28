@@ -8,43 +8,30 @@ type CollectionsEmptyStateProps = {
 export function CollectionsEmptyState({ onCreate }: CollectionsEmptyStateProps) {
   return (
     <section
-      className="rounded-[var(--dp-radius-lg)] border border-dp-outline-variant bg-dp-surface-low px-6 py-14 text-center"
+      className="border-y border-dp-outline-variant py-14 text-center"
       data-collections-state="empty"
       aria-labelledby="collections-empty-heading"
     >
-      <div
-        className="mx-auto mb-8 flex h-28 w-full max-w-sm items-end justify-center gap-2"
-        aria-hidden="true"
-      >
-        <div className="h-16 w-20 rounded-[var(--dp-radius-md)] bg-dp-surface-high" />
-        <div className="h-24 w-24 rounded-[var(--dp-radius-md)] bg-dp-surface" />
-        <div className="h-14 w-20 rounded-[var(--dp-radius-md)] bg-dp-surface-high" />
-      </div>
       <h2
         id="collections-empty-heading"
-        className="dp-headline-md text-dp-primary-deep"
+        className="dp-headline-sm text-dp-primary-deep"
       >
-        No collections yet
+        Create your first collection
       </h2>
-      <p className="mx-auto mt-3 max-w-md font-sans text-[16px] text-dp-ink-muted">
-        Organize restaurants into personal lists for trips, cities, or tasting
-        themes. Collections stay private to your Passport.
+      <p className="mx-auto mt-3 max-w-lg font-sans text-[15px] leading-relaxed text-dp-ink-secondary">
+        Collections organize the restaurants you have saved — a New York
+        weekend, anniversary dinners, tasting menus to try. A restaurant can
+        belong to as many collections as you like.
       </p>
-      <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
+      <div className="mt-7 flex flex-col items-center justify-center gap-3 sm:flex-row">
         <Button type="button" variant="primary" onClick={onCreate}>
           Create collection
         </Button>
         <Link
           href="/explore"
-          className="inline-flex h-[var(--dp-control-height)] items-center justify-center rounded-[var(--dp-radius-lg)] border border-dp-outline-variant bg-dp-surface px-5 font-sans text-[14px] font-semibold text-dp-primary no-underline transition-colors hover:bg-dp-soft focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-dp-focus"
+          className="inline-flex h-[var(--dp-control-height)] min-h-11 items-center justify-center rounded-[var(--dp-radius-lg)] border border-dp-outline-variant bg-dp-surface px-5 font-sans text-[14px] font-semibold text-dp-primary no-underline transition-colors hover:bg-dp-soft focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-dp-focus"
         >
           Explore restaurants
-        </Link>
-        <Link
-          href="/saved"
-          className="inline-flex min-h-11 items-center font-sans text-[14px] font-medium text-dp-primary no-underline underline-offset-4 hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-dp-focus"
-        >
-          View saved
         </Link>
       </div>
     </section>

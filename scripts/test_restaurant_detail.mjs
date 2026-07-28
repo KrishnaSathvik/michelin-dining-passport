@@ -2,7 +2,7 @@
  * Phase 7 — Restaurant detail Stitch composition contract tests.
  */
 import assert from "node:assert/strict";
-import { readFileSync } from "node:fs";
+import { existsSync, readFileSync } from "node:fs";
 import { describe, it } from "node:test";
 import { fileURLToPath } from "node:url";
 import { dirname, join } from "node:path";
@@ -32,6 +32,10 @@ const googleSectionTs = readFileSync(
   join(root, "src/components/stitch/restaurant-detail/RestaurantGoogleSection.tsx"),
   "utf8",
 );
+const identityTs = readFileSync(
+  join(root, "src/components/stitch/restaurant-detail/RestaurantIdentityContent.tsx"),
+  "utf8",
+);
 const jsonLdTs = readFileSync(join(root, "src/lib/seo/jsonld.ts"), "utf8");
 const restaurantsDataTs = readFileSync(
   join(root, "src/lib/data/restaurants.ts"),
@@ -53,11 +57,34 @@ describe("Restaurant detail route composition", () => {
     assert.match(viewTs, /breadcrumbJsonLd/);
     assert.match(viewTs, /restaurantJsonLd/);
   });
+
+  it("uses the approved editorial gallery, location, and personal composition", () => {
+    assert.match(viewTs, /RestaurantGallery/);
+    assert.match(viewTs, /RestaurantLocationSection/);
+    assert.match(viewTs, /RestaurantPassportSummary/);
+    assert.doesNotMatch(viewTs, /RestaurantLocationPreview/);
+    assert.doesNotMatch(viewTs, /Last dataset import|workbook|roster|importedAt/i);
+  });
+
+  it("retires the five-flag journey controls in favor of shared actions", () => {
+    assert.match(identityTs, /RestaurantJourneyActions/);
+    assert.doesNotMatch(identityTs, /JourneyControls/);
+    assert.equal(
+      existsSync(
+        join(
+          root,
+          "src/components/passport-actions/RemoveFromPassportDialog.tsx",
+        ),
+      ),
+      true,
+    );
+  });
 });
 
 describe("Restaurant detail view model contract", () => {
   it("models first-party fields without Google content keys", () => {
     assert.match(modelsTs, /RestaurantDetailModel/);
+    assert.match(modelsTs, /gallery/);
     assert.match(modelsTs, /googlePlaceId/);
     for (const key of [
       "googleRating",
@@ -83,7 +110,8 @@ describe("Google provider boundary", () => {
     assert.match(googleSectionTs, /ssr:\s*false/);
     assert.match(googleSectionTs, /GooglePlaceDetails/);
     assert.match(googleSectionTs, /lazy/);
-    assert.match(googleSectionTs, /Photos and live place information from Google/);
+    assert.match(googleSectionTs, /Current place information from Google/);
+    assert.match(googleSectionTs, /variant="focused"/);
   });
 
   it("structured data helper has no Google rating fields", () => {

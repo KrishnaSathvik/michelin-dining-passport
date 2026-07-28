@@ -19,7 +19,7 @@ export default function ContactPage() {
   return (
     <ContentPage
       title="Contact"
-      intro="Dining Passport is an independent project. Use this page to see where different kinds of questions belong."
+      intro="Orellin is an independent project. Use this page to see where different kinds of questions belong."
     >
       <ContentCallout title="No public inbox yet">
         <p>
@@ -45,7 +45,7 @@ export default function ContactPage() {
       <ContentSection heading="Official Michelin Guide matters">
         <p>
           We cannot help with anything official: award decisions, inspections,
-          appeals, press, or listing requests. Dining Passport is not affiliated
+          appeals, press, or listing requests. Orellin is not affiliated
           with the Michelin Guide and has no influence over any of it. Contact
           the Michelin Guide directly.
         </p>

@@ -1,19 +1,23 @@
 export const siteConfig = {
   /**
-   * Temporary independent product name (plain text only).
+   * Independent product name (plain text only).
    * Do not add Michelin logo, flower mark, or official wordmark styling.
    */
-  productName: "Dining Passport",
-  tagline: "An independent atlas of Michelin-starred dining in the United States.",
+  productName: "Orellin",
+  /** Display form of the wordmark (header/footer). */
+  wordmark: "ORELLIN",
+  tagline: "The guide to remarkable dining.",
   description:
-    "Browse Michelin-starred restaurants across the United States. Independent and not affiliated with Michelin.",
+    "Discover Michelin-starred restaurants across the United States. Explore by city, cuisine, and distinction, and find official booking options.",
+  /** Nav/personal-area label for the private tracking hub (`/passport`). */
+  personalAreaName: "My Restaurants",
   dataUpdatedLabel: "Information current through July 2026",
   /** Footer product summary — the single plain-language description of the product. */
   footerDescription:
-    "Discover Michelin-starred restaurants, plan future visits, and remember the meals you loved.",
+    "Discover Michelin-starred restaurants across the United States. Explore by city, cuisine, and distinction, learn what you need to know, and book directly.",
   /** The one disclaimer the footer renders. Longer legal context lives on /about and /sources. */
   footerDisclaimer:
-    "Dining Passport is an independent discovery platform and is not affiliated with the Michelin Guide.",
+    "Orellin is an independent discovery platform and is not affiliated with the Michelin Guide.",
   independenceDisclaimer:
     "Independent platform. Not affiliated with, endorsed by, or connected to Michelin or the Michelin Guide.",
   googlePlacesDisclaimer:
@@ -31,7 +35,7 @@ export const siteConfig = {
     { href: "/explore", label: "Explore" },
     { href: "/map", label: "Map" },
     { href: "/about-michelin-stars", label: "Michelin Stars" },
-    { href: "/passport", label: "Passport" },
+    { href: "/passport", label: "My Restaurants" },
     { href: "/account", label: "Account" },
   ],
 } as const;

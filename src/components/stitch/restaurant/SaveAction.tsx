@@ -40,7 +40,7 @@ export function SaveAction({
   const [pending, startTransition] = useTransition();
   const [error, setError] = useState(false);
 
-  const label = saved ? "Remove from saved" : "Save to passport";
+  const label = saved ? "Remove from saved" : "Save restaurant";
   const stateText = saved ? "Saved" : "Not saved";
 
   const isControlled = controlledSaved !== undefined;

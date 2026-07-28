@@ -16,11 +16,11 @@ export function DiscoveryToolbar({
 }: DiscoveryToolbarProps) {
   return (
     <section
-      className="sticky top-[var(--dp-header-height)] z-30 mb-6 border-b border-dp-border bg-dp-surface/95 pt-4 pb-6 backdrop-blur-sm md:mb-8"
+      className="sticky top-[var(--dp-header-height)] z-30 mb-6 border-b border-dp-border bg-dp-surface py-3 md:mb-8"
       data-explore-toolbar
       aria-label="Search and filters"
     >
-      <PageContainer className="flex flex-col gap-4">
+      <PageContainer className="flex flex-col gap-3">
         <ExploreSearchForm query={query} />
         <ExploreQuickFilters
           query={query}

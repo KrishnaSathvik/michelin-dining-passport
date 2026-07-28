@@ -13,7 +13,7 @@ export function ExploreSearchForm({ query }: ExploreSearchFormProps) {
       action="/explore"
       method="get"
       role="search"
-      className="flex w-full flex-col gap-3 sm:flex-row sm:items-stretch sm:gap-4"
+      className="flex w-full items-stretch gap-2 sm:gap-4"
     >
       <div className="min-w-0 flex-1">
         <SearchInput
@@ -21,13 +21,13 @@ export function ExploreSearchForm({ query }: ExploreSearchFormProps) {
           name="q"
           defaultValue={query.q}
           label="Search restaurants by name, city, state, or cuisine"
-          placeholder="Search restaurant, city, state, or cuisine"
+          placeholder="Search restaurants or places"
           autoComplete="off"
           className="rounded-[var(--dp-radius-lg)]"
         />
       </div>
       <ExploreHiddenInputs query={query} omit={["q", "page"]} />
-      <Button type="submit" className="shrink-0 px-8 sm:self-stretch">
+      <Button type="submit" className="shrink-0 px-4 sm:px-8">
         Search
       </Button>
     </form>

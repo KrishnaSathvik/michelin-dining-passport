@@ -1,6 +1,5 @@
 "use client";
 
-import { useTransition } from "react";
 import { useRouter } from "next/navigation";
 import { Button } from "@/components/stitch/Button";
 import { Dialog } from "@/components/stitch/Dialog";
@@ -11,70 +10,59 @@ type DeleteCollectionDialogProps = {
   open: boolean;
   onClose: () => void;
   collection: LocalCollection;
+  /** Detail page returns to the index after deleting; index cards stay put. */
+  redirectToIndex?: boolean;
 };
 
 /**
- * Deletes the collection only. Member restaurants remain in the Passport
- * with Saved / Planned / Visited / Favorite / notes intact.
+ * Deletes the collection and its memberships only. Saved bookmarks, plans, and
+ * visits for the member restaurants are deliberately preserved.
  */
 export function DeleteCollectionDialog({
   open,
   onClose,
   collection,
+  redirectToIndex = false,
 }: DeleteCollectionDialogProps) {
   const { removeCollection } = usePassport();
   const router = useRouter();
-  const [pending, startTransition] = useTransition();
 
-  const handleClose = () => {
-    if (pending) return;
+  const confirm = () => {
+    removeCollection(collection.id);
     onClose();
-  };
-
-  const confirmDelete = () => {
-    startTransition(() => {
-      removeCollection(collection.id);
-      onClose();
-      router.push("/collections");
-    });
+    if (redirectToIndex) router.push("/collections");
   };
 
   return (
     <Dialog
       open={open}
-      onClose={handleClose}
-      title="Delete collection?"
+      onClose={onClose}
+      title="Delete this collection?"
       footer={
         <div className="flex flex-col-reverse gap-3 sm:flex-row sm:justify-end">
-          <Button
-            type="button"
-            variant="secondary"
-            onClick={handleClose}
-            disabled={pending}
-          >
+          <Button type="button" variant="secondary" onClick={onClose}>
             Cancel
           </Button>
           <Button
             type="button"
             variant="primary"
-            onClick={confirmDelete}
-            disabled={pending}
+            onClick={confirm}
             className="!border-dp-error !bg-dp-error hover:!bg-[color-mix(in_srgb,var(--dp-error)_88%,black)]"
             data-destructive="true"
           >
-            {pending ? "Deleting…" : "Delete collection"}
+            Delete collection
           </Button>
         </div>
       }
     >
       <div className="space-y-3" data-collections-dialog="delete">
-        <p className="font-sans text-[16px] text-dp-ink">
-          Delete <span className="font-semibold">{collection.name}</span>? This
-          cannot be undone.
+        <p className="font-sans text-[16px] leading-relaxed text-dp-ink">
+          Delete <span className="font-semibold">{collection.name}</span>? The
+          restaurants will remain saved in My Restaurants.
         </p>
-        <p className="font-sans text-[14px] text-dp-ink-muted">
-          Member restaurants stay in your Passport. Saved, Planned, Visited,
-          Favorite, notes, and visit details are not deleted.
+        <p className="font-sans text-[14px] leading-relaxed text-dp-ink-muted">
+          Your plans, recorded visits, and private notes are not affected. This
+          cannot be undone.
         </p>
       </div>
     </Dialog>

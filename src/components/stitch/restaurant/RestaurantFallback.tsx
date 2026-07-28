@@ -51,6 +51,15 @@ function hashSeed(seed: string): number {
   return Math.abs(hash);
 }
 
+/** Shared so compact surfaces (collection mosaics) stay in the same palette. */
+export function restaurantFallbackPalette(seed: string): FallbackPalette {
+  return PALETTES[hashSeed(seed) % PALETTES.length]!;
+}
+
+export function restaurantInitials(name: string): string {
+  return initials(name);
+}
+
 function initials(name: string): string {
   const parts = name
     .replace(/[^\p{L}\p{N}\s]/gu, " ")

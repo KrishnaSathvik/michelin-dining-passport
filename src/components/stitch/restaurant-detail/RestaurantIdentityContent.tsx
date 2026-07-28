@@ -1,10 +1,11 @@
+import type { ReactNode } from "react";
 import Link from "next/link";
 import {
   MichelinDistinction,
   ReservationAction,
 } from "@/components/stitch/restaurant";
 import type { RestaurantDetailModel } from "./models";
-import { JourneyControls } from "./JourneyControls";
+import { RestaurantJourneyActions } from "./RestaurantJourneyActions";
 
 type RestaurantIdentityContentProps = {
   restaurant: RestaurantDetailModel;
@@ -16,14 +17,37 @@ type RestaurantIdentityContentProps = {
 export function RestaurantIdentityContent({
   restaurant,
 }: RestaurantIdentityContentProps) {
-  const metaParts = [
-    restaurant.cuisine,
-    restaurant.locationLabel,
-    restaurant.price,
-  ].filter(Boolean);
+  const metaLinkClass =
+    "text-dp-ink-secondary no-underline transition-colors hover:text-dp-primary hover:underline underline-offset-4";
+  const metaItems: ReactNode[] = [];
+  if (restaurant.cuisine) {
+    metaItems.push(
+      <Link
+        key="cuisine"
+        href={`/cuisines/${restaurant.cuisineSlug}`}
+        className={metaLinkClass}
+      >
+        {restaurant.cuisine}
+      </Link>,
+    );
+  }
+  if (restaurant.locationLabel) {
+    metaItems.push(
+      <Link
+        key="location"
+        href={`/cities/${restaurant.citySlug}`}
+        className={metaLinkClass}
+      >
+        {restaurant.locationLabel}
+      </Link>,
+    );
+  }
+  if (restaurant.price) {
+    metaItems.push(<span key="price">{restaurant.price}</span>);
+  }
 
   return (
-    <div className="flex w-full flex-col justify-center py-2 md:w-[42%]">
+    <div className="flex min-w-0 w-full flex-col py-2">
       <div className="mb-4">
         <Link
           href={`/stars/${restaurant.stars}`}
@@ -44,16 +68,16 @@ export function RestaurantIdentityContent({
         {restaurant.name}
       </h1>
 
-      {metaParts.length > 0 ? (
+      {metaItems.length > 0 ? (
         <p className="mt-2 flex flex-wrap items-center gap-x-2 gap-y-1 font-sans text-base text-dp-ink-secondary">
-          {metaParts.map((part, index) => (
-            <span key={`${part}-${index}`} className="inline-flex items-center gap-x-2">
+          {metaItems.map((item, index) => (
+            <span key={index} className="inline-flex items-center gap-x-2">
               {index > 0 ? (
                 <span aria-hidden="true" className="text-dp-ink-muted">
                   •
                 </span>
               ) : null}
-              <span>{part}</span>
+              {item}
             </span>
           ))}
         </p>
@@ -65,15 +89,19 @@ export function RestaurantIdentityContent({
         </p>
       ) : null}
 
-      <div className="mt-8 flex flex-col gap-4 sm:flex-row sm:flex-wrap">
-        <ReservationAction
-          restaurantSlug={restaurant.slug}
-          action={restaurant.reservation}
-          surface="restaurant_detail"
-          variant="primary"
-          analyticsProvider={restaurant.reservationProvider}
-          className="h-12 min-h-12 w-full px-8 sm:w-auto sm:min-w-[10rem]"
-        />
+      <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
+        {restaurant.reservation.isDirectBooking ? (
+          <ReservationAction
+            restaurantSlug={restaurant.slug}
+            action={restaurant.reservation}
+            surface="restaurant_detail"
+            variant="primary"
+            analyticsProvider={restaurant.reservationProvider}
+            labelOverride="Reserve a table"
+            showProvider
+            className="h-12 min-h-12 w-full px-8 sm:w-auto sm:min-w-[11rem]"
+          />
+        ) : null}
         {restaurant.showOfficialWebsite && restaurant.officialWebsite ? (
           <a
             href={restaurant.officialWebsite}
@@ -81,7 +109,18 @@ export function RestaurantIdentityContent({
             rel="noopener noreferrer"
             className="inline-flex h-12 min-h-12 w-full items-center justify-center rounded-[var(--dp-radius-lg)] border border-dp-border bg-dp-surface px-8 font-sans text-base text-dp-primary no-underline transition-colors hover:bg-dp-soft focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-dp-focus sm:w-auto"
           >
-            Website
+            Official website
+            <span className="sr-only"> (opens in a new tab)</span>
+          </a>
+        ) : null}
+        {restaurant.address ? (
+          <a
+            href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(`${restaurant.name}, ${restaurant.address}`)}`}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex min-h-12 w-full items-center justify-center rounded-[var(--dp-radius-lg)] px-4 font-sans text-sm font-semibold text-dp-primary no-underline hover:bg-dp-soft sm:w-auto"
+          >
+            Get directions
             <span className="sr-only"> (opens in a new tab)</span>
           </a>
         ) : null}
@@ -101,10 +140,9 @@ export function RestaurantIdentityContent({
         </p>
       ) : null}
 
-      <JourneyControls
+      <RestaurantJourneyActions
         restaurantSlug={restaurant.slug}
         restaurantName={restaurant.name}
-        stars={restaurant.stars}
       />
     </div>
   );

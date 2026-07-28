@@ -1,69 +1,103 @@
 import type { ReactNode } from "react";
 import Link from "next/link";
+import { MichelinDistinction } from "@/components/stitch/restaurant";
 import type { RestaurantDetailModel } from "./models";
-import { RestaurantLocationPreview } from "./RestaurantLocationPreview";
 
 type RestaurantFactsProps = {
   restaurant: RestaurantDetailModel;
 };
 
-function Fact({
-  label,
-  children,
-}: {
-  label: string;
-  children: ReactNode;
-}) {
-  return (
-    <div className="mb-6">
-      <h3 className="dp-label-caps mb-2 text-dp-ink-muted">{label}</h3>
-      <div className="font-sans text-base text-dp-ink">{children}</div>
-    </div>
-  );
-}
-
 /**
- * Factual details + location band (left side of Details / Google silhouette).
+ * Reliable first-party facts only. Provider-derived hours, rating, and phone
+ * stay in the bounded Google surface.
  */
 export function RestaurantFacts({ restaurant }: RestaurantFactsProps) {
+  const facts: Array<{ label: string; value: ReactNode }> = [
+    {
+      label: "Michelin distinction",
+      value: (
+        <MichelinDistinction
+          stars={restaurant.stars}
+          variant="row"
+          showLabel
+        />
+      ),
+    },
+    {
+      label: "Destination",
+      value: (
+        <Link
+          href={`/cities/${restaurant.citySlug}`}
+          className="text-dp-primary no-underline hover:underline"
+        >
+          {restaurant.locationLabel}
+        </Link>
+      ),
+    },
+  ];
+  if (restaurant.cuisine) {
+    facts.splice(1, 0, {
+      label: "Cuisine",
+      value: (
+        <Link
+          href={`/cuisines/${restaurant.cuisineSlug}`}
+          className="text-dp-primary no-underline hover:underline"
+        >
+          {restaurant.cuisine}
+        </Link>
+      ),
+    });
+  }
+  if (restaurant.price) {
+    facts.splice(2, 0, {
+      label: "Price",
+      value: <span>{restaurant.price}</span>,
+    });
+  }
+  if (restaurant.address) {
+    facts.push({
+      label: "Address",
+      value: (
+        <span className="whitespace-pre-line">{restaurant.address}</span>
+      ),
+    });
+  }
+  if (
+    restaurant.reservation.isDirectBooking &&
+    restaurant.reservation.providerLabel
+  ) {
+    facts.push({
+      label: "Reservations",
+      value: <span>{restaurant.reservation.providerLabel}</span>,
+    });
+  }
+
   return (
-    <div className="min-w-0 flex-1" data-restaurant-facts>
-      <h2 className="dp-headline-md mb-8 text-dp-ink">Details</h2>
-      <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
-        <div>
-          {restaurant.address ? (
-            <Fact label="Address">
-              <p className="whitespace-pre-line leading-relaxed">
-                {restaurant.address}
-              </p>
-            </Fact>
-          ) : null}
-          {restaurant.cuisine ? (
-            <Fact label="Cuisine">
-              <Link
-                href={`/cuisines/${restaurant.cuisineSlug}`}
-                className="text-dp-primary no-underline hover:underline"
-              >
-                {restaurant.cuisine}
-              </Link>
-            </Fact>
-          ) : null}
-          {restaurant.price ? (
-            <Fact label="Price">
-              <span>{restaurant.price}</span>
-            </Fact>
-          ) : null}
-          <Fact label="Location">
-            <Link
-              href={`/cities/${restaurant.citySlug}`}
-              className="text-dp-primary no-underline hover:underline"
-            >
-              {restaurant.locationLabel}
-            </Link>
-          </Fact>
-        </div>
-        <RestaurantLocationPreview restaurant={restaurant} />
-      </div>
-    </div>
+    <section
+      className="mb-[var(--dp-section)] border-t border-dp-border pt-[var(--dp-section)]"
+      aria-labelledby="restaurant-details-heading"
+      data-restaurant-facts
+    >
+      <p className="dp-label-caps text-dp-ink-muted">At a glance</p>
+      <h2
+        id="restaurant-details-heading"
+        className="dp-headline-md mt-2 text-dp-primary-deep"
+      >
+        Details
+      </h2>
+      <dl className="mt-7 grid min-w-0 grid-cols-1 border-t border-dp-border sm:grid-cols-2 lg:grid-cols-3">
+        {facts.map((fact) => (
+          <div
+            key={fact.label}
+            className="min-w-0 border-b border-dp-border py-5 sm:pr-6"
+          >
+            <dt className="dp-label-caps text-dp-ink-muted">{fact.label}</dt>
+            <dd className="mt-2 font-sans text-base leading-relaxed text-dp-ink">
+              {fact.value}
+            </dd>
+          </div>
+        ))}
+      </dl>
+    </section>
   );
 }

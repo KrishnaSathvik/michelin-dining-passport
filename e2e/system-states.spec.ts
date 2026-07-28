@@ -1,8 +1,8 @@
 import { test, expect, type Page, type Response } from "@playwright/test";
 
 async function assertDiningPassport(page: Page) {
-  await expect(page).toHaveTitle(/Dining Passport/i);
-  await expect(page.getByText("Dining Passport").first()).toBeVisible();
+  await expect(page).toHaveTitle(/Orellin/i);
+  await expect(page.getByText(/ORELLIN|Orellin/).first()).toBeVisible();
 }
 
 async function expectHttpNotFound(response: Response | null) {

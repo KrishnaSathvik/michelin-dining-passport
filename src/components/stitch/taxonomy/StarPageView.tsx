@@ -5,6 +5,7 @@ import { breadcrumbJsonLd } from "@/lib/seo/jsonld";
 import { DistinctionBentoGrid } from "./DistinctionBentoGrid";
 import type { StarPageViewModel } from "./models";
 import { OtherDistinctions } from "./OtherDistinctions";
+import { StarLevelExplainer } from "./StarLevelExplainer";
 import { TaxonomyHero } from "./TaxonomyHero";
 import { TaxonomyRestaurantSection } from "./TaxonomyRestaurantSection";
 
@@ -17,6 +18,7 @@ export function StarPageView({ model }: StarPageViewProps) {
     <div data-taxonomy="stars" data-stars={model.stars}>
       <JsonLd data={breadcrumbJsonLd(model.hero.breadcrumbs)} />
       <TaxonomyHero model={model.hero} />
+      <StarLevelExplainer stars={model.stars} explainer={model.explainer} />
       {model.stars === 3 ? (
         <DistinctionBentoGrid
           restaurants={model.restaurants}

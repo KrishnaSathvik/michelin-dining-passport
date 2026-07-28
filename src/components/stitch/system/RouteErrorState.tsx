@@ -29,7 +29,7 @@ export function RouteErrorState({ error, reset }: RouteErrorStateProps) {
       headingLevel={1}
       testId="route-error"
       title="Something went wrong."
-      description="This page could not be loaded. Your passport data on this device is unchanged. Try again, or continue browsing elsewhere."
+      description="This page could not be loaded. Your saved restaurants on this device are unchanged. Try again, or continue browsing elsewhere."
       primaryAction={{
         label: pending ? "Retrying…" : "Retry",
         onClick: () => {

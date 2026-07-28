@@ -7,7 +7,7 @@ import { createClient } from "@/lib/supabase/server";
 
 export const metadata = buildPageMetadata({
   title: "Account settings",
-  description: "Manage your Dining Passport account settings.",
+  description: "Manage your Orellin account settings.",
   path: "/account",
   noIndex: true,
 });

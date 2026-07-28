@@ -1,5 +1,18 @@
 export const PASSPORT_STORAGE_KEY = "mdp-passport";
-export const PASSPORT_SCHEMA_VERSION = 2 as const;
+export const PASSPORT_SCHEMA_VERSION = 3 as const;
+
+export type {
+  PassportBookmark,
+  RestaurantPlan,
+  RestaurantVisit,
+  RestaurantJourneyState,
+  PlanStatus,
+} from "./journey";
+import type {
+  PassportBookmark,
+  RestaurantPlan,
+  RestaurantVisit,
+} from "./journey";
 
 export type UserRestaurantRecord = {
   restaurantSlug: string;
@@ -48,7 +61,21 @@ export type PassportStoreV2 = {
   collections: Record<string, LocalCollection>;
 };
 
-export type PassportStore = PassportStoreV2;
+/**
+ * V3 keeps `userRestaurants` as a temporary compatibility projection for
+ * routes that have not moved to journey commands yet. New Passport work reads
+ * and writes the normalized record collections.
+ */
+export type PassportStoreV3 = {
+  version: 3;
+  bookmarks: Record<string, PassportBookmark>;
+  plans: Record<string, RestaurantPlan>;
+  visits: Record<string, RestaurantVisit>;
+  userRestaurants: Record<string, UserRestaurantRecord>;
+  collections: Record<string, LocalCollection>;
+};
+
+export type PassportStore = PassportStoreV3;
 
 export type PassportMetrics = {
   restaurantsVisited: number;

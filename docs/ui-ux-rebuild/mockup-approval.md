@@ -39,7 +39,7 @@ Do **not** ship:
 
 Keep the temporary independent text brand configurable via `siteConfig`. Use an original icon or no icon until final branding / trademark review.
 
-Acceptable temporary text: **Dining Passport** or plain **Michelin Dining Passport** (text only).
+Acceptable temporary text: **Orellin** or plain **Michelin Orellin** (text only).
 
 ### Data / counts
 

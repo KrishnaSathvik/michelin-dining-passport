@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
-import { CollectionDetailView } from "@/components/stitch/collections";
-import { getRestaurants } from "@/lib/data/restaurants";
+import {
+  CollectionDetailView,
+  readCollectionDetailProof,
+} from "@/components/stitch/collections";
 import { buildPageMetadata } from "@/lib/seo/metadata";
 
 type CollectionPageProps = {
@@ -14,15 +16,15 @@ export async function generateMetadata({
   const { slug } = await params;
   return buildPageMetadata({
     title: "Collection",
-    description: "A private local restaurant collection.",
+    description: "A private collection of saved restaurants.",
     path: `/collections/${slug}`,
     noIndex: true,
   });
 }
 
 /**
- * Collection detail — full Stitch composition (Phase 9).
- * Lookup remains by slug; Passport store is unchanged.
+ * Collection detail. Collections live only in the client Passport store, so the
+ * slug is resolved there rather than on the server.
  */
 export default async function CollectionPage({
   params,
@@ -30,19 +32,12 @@ export default async function CollectionPage({
 }: CollectionPageProps) {
   const { slug } = await params;
   const query = await searchParams;
-  const restaurants = getRestaurants();
-  const proof =
-    process.env.NODE_ENV !== "production"
-      ? typeof query.proof === "string"
-        ? (query.proof as "loading" | "empty" | "missing")
-        : undefined
-      : undefined;
 
+  // No Suspense wrapper: the view owns its own loading state.
   return (
     <CollectionDetailView
       slug={slug}
-      restaurants={restaurants}
-      proof={proof}
+      proof={readCollectionDetailProof(query.proof)}
     />
   );
 }

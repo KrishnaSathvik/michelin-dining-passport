@@ -10,7 +10,7 @@ import type {
 export const ACCOUNT_NAV: AccountNavItem[] = [
   { id: "profile", label: "Profile", href: "#profile" },
   { id: "security", label: "Security", href: "#security" },
-  { id: "sync", label: "Passport Sync", href: "#sync" },
+  { id: "sync", label: "My Restaurants Sync", href: "#sync" },
   { id: "data", label: "Data & Export", href: "#data" },
   {
     id: "danger",
@@ -25,7 +25,7 @@ export function toSyncPresentation(
 ): PassportSyncPresentation {
   if (migration.completed) {
     return {
-      headline: "Signed in — Passport syncs to your account when online.",
+      headline: "Signed in — My Restaurants syncs to your account when online.",
       detail: migration.completedAt
         ? `Local device migration completed (${migration.completedAt}).`
         : "Local device migration completed on this browser.",
@@ -40,7 +40,7 @@ export function toSyncPresentation(
     };
   }
   return {
-    headline: "Signed in — Passport changes sync to your account when online.",
+    headline: "Signed in — My Restaurants changes sync to your account when online.",
     detail:
       "Local migration has not completed on this device yet. It runs automatically after sign-in.",
     tone: "pending",

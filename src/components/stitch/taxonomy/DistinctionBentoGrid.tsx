@@ -2,6 +2,7 @@ import Link from "next/link";
 import { RestaurantDiscoveryCard } from "@/components/stitch/restaurant";
 import type { RestaurantCardModel } from "@/components/stitch/restaurant";
 import { PageContainer } from "@/components/stitch/PageContainer";
+import { getApprovedGooglePlaceId } from "@/lib/google-places/place-ids";
 
 type DistinctionBentoGridProps = {
   restaurants: RestaurantCardModel[];
@@ -10,8 +11,8 @@ type DistinctionBentoGridProps = {
 };
 
 /**
- * Editorial mosaic for three-star (and adaptable low-count) pages.
- * No ranking language — order follows the data loader sort.
+ * Uniform discovery grid for three-star (and adaptable low-count) pages.
+ * Every card is the same size; order follows the data loader sort.
  */
 export function DistinctionBentoGrid({
   restaurants,
@@ -28,8 +29,6 @@ export function DistinctionBentoGrid({
     );
   }
 
-  const [featured, secondary, ...rest] = restaurants;
-
   return (
     <section
       className="py-[var(--dp-section)]"
@@ -43,24 +42,18 @@ export function DistinctionBentoGrid({
         >
           Restaurants
         </h2>
-        <div className="grid gap-6 md:grid-cols-12">
-          {featured ? (
-            <div className="md:col-span-8">
-              <RestaurantDiscoveryCard model={featured} />
-            </div>
-          ) : null}
-          {secondary ? (
-            <div className="md:col-span-4">
-              <RestaurantDiscoveryCard model={secondary} />
-            </div>
-          ) : null}
-          {rest.map((card) => (
-            <div key={card.slug} className="md:col-span-3">
-              <RestaurantDiscoveryCard model={card} />
-            </div>
+        <ul className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          {restaurants.map((card, index) => (
+            <li key={card.slug}>
+              <RestaurantDiscoveryCard
+                model={card}
+                priority={index === 0}
+                placeId={getApprovedGooglePlaceId(card.slug)}
+              />
+            </li>
           ))}
           {remainingCount > 0 ? (
-            <div className="flex min-h-[16rem] flex-col items-start justify-center rounded-[var(--dp-radius-xl)] border border-dp-border bg-dp-soft p-6 md:col-span-3">
+            <li className="flex min-h-[16rem] flex-col items-start justify-center rounded-[var(--dp-radius-xl)] border border-dp-border bg-dp-soft p-6">
               <p className="font-display text-[22px] text-dp-primary">
                 View {remainingCount} more
               </p>
@@ -70,9 +63,9 @@ export function DistinctionBentoGrid({
               >
                 Open in Explore
               </Link>
-            </div>
+            </li>
           ) : null}
-        </div>
+        </ul>
       </PageContainer>
     </section>
   );

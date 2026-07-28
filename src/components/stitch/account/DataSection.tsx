@@ -21,7 +21,7 @@ export function DataSection({ onMessage }: DataSectionProps) {
     >
       <div className="flex flex-col gap-4" data-account-section-body="data">
         <p className="font-sans text-[15px] text-dp-ink-muted">
-          Export includes cloud Passport data for this account. Import is not
+          Export includes cloud My Restaurants data for this account. Import is not
           available from Account settings.
         </p>
         <div>

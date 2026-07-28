@@ -10,7 +10,7 @@ import { buildPageMetadata } from "@/lib/seo/metadata";
 
 export const metadata: Metadata = buildPageMetadata({
   title: "Terms",
-  description: "The terms that apply to using Dining Passport.",
+  description: "The terms that apply to using Orellin.",
   path: "/terms",
 });
 
@@ -23,7 +23,7 @@ export default function TermsPage() {
     >
       <ContentSection heading="Using the site">
         <p>
-          You may browse the atlas and keep a Passport for your own personal,
+          You may browse the atlas and keep My Restaurants for your own personal,
           non-commercial use. Please do not scrape the site in bulk, attempt to
           disrupt it, or use it to misrepresent the Michelin Guide.
         </p>
@@ -45,7 +45,7 @@ export default function TermsPage() {
       <ContentSection heading="Your account and your content">
         <p>
           You are responsible for keeping your sign-in details secure and for
-          what you store in your Passport. You keep ownership of your notes,
+          what you store in My Restaurants. You keep ownership of your notes,
           ratings, and collections; we store them so we can show them back to
           you, as described in <Link href="/privacy">Privacy</Link>.
         </p>

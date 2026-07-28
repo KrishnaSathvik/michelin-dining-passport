@@ -1,5 +1,5 @@
 export { AuthShell } from "./AuthShell";
-export { AuthBrandPanel } from "./AuthBrandPanel";
+export { AuthBrandPanel, AuthMobileBrandStrip } from "./AuthBrandPanel";
 export { AuthFormPanel } from "./AuthFormPanel";
 export { SignInForm } from "./SignInForm";
 export { SignUpForm } from "./SignUpForm";
