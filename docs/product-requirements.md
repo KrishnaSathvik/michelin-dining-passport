@@ -1,10 +1,12 @@
-# Product requirements — Michelin Dining Passport (working title)
+# Product requirements — Orellin
 
 ## Vision
 
 An independent discovery and personal tracking website for Michelin-starred restaurants.
 
-**Product feeling:** an editorial dining atlas combined with a personal restaurant passport.
+**Brand name:** Orellin  
+**Tagline:** The guide to remarkable dining.  
+**Product feeling:** a premium independent dining guide with a private My Restaurants tracking area.
 
 **Initial coverage:** all currently Michelin-starred restaurants in the United States (271 records as of the July 2026 workbook snapshot).
 

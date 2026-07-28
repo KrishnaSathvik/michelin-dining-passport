@@ -54,3 +54,6 @@ __pycache__/
 # Local reservation enrichment caches (regenerable)
 /data/reservation-page-cache.json
 /data/reservation-link-check-log.json
+
+# Google Places matching scratch (never commit provider tips)
+/data/.google-places-tmp/

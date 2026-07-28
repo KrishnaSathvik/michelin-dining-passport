@@ -1,0 +1,33 @@
+- generic [active] [ref=f4e1]:
+  - link "Skip to main content" [ref=f4e2] [cursor=pointer]:
+    - /url: "#main-content"
+  - banner [ref=f4e3]:
+    - generic [ref=f4e4]:
+      - link "Dining Passport" [ref=f4e6] [cursor=pointer]:
+        - /url: /
+      - generic [ref=f4e7]:
+        - link "Search restaurants" [ref=f4e8] [cursor=pointer]:
+          - /url: /explore
+        - button "Open menu" [ref=f4e12]
+  - main [ref=f4e15]
+  - contentinfo [ref=f4e32]:
+    - generic [ref=f4e33]:
+      - generic [ref=f4e34]:
+        - generic [ref=f4e35]:
+          - paragraph [ref=f4e36]: Dining Passport
+          - paragraph [ref=f4e37]: An independent atlas of Michelin-starred dining in the United States.
+          - paragraph [ref=f4e38]: Independent discovery platform. Not affiliated with the Michelin Guide.
+          - paragraph [ref=f4e39]: Dataset current through July 2026. 271 starred restaurants listed · roster 2026-07-16.
+        - navigation "Footer" [ref=f4e40]:
+          - link "Explore" [ref=f4e41] [cursor=pointer]:
+            - /url: /explore
+          - link "Map" [ref=f4e42] [cursor=pointer]:
+            - /url: /map
+          - link "Michelin Stars" [ref=f4e43] [cursor=pointer]:
+            - /url: /about-michelin-stars
+          - link "Passport" [ref=f4e44] [cursor=pointer]:
+            - /url: /passport
+          - link "Account" [ref=f4e45] [cursor=pointer]:
+            - /url: /account
+      - paragraph [ref=f4e46]: Independent platform. Not affiliated with, endorsed by, or connected to Michelin or the Michelin Guide. Michelin does not currently inspect every U.S. state. Absence from this atlas does not mean a region has been reviewed and found without stars.
+  - button "Open Next.js Dev Tools" [ref=f4e52] [cursor=pointer]

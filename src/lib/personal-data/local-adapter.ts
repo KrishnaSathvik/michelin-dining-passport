@@ -1,7 +1,9 @@
 import {
+  addRestaurantToCollection,
   clearPassportStore,
   createCollection,
   deleteCollection,
+  removeRestaurantFromCollection,
   exportPassportStore,
   importPassportStore,
   loadPassportStore,
@@ -48,6 +50,16 @@ export function createLocalPersonalDataRepository(): PersonalDataRepository {
     },
     async deleteCollection(id) {
       return persist(deleteCollection(current(), id));
+    },
+    async addRestaurantToCollection(collectionId, restaurantSlug) {
+      return persist(
+        addRestaurantToCollection(current(), collectionId, restaurantSlug),
+      );
+    },
+    async removeRestaurantFromCollection(collectionId, restaurantSlug) {
+      return persist(
+        removeRestaurantFromCollection(current(), collectionId, restaurantSlug),
+      );
     },
     async exportJson() {
       return exportPassportStore(current());

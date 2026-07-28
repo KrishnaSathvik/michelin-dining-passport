@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Forgot Password - Dining Passport</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Literata:wght@400;500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "error-container": "#ffdad6",
+                      "outline": "#717975",
+                      "on-error-container": "#93000a",
+                      "surface-container-low": "#f6f3f2",
+                      "secondary-container": "#ffc964",
+                      "background": "#fcf9f8",
+                      "on-surface": "#1c1b1b",
+                      "tertiary-fixed": "#ffdada",
+                      "inverse-surface": "#313030",
+                      "surface-container-lowest": "#ffffff",
+                      "on-primary-fixed": "#002118",
+                      "outline-variant": "#c0c8c3",
+                      "primary-fixed-dim": "#a5d0bf",
+                      "on-tertiary": "#ffffff",
+                      "surface-variant": "#e5e2e1",
+                      "secondary": "#7c5800",
+                      "on-secondary-container": "#765400",
+                      "on-background": "#1c1b1b",
+                      "tertiary": "#47000e",
+                      "on-surface-variant": "#414845",
+                      "surface-container": "#f0edec",
+                      "surface": "#fcf9f8",
+                      "on-tertiary-fixed": "#40000c",
+                      "primary-container": "#123b2f",
+                      "surface-dim": "#dcd9d9",
+                      "on-error": "#ffffff",
+                      "secondary-fixed": "#ffdea7",
+                      "on-secondary": "#ffffff",
+                      "surface-container-highest": "#e5e2e1",
+                      "inverse-on-surface": "#f3f0ef",
+                      "tertiary-fixed-dim": "#ffb3b5",
+                      "on-secondary-fixed": "#271900",
+                      "primary-fixed": "#c1ecda",
+                      "on-secondary-fixed-variant": "#5e4200",
+                      "tertiary-container": "#68111f",
+                      "secondary-fixed-dim": "#f3be5a",
+                      "on-tertiary-container": "#ef7881",
+                      "on-primary-container": "#7ca596",
+                      "error": "#ba1a1a",
+                      "primary": "#00251b",
+                      "on-primary-fixed-variant": "#274e41",
+                      "inverse-primary": "#a5d0bf",
+                      "surface-tint": "#3f6658",
+                      "surface-bright": "#fcf9f8",
+                      "on-tertiary-fixed-variant": "#822530",
+                      "surface-container-high": "#ebe7e7",
+                      "on-primary": "#ffffff"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.125rem",
+                      "lg": "0.25rem",
+                      "xl": "0.5rem",
+                      "full": "0.75rem"
+              },
+              "spacing": {
+                      "margin-mobile": "20px",
+                      "container-max-width": "1280px",
+                      "margin-desktop": "64px",
+                      "section-padding": "80px",
+                      "unit": "8px",
+                      "gutter": "24px"
+              },
+              "fontFamily": {
+                      "headline-sm": [
+                              "Literata"
+                      ],
+                      "meta-data": [
+                              "Inter"
+                      ],
+                      "headline-md": [
+                              "Literata"
+                      ],
+                      "display-lg-mobile": [
+                              "Literata"
+                      ],
+                      "body-md": [
+                              "Inter"
+                      ],
+                      "body-lg": [
+                              "Inter"
+                      ],
+                      "label-caps": [
+                              "Inter"
+                      ],
+                      "display-lg": [
+                              "Literata"
+                      ]
+              },
+              "fontSize": {
+                      "headline-sm": [
+                              "24px",
+                              {
+                                      "lineHeight": "1.3",
+                                      "fontWeight": "500"
+                              }
+                      ],
+                      "meta-data": [
+                              "14px",
+                              {
+                                      "lineHeight": "1.4",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "headline-md": [
+                              "32px",
+                              {
+                                      "lineHeight": "1.2",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "display-lg-mobile": [
+                              "36px",
+                              {
+                                      "lineHeight": "1.1",
+                                      "letterSpacing": "-0.01em",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "body-md": [
+                              "16px",
+                              {
+                                      "lineHeight": "1.5",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "body-lg": [
+                              "18px",
+                              {
+                                      "lineHeight": "1.6",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "label-caps": [
+                              "12px",
+                              {
+                                      "lineHeight": "1",
+                                      "letterSpacing": "0.08em",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "display-lg": [
+                              "48px",
+                              {
+                                      "lineHeight": "1.1",
+                                      "letterSpacing": "-0.02em",
+                                      "fontWeight": "400"
+                              }
+                      ]
+              }
+      },
+          },
+        }
+      </script>
+<style>
+          .material-symbols-outlined {
+            font-variation-settings:
+            'FILL' 0,
+            'wght' 400,
+            'GRAD' 0,
+            'opsz' 24
+          }
+      </style>
+</head>
+<body class="bg-background min-h-screen font-body-md text-on-surface antialiased flex overflow-hidden">
+<!-- Split Screen Shell -->
+<div class="flex w-full min-h-screen">
+<!-- Left Side: Image Canvas (Hidden on mobile/tablet) -->
+<div class="hidden lg:flex lg:flex-1 relative bg-surface-container-low overflow-hidden">
+<div class="absolute inset-0 bg-cover bg-center opacity-90 mix-blend-multiply blur-sm scale-105" data-alt="A blurred, high-resolution interior view of a luxury fine-dining restaurant. The scene features soft, warm ambient lighting reflecting off polished crystal glassware and dark mahogany tables. The atmosphere is sophisticated and quiet, embodying a 'star gold' and 'burgundy' premium aesthetic. The blur effect is elegant, focusing on the mood and rich textures rather than specific details, suitable for a refined editorial background." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCOGwI6VMMCelj2EDoUDFyGI2ZYuFg8MYpyKuknsTk0APPvK6PNDLfuqq3FkwCiz1Uzh8t_Y6UiULPkqW8TUFmpRrrGC1iIwib_Y2U4P1FEfqyE80OChVMpM9aiOIb_xnKZbZu3XfD3Of_g08viq4ZP1X2gtxJu35nW1nyBWPpIAAjzSD1CO1CnFOPTAUx2ZmcZzE0IHYONtQjh9glGwuH0LDTcnQRsL8uMIhlK0VFGqPdtIDGkf_k7CqhGfbACzCoBi7h2iR68aCQ')"></div>
+<!-- Gradient Overlay for readability if needed, though blur helps -->
+<div class="absolute inset-0 bg-gradient-to-t from-primary/30 to-transparent"></div>
+<div class="absolute inset-0 flex flex-col justify-between p-margin-desktop z-10">
+<div class="font-headline-md text-headline-md text-surface-container-lowest tracking-tight drop-shadow-md">
+                    Dining Passport
+                </div>
+</div>
+</div>
+<!-- Right Side: Auth Panel -->
+<div class="flex-1 lg:flex-none lg:w-[440px] bg-surface-container-lowest shadow-[-4px_0_24px_rgba(0,0,0,0.04)] flex flex-col justify-center relative z-20">
+<div class="w-full max-w-sm mx-auto px-margin-mobile sm:px-gutter">
+<!-- Mobile Logo (Visible only on small screens) -->
+<div class="lg:hidden font-headline-md text-headline-md text-primary tracking-tight mb-8">
+                    Dining Passport
+                </div>
+<!-- Main Form Area -->
+<div class="transition-opacity duration-300 opacity-100 block" id="forgot-form-view">
+<h1 class="font-headline-sm text-headline-sm text-on-surface mb-2">Forgot Password</h1>
+<p class="font-body-md text-body-md text-on-surface-variant mb-8">
+                        Enter the email address associated with your account, and we'll send you a link to reset your password.
+                    </p>
+<form class="space-y-6" onsubmit="event.preventDefault(); showSuccessState();">
+<div class="space-y-1">
+<label class="font-label-caps text-label-caps text-on-surface uppercase block" for="email">Email Address</label>
+<input class="w-full h-12 px-4 border border-outline-variant rounded bg-surface-container-lowest text-on-surface focus:ring-1 focus:ring-secondary focus:border-secondary transition-colors font-body-md text-body-md" id="email" name="email" placeholder="name@example.com" required="" type="email"/>
+</div>
+<div class="pt-2">
+<button class="w-full h-12 bg-primary text-on-primary rounded font-label-caps text-label-caps uppercase tracking-wider hover:bg-on-primary-fixed-variant transition-colors duration-200" type="submit">
+                                Send Reset Link
+                            </button>
+</div>
+</form>
+<div class="mt-8 text-center">
+<a class="font-meta-data text-meta-data text-on-surface-variant hover:text-secondary transition-colors inline-flex items-center gap-2" href="#">
+<span class="material-symbols-outlined text-[18px]">arrow_back</span>
+                            Return to sign in
+                        </a>
+</div>
+</div>
+<!-- Success State Area (Initially Hidden) -->
+<div class="transition-opacity duration-300 opacity-0 hidden" id="success-view">
+<div class="w-12 h-12 rounded-full bg-secondary-container flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-on-secondary-container text-2xl" style="font-variation-settings: 'FILL' 1;">mail</span>
+</div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface mb-2">Check your email</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mb-8">
+                        We've sent a password reset link to your email address. The link will expire in 24 hours.
+                    </p>
+<button class="w-full h-12 border border-outline-variant text-primary rounded font-label-caps text-label-caps uppercase tracking-wider hover:bg-surface-container-low transition-colors duration-200" onclick="resetForm()">
+                        Back to Sign In
+                    </button>
+<div class="mt-8 text-center">
+<p class="font-meta-data text-meta-data text-on-surface-variant">
+                            Didn't receive the email? <button class="text-secondary hover:underline ml-1" onclick="resetForm()">Try again</button>
+</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script>
+        function showSuccessState() {
+            const formView = document.getElementById('forgot-form-view');
+            const successView = document.getElementById('success-view');
+            
+            formView.classList.remove('opacity-100');
+            formView.classList.add('opacity-0');
+            
+            setTimeout(() => {
+                formView.classList.remove('block');
+                formView.classList.add('hidden');
+                
+                successView.classList.remove('hidden');
+                successView.classList.add('block');
+                
+                // Small delay to ensure display:block applies before animating opacity
+                setTimeout(() => {
+                    successView.classList.remove('opacity-0');
+                    successView.classList.add('opacity-100');
+                }, 50);
+            }, 300);
+        }
+
+        function resetForm() {
+            const formView = document.getElementById('forgot-form-view');
+            const successView = document.getElementById('success-view');
+            const emailInput = document.getElementById('email');
+            
+            successView.classList.remove('opacity-100');
+            successView.classList.add('opacity-0');
+            
+            setTimeout(() => {
+                successView.classList.remove('block');
+                successView.classList.add('hidden');
+                
+                formView.classList.remove('hidden');
+                formView.classList.add('block');
+                emailInput.value = ''; // clear input
+                
+                setTimeout(() => {
+                    formView.classList.remove('opacity-0');
+                    formView.classList.add('opacity-100');
+                }, 50);
+            }, 300);
+        }
+    </script>
+</body></html>

@@ -1,0 +1,297 @@
+- generic [active] [ref=f2e1]:
+  - link "Skip to main content" [ref=f2e2] [cursor=pointer]:
+    - /url: "#main-content"
+  - banner [ref=f2e3]:
+    - generic [ref=f2e4]:
+      - generic [ref=f2e5]:
+        - link "Dining Passport" [ref=f2e6] [cursor=pointer]:
+          - /url: /
+        - navigation "Primary" [ref=f2e7]:
+          - link "Explore" [ref=f2e8] [cursor=pointer]:
+            - /url: /explore
+          - link "Map" [ref=f2e9] [cursor=pointer]:
+            - /url: /map
+          - link "Michelin Stars" [ref=f2e10] [cursor=pointer]:
+            - /url: /about-michelin-stars
+          - link "Passport" [ref=f2e11] [cursor=pointer]:
+            - /url: /passport
+      - generic [ref=f2e12]:
+        - link "Search restaurants" [ref=f2e13] [cursor=pointer]:
+          - /url: /explore
+        - link "Sign in" [ref=f2e17] [cursor=pointer]:
+          - /url: /login?next=/account
+  - main [ref=f2e18]:
+    - generic [ref=f2e20]:
+      - navigation "Breadcrumb" [ref=f2e21]:
+        - list [ref=f2e22]:
+          - listitem [ref=f2e23]:
+            - link "Home" [ref=f2e24] [cursor=pointer]:
+              - /url: /
+          - listitem [ref=f2e25]:
+            - generic [ref=f2e26]: /
+            - link "Explore" [ref=f2e27] [cursor=pointer]:
+              - /url: /explore
+          - listitem [ref=f2e28]:
+            - generic [ref=f2e29]: /
+            - generic [ref=f2e30]: Benu
+      - region [ref=f2e31]:
+        - generic [ref=f2e33]:
+          - generic [ref=f2e34]:
+            - button "Open image 1 of 3 for Benu" [ref=f2e35]:
+              - img "Approved first-party restaurant media demonstration" [ref=f2e37]
+            - button "Open image 2 of 3 for Benu" [ref=f2e38]:
+              - img "Approved first-party restaurant media detail demonstration" [ref=f2e40]
+            - button "Open image 3 of 3 for Benu" [ref=f2e41]:
+              - img "Approved first-party restaurant media detail demonstration" [ref=f2e43]
+          - button "View all 3 photos" [ref=f2e44]
+        - generic [ref=f2e46]:
+          - link "3 Michelin stars Three Michelin Stars" [ref=f2e48] [cursor=pointer]:
+            - /url: /stars/3
+            - generic [ref=f2e49]:
+              - generic "Three Michelin Stars" [ref=f2e50]:
+                - generic [ref=f2e51]: ★★★
+                - generic [ref=f2e52]: 3 Michelin stars
+              - generic [ref=f2e53]: Three Michelin Stars
+          - heading "Benu" [level=1] [ref=f2e54]
+          - paragraph [ref=f2e55]:
+            - generic [ref=f2e56]: Asian
+            - generic [ref=f2e58]:
+              - generic [ref=f2e59]: •
+              - generic [ref=f2e60]: San Francisco, CA
+            - generic [ref=f2e61]:
+              - generic [ref=f2e62]: •
+              - generic [ref=f2e63]: $$$$
+          - paragraph [ref=f2e64]: 22 Hawthorne St., San Francisco, CA, 94105, USA
+          - link "Get directions (opens in a new tab)" [ref=f2e66] [cursor=pointer]:
+            - /url: https://www.google.com/maps/search/?api=1&query=Benu%2C%2022%20Hawthorne%20St.%2C%20San%20Francisco%2C%20CA%2C%2094105%2C%20USA
+            - text: Get directions
+            - generic [ref=f2e67]: (opens in a new tab)
+          - paragraph [ref=f2e68]:
+            - link "Michelin Guide reference (opens in a new tab)" [ref=f2e69] [cursor=pointer]:
+              - /url: https://guide.michelin.com/en/california/san-francisco/restaurant/benu
+              - text: Michelin Guide reference
+              - generic [ref=f2e70]: (opens in a new tab)
+          - generic [ref=f2e71]:
+            - paragraph [ref=f2e72]: Your Passport
+            - group "Passport actions for Benu" [ref=f2e73]:
+              - button "Benu is saved in your Passport" [pressed] [ref=f2e74]:
+                - generic [ref=f2e75]: ✓
+                - generic [ref=f2e76]: Saved
+              - button "Edit plan" [ref=f2e77]
+              - button "Record another visit" [ref=f2e78]
+            - generic [ref=f2e79]:
+              - paragraph [ref=f2e80]: Planned · Aug 12, 2026
+              - paragraph [ref=f2e81]: Visited twice · Last visited May 12, 2026
+      - region [ref=f2e82]:
+        - paragraph [ref=f2e83]: At a glance
+        - heading "Details" [level=2] [ref=f2e84]
+        - generic [ref=f2e85]:
+          - generic [ref=f2e86]:
+            - term [ref=f2e87]: Michelin distinction
+            - definition [ref=f2e88]:
+              - generic [ref=f2e89]:
+                - generic "Three Michelin Stars" [ref=f2e90]:
+                  - generic [ref=f2e91]: ★★★
+                  - generic [ref=f2e92]: 3 Michelin stars
+                - generic [ref=f2e93]: Three Michelin Stars
+          - generic [ref=f2e94]:
+            - term [ref=f2e95]: Cuisine
+            - definition [ref=f2e96]:
+              - link "Asian" [ref=f2e97] [cursor=pointer]:
+                - /url: /cuisines/asian
+          - generic [ref=f2e98]:
+            - term [ref=f2e99]: Price
+            - definition [ref=f2e100]: $$$$
+          - generic [ref=f2e101]:
+            - term [ref=f2e102]: Destination
+            - definition [ref=f2e103]:
+              - link "San Francisco, CA" [ref=f2e104] [cursor=pointer]:
+                - /url: /cities/san-francisco
+          - generic [ref=f2e105]:
+            - term [ref=f2e106]: Address
+            - definition [ref=f2e107]: 22 Hawthorne St., San Francisco, CA, 94105, USA
+      - region [ref=f2e108]:
+        - generic [ref=f2e109]:
+          - generic [ref=f2e110]:
+            - paragraph [ref=f2e111]: Find the table
+            - heading "Location" [level=2] [ref=f2e112]
+            - paragraph [ref=f2e113]: 22 Hawthorne St., San Francisco, CA, 94105, USA
+          - generic [ref=f2e114]:
+            - link "Get directions (opens in a new tab)" [ref=f2e115] [cursor=pointer]:
+              - /url: https://www.google.com/maps/search/?api=1&query=Benu%2C%2022%20Hawthorne%20St.%2C%20San%20Francisco%2C%20CA%2C%2094105%2C%20USA%2C%20San%20Francisco%2C%20CA
+              - text: Get directions
+              - generic [ref=f2e116]: (opens in a new tab)
+            - link "Open full map" [ref=f2e117] [cursor=pointer]:
+              - /url: /map?selected=benu-san-francisco-ca
+        - paragraph [ref=f2e118]: Interactive map showing Benu at 22 Hawthorne St., San Francisco, CA, 94105, USA.
+        - status "Restaurant map ready to load" [ref=f2e120]
+      - region [ref=f2e121]:
+        - generic [ref=f2e122]:
+          - generic [ref=f2e123]: i
+          - heading "Current place information from Google" [level=2] [ref=f2e124]
+        - paragraph [ref=f2e125]: Current rating, hours, and phone information are provided by Google and may change. Google ratings remain separate from Michelin distinctions and from your private Passport.
+        - status "Loading Google place details" [ref=f2e128]:
+          - generic [ref=f2e135]: Loading Google place details…
+      - region [ref=f2e136]:
+        - generic [ref=f2e137]:
+          - generic [ref=f2e138]:
+            - paragraph [ref=f2e139]: Private dining record
+            - heading "Your Passport" [level=2] [ref=f2e140]
+          - paragraph [ref=f2e141]: Stored on this device · Private to your Passport
+        - generic [ref=f2e142]:
+          - article [ref=f2e143]:
+            - paragraph [ref=f2e144]: Upcoming plan
+            - paragraph [ref=f2e145]: Planned · Aug 12, 2026
+            - paragraph [ref=f2e146]: Time · 19:30
+            - paragraph [ref=f2e147]: Reservation via Tock · Reference saved privately
+          - article [ref=f2e148]:
+            - paragraph [ref=f2e149]: Visit history
+            - paragraph [ref=f2e150]: Visited twice
+            - paragraph [ref=f2e151]: Last visited · May 12, 2026
+            - paragraph [ref=f2e152]: Favorite dishes · Quail, thousand-year-old egg
+            - generic [ref=f2e153]:
+              - generic [ref=f2e154]: Would return
+              - generic [ref=f2e155]: Personal favorite
+            - generic [ref=f2e156]:
+              - button "Edit latest visit" [ref=f2e157]
+              - button "Add another visit" [ref=f2e158]
+      - region [ref=f2e159]:
+        - heading "More Asian restaurants" [level=2] [ref=f2e160]
+        - article [ref=f2e162]:
+          - generic [ref=f2e163]:
+            - link "Open Kato" [ref=f2e164] [cursor=pointer]:
+              - /url: /restaurants/kato-los-angeles-ca
+              - img "Kato in Los Angeles, CA" [ref=f2e165]:
+                - generic [ref=f2e166]:
+                  - generic [ref=f2e167]:
+                    - paragraph [ref=f2e168]: KA
+                    - generic "Two Michelin Stars" [ref=f2e169]:
+                      - generic [ref=f2e170]: ★★
+                      - generic [ref=f2e171]: 2 Michelin stars
+                  - generic [ref=f2e172]:
+                    - paragraph [ref=f2e173]: Kato
+                    - paragraph [ref=f2e174]: Los Angeles, CA
+            - button "Save to passport" [ref=f2e176]:
+              - generic [ref=f2e177]: ♡
+              - generic [ref=f2e178]: Not saved
+          - generic [ref=f2e179]:
+            - generic [ref=f2e180]:
+              - generic "Two Michelin Stars" [ref=f2e181]:
+                - generic [ref=f2e182]: ★★
+                - generic [ref=f2e183]: 2 Michelin stars
+              - generic [ref=f2e184]: Two Michelin Stars
+            - heading [level=3] [ref=f2e185]:
+              - link "Kato" [ref=f2e186] [cursor=pointer]:
+                - /url: /restaurants/kato-los-angeles-ca
+            - paragraph [ref=f2e187]:
+              - generic [ref=f2e188]: Asian
+              - generic [ref=f2e189]:
+                - generic [ref=f2e190]: ·
+                - text: Los Angeles, CA
+              - generic [ref=f2e191]:
+                - generic [ref=f2e192]: ·
+                - text: $$$$
+            - link "Open details" [ref=f2e193] [cursor=pointer]:
+              - /url: /restaurants/kato-los-angeles-ca
+      - region [ref=f2e194]:
+        - heading "More restaurants in San Francisco" [level=2] [ref=f2e195]
+        - paragraph [ref=f2e196]: Continue exploring Michelin-starred restaurants in the same destination.
+        - generic [ref=f2e197]:
+          - article [ref=f2e198]:
+            - generic [ref=f2e199]:
+              - generic "Three Michelin Stars" [ref=f2e201]:
+                - generic [ref=f2e202]: ★★★
+                - generic [ref=f2e203]: 3 Michelin stars
+              - heading [level=3] [ref=f2e204]:
+                - link "Atelier Crenn" [ref=f2e205] [cursor=pointer]:
+                  - /url: /restaurants/atelier-crenn-san-francisco-ca
+              - paragraph [ref=f2e206]:
+                - generic [ref=f2e207]: Contemporary
+                - generic [ref=f2e208]:
+                  - generic [ref=f2e209]: ·
+                  - text: San Francisco, CA
+            - generic [ref=f2e210]:
+              - button "Save to passport" [ref=f2e211]:
+                - generic [ref=f2e212]: ♡
+                - generic [ref=f2e213]: Not saved
+              - link "Open details" [ref=f2e214] [cursor=pointer]:
+                - /url: /restaurants/atelier-crenn-san-francisco-ca
+          - article [ref=f2e215]:
+            - generic [ref=f2e216]:
+              - generic "Three Michelin Stars" [ref=f2e218]:
+                - generic [ref=f2e219]: ★★★
+                - generic [ref=f2e220]: 3 Michelin stars
+              - heading [level=3] [ref=f2e221]:
+                - link "Californios" [ref=f2e222] [cursor=pointer]:
+                  - /url: /restaurants/californios-san-francisco-ca
+              - paragraph [ref=f2e223]:
+                - generic [ref=f2e224]: Mexican
+                - generic [ref=f2e225]:
+                  - generic [ref=f2e226]: ·
+                  - text: San Francisco, CA
+            - generic [ref=f2e227]:
+              - button "Save to passport" [ref=f2e228]:
+                - generic [ref=f2e229]: ♡
+                - generic [ref=f2e230]: Not saved
+              - link "Open details" [ref=f2e231] [cursor=pointer]:
+                - /url: /restaurants/californios-san-francisco-ca
+          - article [ref=f2e232]:
+            - generic [ref=f2e233]:
+              - generic "Three Michelin Stars" [ref=f2e235]:
+                - generic [ref=f2e236]: ★★★
+                - generic [ref=f2e237]: 3 Michelin stars
+              - heading [level=3] [ref=f2e238]:
+                - link "Quince" [ref=f2e239] [cursor=pointer]:
+                  - /url: /restaurants/quince-san-francisco-ca
+              - paragraph [ref=f2e240]:
+                - generic [ref=f2e241]: Contemporary
+                - generic [ref=f2e242]:
+                  - generic [ref=f2e243]: ·
+                  - text: San Francisco, CA
+            - generic [ref=f2e244]:
+              - button "Save to passport" [ref=f2e245]:
+                - generic [ref=f2e246]: ♡
+                - generic [ref=f2e247]: Not saved
+              - link "Open details" [ref=f2e248] [cursor=pointer]:
+                - /url: /restaurants/quince-san-francisco-ca
+          - article [ref=f2e249]:
+            - generic [ref=f2e250]:
+              - generic "Two Michelin Stars" [ref=f2e252]:
+                - generic [ref=f2e253]: ★★
+                - generic [ref=f2e254]: 2 Michelin stars
+              - heading [level=3] [ref=f2e255]:
+                - link "Acquerello" [ref=f2e256] [cursor=pointer]:
+                  - /url: /restaurants/acquerello-san-francisco-ca
+              - paragraph [ref=f2e257]:
+                - generic [ref=f2e258]: Italian
+                - generic [ref=f2e259]:
+                  - generic [ref=f2e260]: ·
+                  - text: San Francisco, CA
+            - generic [ref=f2e261]:
+              - button "Save to passport" [ref=f2e262]:
+                - generic [ref=f2e263]: ♡
+                - generic [ref=f2e264]: Not saved
+              - link "Open details" [ref=f2e265] [cursor=pointer]:
+                - /url: /restaurants/acquerello-san-francisco-ca
+  - contentinfo [ref=f2e266]:
+    - generic [ref=f2e267]:
+      - generic [ref=f2e268]:
+        - generic [ref=f2e269]:
+          - paragraph [ref=f2e270]: Dining Passport
+          - paragraph [ref=f2e271]: An independent atlas of Michelin-starred dining in the United States.
+          - paragraph [ref=f2e272]: Dining Passport is an independent discovery platform and is not affiliated with the Michelin Guide.
+          - paragraph [ref=f2e273]: Explore 271 Michelin-starred restaurants across 68 U.S. cities.
+        - navigation "Footer" [ref=f2e274]:
+          - link "Explore" [ref=f2e275] [cursor=pointer]:
+            - /url: /explore
+          - link "Map" [ref=f2e276] [cursor=pointer]:
+            - /url: /map
+          - link "Michelin Stars" [ref=f2e277] [cursor=pointer]:
+            - /url: /about-michelin-stars
+          - link "Passport" [ref=f2e278] [cursor=pointer]:
+            - /url: /passport
+          - link "Account" [ref=f2e279] [cursor=pointer]:
+            - /url: /account
+      - paragraph [ref=f2e280]: Independent platform. Not affiliated with, endorsed by, or connected to Michelin or the Michelin Guide. Michelin does not currently inspect every U.S. state. Absence from this atlas does not mean a region has been reviewed and found without stars.
+  - button "Open Next.js Dev Tools" [ref=f2e286] [cursor=pointer]
+  - alert [ref=f2e290]

@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+
+<html class="h-full" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Dining Passport - Map Discovery</title>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Literata:opsz,wght@7..72,400;7..72,500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "secondary": "#7c5800",
+                        "outline": "#717975",
+                        "on-tertiary": "#ffffff",
+                        "on-tertiary-fixed": "#40000c",
+                        "inverse-on-surface": "#f3f0ef",
+                        "primary": "#00251b",
+                        "surface-container-highest": "#e5e2e1",
+                        "on-surface": "#1c1b1b",
+                        "secondary-fixed-dim": "#f3be5a",
+                        "tertiary": "#47000e",
+                        "tertiary-fixed": "#ffdada",
+                        "on-primary-fixed": "#002118",
+                        "inverse-surface": "#313030",
+                        "surface-container-low": "#f6f3f2",
+                        "secondary-container": "#ffc964",
+                        "error": "#ba1a1a",
+                        "on-secondary": "#ffffff",
+                        "surface-dim": "#dcd9d9",
+                        "surface-tint": "#3f6658",
+                        "surface-container": "#f0edec",
+                        "on-secondary-fixed": "#271900",
+                        "on-primary-container": "#7ca596",
+                        "tertiary-container": "#68111f",
+                        "outline-variant": "#c0c8c3",
+                        "primary-container": "#123b2f",
+                        "surface-variant": "#e5e2e1",
+                        "on-secondary-fixed-variant": "#5e4200",
+                        "surface": "#fcf9f8",
+                        "primary-fixed-dim": "#a5d0bf",
+                        "primary-fixed": "#c1ecda",
+                        "surface-container-lowest": "#ffffff",
+                        "background": "#fcf9f8",
+                        "on-error-container": "#93000a",
+                        "on-primary": "#ffffff",
+                        "surface-container-high": "#ebe7e7",
+                        "on-surface-variant": "#414845",
+                        "error-container": "#ffdad6",
+                        "secondary-fixed": "#ffdea7",
+                        "surface-bright": "#fcf9f8",
+                        "on-secondary-container": "#765400",
+                        "inverse-primary": "#a5d0bf",
+                        "on-tertiary-container": "#ef7881",
+                        "on-error": "#ffffff",
+                        "on-tertiary-fixed-variant": "#822530",
+                        "on-primary-fixed-variant": "#274e41",
+                        "tertiary-fixed-dim": "#ffb3b5",
+                        "on-background": "#1c1b1b"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "margin-mobile": "20px",
+                        "section-padding": "80px",
+                        "gutter": "24px",
+                        "margin-desktop": "64px",
+                        "unit": "8px",
+                        "container-max-width": "1280px"
+                    },
+                    "fontFamily": {
+                        "body-lg": ["Inter"],
+                        "label-caps": ["Inter"],
+                        "body-md": ["Inter"],
+                        "headline-md": ["Literata"],
+                        "display-lg-mobile": ["Literata"],
+                        "headline-sm": ["Literata"],
+                        "display-lg": ["Literata"],
+                        "meta-data": ["Inter"]
+                    },
+                    "fontSize": {
+                        "body-lg": ["18px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "label-caps": ["12px", { "lineHeight": "1", "letterSpacing": "0.08em", "fontWeight": "600" }],
+                        "body-md": ["16px", { "lineHeight": "1.5", "fontWeight": "400" }],
+                        "headline-md": ["32px", { "lineHeight": "1.2", "fontWeight": "400" }],
+                        "display-lg-mobile": ["36px", { "lineHeight": "1.1", "letterSpacing": "-0.01em", "fontWeight": "400" }],
+                        "headline-sm": ["24px", { "lineHeight": "1.3", "fontWeight": "500" }],
+                        "display-lg": ["48px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "400" }],
+                        "meta-data": ["14px", { "lineHeight": "1.4", "fontWeight": "400" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .map-marker {
+            transition: all 0.2s ease;
+        }
+        .map-marker:hover, .map-marker.active {
+            transform: scale(1.2);
+            z-index: 10;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background h-full flex flex-col font-body-md overflow-hidden">
+<!-- TopNavBar -->
+<header class="bg-surface dark:bg-surface fixed top-0 w-full h-[72px] z-50 border-b border-outline-variant dark:border-outline">
+<div class="flex justify-between items-center px-margin-desktop w-full max-w-container-max-width mx-auto h-full">
+<div class="font-headline-sm text-headline-sm font-bold text-primary dark:text-primary-fixed">
+                Dining Passport
+            </div>
+<nav class="hidden md:flex gap-gutter items-center h-full">
+<a class="text-on-surface-variant dark:text-on-surface-variant hover:text-primary dark:hover:text-primary-fixed hover:text-secondary dark:hover:text-secondary-fixed transition-colors duration-200 font-body-md text-body-md h-full flex items-center px-2" href="#">Explore</a>
+<a class="text-primary dark:text-primary-fixed border-b-2 border-secondary font-semibold font-body-md text-body-md h-full flex items-center px-2 opacity-80 transition-opacity" href="#">Map</a>
+<a class="text-on-surface-variant dark:text-on-surface-variant hover:text-primary dark:hover:text-primary-fixed hover:text-secondary dark:hover:text-secondary-fixed transition-colors duration-200 font-body-md text-body-md h-full flex items-center px-2" href="#">Michelin Stars</a>
+<a class="text-on-surface-variant dark:text-on-surface-variant hover:text-primary dark:hover:text-primary-fixed hover:text-secondary dark:hover:text-secondary-fixed transition-colors duration-200 font-body-md text-body-md h-full flex items-center px-2" href="#">Passport</a>
+</nav>
+<div class="flex items-center">
+<button class="text-on-surface-variant hover:text-primary transition-colors p-2">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+</button>
+</div>
+</div>
+</header>
+<!-- Main Content: Split View -->
+<main class="flex-1 flex pt-[72px] h-full">
+<!-- Left Panel: List & Filters -->
+<aside class="w-full md:w-[400px] flex-shrink-0 bg-surface-container-lowest border-r border-outline-variant flex flex-col h-full z-10 shadow-[4px_0_24px_rgba(0,0,0,0.02)]">
+<!-- Filters & Search -->
+<div class="p-gutter border-b border-outline-variant bg-surface-container-lowest sticky top-0 z-20">
+<div class="relative mb-4">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline">search</span>
+<input class="w-full h-12 pl-10 pr-4 bg-surface-container-low border border-outline-variant rounded focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary font-body-md text-on-surface" placeholder="Search restaurants or cities..." type="text"/>
+</div>
+<div class="flex gap-2 overflow-x-auto pb-2 scrollbar-hide">
+<button class="px-4 py-2 border border-outline-variant rounded-full text-meta-data font-meta-data text-on-surface hover:bg-surface-container transition-colors whitespace-nowrap">State / Region <span class="material-symbols-outlined text-[16px] ml-1 align-middle">expand_more</span></button>
+<button class="px-4 py-2 border border-outline-variant rounded-full text-meta-data font-meta-data text-on-surface hover:bg-surface-container transition-colors whitespace-nowrap bg-primary-fixed-dim text-on-primary-fixed border-transparent">3 Stars</button>
+<button class="px-4 py-2 border border-outline-variant rounded-full text-meta-data font-meta-data text-on-surface hover:bg-surface-container transition-colors whitespace-nowrap">Cuisine <span class="material-symbols-outlined text-[16px] ml-1 align-middle">expand_more</span></button>
+</div>
+</div>
+<!-- List -->
+<div class="flex-1 overflow-y-auto p-4 space-y-4">
+<!-- Card 1 (Active) -->
+<div class="group relative bg-surface-container-lowest border border-outline-variant rounded-lg overflow-hidden cursor-pointer hover:shadow-[0_4px_20px_rgba(0,0,0,0.04)] transition-all duration-300 ring-1 ring-primary">
+<div class="flex h-[120px]">
+<div class="w-1/3 h-full">
+<img class="w-full h-full object-cover" data-alt="A beautifully plated minimalist Korean fine dining dish, featuring precise geometric cuts of raw fish garnished with tiny delicate micro-greens and a vibrant, translucent orange sauce. The setting is bright, modern, and high-key, photographed with a shallow depth of field against a pristine white ceramic plate. The overall aesthetic is editorial, quiet luxury, and expertly curated." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDvxd9TlRqtStb-kgazB5Ue6QKoipNmOH4yj87Q-saWuzSS70raNR4LQSYRf5IOR6qFFVRrfH20fNQXLOw3BuTVbNIpQNQUaZ4Umxg8JDwLhQIgICCIq0QJ2L3GA_xvBWpMQoQ_je0ho7vhLa6HTrW5ljHkgYO0LV9eRJ9Gdxog5ngMbkoHhDtPgSCscAZg83VmRkfZ9__F200f5QZ7VaAaSSugFCcYSlPdC37JclN6AMXhLAVHjM-kgAMYxX3_ee76z0OsA2Se1gs"/>
+</div>
+<div class="w-2/3 p-4 flex flex-col justify-between">
+<div>
+<div class="flex justify-between items-start mb-1">
+<h3 class="font-headline-sm text-body-lg font-medium text-on-surface">Atomix</h3>
+<span class="material-symbols-outlined text-secondary-fixed-dim text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="font-meta-data text-label-caps text-on-surface-variant uppercase tracking-wider">Korean • New York, NY</p>
+</div>
+<div class="flex items-center gap-2">
+<span class="inline-flex items-center px-2 py-1 rounded bg-secondary-fixed text-on-secondary-fixed font-meta-data text-[11px] font-medium tracking-wide">
+                                    2 Stars
+                                </span>
+<span class="text-meta-data font-meta-data text-outline">$$$$</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="group relative bg-surface-container-lowest border border-outline-variant rounded-lg overflow-hidden cursor-pointer hover:shadow-[0_4px_20px_rgba(0,0,0,0.04)] transition-all duration-300">
+<div class="flex h-[120px]">
+<div class="w-1/3 h-full">
+<img class="w-full h-full object-cover" data-alt="An exquisite minimalist tasting menu course, showcasing a perfectly seared scallop resting in a pool of clear, deeply golden broth. Small drops of vibrant green chive oil dot the surface. The scene is illuminated by soft, natural light, emphasizing the textures of the ingredients. The aesthetic is extremely refined, evoking a sense of quiet luxury and culinary mastery." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCP8NhIczJ6Xa1XgAXq8abBh0LPL-5IWxge9tKD-s5A9I-LKaKPzPtLrGWtAO34PV74qDp1RWU6rxmPpSeL_tubEMNgJO8pWd8Bq4Y0O8yDriWp9ZU8i8oTx2OZ98pQiDkCgb2qq-eyQPagC_L6uirVyW5-BlGjZulnRP7aWIYG_21wuV-k3mjVyxy4_TYrvHr4cNXloEPLnazNwiXPO2k4wiBudn1rc6EIpDWBQJLfWt7UOIqWpTj5AomGdB-260lLsFaajsKhjFQ"/>
+</div>
+<div class="w-2/3 p-4 flex flex-col justify-between">
+<div>
+<div class="flex justify-between items-start mb-1">
+<h3 class="font-headline-sm text-body-lg font-medium text-on-surface">Benu</h3>
+<span class="material-symbols-outlined text-outline-variant text-[18px]">favorite</span>
+</div>
+<p class="font-meta-data text-label-caps text-on-surface-variant uppercase tracking-wider">Contemporary • San Francisco, CA</p>
+</div>
+<div class="flex items-center gap-2">
+<span class="inline-flex items-center px-2 py-1 rounded bg-secondary-fixed text-on-secondary-fixed font-meta-data text-[11px] font-medium tracking-wide">
+                                    3 Stars
+                                </span>
+<span class="text-meta-data font-meta-data text-outline">$$$$</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="group relative bg-surface-container-lowest border border-outline-variant rounded-lg overflow-hidden cursor-pointer hover:shadow-[0_4px_20px_rgba(0,0,0,0.04)] transition-all duration-300">
+<div class="flex h-[120px]">
+<div class="w-1/3 h-full">
+<img class="w-full h-full object-cover" data-alt="A rustic yet highly elegant presentation of farm-to-table vegetables, featuring miniature glazed carrots and vibrant green asparagus tips arranged meticulously on a textured, earthy stoneware plate. The lighting is bright but soft, suggesting early morning sunlight in a high-end countryside retreat. The visual style is editorial, focusing on natural beauty, sustainability, and premium quality." src="https://lh3.googleusercontent.com/aida-public/AB6AXuANb-VYJJ-Fe478C5OwhTtI9fErHjo3KlEnrKzPuSvT-yvvMEidKTtFI-tycYEcm8RoFykW-QMs9muYo4dHIie5afzAF3JtzoiKAgv7O5w54dkAgqYw4gqxA8HSqR7PIcAr1cUW90RvcA7Q4PbMFPicC_Ypy4V-AU2m4miggxGy2mIHGihgHiUpnjkH0O5DVMhd3v_Cuq-9L86dvrjLrljNQ7OrhXqkBLchL776ZudrRV1DrOcK909cHSyPN0-DKI8sCKIWWUAuCqY"/>
+</div>
+<div class="w-2/3 p-4 flex flex-col justify-between">
+<div>
+<div class="flex justify-between items-start mb-1">
+<h3 class="font-headline-sm text-body-lg font-medium text-on-surface truncate">Blue Hill at Stone Barns</h3>
+<span class="material-symbols-outlined text-outline-variant text-[18px]">favorite</span>
+</div>
+<p class="font-meta-data text-label-caps text-on-surface-variant uppercase tracking-wider truncate">American • Tarrytown, NY</p>
+</div>
+<div class="flex items-center gap-2">
+<span class="inline-flex items-center px-2 py-1 rounded bg-secondary-fixed text-on-secondary-fixed font-meta-data text-[11px] font-medium tracking-wide">
+                                    2 Stars
+                                </span>
+<span class="inline-flex items-center px-2 py-1 rounded bg-[#e8f5e9] text-[#2e7d32] font-meta-data text-[11px] font-medium tracking-wide gap-1">
+<span class="material-symbols-outlined text-[12px]" style="font-variation-settings: 'FILL' 1;">eco</span> Green
+                                </span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</aside>
+<!-- Right Panel: Map Area -->
+<section class="flex-1 relative bg-surface-dim overflow-hidden hidden md:block">
+<!-- Simulated Map Background -->
+<div class="absolute inset-0 opacity-80" data-alt="A highly stylized, minimalist digital map interface of the United States. The color palette is extremely desaturated, utilizing soft tonal greys and off-whites typical of high-end editorial design. There are very faint, thin lines indicating major highways and state borders. The aesthetic is clean, modern, and unobtrusive, serving as a subtle backdrop for discovering premium dining locations." data-location="United States" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCyEaaANaCcD7aWvdDztAe1JcssyWnsLkxEjEGbNH0QRFaBTQpuNN7MtEEMkSpjWo1sp6PtqxHRifZ7xFH1sJZm5Uvp5iJ__BUVN12gl2U57iDBvlqKSwPiBCa0PE1aFWwx_dxopfu_IcZQT1qXJ16GpHmdqpk1-WkjMw8R8ZeroU56Xgh-K6lQn32LtiJojrZXCny2cLi0LDFIe4d4KY-dxQGr-loudAUjZIysJoawLuxSm-ilqUTsXN7TuklVnu26l4Cf65lPxgk')"></div>
+<!-- Map Overlay Controls -->
+<div class="absolute right-margin-desktop top-margin-desktop flex flex-col gap-2 z-20">
+<button class="w-12 h-12 bg-surface-container-lowest border border-outline-variant rounded-lg shadow-sm flex items-center justify-center text-on-surface hover:bg-surface-container transition-colors">
+<span class="material-symbols-outlined">add</span>
+</button>
+<button class="w-12 h-12 bg-surface-container-lowest border border-outline-variant rounded-lg shadow-sm flex items-center justify-center text-on-surface hover:bg-surface-container transition-colors">
+<span class="material-symbols-outlined">remove</span>
+</button>
+<button class="w-12 h-12 mt-4 bg-surface-container-lowest border border-outline-variant rounded-lg shadow-sm flex items-center justify-center text-on-surface hover:bg-surface-container transition-colors">
+<span class="material-symbols-outlined">my_location</span>
+</button>
+</div>
+<!-- Markers -->
+<!-- NY Marker (Active) -->
+<div class="absolute top-[35%] right-[25%] map-marker active cursor-pointer z-30">
+<div class="w-4 h-4 bg-primary rounded-full border-2 border-surface-container-lowest shadow-md relative">
+<div class="absolute -inset-2 bg-primary/20 rounded-full animate-ping"></div>
+</div>
+<!-- Popup Overlay -->
+<div class="absolute bottom-full left-1/2 -translate-x-1/2 mb-3 w-[240px] bg-surface-container-lowest rounded-lg shadow-[0_8px_32px_rgba(0,0,0,0.1)] border border-outline-variant p-4 pointer-events-auto">
+<div class="absolute -bottom-2 left-1/2 -translate-x-1/2 w-4 h-4 bg-surface-container-lowest border-b border-r border-outline-variant rotate-45"></div>
+<div class="relative z-10 flex flex-col gap-2">
+<div class="flex justify-between items-start">
+<h4 class="font-headline-sm text-body-lg font-medium text-on-surface leading-tight">Atomix</h4>
+<button class="text-outline hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</div>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-secondary-fixed-dim text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-secondary-fixed-dim text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-meta-data text-meta-data text-on-surface-variant ml-1">New York</span>
+</div>
+<button class="mt-2 w-full h-8 bg-primary text-on-primary font-body-md text-[13px] font-medium rounded hover:bg-primary-container transition-colors">
+                            View Details
+                        </button>
+</div>
+</div>
+</div>
+<!-- SF Marker -->
+<div class="absolute top-[45%] left-[15%] map-marker cursor-pointer z-20">
+<div class="w-3 h-3 bg-primary-fixed-dim rounded-full border-2 border-surface-container-lowest shadow-sm hover:bg-primary transition-colors"></div>
+</div>
+<!-- Chicago Marker -->
+<div class="absolute top-[38%] left-[60%] map-marker cursor-pointer z-20">
+<div class="w-3 h-3 bg-primary-fixed-dim rounded-full border-2 border-surface-container-lowest shadow-sm hover:bg-primary transition-colors"></div>
+</div>
+<!-- DC Marker -->
+<div class="absolute top-[42%] right-[28%] map-marker cursor-pointer z-20">
+<div class="w-3 h-3 bg-primary-fixed-dim rounded-full border-2 border-surface-container-lowest shadow-sm hover:bg-primary transition-colors"></div>
+</div>
+</section>
+</main>
+</body></html>

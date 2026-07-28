@@ -2,7 +2,7 @@
 
 import "maplibre-gl/dist/maplibre-gl.css";
 
-import { useEffect, useMemo, useRef, useState } from "react";
+import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import MapGL, {
   GeolocateControl,
   Layer,
@@ -11,7 +11,11 @@ import MapGL, {
   Source,
   type MapRef,
 } from "react-map-gl/maplibre";
-import type { MapLayerMouseEvent, Map as MaplibreMap } from "maplibre-gl";
+import type {
+  GeoJSONSource,
+  MapLayerMouseEvent,
+  Map as MaplibreMap,
+} from "maplibre-gl";
 import { mapConfig } from "@/config/map";
 import type { MappableRestaurant } from "@/lib/data/geocodes";
 import { offsetSharedCoordinates } from "@/lib/data/geocodes";
@@ -85,22 +89,36 @@ export function MapCanvas({
     [plotted, selectedSlug],
   );
 
+  /** Frame all pins. Only meaningful once the map is loaded and sized —
+      fitting before the container has real dimensions computes a bad zoom. */
+  const fitToPlotted = useCallback(
+    (map: MaplibreMap, animate: boolean) => {
+      if (plotted.length === 0) return;
+      const lngs = plotted.map((item) => item.longitude);
+      const lats = plotted.map((item) => item.latitude);
+      map.fitBounds(
+        [
+          [Math.min(...lngs), Math.min(...lats)],
+          [Math.max(...lngs), Math.max(...lats)],
+        ],
+        {
+          padding: 64,
+          maxZoom: 6,
+          duration: animate && !reduceMotion ? 500 : 0,
+        },
+      );
+    },
+    [plotted, reduceMotion],
+  );
+
+  // Re-fit when explicitly asked (fitToken) — the initial fit runs on load.
+  const didFitToken = useRef(0);
   useEffect(() => {
-    const map = mapRef.current;
-    if (!map || plotted.length === 0) return;
-    const lngs = plotted.map((item) => item.longitude);
-    const lats = plotted.map((item) => item.latitude);
-    map.fitBounds(
-      [
-        [Math.min(...lngs), Math.min(...lats)],
-        [Math.max(...lngs), Math.max(...lats)],
-      ],
-      {
-        padding: 56,
-        duration: reduceMotion ? 0 : 500,
-      },
-    );
-  }, [fitToken, plotted, reduceMotion]);
+    const map = mapRef.current?.getMap();
+    if (!map || fitToken === didFitToken.current) return;
+    didFitToken.current = fitToken;
+    fitToPlotted(map, true);
+  }, [fitToken, fitToPlotted]);
 
   useEffect(() => {
     if (!flyToSlug) return;
@@ -109,8 +127,9 @@ export function MapCanvas({
     if (!target || !map) return;
     map.flyTo({
       center: [target.longitude, target.latitude],
-      zoom: Math.max(map.getZoom(), 11),
-      duration: reduceMotion ? 0 : 450,
+      // Past clusterMaxZoom so the target shows as an individual pin.
+      zoom: Math.max(map.getZoom(), 14),
+      duration: reduceMotion ? 0 : 600,
     });
   }, [bySlug, flyToSlug, reduceMotion]);
 
@@ -133,27 +152,30 @@ export function MapCanvas({
     if (feature.layer?.id === "restaurant-clusters") {
       const map = mapRef.current;
       const clusterId = feature.properties?.cluster_id;
-      if (!map || typeof clusterId !== "number") return;
-      const source = map.getSource("restaurants");
-      if (source && "getClusterExpansionZoom" in source) {
-        (
-          source as {
-            getClusterExpansionZoom: (
-              id: number,
-              cb: (err: Error | null, zoom: number) => void,
-            ) => void;
-          }
-        ).getClusterExpansionZoom(clusterId, (err, zoom) => {
-          if (err || !feature.geometry || feature.geometry.type !== "Point") {
-            return;
-          }
+      const source = map?.getSource("restaurants") as GeoJSONSource | undefined;
+      if (
+        !map ||
+        !source ||
+        typeof clusterId !== "number" ||
+        feature.geometry?.type !== "Point"
+      ) {
+        return;
+      }
+      const center = feature.geometry.coordinates as [number, number];
+      // maplibre-gl v5: getClusterExpansionZoom returns a Promise.
+      void source
+        .getClusterExpansionZoom(clusterId)
+        .then((zoom) => {
+          map.easeTo({ center, zoom, duration: reduceMotion ? 0 : 300 });
+        })
+        .catch(() => {
+          // Fall back to a gentle zoom-in on the cluster center.
           map.easeTo({
-            center: feature.geometry.coordinates as [number, number],
-            zoom,
+            center,
+            zoom: Math.min(map.getZoom() + 2, mapConfig.maxZoom),
             duration: reduceMotion ? 0 : 300,
           });
         });
-      }
       return;
     }
     const slug = feature.properties?.slug;
@@ -163,15 +185,16 @@ export function MapCanvas({
   if (failed) {
     return (
       <div
-        className={`flex h-full min-h-[20rem] flex-col justify-center border border-border bg-bg-elevated px-4 py-8 ${className ?? ""}`}
+        className={`flex h-full min-h-[20rem] flex-col justify-center border border-dp-border bg-dp-surface px-4 py-8 ${className ?? ""}`}
         role="alert"
+        data-map-unavailable
       >
-        <p className="font-display text-xl text-ink">Map unavailable</p>
-        <p className="mt-2 font-sans text-sm text-ink-muted">
+        <p className="font-display text-xl text-dp-ink">Map unavailable</p>
+        <p className="mt-2 font-sans text-sm text-dp-ink-muted">
           The map failed to initialize. The restaurant list remains available
           with the same filters.
         </p>
-        <p className="mt-3 font-sans text-xs text-ink-muted">
+        <p className="mt-3 font-sans text-xs text-dp-ink-muted">
           {mapConfig.attribution}
         </p>
       </div>
@@ -201,11 +224,10 @@ export function MapCanvas({
         }}
         onMoveEnd={(event) => emitBounds(event.target)}
         style={{ width: "100%", height: "100%" }}
-        reuseMaps
       >
-        <NavigationControl position="top-left" showCompass={false} />
+        <NavigationControl position="bottom-right" showCompass={false} />
         <GeolocateControl
-          position="top-left"
+          position="bottom-right"
           positionOptions={{ enableHighAccuracy: false }}
           trackUserLocation={false}
           onError={() =>
@@ -228,7 +250,7 @@ export function MapCanvas({
             type="circle"
             filter={["has", "point_count"]}
             paint={{
-              "circle-color": "#1f3d2f",
+              "circle-color": "#123B2F",
               "circle-radius": [
                 "step",
                 ["get", "point_count"],
@@ -248,22 +270,27 @@ export function MapCanvas({
               "text-field": "{point_count_abbreviated}",
               "text-size": 12,
             }}
-            paint={{ "text-color": "#fffdf8" }}
+            paint={{ "text-color": "#FFFFFF" }}
           />
           <Layer
             id="restaurant-points"
             type="circle"
             filter={["!", ["has", "point_count"]]}
             paint={{
-              "circle-color": [
+              "circle-color": "#123B2F",
+              "circle-radius": ["case", ["get", "selected"], 11, 8],
+              "circle-stroke-width": [
                 "case",
                 ["get", "selected"],
-                "#7a2e3a",
-                "#1f3d2f",
+                3,
+                2,
               ],
-              "circle-radius": ["case", ["get", "selected"], 8, 6],
-              "circle-stroke-width": 1.5,
-              "circle-stroke-color": "#fffdf8",
+              "circle-stroke-color": [
+                "case",
+                ["get", "selected"],
+                "#B88A2A",
+                "#FFFFFF",
+              ],
             }}
           />
         </Source>
@@ -276,8 +303,21 @@ export function MapCanvas({
             <span className="sr-only">Selected restaurant marker</span>
             <span
               aria-hidden
-              className="block h-3 w-3 rounded-full border-2 border-bg-elevated bg-burgundy"
-            />
+              className="relative flex h-10 w-10 items-center justify-center"
+              data-map-selected-marker
+            >
+              <span className="absolute -inset-2 rounded-full border border-[#B88A2A]/50" />
+              <span className="flex h-10 w-10 items-center justify-center rounded-full border-2 border-[#B88A2A] bg-[#123B2F] text-white shadow-lg">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                  <path
+                    d="M8 3v8M12 3v8M16 3v8M8 11c0 3 2 5 4 8v2M16 11c0 3-2 5-4 8"
+                    stroke="currentColor"
+                    strokeWidth="1.75"
+                    strokeLinecap="round"
+                  />
+                </svg>
+              </span>
+            </span>
           </Marker>
         ) : null}
       </MapGL>

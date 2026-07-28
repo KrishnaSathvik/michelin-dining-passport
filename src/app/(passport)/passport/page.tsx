@@ -1,35 +1,57 @@
 import type { Metadata } from "next";
-import { Container } from "@/components/layout/Container";
-import { PassportHome } from "@/components/passport/PassportHome";
-import { getRestaurants } from "@/lib/data/restaurants";
+import { PassportPageView } from "@/components/stitch/passport";
+import { siteConfig } from "@/config/site";
+import {
+  getRegionCount,
+  getRestaurants,
+  getTotals,
+} from "@/lib/data/restaurants";
 import { buildPageMetadata } from "@/lib/seo/metadata";
 
 export const metadata: Metadata = buildPageMetadata({
-  title: "Passport",
-  description:
-    "Track Michelin-starred restaurants you have saved and visited. Data stays on this device until accounts arrive.",
+  title: "My Restaurants",
+  description: `Track Michelin-starred restaurants you have saved and visited on ${siteConfig.productName}. Sign in to sync across devices, or keep a private device-only list.`,
   path: "/passport",
+  noIndex: true,
 });
 
-export default function PassportPage() {
+type PassportPageProps = {
+  searchParams: Promise<Record<string, string | string[] | undefined>>;
+};
+
+/**
+ * Passport hub — full Stitch composition (Phase 8).
+ * PassportProvider remains the single store; this page is presentation only.
+ */
+export default async function PassportPage({ searchParams }: PassportPageProps) {
+  const params = await searchParams;
   const restaurants = getRestaurants();
+  const totals = getTotals();
+  const denominators = {
+    oneStar: totals.oneStar,
+    twoStar: totals.twoStar,
+    threeStar: totals.threeStar,
+    states: getRegionCount(),
+  };
+
+  const proof =
+    process.env.NODE_ENV !== "production"
+      ? typeof params.proof === "string"
+        ? (params.proof as
+            | "loading"
+            | "empty"
+            | "active"
+            | "pending"
+            | "failed"
+            | "storage-error")
+        : undefined
+      : undefined;
+
   return (
-    <div className="border-b border-border">
-      <Container className="py-10 sm:py-14">
-        <p className="font-sans text-xs uppercase tracking-[0.18em] text-burgundy">
-          Personal
-        </p>
-        <h1 className="mt-3 font-display text-4xl text-ink sm:text-5xl">
-          Your dining passport
-        </h1>
-        <p className="mt-4 max-w-2xl font-sans text-base text-ink-muted">
-          Track saves, visits, and collections locally. Cloud sync arrives with
-          accounts later.
-        </p>
-        <div className="mt-8">
-          <PassportHome restaurants={restaurants} />
-        </div>
-      </Container>
-    </div>
+    <PassportPageView
+      restaurants={restaurants}
+      denominators={denominators}
+      proof={proof}
+    />
   );
 }

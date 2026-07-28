@@ -23,7 +23,7 @@ export function buildPageMetadata({
       canonical: url,
     },
     openGraph: {
-      title: `${title} · ${siteConfig.productName}`,
+      title: `${title} | ${siteConfig.productName}`,
       description,
       url,
       siteName: siteConfig.productName,
@@ -31,8 +31,8 @@ export function buildPageMetadata({
       locale: "en_US",
     },
     twitter: {
-      card: "summary",
-      title: `${title} · ${siteConfig.productName}`,
+      card: "summary_large_image",
+      title: `${title} | ${siteConfig.productName}`,
       description,
     },
     robots: noIndex ? { index: false, follow: false } : undefined,

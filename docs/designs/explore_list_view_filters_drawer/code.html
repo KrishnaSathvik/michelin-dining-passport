@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Dining Passport - Explore</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface": "#fcf9f8",
+                        "on-primary-fixed": "#002118",
+                        "inverse-primary": "#a5d0bf",
+                        "secondary-container": "#ffc964",
+                        "secondary-fixed-dim": "#f3be5a",
+                        "on-surface": "#1c1b1b",
+                        "inverse-on-surface": "#f3f0ef",
+                        "primary": "#00251b",
+                        "outline-variant": "#c0c8c3",
+                        "error-container": "#ffdad6",
+                        "surface-container-lowest": "#ffffff",
+                        "background": "#fcf9f8",
+                        "inverse-surface": "#313030",
+                        "tertiary": "#47000e",
+                        "tertiary-container": "#68111f",
+                        "secondary-fixed": "#ffdea7",
+                        "on-primary-container": "#7ca596",
+                        "surface-bright": "#fcf9f8",
+                        "outline": "#717975",
+                        "on-tertiary-fixed-variant": "#822530",
+                        "on-primary": "#ffffff",
+                        "surface-container": "#f0edec",
+                        "primary-fixed-dim": "#a5d0bf",
+                        "on-background": "#1c1b1b",
+                        "on-secondary-container": "#765400",
+                        "on-secondary": "#ffffff",
+                        "surface-tint": "#3f6658",
+                        "on-error": "#ffffff",
+                        "on-surface-variant": "#414845",
+                        "on-secondary-fixed": "#271900",
+                        "tertiary-fixed": "#ffdada",
+                        "surface-dim": "#dcd9d9",
+                        "on-secondary-fixed-variant": "#5e4200",
+                        "surface-container-highest": "#e5e2e1",
+                        "tertiary-fixed-dim": "#ffb3b5",
+                        "surface-container-low": "#f6f3f2",
+                        "primary-container": "#123b2f",
+                        "surface-container-high": "#ebe7e7",
+                        "on-primary-fixed-variant": "#274e41",
+                        "on-tertiary-fixed": "#40000c",
+                        "on-tertiary": "#ffffff",
+                        "on-error-container": "#93000a",
+                        "secondary": "#7c5800",
+                        "surface-variant": "#e5e2e1",
+                        "primary-fixed": "#c1ecda",
+                        "on-tertiary-container": "#ef7881",
+                        "error": "#ba1a1a"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "gutter": "24px",
+                        "section-padding": "80px",
+                        "unit": "8px",
+                        "container-max-width": "1280px",
+                        "margin-desktop": "64px",
+                        "margin-mobile": "20px"
+                    },
+                    "fontFamily": {
+                        "meta-data": ["Inter"],
+                        "headline-sm": ["Instrument Serif"],
+                        "label-caps": ["Inter"],
+                        "display-lg": ["Instrument Serif"],
+                        "body-md": ["Inter"],
+                        "headline-md": ["Instrument Serif"],
+                        "body-lg": ["Inter"],
+                        "display-lg-mobile": ["Instrument Serif"]
+                    },
+                    "fontSize": {
+                        "meta-data": ["14px", { "lineHeight": "1.4", "fontWeight": "400" }],
+                        "headline-sm": ["24px", { "lineHeight": "1.3", "fontWeight": "500" }],
+                        "label-caps": ["12px", { "lineHeight": "1", "letterSpacing": "0.08em", "fontWeight": "600" }],
+                        "display-lg": ["48px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "400" }],
+                        "body-md": ["16px", { "lineHeight": "1.5", "fontWeight": "400" }],
+                        "headline-md": ["32px", { "lineHeight": "1.2", "fontWeight": "400" }],
+                        "body-lg": ["18px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "display-lg-mobile": ["36px", { "lineHeight": "1.1", "letterSpacing": "-0.01em", "fontWeight": "400" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .star-gold { color: #f3be5a; }
+        /* Prevent scroll when drawer is open */
+        body.drawer-open { overflow: hidden; }
+        
+        .flat-input {
+            border: 1px solid #E5E7E4;
+            border-radius: 4px;
+            height: 48px;
+            padding: 0 16px;
+            width: 100%;
+            font-family: 'Inter', sans-serif;
+            font-size: 14px;
+            background: #ffffff;
+            transition: border-color 0.2s ease;
+        }
+        .flat-input:focus {
+            outline: none;
+            border-color: #123b2f;
+            box-shadow: none;
+        }
+        .flat-btn-primary {
+            background-color: #123b2f;
+            color: #ffffff;
+            height: 48px;
+            padding: 0 24px;
+            border-radius: 4px;
+            font-family: 'Inter', sans-serif;
+            font-size: 14px;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            transition: background-color 0.2s ease;
+            cursor: pointer;
+            border: none;
+        }
+        .flat-btn-primary:hover {
+            background-color: #002118;
+        }
+        .flat-btn-secondary {
+            background-color: transparent;
+            color: #123b2f;
+            height: 48px;
+            padding: 0 24px;
+            border-radius: 4px;
+            font-family: 'Inter', sans-serif;
+            font-size: 14px;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid #E5E7E4;
+            transition: all 0.2s ease;
+            cursor: pointer;
+        }
+        .flat-btn-secondary:hover {
+            border-color: #123b2f;
+            background-color: #f6f3f2;
+        }
+        .flat-chip {
+            height: 32px;
+            padding: 0 16px;
+            border-radius: 4px;
+            font-family: 'Inter', sans-serif;
+            font-size: 14px;
+            display: inline-flex;
+            align-items: center;
+            border: 1px solid #E5E7E4;
+            background: #ffffff;
+            color: #1c1b1b;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+        .flat-chip:hover {
+            background: #f6f3f2;
+        }
+        .flat-chip.active {
+            background: #123b2f;
+            color: #ffffff;
+            border-color: #123b2f;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-meta-data antialiased drawer-open">
+<!-- TopNavBar -->
+<nav class="bg-surface top-0 sticky border-b border-outline-variant z-40 flat no shadows h-[72px] w-full">
+<div class="flex justify-between items-center h-[72px] px-margin-desktop w-full max-w-container-max-width mx-auto">
+<div class="text-headline-sm font-headline-sm text-primary tracking-tight">Dining Passport</div>
+<div class="hidden md:flex gap-8">
+<a class="text-primary font-bold border-b-2 border-primary pb-1 transition-colors duration-200" href="#">Explore</a>
+<a class="text-on-surface-variant font-medium hover:text-primary transition-colors duration-200" href="#">Map</a>
+<a class="text-on-surface-variant font-medium hover:text-primary transition-colors duration-200" href="#">Michelin Stars</a>
+<a class="text-on-surface-variant font-medium hover:text-primary transition-colors duration-200" href="#">Passport</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="text-on-surface-variant hover:text-primary transition-colors duration-200 flex items-center justify-center">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">account_circle</span>
+</button>
+</div>
+</div>
+</nav>
+<!-- Main Content Canvas (Dimmed due to drawer) -->
+<main class="w-full relative">
+<!-- Drawer Overlay Shield -->
+<div aria-hidden="true" class="fixed inset-0 bg-black/20 z-40" onclick="document.body.classList.remove('drawer-open')"></div>
+<div class="max-w-container-max-width mx-auto px-margin-desktop pt-8 pb-section-padding">
+<!-- Breadcrumbs -->
+<div class="flex items-center gap-2 text-on-surface-variant text-meta-data font-meta-data mb-6">
+<a class="hover:text-primary transition-colors" href="#">Home</a>
+<span class="material-symbols-outlined text-[16px]">chevron_right</span>
+<span class="text-on-background">Explore</span>
+</div>
+<!-- Page Header -->
+<div class="mb-12 max-w-3xl">
+<h1 class="text-display-lg font-display-lg text-primary mb-4">Explore Michelin-starred restaurants</h1>
+<p class="text-body-lg font-body-lg text-on-surface-variant">Discover the complete collection of 271 Michelin-starred destinations in the United States.</p>
+</div>
+<!-- Discovery Toolbar (Sticky below main nav ideally, but absolute here for simplicity) -->
+<div class="sticky top-[72px] bg-background/95 backdrop-blur-sm py-4 border-b border-surface-container-highest z-30 mb-8 flex flex-col gap-4">
+<div class="flex items-center gap-4 w-full">
+<div class="relative flex-grow max-w-2xl">
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-on-surface-variant">search</span>
+<input class="flat-input pl-12" placeholder="Search restaurant, city, state, or cuisine" type="text"/>
+</div>
+<button class="flat-btn-primary">Search</button>
+<div class="flex-grow"></div>
+<!-- View Toggles & Sort -->
+<div class="flex items-center gap-4">
+<div class="flex items-center border border-surface-container-highest rounded-md overflow-hidden h-[40px]">
+<button aria-label="Grid View" class="px-3 h-full flex items-center justify-center bg-surface hover:bg-surface-container-low transition-colors border-r border-surface-container-highest">
+<span class="material-symbols-outlined text-on-surface-variant">grid_view</span>
+</button>
+<button aria-label="List View" class="px-3 h-full flex items-center justify-center bg-surface-container-low text-primary">
+<span class="material-symbols-outlined">view_list</span>
+</button>
+</div>
+<div class="relative">
+<select class="flat-input appearance-none pr-10 cursor-pointer w-[180px]">
+<option>Recommended</option>
+<option>A-Z</option>
+<option>Price: Low to High</option>
+<option>Price: High to Low</option>
+</select>
+<span class="material-symbols-outlined absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none text-on-surface-variant">expand_more</span>
+</div>
+</div>
+</div>
+<!-- Quick Filters -->
+<div class="flex items-center gap-3 overflow-x-auto pb-2 scrollbar-hide">
+<button class="flat-chip active flex items-center gap-2" onclick="document.body.classList.add('drawer-open')">
+<span class="material-symbols-outlined text-[18px]">tune</span>
+                        All filters
+                    </button>
+<div class="w-[1px] h-6 bg-surface-container-highest mx-1"></div>
+<button class="flat-chip">Stars <span class="material-symbols-outlined text-[16px] ml-1">expand_more</span></button>
+<button class="flat-chip">State <span class="material-symbols-outlined text-[16px] ml-1">expand_more</span></button>
+<button class="flat-chip">City <span class="material-symbols-outlined text-[16px] ml-1">expand_more</span></button>
+<button class="flat-chip">Cuisine <span class="material-symbols-outlined text-[16px] ml-1">expand_more</span></button>
+<button class="flat-chip">Price <span class="material-symbols-outlined text-[16px] ml-1">expand_more</span></button>
+</div>
+</div>
+<!-- List Results -->
+<div class="flex flex-col gap-6">
+<!-- Row 1: Alinea -->
+<div class="flex items-center gap-6 p-4 rounded-lg hover:bg-surface-container-lowest transition-colors group cursor-pointer border border-transparent hover:border-surface-container-highest hover:shadow-[0_4px_20px_rgba(0,0,0,0.04)]">
+<div class="w-[120px] h-[120px] flex-shrink-0 bg-surface-container rounded overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="A highly detailed, editorial-style, close-up photograph of an avant-garde culinary dish from Alinea. The plating is meticulously constructed with bright pops of green and molecular gastronomy elements resting on a stark, minimalist white plate. High-key lighting accentuates the textures and the pristine, light-mode dining environment, evoking a sense of quiet luxury and elite culinary artistry." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBHNuSp7Ej_vEs_J1HIIPtQaz7XbJ9MvAlU3pOo74MOCw175dAyqUWDkYQhQOjWdzDIeYEfaoDYVeCXQTt6ET3kJzub4aXx1Ne5KPLxWsJZvuU8H2HfQLEplmvmqHKrYV3X7NZZuJqs6tvHlX0V0-fTce3O3rzrFp8biOYMkLpv8JwwxuT-Jgg-z8eWsWt_9FKm60_CVdChPydCMw747PCAAVcdtZ-wmgLQn3eItCKrK2PrzDzgXt2jvV0_ux8T42va42jl1zAfOw0"/>
+</div>
+<div class="flex-grow flex flex-col justify-center min-w-0">
+<div class="flex items-center gap-2 mb-1">
+<div class="flex text-secondary-fixed-dim text-[16px]">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<span class="text-meta-data font-meta-data text-on-surface-variant">3 Stars</span>
+</div>
+<h3 class="text-headline-md font-headline-md text-primary mb-1 truncate">Alinea</h3>
+<p class="text-body-md font-body-md text-on-surface-variant truncate">Contemporary • Chicago, IL • $$$$</p>
+</div>
+<div class="flex items-center gap-4 flex-shrink-0 opacity-0 group-hover:opacity-100 transition-opacity">
+<button aria-label="Save" class="w-10 h-10 rounded-full flex items-center justify-center text-on-surface-variant hover:bg-surface-container-low transition-colors">
+<span class="material-symbols-outlined">bookmark_border</span>
+</button>
+<button class="flat-btn-secondary">Reserve now</button>
+<span class="material-symbols-outlined text-on-surface-variant ml-2">chevron_right</span>
+</div>
+</div>
+<div class="h-[1px] w-full bg-surface-container-low"></div>
+<!-- Row 2: Le Bernardin -->
+<div class="flex items-center gap-6 p-4 rounded-lg hover:bg-surface-container-lowest transition-colors group cursor-pointer border border-transparent hover:border-surface-container-highest hover:shadow-[0_4px_20px_rgba(0,0,0,0.04)]">
+<div class="w-[120px] h-[120px] flex-shrink-0 bg-surface-container rounded overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="A pristine, high-resolution food photograph of a delicate seafood crudo dish from Le Bernardin. Thinly sliced, translucent fish is elegantly arranged with precise drops of golden olive oil and microgreens on a minimalist grey ceramic plate. Soft, natural light cascades across the dish, highlighting its freshness and the refined, light-mode, high-end editorial dining aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDTUCokVTCo3NkDnbd_azsnRBmJtwHxex86bIBNNfbW6KVMPQZJyHPLf3cxPdc7SRonnjkgyBAhg1TH9VoNOio2pdtppi6tndlEFrv5bVQerj2iamUNyxdTsAc93skXyt4a1dbKcyag1BFdYKr73bhhvEFfqPYvdHA9G6wQNlxISNX1oNX0iAUnsPuUuwPM_ANejUHKFRh02YyYM4EFahe8UqjZlCjPKC-D3ybsqdAyycRaDLe-8IWvAJq9z384aZrekm_7lxJfXig"/>
+</div>
+<div class="flex-grow flex flex-col justify-center min-w-0">
+<div class="flex items-center gap-2 mb-1">
+<div class="flex text-secondary-fixed-dim text-[16px]">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<span class="text-meta-data font-meta-data text-on-surface-variant">3 Stars</span>
+</div>
+<h3 class="text-headline-md font-headline-md text-primary mb-1 truncate">Le Bernardin</h3>
+<p class="text-body-md font-body-md text-on-surface-variant truncate">Seafood • New York, NY • $$$$</p>
+</div>
+<div class="flex items-center gap-4 flex-shrink-0 opacity-0 group-hover:opacity-100 transition-opacity">
+<button aria-label="Save" class="w-10 h-10 rounded-full flex items-center justify-center text-on-surface-variant hover:bg-surface-container-low transition-colors">
+<span class="material-symbols-outlined">bookmark_border</span>
+</button>
+<button class="flat-btn-secondary">Check availability</button>
+<span class="material-symbols-outlined text-on-surface-variant ml-2">chevron_right</span>
+</div>
+</div>
+<div class="h-[1px] w-full bg-surface-container-low"></div>
+<!-- Row 3: Atomix -->
+<div class="flex items-center gap-6 p-4 rounded-lg hover:bg-surface-container-lowest transition-colors group cursor-pointer border border-transparent hover:border-surface-container-highest hover:shadow-[0_4px_20px_rgba(0,0,0,0.04)]">
+<div class="w-[120px] h-[120px] flex-shrink-0 bg-surface-container rounded overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="A meticulously crafted modern Korean dish from Atomix, presented in a handcrafted, dark clay bowl resting on a clean, light wood table. The dish features vibrant contrasting colors of rich sauces and delicate garnishes. The lighting is focused and warm, creating a sophisticated, contemporary dining atmosphere that aligns perfectly with a premium, minimalist editorial visual style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDkzabqzXb8Zo1dse3uZut2VKDOx5aM3FrBGHxGJ07cHvPdBk1s8NWGWb2tjtXKs6wYpfp7O9kEzaqzKK4sIRSgGAE8iBcnDgMbtqnKbtfbAyWpdaxkaMz9J2ermw-Xz8HCZvFSUquTs6oL45FpapJLptTQsd8JrfstB7thqpCIYMS61JOEraAylosFCz173EBUGVgD8bHu49sTgW3AN4KUisijb2IinCdWoVGena6RteWOyQhH9ZsAi2NWHME7XkPyDUY1-AcgyYo"/>
+</div>
+<div class="flex-grow flex flex-col justify-center min-w-0">
+<div class="flex items-center gap-2 mb-1">
+<div class="flex text-secondary-fixed-dim text-[16px]">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<span class="text-meta-data font-meta-data text-on-surface-variant">2 Stars</span>
+</div>
+<h3 class="text-headline-md font-headline-md text-primary mb-1 truncate">Atomix</h3>
+<p class="text-body-md font-body-md text-on-surface-variant truncate">Korean • New York, NY • $$$$</p>
+</div>
+<div class="flex items-center gap-4 flex-shrink-0 opacity-0 group-hover:opacity-100 transition-opacity">
+<button aria-label="Save" class="w-10 h-10 rounded-full flex items-center justify-center text-on-surface-variant hover:bg-surface-container-low transition-colors">
+<span class="material-symbols-outlined">bookmark_border</span>
+</button>
+<button class="flat-btn-secondary">Reserve now</button>
+<span class="material-symbols-outlined text-on-surface-variant ml-2">chevron_right</span>
+</div>
+</div>
+<div class="h-[1px] w-full bg-surface-container-low"></div>
+<!-- Row 4: Benu -->
+<div class="flex items-center gap-6 p-4 rounded-lg hover:bg-surface-container-lowest transition-colors group cursor-pointer border border-transparent hover:border-surface-container-highest hover:shadow-[0_4px_20px_rgba(0,0,0,0.04)]">
+<div class="w-[120px] h-[120px] flex-shrink-0 bg-surface-container rounded overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="An exquisite, minimalist food portrait of a signature dish from Benu, featuring delicate dumpling-like parcels arranged with geometric precision on a stark white rectangular plate. A subtle drizzle of dark, rich sauce connects the elements. The environment is flooded with soft, high-key natural light, emphasizing a high-end, clean, and luxurious editorial aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDLTsN2t4E3sXszhUww3K24LyChwX5XBuakbLIAtHp0dUVk25k_wu2zM2t9a4D8QFC7e7KZt1PouF3cDuXJNctWFrQo2Z1bsQpG-m3U5GaN-oLdTBf_5rNzuNqm9Nqx9c_M2VP7nih37TeuqWPQpubdtfkn6FvPw4fUz8E5vCEaWPH_mySnDT75di153m_7htSrb1AlFpMOBf2lgx1wPFYzaPfluwZeSZt-YxJ6X5z3-NojphM8VS726q9Q-AQRTL3xyfwKQ8UAipo"/>
+</div>
+<div class="flex-grow flex flex-col justify-center min-w-0">
+<div class="flex items-center gap-2 mb-1">
+<div class="flex text-secondary-fixed-dim text-[16px]">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<span class="text-meta-data font-meta-data text-on-surface-variant">3 Stars</span>
+</div>
+<h3 class="text-headline-md font-headline-md text-primary mb-1 truncate">Benu</h3>
+<p class="text-body-md font-body-md text-on-surface-variant truncate">Asian Contemporary • San Francisco, CA • $$$$</p>
+</div>
+<div class="flex items-center gap-4 flex-shrink-0 opacity-0 group-hover:opacity-100 transition-opacity">
+<button aria-label="Save" class="w-10 h-10 rounded-full flex items-center justify-center text-on-surface-variant hover:bg-surface-container-low transition-colors">
+<span class="material-symbols-outlined">bookmark_border</span>
+</button>
+<button class="flat-btn-secondary">Check availability</button>
+<span class="material-symbols-outlined text-on-surface-variant ml-2">chevron_right</span>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-low w-full flex flex-col items-center py-section-padding px-margin-desktop text-center mt-12">
+<div class="flex flex-col md:flex-row justify-center items-center gap-6 mb-6">
+<a class="text-label-caps font-label-caps text-on-surface-variant hover:text-primary underline transition-all focus:ring-1 focus:ring-primary" href="#">About</a>
+<a class="text-label-caps font-label-caps text-on-surface-variant hover:text-primary underline transition-all focus:ring-1 focus:ring-primary" href="#">Privacy</a>
+<a class="text-label-caps font-label-caps text-on-surface-variant hover:text-primary underline transition-all focus:ring-1 focus:ring-primary" href="#">Terms</a>
+<a class="text-label-caps font-label-caps text-on-surface-variant hover:text-primary underline transition-all focus:ring-1 focus:ring-primary" href="#">Contact</a>
+</div>
+<div class="text-label-caps font-label-caps text-primary mb-2">Dining Passport</div>
+<div class="text-meta-data font-meta-data text-on-surface-variant max-w-md">
+            © 2024 Dining Passport. Independent discovery platform. Not affiliated with the Michelin Guide.
+        </div>
+</footer>
+<!-- Filter Drawer (Right Overlay) -->
+<aside class="fixed top-0 right-0 h-full w-[400px] bg-surface-container-lowest shadow-2xl z-50 flex flex-col transform transition-transform duration-300 ease-in-out translate-x-0">
+<!-- Drawer Header -->
+<div class="flex items-center justify-between px-6 py-5 border-b border-surface-container-highest flex-shrink-0">
+<h2 class="text-headline-sm font-headline-sm text-primary">All filters</h2>
+<button class="w-8 h-8 flex items-center justify-center rounded-full hover:bg-surface-container-low transition-colors text-on-surface-variant" onclick="document.body.classList.remove('drawer-open')">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</div>
+<!-- Drawer Scrollable Content -->
+<div class="flex-grow overflow-y-auto px-6 py-6 custom-scrollbar">
+<!-- Search -->
+<div class="mb-8">
+<label class="text-label-caps font-label-caps text-on-surface-variant block mb-2">SEARCH WITHIN RESULTS</label>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant text-[20px]">search</span>
+<input class="flat-input pl-10" placeholder="e.g., Omakase, Noma" type="text"/>
+</div>
+</div>
+<!-- Distinction -->
+<div class="mb-8">
+<label class="text-label-caps font-label-caps text-on-surface-variant block mb-4">MICHELIN DISTINCTION</label>
+<div class="flex flex-col gap-3">
+<label class="flex items-center gap-3 cursor-pointer group">
+<div class="w-5 h-5 rounded border border-outline-variant flex items-center justify-center group-hover:border-primary transition-colors">
+<span class="material-symbols-outlined text-[16px] text-white hidden">check</span>
+</div>
+<span class="flex items-center gap-1 text-secondary-fixed-dim">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+</span>
+<span class="text-body-md font-body-md text-on-background ml-1">3 Stars</span>
+</label>
+<label class="flex items-center gap-3 cursor-pointer group">
+<div class="w-5 h-5 rounded border border-outline-variant flex items-center justify-center group-hover:border-primary transition-colors">
+<span class="material-symbols-outlined text-[16px] text-white hidden">check</span>
+</div>
+<span class="flex items-center gap-1 text-secondary-fixed-dim">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+</span>
+<span class="text-body-md font-body-md text-on-background ml-1">2 Stars</span>
+</label>
+<label class="flex items-center gap-3 cursor-pointer group">
+<div class="w-5 h-5 rounded border border-outline-variant flex items-center justify-center group-hover:border-primary transition-colors">
+<span class="material-symbols-outlined text-[16px] text-white hidden">check</span>
+</div>
+<span class="flex items-center gap-1 text-secondary-fixed-dim">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+</span>
+<span class="text-body-md font-body-md text-on-background ml-1">1 Star</span>
+</label>
+<label class="flex items-center gap-3 cursor-pointer group mt-2">
+<div class="w-5 h-5 rounded border border-outline-variant flex items-center justify-center group-hover:border-primary transition-colors bg-primary border-primary">
+<span class="material-symbols-outlined text-[16px] text-white">check</span>
+</div>
+<span class="flex items-center gap-1 text-primary-fixed-dim">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">eco</span>
+</span>
+<span class="text-body-md font-body-md text-on-background ml-1">Green Star</span>
+</label>
+</div>
+</div>
+<!-- Location -->
+<div class="mb-8">
+<label class="text-label-caps font-label-caps text-on-surface-variant block mb-4">LOCATION</label>
+<div class="flex flex-col gap-4">
+<div class="relative">
+<select class="flat-input appearance-none pr-10 cursor-pointer">
+<option value="">Any State</option>
+<option value="CA">California</option>
+<option value="NY">New York</option>
+<option value="IL">Illinois</option>
+</select>
+<span class="material-symbols-outlined absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none text-on-surface-variant">expand_more</span>
+</div>
+<div class="relative opacity-50 pointer-events-none">
+<select class="flat-input appearance-none pr-10 cursor-pointer">
+<option value="">Any City (Select state first)</option>
+</select>
+<span class="material-symbols-outlined absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none text-on-surface-variant">expand_more</span>
+</div>
+</div>
+</div>
+<!-- Cuisine -->
+<div class="mb-8">
+<label class="text-label-caps font-label-caps text-on-surface-variant block mb-4">CUISINE</label>
+<div class="relative">
+<select class="flat-input appearance-none pr-10 cursor-pointer">
+<option value="">All Cuisines</option>
+<option value="contemporary">Contemporary</option>
+<option value="japanese">Japanese</option>
+<option value="french">French</option>
+<option value="italian">Italian</option>
+</select>
+<span class="material-symbols-outlined absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none text-on-surface-variant">expand_more</span>
+</div>
+</div>
+<!-- Price -->
+<div class="mb-8">
+<label class="text-label-caps font-label-caps text-on-surface-variant block mb-4">PRICE RANGE</label>
+<div class="flex gap-2">
+<button class="flex-1 py-2 border border-surface-container-highest rounded text-on-surface-variant hover:border-primary transition-colors bg-surface-container-lowest">$$</button>
+<button class="flex-1 py-2 border border-surface-container-highest rounded text-on-surface-variant hover:border-primary transition-colors bg-surface-container-lowest">$$$</button>
+<button class="flex-1 py-2 border border-primary rounded text-primary font-medium bg-surface-container-low transition-colors">$$$$</button>
+</div>
+</div>
+<!-- Preferences -->
+<div class="mb-8">
+<label class="text-label-caps font-label-caps text-on-surface-variant block mb-4">MY PREFERENCES</label>
+<div class="flex flex-col gap-4">
+<label class="flex items-center justify-between cursor-pointer">
+<span class="text-body-md font-body-md text-on-background">Saved only</span>
+<div class="relative inline-block w-10 mr-2 align-middle select-none transition duration-200 ease-in">
+<input class="toggle-checkbox absolute block w-5 h-5 rounded-full bg-white border-4 appearance-none cursor-pointer border-surface-container-highest translate-x-0 top-0 left-0 transition-transform duration-200" id="toggle1" name="toggle" type="checkbox"/>
+<label class="toggle-label block overflow-hidden h-5 rounded-full bg-surface-container-highest cursor-pointer" for="toggle1"></label>
+</div>
+</label>
+<label class="flex items-center justify-between cursor-pointer">
+<span class="text-body-md font-body-md text-on-background">Visited only</span>
+<div class="relative inline-block w-10 mr-2 align-middle select-none transition duration-200 ease-in">
+<input class="toggle-checkbox absolute block w-5 h-5 rounded-full bg-white border-4 appearance-none cursor-pointer border-surface-container-highest translate-x-0 top-0 left-0 transition-transform duration-200" id="toggle2" name="toggle" type="checkbox"/>
+<label class="toggle-label block overflow-hidden h-5 rounded-full bg-surface-container-highest cursor-pointer" for="toggle2"></label>
+</div>
+</label>
+</div>
+</div>
+</div>
+<!-- Drawer Footer -->
+<div class="p-6 border-t border-surface-container-highest bg-surface-container-lowest flex-shrink-0 flex items-center justify-between">
+<button class="text-meta-data font-meta-data text-on-surface-variant hover:text-primary transition-colors underline">Clear filters</button>
+<button class="flat-btn-primary w-[200px]">Apply 271 filters</button>
+</div>
+</aside>
+<style>
+        /* Custom scrollbar for drawer */
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 6px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background-color: #e5e2e1;
+            border-radius: 10px;
+        }
+        
+        /* Toggle Switch Styles (Tailwind doesn't have native switch) */
+        .toggle-checkbox:checked {
+            right: 0;
+            border-color: #123b2f;
+            transform: translateX(100%);
+        }
+        .toggle-checkbox:checked + .toggle-label {
+            background-color: #123b2f;
+        }
+        
+        /* Hide scrollbar on mobile filters */
+        .scrollbar-hide::-webkit-scrollbar {
+            display: none;
+        }
+        .scrollbar-hide {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+</body></html>

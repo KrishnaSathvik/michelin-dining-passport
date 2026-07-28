@@ -1,0 +1,459 @@
+- generic [ref=e1]:
+  - link "Skip to main content" [ref=e2] [cursor=pointer]:
+    - /url: "#main-content"
+  - banner [ref=e3]:
+    - generic [ref=e4]:
+      - link "Dining Passport" [ref=e6] [cursor=pointer]:
+        - /url: /
+      - generic [ref=e12]:
+        - link "Search restaurants" [ref=e13] [cursor=pointer]:
+          - /url: /explore
+        - button "Open menu" [ref=e419]
+  - main [ref=e18]:
+    - generic [ref=e20]:
+      - navigation "Breadcrumb" [ref=e21]:
+        - list [ref=e22]:
+          - listitem [ref=e23]:
+            - link "Home" [ref=e24] [cursor=pointer]:
+              - /url: /
+          - listitem [ref=e25]:
+            - generic [ref=e26]: /
+            - link "Explore" [ref=e27] [cursor=pointer]:
+              - /url: /explore
+          - listitem [ref=e28]:
+            - generic [ref=e29]: /
+            - link "California" [ref=e30] [cursor=pointer]:
+              - /url: /usa/california
+          - listitem [ref=e31]:
+            - generic [ref=e32]: /
+            - link "Healdsburg" [ref=e33] [cursor=pointer]:
+              - /url: /cities/healdsburg
+          - listitem [ref=e34]:
+            - generic [ref=e35]: /
+            - generic [ref=e36]: SingleThread
+      - region [ref=e38]:
+        - img "SingleThread in Healdsburg" [ref=e40]:
+          - generic [ref=e41]:
+            - generic [ref=e42]:
+              - paragraph [ref=e43]: SI
+              - generic "Three Michelin Stars" [ref=e44]:
+                - generic [ref=e45]: ★★★
+                - generic [ref=e46]: 3 Michelin stars
+            - generic [ref=e47]:
+              - paragraph [ref=e48]: SingleThread
+              - paragraph [ref=e49]: Healdsburg
+        - generic [ref=e50]:
+          - link "3 Michelin stars Three Michelin Stars" [ref=e52] [cursor=pointer]:
+            - /url: /stars/3
+            - generic [ref=e53]:
+              - generic "Three Michelin Stars" [ref=e54]:
+                - generic [ref=e55]: ★★★
+                - generic [ref=e56]: 3 Michelin stars
+              - generic [ref=e57]: Three Michelin Stars
+          - heading "SingleThread" [level=1] [ref=e58]
+          - paragraph [ref=e59]:
+            - generic [ref=e60]: Contemporary
+            - generic [ref=e62]:
+              - generic [ref=e63]: •
+              - generic [ref=e64]: Healdsburg, CA
+            - generic [ref=e65]:
+              - generic [ref=e66]: •
+              - generic [ref=e67]: $$$$
+          - paragraph [ref=e68]: 131 North St., Healdsburg, CA, 95448, USA
+          - generic [ref=e69]:
+            - link "Reserve now (opens in a new tab)" [ref=e70] [cursor=pointer]:
+              - /url: https://singlethreadfarms.com/bookings
+              - generic [ref=e71]:
+                - text: Reserve now ↗
+                - generic [ref=e72]: (opens in a new tab)
+            - link "Website (opens in a new tab)" [ref=e73] [cursor=pointer]:
+              - /url: https://www.singlethreadfarms.com/
+              - text: Website
+              - generic [ref=e74]: (opens in a new tab)
+          - paragraph [ref=e75]:
+            - link "Michelin Guide reference (opens in a new tab)" [ref=e76] [cursor=pointer]:
+              - /url: https://guide.michelin.com/en/california/healdsburg/restaurant/singlethread
+              - text: Michelin Guide reference
+              - generic [ref=e77]: (opens in a new tab)
+          - generic [ref=e78]:
+            - paragraph [ref=e79]: Your Journey
+            - group "Personal dining journey" [ref=e80]:
+              - button "Save, off" [ref=e81]:
+                - generic [ref=e82]: ☆
+                - generic [ref=e83]: Save
+              - button "Want to visit, off" [ref=e84]:
+                - generic [ref=e85]: ⚑
+                - generic [ref=e86]: Want
+              - button "Planned, off" [ref=e87]:
+                - generic [ref=e88]: ◷
+                - generic [ref=e89]: Planned
+              - button "Visited, off" [ref=e90]:
+                - generic [ref=e91]: ✓
+                - generic [ref=e92]: Visited
+              - button "Favorite, off" [ref=e93]:
+                - generic [ref=e94]: ♡
+                - generic [ref=e95]: Favorite
+            - generic [ref=e96]:
+              - paragraph [ref=e97]: Saved on this device.
+              - generic [ref=e98]:
+                - button "Add planning details" [active] [ref=e99]
+                - button "Record visit" [ref=e100]
+            - dialog [ref=e432]:
+              - generic [ref=e433]:
+                - heading "Plan your visit" [level=2] [ref=e434]
+                - button "Close" [ref=e435]
+              - generic [ref=e437]:
+                - generic [ref=e438]:
+                  - generic [ref=e439]: SingleThread
+                  - generic [ref=e440]: Three Michelin Stars
+                - generic [ref=e441]:
+                  - generic [ref=e442]: Planned date
+                  - textbox "Planned date" [ref=e444]
+                - generic [ref=e445]:
+                  - generic [ref=e446]: Reservation provider
+                  - textbox "Reservation provider" [ref=e448]:
+                    - /placeholder: e.g., Tock, OpenTable
+                - generic [ref=e449]:
+                  - generic [ref=e450]: Confirmation or reference note
+                  - textbox "Confirmation or reference note Private planning details stay on your passport. External reserve links do not confirm a booking." [ref=e451]:
+                    - /placeholder: "Confirmation #"
+                  - generic [ref=e452]: Private planning details stay on your passport. External reserve links do not confirm a booking.
+              - generic [ref=e454]:
+                - button "Cancel" [ref=e455]
+                - button "Save plan" [ref=e456]
+      - region "Restaurant details and live place information" [ref=e101]:
+        - generic [ref=e102]:
+          - heading "Details" [level=2] [ref=e103]
+          - generic [ref=e104]:
+            - generic [ref=e105]:
+              - generic [ref=e106]:
+                - heading "Address" [level=3] [ref=e107]
+                - paragraph [ref=e109]: 131 North St., Healdsburg, CA, 95448, USA
+              - generic [ref=e110]:
+                - heading "Cuisine" [level=3] [ref=e111]
+                - link "Contemporary" [ref=e113] [cursor=pointer]:
+                  - /url: /cuisines/contemporary
+              - generic [ref=e114]:
+                - heading "Price" [level=3] [ref=e115]
+                - generic [ref=e116]: $$$$
+              - generic [ref=e117]:
+                - heading "Location" [level=3] [ref=e118]
+                - link "Healdsburg, CA" [ref=e120] [cursor=pointer]:
+                  - /url: /cities/healdsburg
+            - generic [ref=e121]:
+              - iframe [ref=e123]:
+                - generic [ref=f1e2]:
+                  - generic:
+                    - region "Map" [ref=f1e3]
+                    - button "[missing \"en-US.javascripts.map.marker.title\" translation]" [ref=f1e4]
+                  - generic:
+                    - generic [ref=f1e8]:
+                      - button "Zoom In" [ref=f1e9] [cursor=pointer]
+                      - button "Zoom Out" [ref=f1e11] [cursor=pointer]
+                    - group [ref=f1e13]:
+                      - generic [ref=f1e14]:
+                        - link "Report a problem" [ref=f1e18] [cursor=pointer]:
+                          - /url: /fixthemap?lat=38.61234&lon=-122.86969&zoom=12
+                        - text: "| ©"
+                        - link "OpenStreetMap contributors" [ref=f1e19] [cursor=pointer]:
+                          - /url: /copyright
+                        - text: ♥️
+                        - link "Make a Donation" [ref=f1e20] [cursor=pointer]:
+                          - /url: https://supporting.openstreetmap.org
+                        - text: .
+                        - link "Website and API terms" [ref=f1e21] [cursor=pointer]:
+                          - /url: https://wiki.osmfoundation.org/wiki/Terms_of_Use
+              - link "View on map" [ref=e124] [cursor=pointer]:
+                - /url: /map?selected=singlethread-healdsburg-ca
+                - text: View on map
+                - generic [ref=e125]: ↗
+        - complementary [ref=e126]:
+          - generic [ref=e127]:
+            - generic [ref=e128]: i
+            - heading "Photos and live place information from Google" [level=2] [ref=e129]
+          - paragraph [ref=e130]: Photos, ratings, hours, and reviews are provided by Google and may change over time. Michelin distinctions on this page are first-party roster information and remain separate from Google ratings.
+          - paragraph [ref=e409]: Live Google place information is currently unavailable.
+      - region [ref=e142]:
+        - heading "More Contemporary" [level=2] [ref=e143]
+        - generic [ref=e144]:
+          - article [ref=e146]:
+            - generic [ref=e147]:
+              - link "View Addison" [ref=e148] [cursor=pointer]:
+                - /url: /restaurants/addison-san-diego-ca
+                - img "Addison in San Diego, CA" [ref=e150]:
+                  - generic [ref=e151]:
+                    - generic [ref=e152]:
+                      - paragraph [ref=e153]: AD
+                      - generic "Three Michelin Stars" [ref=e154]:
+                        - generic [ref=e155]: ★★★
+                        - generic [ref=e156]: 3 Michelin stars
+                    - generic [ref=e157]:
+                      - paragraph [ref=e158]: Addison
+                      - paragraph [ref=e159]: San Diego, CA
+              - button "Save to passport" [ref=e161]:
+                - generic [ref=e162]: ♡
+                - generic [ref=e163]: Not saved
+            - generic [ref=e164]:
+              - generic "Three Michelin Stars" [ref=e165]:
+                - generic [ref=e166]: ★★★
+                - generic [ref=e167]: 3 Michelin stars
+              - heading [level=3] [ref=e168]:
+                - link "Addison" [ref=e169] [cursor=pointer]:
+                  - /url: /restaurants/addison-san-diego-ca
+              - paragraph [ref=e170]:
+                - generic [ref=e171]: Contemporary
+                - generic [ref=e172]:
+                  - generic [ref=e173]: ·
+                  - text: San Diego, CA
+                - generic [ref=e174]:
+                  - generic [ref=e175]: ·
+                  - text: $$$$
+              - link "Reserve now (opens in a new tab)" [ref=e177] [cursor=pointer]:
+                - /url: https://www.addisondelmar.com/reservations/
+                - generic [ref=e178]:
+                  - text: Reserve now ↗
+                  - generic [ref=e179]: (opens in a new tab)
+          - article [ref=e181]:
+            - generic [ref=e182]:
+              - link "View Atelier Crenn" [ref=e183] [cursor=pointer]:
+                - /url: /restaurants/atelier-crenn-san-francisco-ca
+                - img "Atelier Crenn in San Francisco, CA" [ref=e185]:
+                  - generic [ref=e186]:
+                    - generic [ref=e187]:
+                      - paragraph [ref=e188]: AC
+                      - generic "Three Michelin Stars" [ref=e189]:
+                        - generic [ref=e190]: ★★★
+                        - generic [ref=e191]: 3 Michelin stars
+                    - generic [ref=e192]:
+                      - paragraph [ref=e193]: Atelier Crenn
+                      - paragraph [ref=e194]: San Francisco, CA
+              - button "Save to passport" [ref=e196]:
+                - generic [ref=e197]: ♡
+                - generic [ref=e198]: Not saved
+            - generic [ref=e199]:
+              - generic "Three Michelin Stars" [ref=e200]:
+                - generic [ref=e201]: ★★★
+                - generic [ref=e202]: 3 Michelin stars
+              - heading [level=3] [ref=e203]:
+                - link "Atelier Crenn" [ref=e204] [cursor=pointer]:
+                  - /url: /restaurants/atelier-crenn-san-francisco-ca
+              - paragraph [ref=e205]:
+                - generic [ref=e206]: Contemporary
+                - generic [ref=e207]:
+                  - generic [ref=e208]: ·
+                  - text: San Francisco, CA
+                - generic [ref=e209]:
+                  - generic [ref=e210]: ·
+                  - text: $$$$
+              - link "Reserve now (opens in a new tab)" [ref=e212] [cursor=pointer]:
+                - /url: https://www.opentable.com/r/atelier-crenn
+                - generic [ref=e213]:
+                  - text: Reserve now ↗
+                  - generic [ref=e214]: (opens in a new tab)
+          - article [ref=e216]:
+            - generic [ref=e217]:
+              - link "View Eleven Madison Park" [ref=e218] [cursor=pointer]:
+                - /url: /restaurants/eleven-madison-park-new-york-ny
+                - img "Eleven Madison Park in New York, NY" [ref=e220]:
+                  - generic [ref=e221]:
+                    - generic [ref=e222]:
+                      - paragraph [ref=e223]: EM
+                      - generic "Three Michelin Stars" [ref=e224]:
+                        - generic [ref=e225]: ★★★
+                        - generic [ref=e226]: 3 Michelin stars
+                    - generic [ref=e227]:
+                      - paragraph [ref=e228]: Eleven Madison Park
+                      - paragraph [ref=e229]: New York, NY
+              - button "Save to passport" [ref=e231]:
+                - generic [ref=e232]: ♡
+                - generic [ref=e233]: Not saved
+            - generic [ref=e234]:
+              - generic "Three Michelin Stars" [ref=e235]:
+                - generic [ref=e236]: ★★★
+                - generic [ref=e237]: 3 Michelin stars
+              - heading [level=3] [ref=e238]:
+                - link "Eleven Madison Park" [ref=e239] [cursor=pointer]:
+                  - /url: /restaurants/eleven-madison-park-new-york-ny
+              - paragraph [ref=e240]:
+                - generic [ref=e241]: Contemporary
+                - generic [ref=e242]:
+                  - generic [ref=e243]: ·
+                  - text: New York, NY
+                - generic [ref=e244]:
+                  - generic [ref=e245]: ·
+                  - text: $$$$
+              - link "Reserve now (opens in a new tab)" [ref=e247] [cursor=pointer]:
+                - /url: https://resy.com/cities/new-york-ny/venues/eleven-madison-park
+                - generic [ref=e248]:
+                  - text: Reserve now ↗
+                  - generic [ref=e249]: (opens in a new tab)
+          - article [ref=e251]:
+            - generic [ref=e252]:
+              - link "View Enclos" [ref=e253] [cursor=pointer]:
+                - /url: /restaurants/enclos-sonoma-ca
+                - img "Enclos in Sonoma, CA" [ref=e255]:
+                  - generic [ref=e256]:
+                    - generic [ref=e257]:
+                      - paragraph [ref=e258]: EN
+                      - generic "Three Michelin Stars" [ref=e259]:
+                        - generic [ref=e260]: ★★★
+                        - generic [ref=e261]: 3 Michelin stars
+                    - generic [ref=e262]:
+                      - paragraph [ref=e263]: Enclos
+                      - paragraph [ref=e264]: Sonoma, CA
+              - button "Save to passport" [ref=e266]:
+                - generic [ref=e267]: ♡
+                - generic [ref=e268]: Not saved
+            - generic [ref=e269]:
+              - generic "Three Michelin Stars" [ref=e270]:
+                - generic [ref=e271]: ★★★
+                - generic [ref=e272]: 3 Michelin stars
+              - heading [level=3] [ref=e273]:
+                - link "Enclos" [ref=e274] [cursor=pointer]:
+                  - /url: /restaurants/enclos-sonoma-ca
+              - paragraph [ref=e275]:
+                - generic [ref=e276]: Contemporary
+                - generic [ref=e277]:
+                  - generic [ref=e278]: ·
+                  - text: Sonoma, CA
+                - generic [ref=e279]:
+                  - generic [ref=e280]: ·
+                  - text: $$$$
+              - link "Check availability (opens in a new tab)" [ref=e282] [cursor=pointer]:
+                - /url: https://enclos-sonoma.com/
+                - generic [ref=e283]:
+                  - text: Check availability ↗
+                  - generic [ref=e284]: (opens in a new tab)
+          - article [ref=e286]:
+            - generic [ref=e287]:
+              - link "View Per Se" [ref=e288] [cursor=pointer]:
+                - /url: /restaurants/per-se-new-york-ny
+                - img "Per Se in New York, NY" [ref=e290]:
+                  - generic [ref=e291]:
+                    - generic [ref=e292]:
+                      - paragraph [ref=e293]: PS
+                      - generic "Three Michelin Stars" [ref=e294]:
+                        - generic [ref=e295]: ★★★
+                        - generic [ref=e296]: 3 Michelin stars
+                    - generic [ref=e297]:
+                      - paragraph [ref=e298]: Per Se
+                      - paragraph [ref=e299]: New York, NY
+              - button "Save to passport" [ref=e301]:
+                - generic [ref=e302]: ♡
+                - generic [ref=e303]: Not saved
+            - generic [ref=e304]:
+              - generic "Three Michelin Stars" [ref=e305]:
+                - generic [ref=e306]: ★★★
+                - generic [ref=e307]: 3 Michelin stars
+              - heading [level=3] [ref=e308]:
+                - link "Per Se" [ref=e309] [cursor=pointer]:
+                  - /url: /restaurants/per-se-new-york-ny
+              - paragraph [ref=e310]:
+                - generic [ref=e311]: Contemporary
+                - generic [ref=e312]:
+                  - generic [ref=e313]: ·
+                  - text: New York, NY
+                - generic [ref=e314]:
+                  - generic [ref=e315]: ·
+                  - text: $$$$
+              - link "Check availability (opens in a new tab)" [ref=e317] [cursor=pointer]:
+                - /url: https://www.thomaskeller.com/perseny
+                - generic [ref=e318]:
+                  - text: Check availability ↗
+                  - generic [ref=e319]: (opens in a new tab)
+          - article [ref=e321]:
+            - generic [ref=e322]:
+              - link "View Quince" [ref=e323] [cursor=pointer]:
+                - /url: /restaurants/quince-san-francisco-ca
+                - img "Quince in San Francisco, CA" [ref=e325]:
+                  - generic [ref=e326]:
+                    - generic [ref=e327]:
+                      - paragraph [ref=e328]: QU
+                      - generic "Three Michelin Stars" [ref=e329]:
+                        - generic [ref=e330]: ★★★
+                        - generic [ref=e331]: 3 Michelin stars
+                    - generic [ref=e332]:
+                      - paragraph [ref=e333]: Quince
+                      - paragraph [ref=e334]: San Francisco, CA
+              - button "Save to passport" [ref=e336]:
+                - generic [ref=e337]: ♡
+                - generic [ref=e338]: Not saved
+            - generic [ref=e339]:
+              - generic "Three Michelin Stars" [ref=e340]:
+                - generic [ref=e341]: ★★★
+                - generic [ref=e342]: 3 Michelin stars
+              - heading [level=3] [ref=e343]:
+                - link "Quince" [ref=e344] [cursor=pointer]:
+                  - /url: /restaurants/quince-san-francisco-ca
+              - paragraph [ref=e345]:
+                - generic [ref=e346]: Contemporary
+                - generic [ref=e347]:
+                  - generic [ref=e348]: ·
+                  - text: San Francisco, CA
+                - generic [ref=e349]:
+                  - generic [ref=e350]: ·
+                  - text: $$$$
+              - link "Reserve now (opens in a new tab)" [ref=e352] [cursor=pointer]:
+                - /url: https://www.sevenrooms.com/explore/quince/reservations/create/search/
+                - generic [ref=e353]:
+                  - text: Reserve now ↗
+                  - generic [ref=e354]: (opens in a new tab)
+      - region [ref=e355]:
+        - heading "Also in Healdsburg" [level=2] [ref=e356]
+        - paragraph [ref=e357]: Other starred restaurants in the same city from the current roster.
+        - article [ref=e359]:
+          - generic [ref=e360]:
+            - generic "One Michelin Star" [ref=e362]:
+              - generic [ref=e363]: ★
+              - generic [ref=e364]: 1 Michelin star
+            - heading [level=3] [ref=e365]:
+              - link "Troubadour" [ref=e366] [cursor=pointer]:
+                - /url: /restaurants/troubadour-healdsburg-ca
+            - paragraph [ref=e367]:
+              - generic [ref=e368]: French
+              - generic [ref=e369]:
+                - generic [ref=e370]: ·
+                - text: Healdsburg, CA
+          - generic [ref=e371]:
+            - button "Save to passport" [ref=e372]:
+              - generic [ref=e373]: ♡
+              - generic [ref=e374]: Not saved
+            - link "Reserve now (opens in a new tab)" [ref=e375] [cursor=pointer]:
+              - /url: https://resy.com/cities/healdsburg-ca/venues/troubadour-bread-and-bistro?seats=2&date=2025-04-03
+              - generic [ref=e376]:
+                - text: Reserve now ↗
+                - generic [ref=e377]: (opens in a new tab)
+      - region [ref=e378]:
+        - heading "Source and independence" [level=2] [ref=e379]
+        - paragraph [ref=e380]: "Last dataset import: 2026-07-16. Dataset current through July 2026. Facts on this page come from the verified workbook roster only. Google photos, ratings, hours, and reviews appear only inside the Google module above."
+        - paragraph [ref=e381]: Independent platform. Not affiliated with, endorsed by, or connected to Michelin or the Michelin Guide.
+  - contentinfo [ref=e382]:
+    - generic [ref=e383]:
+      - generic [ref=e384]:
+        - generic [ref=e385]:
+          - paragraph [ref=e386]: Dining Passport
+          - paragraph [ref=e387]: An independent atlas of Michelin-starred dining in the United States.
+          - paragraph [ref=e388]: Independent discovery platform. Not affiliated with the Michelin Guide.
+          - paragraph [ref=e389]: Dataset current through July 2026. 271 starred restaurants listed · roster 2026-07-16.
+        - navigation "Footer" [ref=e390]:
+          - link "Explore" [ref=e391] [cursor=pointer]:
+            - /url: /explore
+          - link "Map" [ref=e392] [cursor=pointer]:
+            - /url: /map
+          - link "Michelin Stars" [ref=e393] [cursor=pointer]:
+            - /url: /about-michelin-stars
+          - link "Passport" [ref=e394] [cursor=pointer]:
+            - /url: /passport
+          - link "Account" [ref=e395] [cursor=pointer]:
+            - /url: /account
+      - paragraph [ref=e396]: Independent platform. Not affiliated with, endorsed by, or connected to Michelin or the Michelin Guide. Michelin does not currently inspect every U.S. state. Absence from this atlas does not mean a region has been reviewed and found without stars.
+  - generic [ref=e402] [cursor=pointer]:
+    - button "Open Next.js Dev Tools" [ref=e403]
+    - generic [ref=e410]:
+      - button "Open issues overlay" [ref=e411]:
+        - generic [ref=e412]:
+          - generic [ref=e413]: "0"
+          - generic [ref=e414]: "1"
+        - generic [ref=e415]: Issue
+      - button "Collapse issues badge" [ref=e416]
+  - alert [ref=e397]

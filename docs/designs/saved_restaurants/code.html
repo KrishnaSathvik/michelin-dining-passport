@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Saved Restaurants - Dining Passport</title>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Literata:opsz,wght@7..72,400;7..72,500;7..72,600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Tailwind Config -->
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "secondary-fixed-dim": "#f3be5a",
+                    "on-secondary-container": "#765400",
+                    "secondary": "#7c5800",
+                    "error-container": "#ffdad6",
+                    "tertiary-fixed": "#ffdada",
+                    "secondary-fixed": "#ffdea7",
+                    "on-primary-container": "#7ca596",
+                    "on-primary": "#ffffff",
+                    "on-tertiary": "#ffffff",
+                    "error": "#ba1a1a",
+                    "surface-dim": "#dcd9d9",
+                    "secondary-container": "#ffc964",
+                    "surface-container": "#f0edec",
+                    "surface-container-highest": "#e5e2e1",
+                    "inverse-on-surface": "#f3f0ef",
+                    "surface-container-high": "#ebe7e7",
+                    "on-primary-fixed-variant": "#274e41",
+                    "on-tertiary-fixed": "#40000c",
+                    "outline-variant": "#c0c8c3",
+                    "on-secondary-fixed": "#271900",
+                    "surface-variant": "#e5e2e1",
+                    "surface": "#fcf9f8",
+                    "on-primary-fixed": "#002118",
+                    "primary": "#00251b",
+                    "tertiary-container": "#68111f",
+                    "primary-fixed-dim": "#a5d0bf",
+                    "on-error": "#ffffff",
+                    "on-surface-variant": "#414845",
+                    "on-secondary": "#ffffff",
+                    "on-error-container": "#93000a",
+                    "on-tertiary-fixed-variant": "#822530",
+                    "inverse-primary": "#a5d0bf",
+                    "primary-container": "#123b2f",
+                    "outline": "#717975",
+                    "surface-bright": "#fcf9f8",
+                    "background": "#fcf9f8",
+                    "on-tertiary-container": "#ef7881",
+                    "on-secondary-fixed-variant": "#5e4200",
+                    "inverse-surface": "#313030",
+                    "on-background": "#1c1b1b",
+                    "surface-container-lowest": "#ffffff",
+                    "tertiary-fixed-dim": "#ffb3b5",
+                    "surface-container-low": "#f6f3f2",
+                    "primary-fixed": "#c1ecda",
+                    "surface-tint": "#3f6658",
+                    "tertiary": "#47000e",
+                    "on-surface": "#1c1b1b"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "margin-mobile": "20px",
+                    "gutter": "24px",
+                    "container-max-width": "1280px",
+                    "unit": "8px",
+                    "section-padding": "80px",
+                    "margin-desktop": "64px"
+            },
+            "fontFamily": {
+                    "meta-data": [
+                            "Inter"
+                    ],
+                    "body-md": [
+                            "Inter"
+                    ],
+                    "display-lg-mobile": [
+                            "Literata"
+                    ],
+                    "display-lg": [
+                            "Literata"
+                    ],
+                    "headline-md": [
+                            "Literata"
+                    ],
+                    "label-caps": [
+                            "Inter"
+                    ],
+                    "body-lg": [
+                            "Inter"
+                    ],
+                    "headline-sm": [
+                            "Literata"
+                    ]
+            },
+            "fontSize": {
+                    "meta-data": [
+                            "14px",
+                            {
+                                    "lineHeight": "1.4",
+                                    "fontWeight": "400"
+                            }
+                    ],
+                    "body-md": [
+                            "16px",
+                            {
+                                    "lineHeight": "1.5",
+                                    "fontWeight": "400"
+                            }
+                    ],
+                    "display-lg-mobile": [
+                            "36px",
+                            {
+                                    "lineHeight": "1.1",
+                                    "letterSpacing": "-0.01em",
+                                    "fontWeight": "400"
+                            }
+                    ],
+                    "display-lg": [
+                            "48px",
+                            {
+                                    "lineHeight": "1.1",
+                                    "letterSpacing": "-0.02em",
+                                    "fontWeight": "400"
+                            }
+                    ],
+                    "headline-md": [
+                            "32px",
+                            {
+                                    "lineHeight": "1.2",
+                                    "fontWeight": "400"
+                            }
+                    ],
+                    "label-caps": [
+                            "12px",
+                            {
+                                    "lineHeight": "1",
+                                    "letterSpacing": "0.08em",
+                                    "fontWeight": "600"
+                            }
+                    ],
+                    "body-lg": [
+                            "18px",
+                            {
+                                    "lineHeight": "1.6",
+                                    "fontWeight": "400"
+                            }
+                    ],
+                    "headline-sm": [
+                            "24px",
+                            {
+                                    "lineHeight": "1.3",
+                                    "fontWeight": "500"
+                            }
+                    ]
+            }
+    },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .material-symbols-outlined.fill {
+            font-variation-settings: 'FILL' 1;
+        }
+        
+        /* Subtle transition for cards */
+        .restaurant-card {
+            transition: box-shadow 0.3s ease, transform 0.3s ease;
+        }
+        .restaurant-card:hover {
+            box-shadow: 0px 4px 20px rgba(0,0,0,0.04);
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background min-h-screen flex flex-col font-body-md selection:bg-secondary-fixed selection:text-on-secondary-fixed">
+<!-- TopNavBar -->
+<header class="bg-surface dark:bg-surface fixed top-0 w-full h-[72px] z-50 border-b border-outline-variant dark:border-outline flat no shadows flex justify-between items-center px-margin-desktop w-full max-w-container-max-width mx-auto left-0 right-0">
+<div class="flex items-center gap-gutter">
+<a class="font-headline-sm text-headline-sm font-bold text-primary dark:text-primary-fixed tracking-tight" href="#">Dining Passport</a>
+<nav class="hidden md:flex gap-gutter ml-8">
+<a class="font-body-md text-body-md text-on-surface-variant dark:text-on-surface-variant hover:text-primary dark:hover:text-primary-fixed hover:text-secondary dark:hover:text-secondary-fixed transition-colors duration-200" href="#">Explore</a>
+<a class="font-body-md text-body-md text-on-surface-variant dark:text-on-surface-variant hover:text-primary dark:hover:text-primary-fixed hover:text-secondary dark:hover:text-secondary-fixed transition-colors duration-200" href="#">Map</a>
+<a class="font-body-md text-body-md text-on-surface-variant dark:text-on-surface-variant hover:text-primary dark:hover:text-primary-fixed hover:text-secondary dark:hover:text-secondary-fixed transition-colors duration-200" href="#">Michelin Stars</a>
+<a class="font-body-md text-body-md text-primary dark:text-primary-fixed border-b-2 border-secondary font-semibold pb-1 opacity-80 transition-opacity" href="#">Passport</a>
+</nav>
+</div>
+<div class="flex items-center gap-4">
+<div class="hidden md:flex items-center bg-surface-container-low border border-outline-variant rounded px-3 h-10 w-64 focus-within:border-primary transition-colors">
+<span class="material-symbols-outlined text-outline text-sm mr-2">search</span>
+<input class="bg-transparent border-none outline-none w-full text-meta-data font-meta-data placeholder:text-outline p-0 focus:ring-0" placeholder="Search saved..." type="text"/>
+</div>
+<button class="w-10 h-10 flex items-center justify-center rounded-full hover:bg-surface-container-high transition-colors text-on-surface-variant hover:text-secondary duration-200">
+<span class="material-symbols-outlined">person</span>
+</button>
+</div>
+</header>
+<!-- Main Content Canvas -->
+<main class="flex-grow pt-[104px] pb-section-padding px-margin-desktop max-w-container-max-width mx-auto w-full">
+<!-- Breadcrumbs & Header -->
+<div class="mb-gutter flex flex-col items-center md:items-start text-center md:text-left w-full">
+<nav class="text-meta-data font-meta-data text-on-surface-variant mb-6 flex items-center gap-2">
+<a class="hover:text-primary transition-colors" href="#">Home</a>
+<span class="text-outline-variant">/</span>
+<a class="hover:text-primary transition-colors" href="#">Passport</a>
+<span class="text-outline-variant">/</span>
+<span class="text-on-surface">Saved</span>
+</nav>
+<h1 class="font-display-lg text-display-lg text-primary mb-4 w-full">Saved Restaurants</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">Keep track of the tables you're dreaming of.</p>
+</div>
+<!-- Controls Toolbar -->
+<div class="flex flex-col md:flex-row justify-between items-center bg-surface border border-outline-variant rounded py-3 px-4 mb-section-padding gap-4 w-full">
+<div class="flex items-center gap-4 w-full md:w-auto overflow-x-auto pb-2 md:pb-0 scrollbar-hide">
+<span class="text-meta-data font-meta-data text-on-surface-variant whitespace-nowrap">24 Restaurants</span>
+<div class="h-4 w-px bg-outline-variant hidden md:block"></div>
+<!-- Filters -->
+<div class="flex gap-2">
+<button class="h-8 px-3 rounded-full border border-outline-variant flex items-center gap-1 text-meta-data font-meta-data text-on-surface hover:bg-surface-container-low transition-colors whitespace-nowrap">
+                        Stars <span class="material-symbols-outlined text-sm">arrow_drop_down</span>
+</button>
+<button class="h-8 px-3 rounded-full border border-outline-variant flex items-center gap-1 text-meta-data font-meta-data text-on-surface hover:bg-surface-container-low transition-colors whitespace-nowrap">
+                        State <span class="material-symbols-outlined text-sm">arrow_drop_down</span>
+</button>
+<button class="h-8 px-3 rounded-full border border-outline-variant flex items-center gap-1 text-meta-data font-meta-data text-on-surface hover:bg-surface-container-low transition-colors whitespace-nowrap">
+                        Cuisine <span class="material-symbols-outlined text-sm">arrow_drop_down</span>
+</button>
+</div>
+</div>
+<div class="flex items-center gap-4 w-full md:w-auto justify-between md:justify-end border-t border-outline-variant md:border-t-0 pt-3 md:pt-0">
+<div class="flex items-center gap-2">
+<span class="text-meta-data font-meta-data text-on-surface-variant hidden md:inline">Sort by:</span>
+<button class="h-8 px-3 flex items-center gap-1 text-meta-data font-meta-data text-on-surface hover:text-primary transition-colors">
+                        Date Saved <span class="material-symbols-outlined text-sm">arrow_drop_down</span>
+</button>
+</div>
+<div class="flex bg-surface-container-low rounded border border-outline-variant p-0.5">
+<button class="w-8 h-8 flex items-center justify-center rounded bg-surface shadow-sm text-primary transition-all">
+<span class="material-symbols-outlined text-[18px]">grid_view</span>
+</button>
+<button class="w-8 h-8 flex items-center justify-center rounded text-on-surface-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-[18px]">view_list</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Bento Grid / Cards -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter">
+<!-- Card 1 -->
+<div class="restaurant-card bg-surface border border-outline-variant rounded flex flex-col overflow-hidden group">
+<div class="relative w-full pt-[75%] bg-surface-container-high overflow-hidden">
+<img class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A high-resolution, elegantly composed photograph of a minimalist fine dining plate viewed from slightly above. The dish features a pristine, sculpted scallop resting in a shallow pool of vibrant green parsley oil, garnished with delicate micro-herbs and a single, perfectly spherical dollop of golden caviar. The lighting is bright, soft, and diffuse, creating a serene, light-mode aesthetic with minimal shadows. The table surface is a smooth, matte white porcelain, emphasizing cleanliness, luxury, and the quiet prestige of a Michelin-starred culinary experience. Colors are restricted to pure white, deep emerald green, and a soft, striking gold accent." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCDiTV-CLxF6HiRxsgyScr4D6XOdjrIPzKA2qkYSO8NjgnjHKiKy-FksEAYv0OQX7E9xjaHau-5OGblzHXaUpsoMoi6tHlaMfqVtrv93LxkKpjN7qFsnFUPVG3zEuyYZOrPA5lFeV6ZtE0uEVJQsCC9ycFnnrH9Cjv6Pr7PHl8Wpjq7Xt3bbPwWJOeJsOmTpt4xuo56-zH4ZZQYJzovyvs0v78-Ps1KfSygLiNmQHSP_yz2KIwc45hyRWvtGAhOcGocIXtdm3xKXtY"/>
+<div class="absolute top-3 left-3 flex gap-2">
+<div class="bg-secondary-fixed text-on-secondary-fixed h-6 px-2 flex items-center justify-center rounded font-label-caps text-label-caps tracking-widest uppercase gap-1 shadow-sm">
+<span class="material-symbols-outlined fill text-[12px]">star</span>
+<span class="material-symbols-outlined fill text-[12px]">star</span>
+<span class="material-symbols-outlined fill text-[12px]">star</span>
+</div>
+</div>
+<button class="absolute top-3 right-3 w-8 h-8 bg-surface/80 backdrop-blur-sm rounded-full flex items-center justify-center text-on-surface hover:text-error hover:bg-error-container transition-colors opacity-0 group-hover:opacity-100">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+</div>
+<div class="p-4 flex flex-col flex-grow">
+<div class="flex justify-between items-start mb-1">
+<h2 class="font-headline-sm text-headline-sm text-primary">Le Bernardin</h2>
+</div>
+<div class="text-meta-data font-meta-data text-on-surface-variant mb-4 flex items-center gap-1.5 flex-wrap">
+<span>$$$$</span>
+<span class="text-outline-variant">•</span>
+<span>Seafood</span>
+<span class="text-outline-variant">•</span>
+<span>New York, NY</span>
+</div>
+<div class="mt-auto">
+<div class="text-[12px] font-meta-data text-outline mb-3">Added Oct 12, 2023</div>
+<div class="flex gap-2">
+<button class="h-12 flex-1 bg-primary text-on-primary rounded font-meta-data text-meta-data font-semibold hover:bg-primary-container hover:text-on-primary-container transition-colors">Reserve</button>
+<button class="h-12 flex-1 border border-outline-variant text-primary rounded font-meta-data text-meta-data font-semibold hover:bg-surface-container-low transition-colors">Move to Planned</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="restaurant-card bg-surface border border-outline-variant rounded flex flex-col overflow-hidden group">
+<div class="relative w-full pt-[75%] bg-surface-container-high overflow-hidden">
+<img class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A beautiful, close-up shot of a rustic yet highly refined sourdough bread course in a top-tier restaurant setting. The thick slice of artisan bread rests on an organic, hand-thrown ceramic plate in soft beige. Beside it sits a perfect quenelle of cultured butter, lightly sprinkled with flaky sea salt. The lighting is natural, bright, and flattering, casting soft directional shadows that highlight the textures of the crust and the ceramic glaze. The overarching mood is warm, sophisticated, and inviting, embodying the clean, high-end editorial style of a premium dining publication in light mode." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAlr1rUcUSkEJQ2z-UZMbsgK6Nnv4mrPw9DAUDZJvOq7CuYxr6M7tIfKCZdstldjMAmn2UzxFGMtL2191rPmT521iJDdZub0JnEjLNyBgR9mYtNxeG2xJ6EyQ816ZT3oFID0Kf4UGiBSm4vBOBWYM1Q0OLDKVXlJgQTKjrC8D2KfE6d5OpJLA4KjOiAxMtmAWW_vIWYXA09iH3PG9G4yTsWb901UZ4VEuc2WEfpTWC8jxM669mqotNA3_dBCr-LgPbMnmFF_Hf6wnE"/>
+<div class="absolute top-3 left-3 flex gap-2">
+<div class="bg-secondary-fixed text-on-secondary-fixed h-6 px-2 flex items-center justify-center rounded font-label-caps text-label-caps tracking-widest uppercase gap-1 shadow-sm">
+<span class="material-symbols-outlined fill text-[12px]">star</span>
+</div>
+</div>
+<button class="absolute top-3 right-3 w-8 h-8 bg-surface/80 backdrop-blur-sm rounded-full flex items-center justify-center text-on-surface hover:text-error hover:bg-error-container transition-colors opacity-0 group-hover:opacity-100">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+</div>
+<div class="p-4 flex flex-col flex-grow">
+<div class="flex justify-between items-start mb-1">
+<h2 class="font-headline-sm text-headline-sm text-primary">The French Laundry</h2>
+</div>
+<div class="text-meta-data font-meta-data text-on-surface-variant mb-4 flex items-center gap-1.5 flex-wrap">
+<span>$$$$</span>
+<span class="text-outline-variant">•</span>
+<span>French Contemporary</span>
+<span class="text-outline-variant">•</span>
+<span>Yountville, CA</span>
+</div>
+<div class="mt-auto">
+<div class="text-[12px] font-meta-data text-outline mb-3">Added Nov 05, 2023</div>
+<div class="flex gap-2">
+<button class="h-12 flex-1 bg-primary text-on-primary rounded font-meta-data text-meta-data font-semibold hover:bg-primary-container hover:text-on-primary-container transition-colors">Reserve</button>
+<button class="h-12 flex-1 border border-outline-variant text-primary rounded font-meta-data text-meta-data font-semibold hover:bg-surface-container-low transition-colors">Move to Planned</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="restaurant-card bg-surface border border-outline-variant rounded flex flex-col overflow-hidden group">
+<div class="relative w-full pt-[75%] bg-surface-container-high overflow-hidden">
+<img class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="An impeccably styled photograph of a modern Japanese omakase setting. A single piece of luminous, fatty tuna (otoro) nigiri sits centrally on a minimalist black slate rectangular platter. The rice grains are individually distinguishable, glowing slightly in the pristine, diffused overhead gallery lighting. The background is a soft, out-of-focus expanse of blond hinoki wood from the sushi counter, ensuring the entire scene feels bright, immaculate, and highly curated. The color palette emphasizes the rich coral pink of the fish against deep black and soft cream wood tones, conveying quiet culinary mastery." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAdzpE9yg7C6B4pYs41VoSWPIx-tfoHGL7hzj7Kvaz-k4lu0HZalSJbY0uI9ecMZ89dreEY5tqH9P_kkX9fOvOz1SmW1XWgp7aKHzBLNoUliLr9Rx9yMZ3rfvv4lGf9HapEvhkVXOzN1KSE-cMvdm8YXvXBXS1QUYL3LFet9T9tnfqzmK0N6iCcX2dvJvafPtNxjA08A9FBBkp0h5WCcQ9iP6NiBDyii-tQRpcI11YmwD1rlv7lloWvSt9_UW3OaFk_keCeEomaqKI"/>
+<div class="absolute top-3 left-3 flex gap-2">
+<div class="bg-primary-fixed-dim text-on-primary-fixed h-6 px-2 flex items-center justify-center rounded font-label-caps text-label-caps tracking-widest uppercase gap-1 shadow-sm">
+<span class="material-symbols-outlined fill text-[12px]">eco</span>
+<span>Green Star</span>
+</div>
+</div>
+<button class="absolute top-3 right-3 w-8 h-8 bg-surface/80 backdrop-blur-sm rounded-full flex items-center justify-center text-on-surface hover:text-error hover:bg-error-container transition-colors opacity-0 group-hover:opacity-100">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+</div>
+<div class="p-4 flex flex-col flex-grow">
+<div class="flex justify-between items-start mb-1">
+<h2 class="font-headline-sm text-headline-sm text-primary">Blue Hill at Stone Barns</h2>
+</div>
+<div class="text-meta-data font-meta-data text-on-surface-variant mb-4 flex items-center gap-1.5 flex-wrap">
+<span>$$$$</span>
+<span class="text-outline-variant">•</span>
+<span>American</span>
+<span class="text-outline-variant">•</span>
+<span>Tarrytown, NY</span>
+</div>
+<div class="mt-auto">
+<div class="text-[12px] font-meta-data text-outline mb-3">Added Dec 22, 2023</div>
+<div class="flex gap-2">
+<button class="h-12 flex-1 bg-primary text-on-primary rounded font-meta-data text-meta-data font-semibold hover:bg-primary-container hover:text-on-primary-container transition-colors">Reserve</button>
+<button class="h-12 flex-1 border border-outline-variant text-primary rounded font-meta-data text-meta-data font-semibold hover:bg-surface-container-low transition-colors">Move to Planned</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Card 4 (Geometric Fallback Example) -->
+<div class="restaurant-card bg-surface border border-outline-variant rounded flex flex-col overflow-hidden group">
+<div class="relative w-full pt-[75%] bg-surface-container-low overflow-hidden flex items-center justify-center">
+<!-- Geometric Pattern Fallback -->
+<div class="absolute inset-0 opacity-10" style="background-image: radial-gradient(#00251b 1px, transparent 1px); background-size: 20px 20px;"></div>
+<span class="material-symbols-outlined text-outline text-[48px] font-light z-10 opacity-30">restaurant</span>
+<div class="absolute top-3 left-3 flex gap-2 z-20">
+<div class="bg-surface border border-outline-variant text-on-surface-variant h-6 px-2 flex items-center justify-center rounded font-label-caps text-label-caps tracking-widest uppercase gap-1 shadow-sm">
+<span class="material-symbols-outlined text-[12px]">restaurant</span>
+<span>Bib Gourmand</span>
+</div>
+</div>
+<button class="absolute top-3 right-3 w-8 h-8 bg-surface/80 backdrop-blur-sm rounded-full flex items-center justify-center text-on-surface hover:text-error hover:bg-error-container transition-colors opacity-0 group-hover:opacity-100 z-20">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+</div>
+<div class="p-4 flex flex-col flex-grow">
+<div class="flex justify-between items-start mb-1">
+<h2 class="font-headline-sm text-headline-sm text-primary">State Bird Provisions</h2>
+</div>
+<div class="text-meta-data font-meta-data text-on-surface-variant mb-4 flex items-center gap-1.5 flex-wrap">
+<span>$$</span>
+<span class="text-outline-variant">•</span>
+<span>American Contemporary</span>
+<span class="text-outline-variant">•</span>
+<span>San Francisco, CA</span>
+</div>
+<div class="mt-auto">
+<div class="text-[12px] font-meta-data text-outline mb-3">Added Jan 14, 2024</div>
+<div class="flex gap-2">
+<button class="h-12 flex-1 bg-primary text-on-primary rounded font-meta-data text-meta-data font-semibold hover:bg-primary-container hover:text-on-primary-container transition-colors">Reserve</button>
+<button class="h-12 flex-1 border border-outline-variant text-primary rounded font-meta-data text-meta-data font-semibold hover:bg-surface-container-low transition-colors">Move to Planned</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Pagination/Load More -->
+<div class="mt-12 flex justify-center">
+<button class="h-12 px-8 border border-outline-variant text-primary rounded font-meta-data text-meta-data font-semibold hover:bg-surface-container-low transition-colors">Load More</button>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-low dark:bg-surface-container-low w-full py-section-padding flex flex-col items-center justify-center space-y-gutter px-margin-desktop w-full flat no shadows mt-auto">
+<div class="font-headline-sm text-headline-sm text-primary mb-4">Dining Passport</div>
+<div class="flex flex-wrap justify-center gap-6 mb-8">
+<a class="font-meta-data text-meta-data text-on-surface-variant dark:text-on-surface-variant hover:text-secondary dark:hover:text-secondary-fixed transition-colors cursor-pointer transition-all" href="#">Explore</a>
+<a class="font-meta-data text-meta-data text-on-surface-variant dark:text-on-surface-variant hover:text-secondary dark:hover:text-secondary-fixed transition-colors cursor-pointer transition-all" href="#">Map</a>
+<a class="font-meta-data text-meta-data text-on-surface-variant dark:text-on-surface-variant hover:text-secondary dark:hover:text-secondary-fixed transition-colors cursor-pointer transition-all" href="#">About Michelin Stars</a>
+<a class="font-meta-data text-meta-data text-on-surface-variant dark:text-on-surface-variant hover:text-secondary dark:hover:text-secondary-fixed transition-colors cursor-pointer transition-all" href="#">Privacy</a>
+<a class="font-meta-data text-meta-data text-on-surface-variant dark:text-on-surface-variant hover:text-secondary dark:hover:text-secondary-fixed transition-colors cursor-pointer transition-all" href="#">Terms</a>
+</div>
+<div class="font-meta-data text-meta-data text-outline text-center">
+            Independent discovery platform. Not affiliated with the Michelin Guide.
+        </div>
+</footer>
+</body></html>

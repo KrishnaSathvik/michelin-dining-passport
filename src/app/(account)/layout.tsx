@@ -1,19 +1,9 @@
-import { SiteFooter } from "@/components/layout/SiteFooter";
-import { SiteHeader } from "@/components/layout/SiteHeader";
-import { Container } from "@/components/layout/Container";
+import type { ReactNode } from "react";
 
-export default function AccountLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
-  return (
-    <>
-      <SiteHeader />
-      <main className="py-12 sm:py-16">
-        <Container>{children}</Container>
-      </main>
-      <SiteFooter />
-    </>
-  );
+/**
+ * Account stays inside the signed-in AppChrome (header + footer).
+ * Page composition owns PageContainer margins.
+ */
+export default function AccountLayout({ children }: { children: ReactNode }) {
+  return <div className="dp-canvas border-b border-dp-border">{children}</div>;
 }

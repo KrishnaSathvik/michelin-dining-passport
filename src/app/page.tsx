@@ -1,35 +1,87 @@
-import { BrowseByCuisine } from "@/components/home/BrowseByCuisine";
-import { BrowseByState } from "@/components/home/BrowseByState";
-import { FeaturedRestaurants } from "@/components/home/FeaturedRestaurants";
-import { MichelinStarsExplained } from "@/components/home/MichelinStarsExplained";
-import { PassportPreview } from "@/components/home/PassportPreview";
-import { SearchHero } from "@/components/home/SearchHero";
-import { homepageConfig } from "@/config/homepage";
+import type { Metadata } from "next";
 import {
-  getCuisineAggregates,
-  getRegionCount,
+  HomepageView,
+  toHomepageViewModel,
+} from "@/components/stitch/home";
+import { homepageConfig } from "@/config/homepage";
+import { absoluteUrl, siteConfig } from "@/config/site";
+import {
   getRestaurantsBySlugs,
-  getStateAggregates,
   getTotals,
 } from "@/lib/data/restaurants";
 
-export default function HomePage() {
-  const totals = getTotals();
-  const regionCount = getRegionCount();
-  const featured = getRestaurantsBySlugs(
-    homepageConfig.featuredRestaurantSlugs,
-  );
-  const states = getStateAggregates();
-  const cuisines = getCuisineAggregates();
+export const metadata: Metadata = {
+  title: {
+    absolute: `${siteConfig.productName} — The Guide to Remarkable Dining`,
+  },
+  description: siteConfig.description,
+  alternates: {
+    canonical: absoluteUrl("/"),
+  },
+  openGraph: {
+    title: `${siteConfig.productName} — The Guide to Remarkable Dining`,
+    description: siteConfig.description,
+    url: absoluteUrl("/"),
+    siteName: siteConfig.productName,
+    type: "website",
+    locale: "en_US",
+  },
+};
 
-  return (
-    <>
-      <SearchHero totals={totals} regionCount={regionCount} />
-      <FeaturedRestaurants restaurants={featured} />
-      <BrowseByState states={states} />
-      <BrowseByCuisine cuisines={cuisines} />
-      <MichelinStarsExplained />
-      <PassportPreview />
-    </>
-  );
+type HomePageProps = {
+  searchParams?: Promise<{ proof?: string }>;
+};
+
+/**
+ * Homepage — strict Stitch explore_feed composition (OD-08).
+ * Old multi-section homepage stack removed in Phase 4.
+ */
+export default async function HomePage({ searchParams }: HomePageProps) {
+  const totals = getTotals();
+  const featuredSlugs = homepageConfig.featuredRestaurantSlugs.slice(0, 3);
+  const featuredRestaurants = getRestaurantsBySlugs(featuredSlugs);
+
+  if (
+    process.env.NODE_ENV === "development" &&
+    featuredRestaurants.length < featuredSlugs.length
+  ) {
+    const found = new Set(featuredRestaurants.map((r) => r.slug));
+    for (const slug of featuredSlugs) {
+      if (!found.has(slug)) {
+        console.warn(`[homepage] featured slug unavailable: ${slug}`);
+      }
+    }
+  }
+
+  const model = toHomepageViewModel({
+    totals: {
+      restaurants: totals.restaurants,
+      oneStar: totals.oneStar,
+      twoStar: totals.twoStar,
+      threeStar: totals.threeStar,
+    },
+    featuredRestaurants,
+  });
+
+  // Dev-only visual QA states for Phase 4 baselines — unavailable in production.
+  const params = searchParams ? await searchParams : undefined;
+  const proof =
+    process.env.NODE_ENV !== "production" ? params?.proof : undefined;
+
+  if (proof === "loading") {
+    return <HomepageView model={model} featuredLoading />;
+  }
+
+  if (proof === "empty") {
+    return (
+      <HomepageView
+        model={{
+          ...model,
+          featured: { ...model.featured, restaurants: [] },
+        }}
+      />
+    );
+  }
+
+  return <HomepageView model={model} />;
 }

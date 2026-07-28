@@ -1,0 +1,23 @@
+[    2895ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://127.0.0.1:3112/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2477
+[    2981ms] [LOG] [HMR] connected @ http://127.0.0.1:3112/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2477
+[   21591ms] [LOG] [Fast Refresh] rebuilding @ http://127.0.0.1:3112/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2477
+[   21668ms] [LOG] [Fast Refresh] done in 180ms @ http://127.0.0.1:3112/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2477
+[  169724ms] [LOG] [Fast Refresh] rebuilding @ http://127.0.0.1:3112/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2477
+[  169979ms] [LOG] [Fast Refresh] done in 357ms @ http://127.0.0.1:3112/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2477
+[  172739ms] [LOG] [Fast Refresh] rebuilding @ http://127.0.0.1:3112/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2477
+[  172780ms] [LOG] [Fast Refresh] done in 142ms @ http://127.0.0.1:3112/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2477
+[  175900ms] [LOG] [Fast Refresh] rebuilding @ http://127.0.0.1:3112/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2477
+[  175901ms] [LOG] [Fast Refresh] done in 103ms @ http://127.0.0.1:3112/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2477
+[  250513ms] [INFO] [google-places-ui-kit] query-intent {page: /restaurants/singlethread-healdsburg-ca, componentType: full, restaurantSlug: singlethread-healdsburg-ca, placeIdSuffix: LkvMyVvY, timestamp: 2026-07-18T22:31:53.070Z} @ http://127.0.0.1:3112/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2477
+[  250756ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://maps.googleapis.com/$rpc/google.internal.maps.mapsjs.v1.MapsJsInternalService/GetPlaceWidgetMetadata:0
+[  250758ms] [ERROR] <gmp-place-details>: Encountered a network request error: Google Maps Places UI Kit Error: IP address, referer or application did not match any of the ones authorized for the supplied API key @ http://127.0.0.1:3112/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:3318
+[  255686ms] [LOG] [Fast Refresh] rebuilding @ http://127.0.0.1:3112/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2477
+[  255715ms] [LOG] [Fast Refresh] done in 130ms @ http://127.0.0.1:3112/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2477
+[  259600ms] [LOG] [Fast Refresh] rebuilding @ http://127.0.0.1:3112/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2477
+[  259611ms] [LOG] [Fast Refresh] done in 113ms @ http://127.0.0.1:3112/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2477
+[  263322ms] [LOG] [Fast Refresh] rebuilding @ http://127.0.0.1:3112/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2477
+[  263607ms] [LOG] [Fast Refresh] done in 387ms @ http://127.0.0.1:3112/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2477
+[  267468ms] [LOG] [Fast Refresh] rebuilding @ http://127.0.0.1:3112/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2477
+[  267492ms] [LOG] [Fast Refresh] done in 126ms @ http://127.0.0.1:3112/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2477
+[  511234ms] [LOG] [Fast Refresh] rebuilding @ http://127.0.0.1:3112/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2477
+[  511321ms] [LOG] [Fast Refresh] done in 188ms @ http://127.0.0.1:3112/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2477

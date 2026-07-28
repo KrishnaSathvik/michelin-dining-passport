@@ -1,0 +1,12 @@
+export type { EducationPageViewModel, EducationStarCardModel } from "./models";
+export { toEducationPageViewModel } from "./adapters";
+export { MichelinEducationPage } from "./MichelinEducationPage";
+export { EducationHero } from "./EducationHero";
+export { MichelinPrimer } from "./MichelinPrimer";
+export { HowStarsAwarded } from "./HowStarsAwarded";
+export { StarTimeline } from "./StarTimeline";
+export { IndependenceCallout } from "./IndependenceCallout";
+export { EducationStarCards } from "./EducationStarCards";
+export { EducationStarCard } from "./EducationStarCard";
+export { BeyondTheStars } from "./BeyondTheStars";
+export { EducationCtas } from "./EducationCtas";

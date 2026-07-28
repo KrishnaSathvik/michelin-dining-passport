@@ -1,0 +1,292 @@
+- generic [active] [ref=e1]:
+  - link "Skip to main content" [ref=e2] [cursor=pointer]:
+    - /url: "#main-content"
+  - banner [ref=e3]:
+    - generic [ref=e4]:
+      - generic [ref=e5]:
+        - link "Dining Passport" [ref=e6] [cursor=pointer]:
+          - /url: /
+        - navigation "Primary" [ref=e7]:
+          - link "Explore" [ref=e8] [cursor=pointer]:
+            - /url: /explore
+          - link "Map" [ref=e9] [cursor=pointer]:
+            - /url: /map
+          - link "Michelin Stars" [ref=e10] [cursor=pointer]:
+            - /url: /about-michelin-stars
+          - link "Passport" [ref=e11] [cursor=pointer]:
+            - /url: /passport
+      - generic [ref=e12]:
+        - link "Search restaurants" [ref=e13] [cursor=pointer]:
+          - /url: /explore
+        - link "Sign in" [ref=e17] [cursor=pointer]:
+          - /url: /login?next=/account
+  - main [ref=e18]:
+    - generic [ref=e20]:
+      - navigation "Breadcrumb" [ref=e21]:
+        - list [ref=e22]:
+          - listitem [ref=e23]:
+            - link "Home" [ref=e24] [cursor=pointer]:
+              - /url: /
+          - listitem [ref=e25]:
+            - generic [ref=e26]: /
+            - link "Explore" [ref=e27] [cursor=pointer]:
+              - /url: /explore
+          - listitem [ref=e28]:
+            - generic [ref=e29]: /
+            - generic [ref=e30]: Addison
+      - region [ref=e31]:
+        - img "Addison in San Diego" [ref=e34]:
+          - generic [ref=e35]:
+            - generic [ref=e36]:
+              - paragraph [ref=e37]: AD
+              - generic "Three Michelin Stars" [ref=e38]:
+                - generic [ref=e39]: ★★★
+                - generic [ref=e40]: 3 Michelin stars
+            - generic [ref=e41]:
+              - paragraph [ref=e42]: Addison
+              - paragraph [ref=e43]: San Diego
+        - generic [ref=e45]:
+          - link "3 Michelin stars Three Michelin Stars" [ref=e47] [cursor=pointer]:
+            - /url: /stars/3
+            - generic [ref=e48]:
+              - generic "Three Michelin Stars" [ref=e49]:
+                - generic [ref=e50]: ★★★
+                - generic [ref=e51]: 3 Michelin stars
+              - generic [ref=e52]: Three Michelin Stars
+          - heading "Addison" [level=1] [ref=e53]
+          - paragraph [ref=e54]:
+            - generic [ref=e55]: Contemporary
+            - generic [ref=e57]:
+              - generic [ref=e58]: •
+              - generic [ref=e59]: San Diego, CA
+            - generic [ref=e60]:
+              - generic [ref=e61]: •
+              - generic [ref=e62]: $$$$
+          - paragraph [ref=e63]: Fairmont Grand Del Mar, 5200 Grand Del Mar Way, San Diego, CA, 92130, USA
+          - generic [ref=e64]:
+            - link "Reserve a table (opens in a new tab) via restaurant" [ref=e65] [cursor=pointer]:
+              - /url: https://www.addisondelmar.com/reservations/
+              - generic [ref=e66]:
+                - text: Reserve a table ↗
+                - generic [ref=e67]: (opens in a new tab)
+              - generic [ref=e68]: via restaurant
+            - link "Official website (opens in a new tab)" [ref=e69] [cursor=pointer]:
+              - /url: https://www.addisondelmar.com/
+              - text: Official website
+              - generic [ref=e70]: (opens in a new tab)
+            - link "Get directions (opens in a new tab)" [ref=e71] [cursor=pointer]:
+              - /url: https://www.google.com/maps/search/?api=1&query=Addison%2C%20Fairmont%20Grand%20Del%20Mar%2C%205200%20Grand%20Del%20Mar%20Way%2C%20San%20Diego%2C%20CA%2C%2092130%2C%20USA
+              - text: Get directions
+              - generic [ref=e72]: (opens in a new tab)
+          - paragraph [ref=e73]:
+            - link "Michelin Guide reference (opens in a new tab)" [ref=e74] [cursor=pointer]:
+              - /url: https://guide.michelin.com/en/california/us-san-diego/restaurant/addison
+              - text: Michelin Guide reference
+              - generic [ref=e75]: (opens in a new tab)
+          - paragraph [ref=e77]: Loading your Passport…
+      - region [ref=e78]:
+        - paragraph [ref=e79]: At a glance
+        - heading "Details" [level=2] [ref=e80]
+        - generic [ref=e81]:
+          - generic [ref=e82]:
+            - term [ref=e83]: Michelin distinction
+            - definition [ref=e84]:
+              - generic [ref=e85]:
+                - generic "Three Michelin Stars" [ref=e86]:
+                  - generic [ref=e87]: ★★★
+                  - generic [ref=e88]: 3 Michelin stars
+                - generic [ref=e89]: Three Michelin Stars
+          - generic [ref=e90]:
+            - term [ref=e91]: Cuisine
+            - definition [ref=e92]:
+              - link "Contemporary" [ref=e93] [cursor=pointer]:
+                - /url: /cuisines/contemporary
+          - generic [ref=e94]:
+            - term [ref=e95]: Price
+            - definition [ref=e96]: $$$$
+          - generic [ref=e97]:
+            - term [ref=e98]: Destination
+            - definition [ref=e99]:
+              - link "San Diego, CA" [ref=e100] [cursor=pointer]:
+                - /url: /cities/san-diego
+          - generic [ref=e101]:
+            - term [ref=e102]: Address
+            - definition [ref=e103]: Fairmont Grand Del Mar, 5200 Grand Del Mar Way, San Diego, CA, 92130, USA
+          - generic [ref=e104]:
+            - term [ref=e105]: Reservations
+            - definition [ref=e106]: via restaurant
+      - region [ref=e107]:
+        - generic [ref=e108]:
+          - generic [ref=e109]:
+            - paragraph [ref=e110]: Find the table
+            - heading "Location" [level=2] [ref=e111]
+            - paragraph [ref=e112]: Fairmont Grand Del Mar, 5200 Grand Del Mar Way, San Diego, CA, 92130, USA
+          - generic [ref=e113]:
+            - link "Get directions (opens in a new tab)" [ref=e114] [cursor=pointer]:
+              - /url: https://www.google.com/maps/search/?api=1&query=Addison%2C%20Fairmont%20Grand%20Del%20Mar%2C%205200%20Grand%20Del%20Mar%20Way%2C%20San%20Diego%2C%20CA%2C%2092130%2C%20USA%2C%20San%20Diego%2C%20CA
+              - text: Get directions
+              - generic [ref=e115]: (opens in a new tab)
+            - link "Open full map" [ref=e116] [cursor=pointer]:
+              - /url: /map?selected=addison-san-diego-ca
+        - paragraph [ref=e117]: An interactive map is not available for this restaurant yet. Use the verified address above to open directions.
+      - region [ref=e118]:
+        - generic [ref=e119]:
+          - generic [ref=e120]: i
+          - heading "Current place information from Google" [level=2] [ref=e121]
+        - paragraph [ref=e122]: Current rating, hours, and phone information are provided by Google and may change. Google ratings remain separate from Michelin distinctions and from your private Passport.
+        - status "Loading Google place details" [ref=e124]:
+          - generic [ref=e132]: Loading Google place details…
+      - region [ref=e133]:
+        - heading "More Contemporary restaurants" [level=2] [ref=e134]
+        - generic [ref=e135]:
+          - article [ref=e136]:
+            - generic [ref=e137]:
+              - link "Open Atelier Crenn" [ref=e138] [cursor=pointer]:
+                - /url: /restaurants/atelier-crenn-san-francisco-ca
+                - img "Atelier Crenn in San Francisco, CA" [ref=e139]:
+                  - generic [ref=e140]:
+                    - generic [ref=e141]:
+                      - paragraph [ref=e142]: AC
+                      - generic "Three Michelin Stars" [ref=e143]:
+                        - generic [ref=e144]: ★★★
+                        - generic [ref=e145]: 3 Michelin stars
+                    - generic [ref=e146]:
+                      - paragraph [ref=e147]: Atelier Crenn
+                      - paragraph [ref=e148]: San Francisco, CA
+              - button "Save to passport" [disabled] [ref=e150]:
+                - generic [ref=e151]: ♡
+                - generic [ref=e152]: Not saved
+            - generic [ref=e153]:
+              - generic [ref=e154]:
+                - generic "Three Michelin Stars" [ref=e155]:
+                  - generic [ref=e156]: ★★★
+                  - generic [ref=e157]: 3 Michelin stars
+                - generic [ref=e158]: Three Michelin Stars
+              - heading [level=3] [ref=e159]:
+                - link "Atelier Crenn" [ref=e160] [cursor=pointer]:
+                  - /url: /restaurants/atelier-crenn-san-francisco-ca
+              - paragraph [ref=e161]:
+                - generic [ref=e162]: Contemporary
+                - generic [ref=e163]:
+                  - generic [ref=e164]: ·
+                  - text: San Francisco, CA
+                - generic [ref=e165]:
+                  - generic [ref=e166]: ·
+                  - text: $$$$
+              - link "Open details" [ref=e167] [cursor=pointer]:
+                - /url: /restaurants/atelier-crenn-san-francisco-ca
+          - article [ref=e168]:
+            - generic [ref=e169]:
+              - link "Open Eleven Madison Park" [ref=e170] [cursor=pointer]:
+                - /url: /restaurants/eleven-madison-park-new-york-ny
+                - img "Eleven Madison Park in New York, NY" [ref=e171]:
+                  - generic [ref=e172]:
+                    - generic [ref=e173]:
+                      - paragraph [ref=e174]: EM
+                      - generic "Three Michelin Stars" [ref=e175]:
+                        - generic [ref=e176]: ★★★
+                        - generic [ref=e177]: 3 Michelin stars
+                    - generic [ref=e178]:
+                      - paragraph [ref=e179]: Eleven Madison Park
+                      - paragraph [ref=e180]: New York, NY
+              - button "Save to passport" [disabled] [ref=e182]:
+                - generic [ref=e183]: ♡
+                - generic [ref=e184]: Not saved
+            - generic [ref=e185]:
+              - generic [ref=e186]:
+                - generic "Three Michelin Stars" [ref=e187]:
+                  - generic [ref=e188]: ★★★
+                  - generic [ref=e189]: 3 Michelin stars
+                - generic [ref=e190]: Three Michelin Stars
+              - heading [level=3] [ref=e191]:
+                - link "Eleven Madison Park" [ref=e192] [cursor=pointer]:
+                  - /url: /restaurants/eleven-madison-park-new-york-ny
+              - paragraph [ref=e193]:
+                - generic [ref=e194]: Contemporary
+                - generic [ref=e195]:
+                  - generic [ref=e196]: ·
+                  - text: New York, NY
+                - generic [ref=e197]:
+                  - generic [ref=e198]: ·
+                  - text: $$$$
+              - link "Open details" [ref=e199] [cursor=pointer]:
+                - /url: /restaurants/eleven-madison-park-new-york-ny
+          - article [ref=e200]:
+            - generic [ref=e201]:
+              - link "Open Enclos" [ref=e202] [cursor=pointer]:
+                - /url: /restaurants/enclos-sonoma-ca
+                - img "Enclos in Sonoma, CA" [ref=e203]:
+                  - generic [ref=e204]:
+                    - generic [ref=e205]:
+                      - paragraph [ref=e206]: EN
+                      - generic "Three Michelin Stars" [ref=e207]:
+                        - generic [ref=e208]: ★★★
+                        - generic [ref=e209]: 3 Michelin stars
+                    - generic [ref=e210]:
+                      - paragraph [ref=e211]: Enclos
+                      - paragraph [ref=e212]: Sonoma, CA
+              - button "Save to passport" [disabled] [ref=e214]:
+                - generic [ref=e215]: ♡
+                - generic [ref=e216]: Not saved
+            - generic [ref=e217]:
+              - generic [ref=e218]:
+                - generic "Three Michelin Stars" [ref=e219]:
+                  - generic [ref=e220]: ★★★
+                  - generic [ref=e221]: 3 Michelin stars
+                - generic [ref=e222]: Three Michelin Stars
+              - heading [level=3] [ref=e223]:
+                - link "Enclos" [ref=e224] [cursor=pointer]:
+                  - /url: /restaurants/enclos-sonoma-ca
+              - paragraph [ref=e225]:
+                - generic [ref=e226]: Contemporary
+                - generic [ref=e227]:
+                  - generic [ref=e228]: ·
+                  - text: Sonoma, CA
+                - generic [ref=e229]:
+                  - generic [ref=e230]: ·
+                  - text: $$$$
+              - link "Open details" [ref=e231] [cursor=pointer]:
+                - /url: /restaurants/enclos-sonoma-ca
+      - region [ref=e232]:
+        - heading "More restaurants in San Diego" [level=2] [ref=e233]
+        - paragraph [ref=e234]: Continue exploring Michelin-starred restaurants in the same destination.
+        - article [ref=e236]:
+          - generic [ref=e237]:
+            - generic "One Michelin Star" [ref=e239]:
+              - generic [ref=e240]: ★
+              - generic [ref=e241]: 1 Michelin star
+            - heading [level=3] [ref=e242]:
+              - link "Soichi" [ref=e243] [cursor=pointer]:
+                - /url: /restaurants/soichi-san-diego-ca
+            - paragraph [ref=e244]:
+              - generic [ref=e245]: Japanese
+              - generic [ref=e246]:
+                - generic [ref=e247]: ·
+                - text: San Diego, CA
+          - generic [ref=e248]:
+            - button "Save to passport" [disabled] [ref=e249]:
+              - generic [ref=e250]: ♡
+              - generic [ref=e251]: Not saved
+            - link "Open details" [ref=e252] [cursor=pointer]:
+              - /url: /restaurants/soichi-san-diego-ca
+  - contentinfo [ref=e253]:
+    - generic [ref=e254]:
+      - generic [ref=e255]:
+        - generic [ref=e256]:
+          - paragraph [ref=e257]: Dining Passport
+          - paragraph [ref=e258]: An independent atlas of Michelin-starred dining in the United States.
+          - paragraph [ref=e259]: Dining Passport is an independent discovery platform and is not affiliated with the Michelin Guide.
+          - paragraph [ref=e260]: Explore 271 Michelin-starred restaurants across 68 U.S. cities.
+        - navigation "Footer" [ref=e261]:
+          - link "Explore" [ref=e262] [cursor=pointer]:
+            - /url: /explore
+          - link "Map" [ref=e263] [cursor=pointer]:
+            - /url: /map
+          - link "Michelin Stars" [ref=e264] [cursor=pointer]:
+            - /url: /about-michelin-stars
+          - link "Passport" [ref=e265] [cursor=pointer]:
+            - /url: /passport
+          - link "Account" [ref=e266] [cursor=pointer]:
+            - /url: /account
+      - paragraph [ref=e267]: Independent platform. Not affiliated with, endorsed by, or connected to Michelin or the Michelin Guide. Michelin does not currently inspect every U.S. state. Absence from this atlas does not mean a region has been reviewed and found without stars.
+  - button "Open Next.js Dev Tools" [ref=e273] [cursor=pointer]

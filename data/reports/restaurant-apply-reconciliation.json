@@ -1,0 +1,25 @@
+{
+  "generatedAt": "2026-07-17T14:30:34+00:00",
+  "dryRun": true,
+  "sourceFile": "/Users/krishnasathvikmantripragada/michelin-dining-passport/data/restaurants.json",
+  "sourceChecksum": "cd1956517829d87423ea75be4dbf13e01bbd8aec929d2a985a0b6baa41d5b817",
+  "diffPath": "/private/var/folders/sd/6jxxrdkn6tn4tcqlh5g85yvh0000gn/T/mdp-apply-k3RhW0/diff.json",
+  "reconciliation": {
+    "previousCount": 271,
+    "nextCount": 271,
+    "preservedRemovedPendingReview": 0,
+    "awardsEvents": 0,
+    "starCounts": {
+      "oneStar": 216,
+      "twoStar": 39,
+      "threeStar": 16
+    },
+    "noop": true
+  },
+  "awardsEvents": [],
+  "notes": [
+    "User saves/visits/collections remain attached via preserved restaurant slugs/IDs.",
+    "removed_from_current_import rows are preserved pending developer review.",
+    "Approved geocode coordinates and verified reservation URLs are not modified by this command."
+  ]
+}

@@ -1,49 +1,154 @@
 @import "tailwindcss";
 
+/*
+ * Stitch design tokens (--dp-*) — single active presentation system (Phase 12).
+ * Tailwind @theme --color-* entries below are thin mappings onto --dp-* only.
+ * Do not recreate paper textures, grain, warm brown cards, or full-page beige blocks.
+ */
+
 :root {
-  --color-bg: #f7f3ec;
-  --color-bg-deep: #f3eee5;
-  --color-bg-elevated: #fffdf8;
-  --color-ink: #141210;
-  --color-ink-muted: #5c564e;
-  --color-forest: #1f3d2f;
-  --color-forest-deep: #163024;
-  --color-burgundy: #7a2e3a;
-  --color-gold: #b0893f;
-  --color-border: #e4ddd1;
-  --color-focus: #1f3d2f;
-  --color-paper-line: #d9d0c2;
+  /* —— Stitch tokens (canonical) —— */
+  --dp-bg: #fcf9f8;
+  --dp-surface: #ffffff;
+  --dp-soft: #f5f6f4;
+  --dp-surface-low: #f6f3f2;
+  --dp-surface-container: #f0edec;
+  --dp-surface-high: #ebe7e7;
+  --dp-surface-highest: #e5e2e1;
+  --dp-surface-dim: #dcd9d9;
 
-  --font-display: var(--font-instrument-serif), ui-serif, Georgia, serif;
+  --dp-ink: #1c1b1b;
+  --dp-ink-secondary: #414845;
+  --dp-ink-muted: #717975;
+  --dp-on-primary: #ffffff;
+
+  --dp-border: #e5e7e4;
+  --dp-outline: #717975;
+  --dp-outline-variant: #c0c8c3;
+
+  --dp-primary: #123b2f;
+  --dp-primary-deep: #00251b;
+  --dp-primary-hover: #0a2b21;
+  --dp-star-gold: #b88a2a;
+  --dp-burgundy: #7a1f2b;
+  --dp-secondary: #7c5800;
+  --dp-secondary-container: #ffc964;
+
+  --dp-error: #ba1a1a;
+  --dp-error-container: #ffdad6;
+  --dp-focus: #123b2f;
+
+  --dp-radius-sm: 2px;
+  --dp-radius-md: 4px;
+  --dp-radius-lg: 8px;
+  --dp-radius-xl: 12px;
+
+  --dp-space-1: 4px;
+  --dp-space-2: 8px;
+  --dp-space-3: 12px;
+  --dp-space-4: 16px;
+  --dp-space-5: 24px;
+  --dp-space-6: 32px;
+  --dp-space-7: 40px;
+  --dp-space-8: 48px;
+  --dp-space-9: 64px;
+  --dp-space-10: 80px;
+  --dp-margin-mobile: 20px;
+  --dp-margin-desktop: 64px;
+  --dp-gutter: 24px;
+  --dp-section: 80px;
+  --dp-content-max: 1280px;
+  --dp-header-height: 72px;
+  /* Compact Explore sticky search+filters (≤132px per explore redesign). */
+  --dp-explore-sticky-height: 132px;
+  --dp-control-height: 48px;
+  --dp-map-panel-width: 420px;
+  --dp-drawer-width: 400px;
+  --dp-modal-width: 520px;
+
+  --dp-shadow-hover: 0 4px 20px rgba(0, 0, 0, 0.04);
+  --dp-shadow-drawer: 0 8px 32px rgba(0, 0, 0, 0.08);
+
+  --dp-duration-fast: 150ms;
+  --dp-duration: 200ms;
+  --dp-duration-slow: 300ms;
+  --dp-ease: cubic-bezier(0.2, 0, 0, 1);
+
+  --z-base: 0;
+  --z-header: 50;
+  --z-map-controls: 40;
+  --z-drawer-backdrop: 60;
+  --z-drawer: 70;
+  --z-modal-backdrop: 80;
+  --z-modal: 90;
+  --z-toast: 100;
+  --z-skip: 110;
+
+  /* Display font: Literata (OD-03). font-display utility maps here. */
+  --font-display: var(--font-literata), ui-serif, Georgia, serif;
   --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
-
-  --radius-sm: 4px;
-  --radius-md: 6px;
-  --space-section: clamp(4rem, 8vw, 7rem);
-  --max-content: 72rem;
 }
 
 @theme inline {
-  --color-bg: #f7f3ec;
-  --color-bg-deep: #f3eee5;
-  --color-bg-elevated: #fffdf8;
-  --color-ink: #141210;
-  --color-ink-muted: #5c564e;
-  --color-forest: #1f3d2f;
-  --color-forest-deep: #163024;
-  --color-burgundy: #7a2e3a;
-  --color-gold: #b0893f;
-  --color-border: #e4ddd1;
-  --color-focus: #1f3d2f;
+  --color-dp-bg: var(--dp-bg);
+  --color-dp-surface: var(--dp-surface);
+  --color-dp-soft: var(--dp-soft);
+  --color-dp-surface-low: var(--dp-surface-low);
+  --color-dp-surface-highest: var(--dp-surface-highest);
+  --color-dp-ink: var(--dp-ink);
+  --color-dp-ink-secondary: var(--dp-ink-secondary);
+  --color-dp-ink-muted: var(--dp-ink-muted);
+  --color-dp-border: var(--dp-border);
+  --color-dp-outline: var(--dp-outline);
+  --color-dp-outline-variant: var(--dp-outline-variant);
+  --color-dp-surface-container: var(--dp-surface-container);
+  --color-dp-primary: var(--dp-primary);
+  --color-dp-primary-deep: var(--dp-primary-deep);
+  --color-dp-primary-hover: var(--dp-primary-hover);
+  --color-dp-star-gold: var(--dp-star-gold);
+  --color-dp-burgundy: var(--dp-burgundy);
+  --color-dp-secondary: var(--dp-secondary);
+  --color-dp-secondary-container: var(--dp-secondary-container);
+  --color-dp-error: var(--dp-error);
+  --color-dp-error-container: var(--dp-error-container);
+  --color-dp-focus: var(--dp-focus);
+  --color-dp-on-primary: var(--dp-on-primary);
+
   --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
-  --font-display: var(--font-instrument-serif), ui-serif, Georgia, serif;
-  --radius-sm: 4px;
-  --radius-md: 6px;
+  --font-display: var(--font-literata), ui-serif, Georgia, serif;
+
+  --radius-dp-sm: var(--dp-radius-sm);
+  --radius-dp-md: var(--dp-radius-md);
+  --radius-dp-lg: var(--dp-radius-lg);
+
+  /*
+   * Convenience Tailwind mappings → Stitch tokens only.
+   * Prefer bg-dp-* / text-dp-* in new code. These exist so migrated surfaces
+   * that still use bg-bg / text-ink / border-border resolve to --dp-*.
+   */
+  --color-bg: var(--dp-bg);
+  --color-bg-deep: var(--dp-soft);
+  --color-bg-elevated: var(--dp-surface);
+  --color-surface-soft: var(--dp-soft);
+  --color-ink: var(--dp-ink);
+  --color-ink-secondary: var(--dp-ink-secondary);
+  --color-ink-muted: var(--dp-ink-muted);
+  --color-forest: var(--dp-primary);
+  --color-forest-deep: var(--dp-primary-deep);
+  --color-burgundy: var(--dp-burgundy);
+  --color-gold: var(--dp-star-gold);
+  --color-border: var(--dp-border);
+  --color-focus: var(--dp-focus);
+  --radius-sm: var(--dp-radius-sm);
+  --radius-md: var(--dp-radius-md);
+  --radius-lg: var(--dp-radius-lg);
 }
 
 @layer base {
   html {
     scroll-behavior: smooth;
+    overflow-x: clip;
+    max-width: 100%;
   }
 
   @media (prefers-reduced-motion: reduce) {
@@ -61,21 +166,26 @@
   }
 
   body {
-    background:
-      radial-gradient(
-        ellipse 120% 60% at 10% -10%,
-        rgba(176, 137, 63, 0.07),
-        transparent 55%
-      ),
-      linear-gradient(180deg, var(--color-bg) 0%, var(--color-bg-deep) 100%);
-    color: var(--color-ink);
+    background: var(--dp-bg);
+    color: var(--dp-ink);
     font-family: var(--font-sans);
+    font-size: 16px;
+    line-height: 1.5;
     min-height: 100%;
+    overflow-x: clip;
+    max-width: 100%;
+  }
+
+  /* Keep major layout shells from forcing horizontal scroll on narrow phones. */
+  #__next,
+  main {
+    max-width: 100%;
+    min-width: 0;
   }
 
   ::selection {
-    background: color-mix(in srgb, var(--color-forest) 18%, white);
-    color: var(--color-ink);
+    background: color-mix(in srgb, var(--dp-primary) 18%, white);
+    color: var(--dp-ink);
   }
 
   a {
@@ -85,7 +195,7 @@
   }
 
   :focus-visible {
-    outline: 2px solid var(--color-focus);
+    outline: 2px solid var(--dp-focus);
     outline-offset: 3px;
   }
 }
@@ -95,36 +205,83 @@
     font-family: var(--font-display);
   }
 
-  .container-editorial {
-    margin-inline: auto;
-    width: min(100% - 2rem, var(--max-content));
+  /* Stitch type scale */
+  .dp-display-lg {
+    font-family: var(--font-display);
+    font-size: 48px;
+    font-weight: 400;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
   }
 
-  @media (min-width: 768px) {
-    .container-editorial {
-      width: min(100% - 3rem, var(--max-content));
-    }
+  .dp-display-lg-mobile {
+    font-family: var(--font-display);
+    font-size: 36px;
+    font-weight: 400;
+    line-height: 1.1;
+    letter-spacing: -0.01em;
   }
 
-  .section-space {
-    padding-block: var(--space-section);
+  .dp-headline-md {
+    font-family: var(--font-display);
+    font-size: 32px;
+    font-weight: 400;
+    line-height: 1.2;
   }
 
-  .paper-texture {
-    background-image:
-      linear-gradient(
-        135deg,
-        rgba(20, 18, 16, 0.015) 0%,
-        transparent 40%,
-        rgba(122, 46, 58, 0.03) 100%
-      ),
-      repeating-linear-gradient(
-        0deg,
-        transparent,
-        transparent 11px,
-        rgba(217, 208, 194, 0.35) 11px,
-        rgba(217, 208, 194, 0.35) 12px
-      );
+  .dp-headline-sm {
+    font-family: var(--font-display);
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 1.3;
+  }
+
+  .dp-body-lg {
+    font-family: var(--font-sans);
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.6;
+  }
+
+  .dp-body-md {
+    font-family: var(--font-sans);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5;
+  }
+
+  .dp-meta {
+    font-family: var(--font-sans);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.4;
+  }
+
+  .dp-label-caps {
+    font-family: var(--font-sans);
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 1;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  .dp-surface {
+    background: var(--dp-surface);
+    color: var(--dp-ink);
+  }
+
+  .dp-canvas {
+    background: var(--dp-bg);
+    color: var(--dp-ink);
+  }
+
+  .dp-soft {
+    background: var(--dp-soft);
+  }
+
+  .dp-border {
+    border: 1px solid var(--dp-border);
   }
 
   .rise-in {

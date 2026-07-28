@@ -6,14 +6,38 @@ import { safeInternalPath } from "@/lib/auth/redirect";
 import { getSiteUrl, isGoogleAuthEnabled } from "@/lib/supabase/env";
 import { createClient } from "@/lib/supabase/server";
 
+export type AuthField = "email" | "password" | "displayName";
+
+export type AuthFieldErrors = Partial<Record<AuthField, string>>;
+
 export type AuthActionState = {
   ok: boolean;
   message: string;
+  /** Per-field messages rendered beside the offending input. */
+  fieldErrors?: AuthFieldErrors;
+  /**
+   * Signup only: the account was created but needs email confirmation before
+   * a session exists, so the form shows a confirmation state in place.
+   */
+  status?: "check-email";
+  email?: string;
 };
 
 function formString(formData: FormData, key: string): string {
   const value = formData.get(key);
   return typeof value === "string" ? value.trim() : "";
+}
+
+/**
+ * Deliberately permissive: the authoritative check is whether the address can
+ * receive mail. This only catches obvious typos before a network round trip.
+ */
+function looksLikeEmail(value: string): boolean {
+  return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value);
+}
+
+function hasFieldErrors(errors: AuthFieldErrors): boolean {
+  return Object.keys(errors).length > 0;
 }
 
 export async function signUpAction(
@@ -25,19 +49,28 @@ export async function signUpAction(
   const displayName = formString(formData, "displayName");
   const next = safeInternalPath(formString(formData, "next"), "/passport");
 
-  if (!email || !password) {
-    return { ok: false, message: "Email and password are required." };
+  const fieldErrors: AuthFieldErrors = {};
+  if (!email) {
+    fieldErrors.email = "Enter your email address.";
+  } else if (!looksLikeEmail(email)) {
+    fieldErrors.email = "Enter a valid email address.";
   }
-  if (password.length < 8) {
-    return {
-      ok: false,
-      message: "Choose a stronger password (at least 8 characters).",
-    };
+  if (!password) {
+    fieldErrors.password = "Choose a password.";
+  } else if (password.length < 8) {
+    fieldErrors.password = "Use at least 8 characters.";
+  }
+  if (displayName.length > 60) {
+    fieldErrors.displayName = "Use 60 characters or fewer.";
+  }
+  if (hasFieldErrors(fieldErrors)) {
+    return { ok: false, message: "", fieldErrors };
   }
 
+  let needsConfirmation = false;
   try {
     const supabase = await createClient();
-    const { error } = await supabase.auth.signUp({
+    const { data, error } = await supabase.auth.signUp({
       email,
       password,
       options: {
@@ -51,6 +84,8 @@ export async function signUpAction(
         message: authErrorMessage(error, "Unable to create account."),
       };
     }
+    // Supabase only returns a session when email confirmation is disabled.
+    needsConfirmation = !data.session;
   } catch {
     return {
       ok: false,
@@ -58,7 +93,11 @@ export async function signUpAction(
     };
   }
 
-  redirect(`/login?verify=1&next=${encodeURIComponent(next)}`);
+  if (needsConfirmation) {
+    return { ok: true, message: "", status: "check-email", email };
+  }
+
+  redirect(next);
 }
 
 export async function signInAction(
@@ -69,8 +108,11 @@ export async function signInAction(
   const password = formString(formData, "password");
   const next = safeInternalPath(formString(formData, "next"), "/passport");
 
-  if (!email || !password) {
-    return { ok: false, message: "Email and password are required." };
+  const fieldErrors: AuthFieldErrors = {};
+  if (!email) fieldErrors.email = "Enter your email address.";
+  if (!password) fieldErrors.password = "Enter your password.";
+  if (hasFieldErrors(fieldErrors)) {
+    return { ok: false, message: "", fieldErrors };
   }
 
   try {
@@ -101,7 +143,15 @@ export async function magicLinkAction(
 ): Promise<AuthActionState> {
   const email = formString(formData, "email");
   const next = safeInternalPath(formString(formData, "next"), "/passport");
-  if (!email) return { ok: false, message: "Email is required." };
+  if (!email || !looksLikeEmail(email)) {
+    return {
+      ok: false,
+      message: "",
+      fieldErrors: {
+        email: email ? "Enter a valid email address." : "Enter your email address.",
+      },
+    };
+  }
 
   try {
     const supabase = await createClient();
@@ -135,7 +185,15 @@ export async function forgotPasswordAction(
   formData: FormData,
 ): Promise<AuthActionState> {
   const email = formString(formData, "email");
-  if (!email) return { ok: false, message: "Email is required." };
+  if (!email || !looksLikeEmail(email)) {
+    return {
+      ok: false,
+      message: "",
+      fieldErrors: {
+        email: email ? "Enter a valid email address." : "Enter your email address.",
+      },
+    };
+  }
 
   try {
     const supabase = await createClient();
@@ -193,7 +251,10 @@ export async function updatePasswordAction(
   if (password.length < 8) {
     return {
       ok: false,
-      message: "Choose a stronger password (at least 8 characters).",
+      message: "",
+      fieldErrors: {
+        password: password ? "Use at least 8 characters." : "Choose a password.",
+      },
     };
   }
 
@@ -217,7 +278,12 @@ export async function updatePasswordAction(
     };
   }
 
-  redirect("/account?password=updated");
+  // Return success so the reset form can show the Stitch completion state.
+  // Account password updates still redirect via updatePasswordFormAction.
+  return {
+    ok: true,
+    message: "Your password has been successfully updated.",
+  };
 }
 
 export async function signOutAction(): Promise<void> {

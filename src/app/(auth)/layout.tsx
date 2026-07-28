@@ -1,19 +1,10 @@
-import { SiteFooter } from "@/components/layout/SiteFooter";
-import { SiteHeader } from "@/components/layout/SiteHeader";
-import { Container } from "@/components/layout/Container";
+import type { ReactNode } from "react";
+import { AuthShell } from "@/components/stitch/auth/AuthShell";
 
-export default function AuthLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
-  return (
-    <>
-      <SiteHeader />
-      <main className="py-12 sm:py-16">
-        <Container>{children}</Container>
-      </main>
-      <SiteFooter />
-    </>
-  );
+/**
+ * Auth route group uses Stitch AuthShell.
+ * Global AppChrome suppresses AppHeader/SiteFooter on these paths.
+ */
+export default function AuthLayout({ children }: { children: ReactNode }) {
+  return <AuthShell>{children}</AuthShell>;
 }

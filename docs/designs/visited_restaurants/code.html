@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Dining History - Dining Passport</title>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Literata:opsz,wght@7..72,400;500;700&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "secondary-fixed-dim": "#f3be5a",
+                      "on-secondary-container": "#765400",
+                      "secondary": "#7c5800",
+                      "error-container": "#ffdad6",
+                      "tertiary-fixed": "#ffdada",
+                      "secondary-fixed": "#ffdea7",
+                      "on-primary-container": "#7ca596",
+                      "on-primary": "#ffffff",
+                      "on-tertiary": "#ffffff",
+                      "error": "#ba1a1a",
+                      "surface-dim": "#dcd9d9",
+                      "secondary-container": "#ffc964",
+                      "surface-container": "#f0edec",
+                      "surface-container-highest": "#e5e2e1",
+                      "inverse-on-surface": "#f3f0ef",
+                      "surface-container-high": "#ebe7e7",
+                      "on-primary-fixed-variant": "#274e41",
+                      "on-tertiary-fixed": "#40000c",
+                      "outline-variant": "#c0c8c3",
+                      "on-secondary-fixed": "#271900",
+                      "surface-variant": "#e5e2e1",
+                      "surface": "#fcf9f8",
+                      "on-primary-fixed": "#002118",
+                      "primary": "#00251b",
+                      "tertiary-container": "#68111f",
+                      "primary-fixed-dim": "#a5d0bf",
+                      "on-error": "#ffffff",
+                      "on-surface-variant": "#414845",
+                      "on-secondary": "#ffffff",
+                      "on-error-container": "#93000a",
+                      "on-tertiary-fixed-variant": "#822530",
+                      "inverse-primary": "#a5d0bf",
+                      "primary-container": "#123b2f",
+                      "outline": "#717975",
+                      "surface-bright": "#fcf9f8",
+                      "background": "#fcf9f8",
+                      "on-tertiary-container": "#ef7881",
+                      "on-secondary-fixed-variant": "#5e4200",
+                      "inverse-surface": "#313030",
+                      "on-background": "#1c1b1b",
+                      "surface-container-lowest": "#ffffff",
+                      "tertiary-fixed-dim": "#ffb3b5",
+                      "surface-container-low": "#f6f3f2",
+                      "primary-fixed": "#c1ecda",
+                      "surface-tint": "#3f6658",
+                      "tertiary": "#47000e",
+                      "on-surface": "#1c1b1b"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.125rem",
+                      "lg": "0.25rem",
+                      "xl": "0.5rem",
+                      "full": "0.75rem"
+              },
+              "spacing": {
+                      "margin-mobile": "20px",
+                      "gutter": "24px",
+                      "container-max-width": "1280px",
+                      "unit": "8px",
+                      "section-padding": "80px",
+                      "margin-desktop": "64px"
+              },
+              "fontFamily": {
+                      "meta-data": ["Inter"],
+                      "body-md": ["Inter"],
+                      "display-lg-mobile": ["Literata"],
+                      "display-lg": ["Literata"],
+                      "headline-md": ["Literata"],
+                      "label-caps": ["Inter"],
+                      "body-lg": ["Inter"],
+                      "headline-sm": ["Literata"]
+              },
+              "fontSize": {
+                      "meta-data": ["14px", {"lineHeight": "1.4", "fontWeight": "400"}],
+                      "body-md": ["16px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                      "display-lg-mobile": ["36px", {"lineHeight": "1.1", "letterSpacing": "-0.01em", "fontWeight": "400"}],
+                      "display-lg": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "400"}],
+                      "headline-md": ["32px", {"lineHeight": "1.2", "fontWeight": "400"}],
+                      "label-caps": ["12px", {"lineHeight": "1", "letterSpacing": "0.08em", "fontWeight": "600"}],
+                      "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                      "headline-sm": ["24px", {"lineHeight": "1.3", "fontWeight": "500"}]
+              }
+            }
+          }
+        }
+    </script>
+<style>
+        .custom-hover-shadow:hover {
+            box-shadow: 0px 4px 20px rgba(0,0,0,0.04);
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body-md antialiased min-h-screen flex flex-col">
+<!-- TopNavBar -->
+<header class="fixed top-0 w-full h-[72px] bg-surface border-b border-outline-variant z-50">
+<div class="flex justify-between items-center px-margin-desktop w-full max-w-container-max-width mx-auto h-full">
+<div class="font-headline-sm text-headline-sm font-bold text-primary">
+                Dining Passport
+            </div>
+<nav class="hidden md:flex space-x-8 h-full items-center">
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors duration-200" href="#">Explore</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors duration-200" href="#">Map</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors duration-200" href="#">Michelin Stars</a>
+<a class="font-body-md text-body-md text-primary border-b-2 border-secondary font-semibold pb-1 flex items-center h-full mt-[2px]" href="#">Passport</a>
+</nav>
+<div class="flex items-center space-x-4">
+<button aria-label="Profile" class="text-on-surface-variant hover:text-secondary transition-colors duration-200">
+<span class="material-symbols-outlined">person</span>
+</button>
+</div>
+</div>
+</header>
+<!-- Main Content -->
+<main class="flex-grow pt-[72px] pb-section-padding px-margin-desktop w-full max-w-container-max-width mx-auto">
+<!-- Header Section -->
+<div class="mt-8 mb-12">
+<nav aria-label="Breadcrumb" class="mb-4">
+<ol class="flex items-center space-x-2 text-on-surface-variant font-meta-data text-meta-data">
+<li><a class="hover:text-primary transition-colors" href="#">Home</a></li>
+<li><span class="mx-1">/</span></li>
+<li><a class="hover:text-primary transition-colors" href="#">Passport</a></li>
+<li><span class="mx-1">/</span></li>
+<li aria-current="page" class="text-primary">Visited</li>
+</ol>
+</nav>
+<h1 class="font-display-lg text-display-lg text-primary mb-4">Dining History</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">A record of every star, flavor, and memory.</p>
+</div>
+<!-- Controls Section -->
+<div class="flex flex-col md:flex-row justify-between items-end mb-8 space-y-4 md:space-y-0">
+<div class="text-on-surface-variant font-meta-data text-meta-data">
+                12 Restaurants
+            </div>
+<div class="flex items-center space-x-4 w-full md:w-auto">
+<!-- Search -->
+<div class="relative w-full md:w-64">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline">search</span>
+<input class="w-full h-[48px] pl-10 pr-4 bg-surface-container-lowest border border-outline-variant rounded focus:border-secondary focus:ring-1 focus:ring-secondary font-body-md text-body-md text-on-surface placeholder:text-outline transition-colors outline-none" placeholder="Search visits..." type="text"/>
+</div>
+<!-- Filters -->
+<select class="h-[48px] px-4 bg-surface-container-lowest border border-outline-variant rounded font-body-md text-body-md text-on-surface focus:border-secondary focus:ring-1 focus:ring-secondary outline-none cursor-pointer">
+<option value="">All States</option>
+<option value="NY">New York</option>
+<option value="CA">California</option>
+<option value="IL">Illinois</option>
+</select>
+<select class="h-[48px] px-4 bg-surface-container-lowest border border-outline-variant rounded font-body-md text-body-md text-on-surface focus:border-secondary focus:ring-1 focus:ring-secondary outline-none cursor-pointer">
+<option value="">All Stars</option>
+<option value="3">3 Stars</option>
+<option value="2">2 Stars</option>
+<option value="1">1 Star</option>
+<option value="green">Green Star</option>
+</select>
+<!-- Sort -->
+<div class="flex items-center ml-4 border-l border-outline-variant pl-4">
+<label class="sr-only" for="sort-select">Sort by</label>
+<select class="h-[48px] px-4 bg-surface-container-lowest border border-outline-variant rounded font-body-md text-body-md text-on-surface focus:border-secondary focus:ring-1 focus:ring-secondary outline-none cursor-pointer" id="sort-select">
+<option value="date-desc">Visit Date (Newest)</option>
+<option value="date-asc">Visit Date (Oldest)</option>
+<option value="name-asc">Name (A-Z)</option>
+</select>
+</div>
+</div>
+</div>
+<!-- Grid Content -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter">
+<!-- Card 1 -->
+<article class="bg-surface-container-lowest border border-outline-variant rounded-lg overflow-hidden flex flex-col custom-hover-shadow transition-shadow duration-300 relative group">
+<div class="relative w-full aspect-[4/3]">
+<img class="w-full h-full object-cover" data-alt="A masterfully plated dish featuring a delicate, translucent slice of aged kingfish draped over preserved white asparagus, garnished with tiny edible flowers and a vibrant green herb oil dotted across a pristine white ceramic plate. The lighting is bright and ethereal, casting soft, diffused shadows that evoke a high-end, minimalist editorial aesthetic in a luxurious sunlit dining room. The mood is calm, sophisticated, and impeccably clean." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC-9yXkM7iemTuedqLImG9lcFlGAzBjgYYC2Dfl2F1NCkEAWUNjsZ5dkyxwjmJag6TwrP8wJF2ZmRAsjx4jwCecduSu5drL2Uz1S04xY3cDW7HZQYHjinmVJfGWVjpKYfwPmP_AMLJc7-ICvqaJnmMvYYbb_6gRnWt7XXDP2fye95NO-olkwgAA8iHH_EBNaY7v-h-YUOWtJ5IWZ_OdeCkVW5_NIlWVDjHUY3ZhBlDgjuOzQFRDPkXCC1CUfcnUwIJdCPv12gJVY4c"/>
+<button aria-label="Toggle Favorite" class="absolute top-4 right-4 text-on-surface hover:text-tertiary-container transition-colors bg-surface-container-lowest/80 backdrop-blur-sm rounded-full p-2 flex items-center justify-center">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">favorite</span>
+</button>
+<div class="absolute bottom-4 left-4 flex gap-2">
+<span class="h-[24px] px-2 inline-flex items-center bg-secondary-fixed text-on-secondary-fixed font-label-caps text-label-caps rounded">3 STARS</span>
+</div>
+</div>
+<div class="p-gutter flex flex-col flex-grow">
+<div class="flex justify-between items-start mb-2">
+<h2 class="font-headline-sm text-headline-sm text-primary group-hover:text-secondary transition-colors">Le Bernardin</h2>
+</div>
+<div class="font-meta-data text-meta-data text-on-surface-variant mb-4 flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px]">location_on</span>
+                        New York, NY • Visited Oct 12, 2023
+                    </div>
+<div class="mb-6 flex-grow">
+<p class="font-meta-data text-meta-data text-on-surface-variant italic border-l-2 border-outline-variant pl-3">
+                            "The lightly seared yellowfin tuna with foie gras on a toasted baguette was an absolute revelation."
+                        </p>
+</div>
+<div class="flex items-center justify-between pt-4 border-t border-surface-variant mt-auto">
+<div class="flex gap-3 text-outline">
+<span class="material-symbols-outlined cursor-help" title="Journal Notes Added">edit_document</span>
+<span class="material-symbols-outlined cursor-help" title="Photos Added">photo_camera</span>
+</div>
+<button class="font-meta-data text-meta-data font-medium text-primary hover:text-secondary transition-colors">Edit visit</button>
+</div>
+</div>
+</article>
+<!-- Card 2 -->
+<article class="bg-surface-container-lowest border border-outline-variant rounded-lg overflow-hidden flex flex-col custom-hover-shadow transition-shadow duration-300 relative group">
+<div class="relative w-full aspect-[4/3]">
+<img class="w-full h-full object-cover" data-alt="A dark, moody, and highly textural shot of a robust, slow-braised short rib resting in a deep burgundy reduction sauce. The dish is presented in an earthy, dark charcoal bowl, resting on a rustic wooden table. Warm, directional spotlighting highlights the glossy finish of the sauce and the tender grain of the meat. The atmosphere exudes a sense of heritage, warmth, and quiet culinary mastery." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBnpoGQeGlHiMt-p_T_lBQ5ZY1tD2Qjs4kU5MZmr32imw6Lh2nSvTPp3Qz7HZG09Nhj_ffsRYr4dciSHvts6IEtxk-c4PY5KQ_olL72GDiYuVk9IV6sUXep6Dpftk647J9T1NXDsAxBejDbhHEzIyvr4KFFp6olG2os8y3dMcCZQbfOySkdpMW4Is1UKvc7_fkn-b93RIILGIRknLzYgHeYOv40lJ6q0kGLDdiQMrvQrnkcV9bkuzxLOyoo0C36K-WKric5127VtvE"/>
+<button aria-label="Toggle Favorite" class="absolute top-4 right-4 text-surface hover:text-tertiary-container transition-colors bg-surface-container-lowest/20 backdrop-blur-sm rounded-full p-2 flex items-center justify-center">
+<span class="material-symbols-outlined">favorite</span>
+</button>
+<div class="absolute bottom-4 left-4 flex gap-2">
+<span class="h-[24px] px-2 inline-flex items-center bg-secondary-fixed text-on-secondary-fixed font-label-caps text-label-caps rounded">2 STARS</span>
+</div>
+</div>
+<div class="p-gutter flex flex-col flex-grow">
+<div class="flex justify-between items-start mb-2">
+<h2 class="font-headline-sm text-headline-sm text-primary group-hover:text-secondary transition-colors">Providence</h2>
+</div>
+<div class="font-meta-data text-meta-data text-on-surface-variant mb-4 flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px]">location_on</span>
+                        Los Angeles, CA • Visited Sep 05, 2023
+                    </div>
+<div class="mb-6 flex-grow">
+<p class="font-meta-data text-meta-data text-on-surface-variant italic border-l-2 border-outline-variant pl-3">
+                            "Impeccable progression. The uni egg with champagne beurre blanc remains a defining culinary memory."
+                        </p>
+</div>
+<div class="flex items-center justify-between pt-4 border-t border-surface-variant mt-auto">
+<div class="flex gap-3 text-outline">
+<span class="material-symbols-outlined cursor-help" title="Journal Notes Added">edit_document</span>
+</div>
+<button class="font-meta-data text-meta-data font-medium text-primary hover:text-secondary transition-colors">Edit visit</button>
+</div>
+</div>
+</article>
+<!-- Card 3 -->
+<article class="bg-surface-container-lowest border border-outline-variant rounded-lg overflow-hidden flex flex-col custom-hover-shadow transition-shadow duration-300 relative group">
+<div class="relative w-full aspect-[4/3]">
+<img class="w-full h-full object-cover" data-alt="An intricately arranged assortment of vibrant, hyper-seasonal vegetables, tiny roots, and edible blooms placed deliberately on a smooth, dark slate slab. The composition looks like an abstract painting, utilizing a minimalist, light-mode aesthetic with bright, natural daylight illuminating the vibrant greens, purples, and yellows. The overall style is highly refined, celebrating nature's raw beauty with editorial precision." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBXVaWuOtbBvDpFRC4SAfKs1qil1HknU28yPcOcd-RVclmGkxX4TmoVDaH462acQ0GWfg13sp5sBZovI2yi36hjAK7HxREZ1-949Alomfe_Q-chEU2ft7K2dGlIt8TrZ3TFa8qJw959gUswhEd5KsjECWcn_3sgR868mZEb2EeUHVbKK4oG_d4eT6MpxWZVFg25Qx2VuIA5IHf95rUB68m4COYX-iuYLkXrhwHVHGbxpgKYPDkr3vsraRcEDVdlHNj22R0qaJgSrbw"/>
+<button aria-label="Toggle Favorite" class="absolute top-4 right-4 text-on-surface hover:text-tertiary-container transition-colors bg-surface-container-lowest/80 backdrop-blur-sm rounded-full p-2 flex items-center justify-center">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">favorite</span>
+</button>
+<div class="absolute bottom-4 left-4 flex gap-2">
+<span class="h-[24px] px-2 inline-flex items-center bg-primary-fixed text-on-primary-fixed font-label-caps text-label-caps rounded">GREEN STAR</span>
+<span class="h-[24px] px-2 inline-flex items-center bg-secondary-fixed text-on-secondary-fixed font-label-caps text-label-caps rounded">3 STARS</span>
+</div>
+</div>
+<div class="p-gutter flex flex-col flex-grow">
+<div class="flex justify-between items-start mb-2">
+<h2 class="font-headline-sm text-headline-sm text-primary group-hover:text-secondary transition-colors">SingleThread</h2>
+</div>
+<div class="font-meta-data text-meta-data text-on-surface-variant mb-4 flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px]">location_on</span>
+                        Healdsburg, CA • Visited Jul 22, 2023
+                    </div>
+<div class="mb-6 flex-grow">
+<p class="font-meta-data text-meta-data text-on-surface-variant italic border-l-2 border-outline-variant pl-3">
+                            "The mid-summer flora presentation was visually stunning. Deeply connected to their farm."
+                        </p>
+</div>
+<div class="flex items-center justify-between pt-4 border-t border-surface-variant mt-auto">
+<div class="flex gap-3 text-outline">
+<span class="material-symbols-outlined cursor-help" title="Journal Notes Added">edit_document</span>
+<span class="material-symbols-outlined cursor-help" title="Photos Added">photo_camera</span>
+</div>
+<button class="font-meta-data text-meta-data font-medium text-primary hover:text-secondary transition-colors">Edit visit</button>
+</div>
+</div>
+</article>
+<!-- Card 4 -->
+<article class="bg-surface-container-lowest border border-outline-variant rounded-lg overflow-hidden flex flex-col custom-hover-shadow transition-shadow duration-300 relative group">
+<div class="relative w-full aspect-[4/3]">
+<img class="w-full h-full object-cover" data-alt="A minimalist overhead view of a single, perfectly formed tortellini resting in a crystal-clear, golden consommé inside a wide, shallow white bowl. The broth catches the light brilliantly, emphasizing a bright, immaculate, and sophisticated light-mode aesthetic. The setting is clean and unadorned, putting absolute focus on the flawless execution and quiet luxury of the dish." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDOyihvZTJKT5Zim97H7oGEOhUCJU9UBeYHvTlBlzX885esJ8EHBa0FwoscF66nKK0K9w-3zF7dqX6cW32IGQfWEexQlCXa-ACJDCNLz-p1UUcGjpiYb_mcBadk5beyrvZCMKtZBW1xIKENyla76LRFvs4ZgQxLCNNbQ0myzvDSqwjDwoH4q0ApeG-pgGxxy9Itjh0dptY_5W9iULxmn9SZJmo1n-u2EGvRjGzw78-ZKX_gDCWz215wyz5HLzaoLGLL3mOi6fC6JV0"/>
+<button aria-label="Toggle Favorite" class="absolute top-4 right-4 text-surface hover:text-tertiary-container transition-colors bg-surface-container-lowest/20 backdrop-blur-sm rounded-full p-2 flex items-center justify-center">
+<span class="material-symbols-outlined">favorite</span>
+</button>
+<div class="absolute bottom-4 left-4 flex gap-2">
+<span class="h-[24px] px-2 inline-flex items-center bg-secondary-fixed text-on-secondary-fixed font-label-caps text-label-caps rounded">3 STARS</span>
+</div>
+</div>
+<div class="p-gutter flex flex-col flex-grow">
+<div class="flex justify-between items-start mb-2">
+<h2 class="font-headline-sm text-headline-sm text-primary group-hover:text-secondary transition-colors">Alinea</h2>
+</div>
+<div class="font-meta-data text-meta-data text-on-surface-variant mb-4 flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px]">location_on</span>
+                        Chicago, IL • Visited May 14, 2023
+                    </div>
+<div class="mb-6 flex-grow">
+<p class="font-meta-data text-meta-data text-on-surface-variant italic border-l-2 border-outline-variant pl-3">
+                            "Theatrical, challenging, and perfectly executed. The helium apple balloon remains iconic."
+                        </p>
+</div>
+<div class="flex items-center justify-between pt-4 border-t border-surface-variant mt-auto">
+<div class="flex gap-3 text-outline">
+<span class="material-symbols-outlined cursor-help" title="Journal Notes Added">edit_document</span>
+</div>
+<button class="font-meta-data text-meta-data font-medium text-primary hover:text-secondary transition-colors">Edit visit</button>
+</div>
+</div>
+</article>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-low w-full py-section-padding mt-auto">
+<div class="flex flex-col items-center justify-center space-y-gutter px-margin-desktop w-full max-w-container-max-width mx-auto">
+<div class="font-headline-sm text-headline-sm text-primary mb-4">
+                Dining Passport
+            </div>
+<nav class="flex flex-wrap justify-center gap-6 mb-8">
+<a class="font-meta-data text-meta-data text-on-surface-variant hover:text-secondary transition-colors cursor-pointer" href="#">Explore</a>
+<a class="font-meta-data text-meta-data text-on-surface-variant hover:text-secondary transition-colors cursor-pointer" href="#">Map</a>
+<a class="font-meta-data text-meta-data text-on-surface-variant hover:text-secondary transition-colors cursor-pointer" href="#">About Michelin Stars</a>
+<a class="font-meta-data text-meta-data text-on-surface-variant hover:text-secondary transition-colors cursor-pointer" href="#">Privacy</a>
+<a class="font-meta-data text-meta-data text-on-surface-variant hover:text-secondary transition-colors cursor-pointer" href="#">Terms</a>
+</nav>
+<p class="font-meta-data text-meta-data text-on-surface-variant opacity-80 text-center max-w-md text-[12px]">
+                Independent discovery platform. Not affiliated with the Michelin Guide.
+            </p>
+</div>
+</footer>
+</body></html>
