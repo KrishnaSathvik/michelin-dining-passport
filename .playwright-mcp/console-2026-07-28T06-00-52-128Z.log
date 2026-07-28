@@ -1,0 +1,14 @@
+[    1447ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2477
+[    1472ms] [LOG] [HMR] connected @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2477
+[    1601ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2477
+[    2052ms] [LOG] [Fast Refresh] done in 553ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2477
+[    8591ms] [INFO] [google-places-ui-kit] query-intent {page: related_restaurant, componentType: compact, restaurantSlug: restaurant-naides-san-francisco-ca, placeIdSuffix: Inz8tBdk, timestamp: 2026-07-28T06:01:00.718Z} @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2477
+[    9408ms] [INFO] [google-places-ui-kit] query-intent {page: related_restaurant, componentType: compact, restaurantSlug: smyth-chicago-il, placeIdSuffix: yFUKauHc, timestamp: 2026-07-28T06:01:01.535Z} @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2477
+[    9409ms] [INFO] [google-places-ui-kit] query-intent {page: related_restaurant, componentType: compact, restaurantSlug: alinea-chicago-il, placeIdSuffix: WENq1He0, timestamp: 2026-07-28T06:01:01.536Z} @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2477
+[   22024ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2477
+[   22584ms] [LOG] [Fast Refresh] done in 662ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2477
+[   50501ms] [INFO] [google-places-ui-kit] query-intent {page: related_restaurant, componentType: compact, restaurantSlug: ever-chicago-il, placeIdSuffix: KXcfaiKk, timestamp: 2026-07-28T06:01:42.625Z} @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2477
+[   54720ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2477
+[   54787ms] [LOG] [Fast Refresh] done in 168ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2477
+[   54895ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2477
+[   54924ms] [LOG] [HMR] connected @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2477

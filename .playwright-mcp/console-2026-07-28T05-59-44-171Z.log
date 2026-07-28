@@ -1,0 +1,10 @@
+[     377ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2477
+[     867ms] [LOG] [Fast Refresh] done in 593ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2477
+[    2344ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2477
+[    2409ms] [LOG] [HMR] connected @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2477
+[    2629ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2477
+[    2749ms] [LOG] [Fast Refresh] done in 221ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2477
+[   19282ms] [INFO] [google-places-ui-kit] query-intent {page: related_restaurant, componentType: compact, restaurantSlug: restaurant-naides-san-francisco-ca, placeIdSuffix: Inz8tBdk, timestamp: 2026-07-28T06:00:03.447Z} @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2477
+[   20485ms] [INFO] [google-places-ui-kit] query-intent {page: related_restaurant, componentType: compact, restaurantSlug: smyth-chicago-il, placeIdSuffix: yFUKauHc, timestamp: 2026-07-28T06:00:04.655Z} @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2477
+[   20486ms] [INFO] [google-places-ui-kit] query-intent {page: related_restaurant, componentType: compact, restaurantSlug: alinea-chicago-il, placeIdSuffix: WENq1He0, timestamp: 2026-07-28T06:00:04.656Z} @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2477
+[   21270ms] [INFO] [google-places-ui-kit] query-intent {page: related_restaurant, componentType: compact, restaurantSlug: ever-chicago-il, placeIdSuffix: KXcfaiKk, timestamp: 2026-07-28T06:00:05.440Z} @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2477

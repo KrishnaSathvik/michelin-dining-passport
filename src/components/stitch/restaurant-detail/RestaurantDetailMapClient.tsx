@@ -66,9 +66,12 @@ export default function RestaurantDetailMapClient({
         </span>
         <span
           aria-hidden="true"
-          className="flex h-12 w-12 items-center justify-center rounded-full border-2 border-white bg-dp-primary text-sm font-semibold text-white shadow-lg"
+          className="flex flex-col items-center gap-1"
         >
-          {stars}
+          <span className="max-w-[15rem] truncate rounded-full bg-white px-3 py-1 font-display text-sm font-semibold text-dp-ink shadow-md ring-1 ring-black/5">
+            {name}
+          </span>
+          <span className="h-4 w-4 rounded-full border-2 border-white bg-dp-primary shadow-lg" />
         </span>
       </Marker>
     </MapGL>

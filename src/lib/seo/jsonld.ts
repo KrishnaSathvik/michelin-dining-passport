@@ -1,4 +1,5 @@
 import { absoluteUrl, siteConfig } from "@/config/site";
+import { getRestaurantDescription } from "@/lib/data/descriptions";
 import type { Restaurant } from "@/lib/data/types";
 
 export type BreadcrumbItem = {
@@ -34,7 +35,10 @@ export function restaurantJsonLd(restaurant: Restaurant) {
       addressCountry: "US",
     },
     priceRange: restaurant.price,
+    award: `${restaurant.stars} Michelin Star${restaurant.stars > 1 ? "s" : ""}`,
     ...(restaurant.website ? { sameAs: [restaurant.website, restaurant.michelinGuideUrl] } : { sameAs: [restaurant.michelinGuideUrl] }),
-    description: `${restaurant.stars}-star Michelin Guide restaurant in ${restaurant.city}, ${restaurant.state}. Listed on ${siteConfig.productName}, an independent platform.`,
+    description:
+      getRestaurantDescription(restaurant.slug) ??
+      `${restaurant.stars}-star Michelin Guide restaurant in ${restaurant.city}, ${restaurant.state}. Listed on ${siteConfig.productName}, an independent platform.`,
   };
 }

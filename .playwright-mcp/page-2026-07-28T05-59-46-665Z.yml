@@ -1,0 +1,233 @@
+- generic [active] [ref=f1e1]:
+  - link "Skip to main content" [ref=f1e2] [cursor=pointer]:
+    - /url: "#main-content"
+  - banner [ref=f1e3]:
+    - generic [ref=f1e4]:
+      - generic [ref=f1e5]:
+        - link "ORELLIN" [ref=f1e6] [cursor=pointer]:
+          - /url: /
+        - navigation "Primary" [ref=f1e7]:
+          - link "Explore" [ref=f1e8] [cursor=pointer]:
+            - /url: /explore
+          - link "Map" [ref=f1e9] [cursor=pointer]:
+            - /url: /map
+          - link "Michelin Stars" [ref=f1e10] [cursor=pointer]:
+            - /url: /about-michelin-stars
+          - link "My Restaurants" [ref=f1e11] [cursor=pointer]:
+            - /url: /passport
+      - link "Sign in" [ref=f1e13] [cursor=pointer]:
+        - /url: /login?next=/account
+  - main [ref=f1e14]:
+    - generic [ref=f1e16]:
+      - navigation "Breadcrumb" [ref=f1e17]:
+        - list [ref=f1e18]:
+          - listitem [ref=f1e19]:
+            - link "Home" [ref=f1e20] [cursor=pointer]:
+              - /url: /
+          - listitem [ref=f1e21]:
+            - generic [ref=f1e22]: /
+            - link "Explore" [ref=f1e23] [cursor=pointer]:
+              - /url: /explore
+          - listitem [ref=f1e24]:
+            - generic [ref=f1e25]: /
+            - generic [ref=f1e26]: Kasama
+      - region [ref=f1e31]:
+        - link "2 Michelin stars Two Michelin Stars" [ref=f1e33] [cursor=pointer]:
+          - /url: /stars/2
+          - generic [ref=f1e34]:
+            - generic "Two Michelin Stars" [ref=f1e35]:
+              - generic [ref=f1e36]: ★★
+              - generic [ref=f1e37]: 2 Michelin stars
+            - generic [ref=f1e38]: Two Michelin Stars
+        - heading "Kasama" [level=1] [ref=f1e39]
+        - paragraph [ref=f1e40]:
+          - link "Filipino" [ref=f1e42] [cursor=pointer]:
+            - /url: /cuisines/filipino
+          - generic [ref=f1e43]:
+            - generic [ref=f1e44]: •
+            - link "Chicago, IL" [ref=f1e45] [cursor=pointer]:
+              - /url: /cities/chicago
+          - generic [ref=f1e46]:
+            - generic [ref=f1e47]: •
+            - generic [ref=f1e48]: $$$$
+        - generic [ref=f1e49]:
+          - link "Reserve a table (opens in a new tab) via restaurant" [ref=f1e50] [cursor=pointer]:
+            - /url: https://www.kasamachicago.com/reservations-dinner
+            - generic [ref=f1e51]:
+              - text: Reserve a table ↗
+              - generic [ref=f1e52]: (opens in a new tab)
+            - generic [ref=f1e53]: via restaurant
+          - link "Official website (opens in a new tab)" [ref=f1e54] [cursor=pointer]:
+            - /url: https://www.kasamachicago.com/
+            - text: Official website
+            - generic [ref=f1e58]: (opens in a new tab)
+          - link "Get directions (opens in a new tab)" [ref=f1e59] [cursor=pointer]:
+            - /url: https://www.google.com/maps/search/?api=1&query=Kasama%2C%201001%20N.%20Winchester%20Ave.%2C%20Chicago%2C%20IL%2C%2060622%2C%20USA
+            - text: Get directions
+            - generic [ref=f1e62]: (opens in a new tab)
+        - paragraph [ref=f1e64]: Loading your restaurants…
+        - generic [ref=f1e65]:
+          - heading "Details" [level=2] [ref=f1e66]
+          - generic [ref=f1e67]:
+            - generic [ref=f1e68]:
+              - term [ref=f1e69]: Address
+              - definition [ref=f1e70]: 1001 N. Winchester Ave., Chicago, IL, 60622, USA
+            - generic [ref=f1e71]:
+              - term [ref=f1e72]: Reservations
+              - definition [ref=f1e73]: via restaurant
+            - generic [ref=f1e74]:
+              - term [ref=f1e75]: Michelin Guide
+              - definition [ref=f1e76]:
+                - link "View reference (opens in a new tab)" [ref=f1e77] [cursor=pointer]:
+                  - /url: https://guide.michelin.com/en/illinois/chicago/restaurant/kasama
+                  - text: View reference
+                  - generic [ref=f1e78]: (opens in a new tab)
+      - region [ref=f1e79]:
+        - paragraph [ref=f1e80]: The experience
+        - heading "About Kasama" [level=2] [ref=f1e81]
+        - paragraph [ref=f1e82]: "Opened in 2020 by chef-partners Genie Kwon and Tim Flores, Kasama made history as the first Filipino restaurant in the United States to earn a Michelin star — and now holds two. In Chicago's West Town it leads a deliberate double life: a counter-service bakery by day, turning out Filipino pastries and breakfast plates, and a reservation-only tasting menu by night. Kwon's acclaimed pastry work and Flores's savory cooking drive the $325 dinner, with wine or non-alcoholic pairings, which has also earned a James Beard Award and a place among North America's 50 Best. Equal parts neighborhood bakery and long-planned destination, it rewards a casual morning pastry as much as a milestone dinner."
+        - paragraph [ref=f1e83]: Written by Orellin from public reporting; not affiliated with or copied from the Michelin Guide.
+      - region [ref=f1e84]:
+        - generic [ref=f1e85]:
+          - generic [ref=f1e86]:
+            - paragraph [ref=f1e87]: Find the table
+            - heading "Location" [level=2] [ref=f1e88]
+            - paragraph [ref=f1e89]: 1001 N. Winchester Ave., Chicago, IL, 60622, USA
+          - generic [ref=f1e90]:
+            - link "Get directions (opens in a new tab)" [ref=f1e91] [cursor=pointer]:
+              - /url: https://www.google.com/maps/search/?api=1&query=Kasama%2C%201001%20N.%20Winchester%20Ave.%2C%20Chicago%2C%20IL%2C%2060622%2C%20USA%2C%20Chicago%2C%20IL
+              - text: Get directions
+              - generic [ref=f1e92]: (opens in a new tab)
+            - link "Open full map" [ref=f1e93] [cursor=pointer]:
+              - /url: /map?selected=kasama-chicago-il
+        - paragraph [ref=f1e94]: Interactive map showing Kasama at 1001 N. Winchester Ave., Chicago, IL, 60622, USA.
+        - status "Restaurant map ready to load" [ref=f1e96]
+      - region [ref=f1e97]:
+        - heading "More Filipino restaurants" [level=2] [ref=f1e98]
+        - article [ref=f1e100]:
+          - generic [ref=f1e101]:
+            - link "Open Restaurant Naides" [ref=f1e102] [cursor=pointer]:
+              - /url: /restaurants/restaurant-naides-san-francisco-ca
+            - button "Save restaurant" [disabled] [ref=f1e106]:
+              - generic [ref=f1e107]: ♡
+              - generic [ref=f1e108]: Not saved
+          - generic [ref=f1e109]:
+            - generic [ref=f1e110]:
+              - generic "One Michelin Star" [ref=f1e111]:
+                - generic [ref=f1e112]: ★
+                - generic [ref=f1e113]: 1 Michelin star
+              - generic [ref=f1e114]: One Michelin Star
+            - heading [level=3] [ref=f1e115]:
+              - link "Restaurant Naides" [ref=f1e116] [cursor=pointer]:
+                - /url: /restaurants/restaurant-naides-san-francisco-ca
+            - paragraph [ref=f1e117]:
+              - generic [ref=f1e118]: Filipino
+              - generic [ref=f1e119]:
+                - generic [ref=f1e120]: ·
+                - text: San Francisco, CA
+              - generic [ref=f1e121]:
+                - generic [ref=f1e122]: ·
+                - text: $$$$
+            - link "Open details" [ref=f1e123] [cursor=pointer]:
+              - /url: /restaurants/restaurant-naides-san-francisco-ca
+      - region [ref=f1e124]:
+        - heading "More restaurants in Chicago" [level=2] [ref=f1e125]
+        - paragraph [ref=f1e126]: Continue exploring Michelin-starred restaurants in the same destination.
+        - generic [ref=f1e127]:
+          - article [ref=f1e128]:
+            - generic [ref=f1e129]:
+              - link "Open Smyth" [ref=f1e130] [cursor=pointer]:
+                - /url: /restaurants/smyth-chicago-il
+              - button "Save restaurant" [disabled] [ref=f1e134]:
+                - generic [ref=f1e135]: ♡
+                - generic [ref=f1e136]: Not saved
+            - generic [ref=f1e137]:
+              - generic [ref=f1e138]:
+                - generic "Three Michelin Stars" [ref=f1e139]:
+                  - generic [ref=f1e140]: ★★★
+                  - generic [ref=f1e141]: 3 Michelin stars
+                - generic [ref=f1e142]: Three Michelin Stars
+              - heading [level=3] [ref=f1e143]:
+                - link "Smyth" [ref=f1e144] [cursor=pointer]:
+                  - /url: /restaurants/smyth-chicago-il
+              - paragraph [ref=f1e145]:
+                - generic [ref=f1e146]: Contemporary
+                - generic [ref=f1e147]:
+                  - generic [ref=f1e148]: ·
+                  - text: Chicago, IL
+                - generic [ref=f1e149]:
+                  - generic [ref=f1e150]: ·
+                  - text: $$$$
+              - link "Open details" [ref=f1e151] [cursor=pointer]:
+                - /url: /restaurants/smyth-chicago-il
+          - article [ref=f1e152]:
+            - generic [ref=f1e153]:
+              - link "Open Alinea" [ref=f1e154] [cursor=pointer]:
+                - /url: /restaurants/alinea-chicago-il
+              - button "Save restaurant" [disabled] [ref=f1e158]:
+                - generic [ref=f1e159]: ♡
+                - generic [ref=f1e160]: Not saved
+            - generic [ref=f1e161]:
+              - generic [ref=f1e162]:
+                - generic "Two Michelin Stars" [ref=f1e163]:
+                  - generic [ref=f1e164]: ★★
+                  - generic [ref=f1e165]: 2 Michelin stars
+                - generic [ref=f1e166]: Two Michelin Stars
+              - heading [level=3] [ref=f1e167]:
+                - link "Alinea" [ref=f1e168] [cursor=pointer]:
+                  - /url: /restaurants/alinea-chicago-il
+              - paragraph [ref=f1e169]:
+                - generic [ref=f1e170]: Creative
+                - generic [ref=f1e171]:
+                  - generic [ref=f1e172]: ·
+                  - text: Chicago, IL
+                - generic [ref=f1e173]:
+                  - generic [ref=f1e174]: ·
+                  - text: $$$$
+              - link "Open details" [ref=f1e175] [cursor=pointer]:
+                - /url: /restaurants/alinea-chicago-il
+          - article [ref=f1e176]:
+            - generic [ref=f1e177]:
+              - link "Open Ever" [ref=f1e178] [cursor=pointer]:
+                - /url: /restaurants/ever-chicago-il
+              - button "Save restaurant" [disabled] [ref=f1e182]:
+                - generic [ref=f1e183]: ♡
+                - generic [ref=f1e184]: Not saved
+            - generic [ref=f1e185]:
+              - generic [ref=f1e186]:
+                - generic "Two Michelin Stars" [ref=f1e187]:
+                  - generic [ref=f1e188]: ★★
+                  - generic [ref=f1e189]: 2 Michelin stars
+                - generic [ref=f1e190]: Two Michelin Stars
+              - heading [level=3] [ref=f1e191]:
+                - link "Ever" [ref=f1e192] [cursor=pointer]:
+                  - /url: /restaurants/ever-chicago-il
+              - paragraph [ref=f1e193]:
+                - generic [ref=f1e194]: Creative
+                - generic [ref=f1e195]:
+                  - generic [ref=f1e196]: ·
+                  - text: Chicago, IL
+                - generic [ref=f1e197]:
+                  - generic [ref=f1e198]: ·
+                  - text: $$$$
+              - link "Open details" [ref=f1e199] [cursor=pointer]:
+                - /url: /restaurants/ever-chicago-il
+  - contentinfo [ref=f1e200]:
+    - generic [ref=f1e201]:
+      - generic [ref=f1e202]:
+        - generic [ref=f1e203]:
+          - paragraph [ref=f1e204]: ORELLIN
+          - paragraph [ref=f1e205]: Discover Michelin-starred restaurants across the United States. Explore by city, cuisine, and distinction, learn what you need to know, and book directly.
+        - navigation "Footer" [ref=f1e206]:
+          - link "About" [ref=f1e207] [cursor=pointer]:
+            - /url: /about
+          - link "Privacy" [ref=f1e208] [cursor=pointer]:
+            - /url: /privacy
+          - link "Terms" [ref=f1e209] [cursor=pointer]:
+            - /url: /terms
+          - link "Contact" [ref=f1e210] [cursor=pointer]:
+            - /url: /contact
+          - link "Sources" [ref=f1e211] [cursor=pointer]:
+            - /url: /sources
+      - paragraph [ref=f1e212]: Orellin is an independent discovery platform and is not affiliated with the Michelin Guide.
+  - button "Open Next.js Dev Tools" [ref=f1e218] [cursor=pointer]

@@ -10,6 +10,7 @@ import { NearbyRestaurantsSection } from "./NearbyRestaurantsSection";
 import { RelatedRestaurantsSection } from "./RelatedRestaurantsSection";
 import { RestaurantDetailStickyBar } from "./RestaurantDetailStickyBar";
 import { RestaurantDetailsPanel } from "./RestaurantDetailsPanel";
+import { RestaurantAboutSection } from "./RestaurantAboutSection";
 import { RestaurantLocationSection } from "./RestaurantLocationSection";
 import { RestaurantPassportSummary } from "./RestaurantPassportSummary";
 import { RestaurantPhotoHero } from "./RestaurantPhotoHero";
@@ -60,6 +61,7 @@ export function RestaurantDetailView({
           </div>
         </div>
 
+        <RestaurantAboutSection slug={restaurant.slug} name={restaurant.name} />
         <RestaurantLocationSection restaurant={restaurant} />
         <RestaurantPassportSummary
           restaurantSlug={restaurant.slug}

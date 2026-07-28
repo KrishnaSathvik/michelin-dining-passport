@@ -1,0 +1,83 @@
+{
+  "version": 1,
+  "updatedAt": "2026-07-28",
+  "note": "Original editorial descriptions written from publicly reported facts (never copied from the Michelin Guide or reviews). Point-in-time; verify before treating chef/menu specifics as current.",
+  "descriptions": {
+    "addison-san-diego-ca": {
+      "text": "San Diego's first three-Michelin-star restaurant, Addison sits on a Carmel Valley hillside inside the Fairmont Grand Del Mar, its dining room framed by high ceilings and arched windows. Chef William Bradley builds a ten-course, season-driven menu that runs French technique through California ingredients, with playful turns — a churro filled with chicken liver, Kennebec chips with burnt-onion dip and a caviar-topped china sunflower, shellfish chawanmushi. A 10,000-bottle cellar of small producers and rare Champagnes rounds out one of the country's most polished tasting-menu experiences.",
+      "sources": [
+        "https://guide.michelin.com/us/en/article/michelin-guide-ceremony/michelin-guide-three-star-addison-chef-william-bradley-california-san-diego",
+        "https://www.altaonline.com/culture/food-drink/a69501534/addison-william-bradley-michelin-profile/",
+        "https://en.wikipedia.org/wiki/Addison_(restaurant)"
+      ]
+    },
+    "benu-san-francisco-ca": {
+      "text": "When Corey Lee opened Benu in 2010, it became the first San Francisco restaurant to hold three Michelin stars. In a minimalist 40-seat SoMa room, Lee gives Asian cooking a French-precise, deeply technical spin — the kitchen's famous \"thousand-year-old\" quail egg, a lobster-coral xiao long bao with tissue-thin skin, whole roasted quail glazed in maple and soy and carved tableside. Korean and Chinese ideas meet exacting classical technique in a menu that helped redefine modern American fine dining.",
+      "sources": [
+        "https://guide.michelin.com/us/en/article/features/benu-korean-3-michelin-star-restaurant-corey-lee-celebrates-a-decade-of-3-michelin-stars",
+        "https://www.cnn.com/travel/chef-corey-lee-redefining-korean-cuisine-hnk-spc"
+      ]
+    },
+    "carino-chicago-il": {
+      "text": "Tucked beneath the Red Line tracks in Chicago's Uptown — next door to a hair salon — Cariño is chef Norman Fenton's love letter to Mexico. Fenton fell for the country on a nine-month road trip and later ran the kitchen at WILD Tulum; here he channels that immersion into a 12-to-16-course Latin-American tasting menu with a heavy Mexican accent, served to just seven seats at the chef's counter. It opens with a wink — \"chips and salsa\" reimagined as salsa verde jelly and tortilla crumble — and only gets bolder. A Michelin star, a Banchet Best New Restaurant award, and a James Beard nod have followed; night owls can catch the late-night taco omakase, Wednesday through Saturday at 9:30.",
+      "sources": [
+        "https://guide.michelin.com/us/en/illinois/chicago/restaurant/carino",
+        "https://www.cbsnews.com/chicago/news/carino-chicago-uptown-michelin-star/",
+        "https://www.nbcchicago.com/the-food-guy/the-food-guy-carino/3642204/"
+      ]
+    },
+    "holbox-los-angeles-ca": {
+      "text": "Inside Mercado La Paloma, a former garment factory turned South LA market, Holbox is the country's only Michelin-starred Mexican marisquería. Chef Gilberto Cetina — a three-time James Beard nominee — draws on Mexico's coasts, especially the Yucatán, working sustainably sourced Southern California seafood with lime, tomato, habanero and cilantro. Ceviches of rockfish and kanpachi, wild Mexican shrimp served in a goblet, a velvety red seafood stew and the signature octopus taco have made this counter one of Los Angeles's most beloved tables.",
+      "sources": [
+        "https://lataco.com/michelin-star-mariscos-holbox",
+        "https://guide.michelin.com/us/en/article/dining-out/the-michelin-starred-restaurant-inside-a-los-angeles-food-hall",
+        "https://en.wikipedia.org/wiki/Holbox_(restaurant)"
+      ]
+    },
+    "kasama-chicago-il": {
+      "text": "Opened in 2020 by chef-partners Genie Kwon and Tim Flores, Kasama made history as the first Filipino restaurant in the United States to earn a Michelin star — and now holds two. In Chicago's West Town it leads a deliberate double life: a counter-service bakery by day, turning out Filipino pastries and breakfast plates, and a reservation-only tasting menu by night. Kwon's acclaimed pastry work and Flores's savory cooking drive the $325 dinner, with wine or non-alcoholic pairings, which has also earned a James Beard Award and a place among North America's 50 Best. Equal parts neighborhood bakery and long-planned destination, it rewards a casual morning pastry as much as a milestone dinner.",
+      "sources": [
+        "https://www.kasamachicago.com/",
+        "https://guide.michelin.com/us/en/illinois/chicago/restaurant/kasama"
+      ]
+    },
+    "le-bernardin-new-york-ny": {
+      "text": "Born in Paris in 1972 and transplanted to New York in 1986, Le Bernardin has spent decades as the city's definitive seafood restaurant, holding three Michelin stars under chef Eric Ripert. The kitchen honors the fish above all: an à la carte menu organized into \"Almost Raw\" and \"Lightly Cooked\" refuses to force guests into a marathon tasting. Signatures like the pounded-thin yellowfin tuna laid over toasted baguette and foie gras distill Ripert's philosophy — French technique, global inspiration, and the purity of the ingredient.",
+      "sources": [
+        "https://guide.michelin.com/us/en/new-york-state/new-york/restaurant/le-bernardin",
+        "https://www.cbsnews.com/news/le-bernardin-at-50-chef-eric-ripert/"
+      ]
+    },
+    "lilo-carlsbad-ca": {
+      "text": "Lilo earned a Michelin star within ten weeks of opening in 2025 — a near-unheard-of ascent for a 22-seat Carlsbad newcomer from chef Eric Bost and restaurateur John Resnick. Bost draws on the Southern California coast, with detours through France, Japan and other kindred coastal cuisines, across a $265 menu of many small, meticulous courses rather than large plates. Dishes like spot prawns in a sauce of sea buckthorn, lime leaf, serrano and gooseberry show the kitchen's precise, produce-driven hand.",
+      "sources": [
+        "https://robbreport.com/food-drink/dining/lilo-carlsbad-restaurant-opening-1236403361/",
+        "https://en.wikipedia.org/wiki/Lilo_(restaurant)",
+        "https://sandiegomagazine.com/food-drink/lilo-carlsbad-restaurant-review/"
+      ]
+    },
+    "mutra-north-miami-fl": {
+      "text": "In a North Miami strip mall, Mutra made history as the first kosher restaurant anywhere to earn a Michelin star. Named for chef Raz Shabtai's late grandmother, it channels the multicultural food traditions of Jerusalem — with threads from North Africa, Eastern Europe and the Levant — into a frequently changing, farm-to-table menu served at an intimate chef's counter. Inspectors singled out its \"One Perfect Falafel,\" a beet dish set in ajo blanco with beetroot sorbet, the signature lamb kebab with smoked eggplant cream, and a rosewater muhallebi to finish.",
+      "sources": [
+        "https://www.nbcmiami.com/news/local/north-miami-restaurant-mutra-is-first-kosher-eatery-to-earn-michelin-star/3814763/",
+        "https://guide.michelin.com/us/en/florida/north-miami_2883821/restaurant/mutra",
+        "https://www.timesofisrael.com/miami-chef-earns-first-michelin-star-for-kosher-restaurant/"
+      ]
+    },
+    "the-french-laundry-yountville-ca": {
+      "text": "Thomas Keller's French Laundry has anchored American fine dining from its Yountville stone cottage since 1994, holding three Michelin stars for progressive American cooking rooted in classic French technique. Its opening sequence is close to sacred: \"Oysters and Pearls,\" a sabayon of tapioca pearls with poached oysters and caviar, is a course that never changes. Keller's farm-to-table, regional-sourcing ethos set a template that much of the country's high-end cooking still follows.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/The_French_Laundry",
+        "https://www.britannica.com/biography/Thomas-Keller"
+      ]
+    },
+    "yingtao-new-york-ny": {
+      "text": "Named for owner Bolun Yao's grandmother, YingTao is the only Michelin-starred Chinese tasting-menu restaurant in New York — a star earned within a year of its 2023 opening by the husband-and-wife team of Bolun and Linette Yao. In a Hell's Kitchen room of black marble, brass and scarlet cherry accents, chef Emily Yuen — a James Beard semifinalist whose résumé spans Michelin kitchens in London, Australia and Singapore — reframes Chinese cooking through contemporary fine dining. The seasonal seven-course, $150 menu trades takeout clichés for philosophy, technique and storytelling.",
+      "sources": [
+        "https://www.opentable.com/blog/yingtao-nyc/",
+        "https://www.yingtaonyc.com/about",
+        "https://global.chinadaily.com.cn/a/202603/20/WS69bca267a310d6866eb3ed88.html"
+      ]
+    }
+  }
+}

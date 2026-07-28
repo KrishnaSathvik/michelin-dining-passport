@@ -15,7 +15,6 @@ import {
 import { getApprovedGooglePlaceId } from "@/lib/google-places/place-ids";
 import { getRestaurantReservation } from "@/lib/reservations/data";
 import { buildPageMetadata } from "@/lib/seo/metadata";
-import { restaurantJsonLd, serializeJsonLd } from "@/lib/seo/restaurant-jsonld";
 
 type RestaurantPageProps = {
   params: Promise<{ slug: string }>;
@@ -76,15 +75,6 @@ export default async function RestaurantPage({ params }: RestaurantPageProps) {
   });
 
   return (
-    <>
-      <script
-        type="application/ld+json"
-        // First-party catalog data, escaped via serializeJsonLd — no untrusted input.
-        dangerouslySetInnerHTML={{
-          __html: serializeJsonLd(restaurantJsonLd(restaurant)),
-        }}
-      />
-      <RestaurantDetailView model={model} restaurantEntity={restaurant} />
-    </>
+    <RestaurantDetailView model={model} restaurantEntity={restaurant} />
   );
 }
