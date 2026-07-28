@@ -1,12 +1,14 @@
 import type { Metadata } from "next";
-import { PassportListPage } from "@/components/stitch/passport";
-import { getRestaurants } from "@/lib/data/restaurants";
+import { Suspense } from "react";
+import { PassportPersonalListPage } from "@/components/stitch/passport";
+import { PassportLoadingState } from "@/components/stitch/passport";
 import { buildPageMetadata } from "@/lib/seo/metadata";
 
 export const metadata: Metadata = buildPageMetadata({
   title: "Saved restaurants",
-  description: "Restaurants saved in your dining passport.",
+  description: "Restaurants saved in My Restaurants.",
   path: "/saved",
+  noIndex: true,
 });
 
 type SavedPageProps = {
@@ -19,15 +21,20 @@ type SavedPageProps = {
  */
 export default async function SavedPage({ searchParams }: SavedPageProps) {
   const params = await searchParams;
-  const restaurants = getRestaurants();
   const proof =
     process.env.NODE_ENV !== "production"
       ? typeof params.proof === "string"
-        ? (params.proof as "loading" | "empty")
+        ? (params.proof as
+            | "loading"
+            | "empty"
+            | "sync-pending"
+            | "sync-failed")
         : undefined
       : undefined;
 
   return (
-    <PassportListPage mode="saved" restaurants={restaurants} proof={proof} />
+    <Suspense fallback={<PassportLoadingState variant="list" />}>
+      <PassportPersonalListPage mode="saved" proof={proof} />
+    </Suspense>
   );
 }

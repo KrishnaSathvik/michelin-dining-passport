@@ -8,16 +8,14 @@ import {
 } from "@/lib/data/restaurants";
 
 export default function sitemap(): MetadataRoute.Sitemap {
+  // Personal, auth-gated surfaces (/passport, /saved, /planned, /visited,
+  // /collections) are intentionally excluded — they carry no public content
+  // and are `noindex` at the page level.
   const staticRoutes = [
     "/",
     "/explore",
     "/map",
     "/about-michelin-stars",
-    "/passport",
-    "/saved",
-    "/planned",
-    "/visited",
-    "/collections",
     "/stars/1",
     "/stars/2",
     "/stars/3",

@@ -9,9 +9,10 @@ import {
 import { buildPageMetadata } from "@/lib/seo/metadata";
 
 export const metadata: Metadata = buildPageMetadata({
-  title: "Passport",
-  description: `Track Michelin-starred restaurants you have saved and visited on ${siteConfig.productName}. Sign in to sync across devices, or keep a private device-only passport.`,
+  title: "My Restaurants",
+  description: `Track Michelin-starred restaurants you have saved and visited on ${siteConfig.productName}. Sign in to sync across devices, or keep a private device-only list.`,
   path: "/passport",
+  noIndex: true,
 });
 
 type PassportPageProps = {
@@ -36,7 +37,13 @@ export default async function PassportPage({ searchParams }: PassportPageProps) 
   const proof =
     process.env.NODE_ENV !== "production"
       ? typeof params.proof === "string"
-        ? (params.proof as "loading" | "empty" | "active")
+        ? (params.proof as
+            | "loading"
+            | "empty"
+            | "active"
+            | "pending"
+            | "failed"
+            | "storage-error")
         : undefined
       : undefined;
 
