@@ -246,6 +246,90 @@
         "https://www.theinnatlittlewashington.com/",
         "https://en.wikipedia.org/wiki/Patrick_O'Connell_(chef)"
       ]
+    },
+    "aubergine-carmel-by-the-sea-ca": {
+      "text": "Inside L'Auberge Carmel, Aubergine is Carmel-by-the-Sea's most decorated dining room, where former professional figure skater turned chef Justin Cogley builds an eight-course tasting around Monterey Bay's bounty in an intimate nine-table space. The menu changes daily — a \"cabbage\" taco of shallot jam, braised treviso and Kaluga caviar; a Dungeness crab rice roulade in white dashi; triple-seared dry-aged ribeye brushed with wagyu XO. Classic technique meets a sleek, modern sense of place on the Monterey coast.",
+      "sources": [
+        "https://guide.michelin.com/us/en/california/carmel-by-the-sea/restaurant/aubergine",
+        "https://www.relaischateaux.com/us/restaurant/aubergine/"
+      ]
+    },
+    "vespertine-culver-city-ca": {
+      "text": "Jordan Kahn's Vespertine is less a restaurant than an immersive art piece, set inside a futuristic red-steel building — nicknamed \"The Waffle\" — in Culver City, where diners move between floors as the meal unfolds. Reopened in 2024 after a four-year pandemic closure, and awarded both two Michelin stars and a Green Star, it serves a daringly inventive, at times whimsical tasting: scallop with passionfruit and ají amarillo under a horseradish tuile, an \"obsidian mirror\" of smoked mussel cream with salted plum. Sculptural, otherworldly and singular.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Vespertine_(restaurant)",
+        "https://www.hollywoodreporter.com/lifestyle/lifestyle-news/jordan-kahn-vespertine-two-michelin-stars-1235967556/"
+      ]
+    },
+    "kato-los-angeles-ca": {
+      "text": "Jon Yao's Kato began in a West LA strip mall in 2016 and, after moving to a larger Arts District home in 2022, became one of Los Angeles's most admired tasting-menu tables, earning its first Michelin star in 2019. Yao reinterprets the Taiwanese and Chinese flavors of his mother's cooking through a Southern California lens: a yóutiáo doughnut filled with sea urchin and brown-butter emulsion under jamón and caviar; fish maw with Dungeness crab and custard; spice-crusted duck with a fluffy bao. Personal, precise and quietly ambitious.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Kato_(restaurant)",
+        "https://www.finedininglovers.com/experts/jon-yao"
+      ]
+    },
+    "hayato-los-angeles-ca": {
+      "text": "Brandon Go spent two decades studying traditional Japanese technique, much of it in three-star kitchens in Japan, before opening Hayato in Downtown LA's Arts District in 2018 — his vision of a chef-owned, authentic kaiseki restaurant. At a seven-seat counter he sends out a deeply personal, season-driven kaiseki, each ingredient sliced, grilled, fried or steamed to exacting standards and explained in detail. It earned its first Michelin star in 2019 and a second in 2021, an intimate temple to Japanese precision.",
+      "sources": [
+        "https://guide.michelin.com/us/en/california/us-los-angeles/restaurant/hayato",
+        "https://www.finedininglovers.com/experts/brandon-go"
+      ]
+    },
+    "aquavit-new-york-ny": {
+      "text": "Open since 1987, Aquavit introduced New York to Scandinavian fine dining, and under executive chef Emma Bengtsson — the first Swedish woman to earn two Michelin stars — it remains the city's benchmark for Nordic cooking. A former pastry chef, Bengtsson brings precision to tasting menus of pristine seafood, cultured dairy and preserved, seasonal produce: Norwegian langoustine with Meyer-lemon sabayon, halibut with salt-baked celeriac and smoked-whey beurre blanc. Elegant desserts thread citrus, herb and licorice notes through a distinctly Swedish sensibility.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Restaurant_Aquavit",
+        "https://www.finedininglovers.com/experts/emma-bengtsson"
+      ]
+    },
+    "atera-new-york-ny": {
+      "text": "In a spare Tribeca room, Danish chef Ronny Emborg's Atera seats just a dozen guests around an open-kitchen counter for a roughly 20-course tasting of Nordic-inflected, globally curious cooking — some herbs grown in a hidden sub-basement garden. The all-inclusive menu carries no surcharge even for caviar or truffle: a lobster taco with caviar, a fried cheese ball shaved with fresh truffle, trout roe and foie gras wrapped in crisp nori. Minimalist plating, maximal luxury.",
+      "sources": [
+        "https://guide.michelin.com/at/en/new-york-state/new-york/restaurant/atera",
+        "https://niredonahue.com/atera-nyc-review/"
+      ]
+    },
+    "saga-new-york-ny": {
+      "text": "Perched on the 63rd floor of the Art Deco tower at 70 Pine Street, Saga wraps a two-star tasting menu in 360-degree Financial District views, across a multi-floor space with a solarium and outdoor terraces. Founded in 2021 by acclaimed chef James Kent — an Eleven Madison Park veteran — and carried on by its kitchen team after his untimely death, it serves American cooking with a continental European hand, from a modern Lobster Newberg to a composed Duck à la Royale. As much a skyline experience as a meal.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Saga_(restaurant)",
+        "https://www.relaischateaux.com/us/restaurant/saga-nyc/"
+      ]
+    },
+    "the-modern-new-york-ny": {
+      "text": "At the foot of MoMA, overlooking the Abby Aldrich Rockefeller Sculpture Garden, The Modern pairs museum-grade surroundings with Thomas Allan's contemporary American cooking and its French accents. The two-star dining room turns out refined, quietly playful, ingredient-led plates — honeynut squash with razor clams, dry-aged duck with red endive and quince, a brûléed bread pudding — while the adjacent Bar Room offers a more casual à la carte. It is part of Danny Meyer's Union Square Hospitality Group.",
+      "sources": [
+        "https://www.themodernnyc.com/about/",
+        "https://en.wikipedia.org/wiki/The_Modern_(restaurant)"
+      ]
+    },
+    "sushi-noz-new-york-ny": {
+      "text": "On the Upper East Side, Hokkaido-born Nozomu Abe presides over Sushi Noz, an Edomae omakase counter built from more than a thousand pieces of Japanese cedar assembled without a single nail, centered on a 200-year-old hinoki bar. Two intimate rooms seat just fourteen guests total for a meticulous, many-course tasting; Abe, who trained under Edomae masters in Tokyo, draws on a childhood around his grandfather's seafood company. Elevated to two Michelin stars in 2023, it is among New York's purest sushi experiences.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Sushi_Noz",
+        "https://guide.michelin.com/us/en/new-york-state/new-york/restaurant/sushi-noz"
+      ]
+    },
+    "melisse-santa-monica-ca": {
+      "text": "A Santa Monica institution since 1999, Josiah Citrin's Mélisse was reborn as an intimate fourteen-seat room where Citrin and chef-partner Ken Takayama guide a lavish, roughly two-and-a-half-hour French tasting. Entered through a discreet side door, it trades in unabashed decadence — Santa Barbara uni, A5 wagyu, Royal Osetra caviar, generous tableside saucing — and closes with a signature dry-aged duck \"Rouennaise\" finished on an antique silver press. Two-star, old-world luxury filtered through California ingredients.",
+      "sources": [
+        "https://guide.michelin.com/us/en/california/santa-monica/restaurant/melisse",
+        "https://robbreport.com/food-drink/dining/melisse-josiah-citrin-reinvention-two-michelin-stars-1234639182/"
+      ]
+    },
+    "jont-washington-dc": {
+      "text": "Tucked behind its sister restaurant in DC's 14th Street corridor, Jônt is Ryan Ratino's sixteen-seat counter marrying Japanese precision and seasonality to French luxury and live-fire cooking. The fifteen-course tasting is built on some of the world's rarest ingredients — wagyu and foie gras, Kaluga caviar, Miyazaki mango — in dishes like a wagyu-tartare tart, Hokkaido uni crowned with bluefin, and Koshiibuki rice with Dungeness crab, maitake and shaved Australian black truffle. Ratino won the Michelin Guide's DC Young Chef Award in 2023.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/J%C3%B4nt_(restaurant)",
+        "https://www.jontdc.com/our-story/"
+      ]
+    },
+    "minibar-by-jose-andres-washington-dc": {
+      "text": "minibar is José Andrés's avant-garde flagship — his first U.S. fine-dining venture, opened in 2003 and now a twelve-seat chef's counter in DC's Penn Quarter behind a discreet corner sign. The two-star tasting is a study in culinary science and theater, each bite engineered to surprise as it blends tradition with technique. Reservations, released at noon on the first of each month, routinely vanish within a day; a private José's Table sits beside the kitchen for a party of up to six.",
+      "sources": [
+        "https://www.minibarbyjoseandres.com/about-minibar/",
+        "https://guide.michelin.com/us/en/district-of-columbia/washington-dc/restaurant/minibar"
+      ]
     }
   }
 }
