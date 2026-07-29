@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-07-28",
+  "updatedAt": "2026-07-29",
   "note": "Original editorial descriptions written from publicly reported facts (never copied from the Michelin Guide or reviews). Point-in-time; verify before treating chef/menu specifics as current.",
   "descriptions": {
     "addison-san-diego-ca": {
@@ -1197,6 +1197,83 @@
       "sources": [
         "https://en.wikipedia.org/wiki/Kosen_(restaurant)",
         "https://www.kosentampa.com/about"
+      ]
+    },
+    "le-jardinier-miami-miami-fl": {
+      "text": "Le Jardinier — \"the gardener\" — is a light-filled, greenhouse-like room in the Miami Design District, a Michelin-starred, vegetable-forward French restaurant from chef Alain Verzeroli, a longtime protégé of Joël Robuchon. Shaped by Verzeroli's eighteen years in Japan and its ethos of seasonality, the menu foregrounds the finest local vegetables and herbs, some from an on-site garden, complemented by sustainable fish, meat and poultry. Refined, seasonal and green at its heart.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Le_Jardinier",
+        "https://guide.michelin.com/us/en/florida/miami/restaurant/le-jardinier"
+      ]
+    },
+    "los-felix-miami-fl": {
+      "text": "Los Félix is a Michelin-starred, Green-Star Mexican restaurant in Coconut Grove where chef Sebastian Vargas builds Meso-American cooking around one ingredient: corn. Heirloom masa runs through every dish, honoring corn's place in the history of the Americas — a Key West grouper taco grilled in banana leaf with hazelnut emulsion, a griddled corn cake with crab and smoked-corn sauce, a blue-crab arepa. Subtle, sustainable and rooted in heritage, paired with biodynamic wines.",
+      "sources": [
+        "https://guide.michelin.com/us/en/florida/miami/restaurant/los-felix",
+        "https://www.hotelsabovepar.com/articles/restaurants/los-felix-miami-coconut-grove-restaurant-review"
+      ]
+    },
+    "ogawa-miami-fl": {
+      "text": "Ogawa — \"small river,\" for its Little River neighborhood — is master chef Masayuki Komatsu's Michelin-starred omakase, opened in late 2023 after he led Morimoto New York and Miami's Hiyakawa. In an eleven-seat room of wood, silk and gold-leaf walls beside a private Japanese garden, Komatsu serves a seasonal omakase rooted in kappo tradition, with seafood flown fresh from Japan: baby sea bream, otoro, A5 wagyu. Among the highest-rated fine-dining rooms in the country.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Ogawa_(restaurant)",
+        "https://www.exploretock.com/blog/ogawa-miami-master-chef-masayuki-komatsu-omakase/"
+      ]
+    },
+    "rocca-tampa-fl": {
+      "text": "Rocca is chef Bryce Bonsack's Michelin-starred Italian restaurant in Tampa Heights, where New York pedigree (Blanca, Corton) meets a year of training in Piedmont. A 2026 James Beard Best Chef: South finalist, Bonsack cooks comforting-yet-complex plates: agnolotti of salame calabrese and ricotta, spaghetti al limone with blue crab and zucchini, mozzarella hand-pulled to order at a tableside cart, a chocolate-custard-and-pizzelle finish. Approachable on the surface, with real character beneath.",
+      "sources": [
+        "https://guide.michelin.com/us/en/florida/tampa/restaurant/rocca",
+        "https://flamingomag.com/2026/06/18/grove-stand-rockin-the-rocca-in-tampa/"
+      ]
+    },
+    "shingo-coral-gables-fl": {
+      "text": "Shingo is fourth-generation Osaka sushi chef Shingo Akikuni's fourteen-seat Coral Gables omakase — an 850-square-foot room built by Kyoto woodworkers, then dismantled, shipped and reassembled in Miami. Michelin-starred since 2023, and Akikuni previously earned a star leading Hiden, it serves eighteen seasonal courses of premium fish sourced almost entirely from Japan, from high-grade Aomori tuna to a matsutake chawanmushi. One of Miami's most sought-after reservations.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Shingo_(restaurant)",
+        "https://www.miaminewtimes.com/food-drink/chef-shingo-akikuni-omakase-experience-at-shingo-coral-gables-20163397/"
+      ]
+    },
+    "soseki-winter-park-fl": {
+      "text": "Soseki — \"cornerstone\" — is Mike Collantes's intimate ten-seat modern omakase in Winter Park, the area's first Michelin star in 2022. Collantes threads local Florida through Japanese tradition, partnering with farmers, fishermen and ceramicists across an ever-evolving \"chef's choice\" tasting: Scandinavian-style sashimi, seared scallop with cauliflower and caviar, corn chawanmushi. Its success spawned a small Orlando family of restaurants, including the Bib Gourmand Sushi Saint.",
+      "sources": [
+        "https://guide.michelin.com/us/en/florida/winter-park/restaurant/soseki",
+        "https://www.winterpark.org/2025/03/25/soseki-omakase-shines-as-first-michelin-star-restaurant-in-winter-park-fl/"
+      ]
+    },
+    "stubborn-seed-miami-beach-fl": {
+      "text": "Stubborn Seed is Top Chef Season 13 winner Jeremy Ford's Miami Beach flagship, Michelin-starred since 2022 — bold New American cooking that takes risks, weaving Latin and Asian influences through an eight-course tasting. Much of the produce comes from Ford's own five-acre organic farm in Redland: a celery-root croquette with beef-bacon jam, beef tartare with black truffle and milk bread, ricotta gnudi under a Manchego umami foam. Familiar ingredients reintroduced with new intensity.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Stubborn_Seed",
+        "https://www.stubbornseed.com/about"
+      ]
+    },
+    "tambourine-room-by-tristan-brandt-miami-beach-fl": {
+      "text": "Inside the Carillon Miami Wellness Resort, the Tambourine Room is a twelve-seat Michelin-starred jewel where chef Tristan Brandt serves modern French cuisine with Asian influences. A 1958 cocktail lounge reborn as a fine-dining destination, the evening opens with bites in the wood-paneled bar before an intimate seven-course tasting: a Royal Miyagi oyster with liquid-ice-cream pearls and wasabi, raw Hawaiian shrimp, a deconstructed lobster elote — much of it gilded in gold leaf and foam. Romantic, refined and theatrical.",
+      "sources": [
+        "https://guide.michelin.com/us/en/florida/miami-beach/restaurant/tambourine-room-by-tristan-brandt",
+        "https://www.businesswire.com/news/home/20230512005300/en/Tambourine-Room-by-Tristan-Brandt-at-Carillon-Miami-Wellness-Resort-Honored-With-First-Michelin-Star"
+      ]
+    },
+    "the-surf-club-restaurant-surfside-fl": {
+      "text": "The Surf Club Restaurant is Thomas Keller's Michelin-starred ode to classic Continental dining, set in a restored Art Deco landmark in Surfside beside the Four Seasons. Amid vintage-bar glamour, plush banquettes and amber light, Keller reimagines the icons: a seared crab cake with spicy mayo, Maine lobster thermidor with sauce Américaine, Beef Wellington, roasted chicken for two, a lemon meringue tart. Old-world elegance, impeccably executed.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/The_Surf_Club_Restaurant",
+        "https://www.fourseasons.com/surfside/dining/restaurants/surf-club-restaurant/"
+      ]
+    },
+    "victoria-and-albert-s-orlando-fl": {
+      "text": "Victoria & Albert's, inside Disney's Grand Floridian, made history as Disney's first Michelin star and the only star held by a U.S. theme-park restaurant. Under executive chef Matthew Sowers, its contemporary cooking draws on influences from Asia to the Nordics — a New Zealand langoustine tart, a venison-carpaccio \"sandwich,\" a cherry-cola bordelaise — built on globe-spanning luxury ingredients like Glacier 51 toothfish and Miyazaki A5 wagyu, paired from a 500-plus-selection cellar. A jacket-required special-occasion landmark.",
+      "sources": [
+        "https://thewaltdisneycompany.com/news/walt-disney-world-victoria-alberts-michelin-star/",
+        "https://guide.michelin.com/en/florida/orlando/restaurant/victoria-albert-s"
+      ]
+    },
+    "omo-by-jont-winter-park-fl": {
+      "text": "Ômo by Jônt is Ryan Ratino's Winter Park tasting-counter — the Florida sibling to his two-star Jônt in D.C. — that earned a Michelin star within its first year. Across 18 to 22 courses, each touched by wood fire, French technique meets Japanese seafood and local produce from purveyors like Pasture Prime and Frog Song Organics. The evening moves through the space — drinks in the living room, dinner at the savory counter, sweets in the pastry parlor — an experiential, live-fire journey.",
+      "sources": [
+        "https://www.orlandoweekly.com/food-drink/omo-by-jont-from-2-michelin-star-chef-ryan-ratino-opens-feb-1-in-winter-park-35881976/",
+        "https://guide.michelin.com/us/en/florida/winter-park/restaurant/omo-by-jont"
       ]
     }
   }
